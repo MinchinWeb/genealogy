@@ -1,0 +1,620 @@
+/******************/
+/* Reset          */
+/******************/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {background:transparent; border:0; margin:0; outline:0; padding:0; vertical-align:baseline; word-wrap:break-word;}
+:focus {outline:0;}
+ul {list-style-position:outside; margin-left: 1.2em;}
+ol {list-style-position:outside; margin-left: 2em; margin-bottom:.6em;}
+ul {list-style: disc outside none;}
+table {border-collapse:separate; border-spacing:0;}
+caption, th, td {font-weight:normal; text-align:left;}
+a img {border:0;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block;}
+/******************/
+/* Basic Elements */
+/******************/
+body                             {line-height:1.5; padding: 0px 0px 20px 0px; font-size:10px; background-color:#C4D1C2; color:#292929; font-family: sans-serif; color: black;}
+h1, h2, h3, h4, h5, h6           {letter-spacing:-1px; font-weight:400; color:black; clear:both; margin:0 0 .7em 0;}
+h1                               {font-size:190%;}
+h2                               {font-size:14px; font-weight:bold;}
+h3                               {font-size:14px;}
+hr                               {background-color:#AB9B7D; border:0; height:1px; margin-bottom:1.5em;}
+p                                {margin-bottom:1.5em;}
+strong                           {font-weight:bold;}
+pre                              {font-family:Courier, monospace; font-size: 12px; margin-bottom:1.625em; overflow:auto; padding:1em 1em; white-space:pre-wrap;}
+a                                {color: #2a6496; text-decoration:none;}
+a:focus,a:active,a:hover         {text-decoration:none;}
+a:visited                        {}
+a:hover                          {text-decoration:underline;}
+blockquote                       {font-style:italic; font-weight:normal; margin:0 3em;}
+ul                               {list-style:none; margin-left:0px;}
+ol                               {list-style-type:decimal;}
+ol ol                            {list-style:upper-alpha;}
+ol ol ol                         {list-style:lower-roman;}
+ol ol ol ol                      {list-style:lower-alpha;}
+dl                               {margin:0 1.5em;}
+dt                               {font-weight:bold;}
+dd                               {margin-left:1.5em; /*margin-bottom:1.5em;*/}
+abbr, acronym, dfn               {border-bottom:1px dotted #666;}
+address                          {font-style:italic; display:block; margin:0 0 1.625em;}
+big                              {font-size:130%;}
+cite, em, i                      {font-style:italic;}
+cite                             {border:none;}
+code,kbd,tt,var                  {font-family:Monaco, Consolas, monospace; font-size:.9em;}
+del                              {}
+pre                              {font-family:Courier, monospace; margin-bottom:1.5em;}
+sup,sub                          {font-size:90%; height:0; position:relative; vertical-align:baseline;}
+sup                              {bottom:1ex;}
+sub                              {top:.5ex;}
+var                              {font-style:italic;}
+table                            {border-collapse:collapse; border-spacing:0;}
+th                               {text-align:left; padding:4px 4px;}
+td                               {margin:0; margin:4px 4px;}
+fieldset                         {display: block; -webkit-margin-start:2px; -webkit-margin-end:2px; -webkit-padding-before:0.35em; -webkit-padding-start:0.75em; -webkit-padding-end:0.75em; -webkit-padding-after:0.625em; border:2px groove threedface; border-image:initial;}
+legend                           {display: block; -webkit-padding-start: 2px; -webkit-padding-end:2px; border:none; border-image:initial;}
+/************************************************************************************************************************/
+/* ! The 1140px Grid V2 by Andy Taylor \ http://cssgrid.net \ http://www.twitter.com/andytlr \ http://www.andytlr.com   */
+/************************************************************************************************************************/
+.container {padding-left: 15px; padding-right: 15px; margin-right: auto; margin-left: auto;}
+/*.row {width: 100%; min-width: 755px; margin: 0 auto; overflow: hidden;}*/
+.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {margin-right: 3.8%; float: left; min-height: 1px;}
+.row .onecol {width: 4.85%;}
+.row .twocol {width: 13.45%;}
+.row .threecol {width: 22.05%;}
+.row .fourcol {width: 30.75%;}
+.row .fivecol {width: 39.45%;}
+.row .sixcol {width: 48%;}
+.row .sevencol {width: 56.75%;}
+.row .eightcol {width: 65.4%;}
+.row .ninecol {width: 74.05%;}
+.row .tencol {width: 82.7%;}
+.row .elevencol {width: 91.35%;}
+.row .twelvecol {width: 100%;float: left;}
+.last {margin-right: 0px;}
+img, object, embed {max-width: none;} /* required for Google Maps' icons */
+img {height: auto;}
+/* Smaller screens */
+@media only screen and (max-width: 1023px) {
+	body {font-size: 0.8em;	line-height: 1.5em;}
+}
+/* Mobile */
+@media handheld, only screen and (max-width: 767px) {
+	body {font-size: 16px; -webkit-text-size-adjust: none;}
+/*	.row, body, .container {width: 100%; min-width: 0; margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px;}*/
+	.row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
+	width: auto; float: none; margin-left: 0px; margin-right: 0px; padding-left: 20px; padding-right: 20px; 
+	}
+}
+/******************/
+/* JQuery UI      */
+/******************/
+.ui-tabs {padding: 0.1em;}
+.ui-tabs .ui-tabs-panel {padding: 0.1em}
+.ui-widget {font-size:14px; font-family: "Open Sans", sans-serif;}
+/******************/
+/* Overrides      */
+/******************/
+@media print { body {background:none !important; font-size:10px !important; clear:both !important; display:block !important; float:none !important; max-width:100%; position:relative !important; margin-top:0 !important; border:none !important; box-shadow:none !important; background:none !important;} }
+@media only screen and (max-width:768px) and (orientation:portrait) { body {padding-left: 0px !important;} }
+@media only screen and (max-width:768px) { body {padding: 0 !important;} }
+@media only screen and (min-width:641px) { body {padding: 0 !important;} }
+@media only screen and (max-width:640px) { body {padding: 0 !important;} } 
+@media only screen and (max-width:580px) { body {padding: 0 !important;} }
+/*******************/
+/* General Classes */
+/*******************/
+.aligncenter                     {display:block; margin-left:auto; margin-right:auto;}
+.alignleft                       {float:left;}
+.alignright                      {float:right;}
+.nowrap                          {white-space:nowrap;}
+.square-thumb                    {display: inline-block;}
+.square-thumb                    {width: 100px; height: 90px; margin: 1px;}
+/******************/
+/* Site Wrappers  */
+/******************/
+#site-wrapper       {max-width:1070px;} /* Changing this will require reformatting charts manually */
+#site-footer        {max-width:1070px;}
+#site-content       {padding: 0px 10px 0px 10px;}
+#site-content       {/*width:1050px;*/} /* Enable to prevent wrapping on mobile devices */
+
+#site-wrapper {background:transparent; margin:auto; margin-top:10px; margin-bottom:30px; padding: 0px; background-color:#FEFEFE; border: solid 1px #444;}
+#site-header  {letter-spacing:-1px; font-weight:400; color:black; clear:both; margin:0 0 .7em 10px; font-size:190%;}
+#site-content {font-family: "Open Sans", sans-serif; font-size:14px; color:black; text-align:left;}
+#site-footer  {margin: auto; margin-bottom: 30px; text-align:center;}
+/*
+@media only screen and (max-width:768px) { #site-content,#adam-wrapper,#adam-outer-content,#adam-inner-content {width:auto; margin:0; padding: 0; font-size:16px;} }
+*/
+#addCommentFormWrapper {padding-left: 10px;}
+/******************/
+/* Adam Content   */
+/******************/
+#adam-wrapper 									 {margin: 5px 0px 10px 0px;}
+#adam-inner-content 						 {background:#F2F2F2; border:1px solid #C4C4C4; margin-bottom:10px; padding:5px;}
+.adam-alignright                 {float:right;}
+.adam-alignleft                  {float:left; position:absolute;}
+#adam-sidebar                    {float:left; width:130px; margin:0 10px 0px 0;}
+#adam-menu                       {background:#f2f2f2; border:1px solid #C4C4C4; margin-bottom:20px;}
+#adam-menu h3                    {padding:5px; font-weight:bold;}
+#adam-menu ul                    {border-top:1px solid #c4c4c4; padding:5px;}
+#adam-menu ul li                 {background:#e1e1e1; border-bottom:1px solid #c4c4c4;}
+#adam-menu-articles li           {padding-bottom:20px;}
+#adam-menu-sources li            {padding-bottom:20px;}
+#adam-menu-places li             {padding-bottom:20px;}
+#adam-menu a                     {color:#282828;}
+#adam-menu a:link                {color:#282828;}
+#adam-menu a:visited             {color:#282828;}
+#adam-menu a:active              {color:#282828;}
+#adam-menu a:hover               {color:#9e9e9e; text-decoration:none;}
+.adam-tab_table                  {width:100%;}
+.adam-table_box                  {width:100%; border-width:1px; border-style:solid; border-color:black; border-spacing:0px; border-collapse:separate;}
+.adam-heading                    {background:#303030; color:white; font-weight:bold; padding:2px 10px 2px 10px;}
+.adam-heading li.adam-title      {float:left;}
+.adam-heading li.adam-id         {float:right;}
+.adam-version                    {font-size:12px; padding-top:5px; padding-bottom:10px;}
+.adam-bonkers                    {font-size:12px; padding-top:5px;}
+.adam-vivify                     {font-size:12px; padding-top:5px;}
+.adam-validator                  {font-size:12px; padding-top:5px;}
+.adam-index_legend               {text-align:center;}
+.adam-index_names                {text-align:center;}
+.adam-index_entry                {display:inline; white-space:nowrap;}
+.adam-home_title                 {font-size:20px; color:#4f4f85; height:30px;}
+.adam-author                     {font-size:16px; color:#4f4f85; height:20px;}
+.adam-date                       {font-size:14px; color:#4f4f85; height:30px;}
+.adam-toc                        {padding:5px 5px 5px 5px;}
+.adam-toc_item                   {}
+.adam-gender                     {background:#FFEAD0; padding:3px 10px 3px 10px;}
+.adam-photos                     {background:#FFFAFA; /*padding:5px 10px 5px 10px;*/}
+.adam-photo_thumb                {width:100px;}
+.adam-userids                    {background:#F4E5CF; padding:5px 10px 5px 10px;}
+.adam-name_list                  {background:#E7F0FF; padding:5px 10px 5px 10px;}
+.adam-parents                    {background:#EDCBAD; padding:5px 10px 5px 10px;}
+.adam-spouses                    {background:#FFEAD0; padding:5px 10px 5px 10px;}
+.adam-children                   {background:#FFEAD0; padding:5px 10px 5px 10px;}
+.adam-associations               {background:#EDCBAD; padding:5px 10px 5px 10px;}
+.adam-events                     {background:#E7F0FF; padding:5px 10px 5px 10px;}
+.adam-attrs                      {background:#E7F0FF; padding:5px 10px 5px 10px;}
+.adam-claim_name                 {padding:0px 1px 0px 0px; white-space:nowrap;}
+.adam-claim_tag                  {padding:0px 1px 0px 0px; white-space:nowrap; min-width:150px;}
+.adam-claim_data                 {padding:0px 1px 0px 0px; width:100%;}
+.adam-claim_date                 {padding:0px 1px 0px 0px; white-space:nowrap; text-align:right;}
+.adam-claim_age                  {padding:0px 1px 0px 5px; white-space:nowrap;}
+.adam-claim_disproved            {background:lightgrey;}
+.adam-claim_quality              {text-align:right;}
+.adam-claim_quality_disproved    {background:lightgrey; font-weight:bold;}
+.adam-claim_quality_uncertain    {color:black;}
+.adam-claim_quality_estimated    {color:purple;}
+.adam-claim_quality_unsupported  {color:black;}
+.adam-claim_quality_improbable   {color:red;  font-weight:bold;}
+.adam-claim_quality_probable     {color:green;}
+.adam-claim_quality_proposed     {color:#28A500;}
+.adam-claim_quality_possible     {color:#28A500;}
+.adam-claim_quality_supported    {color:#28A500;}
+.adam-claim_quality_maybe        {color:#28A500;}
+.adam-claim_quality_assumed      {color:#28A500;}
+.adam-claim_quality_certain      {color:blue;}
+.adam-claim_evidence             {font-size:12px;}
+.adam-claim_evidence a           {}
+.adam-claim_evidence a:link      {}
+.adam-claim_evidence a:visited   {}
+.adam-claim_evidence a:active    {}
+.adam-claim_conclusion           {color:green;}
+.adam-claim_conclusion a         {color:green;}
+.adam-claim_conclusion a:link    {color:green;}
+.adam-claim_conclusion a:visited {color:green;}
+.adam-claim_conclusion a:active  {color:green;}
+.adam-location_link              {color:#1a4c80;}
+.adam-name_link                  {color:#cc3300;}
+.adam-chart_name_link            {color:#00008b;}
+.adam-comment                    {background:#FFFFCC;}
+.adam-note                       {background:#FFFFFF; margin:5px 0;}
+.adam-note_heading               {background:#959A92; padding:1px 10px 2px 10px; border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(0, 0, 0);}
+.adam-note_text                  {background:#E7F0FF; padding:5px 10px 5px 10px; border-top-width:1px; border-top-style:solid; border-top-color:rgb(0, 0, 0);}
+.adam-list                       {background:#FFFFFF; margin:5px 0;}
+.adam-list_heading               {background:#959A92; padding:1px 10px 2px 10px; border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(0, 0, 0);}
+.adam-list_urls                  {background:#FFFAFA; padding:2px 10px 2px 10px;}
+#adam-modified                   {font-size:12px; padding:10px 5px 5px 5px;}
+.adam-source_text                {background:#E7F0FF; padding:5px 10px 5px 10px;}
+.adam-source_header              {background:#F0FFF0; padding:5px 10px 5px 10px;}
+.adam-source_bibliography        {background:#F4E5CF; padding:5px 10px 5px 10px;}
+.adam-source_template            {background:#FFFAFA; padding:5px 10px 5px 10px;}
+.adam-source_type                {background:#F0FFF0; padding:5px 10px 5px 10px;}
+.adam-source_repository          {background:#F0FFF0; padding:5px 10px 5px 10px;}
+.adam-source_quality             {background:#F4E5CF; padding:5px 10px 5px 10px;}
+.adam-referrers                  {background:#F0FFF0; padding:5px 10px 5px 10px;}
+.adam-urls                       {background:#FFFAFA; padding:3px  0px 3px  0px;}
+.adam-names                      {background:#FFEAD0; padding:5px 10px 5px 10px;}
+.adam-url                        {background:#FFFAFA; padding:2px 10px 2px 10px;}
+.adam-citation                   {background:#FFFFFF; margin:5px 0;}
+.adam-citation_heading           {background:#959A92; padding:1px 10px 2px 10px; border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(0, 0, 0);}
+.adam-citation_text              {background:#E7F0FF; padding:5px 10px 5px 10px; border-top-width:1px; border-top-style:solid; border-top-color:rgb(0, 0, 0);}
+.adam-location                   {background:#E7F0FF; padding:5px 10px 5px 10px;}
+.adam-map			                   {padding:0px 0px 0px 00px;}
+#adam-map-canvas                 {height: 500px;}
+#adam-heat-map                   {width:100%; max-width:1023px; height:650px; margin-right:10px; float:left;}
+div.infowindow                   {max-height:400px; width: 100%; max-width:400px; overflow-y:auto; overflow-x: hidden;}
+.adam-map-location               {white-space:nowrap;}
+.adam-map-person                 {white-space:nowrap;}
+.adam-article_text               {background:#FFFAFA; padding:5px 10px 5px 10px; color:#000000;}
+.adam-updated_person             {}
+.adam-updated_note               {font-style:italic;}
+.adam-updated_source             {font-style:italic;}
+.adam-al_page                    {background:#E0FFFF; padding:5px; border-color:black; border-style:solid; border-width:2px;}
+.adam-al_page b                  {font-weight:bold;}
+.adam-al_page i                  {font-style:italic;}
+.adam-al_legend                  {width:600px; list-style-type:none; margin:0; padding:0;}
+.adam-al_generation              {padding-top:10px; font-weight:bold;}
+.adam-al_list                    {list-style-type:none;  margin:0; padding:0;}
+.adam-al_item                    {}
+.adam-al_item_primary            {font-weight:bold;}
+.adam-al_item_uncertain          {background:lightgrey;}
+.adam-al_name                    {float:left;  white-space:nowrap;}
+.adam-al_path                    {float:right; white-space:nowrap;}
+.bonkers_item                    {background:white; border-radius: 5px; -webkit-border-radius: 5px; margin-bottom:20px; padding-left:10px; padding-right:10px; padding-bottom:10px;}
+.adam-il_title                   {padding-left:10px; padding-top:10px; background:white; font-weight:bold; height:30px; vertical-align:bottom;}
+.adam-il_item                    {padding-left:10px;}
+.adam-il_item_bonkers 					 {font-size: 24px; font-weight:bold; padding: 10px 0;}
+.adam-il_total                   {padding-left:10px; padding-top:10px; padding-bottom:20px; height:30px;}
+.adam-census                     {width:100%; background:lightgrey; padding-left:1px; padding-right:1px; padding-top:1px; padding-bottom:1px;}
+.adam-census i                   {font-style:italic;}
+.adam-census b                   {font-weight:bold;}
+.adam-census_heading             {background:#FFE7BA; font-weight:bold;}
+.adam-census_body                {background:lightyellow;}
+.adam-census_name                {background:lightyellow; vertical-align:top; white-space:nowrap;}
+.adam-census_date                {background:lightyellow; vertical-align:top; white-space:nowrap;}
+.adam-census_entryeven           {background:lightyellow; vertical-align:top; white-space:nowrap; text-align:center;}
+.adam-census_entryodd            {background:lightgrey;   vertical-align:top; white-space:nowrap; text-align:center;}
+.adam-timeline_list              {color:black; background:#E7F0FF; padding:5px 10px 5px 10px;}
+.adam-military_list              {color:black; background:#E7F0FF; padding:5px 10px 5px 10px;}
+.adam-immigrants_list            {color:black; background:#E7F0FF; padding:5px 10px 5px 10px;}
+.adam-immigrant_index            {padding:0px 5px 0px 0px;}
+.adam-immigrant_name             {padding:0px 5px 0px 0px; min-width:200px;}
+.adam-immigrant_data             {padding:0px 5px 0px 0px; width:100%;}
+.adam-immigrant_ship             {font-style:italic;}
+.adam-titles_list                {color:black; background:#E7F0FF; padding:5px 10px 5px 10px;}
+.adam-title_new                  {}
+.adam-title_cont                 {}
+.adam-title_name                 {padding:0px 5px 0px 5px; min-width:300px;}
+.adam-title_data                 {padding:0px 5px 0px 0px; width:100%;}
+.adam-title_date                 {padding:0px 5px 0px 0px; white-space:nowrap; text-align:right;}
+.adam-title_age                  {padding:0px 5px 0px 0px; white-space:nowrap;}
+.adam-stats-title 							 {font-weight: bold; padding-bottom: 10px;}
+.adam-stats-line 								 {padding-left: 20px;}
+.adam-stats-table								 {border: 1px;}
+.adam-stats-line tr td 					 {padding-right: 10px;}
+.adam-stats-legend td 	 				 {font-weight: bold;}
+.adam-stats-super-legend td 	 	 {font-weight: bolder; text-align: center;}
+#adam-bloxxen_comments 					 {padding-left: 5px; width:99%; }
+.adam-bloxxen-form-intro 				 {padding-left: 10px; padding-top: 10px;}
+ul.adam-tabs                     {margin:0 !important; padding:0; height:36px; border-bottom:1px solid #666;}
+ul.adam-tabs li                  {float:left; padding:0; margin:0; list-style-type:none;}
+ul.adam-tabs a                   {float:left;font-size:110%; display:block; padding:5px 30px; text-decoration:none;border:1px solid #666; border-bottom:0px;height:24px; background-color:#ddd; color:#777; margin-right:2px; position:relative; top:1px; outline:0; -moz-border-radius:8px 8px 0 0; -khtml-border-radius:8px 8px 0 0; -webkit-border-radius:8px 8px 0 0; -border-radius:8px 8px 0 0;}
+ul.adam-tabs a:hover             {background-color:#F7F7F7; color:#333;}
+ul.adam-tabs a.current           {background-color:#efefef; color:#000;border-bottom:1px solid #efefef; cursor:default;}
+.adam-panes div.adam-tab         {display:none; border:1px solid #666; border-width:0 1px 1px 1px; min-height:50px; padding:0px 0px; background-color:#efefef; color:black;}
+.adam-article_text img,
+.adam-url img                    {cursor:pointer; margin:0 0 3px; background-color:#fff; border:1px solid #ccc; padding:2px; -moz-border-radius:4px; -webkit-border-radius:4px;}
+#adam-person_chart               {position:relative;}
+.adam-chart_node                 {padding:2px; text-align:left; font-size:8pt; font-family:Arial, Helvetica, sans-serif; vertical-align:middle; border-top-width:1px; border-right-width:1px; border-bottom-width:1px; border-left-width:1px; border-top-style:solid; border-right-style:solid; border-bottom-style:solid; border-left-style:solid; border-top-color:rgb(0, 0, 0); border-right-color:rgb(0, 0, 0); border-bottom-color:rgb(0, 0, 0); border-left-color:rgb(0, 0, 0); border-image:initial;}
+.adam-chart_node                 {position:absolute; z-index:5; overflow:hidden; height:30px; width:151px; border-color: #949494; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; -khtml-border-radius:5px;}
+.adam-chart_nodeshadow           {position:absolute; z-index:1; overflow:hidden; height:33px; width:154px; background-color:#444; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; -khtml-border-radius:5px;}
+.adam-chart_connector            {position:absolute; z-index:3; overflow:hidden; background-color:#949494;}
+.adam-chart_arrow                {position:absolute; z-index:5;}
+.adam-chart_arrow img            {width:10;  height:10; cursor:pointer; margin:0 0 3px; background-color:#fff; border:1px solid #ccc; padding:2px; -moz-border-radius:4px; -webkit-border-radius:4px;}
+.adam-chart_node-bkgnd5          {background-color:#f5ecce;}
+.adam-chart_node-bkgnd4          {background-color:#f7f2e0;}
+.adam-chart_node-bkgnd3          {background-color:#fbf8ef;}
+.adam-chart_node-bkgnd2          {background-color:#fbfbef;}
+.adam-chart_node-bkgnd1          {background-color:#ffffff;}
+.adam-chart_node-bkgnd0          {background-color:#f5ecce;}
+#adam-chart_legend-uncertain     {background-color:#aaaaaa; border:1px solid #666;}
+.adam-chart_node-uncertain       {background-color:#aaaaaa;}
+.adam-chart_node-uncertain a     {color:#ffffff;}
+.adam-chart_node-unknown         {background-color:#efefef;}
+.adam-chart_arrow0               {left:  4px;}
+.adam-chart_node0                {left: 23px;}
+.adam-chart_nodeshadow0          {left: 27px;}
+.adam-chart_connector0a          {left:179px; height:1px; width:5px;}
+.adam-chart_connector0b          {left:183px; height:1px; width:5px;}
+.adam-chart_connector0c          {left:183px; height:40px; width:1.1px;}
+#adam-chart_arrow2               {top:290px; left:320px; width:16px; height:10px;}
+#adam-chart_arrow3               {top:350px; left:320px; width:16px; height:10px;}
+#adam-chart_node1                {top:310px; left:188px;}
+#adam-chart_nodeshadow1          {top:314px; left:192px;}
+#adam-chart_connector1           {top:328px; left:344px; height:  1px; width:5px;}
+#adam-chart_connector1-2a        {top:168px; left:348px; height:160px; width:1.1px;}
+#adam-chart_connector1-2b        {top:168px; left:348px; height:  1px; width:5px;}
+#adam-chart_connector1-3a        {top:328px; left:348px; height:160px; width:1.1px;}
+#adam-chart_connector1-3b        {top:488px; left:348px; height:  1px; width:5px;}
+#adam-chart_node2                {top:150px; left:353px;}
+#adam-chart_nodeshadow2          {top:154px; left:357px;}
+#adam-chart_connector2           {top:168px; left:509px; height: 1px; width:5px;}
+#adam-chart_connector2-4a        {top: 88px; left:513px; height:80px; width:1.1px;}
+#adam-chart_connector2-4b        {top: 88px; left:513px; height: 1px; width:5px;}
+#adam-chart_connector2-5a        {top:168px; left:513px; height:80px; width:1.1px;}
+#adam-chart_connector2-5b        {top:248px; left:513px; height: 1px; width:5px;}
+#adam-chart_node3                {top:470px; left:353px;}
+#adam-chart_nodeshadow3          {top:474px; left:357px;}
+#adam-chart_connector3           {top:488px; left:509px; height:  1px; width:5px;}
+#adam-chart_connector3-6a        {top:408px; left:513px; height: 80px; width:1.1px;}
+#adam-chart_connector3-6b        {top:408px; left:513px; height:  1px; width:5px;}
+#adam-chart_connector3-7a        {top:488px; left:513px; height: 80px; width:1.1px;}
+#adam-chart_connector3-7b        {top:568px; left:513px; height:  1px; width:5px;}
+#adam-chart_node4                {top: 70px; left:518px;}
+#adam-chart_nodeshadow4          {top: 74px; left:522px;}
+#adam-chart_connector4           {top: 88px; left:674px; height:1px; width:5px;}
+#adam-chart_connector4-8a        {top: 48px; left:678px; height:40px; width:1.1px;}
+#adam-chart_connector4-8b        {top: 48px; left:678px; height:1px; width:5px;}
+#adam-chart_connector4-9a        {top: 88px; left:678px; height:40px; width:1.1px;}
+#adam-chart_connector4-9b        {top:128px; left:678px; height:1px; width:5px;}
+#adam-chart_node5                {top:230px; left:518px;}
+#adam-chart_nodeshadow5          {top:234px; left:522px;}
+#adam-chart_connector5           {top:248px; left:674px; height:1px; width:5px;}
+#adam-chart_connector5-10a       {top:208px; left:678px; height:40px; width:1.1px;}
+#adam-chart_connector5-10b       {top:208px; left:678px; height:1px; width:5px;}
+#adam-chart_connector5-11a       {top:248px; left:678px; height:40px; width:1.1px;}
+#adam-chart_connector5-11b       {top:288px; left:678px; height:1px; width:5px;}
+#adam-chart_node6                {top:390px; left:518px;}
+#adam-chart_nodeshadow6          {top:394px; left:522px;}
+#adam-chart_connector6           {top:408px; left:674px; height:1px; width:5px;}
+#adam-chart_connector6-12a       {top:368px; left:678px; height:40px; width:1.1px;}
+#adam-chart_connector6-12b       {top:368px; left:678px; height:1px; width:5px;}
+#adam-chart_connector6-13a       {top:408px; left:678px; height:40px; width:1.1px;}
+#adam-chart_connector6-13b       {top:448px; left:678px; height:1px; width:5px;}
+#adam-chart_node7                {top:550px; left:518px;}
+#adam-chart_nodeshadow7          {top:554px; left:522px;}
+#adam-chart_connector7           {top:568px; left:674px; height:1px; width:5px;}
+#adam-chart_connector7-14a       {top:528px; left:678px; height:40px; width:1.1px;}
+#adam-chart_connector7-14b       {top:528px; left:678px; height:1px; width:5px;}
+#adam-chart_connector7-15a       {top:568px; left:678px; height:40px; width:1.1px;}
+#adam-chart_connector7-15b       {top:608px; left:678px; height:1px; width:5px;}
+#adam-chart_node8                {top: 30px; left:683px;}
+#adam-chart_nodeshadow8          {top: 34px; left:687px;}
+#adam-chart_connector8           {top: 48px; left:839px; height:1px; width:5px;}
+#adam-chart_connector8-16a       {top: 28px; left:843px; height:20px; width:1.1px;}
+#adam-chart_connector8-16b       {top: 28px; left:843px; height:1px; width:5px;}
+#adam-chart_connector8-17a       {top: 48px; left:843px; height:20px; width:1.1px;}
+#adam-chart_connector8-17b       {top: 68px; left:843px; height:1px; width:5px;}
+#adam-chart_node9                {top:110px; left:683px;}
+#adam-chart_nodeshadow9          {top:114px; left:687px;}
+#adam-chart_connector9           {top:128px; left:839px; height:1px; width:5px;}
+#adam-chart_connector9-18a       {top:108px; left:843px; height:20px; width:1.1px;}
+#adam-chart_connector9-18b       {top:108px; left:843px; height:1px; width:5px;}
+#adam-chart_connector9-19a       {top:128px; left:843px; height:20px; width:1.1px;}
+#adam-chart_connector9-19b       {top:148px; left:843px; height:1px; width:5px;}
+#adam-chart_node10               {top:190px; left:683px;}
+#adam-chart_nodeshadow10         {top:194px; left:687px;}
+#adam-chart_connector10          {top:208px; left:839px; height:1px; width:5px;}
+#adam-chart_connector10-20a      {top:188px; left:843px; height:20px; width:1.1px;}
+#adam-chart_connector10-20b      {top:188px; left:843px; height:1px; width:5px;}
+#adam-chart_connector10-21a      {top:208px; left:843px; height:20px; width:1.1px;}
+#adam-chart_connector10-21b      {top:228px; left:843px; height:1px; width:5px;}
+#adam-chart_node11               {top:270px; left:683px;}
+#adam-chart_nodeshadow11         {top:274px; left:687px;}
+#adam-chart_connector11          {top:288px; left:839px; height:1px; width:5px;}
+#adam-chart_connector11-22a      {top:268px; left:843px; height:20px; width:1.1px;}
+#adam-chart_connector11-22b      {top:268px; left:843px; height:1px; width:5px;}
+#adam-chart_connector11-23a      {top:288px; left:843px; height:20px; width:1.1px;}
+#adam-chart_connector11-23b      {top:308px; left:843px; height:1px; width:5px;}
+#adam-chart_node12               {top:350px; left:683px;}
+#adam-chart_nodeshadow12         {top:354px; left:687px;}
+#adam-chart_connector12          {top:368px; left:839px; height:1px; width:5px;}
+#adam-chart_connector12-24a      {top:348px; left:843px; height:20px; width:1.1px;}
+#adam-chart_connector12-24b      {top:348px; left:843px; height:1px; width:5px;}
+#adam-chart_connector12-25a      {top:368px; left:843px; height:20px; width:1.1px;}
+#adam-chart_connector12-25b      {top:388px; left:843px; height:1px; width:5px;}
+#adam-chart_node13               {top:430px; left:683px;}
+#adam-chart_nodeshadow13         {top:434px; left:687px;}
+#adam-chart_connector13          {top:448px; left:839px; height:1px; width:5px;}
+#adam-chart_connector13-26a      {top:428px; left:843px; height:20px; width:1.1px;}
+#adam-chart_connector13-26b      {top:428px; left:843px; height:1px; width:5px;}
+#adam-chart_connector13-27a      {top:448px; left:843px; height:20px; width:1.1px;}
+#adam-chart_connector13-27b      {top:468px; left:843px; height:1px; width:5px;}
+#adam-chart_node14               {top:510px; left:683px;}
+#adam-chart_nodeshadow14         {top:514px; left:687px;}
+#adam-chart_connector14          {top:528px; left:839px; height:1px; width:5px;}
+#adam-chart_connector14-28a      {top:508px; left:843px; height:20px; width:1.1px;}
+#adam-chart_connector14-28b      {top:508px; left:843px; height:1px; width:5px;}
+#adam-chart_connector14-29a      {top:528px; left:843px; height:20px; width:1.1px;}
+#adam-chart_connector14-29b      {top:548px; left:843px; height:1px; width:5px;}
+#adam-chart_node15               {top:590px; left:683px;}
+#adam-chart_nodeshadow15         {top:594px; left:687px;}
+#adam-chart_connector15          {top:608px; left:839px; height:1px; width:5px;}
+#adam-chart_connector15-30a      {top:588px; left:843px; height:20px; width:1.1px;}
+#adam-chart_connector15-30b      {top:588px; left:843px; height:1px; width:5px;}
+#adam-chart_connector15-31a      {top:608px; left:843px; height:20px; width:1.1px;}
+#adam-chart_connector15-31b      {top:628px; left:843px; height:1px; width:5px;}
+#adam-chart_node16               {top: 10px; left:848px;}
+#adam-chart_nodeshadow16         {top: 14px; left:852px;}
+#adam-chart_arrow16              {top: 19px; left:1010px;}
+#adam-chart_node17               {top: 50px; left:848px;}
+#adam-chart_nodeshadow17         {top: 54px; left:852px;}
+#adam-chart_arrow17              {top: 69px; left:1010px;}
+#adam-chart_node18               {top: 90px; left:848px;}
+#adam-chart_nodeshadow18         {top: 94px; left:852px;}
+#adam-chart_arrow18              {top: 99px; left:1010px;}
+#adam-chart_node19               {top:130px; left:848px;}
+#adam-chart_nodeshadow19         {top:134px; left:852px;}
+#adam-chart_arrow19              {top:139px; left:1010px;}
+#adam-chart_node20               {top:170px; left:848px;}
+#adam-chart_nodeshadow20         {top:174px; left:852px;}
+#adam-chart_arrow20              {top:179px; left:1010px;}
+#adam-chart_node21               {top:210px; left:848px;}
+#adam-chart_nodeshadow21         {top:214px; left:852px;}
+#adam-chart_arrow21              {top:219px; left:1010px;}
+#adam-chart_node22               {top:250px; left:848px;}
+#adam-chart_nodeshadow22         {top:254px; left:852px;}
+#adam-chart_arrow22              {top:259px; left:1010px;}
+#adam-chart_node23               {top:290px; left:848px;}
+#adam-chart_nodeshadow23         {top:294px; left:852px;}
+#adam-chart_arrow23              {top:299px; left:1010px;}
+#adam-chart_node24               {top:330px; left:848px;}
+#adam-chart_nodeshadow24         {top:334px; left:852px;}
+#adam-chart_arrow24              {top:339px; left:1010px;}
+#adam-chart_node25               {top:370px; left:848px;}
+#adam-chart_nodeshadow25         {top:374px; left:852px;}
+#adam-chart_arrow25              {top:379px; left:1010px;}
+#adam-chart_node26               {top:410px; left:848px;}
+#adam-chart_nodeshadow26         {top:414px; left:852px;}
+#adam-chart_arrow26              {top:419px; left:1010px;}
+#adam-chart_node27               {top:450px; left:848px;}
+#adam-chart_nodeshadow27         {top:454px; left:852px;}
+#adam-chart_arrow27              {top:459px; left:1010px;}
+#adam-chart_node28               {top:490px; left:848px;}
+#adam-chart_nodeshadow28         {top:494px; left:852px;}
+#adam-chart_arrow28              {top:499px; left:1010px;}
+#adam-chart_node29               {top:530px; left:848px;}
+#adam-chart_nodeshadow29         {top:534px; left:852px;}
+#adam-chart_arrow29              {top:539px; left:1010px;}
+#adam-chart_node30               {top:570px; left:848px;}
+#adam-chart_nodeshadow30         {top:574px; left:852px;}
+#adam-chart_arrow30              {top:579px; left:1010px;}
+#adam-chart_node31               {top:610px; left:848px;}
+#adam-chart_nodeshadow31         {top:614px; left:852px;}
+#adam-chart_arrow31              {top:619px; left:1010px;}
+
+.mapbutton {
+-webkit-align-items: flex-start;
+-webkit-appearance: none;
+-webkit-box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px 0px;
+-webkit-transition-delay: 0s;
+-webkit-transition-duration: 0s;
+-webkit-transition-property: all;
+-webkit-transition-timing-function: ease;
+-webkit-writing-mode: horizontal-tb;
+background-color: rgb(91, 183, 91);
+background-image: linear-gradient(rgb(98, 196, 98), rgb(81, 163, 81));
+background-position: 0% 0%;
+background-repeat: repeat-x;
+border-bottom-color: rgba(0, 0, 0, 0.247059);
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-image-outset: 0px;
+border-image-repeat: stretch;
+border-image-slice: 100%;
+border-image-source: none;
+border-image-width: 1;
+border-left-color: rgba(0, 0, 0, 0.0980392);
+border-left-style: solid;
+border-left-width: 1px;
+border-right-color: rgba(0, 0, 0, 0.0980392);
+border-right-style: solid;
+border-right-width: 1px;
+border-top-color: rgba(0, 0, 0, 0.0980392);
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+border-top-style: solid;
+border-top-width: 1px;
+box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px 0px;
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+cursor: pointer;
+display: inline-block;
+font-size: 14px;
+font-weight: normal;
+height: 30px;
+letter-spacing: normal;
+line-height: 20px;
+margin-bottom: 0px;
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 0px;
+padding-bottom: 4px;
+padding-left: 12px;
+padding-right: 12px;
+padding-top: 4px;
+position: relative;
+text-align: center;
+text-decoration: none;
+text-indent: 0px;
+text-shadow: rgba(0, 0, 0, 0.247059) 0px -1px 0px;
+text-transform: none;
+transition-delay: 0s;
+transition-duration: 0s;
+transition-property: all;
+transition-timing-function: ease;
+vertical-align: middle;
+white-space: nowrap;
+word-spacing: 0px;
+writing-mode: lr-tb;
+z-index: auto;
+}
+.mapbutton:hover {
+background-color: rgb(91, 153, 91);
+background-image: linear-gradient(rgb(98, 166, 98), rgb(81, 153, 81));
+text-decoration: none;
+color: rgb(255, 255, 255);
+}
+
+#togglemarkers{color: rgb(255, 255, 255);}
+.mapbutton:visited {color: rgb(255, 255, 255);}
+
+.floatmapbuttons {float:left;}
+
+.mapstatusspan{
+-webkit-align-items: flex-start;
+-webkit-appearance: none;
+-webkit-box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px 0px;
+-webkit-transition-delay: 0s;
+-webkit-transition-duration: 0s;
+-webkit-transition-property: all;
+-webkit-transition-timing-function: ease;
+-webkit-writing-mode: horizontal-tb;
+background-color: rgb(73, 175, 205);
+background-image: linear-gradient(rgb(91, 192, 222), rgb(47, 150, 180));
+background-position: 0% 0%;
+background-repeat: repeat-x;
+border-bottom-color: rgba(0, 0, 0, 0.247059);
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-image-outset: 0px;
+border-image-repeat: stretch;
+border-image-slice: 100%;
+border-image-source: none;
+border-image-width: 1;
+border-left-color: rgba(0, 0, 0, 0.0980392);
+border-left-style: solid;
+border-left-width: 1px;
+border-right-color: rgba(0, 0, 0, 0.0980392);
+border-right-style: solid;
+border-right-width: 1px;
+border-top-color: rgba(0, 0, 0, 0.0980392);
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+border-top-style: solid;
+border-top-width: 1px;
+box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.0470588) 0px 1px 2px 0px;
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+cursor: pointer;
+display: inline-block;
+font-size: 14px;
+font-weight: normal;
+letter-spacing: normal;
+margin-bottom: 10px;
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 20px;
+padding-bottom: 4px;
+padding-left: 12px;
+padding-right: 12px;
+padding-top: 4px;
+position: relative;
+text-align: center;
+text-decoration: none;
+text-indent: 0px;
+text-shadow: rgba(0, 0, 0, 0.247059) 0px -1px 0px;
+text-transform: none;
+transition-delay: 0s;
+transition-duration: 0s;
+transition-property: all;
+transition-timing-function: ease;
+vertical-align: middle;
+word-spacing: 0px;
+writing-mode: lr-tb;
+z-index: auto;
+width: 100%;
+}
