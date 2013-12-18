@@ -1,0 +1,1 @@
+These are the html code pieces needed to make [Adam](http://timforsythe.com/tools/adam) run.
