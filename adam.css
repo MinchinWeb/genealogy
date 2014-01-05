@@ -137,9 +137,6 @@ img {height: auto;}
 #adam-menu h3                    {padding:5px; font-weight:bold;}
 #adam-menu ul                    {border-top:1px solid #c4c4c4; padding:5px;}
 #adam-menu ul li                 {background:#e1e1e1; border-bottom:1px solid #c4c4c4;}
-#adam-menu-articles li           {padding-bottom:20px;}
-#adam-menu-sources li            {padding-bottom:20px;}
-#adam-menu-places li             {padding-bottom:20px;}
 #adam-menu a                     {color:#282828;}
 #adam-menu a:link                {color:#282828;}
 #adam-menu a:visited             {color:#282828;}

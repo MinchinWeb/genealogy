@@ -1,14 +1,14 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.30.00.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.35.0.0)" />
  <meta property="og:title" content="Magherafelt, County Derry, Northern Ireland - Minchin Genealogy" />
  <title>Magherafelt, County Derry, Northern Ireland - Minchin Genealogy</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -100,6 +100,10 @@ Version:   1.0.4        December 29, 2013
 <tr class="adam-claim"><td class="adam-claim_tag">Subregion:</td><td class="adam-claim_data">County Derry
 </td></tr>
 <tr class="adam-claim"><td class="adam-claim_tag">City:</td><td class="adam-claim_data">Magherafelt
+</td></tr>
+<tr class="adam-claim"><td class="adam-claim_tag">Latitude:</td><td class="adam-claim_data">54.7545
+</td></tr>
+<tr class="adam-claim"><td class="adam-claim_tag">Longitude:</td><td class="adam-claim_data">-6.60781
 </td></tr>
 </table></td></tr>
 <tr><td><table class="adam-map adam-table_box">
@@ -248,7 +252,10 @@ function initialize() {
 
 	function displayMap() {
 	  address = "Magherafelt, County Derry, Northern Ireland";
-	  geocode("Magherafelt, County Derry, Northern Ireland");
+	  latlng = new google.maps.LatLng(54.7545,-6.60781);
+	  home = latlng;
+	  map.setCenter(latlng);
+	  updateMap();
 	}
 
 	function geocode(addr) {
@@ -312,33 +319,33 @@ function initialize() {
 
 <tr><td><table class="adam-events adam-table_box">
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4366.html" class="adam-name_link">John Dale</a></td><td class="adam-claim_tag">Christening</td><td class="adam-claim_data"><a href="places-northern-ireland-county-derry-magherafelt.html" class="adam-location_link">Magherafelt, County Derry, Northern Ireland</a>
-</td><td class="adam-claim_date">Mar 15, 1814</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Mar 15, 1814</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4366.html" class="adam-name_link">John Dale</a></td><td class="adam-claim_tag">Christening</td><td class="adam-claim_data"><a href="places-northern-ireland-county-derry-magherafelt.html" class="adam-location_link">Magherafelt, County Derry, Northern Ireland</a>
-</td><td class="adam-claim_date">Apr 16, 1814</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Apr 16, 1814</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4412.html" class="adam-name_link">Jane Dale</a></td><td class="adam-claim_tag">Christening</td><td class="adam-claim_data"><a href="places-northern-ireland-county-derry-magherafelt.html" class="adam-location_link">Magherafelt, County Derry, Northern Ireland</a>
-</td><td class="adam-claim_date">May 1, 1816</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">May 1, 1816</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4465.html" class="adam-name_link">Robert Dale</a></td><td class="adam-claim_tag">Christening</td><td class="adam-claim_data"><a href="places-northern-ireland-county-derry-magherafelt.html" class="adam-location_link">Magherafelt, County Derry, Northern Ireland</a>
-</td><td class="adam-claim_date">Dec 10, 1818</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Dec 10, 1818</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4540.html" class="adam-name_link">Alexander Dale</a></td><td class="adam-claim_tag">Christening</td><td class="adam-claim_data"><a href="places-northern-ireland-county-derry-magherafelt.html" class="adam-location_link">Magherafelt, County Derry, Northern Ireland</a>
-</td><td class="adam-claim_date">Sep 5, 1820</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Sep 5, 1820</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4394.html" class="adam-name_link">Nancy Dale</a></td><td class="adam-claim_tag">Christening</td><td class="adam-claim_data"><a href="places-northern-ireland-county-derry-magherafelt.html" class="adam-location_link">Magherafelt, County Derry, Northern Ireland</a>
-</td><td class="adam-claim_date">Jul 10, 1822</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Jul 10, 1822</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4424.html" class="adam-name_link">William Dale</a></td><td class="adam-claim_tag">Christening</td><td class="adam-claim_data"><a href="places-northern-ireland-county-derry-magherafelt.html" class="adam-location_link">Magherafelt, County Derry, Northern Ireland</a>
-</td><td class="adam-claim_date">Nov 27, 1824</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Nov 27, 1824</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4471.html" class="adam-name_link">Mary Dale</a></td><td class="adam-claim_tag">Christening</td><td class="adam-claim_data"><a href="places-northern-ireland-county-derry-magherafelt.html" class="adam-location_link">Magherafelt, County Derry, Northern Ireland</a>
-</td><td class="adam-claim_date">Mar 25, 1827</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Mar 25, 1827</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4360.html" class="adam-name_link">Catherine Dale</a></td><td class="adam-claim_tag">Christening</td><td class="adam-claim_data"><a href="places-northern-ireland-county-derry-magherafelt.html" class="adam-location_link">Magherafelt, County Derry, Northern Ireland</a>
-</td><td class="adam-claim_date">Nov 23, 1829</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Nov 23, 1829</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4385.html" class="adam-name_link">Sarah Anne Crossett</a></td><td class="adam-claim_tag">Christening</td><td class="adam-claim_data"><a href="places-northern-ireland-county-derry-magherafelt.html" class="adam-location_link">Magherafelt, County Derry, Northern Ireland</a>
-</td><td class="adam-claim_date">Aug 28, 1836</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Aug 28, 1836</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4363.html" class="adam-name_link">Richard John Dale</a></td><td class="adam-claim_tag">Christening</td><td class="adam-claim_data"><a href="places-northern-ireland-county-derry-magherafelt.html" class="adam-location_link">Magherafelt, County Derry, Northern Ireland</a>
-</td><td class="adam-claim_date">Nov 24, 1844</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Nov 24, 1844</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4386.html" class="adam-name_link">John Crosset</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I4370.html" class="adam-name_link">Jane Dale</a>, <a href="places-northern-ireland-county-derry-magherafelt.html" class="adam-location_link">Magherafelt, County Derry, Northern Ireland</a>
-</td><td class="adam-claim_date">Jul 30, 1850</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Jul 30, 1850</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4538.html" class="adam-name_link">James Corbett</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I4360.html" class="adam-name_link">Catherine Dale</a>, <a href="places-northern-ireland-county-derry-magherafelt.html" class="adam-location_link">Magherafelt, County Derry, Northern Ireland</a>
-</td><td class="adam-claim_date">Nov 12, 1850</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Nov 12, 1850</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4540.html" class="adam-name_link">Alexander Dale</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I4385.html" class="adam-name_link">Sarah Anne Crossett</a>, <a href="places-northern-ireland-county-derry-magherafelt.html" class="adam-location_link">Magherafelt, County Derry, Northern Ireland</a>
-</td><td class="adam-claim_date">Jun 10, 1853</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Jun 10, 1853</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 </table></td></tr>
 </table>
 </li>
@@ -348,7 +355,7 @@ function initialize() {
 
 </div>
 
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.30.00.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.35.0.0</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -368,7 +375,7 @@ function initialize() {
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2013 D. Minchin & W. Minchin<br />Generated by <a href="http://www.timforsythe.com/tools/adam">Adam 1.30.0.0</a> - Last Updated: December 29, 2013</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Generated by <a href="http://www.timforsythe.com/tools/adam">Adam 1.35.0.0</a> - Last Updated: January 4, 2014</p>
 
 </div></div></div>
 

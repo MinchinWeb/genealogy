@@ -1,14 +1,14 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.30.00.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.35.0.0)" />
  <meta property="og:title" content="Rendham, Suffolk, England - Minchin Genealogy" />
  <title>Rendham, Suffolk, England - Minchin Genealogy</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -100,6 +100,10 @@ Version:   1.0.4        December 29, 2013
 <tr class="adam-claim"><td class="adam-claim_tag">Region:</td><td class="adam-claim_data">Suffolk (SFK)
 </td></tr>
 <tr class="adam-claim"><td class="adam-claim_tag">City:</td><td class="adam-claim_data">Rendham
+</td></tr>
+<tr class="adam-claim"><td class="adam-claim_tag">Latitude:</td><td class="adam-claim_data">52.2287
+</td></tr>
+<tr class="adam-claim"><td class="adam-claim_tag">Longitude:</td><td class="adam-claim_data">1.43899
 </td></tr>
 </table></td></tr>
 <tr><td><table class="adam-map adam-table_box">
@@ -248,7 +252,10 @@ function initialize() {
 
 	function displayMap() {
 	  address = "Rendham, Suffolk, England";
-	  geocode("Rendham, Suffolk, England, UK");
+	  latlng = new google.maps.LatLng(52.2287,1.43899);
+	  home = latlng;
+	  map.setCenter(latlng);
+	  updateMap();
 	}
 
 	function geocode(addr) {
@@ -324,7 +331,7 @@ Page: accessed; 9 February 2013; Find A Grave Memorial# 82829884
 AccessType: accessed
 AccessDate: 9 February 2013
 ItemOfInterest: Find A Grave Memorial# 82829884
-">S30</a>]</span> </td><td class="adam-claim_date">1734</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+">S30</a>]</span> </td><td class="adam-claim_date">1734</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">uncertain</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I2111.html" class="adam-name_link">James Wells</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I2112.html" class="adam-name_link">Ann Masterson</a>, <a href="places-england-suffolk-rendham.html" class="adam-location_link">Rendham, Suffolk, England</a>
 
 <span>[<a href="sources-S11.html" title="[S11]
@@ -337,7 +344,7 @@ Page: accessed; 9 February 2013; Find A Grave Memorial# 82829884
 AccessType: accessed
 AccessDate: 9 February 2013
 ItemOfInterest: Find A Grave Memorial# 82829884
-">S30</a>]</span> </td><td class="adam-claim_date">Jul 4, 1758</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+">S30</a>]</span> </td><td class="adam-claim_date">Jul 4, 1758</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">uncertain</td></tr>
 <tr><td></td><td></td><td><table><tr><td><div class="adam-comment"></div><div class="adam-comment">The James Wells family farmed at Dennington, James and his wife Ann are buried together at buried at the Rendham Independent Chapel.
 <br>
 <br>The inscription on their burial marker reads:
@@ -360,13 +367,13 @@ Page: accessed; 9 February 2013; Find A Grave Memorial# 82829884
 AccessType: accessed
 AccessDate: 9 February 2013
 ItemOfInterest: Find A Grave Memorial# 82829884
-">S30</a>]</span> </td><td class="adam-claim_date">1796</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+">S30</a>]</span> </td><td class="adam-claim_date">1796</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">uncertain</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I111.html" class="adam-name_link">Hephzebah Chaman Wells</a></td><td class="adam-claim_tag">Christening</td><td class="adam-claim_data"><a href="places-england-suffolk-rendham.html" class="adam-location_link">Rendham, Suffolk, England</a>
 
 <span>[<a href="sources-S2.html" title="[S2]
 The Descendants of Robert Seaman and Alice Shuckforth - The Island Register
 Page: S2
-">S2:S2</a>]</span> </td><td class="adam-claim_date">Dec 28, 1798</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+">S2:S2</a>]</span> </td><td class="adam-claim_date">Dec 28, 1798</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">uncertain</td></tr>
 </table></td></tr>
 </table>
 </li>
@@ -376,7 +383,7 @@ Page: S2
 
 </div>
 
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.30.00.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.35.0.0</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -396,7 +403,7 @@ Page: S2
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2013 D. Minchin & W. Minchin<br />Generated by <a href="http://www.timforsythe.com/tools/adam">Adam 1.30.0.0</a> - Last Updated: December 29, 2013</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Generated by <a href="http://www.timforsythe.com/tools/adam">Adam 1.35.0.0</a> - Last Updated: January 4, 2014</p>
 
 </div></div></div>
 

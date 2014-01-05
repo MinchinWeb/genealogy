@@ -1,14 +1,14 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.30.00.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.35.0.0)" />
  <meta property="og:title" content="Toronto, Ontario, Canada - Minchin Genealogy" />
  <title>Toronto, Ontario, Canada - Minchin Genealogy</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -100,6 +100,10 @@ Version:   1.0.4        December 29, 2013
 <tr class="adam-claim"><td class="adam-claim_tag">Region:</td><td class="adam-claim_data">Ontario (ON)
 </td></tr>
 <tr class="adam-claim"><td class="adam-claim_tag">City:</td><td class="adam-claim_data">Toronto
+</td></tr>
+<tr class="adam-claim"><td class="adam-claim_tag">Latitude:</td><td class="adam-claim_data">43.6532
+</td></tr>
+<tr class="adam-claim"><td class="adam-claim_tag">Longitude:</td><td class="adam-claim_data">-79.3832
 </td></tr>
 </table></td></tr>
 <tr><td><table class="adam-map adam-table_box">
@@ -248,7 +252,10 @@ function initialize() {
 
 	function displayMap() {
 	  address = "Toronto, Ontario, Canada";
-	  geocode("Toronto, Ontario, Canada");
+	  latlng = new google.maps.LatLng(43.6532,-79.3832);
+	  home = latlng;
+	  map.setCenter(latlng);
+	  updateMap();
 	}
 
 	function geocode(addr) {
@@ -312,33 +319,33 @@ function initialize() {
 
 <tr><td><table class="adam-events adam-table_box">
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I876.html" class="adam-name_link">John Thomas Minchin</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I877.html" class="adam-name_link">Ellen Graham</a>, <a href="places-canada-ontario-toronto.html" class="adam-location_link">Toronto, Ontario, Canada</a>
-</td><td class="adam-claim_date">Jun 30, 1879</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Jun 30, 1879</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I921.html" class="adam-name_link">William Graham Minchin</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-canada-ontario-toronto.html" class="adam-location_link">Toronto, Ontario, Canada</a>
-</td><td class="adam-claim_date">Jul 23, 1880</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Jul 23, 1880</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I876.html" class="adam-name_link">John Thomas Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-ontario-toronto.html" class="adam-location_link">Toronto, Ontario, Canada</a>
-</td><td class="adam-claim_date">1882</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">1882</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I922.html" class="adam-name_link">Herbert Graham Minchin</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-canada-ontario-toronto.html" class="adam-location_link">Toronto, Ontario, Canada</a>
-</td><td class="adam-claim_date">Mar 7, 1882</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Mar 7, 1882</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I922.html" class="adam-name_link">Herbert Graham Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-ontario-toronto.html" class="adam-location_link">Toronto, Ontario, Canada</a>
-</td><td class="adam-claim_date">Oct 21, 1882</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Oct 21, 1882</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I896.html" class="adam-name_link">Jeanette Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-ontario-toronto.html" class="adam-location_link">Toronto, Ontario, Canada</a>
-</td><td class="adam-claim_date">Oct 8, 1883</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Oct 8, 1883</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I757.html" class="adam-name_link">William Augustus Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-ontario-toronto.html" class="adam-location_link">Toronto, Ontario, Canada</a>
-</td><td class="adam-claim_date">Aug 21, 1884</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Aug 21, 1884</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I883.html" class="adam-name_link">George Neill</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I882.html" class="adam-name_link">Charlotte Elizabeth Minchin</a>, <a href="places-canada-ontario-toronto.html" class="adam-location_link">Toronto, Ontario, Canada</a>
-</td><td class="adam-claim_date">Aug 23, 1884</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Aug 23, 1884</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I941.html" class="adam-name_link">Joseph Howard Minchin</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I942.html" class="adam-name_link">Florence Sarah Irwin</a>, <a href="places-canada-ontario-toronto.html" class="adam-location_link">Toronto, Ontario, Canada</a>
-</td><td class="adam-claim_date">Feb 28, 1902</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Feb 28, 1902</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I36.html" class="adam-name_link">Jean Eleanor Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-ontario-toronto.html" class="adam-location_link">Toronto, Ontario, Canada</a>
 
 <span>[<a href="sources-S23.html" title="[S23]
 The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl
 Page: S23
-">S23:S23</a>]</span> </td><td class="adam-claim_date">Nov 11, 1983</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+">S23:S23</a>]</span> </td><td class="adam-claim_date">Nov 11, 1983</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">uncertain</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I945.html" class="adam-name_link">Frederick Howard Irwin Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-ontario-toronto.html" class="adam-location_link">Toronto, Ontario, Canada</a>
-</td><td class="adam-claim_date">Nov 16, 1991</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Nov 16, 1991</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I163.html" class="adam-name_link">Agnes Murdock</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-ontario-toronto.html" class="adam-location_link">Toronto, Ontario, Canada</a>
-</td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 </table></td></tr>
 </table>
 </li>
@@ -348,7 +355,7 @@ Page: S23
 
 </div>
 
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.30.00.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.35.0.0</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -368,7 +375,7 @@ Page: S23
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2013 D. Minchin & W. Minchin<br />Generated by <a href="http://www.timforsythe.com/tools/adam">Adam 1.30.0.0</a> - Last Updated: December 29, 2013</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Generated by <a href="http://www.timforsythe.com/tools/adam">Adam 1.35.0.0</a> - Last Updated: January 4, 2014</p>
 
 </div></div></div>
 

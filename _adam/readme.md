@@ -15,6 +15,7 @@ These are the html code pieces needed to make [Adam](http://timforsythe.com/tool
 
 4. Configure Adam
     * update 'Updated' date in footer
+	* Update 'Adam version' in footer
 
 5. Delete old Adam output (zip file) from GitHub folder
 	
@@ -27,13 +28,12 @@ These are the html code pieces needed to make [Adam](http://timforsythe.com/tool
 8. Unzip new Adam output
     * `"C:\Program Files\7-Zip\7z" e adam_xxx_xxxx.zip`
 	
-9. Replace Adam version in footer
-    * use Notepad++ to do a replace in files
+9. Replace Adam version numbers (using Notepad++)
 	
 10. Replace index.html with customized version
     * `cp _adam\index.html .\index.html`
 	
-10. Git commit and push
+11. Git commit and push
     * `C:\Users\William\AppData\Local\GitHub\PortableGit_fed20eba68b3e238e49a47cdfed0a45783d93651\bin\git`
     * `git add .`
 	* `git commit -m "commit message"`

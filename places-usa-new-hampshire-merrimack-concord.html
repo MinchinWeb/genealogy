@@ -1,14 +1,14 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.30.00.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.35.0.0)" />
  <meta property="og:title" content="Concord, Merrimack, New Hampshire, United States - Minchin Genealogy" />
  <title>Concord, Merrimack, New Hampshire, United States - Minchin Genealogy</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -102,6 +102,10 @@ Version:   1.0.4        December 29, 2013
 <tr class="adam-claim"><td class="adam-claim_tag">Subregion:</td><td class="adam-claim_data">Merrimack
 </td></tr>
 <tr class="adam-claim"><td class="adam-claim_tag">City:</td><td class="adam-claim_data">Concord
+</td></tr>
+<tr class="adam-claim"><td class="adam-claim_tag">Latitude:</td><td class="adam-claim_data">43.2081
+</td></tr>
+<tr class="adam-claim"><td class="adam-claim_tag">Longitude:</td><td class="adam-claim_data">-71.5376
 </td></tr>
 </table></td></tr>
 <tr><td><table class="adam-map adam-table_box">
@@ -250,7 +254,10 @@ function initialize() {
 
 	function displayMap() {
 	  address = "Concord, Merrimack, New Hampshire, United States";
-	  geocode("Concord, Merrimack, New Hampshire, United States");
+	  latlng = new google.maps.LatLng(43.2081,-71.5376);
+	  home = latlng;
+	  map.setCenter(latlng);
+	  updateMap();
 	}
 
 	function geocode(addr) {
@@ -314,51 +321,51 @@ function initialize() {
 
 <tr><td><table class="adam-events adam-table_box">
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1555.html" class="adam-name_link">Robert Chester Jewell</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I1610.html" class="adam-name_link">Margaret Eliza Spence</a>, <a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">Jun 12, 1901</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Jun 12, 1901</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1615.html" class="adam-name_link">Sara Florence Jewell</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">Jan 22, 1902</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Jan 22, 1902</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1600.html" class="adam-name_link">_____ Jewell</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">Jul 12, 1902</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Jul 12, 1902</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1600.html" class="adam-name_link">_____ Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">Jul 12, 1902</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Jul 12, 1902</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1748.html" class="adam-name_link">Ellen Ruth Yeadon</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">Feb 8, 1903</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Feb 8, 1903</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1601.html" class="adam-name_link">Hettie Maude Jewell</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">Dec 17, 1903</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Dec 17, 1903</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1602.html" class="adam-name_link">_____ Jewell</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">Feb 6, 1906</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Feb 6, 1906</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1602.html" class="adam-name_link">_____ Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">Feb 6, 1906</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Feb 6, 1906</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1609.html" class="adam-name_link">Robert Isaiah Jewell</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">Jun 3, 1906</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Jun 3, 1906</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1603.html" class="adam-name_link">Benjamin Sterling Jewell</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">Jun 21, 1907</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Jun 21, 1907</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1604.html" class="adam-name_link">Emily Eliza Phoebe Jewell</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">Oct 20, 1909</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Oct 20, 1909</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1552.html" class="adam-name_link">Benjamin Rattenbury Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">Nov 8, 1909</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Nov 8, 1909</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1731.html" class="adam-name_link">Beryl Maud Jewell</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">Jan 13, 1913</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Jan 13, 1913</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1731.html" class="adam-name_link">Beryl Maud Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">Jan 20, 1913</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Jan 20, 1913</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1595.html" class="adam-name_link">Harry Gordon Jewell</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I1726.html" class="adam-name_link">Daisy Ione Young</a>, <a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">Jan 1, 1914</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Jan 1, 1914</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1555.html" class="adam-name_link">Robert Chester Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">May 29, 1925</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">May 29, 1925</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1603.html" class="adam-name_link">Benjamin Sterling Jewell</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I1741.html" class="adam-name_link">Catherine Ann Maloney</a>, <a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">Feb 15, 1926</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Feb 15, 1926</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I50.html" class="adam-name_link">Nettie Josephine Seaman</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">1936</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">1936</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1591.html" class="adam-name_link">Eliza Sarah Brown</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">Aug 19, 1960</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Aug 19, 1960</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1728.html" class="adam-name_link">Carrie Ethel Spinney</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">Sep 4, 1963</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Sep 4, 1963</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1597.html" class="adam-name_link">Ernest Heber Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">Jul 14, 1972</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Jul 14, 1972</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1596.html" class="adam-name_link">Chester Brown Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">Dec 21, 1972</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Dec 21, 1972</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1601.html" class="adam-name_link">Hettie Maude Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
-</td><td class="adam-claim_date">Nov 23, 1991</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Nov 23, 1991</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 </table></td></tr>
 </table>
 </li>
@@ -368,7 +375,7 @@ function initialize() {
 
 </div>
 
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.30.00.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.35.0.0</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -388,7 +395,7 @@ function initialize() {
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2013 D. Minchin & W. Minchin<br />Generated by <a href="http://www.timforsythe.com/tools/adam">Adam 1.30.0.0</a> - Last Updated: December 29, 2013</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Generated by <a href="http://www.timforsythe.com/tools/adam">Adam 1.35.0.0</a> - Last Updated: January 4, 2014</p>
 
 </div></div></div>
 

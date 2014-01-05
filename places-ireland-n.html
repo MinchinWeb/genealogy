@@ -1,14 +1,14 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.30.00.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.35.0.0)" />
  <meta property="og:title" content="N., Ireland - Minchin Genealogy" />
  <title>N., Ireland - Minchin Genealogy</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -98,6 +98,10 @@ Version:   1.0.4        December 29, 2013
 <tr class="adam-claim"><td class="adam-claim_tag">Country:</td><td class="adam-claim_data">Ireland (IRL)
 </td></tr>
 <tr class="adam-claim"><td class="adam-claim_tag">City:</td><td class="adam-claim_data">N.
+</td></tr>
+<tr class="adam-claim"><td class="adam-claim_tag">Latitude:</td><td class="adam-claim_data">53.4129
+</td></tr>
+<tr class="adam-claim"><td class="adam-claim_tag">Longitude:</td><td class="adam-claim_data">-8.24389
 </td></tr>
 </table></td></tr>
 <tr><td><table class="adam-map adam-table_box">
@@ -246,7 +250,10 @@ function initialize() {
 
 	function displayMap() {
 	  address = "N., Ireland";
-	  geocode("N., Ireland, UK");
+	  latlng = new google.maps.LatLng(53.4129,-8.24389);
+	  home = latlng;
+	  map.setCenter(latlng);
+	  updateMap();
 	}
 
 	function geocode(addr) {
@@ -310,33 +317,33 @@ function initialize() {
 
 <tr><td><table class="adam-events adam-table_box">
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4538.html" class="adam-name_link">James Corbett</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-n.html" class="adam-location_link">N., Ireland</a>
-</td><td class="adam-claim_date">1817</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">1817</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4360.html" class="adam-name_link">Catherine Dale</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-n.html" class="adam-location_link">N., Ireland</a>
-</td><td class="adam-claim_date">abt 1830</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">abt 1830</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4368.html" class="adam-name_link">Margaret Corbett</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-n.html" class="adam-location_link">N., Ireland</a>
-</td><td class="adam-claim_date">Feb 16, 1854</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Feb 16, 1854</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4365.html" class="adam-name_link">Sarah Anne Corbett</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-n.html" class="adam-location_link">N., Ireland</a>
-</td><td class="adam-claim_date">Feb 17, 1856</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Feb 17, 1856</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4376.html" class="adam-name_link">Nancy Corbett</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-n.html" class="adam-location_link">N., Ireland</a>
-</td><td class="adam-claim_date">Apr 8, 1858</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Apr 8, 1858</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4361.html" class="adam-name_link">John Corbett</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-n.html" class="adam-location_link">N., Ireland</a>
-</td><td class="adam-claim_date">Apr 5, 1860</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Apr 5, 1860</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4371.html" class="adam-name_link">Elizabeth Corbett</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-n.html" class="adam-location_link">N., Ireland</a>
-</td><td class="adam-claim_date">Feb 5, 1861</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Feb 5, 1861</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4379.html" class="adam-name_link">Sarah Matilda Dale</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-n.html" class="adam-location_link">N., Ireland</a>
-</td><td class="adam-claim_date">Mar 26, 1867</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Mar 26, 1867</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4357.html" class="adam-name_link">Margaret Dale</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-n.html" class="adam-location_link">N., Ireland</a>
-</td><td class="adam-claim_date">Feb 7, 1868</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Feb 7, 1868</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4595.html" class="adam-name_link">Mary MacKey</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-n.html" class="adam-location_link">N., Ireland</a>
-</td><td class="adam-claim_date">Jun 6, 1886</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">Jun 6, 1886</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4359.html" class="adam-name_link">William Dale Corbett</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-n.html" class="adam-location_link">N., Ireland</a>
-</td><td class="adam-claim_date">1907</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date">1907</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4425.html" class="adam-name_link">Thomas Corbett</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-ireland-n.html" class="adam-location_link">N., Ireland</a>
-</td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4535.html" class="adam-name_link">Mary Jane Corbett</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-n.html" class="adam-location_link">N., Ireland</a>
-</td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4536.html" class="adam-name_link">James McNeight</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-n.html" class="adam-location_link">N., Ireland</a>
-</td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">unsupported</td></tr>
 </table></td></tr>
 </table>
 </li>
@@ -346,7 +353,7 @@ function initialize() {
 
 </div>
 
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.30.00.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.35.0.0</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -366,7 +373,7 @@ function initialize() {
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2013 D. Minchin & W. Minchin<br />Generated by <a href="http://www.timforsythe.com/tools/adam">Adam 1.30.0.0</a> - Last Updated: December 29, 2013</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Generated by <a href="http://www.timforsythe.com/tools/adam">Adam 1.35.0.0</a> - Last Updated: January 4, 2014</p>
 
 </div></div></div>
 
