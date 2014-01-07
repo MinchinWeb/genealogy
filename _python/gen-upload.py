@@ -1,16 +1,16 @@
 '''Genealogy Uploader
-v.1 - WM - Jan. 8, 2014
+v.2 - WM - Jan. 8, 2014
 
 This script serves to semi-automate the building and uploading of my
 genealogy website. It is intended to be semi-interactive and run from the
 command line.'''
 
-__version__ = 1
+__version__ = 2
 github_folder = "S:\\Documents\\GitHub\\genealogy"
 photo_folder = "S:\\Documents\\genealogy"
 download_folder = "S:\\Downloads\\Firefox"
 url_root = "http://minchin.ca/genealogy"
-repo_url = "https://github.com/MinchinWeb/genealogy.git"
+repo_url = "git@github.com:MinchinWeb/genealogy.git"
 my_key_file = "C:\\Users\\William\\.ssh\\github_rsa"
 
 from datetime import datetime
@@ -25,16 +25,17 @@ import webbrowser
 import os
 import zipfile
 import uuid
+import sys
 import winshell
 import requests
 from bs4 import BeautifulSoup
+from envoy
 import wmtext
-from gittle import Gittle
 
 today = '' + str(date.today().year)[2:] + str.zfill(str(date.today().month), 2) + str.zfill(str(date.today().day), 2)
 gedcom_expected = 'William ' + today + '.ged'
 my_gedcom = winshell.desktop() + "\\" + gedcom_expected
-start_time = datetime.now()
+#start_time = datetime.now()
 
 def addimage(image):
 	'''Take the file listed in image, finds in my genealogy photo directory, and
@@ -49,15 +50,17 @@ wmtext.clock_on_right(" 1. Export from RootsMagic.")
 print("        call the file " + Style.BRIGHT + gedcom_expected + Style.RESET_ALL + " and save it to the desktop")
 print("        do not include LDS information")
 print("        no need to privatize individuals (at this step)")
-wmtext.query_yes_quit("    Next?", default="yes")
+if not wmtext.query_yes_quit("    Next?", default="yes"):
+	sys.exit()
 
 wmtext.clock_on_right(" 2. Cleaning up GEDCOM...")
+start_time = datetime.fromtimestamp(os.stat(my_gedcom).st_ctime)
 # replace image paths
 gedcom_file = file(my_gedcom, 'r')
 subject = gedcom_file.read()
 gedcom_file.close()
 
-pattern = re.compile(r'S:\Documents\Genealogy\[0-9]+[\.[a-z]+]*\.? ') # path start
+pattern = re.compile(r'S:\\Documents\\Genealogy\\[0-9]+[\.[a-z]+]*\.? ') # path start
 result = pattern.sub("images/", subject)
 pattern2 = re.compile(r'(images.*)\\') # reverse slashes in rest of path
 result2 = pattern2.sub(r'\1/', result)
@@ -70,9 +73,7 @@ f_out.close()
 wmtext.clock_on_right(" 3. The file is now ready to upload to Adam.")
 webbrowser.open("http://timforsythe.com/tools/adam", new=2)
 print("        log-in (using Facebook)")
-print("        in the footer:")
-print("            update the 'Updated' date")
-print("            update the 'Adam version'")
+print("        in the footer: update the 'Updated' date")
 print("        now click 'generate report'")
 
 wmtext.clock_on_right(" 4. Checking images...")
@@ -97,13 +98,13 @@ if len(missing_matches) == 0:
 	print("        " + str(matches) + " images matching. No missing images.")
 else:
 	print("        " + str(matches) + " images matching.")
-	q_add_images = wmtext.query_yes_no_all("        " + str(len(missing_matches)) + " missing images. Add them?")
+	q_add_images = wmtext.query_yes_no_all("        " + str(len(missing_matches)) + " missing images. Add them?", default="no")
 	if q_add_images == 2: #all
 		for image in missing_matches:
 			addimage(image)
 	elif q_add_images == 1: #yes
 		for image in missing_matches:
-			if wmtext.querry_yes_no("        Add " + image + "?"):
+			if wmtext.querry_yes_no("        Add " + image + "?", default="yes"):
 				addimage(image)
 			else:
 				pass
@@ -115,7 +116,7 @@ to_delete = []
 os.chdir(github_folder)
 all_files = os.listdir(github_folder)
 for filename in all_files:
-	if filename[0:4] == 'adam_' and filename.endswith(".zip"):
+	if filename.startswith('adam_') and filename.endswith(".zip"):
 		to_delete.append(filename)
 	elif filename.endswith(".html"):
 		to_delete.append(filename)
@@ -124,7 +125,8 @@ for filename in all_files:
 	elif filename in ["adam.css", "adam-min.js"]:
 		to_delete.append(filename)
 for myfile in to_delete:
-	winshell.delete_file(myfile)
+	#~winshell.delete_file(myfile, no_confirm = True, allow_undo= False, silent = True)
+	pass
 print("        " + str(len(to_delete)) + " files deleted.")
 
 wmtext.clock_on_right(" 6. Get new Adam output.")
@@ -135,29 +137,32 @@ all_files = os.listdir(download_folder)
 count_loops = 0
 while True:
 	for filename in all_files:
-		if filename[0:4] == 'adam_' and filename.endswith(".zip"):
-			if os.stat(filename).st_ctime > starttime:
+		if filename.startswith('adam_') and filename.endswith(".zip"):
+			if datetime.fromtimestamp(os.stat(filename).st_ctime) > start_time:
 				adam_zip = filename
-	if adam_zip != '' and os.stat(filename).st_size > 1000:
+	if adam_zip != '' and os.stat(adam_zip).st_size > 1000:
 		break
 	count_loops +=1
-	if count_loops < 20:
-		if wmtext.query_yes_quit("    We've waited 20 minutes. Keep waiting?") == False:
-			os.quit()
+	if count_loops > 40:
+		if wmtext.query_yes_quit("    We've waited 20 minutes. Keep waiting?", default="yes") == False:
+			sys.exit()
 		else:
 			count_loops = 0
-	wmtext.wait(60)
+	else:
+		wmtext.wait(30)
 	
-winshell.copyfile(adam_zip, github_folder)
+winshell.copy_file(adam_zip, github_folder)
 
 wmtext.clock_on_right(" 7. Unzip new Adam output.")
 os.chdir(github_folder)
 zf = zipfile.ZipFile(adam_zip)
-zf.extractall()
+#~zf.extractall()
+zf.close()
 
 wmtext.clock_on_right(" 8. Replacing Adam version number.")
 soup_file = open('names.html', 'r')
 soup = BeautifulSoup(soup_file)
+soup_file.close()
 adam_version_text = soup.find(True, "adam-version").get_text().encode('utf-8') # 'Built by Adam 1.35.0.0 ' or the like
 all_files = os.listdir(github_folder)
 all_html_files = []
@@ -165,13 +170,14 @@ for my_file in all_files:
 	if my_file.endswith(".html"):
 		all_html_files.append(my_file)
 # inline search and replace
-for line in fileinput.input(all_html_files, inplace=1):
-	line = line.replace("$adam-version$", adam_version_text)
-	print line,
+#~for line in fileinput.input(all_html_files, inplace=1):
+#~	line = line.replace("$adam-version$", adam_version_text)
+#~	print line,
 
 wmtext.clock_on_right(" 9. Copy over index.html")
 os.chdir(github_folder)
-winshell.copy_file("./_adam/index.html", "./index.html", no_confrim=True)
+winshell.delete_file("index.html", no_confirm = True, allow_undo = False, silent = True)
+winshell.copy_file("_adam/index.html", "index.html", no_confirm = True)
 
 wmtext.clock_on_right("10. Create deploy tracking file")
 # create a 'random' number using UUID
@@ -185,14 +191,17 @@ target.write(gedcom_expected + "\n")
 target.close()
 
 wmtext.clock_on_right("11. Git -> commit and push")
-repo = Gittle(github_folder, origin_url=repo_url)
-modified = repo.modified_files
-repo.stage(modified)
+#~repo = Gittle(github_folder)
+#~files_to_commit = repo.pending_files
+#~repo.stage(files_to_commit)
 commit_msg = "Adam generated upload from " + gedcom_expected
-repo.commit(name="Upload Script", email="w_minchin@hotmail.com", message=commit_msg)
-key_file = open(my_key_file)
-repo.auth(pkey=key_file)
-repo.push()
+#~repo.commit(name="Upload Script", email="w_minchin@hotmail.com", message=commit_msg)
+#~key_file = open(my_key_file)
+#~repo.auth(pkey=key_file)
+#~repo.push(origin_uri=repo_url, branch_name="gh-pages")
+r1 = envoy.run('git add -A')
+r2 = envoy.run('git commit -m ' + commit_msg)
+r3 = envoy.run('git push origin')
 
 wmtext.clock_on_right("12. Wait to go live")
 while True:

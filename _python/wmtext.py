@@ -142,7 +142,7 @@ def wait(sec):
 	while sec > 0:
 		sys.stdout.write('\r' + str(sec//60).zfill(1) + ":" + str(sec%60).zfill(2) + '     ')
 		sec -= 1
-		sleep(1)
+		time.sleep(1)
 		sys.stdout.write('\r' + '           ' + '\r')
 		
 def title(mytitle):
