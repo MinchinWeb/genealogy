@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="HIDDEN _____ Profile - Minchin Genealogy | Minchin.ca" />
  <title>HIDDEN _____ Profile - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -67,20 +74,22 @@ Version:   1.0.4        December 29, 2013
 
 <h1 id="adam-page-title">HIDDEN _____ Profile</h1>
 
-<div id="tabs">
-<ul>
+<div id="adam-tab-list">
+<ul id="tab-list" class="nav nav-tabs">
 
-<li><a class="click" href="#profile">Profile</a></li>
+<li class="active"><a class="click" href="#profile" data-toggle="tab">Profile</a></li>
 
-<li><a class="click" href="#chart">Chart</a></li>
+<li><a class="click" href="#chart" data-toggle="tab">Chart</a></li>
 
-<li><a class="click" href="#alist">Ancestors List (28)</a></li>
+<li><a class="click" href="#alist" data-toggle="tab">Ancestors List (28)</a></li>
 
-<li><a class="click" href="#map">Ancestors Distribution Map</a></li>
+<li><a class="click" href="#map" data-toggle="tab">Ancestors Distribution Map</a></li>
 
 </ul>
 
-<div id="profile" class="adam-tab">
+<div class="tab-content">
+
+<div id="profile" class="tab-pane active adam-tab">
 
 <ul id="adam-person_profile" class="adam-tab_style">
 <li>
@@ -109,7 +118,7 @@ Version:   1.0.4        December 29, 2013
 </li>
 </ul>
 </div>
-<div id="chart" class="adam-tab">
+<div id="chart" class="tab-pane adam-tab">
 <ul>
 <li id="adam-person_chart">
 <div style="height: 665px;">&nbsp;</div>
@@ -260,7 +269,7 @@ Version:   1.0.4        December 29, 2013
 </li>
 </ul>
 </div>
-<div id="alist" class="adam-tab">
+<div id="alist" class="tab-pane adam-tab">
 
 <div class="adam-al_page">
 <ul class="adam-al_legend">
@@ -274,151 +283,151 @@ Version:   1.0.4        December 29, 2013
 
 <li class="adam-al_generation">Generation 1</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1] &nbsp; <a href="profile-I911.html" class="adam-name_link">HIDDEN _____</a> </div>
+  <div class="adam-al_name">[1] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I911.html" class="adam-name_link">HIDDEN _____</a> </div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 2</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[2] &nbsp; <a href="profile-I907.html" class="adam-name_link">John Alexander Scott</a> (1911-1967)</div>
+  <div class="adam-al_name">[2] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I907.html" class="adam-name_link">John Alexander Scott</a> (1911-1967)</div>
   <div class="adam-al_path"><span title="Buckinghamshire">BKM</span>-<span title="Germany">DEU</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3] &nbsp; <b><a href="profile-I908.html" class="adam-name_link">HIDDEN _____</a> </b></div>
+  <div class="adam-al_name">[3] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I908.html" class="adam-name_link">HIDDEN _____</a> </b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 3</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[4] &nbsp; <b><a href="profile-I906.html" class="adam-name_link">Robert William Scott</a> (1879-1916)</b></div>
+  <div class="adam-al_name">[4] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I906.html" class="adam-name_link">Robert William Scott</a> (1879-1916)</b></div>
   <div class="adam-al_path"><span title="Antrim">ANT</span>-<span title="Buckinghamshire">BKM</span>-<span title="France">FRA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[5] &nbsp; <a href="profile-I905.html" class="adam-name_link">Wilhelmina Victoria Burns</a> (1887-1969)</div>
+  <div class="adam-al_name">[5] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I905.html" class="adam-name_link">Wilhelmina Victoria Burns</a> (1887-1969)</div>
   <div class="adam-al_path"><span title="Ireland">IRL</span>-<span title="Buckinghamshire">BKM</span>-<span title="California">CA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 4</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[10] &nbsp; <b><a href="profile-I875.html" class="adam-name_link">James Burns</a> (~1840-1900)</b></div>
+  <div class="adam-al_name">[10] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I875.html" class="adam-name_link">James Burns</a> (~1840-1900)</b></div>
   <div class="adam-al_path"><span title="Ireland">IRL</span>-<span title="Dublin">DUB</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[11] &nbsp; <a href="profile-I874.html" class="adam-name_link">Anna Maria Minchin</a> (1845-1919)</div>
+  <div class="adam-al_name">[11] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I874.html" class="adam-name_link">Anna Maria Minchin</a> (1845-1919)</div>
   <div class="adam-al_path"><span title="Wexford">WEX</span>-<span title=""></span>-<span title="Kent">KEN</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 5</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[22] &nbsp; <a href="profile-I757.html" class="adam-name_link">William Augustus Minchin</a> (1807-1884)</div>
+  <div class="adam-al_name">[22] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I757.html" class="adam-name_link">William Augustus Minchin</a> (1807-1884)</div>
   <div class="adam-al_path"><span title="Wexford">WEX</span>-<span title="Dublin">DUB</span>-<span title="Ontario">ON</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[23] &nbsp; <b><a href="profile-I758.html" class="adam-name_link">Jane Holmes</a> (1823-~1902)</b></div>
+  <div class="adam-al_name">[23] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I758.html" class="adam-name_link">Jane Holmes</a> (1823-~1902)</b></div>
   <div class="adam-al_path"><span title="Ireland">IRL</span>-<span title="Dublin">DUB</span>-<span title="Canada">CAN</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 6</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[44] &nbsp; <a href="profile-I716.html" class="adam-name_link">John Minchin</a> (1763-1847)</div>
+  <div class="adam-al_name">[44] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I716.html" class="adam-name_link">John Minchin</a> (1763-1847)</div>
   <div class="adam-al_path"><span title="Ireland">IRL</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[45] &nbsp; <b><a href="profile-I718.html" class="adam-name_link">Bridget Murphy</a> (-)</b></div>
+  <div class="adam-al_name">[45] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I718.html" class="adam-name_link">Bridget Murphy</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 7</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[88] &nbsp; <a href="profile-I108.html" class="adam-name_link">William Minchin</a> (~1740-1825)</div>
+  <div class="adam-al_name">[88] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I108.html" class="adam-name_link">William Minchin</a> (~1740-1825)</div>
   <div class="adam-al_path"><span title="Limerick">LIM</span>-<span title="Ireland">IRL</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[89] &nbsp; <b><a href="profile-I109.html" class="adam-name_link">Lady Ann Howard</a> (1759-)</b></div>
+  <div class="adam-al_name">[89] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I109.html" class="adam-name_link">Lady Ann Howard</a> (1759-)</b></div>
   <div class="adam-al_path"><span title="Ireland">IRL</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 8</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[176] &nbsp; <a href="profile-I680.html" class="adam-name_link">Charles Minchin</a> (~1715-)</div>
+  <div class="adam-al_name">[176] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I680.html" class="adam-name_link">Charles Minchin</a> (~1715-)</div>
   <div class="adam-al_path"><span title="Tyrone">TYR</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[177] &nbsp; <a href="profile-I681.html" class="adam-name_link">Elizabeth Massy</a> (1720-)</div>
+  <div class="adam-al_name">[177] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I681.html" class="adam-name_link">Elizabeth Massy</a> (1720-)</div>
   <div class="adam-al_path"><span title="Ireland">IRL</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 9</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[352] &nbsp; <a href="profile-I671.html" class="adam-name_link">Edward Minchin</a> (~1668-1737)</div>
+  <div class="adam-al_name">[352] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I671.html" class="adam-name_link">Edward Minchin</a> (~1668-1737)</div>
   <div class="adam-al_path"><span title="Ireland">IRL</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[353] &nbsp; <a href="profile-I672.html" class="adam-name_link">Anne Stoyte</a> (-)</div>
+  <div class="adam-al_name">[353] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I672.html" class="adam-name_link">Anne Stoyte</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[354] &nbsp; <b><a href="profile-I682.html" class="adam-name_link">William Massy</a> (-)</b></div>
+  <div class="adam-al_name">[354] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I682.html" class="adam-name_link">William Massy</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 10</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[704] &nbsp; <i><a href="profile-I580.html" class="adam-name_link">Colonel Charles Minchin</a> (~1628-1681)</i></div>
+  <div class="adam-al_name">[704] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I580.html" class="adam-name_link">Colonel Charles Minchin</a> (~1628-1681)</i></div>
   <div class="adam-al_path"><span title="Tyrone">TYR</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[705] &nbsp; <a href="profile-I581.html" class="adam-name_link">Elizabeth Walcot</a> (1632-)</div>
+  <div class="adam-al_name">[705] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I581.html" class="adam-name_link">Elizabeth Walcot</a> (1632-)</div>
   <div class="adam-al_path"><span title="Ireland">IRL</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[706] &nbsp; <b><a href="profile-I673.html" class="adam-name_link">John Stoyte</a> (-)</b></div>
+  <div class="adam-al_name">[706] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I673.html" class="adam-name_link">John Stoyte</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 11</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1408] &nbsp; <b><a href="profile-I578.html" class="adam-name_link">John Minchin</a> (~1590-)</b></div>
+  <div class="adam-al_name">[1408] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I578.html" class="adam-name_link">John Minchin</a> (~1590-)</b></div>
   <div class="adam-al_path"><span title="Gloucestershire">GLS</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1409] &nbsp; <b><a href="profile-I579.html" class="adam-name_link">Mary Paulet</a> (-)</b></div>
+  <div class="adam-al_name">[1409] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I579.html" class="adam-name_link">Mary Paulet</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1410] &nbsp; <a href="profile-I2008.html" class="adam-name_link">Charles Walcot</a> (-)</div>
+  <div class="adam-al_name">[1410] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2008.html" class="adam-name_link">Charles Walcot</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 12</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[2820] &nbsp; <a href="profile-I2011.html" class="adam-name_link">Charles Walcot</a> (-1596)</div>
+  <div class="adam-al_name">[2820] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2011.html" class="adam-name_link">Charles Walcot</a> (-1596)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[2821] &nbsp; <b><a href="profile-I2012.html" class="adam-name_link">Margaret Eisham</a> (-)</b></div>
+  <div class="adam-al_name">[2821] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I2012.html" class="adam-name_link">Margaret Eisham</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 13</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[5640] &nbsp; <b><a href="profile-I2013.html" class="adam-name_link">John Walcot</a> (-)</b></div>
+  <div class="adam-al_name">[5640] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I2013.html" class="adam-name_link">John Walcot</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[5641] &nbsp; <a href="profile-I2014.html" class="adam-name_link">Mary Newton</a> (-)</div>
+  <div class="adam-al_name">[5641] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2014.html" class="adam-name_link">Mary Newton</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 14</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[11282] &nbsp; <b><a href="profile-I2015.html" class="adam-name_link">Sir Peter Newton</a> (-)</b></div>
+  <div class="adam-al_name">[11282] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I2015.html" class="adam-name_link">Sir Peter Newton</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 </ul>
 </div>
 </div>
-<div id="map" class="adam-tab">
+<div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <br/>
 <div class="floatmapbuttons"><p>
@@ -437,15 +446,15 @@ var mcOptions={styles:[{ height:35,width:35,url:"mapmarker1.png"},
  { height:35,width:35,url:"mapmarker4.png"},
  { height:35,width:35,url:"mapmarker5.png"}]};
 function initializePins() {
- addPin(52.668,-8.6305,1,myImageM,'William Minchin','<div class="infowindow"><p>Coordinates: 52.668, -8.6305</p><span class="adam-map-location"><a href="places-ireland-limerick.html" class="adam-location_link">Limerick, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I108.html" class="adam-name_link">William Minchin</a> (~1740-1825)</span></div>');addPin(53.4129,-8.24389,5,myImage,'5 Persons','<div class="infowindow"><p>Coordinates: 53.4129, -8.24389</p><span class="adam-map-location"><a href="places-ireland.html" class="adam-location_link">Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I875.html" class="adam-name_link">James Burns</a> (~1840-1900)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I758.html" class="adam-name_link">Jane Holmes</a> (1823-~1902)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I109.html" class="adam-name_link">Lady Ann Howard</a> (1759-)</span><br/><br/><span class="adam-map-location"><a href="places-ireland-tyrone.html" class="adam-location_link">Tyrone, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I680.html" class="adam-name_link">Charles Minchin</a> (~1715-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I581.html" class="adam-name_link">Elizabeth Walcot</a> (1632-)</span></div>');addPin(55.0702,-6.51689,1,myImageM,'Robert William Scott','<div class="infowindow"><p>Coordinates: 55.0702, -6.51689</p><span class="adam-map-location"><a href="places-northern-ireland-antrim-ballymoney.html" class="adam-location_link">Ballymoney, Antrim, Northern Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I906.html" class="adam-name_link">Robert William Scott</a> (1879-1916)</span></div>');addPin(53.2783,-6.10028,1,myImageW,'Wilhelmina Victoria Burns','<div class="infowindow"><p>Coordinates: 53.2783, -6.10028</p><span class="adam-map-location"><a href="places-ireland-dalkey-brayanya.html" class="adam-location_link">Brayanya, Dalkey, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I905.html" class="adam-name_link">Wilhelmina Victoria Burns</a> (1887-1969)</span></div>');addPin(52.6667,-2.75,1,myImageM,'Sir Peter Newton','<div class="infowindow"><p>Coordinates: 52.6667, -2.75</p><span class="adam-map-location"><a href="places-england-of-highly-salop.html" class="adam-location_link">of Highly Salop, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2015.html" class="adam-name_link">Sir Peter Newton</a> (-)</span></div>');addPin(51.7468,-2.22579,1,myImageM,'John Minchin','<div class="infowindow"><p>Coordinates: 51.7468, -2.22579</p><span class="adam-map-location"><a href="places-england-gloucestershire.html" class="adam-location_link">Gloucestershire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I578.html" class="adam-name_link">John Minchin</a> (~1590-)</span></div>');addPin(51.5106,-0.595021,1,myImageM,'John Alexander Scott','<div class="infowindow"><p>Coordinates: 51.5106, -0.595021</p><span class="adam-map-location"><a href="places-england-buckinghamshire-slough.html" class="adam-location_link">Slough, Buckinghamshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I907.html" class="adam-name_link">John Alexander Scott</a> (1911-1967)</span></div>');addPin(1000,1000,9,myImage,'9 Persons','<div class="infowindow"><p>Coordinates: 1000, 1000</p><span class="adam-map-location"><a href="places-ireland-wexford-askinfornie.html" class="adam-location_link">Askinfornie, Wexford, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I874.html" class="adam-name_link">Anna Maria Minchin</a> (1845-1919)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I757.html" class="adam-name_link">William Augustus Minchin</a> (1807-1884)</span><br/><br/><span class="adam-map-location"><a href="places-ireland-county-of-wexford-askinfornie-of-templedigan.html" class="adam-location_link">of Templedigan, Askinfornie, County of Wexford, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I716.html" class="adam-name_link">John Minchin</a> (1763-1847)</span><br/><br/><span class="adam-map-location"><a href="places-ireland-county-of-wexford-of-askinfornie.html" class="adam-location_link">of Askinfornie, County of Wexford, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I718.html" class="adam-name_link">Bridget Murphy</a> (-)</span><br/><br/><span class="adam-map-location"><a href="places-ireland-county-of-limerick-of-stoneville.html" class="adam-location_link">of Stoneville, County of Limerick, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I681.html" class="adam-name_link">Elizabeth Massy</a> (1720-)</span><br/><br/><span class="adam-map-location"><a href="places-ireland-of-glenahilty-and-dublin.html" class="adam-location_link">of Glenahilty & Dublin, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I671.html" class="adam-name_link">Edward Minchin</a> (~1668-1737)</span><br/><br/><span class="adam-map-location"><a href="places-ireland-of-dublin.html" class="adam-location_link">of Dublin, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I672.html" class="adam-name_link">Anne Stoyte</a> (-)</span><br/><br/><span class="adam-map-location"><a href="places-ireland-tyrone-of-moneygall.html" class="adam-location_link">of Moneygall, Tyrone, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I580.html" class="adam-name_link">Colonel Charles Minchin</a> (~1628-1681)</span><br/><br/><span class="adam-map-location"><a href="places-ireland-county-of-brecon-of-builth.html" class="adam-location_link">of Builth, County of Brecon, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2008.html" class="adam-name_link">Charles Walcot</a> (-)</span></div>');
+ addPin(52.544,-8.96143,1,myImageW,'Elizabeth Massy','<div class="infowindow"><p>Coordinates: 52.544, -8.96143</p><span class="adam-map-location"><a href="places-ireland-county-of-limerick-of-stoneville.html" class="adam-location_link">of Stoneville, County of Limerick, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I681.html" class="adam-name_link">Elizabeth Massy</a> (1720-)</span></div>');addPin(52.668,-8.6305,1,myImageM,'William Minchin','<div class="infowindow"><p>Coordinates: 52.668, -8.6305</p><span class="adam-map-location"><a href="places-ireland-limerick.html" class="adam-location_link">Limerick, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I108.html" class="adam-name_link">William Minchin</a> (~1740-1825)</span></div>');addPin(53.4129,-8.24389,7,myImage,'7 Persons','<div class="infowindow"><p>Coordinates: 53.4129, -8.24389</p><span class="adam-map-location"><a href="places-ireland.html" class="adam-location_link">Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I875.html" class="adam-name_link">James Burns</a> (~1840-1900)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I758.html" class="adam-name_link">Jane Holmes</a> (1823-~1902)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I109.html" class="adam-name_link">Lady Ann Howard</a> (1759-)</span><br/><br/><span class="adam-map-location"><a href="places-ireland-tyrone.html" class="adam-location_link">Tyrone, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I680.html" class="adam-name_link">Charles Minchin</a> (~1715-)</span><br/><br/><span class="adam-map-location"><a href="places-ireland-tyrone-of-moneygall.html" class="adam-location_link">of Moneygall, Tyrone, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I580.html" class="adam-name_link">Colonel Charles Minchin</a> (~1628-1681)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I581.html" class="adam-name_link">Elizabeth Walcot</a> (1632-)</span><br/><br/><span class="adam-map-location"><a href="places-ireland-county-of-brecon-of-builth.html" class="adam-location_link">of Builth, County of Brecon, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2008.html" class="adam-name_link">Charles Walcot</a> (-)</span></div>');addPin(55.0702,-6.51689,1,myImageM,'Robert William Scott','<div class="infowindow"><p>Coordinates: 55.0702, -6.51689</p><span class="adam-map-location"><a href="places-northern-ireland-antrim-ballymoney.html" class="adam-location_link">Ballymoney, Antrim, Northern Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I906.html" class="adam-name_link">Robert William Scott</a> (1879-1916)</span></div>');addPin(52.3369,-6.46334,4,myImage,'4 Persons','<div class="infowindow"><p>Coordinates: 52.3369, -6.46334</p><span class="adam-map-location"><a href="places-ireland-wexford-askinfornie.html" class="adam-location_link">Askinfornie, Wexford, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I874.html" class="adam-name_link">Anna Maria Minchin</a> (1845-1919)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I757.html" class="adam-name_link">William Augustus Minchin</a> (1807-1884)</span><br/><br/><span class="adam-map-location"><a href="places-ireland-county-of-wexford-askinfornie-of-templedigan.html" class="adam-location_link">of Templedigan, Askinfornie, County of Wexford, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I716.html" class="adam-name_link">John Minchin</a> (1763-1847)</span><br/><br/><span class="adam-map-location"><a href="places-ireland-county-of-wexford-of-askinfornie.html" class="adam-location_link">of Askinfornie, County of Wexford, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I718.html" class="adam-name_link">Bridget Murphy</a> (-)</span></div>');addPin(53.3498,-6.26031,1,myImageM,'Edward Minchin','<div class="infowindow"><p>Coordinates: 53.3498, -6.26031</p><span class="adam-map-location"><a href="places-ireland-of-glenahilty-and-dublin.html" class="adam-location_link">of Glenahilty & Dublin, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I671.html" class="adam-name_link">Edward Minchin</a> (~1668-1737)</span></div>');addPin(53.3331,-6.24889,1,myImageW,'Anne Stoyte','<div class="infowindow"><p>Coordinates: 53.3331, -6.24889</p><span class="adam-map-location"><a href="places-ireland-of-dublin.html" class="adam-location_link">of Dublin, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I672.html" class="adam-name_link">Anne Stoyte</a> (-)</span></div>');addPin(53.2783,-6.10028,1,myImageW,'Wilhelmina Victoria Burns','<div class="infowindow"><p>Coordinates: 53.2783, -6.10028</p><span class="adam-map-location"><a href="places-ireland-dalkey-brayanya.html" class="adam-location_link">Brayanya, Dalkey, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I905.html" class="adam-name_link">Wilhelmina Victoria Burns</a> (1887-1969)</span></div>');addPin(52.6667,-2.75,1,myImageM,'Sir Peter Newton','<div class="infowindow"><p>Coordinates: 52.6667, -2.75</p><span class="adam-map-location"><a href="places-england-of-highly-salop.html" class="adam-location_link">of Highly Salop, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2015.html" class="adam-name_link">Sir Peter Newton</a> (-)</span></div>');addPin(51.7468,-2.22579,1,myImageM,'John Minchin','<div class="infowindow"><p>Coordinates: 51.7468, -2.22579</p><span class="adam-map-location"><a href="places-england-gloucestershire.html" class="adam-location_link">Gloucestershire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I578.html" class="adam-name_link">John Minchin</a> (~1590-)</span></div>');addPin(51.5106,-0.595021,1,myImageM,'John Alexander Scott','<div class="infowindow"><p>Coordinates: 51.5106, -0.595021</p><span class="adam-map-location"><a href="places-england-buckinghamshire-slough.html" class="adam-location_link">Slough, Buckinghamshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I907.html" class="adam-name_link">John Alexander Scott</a> (1911-1967)</span></div>');
  markerCluster = new MarkerClusterer(map, myPins, mcOptions);
- var myData={max:1,data:[{lat:52.668,lng:-8.6305,count:0.3},{lat:53.4129,lng:-8.24389,count:1.5},{lat:55.0702,lng:-6.51689,count:0.3},{lat:53.2783,lng:-6.10028,count:0.3},{lat:52.6667,lng:-2.75,count:0.3},{lat:51.7468,lng:-2.22579,count:0.3},{lat:51.5106,lng:-0.595021,count:0.3},]};
+ var myData={max:1,data:[{lat:52.544,lng:-8.96143,count:0.3},{lat:52.668,lng:-8.6305,count:0.3},{lat:53.4129,lng:-8.24389,count:2.1},{lat:55.0702,lng:-6.51689,count:0.3},{lat:52.3369,lng:-6.46334,count:1.2},{lat:53.3498,lng:-6.26031,count:0.3},{lat:53.3331,lng:-6.24889,count:0.3},{lat:53.2783,lng:-6.10028,count:0.3},{lat:52.6667,lng:-2.75,count:0.3},{lat:51.7468,lng:-2.22579,count:0.3},{lat:51.5106,lng:-0.595021,count:0.3},]};
  google.maps.event.addListenerOnce(map,'idle',function(){heatmap.setDataSet(myData);});
 }
 </script>
 <div class="mapstatus">
 <span class="mapstatusspan"><p>
-8 locations have been Splattered across your map where 20 ancestors were born.  The cluster count shows the number of times people appear within each cluster.  Click on a cluster or zoom in for more detail.
+11 locations have been Splattered across your map where 20 ancestors were born.  The cluster count shows the number of times people appear within each cluster.  Click on a cluster or zoom in for more detail.
 </p></span>
 </div>
 <script src="adam-min.js" type="text/javascript"></script>
@@ -453,19 +462,19 @@ function initializePins() {
 </div>
 <script type="text/javascript">
 $(document).ready(function () {
-  $('#tabs').tabs({
-    activate: function (event, ui) {
-      var act = $("#tabs").tabs("option", "active");
-		  if (act == 3) {
-        google.maps.event.trigger(map, 'resize');
-      }
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    e.target
+    e.relatedTarget
+  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      google.maps.event.trigger(map, 'resize');
     }
   });
 });
 </script>
 </div>
+</div>
 
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -485,7 +494,7 @@ $(document).ready(function () {
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

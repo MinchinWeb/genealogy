@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="Rose Hills, Whittier, California, United States - Minchin Genealogy | Minchin.ca" />
  <title>Rose Hills, Whittier, California, United States - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -67,16 +74,18 @@ Version:   1.0.4        December 29, 2013
 
 <h1 id="adam-page-title">Rose Hills, Whittier, California, United States</h1>
 
-<div id="tabs">
-<ul>
+<div id="adam-tab-list">
+<ul id="tab-list" class="nav nav-tabs">
 
-<li><a class="click" href="#profile">Profile</a></li>
+<li class="active"><a class="click" href="#profile" data-toggle="tab">Profile</a></li>
 
-<li><a class="click" href="#claims">Claims (4)</a></li>
+<li><a class="click" href="#claims" data-toggle="tab">Claims (4)</a></li>
 
 </ul>
 
-<div id="profile" class="adam-tab">
+<div class="tab-content">
+
+<div id="profile" class="tab-pane active adam-tab">
 
 <ul id="adam-location_profile" class="adam-tab_style">
 <li>
@@ -94,6 +103,10 @@ Version:   1.0.4        December 29, 2013
 <tr class="adam-claim"><td class="adam-claim_tag">Subregion:</td><td class="adam-claim_data">Whittier
 </td></tr>
 <tr class="adam-claim"><td class="adam-claim_tag">City:</td><td class="adam-claim_data">Rose Hills
+</td></tr>
+<tr class="adam-claim"><td class="adam-claim_tag">Latitude:</td><td class="adam-claim_data">33.9902
+</td></tr>
+<tr class="adam-claim"><td class="adam-claim_tag">Longitude:</td><td class="adam-claim_data">-118.014
 </td></tr>
 </table></td></tr>
 <tr><td><table class="adam-map adam-table_box">
@@ -242,7 +255,10 @@ function initialize() {
 
 	function displayMap() {
 	  address = "Rose Hills, Whittier, California, United States";
-	  geocode("Rose Hills, Whittier, California, United States");
+	  latlng = new google.maps.LatLng(33.9902,-118.014);
+	  home = latlng;
+	  map.setCenter(latlng);
+	  updateMap();
 	}
 
 	function geocode(addr) {
@@ -290,7 +306,7 @@ function initialize() {
 
 </div>
 
-<div id="claims" class="adam-tab">
+<div id="claims" class="tab-pane adam-tab">
 
 <ul id="adam-location_claims" class="adam-tab_style">
 <li>
@@ -325,8 +341,9 @@ GEDCOM file imported on 10 January 2013
 </div>
 
 </div>
+</div>
 
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -346,7 +363,7 @@ GEDCOM file imported on 10 January 2013
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

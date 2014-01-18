@@ -1,5 +1,5 @@
 '''Genealogy Uploader
-v.2 - WM - Jan. 8, 2014
+v.2 - WM - Jan. 6, 2014
 
 This script serves to semi-automate the building and uploading of my
 genealogy website. It is intended to be semi-interactive and run from the
@@ -29,7 +29,7 @@ import sys
 import winshell
 import requests
 from bs4 import BeautifulSoup
-from envoy
+import envoy
 import wmtext
 
 today = '' + str(date.today().year)[2:] + str.zfill(str(date.today().month), 2) + str.zfill(str(date.today().day), 2)
@@ -61,7 +61,7 @@ subject = gedcom_file.read()
 gedcom_file.close()
 
 pattern = re.compile(r'S:\\Documents\\Genealogy\\[0-9]+[\.[a-z]+]*\.? ') # path start
-result = pattern.sub("images/", subject)
+result = pattern.sub('images/', subject)
 pattern2 = re.compile(r'(images.*)\\') # reverse slashes in rest of path
 result2 = pattern2.sub(r'\1/', result)
 result3 = pattern2.sub(r'\1/', result2)
@@ -125,7 +125,7 @@ for filename in all_files:
 	elif filename in ["adam.css", "adam-min.js"]:
 		to_delete.append(filename)
 for myfile in to_delete:
-	#~winshell.delete_file(myfile, no_confirm = True, allow_undo= False, silent = True)
+	winshell.delete_file(myfile, no_confirm = True, allow_undo = False, silent = True)
 	pass
 print("        " + str(len(to_delete)) + " files deleted.")
 
@@ -143,8 +143,8 @@ while True:
 	if adam_zip != '' and os.stat(adam_zip).st_size > 1000:
 		break
 	count_loops +=1
-	if count_loops > 40:
-		if wmtext.query_yes_quit("    We've waited 20 minutes. Keep waiting?", default="yes") == False:
+	if count_loops > 60:
+		if wmtext.query_yes_quit("    We've waited 30 minutes. Keep waiting?", default="yes") == False:
 			sys.exit()
 		else:
 			count_loops = 0
@@ -156,24 +156,31 @@ winshell.copy_file(adam_zip, github_folder)
 wmtext.clock_on_right(" 7. Unzip new Adam output.")
 os.chdir(github_folder)
 zf = zipfile.ZipFile(adam_zip)
-#~zf.extractall()
+zf.extractall()
 zf.close()
 
 wmtext.clock_on_right(" 8. Replacing Adam version number.")
+print("    Updated dates")
+print("    Hiding emails")
 soup_file = open('names.html', 'r')
 soup = BeautifulSoup(soup_file)
 soup_file.close()
 adam_version_text = soup.find(True, "adam-version").get_text().encode('utf-8') # 'Built by Adam 1.35.0.0 ' or the like
+date_in_text = date.today().strftime("%B %d, %Y").replace(' 0', ' ') # 'January 7, 2014' or the like
+pattern = re.compile('(w_minchin@hotmail\.com|nysgys@shaw\.ca|bunburypr@ozemail\.com\.au|turtle@turtlebunbury\.com|howard\.blaxland@gmail\.com|kenhazel@gmail\.com|canrcr@gmail\.com|david@westerhamworkshop\.co\.uk)', re.I) # replace and hide emails; but some of these are over lines breaks, so we'll have to search and replace through the output
+
 all_files = os.listdir(github_folder)
 all_html_files = []
 for my_file in all_files:
 	if my_file.endswith(".html"):
 		all_html_files.append(my_file)
 # inline search and replace
-#~for line in fileinput.input(all_html_files, inplace=1):
-#~	line = line.replace("$adam-version$", adam_version_text)
-#~	print line,
-
+for line1 in fileinput.input(all_html_files, inplace=1):
+	line2 = line1.replace("$adam-version$", adam_version_text)
+	line3 = line2.replace("$tree-updated$", date_in_text)
+	line4 = pattern.sub('[email redacted]', line3)
+	print line4,
+	
 wmtext.clock_on_right(" 9. Copy over index.html")
 os.chdir(github_folder)
 winshell.delete_file("index.html", no_confirm = True, allow_undo = False, silent = True)
@@ -191,17 +198,14 @@ target.write(gedcom_expected + "\n")
 target.close()
 
 wmtext.clock_on_right("11. Git -> commit and push")
-#~repo = Gittle(github_folder)
-#~files_to_commit = repo.pending_files
-#~repo.stage(files_to_commit)
 commit_msg = "Adam generated upload from " + gedcom_expected
-#~repo.commit(name="Upload Script", email="w_minchin@hotmail.com", message=commit_msg)
-#~key_file = open(my_key_file)
-#~repo.auth(pkey=key_file)
-#~repo.push(origin_uri=repo_url, branch_name="gh-pages")
+os.chdir(github_folder)
 r1 = envoy.run('git add -A')
-r2 = envoy.run('git commit -m ' + commit_msg)
+print r1.std_err,
+r2 = envoy.run('git commit -m Adam_upload')
+print r2.std_out, r2.std_err,
 r3 = envoy.run('git push origin')
+print r3.std_out, r3.std_err
 
 wmtext.clock_on_right("12. Wait to go live")
 while True:

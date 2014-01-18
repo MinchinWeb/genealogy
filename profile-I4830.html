@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="Sarah Minor Profile - Minchin Genealogy | Minchin.ca" />
  <title>Sarah Minor Profile - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -67,22 +74,24 @@ Version:   1.0.4        December 29, 2013
 
 <h1 id="adam-page-title">Sarah Minor Profile</h1>
 
-<div id="tabs">
-<ul>
+<div id="adam-tab-list">
+<ul id="tab-list" class="nav nav-tabs">
 
-<li><a class="click" href="#profile">Profile</a></li>
+<li class="active"><a class="click" href="#profile" data-toggle="tab">Profile</a></li>
 
-<li><a class="click" href="#sources">Sources (1)</a></li>
+<li><a class="click" href="#sources" data-toggle="tab">Sources (1)</a></li>
 
-<li><a class="click" href="#chart">Chart</a></li>
+<li><a class="click" href="#chart" data-toggle="tab">Chart</a></li>
 
-<li><a class="click" href="#alist">Ancestors List (1)</a></li>
+<li><a class="click" href="#alist" data-toggle="tab">Ancestors List (1)</a></li>
 
-<li><a class="click" href="#map">Ancestors Distribution Map</a></li>
+<li><a class="click" href="#map" data-toggle="tab">Ancestors Distribution Map</a></li>
 
 </ul>
 
-<div id="profile" class="adam-tab">
+<div class="tab-content">
+
+<div id="profile" class="tab-pane active adam-tab">
 
 <ul id="adam-person_profile" class="adam-tab_style">
 <li>
@@ -138,7 +147,7 @@ GEDCOM file imported on 10 January 2013
 </li>
 </ul>
 </div>
-<div id="sources" class="adam-tab">
+<div id="sources" class="tab-pane adam-tab">
 
 <ul id="adam-person_sources" class="adam-tab_style">
 <li>
@@ -158,7 +167,7 @@ GEDCOM file imported on 10 January 2013
 </li>
 </ul>
 </div>
-<div id="chart" class="adam-tab">
+<div id="chart" class="tab-pane adam-tab">
 <ul>
 <li id="adam-person_chart">
 <div style="height: 665px;">&nbsp;</div>
@@ -307,7 +316,7 @@ GEDCOM file imported on 10 January 2013
 </li>
 </ul>
 </div>
-<div id="alist" class="adam-tab">
+<div id="alist" class="tab-pane adam-tab">
 
 <div class="adam-al_page">
 <ul class="adam-al_legend">
@@ -321,19 +330,19 @@ GEDCOM file imported on 10 January 2013
 
 <li class="adam-al_generation">Generation 1</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1] &nbsp; <a href="profile-I4830.html" class="adam-name_link">Sarah Minor</a> (1750-)</div>
+  <div class="adam-al_name">[1] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4830.html" class="adam-name_link">Sarah Minor</a> (1750-)</div>
   <div class="adam-al_path"><span title="Connecticut">CT</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 2</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3] &nbsp; <b><a href="profile-I4828.html" class="adam-name_link">Keziah Willey</a> (1723-1807)</b></div>
+  <div class="adam-al_name">[3] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4828.html" class="adam-name_link">Keziah Willey</a> (1723-1807)</b></div>
   <div class="adam-al_path"><span title="Connecticut">CT</span></div><br>
 </li>
 </ul>
 </div>
 </div>
-<div id="map" class="adam-tab">
+<div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <br/>
 <div class="floatmapbuttons"><p>
@@ -368,16 +377,16 @@ function initializePins() {
 </div>
 <script type="text/javascript">
 $(document).ready(function () {
-  $('#tabs').tabs({
-    activate: function (event, ui) {
-      var act = $("#tabs").tabs("option", "active");
-		  if (act == 4) {
-        google.maps.event.trigger(map, 'resize');
-      }
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    e.target
+    e.relatedTarget
+  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      google.maps.event.trigger(map, 'resize');
     }
   });
 });
 </script>
+</div>
 </div>
 
 <ul>
@@ -386,7 +395,7 @@ $(document).ready(function () {
 Last Modified: Dec 30, 2012
 </li>
 </ul>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -406,7 +415,7 @@ Last Modified: Dec 30, 2012
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

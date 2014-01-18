@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="Samuel Brockway Profile - Minchin Genealogy | Minchin.ca" />
  <title>Samuel Brockway Profile - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -67,22 +74,24 @@ Version:   1.0.4        December 29, 2013
 
 <h1 id="adam-page-title">Samuel Brockway Profile</h1>
 
-<div id="tabs">
-<ul>
+<div id="adam-tab-list">
+<ul id="tab-list" class="nav nav-tabs">
 
-<li><a class="click" href="#profile">Profile</a></li>
+<li class="active"><a class="click" href="#profile" data-toggle="tab">Profile</a></li>
 
-<li><a class="click" href="#sources">Sources (1)</a></li>
+<li><a class="click" href="#sources" data-toggle="tab">Sources (1)</a></li>
 
-<li><a class="click" href="#chart">Chart</a></li>
+<li><a class="click" href="#chart" data-toggle="tab">Chart</a></li>
 
-<li><a class="click" href="#alist">Ancestors List (15)</a></li>
+<li><a class="click" href="#alist" data-toggle="tab">Ancestors List (15)</a></li>
 
-<li><a class="click" href="#map">Ancestors Distribution Map</a></li>
+<li><a class="click" href="#map" data-toggle="tab">Ancestors Distribution Map</a></li>
 
 </ul>
 
-<div id="profile" class="adam-tab">
+<div class="tab-content">
+
+<div id="profile" class="tab-pane active adam-tab">
 
 <ul id="adam-person_profile" class="adam-tab_style">
 <li>
@@ -156,7 +165,7 @@ GEDCOM file imported on 10 January 2013
 </li>
 </ul>
 </div>
-<div id="sources" class="adam-tab">
+<div id="sources" class="tab-pane adam-tab">
 
 <ul id="adam-person_sources" class="adam-tab_style">
 <li>
@@ -176,7 +185,7 @@ GEDCOM file imported on 10 January 2013
 </li>
 </ul>
 </div>
-<div id="chart" class="adam-tab">
+<div id="chart" class="tab-pane adam-tab">
 <ul>
 <li id="adam-person_chart">
 <div style="height: 665px;">&nbsp;</div>
@@ -327,7 +336,7 @@ GEDCOM file imported on 10 January 2013
 </li>
 </ul>
 </div>
-<div id="alist" class="adam-tab">
+<div id="alist" class="tab-pane adam-tab">
 
 <div class="adam-al_page">
 <ul class="adam-al_legend">
@@ -341,81 +350,81 @@ GEDCOM file imported on 10 January 2013
 
 <li class="adam-al_generation">Generation 1</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1] &nbsp; <a href="profile-I5008.html" class="adam-name_link">Samuel Brockway</a> (~1717-1806)</div>
+  <div class="adam-al_name">[1] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5008.html" class="adam-name_link">Samuel Brockway</a> (~1717-1806)</div>
   <div class="adam-al_path"><span title="Connecticut">CT</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 2</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[2] &nbsp; <a href="profile-I5010.html" class="adam-name_link">Samuel Brockway</a> (1692-1757)</div>
+  <div class="adam-al_name">[2] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5010.html" class="adam-name_link">Samuel Brockway</a> (1692-1757)</div>
   <div class="adam-al_path"><span title="Connecticut">CT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3] &nbsp; <a href="profile-I5011.html" class="adam-name_link">Lydia Johnson</a> (1695-)</div>
+  <div class="adam-al_name">[3] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5011.html" class="adam-name_link">Lydia Johnson</a> (1695-)</div>
   <div class="adam-al_path"><span title="Connecticut">CT</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 3</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[4] &nbsp; <a href="profile-I5012.html" class="adam-name_link">Wolston Brockway</a> (1668-1707)</div>
+  <div class="adam-al_name">[4] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5012.html" class="adam-name_link">Wolston Brockway</a> (1668-1707)</div>
   <div class="adam-al_path"><span title="Connecticut">CT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[5] &nbsp; <b><a href="profile-I5013.html" class="adam-name_link">Margaret</a> (-)</b></div>
+  <div class="adam-al_name">[5] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5013.html" class="adam-name_link">Margaret</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[6] &nbsp; <a href="profile-I5019.html" class="adam-name_link">Nathaniel Johnson</a> (1670-1726)</div>
+  <div class="adam-al_name">[6] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5019.html" class="adam-name_link">Nathaniel Johnson</a> (1670-1726)</div>
   <div class="adam-al_path"><span title="Connecticut">CT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[7] &nbsp; <a href="profile-I5020.html" class="adam-name_link">Hannah Hoadley</a> (1670-1725)</div>
+  <div class="adam-al_name">[7] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5020.html" class="adam-name_link">Hannah Hoadley</a> (1670-1725)</div>
   <div class="adam-al_path"><span title="Connecticut">CT</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 4</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[8] &nbsp; <i><a href="profile-I5014.html" class="adam-name_link">Wolston Brockway</a> (~1638-1717)</i></div>
+  <div class="adam-al_name">[8] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I5014.html" class="adam-name_link">Wolston Brockway</a> (~1638-1717)</i></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Connecticut">CT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[9] &nbsp; <a href="profile-I5015.html" class="adam-name_link">Hannah Briggs</a> (1642-1687)</div>
+  <div class="adam-al_name">[9] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5015.html" class="adam-name_link">Hannah Briggs</a> (1642-1687)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[12] &nbsp; <b><a href="profile-I5021.html" class="adam-name_link">Nathaniel Johnson</a> (-)</b></div>
+  <div class="adam-al_name">[12] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5021.html" class="adam-name_link">Nathaniel Johnson</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[13] &nbsp; <b><a href="profile-I5022.html" class="adam-name_link">Mary Smith</a> (-)</b></div>
+  <div class="adam-al_name">[13] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5022.html" class="adam-name_link">Mary Smith</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[14] &nbsp; <b><a href="profile-I5023.html" class="adam-name_link">William Hoadley</a> (~1630-1709)</b></div>
+  <div class="adam-al_name">[14] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5023.html" class="adam-name_link">William Hoadley</a> (~1630-1709)</b></div>
   <div class="adam-al_path"><span title="Connecticut">CT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[15] &nbsp; <b><a href="profile-I5024.html" class="adam-name_link">Mary</a> (~1634-1703)</b></div>
+  <div class="adam-al_name">[15] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5024.html" class="adam-name_link">Mary</a> (~1634-1703)</b></div>
   <div class="adam-al_path"><span title="Connecticut">CT</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 5</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[17] &nbsp; <b><a href="profile-I5016.html" class="adam-name_link">_____ Wolterton</a> (-)</b></div>
+  <div class="adam-al_name">[17] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5016.html" class="adam-name_link">_____ Wolterton</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[18] &nbsp; <b><a href="profile-I5017.html" class="adam-name_link">William Briggs</a> (1616-1687)</b></div>
+  <div class="adam-al_name">[18] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5017.html" class="adam-name_link">William Briggs</a> (1616-1687)</b></div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[19] &nbsp; <b><a href="profile-I5018.html" class="adam-name_link">Mary</a> (~1620-)</b></div>
+  <div class="adam-al_name">[19] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5018.html" class="adam-name_link">Mary</a> (~1620-)</b></div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 </ul>
 </div>
 </div>
-<div id="map" class="adam-tab">
+<div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <br/>
 <div class="floatmapbuttons"><p>
@@ -434,9 +443,9 @@ var mcOptions={styles:[{ height:35,width:35,url:"mapmarker1.png"},
  { height:35,width:35,url:"mapmarker4.png"},
  { height:35,width:35,url:"mapmarker5.png"}]};
 function initializePins() {
- addPin(41.3083,-72.9279,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 41.3083, -72.9279</p><span class="adam-map-location"><a href="places-usa-connecticut-new-haven.html" class="adam-location_link">New Haven, Connecticut, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5020.html" class="adam-name_link">Hannah Hoadley</a> (1670-1725)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5023.html" class="adam-name_link">William Hoadley</a> (~1630-1709)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5024.html" class="adam-name_link">Mary</a> (~1634-1703)</span></div>');addPin(41.275,-72.7732,1,myImageM,'Samuel Brockway','<div class="infowindow"><p>Coordinates: 41.275, -72.7732</p><span class="adam-map-location"><a href="places-usa-connecticut-new-haven-branford.html" class="adam-location_link">Branford, New Haven, Connecticut, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5008.html" class="adam-name_link">Samuel Brockway</a> (~1717-1806)</span></div>');addPin(41.4,-72.35,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 41.4, -72.35</p><span class="adam-map-location"><a href="places-usa-connecticut-new-london-lyme.html" class="adam-location_link">Lyme, New London, Connecticut, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5010.html" class="adam-name_link">Samuel Brockway</a> (1692-1757)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5012.html" class="adam-name_link">Wolston Brockway</a> (1668-1707)</span></div>');addPin(41.939,-71.9595,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 41.939, -71.9595</p><span class="adam-map-location"><a href="places-usa-connecticut-windham-woodstock.html" class="adam-location_link">Woodstock, Windham, Connecticut, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5011.html" class="adam-name_link">Lydia Johnson</a> (1695-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5019.html" class="adam-name_link">Nathaniel Johnson</a> (1670-1726)</span></div>');addPin(42.3584,-71.0598,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 42.3584, -71.0598</p><span class="adam-map-location"><a href="places-usa-massachusetts-suffolk-boston.html" class="adam-location_link">Boston, Suffolk, Massachusetts, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5015.html" class="adam-name_link">Hannah Briggs</a> (1642-1687)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5017.html" class="adam-name_link">William Briggs</a> (1616-1687)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5018.html" class="adam-name_link">Mary</a> (~1620-)</span></div>');addPin(1000,1000,1,myImageM,'Wolston Brockway','<div class="infowindow"><p>Coordinates: 1000, 1000</p><span class="adam-map-location"><a href="places-england-london-of-silvert-st.html" class="adam-location_link">of Silvert St., London, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5014.html" class="adam-name_link">Wolston Brockway</a> (~1638-1717)</span></div>');
+ addPin(41.3083,-72.9279,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 41.3083, -72.9279</p><span class="adam-map-location"><a href="places-usa-connecticut-new-haven.html" class="adam-location_link">New Haven, Connecticut, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5020.html" class="adam-name_link">Hannah Hoadley</a> (1670-1725)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5023.html" class="adam-name_link">William Hoadley</a> (~1630-1709)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5024.html" class="adam-name_link">Mary</a> (~1634-1703)</span></div>');addPin(41.275,-72.7732,1,myImageM,'Samuel Brockway','<div class="infowindow"><p>Coordinates: 41.275, -72.7732</p><span class="adam-map-location"><a href="places-usa-connecticut-new-haven-branford.html" class="adam-location_link">Branford, New Haven, Connecticut, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5008.html" class="adam-name_link">Samuel Brockway</a> (~1717-1806)</span></div>');addPin(41.4,-72.35,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 41.4, -72.35</p><span class="adam-map-location"><a href="places-usa-connecticut-new-london-lyme.html" class="adam-location_link">Lyme, New London, Connecticut, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5010.html" class="adam-name_link">Samuel Brockway</a> (1692-1757)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5012.html" class="adam-name_link">Wolston Brockway</a> (1668-1707)</span></div>');addPin(41.939,-71.9595,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 41.939, -71.9595</p><span class="adam-map-location"><a href="places-usa-connecticut-windham-woodstock.html" class="adam-location_link">Woodstock, Windham, Connecticut, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5011.html" class="adam-name_link">Lydia Johnson</a> (1695-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5019.html" class="adam-name_link">Nathaniel Johnson</a> (1670-1726)</span></div>');addPin(42.3584,-71.0598,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 42.3584, -71.0598</p><span class="adam-map-location"><a href="places-usa-massachusetts-suffolk-boston.html" class="adam-location_link">Boston, Suffolk, Massachusetts, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5015.html" class="adam-name_link">Hannah Briggs</a> (1642-1687)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5017.html" class="adam-name_link">William Briggs</a> (1616-1687)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5018.html" class="adam-name_link">Mary</a> (~1620-)</span></div>');addPin(51.6166,-0.078204,1,myImageM,'Wolston Brockway','<div class="infowindow"><p>Coordinates: 51.6166, -0.078204</p><span class="adam-map-location"><a href="places-england-london-of-silvert-st.html" class="adam-location_link">of Silvert St., London, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5014.html" class="adam-name_link">Wolston Brockway</a> (~1638-1717)</span></div>');
  markerCluster = new MarkerClusterer(map, myPins, mcOptions);
- var myData={max:1,data:[{lat:41.3083,lng:-72.9279,count:0.9},{lat:41.275,lng:-72.7732,count:0.3},{lat:41.4,lng:-72.35,count:0.6},{lat:41.939,lng:-71.9595,count:0.6},{lat:42.3584,lng:-71.0598,count:0.9},]};
+ var myData={max:1,data:[{lat:41.3083,lng:-72.9279,count:0.9},{lat:41.275,lng:-72.7732,count:0.3},{lat:41.4,lng:-72.35,count:0.6},{lat:41.939,lng:-71.9595,count:0.6},{lat:42.3584,lng:-71.0598,count:0.9},{lat:51.6166,lng:-0.078204,count:0.3},]};
  google.maps.event.addListenerOnce(map,'idle',function(){heatmap.setDataSet(myData);});
 }
 </script>
@@ -450,16 +459,16 @@ function initializePins() {
 </div>
 <script type="text/javascript">
 $(document).ready(function () {
-  $('#tabs').tabs({
-    activate: function (event, ui) {
-      var act = $("#tabs").tabs("option", "active");
-		  if (act == 4) {
-        google.maps.event.trigger(map, 'resize');
-      }
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    e.target
+    e.relatedTarget
+  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      google.maps.event.trigger(map, 'resize');
     }
   });
 });
 </script>
+</div>
 </div>
 
 <ul>
@@ -468,7 +477,7 @@ $(document).ready(function () {
 Last Modified: Dec 30, 2012
 </li>
 </ul>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -488,7 +497,7 @@ Last Modified: Dec 30, 2012
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

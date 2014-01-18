@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="John Mountjoy Profile - Minchin Genealogy | Minchin.ca" />
  <title>John Mountjoy Profile - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -67,22 +74,24 @@ Version:   1.0.4        December 29, 2013
 
 <h1 id="adam-page-title">John Mountjoy Profile</h1>
 
-<div id="tabs">
-<ul>
+<div id="adam-tab-list">
+<ul id="tab-list" class="nav nav-tabs">
 
-<li><a class="click" href="#profile">Profile</a></li>
+<li class="active"><a class="click" href="#profile" data-toggle="tab">Profile</a></li>
 
-<li><a class="click" href="#sources">Sources (1)</a></li>
+<li><a class="click" href="#sources" data-toggle="tab">Sources (1)</a></li>
 
-<li><a class="click" href="#chart">Chart</a></li>
+<li><a class="click" href="#chart" data-toggle="tab">Chart</a></li>
 
-<li><a class="click" href="#alist">Ancestors List (46)</a></li>
+<li><a class="click" href="#alist" data-toggle="tab">Ancestors List (46)</a></li>
 
-<li><a class="click" href="#map">Ancestors Distribution Map</a></li>
+<li><a class="click" href="#map" data-toggle="tab">Ancestors Distribution Map</a></li>
 
 </ul>
 
-<div id="profile" class="adam-tab">
+<div class="tab-content">
+
+<div id="profile" class="tab-pane active adam-tab">
 
 <ul id="adam-person_profile" class="adam-tab_style">
 <li>
@@ -145,7 +154,7 @@ GEDCOM file imported on 10 January 2013
 </li>
 </ul>
 </div>
-<div id="sources" class="adam-tab">
+<div id="sources" class="tab-pane adam-tab">
 
 <ul id="adam-person_sources" class="adam-tab_style">
 <li>
@@ -165,7 +174,7 @@ GEDCOM file imported on 10 January 2013
 </li>
 </ul>
 </div>
-<div id="chart" class="adam-tab">
+<div id="chart" class="tab-pane adam-tab">
 <ul>
 <li id="adam-person_chart">
 <div style="height: 665px;">&nbsp;</div>
@@ -323,7 +332,7 @@ GEDCOM file imported on 10 January 2013
 </li>
 </ul>
 </div>
-<div id="alist" class="adam-tab">
+<div id="alist" class="tab-pane adam-tab">
 
 <div class="adam-al_page">
 <ul class="adam-al_legend">
@@ -337,209 +346,209 @@ GEDCOM file imported on 10 January 2013
 
 <li class="adam-al_generation">Generation 1</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1] &nbsp; <a href="profile-I5845.html" class="adam-name_link">John Mountjoy</a> (~1710-)</div>
+  <div class="adam-al_name">[1] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5845.html" class="adam-name_link">John Mountjoy</a> (~1710-)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 2</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[2] &nbsp; <a href="profile-I5352.html" class="adam-name_link">William Mountjoy</a> (~1657-1733)</div>
+  <div class="adam-al_name">[2] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5352.html" class="adam-name_link">William Mountjoy</a> (~1657-1733)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3] &nbsp; <a href="profile-I5353.html" class="adam-name_link">Sarah Nicholls</a> (~1667-~1732)</div>
+  <div class="adam-al_name">[3] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5353.html" class="adam-name_link">Sarah Nicholls</a> (~1667-~1732)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 3</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[4] &nbsp; <a href="profile-I5356.html" class="adam-name_link">William Mountjoy</a> (~1631-~1706)</div>
+  <div class="adam-al_name">[4] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5356.html" class="adam-name_link">William Mountjoy</a> (~1631-~1706)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[5] &nbsp; <a href="profile-I5357.html" class="adam-name_link">Grace Heard</a> (~1640-1699)</div>
+  <div class="adam-al_name">[5] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5357.html" class="adam-name_link">Grace Heard</a> (~1640-1699)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[6] &nbsp; <a href="profile-I5354.html" class="adam-name_link">Hugh Nicholls</a> (~1638-~1700)</div>
+  <div class="adam-al_name">[6] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5354.html" class="adam-name_link">Hugh Nicholls</a> (~1638-~1700)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[7] &nbsp; <a href="profile-I5355.html" class="adam-name_link">Anne Galsworthy</a> (~1640-~1705)</div>
+  <div class="adam-al_name">[7] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5355.html" class="adam-name_link">Anne Galsworthy</a> (~1640-~1705)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 4</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[8] &nbsp; <a href="profile-I5358.html" class="adam-name_link">William Mountjoy</a> (~1585-)</div>
+  <div class="adam-al_name">[8] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5358.html" class="adam-name_link">William Mountjoy</a> (~1585-)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[9] &nbsp; <b><a href="profile-I5359.html" class="adam-name_link">Isot</a> (~1589-~1667)</b></div>
+  <div class="adam-al_name">[9] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5359.html" class="adam-name_link">Isot</a> (~1589-~1667)</b></div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[10] &nbsp; <a href="profile-I5362.html" class="adam-name_link">Nicholas Heard</a> (~1605-~1651)</div>
+  <div class="adam-al_name">[10] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5362.html" class="adam-name_link">Nicholas Heard</a> (~1605-~1651)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[11] &nbsp; <a href="profile-I5363.html" class="adam-name_link">Joan Snow</a> (~1606-~1662)</div>
+  <div class="adam-al_name">[11] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5363.html" class="adam-name_link">Joan Snow</a> (~1606-~1662)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[12] &nbsp; <a href="profile-I5372.html" class="adam-name_link">Peter Nicholls</a> (~1598-~1684)</div>
+  <div class="adam-al_name">[12] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5372.html" class="adam-name_link">Peter Nicholls</a> (~1598-~1684)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[13] &nbsp; <a href="profile-I5373.html" class="adam-name_link">Mary\Maria Cleverdon</a> (~1608-)</div>
+  <div class="adam-al_name">[13] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5373.html" class="adam-name_link">Mary\Maria Cleverdon</a> (~1608-)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[14] &nbsp; <a href="profile-I5387.html" class="adam-name_link">William Galsworthy</a> (~1607-)</div>
+  <div class="adam-al_name">[14] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5387.html" class="adam-name_link">William Galsworthy</a> (~1607-)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[15] &nbsp; <a href="profile-I5385.html" class="adam-name_link">Margery Nicholls</a> (~1606-1674)</div>
+  <div class="adam-al_name">[15] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5385.html" class="adam-name_link">Margery Nicholls</a> (~1606-1674)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 5</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[16] &nbsp; <a href="profile-I5360.html" class="adam-name_link">Hugh Mountjoy</a> (~1557-1582)</div>
+  <div class="adam-al_name">[16] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5360.html" class="adam-name_link">Hugh Mountjoy</a> (~1557-1582)</div>
   <div class="adam-al_path"><span title="Sussex">SSX</span>-<span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[17] &nbsp; <b><a href="profile-I5361.html" class="adam-name_link">Mary Nicholls</a> (~1561-)</b></div>
+  <div class="adam-al_name">[17] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5361.html" class="adam-name_link">Mary Nicholls</a> (~1561-)</b></div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[20] &nbsp; <b><a href="profile-I5364.html" class="adam-name_link">Barnabas Heard</a> (~1579-~1633)</b></div>
+  <div class="adam-al_name">[20] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5364.html" class="adam-name_link">Barnabas Heard</a> (~1579-~1633)</b></div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[21] &nbsp; <b><a href="profile-I5365.html" class="adam-name_link">Grace</a> (~1583-~1628)</b></div>
+  <div class="adam-al_name">[21] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5365.html" class="adam-name_link">Grace</a> (~1583-~1628)</b></div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[22] &nbsp; <a href="profile-I5366.html" class="adam-name_link">Thomas Snow</a> (~1571-~1639)</div>
+  <div class="adam-al_name">[22] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5366.html" class="adam-name_link">Thomas Snow</a> (~1571-~1639)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[23] &nbsp; <a href="profile-I5367.html" class="adam-name_link">Christiana or Christina Cole</a> (~1572-~1639)</div>
+  <div class="adam-al_name">[23] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5367.html" class="adam-name_link">Christiana or Christina Cole</a> (~1572-~1639)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[24] &nbsp; <a href="profile-I5378.html" class="adam-name_link">Hugh Nicholls</a> (~1564-~1640)</div>
+  <div class="adam-al_name">[24] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5378.html" class="adam-name_link">Hugh Nicholls</a> (~1564-~1640)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[25] &nbsp; <b><a href="profile-I5379.html" class="adam-name_link">Thomasin Heard</a> (~1568-~1640)</b></div>
+  <div class="adam-al_name">[25] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5379.html" class="adam-name_link">Thomasin Heard</a> (~1568-~1640)</b></div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[26] &nbsp; <a href="profile-I5374.html" class="adam-name_link">Robert Cleverdon</a> (~1575-1661)</div>
+  <div class="adam-al_name">[26] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5374.html" class="adam-name_link">Robert Cleverdon</a> (~1575-1661)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[27] &nbsp; <b><a href="profile-I5375.html" class="adam-name_link">Jane Vine</a> (~1579-~1651)</b></div>
+  <div class="adam-al_name">[27] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5375.html" class="adam-name_link">Jane Vine</a> (~1579-~1651)</b></div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[28] &nbsp; <a href="profile-I5343.html" class="adam-name_link">John Galsworthy</a> (1568-1627)</div>
+  <div class="adam-al_name">[28] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5343.html" class="adam-name_link">John Galsworthy</a> (1568-1627)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[29] &nbsp; <b><a href="profile-I5344.html" class="adam-name_link">Anne Cooke</a> (1572-1645)</b></div>
+  <div class="adam-al_name">[29] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5344.html" class="adam-name_link">Anne Cooke</a> (1572-1645)</b></div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[30] &nbsp; <a href="profile-I5389.html" class="adam-name_link">John Nicholls</a> (~1572-)</div>
+  <div class="adam-al_name">[30] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5389.html" class="adam-name_link">John Nicholls</a> (~1572-)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[31] &nbsp; <a href="profile-I5390.html" class="adam-name_link">Philippa Bagelhole</a> (~1576-)</div>
+  <div class="adam-al_name">[31] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5390.html" class="adam-name_link">Philippa Bagelhole</a> (~1576-)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 6</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[32] &nbsp; <b><a href="profile-I5831.html" class="adam-name_link">Hugh Mountjoy</a> (-)</b></div>
+  <div class="adam-al_name">[32] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5831.html" class="adam-name_link">Hugh Mountjoy</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[44] &nbsp; <b><a href="profile-I5368.html" class="adam-name_link">Peter Snow</a> (~1541-1603)</b></div>
+  <div class="adam-al_name">[44] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5368.html" class="adam-name_link">Peter Snow</a> (~1541-1603)</b></div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[45] &nbsp; <b><a href="profile-I5369.html" class="adam-name_link">Mrs. Peter _____ Snow</a> (~1545-)</b></div>
+  <div class="adam-al_name">[45] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5369.html" class="adam-name_link">Mrs. Peter _____ Snow</a> (~1545-)</b></div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[46] &nbsp; <b><a href="profile-I5370.html" class="adam-name_link">John Cole</a> (~1540-)</b></div>
+  <div class="adam-al_name">[46] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5370.html" class="adam-name_link">John Cole</a> (~1540-)</b></div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[47] &nbsp; <b><a href="profile-I5371.html" class="adam-name_link">Charity Heddon</a> (~1544-1601)</b></div>
+  <div class="adam-al_name">[47] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5371.html" class="adam-name_link">Charity Heddon</a> (~1544-1601)</b></div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[48] &nbsp; <a href="profile-I5380.html" class="adam-name_link">John Nicholls</a> (~1538-~1611)</div>
+  <div class="adam-al_name">[48] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5380.html" class="adam-name_link">John Nicholls</a> (~1538-~1611)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[49] &nbsp; <b><a href="profile-I5381.html" class="adam-name_link">Mrs. J. _____ Nicholls</a> (~1542-)</b></div>
+  <div class="adam-al_name">[49] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5381.html" class="adam-name_link">Mrs. J. _____ Nicholls</a> (~1542-)</b></div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[52] &nbsp; <b><a href="profile-I5376.html" class="adam-name_link">Robert Cleverdon</a> (~1541-1599)</b></div>
+  <div class="adam-al_name">[52] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5376.html" class="adam-name_link">Robert Cleverdon</a> (~1541-1599)</b></div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[53] &nbsp; <b><a href="profile-I5377.html" class="adam-name_link">Joan Inglet</a> (~1545-1583)</b></div>
+  <div class="adam-al_name">[53] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5377.html" class="adam-name_link">Joan Inglet</a> (~1545-1583)</b></div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[56] &nbsp; <b><a href="profile-I5345.html" class="adam-name_link">John Galsworthy</a> (-)</b></div>
+  <div class="adam-al_name">[56] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5345.html" class="adam-name_link">John Galsworthy</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[60] &nbsp; <b><a href="profile-I5391.html" class="adam-name_link">Richard Nicholls</a> (~1544-)</b></div>
+  <div class="adam-al_name">[60] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5391.html" class="adam-name_link">Richard Nicholls</a> (~1544-)</b></div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[61] &nbsp; <b><a href="profile-I5392.html" class="adam-name_link">Margaret White</a> (~1548-)</b></div>
+  <div class="adam-al_name">[61] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5392.html" class="adam-name_link">Margaret White</a> (~1548-)</b></div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[62] &nbsp; <a href="profile-I5393.html" class="adam-name_link">Richard Bagelhole</a> (~1549-)</div>
+  <div class="adam-al_name">[62] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5393.html" class="adam-name_link">Richard Bagelhole</a> (~1549-)</div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[63] &nbsp; <b><a href="profile-I5394.html" class="adam-name_link">Joan Caslake</a> (~1553-)</b></div>
+  <div class="adam-al_name">[63] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5394.html" class="adam-name_link">Joan Caslake</a> (~1553-)</b></div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 7</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[96] &nbsp; <b><a href="profile-I5382.html" class="adam-name_link">John Nicholls</a> (-)</b></div>
+  <div class="adam-al_name">[96] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5382.html" class="adam-name_link">John Nicholls</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[97] &nbsp; <b><a href="profile-I5383.html" class="adam-name_link">Joanna</a> (-)</b></div>
+  <div class="adam-al_name">[97] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5383.html" class="adam-name_link">Joanna</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[124] &nbsp; <b><a href="profile-I5679.html" class="adam-name_link">(Mr.) Bagelhole</a> (~1518-)</b></div>
+  <div class="adam-al_name">[124] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5679.html" class="adam-name_link">(Mr.) Bagelhole</a> (~1518-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[125] &nbsp; <b><a href="profile-I5680.html" class="adam-name_link">_____ (Mrs. Bagelhole)</a> (~1527-)</b></div>
+  <div class="adam-al_name">[125] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5680.html" class="adam-name_link">_____ (Mrs. Bagelhole)</a> (~1527-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 </ul>
 </div>
 </div>
-<div id="map" class="adam-tab">
+<div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <br/>
 <div class="floatmapbuttons"><p>
@@ -558,9 +567,9 @@ var mcOptions={styles:[{ height:35,width:35,url:"mapmarker1.png"},
  { height:35,width:35,url:"mapmarker4.png"},
  { height:35,width:35,url:"mapmarker5.png"}]};
 function initializePins() {
- addPin(50.961,-4.50651,1,myImageM,'Richard Nicholls','<div class="infowindow"><p>Coordinates: 50.961, -4.50651</p><span class="adam-map-location"><a href="places-england-devon-of-eddistne.html" class="adam-location_link">of Eddistne, Devon, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5391.html" class="adam-name_link">Richard Nicholls</a> (~1544-)</span></div>');addPin(50.9882,-4.49373,13,myImage,'13 Persons','<div class="infowindow"><p>Coordinates: 50.9882, -4.49373</p><span class="adam-map-location"><a href="places-england-devon-of-hartland.html" class="adam-location_link">of Hartland, Devon, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5394.html" class="adam-name_link">Joan Caslake</a> (~1553-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5375.html" class="adam-name_link">Jane Vine</a> (~1579-~1651)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5361.html" class="adam-name_link">Mary Nicholls</a> (~1561-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5359.html" class="adam-name_link">Isot</a> (~1589-~1667)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5364.html" class="adam-name_link">Barnabas Heard</a> (~1579-~1633)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5365.html" class="adam-name_link">Grace</a> (~1583-~1628)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5343.html" class="adam-name_link">John Galsworthy</a> (1568-1627)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5368.html" class="adam-name_link">Peter Snow</a> (~1541-1603)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5369.html" class="adam-name_link">Mrs. Peter _____ Snow</a> (~1545-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5370.html" class="adam-name_link">John Cole</a> (~1540-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5381.html" class="adam-name_link">Mrs. J. _____ Nicholls</a> (~1542-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5392.html" class="adam-name_link">Margaret White</a> (~1548-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5393.html" class="adam-name_link">Richard Bagelhole</a> (~1549-)</span></div>');addPin(50.9938,-4.48062,22,myImage,'22 Persons','<div class="infowindow"><p>Coordinates: 50.9938, -4.48062</p><span class="adam-map-location"><a href="places-england-devon-hartland.html" class="adam-location_link">Hartland, Devon, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5363.html" class="adam-name_link">Joan Snow</a> (~1606-~1662)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5372.html" class="adam-name_link">Peter Nicholls</a> (~1598-~1684)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5373.html" class="adam-name_link">Mary\Maria Cleverdon</a> (~1608-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5387.html" class="adam-name_link">William Galsworthy</a> (~1607-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5385.html" class="adam-name_link">Margery Nicholls</a> (~1606-1674)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5366.html" class="adam-name_link">Thomas Snow</a> (~1571-~1639)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5845.html" class="adam-name_link">John Mountjoy</a> (~1710-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5378.html" class="adam-name_link">Hugh Nicholls</a> (~1564-~1640)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5379.html" class="adam-name_link">Thomasin Heard</a> (~1568-~1640)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5352.html" class="adam-name_link">William Mountjoy</a> (~1657-1733)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5344.html" class="adam-name_link">Anne Cooke</a> (1572-1645)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5389.html" class="adam-name_link">John Nicholls</a> (~1572-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5390.html" class="adam-name_link">Philippa Bagelhole</a> (~1576-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5353.html" class="adam-name_link">Sarah Nicholls</a> (~1667-~1732)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5356.html" class="adam-name_link">William Mountjoy</a> (~1631-~1706)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5357.html" class="adam-name_link">Grace Heard</a> (~1640-1699)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5371.html" class="adam-name_link">Charity Heddon</a> (~1544-1601)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5354.html" class="adam-name_link">Hugh Nicholls</a> (~1638-~1700)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5355.html" class="adam-name_link">Anne Galsworthy</a> (~1640-~1705)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5358.html" class="adam-name_link">William Mountjoy</a> (~1585-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5362.html" class="adam-name_link">Nicholas Heard</a> (~1605-~1651)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5367.html" class="adam-name_link">Christiana or Christina Cole</a> (~1572-~1639)</span></div>');addPin(50.9651,-4.30731,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 50.9651, -4.30731</p><span class="adam-map-location"><a href="places-england-devon-of-parkham.html" class="adam-location_link">of Parkham, Devon, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5377.html" class="adam-name_link">Joan Inglet</a> (~1545-1583)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5376.html" class="adam-name_link">Robert Cleverdon</a> (~1541-1599)</span></div>');addPin(50.9685,-4.29687,1,myImageM,'Robert Cleverdon','<div class="infowindow"><p>Coordinates: 50.9685, -4.29687</p><span class="adam-map-location"><a href="places-england-devon-parkham.html" class="adam-location_link">Parkham, Devon, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5374.html" class="adam-name_link">Robert Cleverdon</a> (~1575-1661)</span></div>');addPin(50.75,-3.75,1,myImageM,'John Nicholls','<div class="infowindow"><p>Coordinates: 50.75, -3.75</p><span class="adam-map-location"><a href="places-england-devon-of-brownsham.html" class="adam-location_link">of Brownsham, Devon, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5380.html" class="adam-name_link">John Nicholls</a> (~1538-~1611)</span></div>');addPin(1000,1000,1,myImageM,'Hugh Mountjoy','<div class="infowindow"><p>Coordinates: 1000, 1000</p><span class="adam-map-location"><a href="places-england-sussex-fire-beacon.html" class="adam-location_link">Fire Beacon, Sussex, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5360.html" class="adam-name_link">Hugh Mountjoy</a> (~1557-1582)</span></div>');
+ addPin(50.961,-4.50651,1,myImageM,'Richard Nicholls','<div class="infowindow"><p>Coordinates: 50.961, -4.50651</p><span class="adam-map-location"><a href="places-england-devon-of-eddistne.html" class="adam-location_link">of Eddistne, Devon, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5391.html" class="adam-name_link">Richard Nicholls</a> (~1544-)</span></div>');addPin(50.9882,-4.49373,13,myImage,'13 Persons','<div class="infowindow"><p>Coordinates: 50.9882, -4.49373</p><span class="adam-map-location"><a href="places-england-devon-of-hartland.html" class="adam-location_link">of Hartland, Devon, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5394.html" class="adam-name_link">Joan Caslake</a> (~1553-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5375.html" class="adam-name_link">Jane Vine</a> (~1579-~1651)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5361.html" class="adam-name_link">Mary Nicholls</a> (~1561-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5359.html" class="adam-name_link">Isot</a> (~1589-~1667)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5364.html" class="adam-name_link">Barnabas Heard</a> (~1579-~1633)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5365.html" class="adam-name_link">Grace</a> (~1583-~1628)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5343.html" class="adam-name_link">John Galsworthy</a> (1568-1627)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5368.html" class="adam-name_link">Peter Snow</a> (~1541-1603)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5369.html" class="adam-name_link">Mrs. Peter _____ Snow</a> (~1545-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5370.html" class="adam-name_link">John Cole</a> (~1540-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5381.html" class="adam-name_link">Mrs. J. _____ Nicholls</a> (~1542-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5392.html" class="adam-name_link">Margaret White</a> (~1548-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5393.html" class="adam-name_link">Richard Bagelhole</a> (~1549-)</span></div>');addPin(50.9938,-4.48062,22,myImage,'22 Persons','<div class="infowindow"><p>Coordinates: 50.9938, -4.48062</p><span class="adam-map-location"><a href="places-england-devon-hartland.html" class="adam-location_link">Hartland, Devon, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5363.html" class="adam-name_link">Joan Snow</a> (~1606-~1662)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5372.html" class="adam-name_link">Peter Nicholls</a> (~1598-~1684)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5373.html" class="adam-name_link">Mary\Maria Cleverdon</a> (~1608-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5387.html" class="adam-name_link">William Galsworthy</a> (~1607-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5385.html" class="adam-name_link">Margery Nicholls</a> (~1606-1674)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5366.html" class="adam-name_link">Thomas Snow</a> (~1571-~1639)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5845.html" class="adam-name_link">John Mountjoy</a> (~1710-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5378.html" class="adam-name_link">Hugh Nicholls</a> (~1564-~1640)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5379.html" class="adam-name_link">Thomasin Heard</a> (~1568-~1640)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5352.html" class="adam-name_link">William Mountjoy</a> (~1657-1733)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5344.html" class="adam-name_link">Anne Cooke</a> (1572-1645)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5389.html" class="adam-name_link">John Nicholls</a> (~1572-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5390.html" class="adam-name_link">Philippa Bagelhole</a> (~1576-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5353.html" class="adam-name_link">Sarah Nicholls</a> (~1667-~1732)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5356.html" class="adam-name_link">William Mountjoy</a> (~1631-~1706)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5357.html" class="adam-name_link">Grace Heard</a> (~1640-1699)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5371.html" class="adam-name_link">Charity Heddon</a> (~1544-1601)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5354.html" class="adam-name_link">Hugh Nicholls</a> (~1638-~1700)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5355.html" class="adam-name_link">Anne Galsworthy</a> (~1640-~1705)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5358.html" class="adam-name_link">William Mountjoy</a> (~1585-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5362.html" class="adam-name_link">Nicholas Heard</a> (~1605-~1651)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5367.html" class="adam-name_link">Christiana or Christina Cole</a> (~1572-~1639)</span></div>');addPin(50.9651,-4.30731,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 50.9651, -4.30731</p><span class="adam-map-location"><a href="places-england-devon-of-parkham.html" class="adam-location_link">of Parkham, Devon, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5377.html" class="adam-name_link">Joan Inglet</a> (~1545-1583)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5376.html" class="adam-name_link">Robert Cleverdon</a> (~1541-1599)</span></div>');addPin(50.9685,-4.29687,1,myImageM,'Robert Cleverdon','<div class="infowindow"><p>Coordinates: 50.9685, -4.29687</p><span class="adam-map-location"><a href="places-england-devon-parkham.html" class="adam-location_link">Parkham, Devon, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5374.html" class="adam-name_link">Robert Cleverdon</a> (~1575-1661)</span></div>');addPin(50.75,-3.75,1,myImageM,'John Nicholls','<div class="infowindow"><p>Coordinates: 50.75, -3.75</p><span class="adam-map-location"><a href="places-england-devon-of-brownsham.html" class="adam-location_link">of Brownsham, Devon, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5380.html" class="adam-name_link">John Nicholls</a> (~1538-~1611)</span></div>');addPin(52.3555,-1.17432,1,myImageM,'Hugh Mountjoy','<div class="infowindow"><p>Coordinates: 52.3555, -1.17432</p><span class="adam-map-location"><a href="places-england-sussex-fire-beacon.html" class="adam-location_link">Fire Beacon, Sussex, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5360.html" class="adam-name_link">Hugh Mountjoy</a> (~1557-1582)</span></div>');
  markerCluster = new MarkerClusterer(map, myPins, mcOptions);
- var myData={max:1,data:[{lat:50.961,lng:-4.50651,count:0.3},{lat:50.9882,lng:-4.49373,count:3.9},{lat:50.9938,lng:-4.48062,count:6.6},{lat:50.9651,lng:-4.30731,count:0.6},{lat:50.9685,lng:-4.29687,count:0.3},{lat:50.75,lng:-3.75,count:0.3},]};
+ var myData={max:1,data:[{lat:50.961,lng:-4.50651,count:0.3},{lat:50.9882,lng:-4.49373,count:3.9},{lat:50.9938,lng:-4.48062,count:6.6},{lat:50.9651,lng:-4.30731,count:0.6},{lat:50.9685,lng:-4.29687,count:0.3},{lat:50.75,lng:-3.75,count:0.3},{lat:52.3555,lng:-1.17432,count:0.3},]};
  google.maps.event.addListenerOnce(map,'idle',function(){heatmap.setDataSet(myData);});
 }
 </script>
@@ -574,16 +583,16 @@ function initializePins() {
 </div>
 <script type="text/javascript">
 $(document).ready(function () {
-  $('#tabs').tabs({
-    activate: function (event, ui) {
-      var act = $("#tabs").tabs("option", "active");
-		  if (act == 4) {
-        google.maps.event.trigger(map, 'resize');
-      }
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    e.target
+    e.relatedTarget
+  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      google.maps.event.trigger(map, 'resize');
     }
   });
 });
 </script>
+</div>
 </div>
 
 <ul>
@@ -592,7 +601,7 @@ $(document).ready(function () {
 Last Modified: Dec 30, 2012
 </li>
 </ul>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -612,7 +621,7 @@ Last Modified: Dec 30, 2012
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

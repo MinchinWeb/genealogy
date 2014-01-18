@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="Jacob Higgins Profile - Minchin Genealogy | Minchin.ca" />
  <title>Jacob Higgins Profile - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -67,22 +74,24 @@ Version:   1.0.4        December 29, 2013
 
 <h1 id="adam-page-title">Jacob Higgins Profile</h1>
 
-<div id="tabs">
-<ul>
+<div id="adam-tab-list">
+<ul id="tab-list" class="nav nav-tabs">
 
-<li><a class="click" href="#profile">Profile</a></li>
+<li class="active"><a class="click" href="#profile" data-toggle="tab">Profile</a></li>
 
-<li><a class="click" href="#sources">Sources (1)</a></li>
+<li><a class="click" href="#sources" data-toggle="tab">Sources (1)</a></li>
 
-<li><a class="click" href="#chart">Chart</a></li>
+<li><a class="click" href="#chart" data-toggle="tab">Chart</a></li>
 
-<li><a class="click" href="#alist">Ancestors List (13)</a></li>
+<li><a class="click" href="#alist" data-toggle="tab">Ancestors List (13)</a></li>
 
-<li><a class="click" href="#map">Ancestors Distribution Map</a></li>
+<li><a class="click" href="#map" data-toggle="tab">Ancestors Distribution Map</a></li>
 
 </ul>
 
-<div id="profile" class="adam-tab">
+<div class="tab-content">
+
+<div id="profile" class="tab-pane active adam-tab">
 
 <ul id="adam-person_profile" class="adam-tab_style">
 <li>
@@ -135,7 +144,7 @@ GEDCOM file imported on 10 January 2013
 </li>
 </ul>
 </div>
-<div id="sources" class="adam-tab">
+<div id="sources" class="tab-pane adam-tab">
 
 <ul id="adam-person_sources" class="adam-tab_style">
 <li>
@@ -155,7 +164,7 @@ GEDCOM file imported on 10 January 2013
 </li>
 </ul>
 </div>
-<div id="chart" class="adam-tab">
+<div id="chart" class="tab-pane adam-tab">
 <ul>
 <li id="adam-person_chart">
 <div style="height: 665px;">&nbsp;</div>
@@ -306,7 +315,7 @@ GEDCOM file imported on 10 January 2013
 </li>
 </ul>
 </div>
-<div id="alist" class="adam-tab">
+<div id="alist" class="tab-pane adam-tab">
 
 <div class="adam-al_page">
 <ul class="adam-al_legend">
@@ -320,75 +329,75 @@ GEDCOM file imported on 10 January 2013
 
 <li class="adam-al_generation">Generation 1</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1] &nbsp; <a href="profile-I5806.html" class="adam-name_link">Jacob Higgins</a> (~1818-)</div>
+  <div class="adam-al_name">[1] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5806.html" class="adam-name_link">Jacob Higgins</a> (~1818-)</div>
   <div class="adam-al_path"><span title="Somerset">SOM</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 2</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[2] &nbsp; <a href="profile-I5304.html" class="adam-name_link">Moses Higgins</a> (~1778-)</div>
+  <div class="adam-al_name">[2] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5304.html" class="adam-name_link">Moses Higgins</a> (~1778-)</div>
   <div class="adam-al_path"><span title="Somerset">SOM</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3] &nbsp; <b><a href="profile-I5305.html" class="adam-name_link">Rachel Chennock</a> (~1776-1835)</b></div>
+  <div class="adam-al_name">[3] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5305.html" class="adam-name_link">Rachel Chennock</a> (~1776-1835)</b></div>
   <div class="adam-al_path"><span title="Somerset">SOM</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 3</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[4] &nbsp; <a href="profile-I6540.html" class="adam-name_link">John Higgins</a> (~1742-)</div>
+  <div class="adam-al_name">[4] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6540.html" class="adam-name_link">John Higgins</a> (~1742-)</div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[5] &nbsp; <a href="profile-I6541.html" class="adam-name_link">Mary Wilson</a> (~1748-)</div>
+  <div class="adam-al_name">[5] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6541.html" class="adam-name_link">Mary Wilson</a> (~1748-)</div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 4</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[8] &nbsp; <b><a href="profile-I6544.html" class="adam-name_link">John Stone</a> (-)</b></div>
+  <div class="adam-al_name">[8] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6544.html" class="adam-name_link">John Stone</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[9] &nbsp; <a href="profile-I6545.html" class="adam-name_link">Ann Higgins</a> (~1719-)</div>
+  <div class="adam-al_name">[9] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6545.html" class="adam-name_link">Ann Higgins</a> (~1719-)</div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[10] &nbsp; <a href="profile-I6542.html" class="adam-name_link">Samuel Wilson</a> (~1726-)</div>
+  <div class="adam-al_name">[10] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6542.html" class="adam-name_link">Samuel Wilson</a> (~1726-)</div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[11] &nbsp; <b><a href="profile-I6543.html" class="adam-name_link">Mary</a> (-)</b></div>
+  <div class="adam-al_name">[11] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6543.html" class="adam-name_link">Mary</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 5</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[18] &nbsp; <b><a href="profile-I6546.html" class="adam-name_link">James Higgins</a> (-)</b></div>
+  <div class="adam-al_name">[18] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6546.html" class="adam-name_link">James Higgins</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[19] &nbsp; <b><a href="profile-I6547.html" class="adam-name_link">Mary</a> (-)</b></div>
+  <div class="adam-al_name">[19] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6547.html" class="adam-name_link">Mary</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[20] &nbsp; <a href="profile-I6548.html" class="adam-name_link">Richard Wilson</a> (1696-)</div>
+  <div class="adam-al_name">[20] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6548.html" class="adam-name_link">Richard Wilson</a> (1696-)</div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[21] &nbsp; <b><a href="profile-I6549.html" class="adam-name_link">Ann Gibbs</a> (-)</b></div>
+  <div class="adam-al_name">[21] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6549.html" class="adam-name_link">Ann Gibbs</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 6</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[40] &nbsp; <b><a href="profile-I6550.html" class="adam-name_link">Ralph Wilson</a> (~1670-)</b></div>
+  <div class="adam-al_name">[40] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6550.html" class="adam-name_link">Ralph Wilson</a> (~1670-)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 </ul>
 </div>
 </div>
-<div id="map" class="adam-tab">
+<div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <br/>
 <div class="floatmapbuttons"><p>
@@ -407,15 +416,15 @@ var mcOptions={styles:[{ height:35,width:35,url:"mapmarker1.png"},
  { height:35,width:35,url:"mapmarker4.png"},
  { height:35,width:35,url:"mapmarker5.png"}]};
 function initializePins() {
- addPin(51.1215,-2.54302,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 51.1215, -2.54302</p><span class="adam-map-location"><a href="places-england-somerset-of-ditcheat.html" class="adam-location_link">of Ditcheat, Somerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5304.html" class="adam-name_link">Moses Higgins</a> (~1778-)</span><br/><br/><span class="adam-map-location"><a href="places-england-somerset-ditcheat.html" class="adam-location_link">Ditcheat, Somerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5806.html" class="adam-name_link">Jacob Higgins</a> (~1818-)</span><br/><br/><span class="adam-map-location"><a href="places-england-somerset-ditcheat.html" class="adam-location_link">Ditcheat, Somerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5305.html" class="adam-name_link">Rachel Chennock</a> (~1776-1835)</span></div>');addPin(51.0856,-2.52832,1,myImageM,'Ralph Wilson','<div class="infowindow"><p>Coordinates: 51.0856, -2.52832</p><span class="adam-map-location"><a href="places-england-sommerset-of-castle-carey.html" class="adam-location_link">of Castle Carey, Sommerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6550.html" class="adam-name_link">Ralph Wilson</a> (~1670-)</span></div>');addPin(1000,1000,5,myImage,'5 Persons','<div class="infowindow"><p>Coordinates: 1000, 1000</p><span class="adam-map-location"><a href="places-england-sommerset.html" class="adam-location_link">Sommerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6540.html" class="adam-name_link">John Higgins</a> (~1742-)</span><br/><br/><span class="adam-map-location"><a href="places-england-sommerset-castle-carey.html" class="adam-location_link">Castle Carey, Sommerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6541.html" class="adam-name_link">Mary Wilson</a> (~1748-)</span><br/><br/><span class="adam-map-location"><a href="places-england-sommerset-castle-carey.html" class="adam-location_link">Castle Carey, Sommerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6545.html" class="adam-name_link">Ann Higgins</a> (~1719-)</span><br/><br/><span class="adam-map-location"><a href="places-england-sommerset-castle-carey.html" class="adam-location_link">Castle Carey, Sommerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6542.html" class="adam-name_link">Samuel Wilson</a> (~1726-)</span><br/><br/><span class="adam-map-location"><a href="places-england-sommerset-castle-carey.html" class="adam-location_link">Castle Carey, Sommerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6548.html" class="adam-name_link">Richard Wilson</a> (1696-)</span></div>');
+ addPin(51.0587,-2.94991,1,myImageM,'John Higgins','<div class="infowindow"><p>Coordinates: 51.0587, -2.94991</p><span class="adam-map-location"><a href="places-england-sommerset.html" class="adam-location_link">Sommerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6540.html" class="adam-name_link">John Higgins</a> (~1742-)</span></div>');addPin(51.1215,-2.54302,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 51.1215, -2.54302</p><span class="adam-map-location"><a href="places-england-somerset-of-ditcheat.html" class="adam-location_link">of Ditcheat, Somerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5304.html" class="adam-name_link">Moses Higgins</a> (~1778-)</span><br/><br/><span class="adam-map-location"><a href="places-england-somerset-ditcheat.html" class="adam-location_link">Ditcheat, Somerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5806.html" class="adam-name_link">Jacob Higgins</a> (~1818-)</span><br/><br/><span class="adam-map-location"><a href="places-england-somerset-ditcheat.html" class="adam-location_link">Ditcheat, Somerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5305.html" class="adam-name_link">Rachel Chennock</a> (~1776-1835)</span></div>');addPin(51.0856,-2.52832,1,myImageM,'Ralph Wilson','<div class="infowindow"><p>Coordinates: 51.0856, -2.52832</p><span class="adam-map-location"><a href="places-england-sommerset-of-castle-carey.html" class="adam-location_link">of Castle Carey, Sommerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6550.html" class="adam-name_link">Ralph Wilson</a> (~1670-)</span></div>');addPin(51.0887,-2.5131,4,myImage,'4 Persons','<div class="infowindow"><p>Coordinates: 51.0887, -2.5131</p><span class="adam-map-location"><a href="places-england-sommerset-castle-carey.html" class="adam-location_link">Castle Carey, Sommerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6541.html" class="adam-name_link">Mary Wilson</a> (~1748-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6545.html" class="adam-name_link">Ann Higgins</a> (~1719-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6542.html" class="adam-name_link">Samuel Wilson</a> (~1726-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6548.html" class="adam-name_link">Richard Wilson</a> (1696-)</span></div>');
  markerCluster = new MarkerClusterer(map, myPins, mcOptions);
- var myData={max:1,data:[{lat:51.1215,lng:-2.54302,count:0.9},{lat:51.0856,lng:-2.52832,count:0.3},]};
+ var myData={max:1,data:[{lat:51.0587,lng:-2.94991,count:0.3},{lat:51.1215,lng:-2.54302,count:0.9},{lat:51.0856,lng:-2.52832,count:0.3},{lat:51.0887,lng:-2.5131,count:1.2},]};
  google.maps.event.addListenerOnce(map,'idle',function(){heatmap.setDataSet(myData);});
 }
 </script>
 <div class="mapstatus">
 <span class="mapstatusspan"><p>
-3 locations have been Splattered across your map where 9 ancestors were born.  The cluster count shows the number of times people appear within each cluster.  Click on a cluster or zoom in for more detail.
+4 locations have been Splattered across your map where 9 ancestors were born.  The cluster count shows the number of times people appear within each cluster.  Click on a cluster or zoom in for more detail.
 </p></span>
 </div>
 <script src="adam-min.js" type="text/javascript"></script>
@@ -423,16 +432,16 @@ function initializePins() {
 </div>
 <script type="text/javascript">
 $(document).ready(function () {
-  $('#tabs').tabs({
-    activate: function (event, ui) {
-      var act = $("#tabs").tabs("option", "active");
-		  if (act == 4) {
-        google.maps.event.trigger(map, 'resize');
-      }
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    e.target
+    e.relatedTarget
+  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      google.maps.event.trigger(map, 'resize');
     }
   });
 });
 </script>
+</div>
 </div>
 
 <ul>
@@ -441,7 +450,7 @@ $(document).ready(function () {
 Last Modified: Dec 30, 2012
 </li>
 </ul>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -461,7 +470,7 @@ Last Modified: Dec 30, 2012
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

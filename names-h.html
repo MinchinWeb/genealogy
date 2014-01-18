@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="h - Minchin Genealogy | Minchin.ca" />
  <title>h - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -70,7 +77,8 @@ Version:   1.0.4        December 29, 2013
 <br><a name="top"></a>
 
 <div class="adam-index-wrapper">
-<div class="adam-index_legend"><a href="names-a.html">A</a>&nbsp;
+<div class="adam-index_legend">
+<a href="names-a.html">A</a>&nbsp;
 <a href="names-b.html">B</a>&nbsp;
 <a href="names-c.html">C</a>&nbsp;
 <a href="names-d.html">D</a>&nbsp;
@@ -98,843 +106,428 @@ X&nbsp;
 <a href="names-z.html">Z</a>&nbsp;
 <a href="names-unknown.html">Unknown</a>&nbsp;
 <a href="names-none.html">None</a>&nbsp;
-</div><br>
+</div>
+<br>
 
 <table>
-
 <tr><td align="right"><a name="haddock"></a></td><td><a href="profile-I4422.html" class="adam-name_link">Haddock, Sarah</a> (1856-1884)</td></tr>
-
 <tr><td align="right"><a name="hagard"></a></td><td><a href="profile-I7314.html" class="adam-name_link">Hagard, Martha</a> (~1641-1676)</td></tr>
-
 <tr><td align="right"><a name="hagel"></a></td><td><a href="profile-I1418.html" class="adam-name_link">Hagel, Edward</a> (-)</td></tr>
-
 <tr><td align="right"><a name="haggard"></a></td><td><a href="profile-I9252.html" class="adam-name_link">Haggard, Delia</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9217.html" class="adam-name_link">Haggard, James A.</a> (~1827->1852)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9218.html" class="adam-name_link">Haggard, Mrs James</a> (~1830->1852)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9253.html" class="adam-name_link">Haggard, Nellie</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8139.html" class="adam-name_link">Haggard, Phoebe</a> (~1853->1922)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6786.html" class="adam-name_link">Haggard, William H.</a> (1855-1935)</td></tr>
-
 <tr><td align="right"><a name="hakes"></a></td><td><a href="profile-I7189.html" class="adam-name_link">Hakes, Rebecca</a> (~1703-)</td></tr>
-
 <tr><td align="right"><a name="hale"></a></td><td><a href="profile-I1981.html" class="adam-name_link">Hale, _____</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6296.html" class="adam-name_link">Hale, _____</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5088.html" class="adam-name_link">Hale, Abigail</a> (~1640-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1980.html" class="adam-name_link">Hale, Christian</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7593.html" class="adam-name_link">Hale, Hannah Heald</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1978.html" class="adam-name_link">Hale, John</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7760.html" class="adam-name_link">Hale, John</a> (1655->1684)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1977.html" class="adam-name_link">Hale, William</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1979.html" class="adam-name_link">Hale, William</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hall"></a></td><td><a href="profile-I2054.html" class="adam-name_link">Hall, Ann</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I4949.html" class="adam-name_link">Hall, Anna</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8437.html" class="adam-name_link">Hall, Caleb</a> (->1835)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I964.html" class="adam-name_link">Hall, Daniel James</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8771.html" class="adam-name_link">Hall, Esther</a> (~1739->1761)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7640.html" class="adam-name_link">Hall, Mary</a> (~1681->1705)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8221.html" class="adam-name_link">Hall, Nancy</a> (~1770->1789)</td></tr>
-
 <tr><td align="right"><a name="hallam"></a></td><td><a href="profile-I9594.html" class="adam-name_link">Hallam, Mary</a> (~1741->1766)</td></tr>
-
 <tr><td align="right"><a name="hallaran"></a></td><td><a href="profile-I9752.html" class="adam-name_link">Hallaran, Isabel</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9750.html" class="adam-name_link">Hallaran, Rev. Thomas Tuckey</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9751.html" class="adam-name_link">Hallaran, William</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hallett"></a></td><td><a href="profile-I9556.html" class="adam-name_link">Hallett, Joseph</a> (-)</td></tr>
-
 <tr><td align="right"><a name="ham"></a></td><td><a href="profile-I5316.html" class="adam-name_link">Ham, Benjamin</a> (~1696-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5788.html" class="adam-name_link">Ham, Bridget</a> (~1738-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5786.html" class="adam-name_link">Ham, Elizabeth</a> (~1729-~1731)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5315.html" class="adam-name_link">Ham, Grace</a> (~1725-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5787.html" class="adam-name_link">Ham, Joan</a> (~1731-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5785.html" class="adam-name_link">Ham, John</a> (~1728-~1730)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6537.html" class="adam-name_link">Ham, Mary</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hambury"></a></td><td><a href="profile-I1930.html" class="adam-name_link">Hambury, John</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hamilton"></a></td><td><a href="profile-I4164.html" class="adam-name_link">Hamilton, Eleanor</a> (1823-1891)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6890.html" class="adam-name_link">Hamilton, John, Jr.</a> (->1901)</td></tr>
-
 <tr><td align="right"><a name="hamlyn"></a></td><td><a href="profile-I5749.html" class="adam-name_link">Hamlyn, Elizabeth</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hammer"></a></td><td><a href="profile-I8027.html" class="adam-name_link">Hammer, Aaron</a> (~1705->1731)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8007.html" class="adam-name_link">Hammer, Abraham</a> (1731-1821)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8015.html" class="adam-name_link">Hammer, Abraham</a> (~1771->1797)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7869.html" class="adam-name_link">Hammer, Austin</a> (1806-1838)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7874.html" class="adam-name_link">Hammer, Austin</a> (1835-1886)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8009.html" class="adam-name_link">Hammer, Elisha</a> (~1762-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8022.html" class="adam-name_link">Hammer, Elizabeth</a> (1712-1775)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8092.html" class="adam-name_link">Hammer, Hannah</a> (~1808-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8026.html" class="adam-name_link">Hammer, Hannah</a> (1726-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8010.html" class="adam-name_link">Hammer, Isaac</a> (1764->1798)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7875.html" class="adam-name_link">Hammer, Isaiah, (twin)</a> (1836-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8020.html" class="adam-name_link">Hammer, John (Johannes)</a> (1684-1765)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7872.html" class="adam-name_link">Hammer, John Austin</a> (1830-1911)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7879.html" class="adam-name_link">Hammer, John</a> (1769-1841)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8023.html" class="adam-name_link">Hammer, John</a> (1715-1772)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7873.html" class="adam-name_link">Hammer, Josiah</a> (1831-1857)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7876.html" class="adam-name_link">Hammer, Julia Ann, (twin)</a> (1836-1920)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8017.html" class="adam-name_link">Hammer, Margret</a> (1772-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8025.html" class="adam-name_link">Hammer, Mary</a> (1723-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8012.html" class="adam-name_link">Hammer, Mary</a> (1768-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8102.html" class="adam-name_link">Hammer, Mrs Aaron</a> (->1731)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8014.html" class="adam-name_link">Hammer, Mrs Abraham</a> (1775->1793)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8021.html" class="adam-name_link">Hammer, Mrs Jane</a> (1689-<1744)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7871.html" class="adam-name_link">Hammer, Nancy Jane</a> (1829-1898)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6056.html" class="adam-name_link">Hammer, Nancy Jane</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8008.html" class="adam-name_link">Hammer, Rachel</a> (1731->1772)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8013.html" class="adam-name_link">Hammer, Rachel</a> (1770-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6055.html" class="adam-name_link">Hammer, Rebecca Ann</a> (1827-1900)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8024.html" class="adam-name_link">Hammer, William</a> (1719-1783)</td></tr>
-
 <tr><td align="right"><a name="hammett"></a></td><td><a href="profile-I6223.html" class="adam-name_link">Hammett, Epipheny</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hammond"></a></td><td><a href="profile-I6162.html" class="adam-name_link">Hammond, John</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hammonds"></a></td><td><a href="profile-I8082.html" class="adam-name_link">Hammonds, Elizabeth</a> (1790->1808)</td></tr>
-
 <tr><td align="right"><a name="hampton"></a></td><td><a href="profile-I752.html" class="adam-name_link">Hampton, Alexander</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I756.html" class="adam-name_link">Hampton, Dorah</a> (1845-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I753.html" class="adam-name_link">Hampton, Elizabeth</a> (1838-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I754.html" class="adam-name_link">Hampton, Mary Jane</a> (1840-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I755.html" class="adam-name_link">Hampton, Rebecca</a> (1843-)</td></tr>
-
 <tr><td align="right"><a name="handasyd"></a></td><td><a href="profile-I9926.html" class="adam-name_link">Handasyd, W.</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hangers"></a></td><td><a href="profile-I8145.html" class="adam-name_link">Hangers, Henry</a> (~1766->1787)</td></tr>
-
 <tr><td align="right"><a name="hanks"></a></td><td><a href="profile-I8159.html" class="adam-name_link">Hanks, Sarah Ann</a> (1871-1947)</td></tr>
-
 <tr><td align="right"><a name="hanmer"></a></td><td><a href="profile-I9909.html" class="adam-name_link">Hanmer, Susanna</a> (-1744)</td></tr>
-
 <tr><td align="right"><a name="hanna"></a></td><td><a href="profile-I8128.html" class="adam-name_link">Hanna, Mary</a> (1764->1821)</td></tr>
-
 <tr><td align="right"><a name="hannam"></a></td><td><a href="profile-I1323.html" class="adam-name_link">Hannam, Raymond</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hannant"></a></td><td><a href="profile-I137.html" class="adam-name_link">Hannant, Donald Norman</a> (1918-1941)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I77.html" class="adam-name_link">Hannant, Fredric</a> (~1844-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I75.html" class="adam-name_link">Hannant, George Horatio</a> (1869-1952)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I140.html" class="adam-name_link">Hannant, George</a> (<1813-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I145.html" class="adam-name_link">Hannant, Gladys</a> (1906-1914)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I136.html" class="adam-name_link">Hannant, Joyce</a> (1904-1987)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I135.html" class="adam-name_link">Hannant, Kathleen</a> (1900-1966)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I70.html" class="adam-name_link">Hannant, Patricia Winnifred</a> (1912-1977)</td></tr>
-
 <tr><td align="right"><a name="hanse"></a></td><td><a href="profile-I6745.html" class="adam-name_link">Hanse, Barbara</a> (1673->1707)</td></tr>
-
 <tr><td align="right"><a name="hansen"></a></td><td><a href="profile-I5535.html" class="adam-name_link">Hansen, Eva Lillian</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5640.html" class="adam-name_link">Hansen, Kristine</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9348.html" class="adam-name_link">Hansen, Margaret</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9406.html" class="adam-name_link">Hansen, Mr</a> (-)</td></tr>
-
 <tr><td align="right"><a name="harbert"></a></td><td><a href="profile-I1988.html" class="adam-name_link">Harbert, Thomas</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hardy"></a></td><td><a href="profile-I9281.html" class="adam-name_link">Hardy, George William</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hare"></a></td><td><a href="profile-I6326.html" class="adam-name_link">Hare, Annis</a> (-)</td></tr>
-
 <tr><td align="right"><a name="harges"></a></td><td><a href="profile-I9011.html" class="adam-name_link">Harges, Elizabeth</a> (~1612-<1671)</td></tr>
-
 <tr><td align="right"><a name="harnick"></a></td><td><a href="profile-I744.html" class="adam-name_link">Harnick, Anne Maria</a> (1826-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I749.html" class="adam-name_link">Harnick, Anne</a> (1838-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I746.html" class="adam-name_link">Harnick, Eliza</a> (1830-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I745.html" class="adam-name_link">Harnick, Harriet</a> (1828-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I750.html" class="adam-name_link">Harnick, John Thomas</a> (1841-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I743.html" class="adam-name_link">Harnick, John</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I748.html" class="adam-name_link">Harnick, Mary Jane</a> (1836-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I747.html" class="adam-name_link">Harnick, William</a> (1833-)</td></tr>
-
 <tr><td align="right"><a name="harper"></a></td><td><a href="profile-I1673.html" class="adam-name_link">Harper, Allison</a> (-)</td></tr>
-
 <tr><td align="right"><a name="harris"></a></td><td><a href="profile-I7784.html" class="adam-name_link">Harris, Elizabeth</a> (~1646->1675)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I4612.html" class="adam-name_link">Harris, Fred Clark</a> (~1864-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1973.html" class="adam-name_link">Harris, John</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1975.html" class="adam-name_link">Harris, John</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1976.html" class="adam-name_link">Harris, Mary</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1974.html" class="adam-name_link">Harris, Robert</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5534.html" class="adam-name_link">Harris, Sarah Althera</a> (-)</td></tr>
-
 <tr><td align="right"><a name="harrison"></a></td><td><a href="profile-I7779.html" class="adam-name_link">Harrison, Ann</a> (1577->1640)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5187.html" class="adam-name_link">Harrison, Hannah</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9479.html" class="adam-name_link">Harrison, John</a> (~1545->1575)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8142.html" class="adam-name_link">Harrison, Mary</a> (->1792)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9480.html" class="adam-name_link">Harrison, Mrs Susanna</a> (~1547->1577)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5189.html" class="adam-name_link">Harrison, Sytha Elizabeth</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hart"></a></td><td><a href="profile-I7536.html" class="adam-name_link">Hart, Mary</a> (~1675-)</td></tr>
-
 <tr><td align="right"><a name="hartman"></a></td><td><a href="profile-I9434.html" class="adam-name_link">Hartman, Johanne Dorothea</a> (-)</td></tr>
-
 <tr><td align="right"><a name="harvey"></a></td><td><a href="profile-I7631.html" class="adam-name_link">Harvey, Abram</a> (~1796->1815)</td></tr>
-
 <tr><td align="right"><a name="harwood"></a></td><td><a href="profile-I7270.html" class="adam-name_link">Harwood, Margaret</a> (1612->1660)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8648.html" class="adam-name_link">Harwood, Samuel</a> (->1789)</td></tr>
-
 <tr><td align="right"><a name="haskins"></a></td><td><a href="profile-I8071.html" class="adam-name_link">Haskins, Mary</a> (~1811-<1872)</td></tr>
-
 <tr><td align="right"><a name="havens"></a></td><td><a href="profile-I7183.html" class="adam-name_link">Havens, Mary</a> (~1683->1719)</td></tr>
-
 <tr><td align="right"><a name="hawes"></a></td><td><a href="profile-I9553.html" class="adam-name_link">Hawes, John, Capt.</a> (~1640->1661)</td></tr>
-
 <tr><td align="right"><a name="hawkes"></a></td><td><a href="profile-I8749.html" class="adam-name_link">Hawkes, Sarah</a> (->1796)</td></tr>
-
 <tr><td align="right"><a name="hawkins"></a></td><td><a href="profile-I7274.html" class="adam-name_link">Hawkins, Edward</a> (<1660-1726)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6172.html" class="adam-name_link">Hawkins, Frances</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9379.html" class="adam-name_link">Hawkins, Hazy</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7271.html" class="adam-name_link">Hawkins, John</a> (1642-1725)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7273.html" class="adam-name_link">Hawkins, Madeline</a> (~1651->1671)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7195.html" class="adam-name_link">Hawkins, Mary</a> (1649-1724)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7682.html" class="adam-name_link">Hawkins, Mrs Anne</a> (->1690)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7415.html" class="adam-name_link">Hawkins, Mrs William</a> (~1571->1609)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8384.html" class="adam-name_link">Hawkins, Sally</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7272.html" class="adam-name_link">Hawkins, William</a> (~1645->1678)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7414.html" class="adam-name_link">Hawkins, William</a> (1569-1589)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7269.html" class="adam-name_link">Hawkins, William</a> (1609-1699)</td></tr>
-
 <tr><td align="right"><a name="hawksworth"></a></td><td><a href="profile-I5203.html" class="adam-name_link">Hawksworth, Joanne</a> (1544-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5207.html" class="adam-name_link">Hawksworth, Thomas</a> (1489-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5204.html" class="adam-name_link">Hawksworth, Walter</a> (1517-)</td></tr>
-
 <tr><td align="right"><a name="hawley"></a></td><td><a href="profile-I9477.html" class="adam-name_link">Hawley, Mr</a> (->1771)</td></tr>
-
 <tr><td align="right"><a name="hay"></a></td><td><a href="profile-I7267.html" class="adam-name_link">Hay, Polly</a> (~1798->1827)</td></tr>
-
 <tr><td align="right"><a name="hayner"></a></td><td><a href="profile-I5848.html" class="adam-name_link">Hayner, Elizabeth</a> (-)</td></tr>
-
 <tr><td align="right"><a name="haynes"></a></td><td><a href="profile-I9622.html" class="adam-name_link">Haynes, Ann</a> (1744-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8378.html" class="adam-name_link">Haynes, Diana</a> (~1725->1765)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5614.html" class="adam-name_link">Haynes, Edith Mary</a> (1877-1949)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9619.html" class="adam-name_link">Haynes, George</a> (1735-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6521.html" class="adam-name_link">Haynes, Henry</a> (1833-1914)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9602.html" class="adam-name_link">Haynes, Henry</a> (~1733-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8379.html" class="adam-name_link">Haynes, Henry</a> (~1701-1784)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9599.html" class="adam-name_link">Haynes, John</a> (~1731->1756)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9620.html" class="adam-name_link">Haynes, Mary</a> (1737-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8929.html" class="adam-name_link">Haynes, Mrs Mary</a> (~1707->1723)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6515.html" class="adam-name_link">Haynes, Noah</a> (1855-1927)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9621.html" class="adam-name_link">Haynes, Parmenas</a> (1739-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6525.html" class="adam-name_link">Haynes, Richard</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9598.html" class="adam-name_link">Haynes, William</a> (~1729-)</td></tr>
-
 <tr><td align="right"><a name="hayward"></a></td><td><a href="profile-I8489.html" class="adam-name_link">Hayward, Huldah</a> (~1633-1690)</td></tr>
-
 <tr><td align="right"><a name="haywood"></a></td><td><a href="profile-I8624.html" class="adam-name_link">Haywood, Hannah</a> (~1687->1715)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8563.html" class="adam-name_link">Haywood, Sarah</a> (~1680-1711)</td></tr>
-
 <tr><td align="right"><a name="hazard"></a></td><td><a href="profile-I1694.html" class="adam-name_link">Hazard, Eva</a> (-1963)</td></tr>
-
 <tr><td align="right"><a name="hazen"></a></td><td><a href="profile-I1758.html" class="adam-name_link">Hazen, _____</a> (-)</td></tr>
-
 <tr><td align="right"><a name="head"></a></td><td><a href="profile-I7707.html" class="adam-name_link">Head, Jonathan</a> (~1678->1704)</td></tr>
-
 <tr><td align="right"><a name="heard"></a></td><td><a href="profile-I5793.html" class="adam-name_link">Heard, Alice</a> (1636-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5364.html" class="adam-name_link">Heard, Barnabas</a> (~1579-~1633)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5789.html" class="adam-name_link">Heard, Emanuel</a> (~1610-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5357.html" class="adam-name_link">Heard, Grace</a> (~1640-1699)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5765.html" class="adam-name_link">Heard, John</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5362.html" class="adam-name_link">Heard, Nicholas</a> (~1605-~1651)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5795.html" class="adam-name_link">Heard, Nicholas</a> (1643-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5792.html" class="adam-name_link">Heard, Nicholas</a> (1634-~1659)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5794.html" class="adam-name_link">Heard, Richard</a> (1638-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5797.html" class="adam-name_link">Heard, Thomas</a> (1647-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5798.html" class="adam-name_link">Heard, Thomas</a> (1652-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5379.html" class="adam-name_link">Heard, Thomasin</a> (~1568-~1640)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5796.html" class="adam-name_link">Heard, Wilmot</a> (1643-)</td></tr>
-
 <tr><td align="right"><a name="heath"></a></td><td><a href="profile-I5994.html" class="adam-name_link">Heath, Sarah</a> (-)</td></tr>
-
 <tr><td align="right"><a name="heddon"></a></td><td><a href="profile-I5371.html" class="adam-name_link">Heddon, Charity</a> (~1544-1601)</td></tr>
-
 <tr><td align="right"><a name="hedge"></a></td><td><a href="profile-I7583.html" class="adam-name_link">Hedge, Mercy</a> (-)</td></tr>
-
 <tr><td align="right"><a name="helme"></a></td><td><a href="profile-I9576.html" class="adam-name_link">Helme, Christopher</a> (~1701-~1735)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7713.html" class="adam-name_link">Helme, Margaret</a> (~1672->1690)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9575.html" class="adam-name_link">Helme, Mrs Mary, (widow)</a> (~1696-1740)</td></tr>
-
 <tr><td align="right"><a name="hemingsen"></a></td><td><a href="profile-I5290.html" class="adam-name_link">Hemingsen, Anders (Henningsen)</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hemsworth"></a></td><td><a href="profile-I608.html" class="adam-name_link">Hemsworth, Reverend J.</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I607.html" class="adam-name_link">Hemsworth, Jane</a> (-)</td></tr>
-
 <tr><td align="right"><a name="henderson"></a></td><td><a href="profile-I8374.html" class="adam-name_link">Henderson, Jalia</a> (1832-1868)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I265.html" class="adam-name_link">Henderson, Michael Scott</a> (1928-1988)</td></tr>
-
 <tr><td align="right"><a name="hendricks"></a></td><td><a href="profile-I8302.html" class="adam-name_link">Hendricks, Anna</a> (1665->1681)</td></tr>
-
 <tr><td align="right"><a name="hennessy"></a></td><td><a href="profile-I867.html" class="adam-name_link">Hennessy, James</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I862.html" class="adam-name_link">Hennessy, Thomas</a> (-)</td></tr>
-
 <tr><td align="right"><a name="henry"></a></td><td><a href="profile-I1266.html" class="adam-name_link">Henry, Grace</a> (-)</td></tr>
-
 <tr><td align="right"><a name="herbertson"></a></td><td><a href="profile-I1282.html" class="adam-name_link">Herbertson, Gwen</a> (-)</td></tr>
-
 <tr><td align="right"><a name="herrick"></a></td><td><a href="profile-I7507.html" class="adam-name_link">Herrick, Edward</a> (~1698->1725)</td></tr>
-
 <tr><td align="right"><a name="herridge"></a></td><td><a href="profile-I4888.html" class="adam-name_link">Herridge, Ann</a> (~1800-1898)</td></tr>
-
 <tr><td align="right"><a name="herrington"></a></td><td><a href="profile-I8761.html" class="adam-name_link">Herrington, William</a> (~1750->1771)</td></tr>
-
 <tr><td align="right"><a name="heydon"></a></td><td><a href="profile-I8709.html" class="adam-name_link">Heydon, Hannah</a> (~1660->1729)</td></tr>
-
 <tr><td align="right"><a name="heyward"></a></td><td><a href="profile-I8594.html" class="adam-name_link">Heyward, Hannah</a> (~1707->1732)</td></tr>
-
 <tr><td align="right"><a name="hickox"></a></td><td><a href="profile-I1551.html" class="adam-name_link">Hickox, Eliza Jane</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hicks"></a></td><td><a href="profile-I9521.html" class="adam-name_link">Hicks, Ephraim</a> (~1628-<1651)</td></tr>
-
 <tr><td align="right"><a name="higgins"></a></td><td><a href="profile-I5801.html" class="adam-name_link">Higgins, Amy</a> (1805-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6545.html" class="adam-name_link">Higgins, Ann</a> (~1719-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5802.html" class="adam-name_link">Higgins, Diana</a> (1807-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5806.html" class="adam-name_link">Higgins, Jacob</a> (~1818-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6546.html" class="adam-name_link">Higgins, James</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6540.html" class="adam-name_link">Higgins, John</a> (~1742-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5805.html" class="adam-name_link">Higgins, Leah</a> (~1815-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5303.html" class="adam-name_link">Higgins, Mary</a> (1803-1857)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5304.html" class="adam-name_link">Higgins, Moses</a> (~1778-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5804.html" class="adam-name_link">Higgins, Moses</a> (~1812-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5803.html" class="adam-name_link">Higgins, Rachel</a> (1809-)</td></tr>
-
 <tr><td align="right"><a name="hill"></a></td><td><a href="profile-I4988.html" class="adam-name_link">Hill, Ann</a> (~1628-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8590.html" class="adam-name_link">Hill, David</a> (~1690->1716)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7969.html" class="adam-name_link">Hill, Eleanor</a> (~1760->1784)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9385.html" class="adam-name_link">Hill, Manerva Ellen</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6577.html" class="adam-name_link">Hill, Mary Jane</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1119.html" class="adam-name_link">Hill, Mary</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I4989.html" class="adam-name_link">Hill, Phillip</a> (~1602-)</td></tr>
-
 <tr><td align="right"><a name="hillard"></a></td><td><a href="profile-I5681.html" class="adam-name_link">Hillard, Ambrose</a> (1770-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5817.html" class="adam-name_link">Hillard, Andrew</a> (1832-<1836)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5302.html" class="adam-name_link">Hillard, Andrew</a> (1799-1873)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5819.html" class="adam-name_link">Hillard, Andrew</a> (~1836-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5822.html" class="adam-name_link">Hillard, Anna</a> (~1843-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5814.html" class="adam-name_link">Hillard, Charles</a> (~1824-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5818.html" class="adam-name_link">Hillard, Elizabeth</a> (1834-1871)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5179.html" class="adam-name_link">Hillard, Emma Jane</a> (1826-1897)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5809.html" class="adam-name_link">Hillard, Jacob</a> (~1803-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5811.html" class="adam-name_link">Hillard, James</a> (~1812-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5812.html" class="adam-name_link">Hillard, John</a> (~1730-1789)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5816.html" class="adam-name_link">Hillard, John</a> (~1830-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5808.html" class="adam-name_link">Hillard, John</a> (~1796-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5821.html" class="adam-name_link">Hillard, Joseph</a> (~1840-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6539.html" class="adam-name_link">Hillard, Leonard</a> (~1691-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5807.html" class="adam-name_link">Hillard, Margaret</a> (~1794-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5810.html" class="adam-name_link">Hillard, Martha</a> (~1808-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5815.html" class="adam-name_link">Hillard, Mary Ann</a> (1828-1875)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5820.html" class="adam-name_link">Hillard, Rachel</a> (~1838-)</td></tr>
-
 <tr><td align="right"><a name="hillyer"></a></td><td><a href="profile-I6905.html" class="adam-name_link">Hillyer, Mrs Philetus</a> (~1830->1850)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6842.html" class="adam-name_link">Hillyer, Philetus Brazilla, (P.B.)</a> (1830-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6909.html" class="adam-name_link">Hillyer, Riley</a> (~1850-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6799.html" class="adam-name_link">Hillyer, Zirena</a> (~1856-)</td></tr>
-
 <tr><td align="right"><a name="hinchcliffe"></a></td><td><a href="profile-I4478.html" class="adam-name_link">Hinchcliffe, Raymond</a> (1928-1932)</td></tr>
-
 <tr><td align="right"><a name="hinckley"></a></td><td><a href="profile-I7390.html" class="adam-name_link">Hinckley, Leannah Amelia</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hingsdoll"></a></td><td><a href="profile-I712.html" class="adam-name_link">Hingsdoll, William</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hinkler"></a></td><td><a href="profile-I6240.html" class="adam-name_link">Hinkler, Mercy</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hiscox"></a></td><td><a href="profile-I7223.html" class="adam-name_link">Hiscox, Bethiah</a> (1711-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7191.html" class="adam-name_link">Hiscox, Edith</a> (1709->1752)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7222.html" class="adam-name_link">Hiscox, Ephraim</a> (1707-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7227.html" class="adam-name_link">Hiscox, Hannah</a> (1719-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7226.html" class="adam-name_link">Hiscox, Joseph</a> (1717-~1739)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7224.html" class="adam-name_link">Hiscox, Mary</a> (1713-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7352.html" class="adam-name_link">Hiscox, Mrs Rebecca</a> (~1656->1685)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7225.html" class="adam-name_link">Hiscox, Thomas</a> (1715-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7220.html" class="adam-name_link">Hiscox, Thomas, Rev.</a> (1685-1772)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7351.html" class="adam-name_link">Hiscox, William</a> (~1656->1685)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7221.html" class="adam-name_link">Hiscox, William</a> (1705->1742)</td></tr>
-
 <tr><td align="right"><a name="hitchcock"></a></td><td><a href="profile-I1005.html" class="adam-name_link">Hitchcock, Cheryl</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6449.html" class="adam-name_link">Hitchcock, Hannah</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hjalte"></a></td><td><a href="profile-I1236.html" class="adam-name_link">Hjalte, Alfred B.</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I153.html" class="adam-name_link">Hjalte, Ernest Tyler</a> (1966-1990)</td></tr>
-
 <tr><td align="right"><a name="hoadley"></a></td><td><a href="profile-I1743.html" class="adam-name_link">Hoadley, Chester Ansel</a> (1907-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1744.html" class="adam-name_link">Hoadley, Chester Ansel</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5020.html" class="adam-name_link">Hoadley, Hannah</a> (1670-1725)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5023.html" class="adam-name_link">Hoadley, William</a> (~1630-1709)</td></tr>
-
 <tr><td align="right"><a name="hobart"></a></td><td><a href="profile-I618.html" class="adam-name_link">Hobart, Benjamin</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hodges"></a></td><td><a href="profile-I7785.html" class="adam-name_link">Hodges, Henry</a> (~1650->1674)</td></tr>
-
 <tr><td align="right"><a name="hogan"></a></td><td><a href="profile-I659.html" class="adam-name_link">Hogan, _____</a> (-)</td></tr>
-
 <tr><td align="right"><a name="holbrook"></a></td><td><a href="profile-I6069.html" class="adam-name_link">Holbrook, Jane</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6112.html" class="adam-name_link">Holbrook, Joseph</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6372.html" class="adam-name_link">Holbrook, Moses</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8703.html" class="adam-name_link">Holbrook, Sarah</a> (~1766-1845)</td></tr>
-
 <tr><td align="right"><a name="holder"></a></td><td><a href="profile-I9809.html" class="adam-name_link">Holder, _____</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I2236.html" class="adam-name_link">Holder, John</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I2235.html" class="adam-name_link">Holder, Katherine</a> (-1899)</td></tr>
-
 <tr><td align="right"><a name="holderbee"></a></td><td><a href="profile-I6030.html" class="adam-name_link">Holderbee, Comfort</a> (~1667-1699)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6031.html" class="adam-name_link">Holderbee, Joseph</a> (-)</td></tr>
-
 <tr><td align="right"><a name="holgate"></a></td><td><a href="profile-I9627.html" class="adam-name_link">Holgate, James</a> (-)</td></tr>
-
 <tr><td align="right"><a name="holgrave"></a></td><td><a href="profile-I9581.html" class="adam-name_link">Holgrave, Martha</a> (~1608->1642)</td></tr>
-
 <tr><td align="right"><a name="holland"></a></td><td><a href="profile-I4584.html" class="adam-name_link">Holland, Josephine Ethel</a> (~1891-~1959)</td></tr>
-
 <tr><td align="right"><a name="holliday"></a></td><td><a href="profile-I9219.html" class="adam-name_link">Holliday, William Helmus</a> (~1856->1879)</td></tr>
-
 <tr><td align="right"><a name="holloway"></a></td><td><a href="profile-I8763.html" class="adam-name_link">Holloway, George</a> (~1740->1762)</td></tr>
-
 <tr><td align="right"><a name="holm"></a></td><td><a href="profile-I5641.html" class="adam-name_link">Holm, Lars Anderson</a> (-)</td></tr>
-
 <tr><td align="right"><a name="holman"></a></td><td><a href="profile-I5901.html" class="adam-name_link">Holman, John or Frances</a> (-)</td></tr>
-
 <tr><td align="right"><a name="holmes"></a></td><td><a href="profile-I6166.html" class="adam-name_link">Holmes, Issac</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I758.html" class="adam-name_link">Holmes, Jane</a> (1823-~1902)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9528.html" class="adam-name_link">Holmes, Joshua</a> (-<1693)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7562.html" class="adam-name_link">Holmes, Joshua</a> (~1654-<1675)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5042.html" class="adam-name_link">Holmes, Mary</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1334.html" class="adam-name_link">Holmes, Sylvia</a> (-)</td></tr>
-
 <tr><td align="right"><a name="holt"></a></td><td><a href="profile-I6384.html" class="adam-name_link">Holt, Jennie</a> (-)</td></tr>
-
 <tr><td align="right"><a name="holyoak"></a></td><td><a href="profile-I6770.html" class="adam-name_link">Holyoak, James Nehemiah</a> (1879->1902)</td></tr>
-
 <tr><td align="right"><a name="honeycutt"></a></td><td><a href="profile-I8838.html" class="adam-name_link">Honeycutt, Miss</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hood"></a></td><td><a href="profile-I5606.html" class="adam-name_link">Hood, John</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hooks"></a></td><td><a href="profile-I9858.html" class="adam-name_link">Hooks, Catharine</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9943.html" class="adam-name_link">Hooks, John</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hooper"></a></td><td><a href="profile-I9454.html" class="adam-name_link">Hooper, Andrew</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hopkins"></a></td><td><a href="profile-I9616.html" class="adam-name_link">Hopkins, Pamela</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9618.html" class="adam-name_link">Hopkins, Susan</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9617.html" class="adam-name_link">Hopkins, William</a> (-)</td></tr>
-
 <tr><td align="right"><a name="horne"></a></td><td><a href="profile-I6511.html" class="adam-name_link">Horne, Gregory G.</a> (-)</td></tr>
-
 <tr><td align="right"><a name="horneck"></a></td><td><a href="profile-I9938.html" class="adam-name_link">Horneck, C.</a> (-)</td></tr>
-
 <tr><td align="right"><a name="horner"></a></td><td><a href="profile-I79.html" class="adam-name_link">Horner, John</a> (~1852-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I76.html" class="adam-name_link">Horner, Louise</a> (1877-1958)</td></tr>
-
 <tr><td align="right"><a name="horsley"></a></td><td><a href="profile-I6755.html" class="adam-name_link">Horsley, Ernest Samuel</a> (1861->1884)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6760.html" class="adam-name_link">Horsley, Laura Ellen</a> (1866-1943)</td></tr>
-
 <tr><td align="right"><a name="house"></a></td><td><a href="profile-I8343.html" class="adam-name_link">House, Johannes</a> (1761-1846)</td></tr>
-
 <tr><td align="right"><a name="houston"></a></td><td><a href="profile-I1771.html" class="adam-name_link">Houston, Anne</a> (~1813-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1777.html" class="adam-name_link">Houston, Catherine Mary</a> (1832-1896)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1783.html" class="adam-name_link">Houston, Christopher</a> (1854-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1767.html" class="adam-name_link">Houston, Elizabeth Jane</a> (~1806-1837)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1782.html" class="adam-name_link">Houston, Elizabeth</a> (1851-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I4587.html" class="adam-name_link">Houston, Florence</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I4588.html" class="adam-name_link">Houston, Fred</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1779.html" class="adam-name_link">Houston, George</a> (1837-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1770.html" class="adam-name_link">Houston, Grace or Grizell</a> (~1811-1848)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I4586.html" class="adam-name_link">Houston, Howard</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I89.html" class="adam-name_link">Houston, James</a> (<1784->1818)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1780.html" class="adam-name_link">Houston, James</a> (1845-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I87.html" class="adam-name_link">Houston, James</a> (1804-1866)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1773.html" class="adam-name_link">Houston, Jane</a> (~1818-1903)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1778.html" class="adam-name_link">Houston, Janet</a> (1836-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1768.html" class="adam-name_link">Houston, Janet</a> (~1807-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1781.html" class="adam-name_link">Houston, John S.</a> (1847-1920)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1772.html" class="adam-name_link">Houston, John</a> (~1815-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1769.html" class="adam-name_link">Houston, Margaret</a> (~1810-1846)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I4589.html" class="adam-name_link">Houston, Meta</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1559.html" class="adam-name_link">Houston, Robert</a> (~1842-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I4585.html" class="adam-name_link">Houston, William</a> (-)</td></tr>
-
 <tr><td align="right"><a name="howard"></a></td><td><a href="profile-I717.html" class="adam-name_link">Howard, Lord _____</a> (1763-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I109.html" class="adam-name_link">Howard, Lady Ann</a> (1759-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8704.html" class="adam-name_link">Howard, Joel</a> (~1764->1785)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5061.html" class="adam-name_link">Howard, Mary</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5403.html" class="adam-name_link">Howard, Sarah</a> (~1780-)</td></tr>
-
 <tr><td align="right"><a name="howland"></a></td><td><a href="profile-I5045.html" class="adam-name_link">Howland, Daniel</a> (1661-<1714)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8954.html" class="adam-name_link">Howland, Desire</a> (1621-1683)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8962.html" class="adam-name_link">Howland, Elizabeth</a> (~1631->1651)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9526.html" class="adam-name_link">Howland, Elizabeth</a> (->1673)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8964.html" class="adam-name_link">Howland, Hannah</a> (~1641->1673)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8961.html" class="adam-name_link">Howland, Hope</a> (1629-1683)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9515.html" class="adam-name_link">Howland, Isaac</a> (1649-1723)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8967.html" class="adam-name_link">Howland, Jabez</a> (1628-1712)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8966.html" class="adam-name_link">Howland, John</a> (1626-1651)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8955.html" class="adam-name_link">Howland, John, Capt.</a> (1593-1675)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9516.html" class="adam-name_link">Howland, John, Ensign</a> (~1655-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9514.html" class="adam-name_link">Howland, Joseph</a> (1644-1703)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8963.html" class="adam-name_link">Howland, Lydia</a> (~1635->1672)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5044.html" class="adam-name_link">Howland, Mary</a> (1710-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8965.html" class="adam-name_link">Howland, Ruth</a> (~1638-1672)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7242.html" class="adam-name_link">Howland, Stephen</a> (1795->1817)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5048.html" class="adam-name_link">Howland, Zoeth</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hubbard"></a></td><td><a href="profile-I9136.html" class="adam-name_link">Hubbard, Baby</a> (~1655-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9135.html" class="adam-name_link">Hubbard, Baby</a> (~1652-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9134.html" class="adam-name_link">Hubbard, Baby</a> (~1650-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9133.html" class="adam-name_link">Hubbard, Baby</a> (~1648-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9143.html" class="adam-name_link">Hubbard, Benjamin</a> (1608->1632)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9147.html" class="adam-name_link">Hubbard, Bertha</a> (~1616->1634)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7006.html" class="adam-name_link">Hubbard, Bethiah</a> (1646-1707)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9140.html" class="adam-name_link">Hubbard, James</a> (~1578->1618)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9144.html" class="adam-name_link">Hubbard, James</a> (1609-1639)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9146.html" class="adam-name_link">Hubbard, John</a> (~1614-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9149.html" class="adam-name_link">Hubbard, Mrs Esther</a> (~1607->1625)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9156.html" class="adam-name_link">Hubbard, Mrs Thomas</a> (~1554->1578)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9129.html" class="adam-name_link">Hubbard, Naomi</a> (1638-1643)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9128.html" class="adam-name_link">Hubbard, Naomi</a> (1637-1637)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9148.html" class="adam-name_link">Hubbard, Rachel</a> (~1618-1642)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9131.html" class="adam-name_link">Hubbard, Rachel</a> (1642->1658)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9130.html" class="adam-name_link">Hubbard, Ruth</a> (1640-1691)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9124.html" class="adam-name_link">Hubbard, Samuel</a> (1610->1655)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9132.html" class="adam-name_link">Hubbard, Samuel</a> (1641-1649)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9139.html" class="adam-name_link">Hubbard, Samuel</a> (1644-1644)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9145.html" class="adam-name_link">Hubbard, Sarah</a> (~1612->1631)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9121.html" class="adam-name_link">Hubbard, Sarah</a> (~1746->1811)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9155.html" class="adam-name_link">Hubbard, Thomas</a> (~1549->1578)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9142.html" class="adam-name_link">Hubbard, Thomas</a> (1604->1625)</td></tr>
-
 <tr><td align="right"><a name="huckins"></a></td><td><a href="profile-I9509.html" class="adam-name_link">Huckins, Hannah</a> (~1652->1670)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8937.html" class="adam-name_link">Huckins, John</a> (~1650->1670)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9557.html" class="adam-name_link">Huckins, Thomas</a> (-)</td></tr>
-
 <tr><td align="right"><a name="huculak"></a></td><td><a href="profile-I4332.html" class="adam-name_link">Huculak, Marcel</a> (-)</td></tr>
-
 <tr><td align="right"><a name="huestis"></a></td><td><a href="profile-I1699.html" class="adam-name_link">Huestis, Lewis Wright</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1698.html" class="adam-name_link">Huestis, Mildred Elizabeth</a> (1896-1991)</td></tr>
-
 <tr><td align="right"><a name="hughes"></a></td><td><a href="profile-I5537.html" class="adam-name_link">Hughes, Ethel</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hulet"></a></td><td><a href="profile-I7336.html" class="adam-name_link">Hulet, Jane</a> (~1643->1688)</td></tr>
-
 <tr><td align="right"><a name="hume"></a></td><td><a href="profile-I4570.html" class="adam-name_link">Hume, Margaret</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hunt"></a></td><td><a href="profile-I1330.html" class="adam-name_link">Hunt, Jean</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9584.html" class="adam-name_link">Hunt, Judith</a> (->1677)</td></tr>
-
 <tr><td align="right"><a name="hunter-pollington"></a></td><td><a href="profile-I5236.html" class="adam-name_link">Hunter \ Pollington, Isabel</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hunter"></a></td><td><a href="profile-I4932.html" class="adam-name_link">Hunter, Adam</a> (1727-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I4921.html" class="adam-name_link">Hunter, Adam</a> (1740-1829)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I4919.html" class="adam-name_link">Hunter, Andrew</a> (1780-1852)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I4804.html" class="adam-name_link">Hunter, Ann</a> (1846-1924)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1575.html" class="adam-name_link">Hunter, Daniel</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I4934.html" class="adam-name_link">Hunter, James</a> (1682-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I4936.html" class="adam-name_link">Hunter, James</a> (~1646-1671)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I4917.html" class="adam-name_link">Hunter, John</a> (1819-1909)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1574.html" class="adam-name_link">Hunter, Maudena</a> (~1877-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1393.html" class="adam-name_link">Hunter, William Lewis</a> (-)</td></tr>
-
 <tr><td align="right"><a name="huntington"></a></td><td><a href="profile-I6295.html" class="adam-name_link">Huntington, _____</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5401.html" class="adam-name_link">Huntington, Elizabeth</a> (1813-1873)</td></tr>
-
 <tr><td align="right"><a name="hurley"></a></td><td><a href="profile-I5791.html" class="adam-name_link">Hurley, Alice</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hurst"></a></td><td><a href="profile-I8792.html" class="adam-name_link">Hurst, Belle</a> (~1874->1910)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8826.html" class="adam-name_link">Hurst, Huston</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hussey"></a></td><td><a href="profile-I9561.html" class="adam-name_link">Hussey, Priscilla</a> (~1670->1686)</td></tr>
-
 <tr><td align="right"><a name="hutcheson"></a></td><td><a href="profile-I6872.html" class="adam-name_link">Hutcheson, Margaret</a> (~1766->1796)</td></tr>
-
 <tr><td align="right"><a name="hutchings"></a></td><td><a href="profile-I6903.html" class="adam-name_link">Hutchings, Amy</a> (1746->1764)</td></tr>
-
 <tr><td align="right"><a name="hutchinson"></a></td><td><a href="profile-I7348.html" class="adam-name_link">Hutchinson, Mary Susan</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I4414.html" class="adam-name_link">Hutchinson, Thomas</a> (<1840-)</td></tr>
-
 <tr><td align="right"><a name="hyatt"></a></td><td><a href="profile-I4190.html" class="adam-name_link">Hyatt, Irene</a> (-)</td></tr>
-
 <tr><td align="right"><a name="hyde"></a></td><td><a href="profile-I8839.html" class="adam-name_link">Hyde, Relief</a> (~1685->1726)</td></tr>
-
 </table>
-
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+</div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -954,7 +547,7 @@ X&nbsp;
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="i - Minchin Genealogy | Minchin.ca" />
  <title>i - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -70,7 +77,8 @@ Version:   1.0.4        December 29, 2013
 <br><a name="top"></a>
 
 <div class="adam-index-wrapper">
-<div class="adam-index_legend"><a href="names-a.html">A</a>&nbsp;
+<div class="adam-index_legend">
+<a href="names-a.html">A</a>&nbsp;
 <a href="names-b.html">B</a>&nbsp;
 <a href="names-c.html">C</a>&nbsp;
 <a href="names-d.html">D</a>&nbsp;
@@ -98,63 +106,38 @@ X&nbsp;
 <a href="names-z.html">Z</a>&nbsp;
 <a href="names-unknown.html">Unknown</a>&nbsp;
 <a href="names-none.html">None</a>&nbsp;
-</div><br>
+</div>
+<br>
 
 <table>
-
 <tr><td align="right"><a name="imel"></a></td><td><a href="profile-I8063.html" class="adam-name_link">Imel, Aliza (Eliza Emel)</a> (~1813->1833)</td></tr>
-
 <tr><td align="right"><a name="ingle"></a></td><td><a href="profile-I7102.html" class="adam-name_link">Ingle, Elizabeth</a> (1761-1843)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7119.html" class="adam-name_link">Ingle, James</a> (~1729->1759)</td></tr>
-
 <tr><td align="right"><a name="inglet"></a></td><td><a href="profile-I5377.html" class="adam-name_link">Inglet, Joan</a> (~1545-1583)</td></tr>
-
 <tr><td align="right"><a name="ingraham"></a></td><td><a href="profile-I8912.html" class="adam-name_link">Ingraham, Abigail</a> (~1638-1715)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8922.html" class="adam-name_link">Ingraham, Marie</a> (~1668->1690)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8927.html" class="adam-name_link">Ingraham, William</a> (~1665->1689)</td></tr>
-
 <tr><td align="right"><a name="inyard"></a></td><td><a href="profile-I8391.html" class="adam-name_link">Inyard, Caty</a> (-<1825)</td></tr>
-
 <tr><td align="right"><a name="ipsen"></a></td><td><a href="profile-I5289.html" class="adam-name_link">Ipsen, Mrs. Jens _____</a> (~1727-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5288.html" class="adam-name_link">Ipsen, Jens</a> (~1723-)</td></tr>
-
 <tr><td align="right"><a name="ipsen-ispen"></a></td><td><a href="profile-I5301.html" class="adam-name_link">Ipsen\Ispen, Maren</a> (~1630-)</td></tr>
-
 <tr><td align="right"><a name="ireland"></a></td><td><a href="profile-I1459.html" class="adam-name_link">Ireland, Alice May</a> (-)</td></tr>
-
 <tr><td align="right"><a name="irwin"></a></td><td><a href="profile-I942.html" class="adam-name_link">Irwin, Florence Sarah</a> (1880-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I943.html" class="adam-name_link">Irwin, James</a> (-)</td></tr>
-
 <tr><td align="right"><a name="isaac"></a></td><td><a href="profile-I2188.html" class="adam-name_link">Isaac, John</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I2189.html" class="adam-name_link">Isaac, John</a> (-1745)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9734.html" class="adam-name_link">Isaac, Kitty</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I2187.html" class="adam-name_link">Isaac, Simon</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I2123.html" class="adam-name_link">Isaac, Susan Priscilla</a> (1738-1797)</td></tr>
-
 <tr><td align="right"><a name="isacke"></a></td><td><a href="profile-I5096.html" class="adam-name_link">Isacke, Mrs. Mary</a> (~1563-1636)</td></tr>
-
 <tr><td align="right"><a name="ithell"></a></td><td><a href="profile-I5147.html" class="adam-name_link">Ithell, Mr. _____</a> (~1455-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5146.html" class="adam-name_link">Ithell, Mrs. P. _____</a> (~1490-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5144.html" class="adam-name_link">Ithell, Mary</a> (~1518-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5145.html" class="adam-name_link">Ithell, Pierce or Pierre</a> (~1486-)</td></tr>
-
 <tr><td align="right"><a name="ives"></a></td><td><a href="profile-I9151.html" class="adam-name_link">Ives, Sarah</a> (~1611->1629)</td></tr>
-
 </table>
-
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+</div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -174,7 +157,7 @@ X&nbsp;
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

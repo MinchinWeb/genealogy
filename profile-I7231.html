@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="James Noyes Profile - Minchin Genealogy | Minchin.ca" />
  <title>James Noyes Profile - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -67,22 +74,24 @@ Version:   1.0.4        December 29, 2013
 
 <h1 id="adam-page-title">James Noyes Profile</h1>
 
-<div id="tabs">
-<ul>
+<div id="adam-tab-list">
+<ul id="tab-list" class="nav nav-tabs">
 
-<li><a class="click" href="#profile">Profile</a></li>
+<li class="active"><a class="click" href="#profile" data-toggle="tab">Profile</a></li>
 
-<li><a class="click" href="#sources">Sources (1)</a></li>
+<li><a class="click" href="#sources" data-toggle="tab">Sources (1)</a></li>
 
-<li><a class="click" href="#chart">Chart</a></li>
+<li><a class="click" href="#chart" data-toggle="tab">Chart</a></li>
 
-<li><a class="click" href="#alist">Ancestors List (30)</a></li>
+<li><a class="click" href="#alist" data-toggle="tab">Ancestors List (30)</a></li>
 
-<li><a class="click" href="#map">Ancestors Distribution Map</a></li>
+<li><a class="click" href="#map" data-toggle="tab">Ancestors Distribution Map</a></li>
 
 </ul>
 
-<div id="profile" class="adam-tab">
+<div class="tab-content">
+
+<div id="profile" class="tab-pane active adam-tab">
 
 <ul id="adam-person_profile" class="adam-tab_style">
 <li>
@@ -153,7 +162,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="sources" class="adam-tab">
+<div id="sources" class="tab-pane adam-tab">
 
 <ul id="adam-person_sources" class="adam-tab_style">
 <li>
@@ -173,7 +182,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="chart" class="adam-tab">
+<div id="chart" class="tab-pane adam-tab">
 <ul>
 <li id="adam-person_chart">
 <div style="height: 665px;">&nbsp;</div>
@@ -327,7 +336,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="alist" class="adam-tab">
+<div id="alist" class="tab-pane adam-tab">
 
 <div class="adam-al_page">
 <ul class="adam-al_legend">
@@ -341,145 +350,145 @@ GEDCOM file imported on 4 February 2013
 
 <li class="adam-al_generation">Generation 1</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1] &nbsp; <a href="profile-I7231.html" class="adam-name_link">James Noyes</a> (1677-1718)</div>
+  <div class="adam-al_name">[1] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7231.html" class="adam-name_link">James Noyes</a> (1677-1718)</div>
   <div class="adam-al_path"><span title="Connecticut">CT</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 2</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[2] &nbsp; <a href="profile-I7228.html" class="adam-name_link">James Noyes</a> (1640-1719)</div>
+  <div class="adam-al_name">[2] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7228.html" class="adam-name_link">James Noyes</a> (1640-1719)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span>-<span title="Connecticut">CT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3] &nbsp; <a href="profile-I7229.html" class="adam-name_link">Dorothy Stanton</a> (1651-1742)</div>
+  <div class="adam-al_name">[3] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7229.html" class="adam-name_link">Dorothy Stanton</a> (1651-1742)</div>
   <div class="adam-al_path"><span title="Connecticut">CT</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 3</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[4] &nbsp; <i><a href="profile-I7353.html" class="adam-name_link">James Noyes</a> (1608-1656)</i></div>
+  <div class="adam-al_name">[4] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I7353.html" class="adam-name_link">James Noyes</a> (1608-1656)</i></div>
   <div class="adam-al_path"><span title="Wiltshire">WIL</span>-<span title="Hampshire">HAM</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[5] &nbsp; <i><a href="profile-I7354.html" class="adam-name_link">Sarah Brown</a> (1610-1691)</i></div>
+  <div class="adam-al_name">[5] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I7354.html" class="adam-name_link">Sarah Brown</a> (1610-1691)</i></div>
   <div class="adam-al_path"><span title="Hampshire">HAM</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[6] &nbsp; <i><a href="profile-I7364.html" class="adam-name_link">Thomas Stanton</a> (1622-1677)</i></div>
+  <div class="adam-al_name">[6] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I7364.html" class="adam-name_link">Thomas Stanton</a> (1622-1677)</i></div>
   <div class="adam-al_path"><span title="Warwickshire">WAR</span>-<span title="Connecticut">CT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[7] &nbsp; <i><a href="profile-I7365.html" class="adam-name_link">Ann Lord</a> (1614-1688)</i></div>
+  <div class="adam-al_name">[7] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I7365.html" class="adam-name_link">Ann Lord</a> (1614-1688)</i></div>
   <div class="adam-al_path"><span title="Northamptonshire">NTH</span>-<span title="Connecticut">CT</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 4</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[8] &nbsp; <a href="profile-I8868.html" class="adam-name_link">William Noyes, Rev.</a> (1568-1622)</div>
+  <div class="adam-al_name">[8] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8868.html" class="adam-name_link">William Noyes, Rev.</a> (1568-1622)</div>
   <div class="adam-al_path"><span title="Wiltshire">WIL</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[9] &nbsp; <b><a href="profile-I8869.html" class="adam-name_link">Anne Parker</a> (1575-1657)</b></div>
+  <div class="adam-al_name">[9] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8869.html" class="adam-name_link">Anne Parker</a> (1575-1657)</b></div>
   <div class="adam-al_path"><span title="Wiltshire">WIL</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[10] &nbsp; <b><a href="profile-I8866.html" class="adam-name_link">Joseph Browne</a> (~1590->1612)</b></div>
+  <div class="adam-al_name">[10] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8866.html" class="adam-name_link">Joseph Browne</a> (~1590->1612)</b></div>
   <div class="adam-al_path"><span title="Hampshire">HAM</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[11] &nbsp; <b><a href="profile-I8867.html" class="adam-name_link">Mrs Joseph Browne</a> (~1589->1612)</b></div>
+  <div class="adam-al_name">[11] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8867.html" class="adam-name_link">Mrs Joseph Browne</a> (~1589->1612)</b></div>
   <div class="adam-al_path"><span title="Hampshire">HAM</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[12] &nbsp; <a href="profile-I8840.html" class="adam-name_link">Thomas Stanton</a> (1585->1643)</div>
+  <div class="adam-al_name">[12] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8840.html" class="adam-name_link">Thomas Stanton</a> (1585->1643)</div>
   <div class="adam-al_path"><span title="Warwickshire">WAR</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[13] &nbsp; <a href="profile-I7766.html" class="adam-name_link">Katherine Washington</a> (~1597->1618)</div>
+  <div class="adam-al_name">[13] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7766.html" class="adam-name_link">Katherine Washington</a> (~1597->1618)</div>
   <div class="adam-al_path"><span title="Warwickshire">WAR</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[14] &nbsp; <b><a href="profile-I8841.html" class="adam-name_link">Thomas Lord</a> (~1585->1630)</b></div>
+  <div class="adam-al_name">[14] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8841.html" class="adam-name_link">Thomas Lord</a> (~1585->1630)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[15] &nbsp; <b><a href="profile-I8842.html" class="adam-name_link">Dorothy Bird</a> (~1588->1630)</b></div>
+  <div class="adam-al_name">[15] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8842.html" class="adam-name_link">Dorothy Bird</a> (~1588->1630)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 5</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[16] &nbsp; <b><a href="profile-I8879.html" class="adam-name_link">Robert Noyes</a> (~1540-1659)</b></div>
+  <div class="adam-al_name">[16] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8879.html" class="adam-name_link">Robert Noyes</a> (~1540-1659)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Wiltshire">WIL</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[17] &nbsp; <b><a href="profile-I8880.html" class="adam-name_link">Mrs Robert Noyes</a> (~1545->1570)</b></div>
+  <div class="adam-al_name">[17] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8880.html" class="adam-name_link">Mrs Robert Noyes</a> (~1545->1570)</b></div>
   <div class="adam-al_path"><span title="Wiltshire">WIL</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[24] &nbsp; <a href="profile-I8845.html" class="adam-name_link">Thomas Stanton</a> (~1565->1643)</div>
+  <div class="adam-al_name">[24] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8845.html" class="adam-name_link">Thomas Stanton</a> (~1565->1643)</div>
   <div class="adam-al_path"><span title="Warwickshire">WAR</span>-<span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[25] &nbsp; <a href="profile-I8846.html" class="adam-name_link">Maria Pudsey</a> (~1562->1643)</div>
+  <div class="adam-al_name">[25] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8846.html" class="adam-name_link">Maria Pudsey</a> (~1562->1643)</div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[26] &nbsp; <a href="profile-I8851.html" class="adam-name_link">Walter Washington</a> (~1570-1597)</div>
+  <div class="adam-al_name">[26] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8851.html" class="adam-name_link">Walter Washington</a> (~1570-1597)</div>
   <div class="adam-al_path"><span title="Northamptonshire">NTH</span>-<span title="Warwickshire">WAR</span>-<span title="Northamptonshire">NTH</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[27] &nbsp; <a href="profile-I8852.html" class="adam-name_link">Alice Morden</a> (~1574-1647)</div>
+  <div class="adam-al_name">[27] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8852.html" class="adam-name_link">Alice Morden</a> (~1574-1647)</div>
   <div class="adam-al_path"><span title="Warwickshire">WAR</span>-<span title="England">ENG</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 6</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[48] &nbsp; <a href="profile-I8847.html" class="adam-name_link">John Stanton</a> (~1530->1573)</div>
+  <div class="adam-al_name">[48] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8847.html" class="adam-name_link">John Stanton</a> (~1530->1573)</div>
   <div class="adam-al_path"><span title="Warwickshire">WAR</span>-<span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[49] &nbsp; <b><a href="profile-I8849.html" class="adam-name_link">Elizabeth Townsend</a> (~1538->1573)</b></div>
+  <div class="adam-al_name">[49] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8849.html" class="adam-name_link">Elizabeth Townsend</a> (~1538->1573)</b></div>
   <div class="adam-al_path"><span title="Wales">WLS</span>-<span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[50] &nbsp; <b><a href="profile-I8848.html" class="adam-name_link">George Pudsey</a> (1538->1585)</b></div>
+  <div class="adam-al_name">[50] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8848.html" class="adam-name_link">George Pudsey</a> (1538->1585)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[51] &nbsp; <b><a href="profile-I6963.html" class="adam-name_link">Mrs George Pudsey</a> (~1540->1562)</b></div>
+  <div class="adam-al_name">[51] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6963.html" class="adam-name_link">Mrs George Pudsey</a> (~1540->1562)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[52] &nbsp; <b><a href="profile-I8853.html" class="adam-name_link">Robert Washington</a> (~1545->1570)</b></div>
+  <div class="adam-al_name">[52] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8853.html" class="adam-name_link">Robert Washington</a> (~1545->1570)</b></div>
   <div class="adam-al_path"><span title="Warwickshire">WAR</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[53] &nbsp; <b><a href="profile-I8854.html" class="adam-name_link">Elizabeth Light</a> (~1558->1597)</b></div>
+  <div class="adam-al_name">[53] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8854.html" class="adam-name_link">Elizabeth Light</a> (~1558->1597)</b></div>
   <div class="adam-al_path"><span title="Warwickshire">WAR</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[54] &nbsp; <b><a href="profile-I8857.html" class="adam-name_link">John Morden</a> (~1555->1574)</b></div>
+  <div class="adam-al_name">[54] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8857.html" class="adam-name_link">John Morden</a> (~1555->1574)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[55] &nbsp; <b><a href="profile-I8858.html" class="adam-name_link">Katherine Marston</a> (~1555->1574)</b></div>
+  <div class="adam-al_name">[55] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8858.html" class="adam-name_link">Katherine Marston</a> (~1555->1574)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 7</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[96] &nbsp; <b><a href="profile-I8850.html" class="adam-name_link">Thomas Stanton</a> (~1505->1530)</b></div>
+  <div class="adam-al_name">[96] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8850.html" class="adam-name_link">Thomas Stanton</a> (~1505->1530)</b></div>
   <div class="adam-al_path"><span title="Warwickshire">WAR</span>-<span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[97] &nbsp; <b><a href="profile-I7731.html" class="adam-name_link">Mrs Thomas Stanton</a> (~1500->1530)</b></div>
+  <div class="adam-al_name">[97] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7731.html" class="adam-name_link">Mrs Thomas Stanton</a> (~1500->1530)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 </ul>
 </div>
 </div>
-<div id="map" class="adam-tab">
+<div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <br/>
 <div class="floatmapbuttons"><p>
@@ -498,15 +507,15 @@ var mcOptions={styles:[{ height:35,width:35,url:"mapmarker1.png"},
  { height:35,width:35,url:"mapmarker4.png"},
  { height:35,width:35,url:"mapmarker5.png"}]};
 function initializePins() {
- addPin(41.3358,-71.9064,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 41.3358, -71.9064</p><span class="adam-map-location"><a href="places-usa-connecticut-new-london-stonington.html" class="adam-location_link">Stonington, New London, Connecticut, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7231.html" class="adam-name_link">James Noyes</a> (1677-1718)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7229.html" class="adam-name_link">Dorothy Stanton</a> (1651-1742)</span></div>');addPin(42.7667,-70.8458,1,myImageM,'James Noyes','<div class="infowindow"><p>Coordinates: 42.7667, -70.8458</p><span class="adam-map-location"><a href="places-usa-massachusetts-essex-newbury.html" class="adam-location_link">Newbury, Essex, Massachusetts, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7228.html" class="adam-name_link">James Noyes</a> (1640-1719)</span></div>');addPin(52.1307,-3.78371,1,myImageW,'Elizabeth Townsend','<div class="infowindow"><p>Coordinates: 52.1307, -3.78371</p><span class="adam-map-location"><a href="places-wales.html" class="adam-location_link">Wales</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8849.html" class="adam-name_link">Elizabeth Townsend</a> (~1538->1573)</span></div>');addPin(52.2856,-1.75859,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 52.2856, -1.75859</p><span class="adam-map-location"><a href="places-england-warwickshire-wolverton-hall.html" class="adam-location_link">Wolverton Hall, Warwickshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7364.html" class="adam-name_link">Thomas Stanton</a> (1622-1677)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8845.html" class="adam-name_link">Thomas Stanton</a> (~1565->1643)</span></div>');addPin(52.2554,-1.72162,1,myImageM,'Thomas Stanton','<div class="infowindow"><p>Coordinates: 52.2554, -1.72162</p><span class="adam-map-location"><a href="places-england-warwickshire-langley.html" class="adam-location_link">Langley, Warwickshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8840.html" class="adam-name_link">Thomas Stanton</a> (1585->1643)</span></div>');addPin(51.1797,-1.67636,4,myImage,'4 Persons','<div class="infowindow"><p>Coordinates: 51.1797, -1.67636</p><span class="adam-map-location"><a href="places-england-wiltshire-cholderton.html" class="adam-location_link">Cholderton, Wiltshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7353.html" class="adam-name_link">James Noyes</a> (1608-1656)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8868.html" class="adam-name_link">William Noyes, Rev.</a> (1568-1622)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8869.html" class="adam-name_link">Anne Parker</a> (1575-1657)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8880.html" class="adam-name_link">Mrs Robert Noyes</a> (~1545->1570)</span></div>');addPin(52.2671,-1.46752,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 52.2671, -1.46752</p><span class="adam-map-location"><a href="places-england-warwickshire.html" class="adam-location_link">Warwickshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8853.html" class="adam-name_link">Robert Washington</a> (~1545->1570)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8850.html" class="adam-name_link">Thomas Stanton</a> (~1505->1530)</span></div>');addPin(52.1253,-1.4467,1,myImageW,'Katherine Washington','<div class="infowindow"><p>Coordinates: 52.1253, -1.4467</p><span class="adam-map-location"><a href="places-england-warwickshire-radway-grange.html" class="adam-location_link">Radway Grange, Warwickshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7766.html" class="adam-name_link">Katherine Washington</a> (~1597->1618)</span></div>');addPin(50.9097,-1.40435,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 50.9097, -1.40435</p><span class="adam-map-location"><a href="places-england-hampshire-southampton.html" class="adam-location_link">Southampton, Hampshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7354.html" class="adam-name_link">Sarah Brown</a> (1610-1691)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8866.html" class="adam-name_link">Joseph Browne</a> (~1590->1612)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8867.html" class="adam-name_link">Mrs Joseph Browne</a> (~1589->1612)</span></div>');addPin(52.1039,-1.18712,1,myImageM,'Walter Washington','<div class="infowindow"><p>Coordinates: 52.1039, -1.18712</p><span class="adam-map-location"><a href="places-england-northamptonshire-sulgrave.html" class="adam-location_link">Sulgrave, Northamptonshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8851.html" class="adam-name_link">Walter Washington</a> (~1570-1597)</span></div>');addPin(52.3555,-1.17432,7,myImage,'7 Persons','<div class="infowindow"><p>Coordinates: 52.3555, -1.17432</p><span class="adam-map-location"><a href="places-england.html" class="adam-location_link">England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8841.html" class="adam-name_link">Thomas Lord</a> (~1585->1630)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8842.html" class="adam-name_link">Dorothy Bird</a> (~1588->1630)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8879.html" class="adam-name_link">Robert Noyes</a> (~1540-1659)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8846.html" class="adam-name_link">Maria Pudsey</a> (~1562->1643)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8857.html" class="adam-name_link">John Morden</a> (~1555->1574)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8858.html" class="adam-name_link">Katherine Marston</a> (~1555->1574)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7731.html" class="adam-name_link">Mrs Thomas Stanton</a> (~1500->1530)</span></div>');addPin(52.1351,-0.989688,1,myImageW,'Ann Lord','<div class="infowindow"><p>Coordinates: 52.1351, -0.989688</p><span class="adam-map-location"><a href="places-england-northamptonshire-towchester.html" class="adam-location_link">Towchester, Northamptonshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7365.html" class="adam-name_link">Ann Lord</a> (1614-1688)</span></div>');addPin(1000,1000,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 1000, 1000</p><span class="adam-map-location"><a href="places-england-warwickshire-morell-morten.html" class="adam-location_link">Morten, Morell, Warwickshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8852.html" class="adam-name_link">Alice Morden</a> (~1574-1647)</span><br/><br/><span class="adam-map-location"><a href="places-england-warwickshire-wolverton-lonidge.html" class="adam-location_link">Lonidge, Wolverton, Warwickshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8847.html" class="adam-name_link">John Stanton</a> (~1530->1573)</span></div>');
+ addPin(41.3358,-71.9064,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 41.3358, -71.9064</p><span class="adam-map-location"><a href="places-usa-connecticut-new-london-stonington.html" class="adam-location_link">Stonington, New London, Connecticut, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7231.html" class="adam-name_link">James Noyes</a> (1677-1718)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7229.html" class="adam-name_link">Dorothy Stanton</a> (1651-1742)</span></div>');addPin(42.7667,-70.8458,1,myImageM,'James Noyes','<div class="infowindow"><p>Coordinates: 42.7667, -70.8458</p><span class="adam-map-location"><a href="places-usa-massachusetts-essex-newbury.html" class="adam-location_link">Newbury, Essex, Massachusetts, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7228.html" class="adam-name_link">James Noyes</a> (1640-1719)</span></div>');addPin(52.1307,-3.78371,1,myImageW,'Elizabeth Townsend','<div class="infowindow"><p>Coordinates: 52.1307, -3.78371</p><span class="adam-map-location"><a href="places-wales.html" class="adam-location_link">Wales</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8849.html" class="adam-name_link">Elizabeth Townsend</a> (~1538->1573)</span></div>');addPin(52.2856,-1.75859,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 52.2856, -1.75859</p><span class="adam-map-location"><a href="places-england-warwickshire-wolverton-hall.html" class="adam-location_link">Wolverton Hall, Warwickshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7364.html" class="adam-name_link">Thomas Stanton</a> (1622-1677)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8845.html" class="adam-name_link">Thomas Stanton</a> (~1565->1643)</span></div>');addPin(52.2554,-1.72162,1,myImageM,'Thomas Stanton','<div class="infowindow"><p>Coordinates: 52.2554, -1.72162</p><span class="adam-map-location"><a href="places-england-warwickshire-langley.html" class="adam-location_link">Langley, Warwickshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8840.html" class="adam-name_link">Thomas Stanton</a> (1585->1643)</span></div>');addPin(52.26,-1.69581,1,myImageM,'John Stanton','<div class="infowindow"><p>Coordinates: 52.26, -1.69581</p><span class="adam-map-location"><a href="places-england-warwickshire-wolverton-lonidge.html" class="adam-location_link">Lonidge, Wolverton, Warwickshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8847.html" class="adam-name_link">John Stanton</a> (~1530->1573)</span></div>');addPin(51.1797,-1.67636,4,myImage,'4 Persons','<div class="infowindow"><p>Coordinates: 51.1797, -1.67636</p><span class="adam-map-location"><a href="places-england-wiltshire-cholderton.html" class="adam-location_link">Cholderton, Wiltshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7353.html" class="adam-name_link">James Noyes</a> (1608-1656)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8868.html" class="adam-name_link">William Noyes, Rev.</a> (1568-1622)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8869.html" class="adam-name_link">Anne Parker</a> (1575-1657)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8880.html" class="adam-name_link">Mrs Robert Noyes</a> (~1545->1570)</span></div>');addPin(52.2032,-1.54524,1,myImageW,'Alice Morden','<div class="infowindow"><p>Coordinates: 52.2032, -1.54524</p><span class="adam-map-location"><a href="places-england-warwickshire-morell-morten.html" class="adam-location_link">Morten, Morell, Warwickshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8852.html" class="adam-name_link">Alice Morden</a> (~1574-1647)</span></div>');addPin(52.2671,-1.46752,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 52.2671, -1.46752</p><span class="adam-map-location"><a href="places-england-warwickshire.html" class="adam-location_link">Warwickshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8853.html" class="adam-name_link">Robert Washington</a> (~1545->1570)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8850.html" class="adam-name_link">Thomas Stanton</a> (~1505->1530)</span></div>');addPin(52.1253,-1.4467,1,myImageW,'Katherine Washington','<div class="infowindow"><p>Coordinates: 52.1253, -1.4467</p><span class="adam-map-location"><a href="places-england-warwickshire-radway-grange.html" class="adam-location_link">Radway Grange, Warwickshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7766.html" class="adam-name_link">Katherine Washington</a> (~1597->1618)</span></div>');addPin(50.9097,-1.40435,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 50.9097, -1.40435</p><span class="adam-map-location"><a href="places-england-hampshire-southampton.html" class="adam-location_link">Southampton, Hampshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7354.html" class="adam-name_link">Sarah Brown</a> (1610-1691)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8866.html" class="adam-name_link">Joseph Browne</a> (~1590->1612)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8867.html" class="adam-name_link">Mrs Joseph Browne</a> (~1589->1612)</span></div>');addPin(52.1039,-1.18712,1,myImageM,'Walter Washington','<div class="infowindow"><p>Coordinates: 52.1039, -1.18712</p><span class="adam-map-location"><a href="places-england-northamptonshire-sulgrave.html" class="adam-location_link">Sulgrave, Northamptonshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8851.html" class="adam-name_link">Walter Washington</a> (~1570-1597)</span></div>');addPin(52.3555,-1.17432,7,myImage,'7 Persons','<div class="infowindow"><p>Coordinates: 52.3555, -1.17432</p><span class="adam-map-location"><a href="places-england.html" class="adam-location_link">England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8841.html" class="adam-name_link">Thomas Lord</a> (~1585->1630)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8842.html" class="adam-name_link">Dorothy Bird</a> (~1588->1630)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8879.html" class="adam-name_link">Robert Noyes</a> (~1540-1659)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8846.html" class="adam-name_link">Maria Pudsey</a> (~1562->1643)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8857.html" class="adam-name_link">John Morden</a> (~1555->1574)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8858.html" class="adam-name_link">Katherine Marston</a> (~1555->1574)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7731.html" class="adam-name_link">Mrs Thomas Stanton</a> (~1500->1530)</span></div>');addPin(52.1351,-0.989688,1,myImageW,'Ann Lord','<div class="infowindow"><p>Coordinates: 52.1351, -0.989688</p><span class="adam-map-location"><a href="places-england-northamptonshire-towchester.html" class="adam-location_link">Towchester, Northamptonshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7365.html" class="adam-name_link">Ann Lord</a> (1614-1688)</span></div>');
  markerCluster = new MarkerClusterer(map, myPins, mcOptions);
- var myData={max:1,data:[{lat:41.3358,lng:-71.9064,count:0.6},{lat:42.7667,lng:-70.8458,count:0.3},{lat:52.1307,lng:-3.78371,count:0.3},{lat:52.2856,lng:-1.75859,count:0.6},{lat:52.2554,lng:-1.72162,count:0.3},{lat:51.1797,lng:-1.67636,count:1.2},{lat:52.2671,lng:-1.46752,count:0.6},{lat:52.1253,lng:-1.4467,count:0.3},{lat:50.9097,lng:-1.40435,count:0.9},{lat:52.1039,lng:-1.18712,count:0.3},{lat:52.3555,lng:-1.17432,count:2.1},{lat:52.1351,lng:-0.989688,count:0.3},]};
+ var myData={max:1,data:[{lat:41.3358,lng:-71.9064,count:0.6},{lat:42.7667,lng:-70.8458,count:0.3},{lat:52.1307,lng:-3.78371,count:0.3},{lat:52.2856,lng:-1.75859,count:0.6},{lat:52.2554,lng:-1.72162,count:0.3},{lat:52.26,lng:-1.69581,count:0.3},{lat:51.1797,lng:-1.67636,count:1.2},{lat:52.2032,lng:-1.54524,count:0.3},{lat:52.2671,lng:-1.46752,count:0.6},{lat:52.1253,lng:-1.4467,count:0.3},{lat:50.9097,lng:-1.40435,count:0.9},{lat:52.1039,lng:-1.18712,count:0.3},{lat:52.3555,lng:-1.17432,count:2.1},{lat:52.1351,lng:-0.989688,count:0.3},]};
  google.maps.event.addListenerOnce(map,'idle',function(){heatmap.setDataSet(myData);});
 }
 </script>
 <div class="mapstatus">
 <span class="mapstatusspan"><p>
-13 locations have been Splattered across your map where 28 ancestors were born.  The cluster count shows the number of times people appear within each cluster.  Click on a cluster or zoom in for more detail.
+14 locations have been Splattered across your map where 28 ancestors were born.  The cluster count shows the number of times people appear within each cluster.  Click on a cluster or zoom in for more detail.
 </p></span>
 </div>
 <script src="adam-min.js" type="text/javascript"></script>
@@ -514,16 +523,16 @@ function initializePins() {
 </div>
 <script type="text/javascript">
 $(document).ready(function () {
-  $('#tabs').tabs({
-    activate: function (event, ui) {
-      var act = $("#tabs").tabs("option", "active");
-		  if (act == 4) {
-        google.maps.event.trigger(map, 'resize');
-      }
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    e.target
+    e.relatedTarget
+  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      google.maps.event.trigger(map, 'resize');
     }
   });
 });
 </script>
+</div>
 </div>
 
 <ul>
@@ -532,7 +541,7 @@ $(document).ready(function () {
 Last Modified: Feb 4, 2013
 </li>
 </ul>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -552,7 +561,7 @@ Last Modified: Feb 4, 2013
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

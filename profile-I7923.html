@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="James Elisha Reynolds Profile - Minchin Genealogy | Minchin.ca" />
  <title>James Elisha Reynolds Profile - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -67,22 +74,24 @@ Version:   1.0.4        December 29, 2013
 
 <h1 id="adam-page-title">James Elisha Reynolds Profile</h1>
 
-<div id="tabs">
-<ul>
+<div id="adam-tab-list">
+<ul id="tab-list" class="nav nav-tabs">
 
-<li><a class="click" href="#profile">Profile</a></li>
+<li class="active"><a class="click" href="#profile" data-toggle="tab">Profile</a></li>
 
-<li><a class="click" href="#sources">Sources (1)</a></li>
+<li><a class="click" href="#sources" data-toggle="tab">Sources (1)</a></li>
 
-<li><a class="click" href="#chart">Chart</a></li>
+<li><a class="click" href="#chart" data-toggle="tab">Chart</a></li>
 
-<li><a class="click" href="#alist">Ancestors List (18)</a></li>
+<li><a class="click" href="#alist" data-toggle="tab">Ancestors List (18)</a></li>
 
-<li><a class="click" href="#map">Ancestors Distribution Map</a></li>
+<li><a class="click" href="#map" data-toggle="tab">Ancestors Distribution Map</a></li>
 
 </ul>
 
-<div id="profile" class="adam-tab">
+<div class="tab-content">
+
+<div id="profile" class="tab-pane active adam-tab">
 
 <ul id="adam-person_profile" class="adam-tab_style">
 <li>
@@ -177,7 +186,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="sources" class="adam-tab">
+<div id="sources" class="tab-pane adam-tab">
 
 <ul id="adam-person_sources" class="adam-tab_style">
 <li>
@@ -197,7 +206,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="chart" class="adam-tab">
+<div id="chart" class="tab-pane adam-tab">
 <ul>
 <li id="adam-person_chart">
 <div style="height: 665px;">&nbsp;</div>
@@ -360,7 +369,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="alist" class="adam-tab">
+<div id="alist" class="tab-pane adam-tab">
 
 <div class="adam-al_page">
 <ul class="adam-al_legend">
@@ -374,101 +383,101 @@ GEDCOM file imported on 4 February 2013
 
 <li class="adam-al_generation">Generation 1</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1] &nbsp; <a href="profile-I7923.html" class="adam-name_link">James Elisha Reynolds</a> (~1789->1810)</div>
+  <div class="adam-al_name">[1] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7923.html" class="adam-name_link">James Elisha Reynolds</a> (~1789->1810)</div>
   <div class="adam-al_path"><span title="North Carolina">NC</span>-<span title="Tennessee">TN</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 2</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[2] &nbsp; <a href="profile-I7931.html" class="adam-name_link">Elisha Reynolds</a> (1755-1836)</div>
+  <div class="adam-al_name">[2] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7931.html" class="adam-name_link">Elisha Reynolds</a> (1755-1836)</div>
   <div class="adam-al_path"><span title="North Carolina">NC</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3] &nbsp; <b><a href="profile-I7932.html" class="adam-name_link">Judith Eddins</a> (~1759-1841)</b></div>
+  <div class="adam-al_name">[3] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7932.html" class="adam-name_link">Judith Eddins</a> (~1759-1841)</b></div>
   <div class="adam-al_path"><span title="North Carolina">NC</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 3</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[4] &nbsp; <a href="profile-I7954.html" class="adam-name_link">John Francis Reynolds</a> (1710->1755)</div>
+  <div class="adam-al_name">[4] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7954.html" class="adam-name_link">John Francis Reynolds</a> (1710->1755)</div>
   <div class="adam-al_path"><span title="Virginia">VA</span>-<span title="North Carolina">NC</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[5] &nbsp; <b><a href="profile-I7955.html" class="adam-name_link">Sarah Mary Rebecca Jenkins</a> (1714->1755)</b></div>
+  <div class="adam-al_name">[5] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7955.html" class="adam-name_link">Sarah Mary Rebecca Jenkins</a> (1714->1755)</b></div>
   <div class="adam-al_path"><span title="North Carolina">NC</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 4</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[8] &nbsp; <a href="profile-I7971.html" class="adam-name_link">Robert Reynolds</a> (~1685-1710)</div>
+  <div class="adam-al_name">[8] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7971.html" class="adam-name_link">Robert Reynolds</a> (~1685-1710)</div>
   <div class="adam-al_path"><span title="Virginia">VA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[9] &nbsp; <b><a href="profile-I7972.html" class="adam-name_link">Grace Clark</a> (~1689-1711)</b></div>
+  <div class="adam-al_name">[9] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7972.html" class="adam-name_link">Grace Clark</a> (~1689-1711)</b></div>
   <div class="adam-al_path"><span title="Virginia">VA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 5</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[16] &nbsp; <a href="profile-I7984.html" class="adam-name_link">Robert Reynolds</a> (1665-1702)</div>
+  <div class="adam-al_name">[16] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7984.html" class="adam-name_link">Robert Reynolds</a> (1665-1702)</div>
   <div class="adam-al_path"><span title="Virginia">VA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[17] &nbsp; <b><a href="profile-I7985.html" class="adam-name_link">Mrs Elizabeth Reynolds</a> (~1669->1700)</b></div>
+  <div class="adam-al_name">[17] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7985.html" class="adam-name_link">Mrs Elizabeth Reynolds</a> (~1669->1700)</b></div>
   <div class="adam-al_path"><span title="Virginia">VA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 6</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[32] &nbsp; <a href="profile-I7788.html" class="adam-name_link">Nicholas Reynolds</a> (~1611->1667)</div>
+  <div class="adam-al_name">[32] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7788.html" class="adam-name_link">Nicholas Reynolds</a> (~1611->1667)</div>
   <div class="adam-al_path"><span title="Virginia">VA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[33] &nbsp; <b><a href="profile-I7786.html" class="adam-name_link">Alice Gregory Delke, (widow)</a> (1625->1667)</b></div>
+  <div class="adam-al_name">[33] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7786.html" class="adam-name_link">Alice Gregory Delke, (widow)</a> (1625->1667)</b></div>
   <div class="adam-al_path"><span title="Virginia">VA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 7</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[64] &nbsp; <a href="profile-I7781.html" class="adam-name_link">Richard William Reynolds</a> (~1575-~1640)</div>
+  <div class="adam-al_name">[64] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7781.html" class="adam-name_link">Richard William Reynolds</a> (~1575-~1640)</div>
   <div class="adam-al_path"><span title="Kent">KEN</span>-<span title="Sussex">SSX</span>-<span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[65] &nbsp; <i><a href="profile-I7779.html" class="adam-name_link">Ann Harrison</a> (1577->1640)</i></div>
+  <div class="adam-al_name">[65] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I7779.html" class="adam-name_link">Ann Harrison</a> (1577->1640)</i></div>
   <div class="adam-al_path"><span title="York">YOR</span>-<span title="Sussex">SSX</span>-<span title="Virginia">VA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 8</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[128] &nbsp; <i><a href="profile-I7772.html" class="adam-name_link">Christopher Reynolds</a> (~1530->1575)</i></div>
+  <div class="adam-al_name">[128] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I7772.html" class="adam-name_link">Christopher Reynolds</a> (~1530->1575)</i></div>
   <div class="adam-al_path"><span title="Kent">KEN</span>-<span title="Pennsylvania">PA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[129] &nbsp; <b><a href="profile-I7767.html" class="adam-name_link">Mrs.Christopher Reynolds</a> (1534->1582)</b></div>
+  <div class="adam-al_name">[129] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7767.html" class="adam-name_link">Mrs.Christopher Reynolds</a> (1534->1582)</b></div>
   <div class="adam-al_path"><span title="Kent">KEN</span>-<span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[130] &nbsp; <b><a href="profile-I9479.html" class="adam-name_link">John Harrison</a> (~1545->1575)</b></div>
+  <div class="adam-al_name">[130] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9479.html" class="adam-name_link">John Harrison</a> (~1545->1575)</b></div>
   <div class="adam-al_path"><span title="Kent">KEN</span>-<span title="York">YOR</span>-<span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[131] &nbsp; <b><a href="profile-I9480.html" class="adam-name_link">Mrs Susanna Harrison</a> (~1547->1577)</b></div>
+  <div class="adam-al_name">[131] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9480.html" class="adam-name_link">Mrs Susanna Harrison</a> (~1547->1577)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="York">YOR</span>-<span title="England">ENG</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 9</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[256] &nbsp; <b><a href="profile-I7741.html" class="adam-name_link">Robert Reginald</a> (~1505-~1580)</b></div>
+  <div class="adam-al_name">[256] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7741.html" class="adam-name_link">Robert Reginald</a> (~1505-~1580)</b></div>
   <div class="adam-al_path"><span title="Suffolk">SFK</span>-<span title="Kent">KEN</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[257] &nbsp; <b><a href="profile-I7739.html" class="adam-name_link">Mrs.Robert Reginald</a> (~1505->1535)</b></div>
+  <div class="adam-al_name">[257] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7739.html" class="adam-name_link">Mrs.Robert Reginald</a> (~1505->1535)</b></div>
   <div class="adam-al_path"><span title="Kent">KEN</span></div><br>
 </li>
 </ul>
 </div>
 </div>
-<div id="map" class="adam-tab">
+<div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <br/>
 <div class="floatmapbuttons"><p>
@@ -487,9 +496,9 @@ var mcOptions={styles:[{ height:35,width:35,url:"mapmarker1.png"},
  { height:35,width:35,url:"mapmarker4.png"},
  { height:35,width:35,url:"mapmarker5.png"}]};
 function initializePins() {
- addPin(36.2029,-81.2519,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 36.2029, -81.2519</p><span class="adam-map-location"><a href="places-usa-north-carolina-wilkes.html" class="adam-location_link">Wilkes, North Carolina, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7923.html" class="adam-name_link">James Elisha Reynolds</a> (~1789->1810)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7932.html" class="adam-name_link">Judith Eddins</a> (~1759-1841)</span></div>');addPin(36.2167,-81,1,myImageM,'Elisha Reynolds','<div class="infowindow"><p>Coordinates: 36.2167, -81</p><span class="adam-map-location"><a href="places-usa-north-carolina-wilkes-ashville.html" class="adam-location_link">Ashville, Wilkes, North Carolina, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7931.html" class="adam-name_link">Elisha Reynolds</a> (1755-1836)</span></div>');addPin(36.3743,-80.6771,1,myImageW,'Sarah Mary Rebecca Jenkins','<div class="infowindow"><p>Coordinates: 36.3743, -80.6771</p><span class="adam-map-location"><a href="places-usa-north-carolina-surry.html" class="adam-location_link">Surry, North Carolina, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7955.html" class="adam-name_link">Sarah Mary Rebecca Jenkins</a> (1714->1755)</span></div>');addPin(38.7333,-77.8167,1,myImageW,'Mrs Elizabeth Reynolds','<div class="infowindow"><p>Coordinates: 38.7333, -77.8167</p><span class="adam-map-location"><a href="places-usa-virginia-fauquier.html" class="adam-location_link">Fauquier, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7985.html" class="adam-name_link">Mrs Elizabeth Reynolds</a> (~1669->1700)</span></div>');addPin(37.1379,-76.8352,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 37.1379, -76.8352</p><span class="adam-map-location"><a href="places-usa-virginia-surry.html" class="adam-location_link">Surry, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7984.html" class="adam-name_link">Robert Reynolds</a> (1665-1702)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7788.html" class="adam-name_link">Nicholas Reynolds</a> (~1611->1667)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7786.html" class="adam-name_link">Alice Gregory Delke, (widow)</a> (1625->1667)</span></div>');addPin(52.3555,-1.17432,1,myImageW,'Mrs Susanna Harrison','<div class="infowindow"><p>Coordinates: 52.3555, -1.17432</p><span class="adam-map-location"><a href="places-england.html" class="adam-location_link">England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9480.html" class="adam-name_link">Mrs Susanna Harrison</a> (~1547->1577)</span></div>');addPin(53.9576,-1.08271,1,myImageW,'Ann Harrison','<div class="infowindow"><p>Coordinates: 53.9576, -1.08271</p><span class="adam-map-location"><a href="places-england-york.html" class="adam-location_link">York, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7779.html" class="adam-name_link">Ann Harrison</a> (1577->1640)</span></div>');addPin(51.2787,0.521725,5,myImage,'5 Persons','<div class="infowindow"><p>Coordinates: 51.2787, 0.521725</p><span class="adam-map-location"><a href="places-england-kent.html" class="adam-location_link">Kent, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7781.html" class="adam-name_link">Richard William Reynolds</a> (~1575-~1640)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7772.html" class="adam-name_link">Christopher Reynolds</a> (~1530->1575)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7767.html" class="adam-name_link">Mrs.Christopher Reynolds</a> (1534->1582)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9479.html" class="adam-name_link">John Harrison</a> (~1545->1575)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7739.html" class="adam-name_link">Mrs.Robert Reginald</a> (~1505->1535)</span></div>');addPin(51.9779,1.01761,1,myImageM,'Robert Reginald','<div class="infowindow"><p>Coordinates: 51.9779, 1.01761</p><span class="adam-map-location"><a href="places-england-suffolk-east-bergholt.html" class="adam-location_link">East Bergholt, Suffolk, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7741.html" class="adam-name_link">Robert Reginald</a> (~1505-~1580)</span></div>');addPin(1000,1000,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 1000, 1000</p><span class="adam-map-location"><a href="places-usa-virginia-isle-of-wight-norfolk.html" class="adam-location_link">Norfolk, Isle of Wight, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7954.html" class="adam-name_link">John Francis Reynolds</a> (1710->1755)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7971.html" class="adam-name_link">Robert Reynolds</a> (~1685-1710)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7972.html" class="adam-name_link">Grace Clark</a> (~1689-1711)</span></div>');
+ addPin(36.2029,-81.2519,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 36.2029, -81.2519</p><span class="adam-map-location"><a href="places-usa-north-carolina-wilkes.html" class="adam-location_link">Wilkes, North Carolina, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7923.html" class="adam-name_link">James Elisha Reynolds</a> (~1789->1810)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7932.html" class="adam-name_link">Judith Eddins</a> (~1759-1841)</span></div>');addPin(36.2167,-81,1,myImageM,'Elisha Reynolds','<div class="infowindow"><p>Coordinates: 36.2167, -81</p><span class="adam-map-location"><a href="places-usa-north-carolina-wilkes-ashville.html" class="adam-location_link">Ashville, Wilkes, North Carolina, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7931.html" class="adam-name_link">Elisha Reynolds</a> (1755-1836)</span></div>');addPin(36.3743,-80.6771,1,myImageW,'Sarah Mary Rebecca Jenkins','<div class="infowindow"><p>Coordinates: 36.3743, -80.6771</p><span class="adam-map-location"><a href="places-usa-north-carolina-surry.html" class="adam-location_link">Surry, North Carolina, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7955.html" class="adam-name_link">Sarah Mary Rebecca Jenkins</a> (1714->1755)</span></div>');addPin(38.7333,-77.8167,1,myImageW,'Mrs Elizabeth Reynolds','<div class="infowindow"><p>Coordinates: 38.7333, -77.8167</p><span class="adam-map-location"><a href="places-usa-virginia-fauquier.html" class="adam-location_link">Fauquier, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7985.html" class="adam-name_link">Mrs Elizabeth Reynolds</a> (~1669->1700)</span></div>');addPin(37.1379,-76.8352,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 37.1379, -76.8352</p><span class="adam-map-location"><a href="places-usa-virginia-surry.html" class="adam-location_link">Surry, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7984.html" class="adam-name_link">Robert Reynolds</a> (1665-1702)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7788.html" class="adam-name_link">Nicholas Reynolds</a> (~1611->1667)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7786.html" class="adam-name_link">Alice Gregory Delke, (widow)</a> (1625->1667)</span></div>');addPin(37.0602,-76.6902,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 37.0602, -76.6902</p><span class="adam-map-location"><a href="places-usa-virginia-isle-of-wight-norfolk.html" class="adam-location_link">Norfolk, Isle of Wight, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7954.html" class="adam-name_link">John Francis Reynolds</a> (1710->1755)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7971.html" class="adam-name_link">Robert Reynolds</a> (~1685-1710)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7972.html" class="adam-name_link">Grace Clark</a> (~1689-1711)</span></div>');addPin(52.3555,-1.17432,1,myImageW,'Mrs Susanna Harrison','<div class="infowindow"><p>Coordinates: 52.3555, -1.17432</p><span class="adam-map-location"><a href="places-england.html" class="adam-location_link">England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9480.html" class="adam-name_link">Mrs Susanna Harrison</a> (~1547->1577)</span></div>');addPin(53.9576,-1.08271,1,myImageW,'Ann Harrison','<div class="infowindow"><p>Coordinates: 53.9576, -1.08271</p><span class="adam-map-location"><a href="places-england-york.html" class="adam-location_link">York, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7779.html" class="adam-name_link">Ann Harrison</a> (1577->1640)</span></div>');addPin(51.2787,0.521725,5,myImage,'5 Persons','<div class="infowindow"><p>Coordinates: 51.2787, 0.521725</p><span class="adam-map-location"><a href="places-england-kent.html" class="adam-location_link">Kent, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7781.html" class="adam-name_link">Richard William Reynolds</a> (~1575-~1640)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7772.html" class="adam-name_link">Christopher Reynolds</a> (~1530->1575)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7767.html" class="adam-name_link">Mrs.Christopher Reynolds</a> (1534->1582)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9479.html" class="adam-name_link">John Harrison</a> (~1545->1575)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7739.html" class="adam-name_link">Mrs.Robert Reginald</a> (~1505->1535)</span></div>');addPin(51.9779,1.01761,1,myImageM,'Robert Reginald','<div class="infowindow"><p>Coordinates: 51.9779, 1.01761</p><span class="adam-map-location"><a href="places-england-suffolk-east-bergholt.html" class="adam-location_link">East Bergholt, Suffolk, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7741.html" class="adam-name_link">Robert Reginald</a> (~1505-~1580)</span></div>');
  markerCluster = new MarkerClusterer(map, myPins, mcOptions);
- var myData={max:1,data:[{lat:36.2029,lng:-81.2519,count:0.6},{lat:36.2167,lng:-81,count:0.3},{lat:36.3743,lng:-80.6771,count:0.3},{lat:38.7333,lng:-77.8167,count:0.3},{lat:37.1379,lng:-76.8352,count:0.9},{lat:52.3555,lng:-1.17432,count:0.3},{lat:53.9576,lng:-1.08271,count:0.3},{lat:51.2787,lng:0.521725,count:1.5},{lat:51.9779,lng:1.01761,count:0.3},]};
+ var myData={max:1,data:[{lat:36.2029,lng:-81.2519,count:0.6},{lat:36.2167,lng:-81,count:0.3},{lat:36.3743,lng:-80.6771,count:0.3},{lat:38.7333,lng:-77.8167,count:0.3},{lat:37.1379,lng:-76.8352,count:0.9},{lat:37.0602,lng:-76.6902,count:0.9},{lat:52.3555,lng:-1.17432,count:0.3},{lat:53.9576,lng:-1.08271,count:0.3},{lat:51.2787,lng:0.521725,count:1.5},{lat:51.9779,lng:1.01761,count:0.3},]};
  google.maps.event.addListenerOnce(map,'idle',function(){heatmap.setDataSet(myData);});
 }
 </script>
@@ -503,16 +512,16 @@ function initializePins() {
 </div>
 <script type="text/javascript">
 $(document).ready(function () {
-  $('#tabs').tabs({
-    activate: function (event, ui) {
-      var act = $("#tabs").tabs("option", "active");
-		  if (act == 4) {
-        google.maps.event.trigger(map, 'resize');
-      }
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    e.target
+    e.relatedTarget
+  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      google.maps.event.trigger(map, 'resize');
     }
   });
 });
 </script>
+</div>
 </div>
 
 <ul>
@@ -521,7 +530,7 @@ $(document).ready(function () {
 Last Modified: Feb 4, 2013
 </li>
 </ul>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -541,7 +550,7 @@ Last Modified: Feb 4, 2013
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

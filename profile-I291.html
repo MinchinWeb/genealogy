@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="HIDDEN _____ Profile - Minchin Genealogy | Minchin.ca" />
  <title>HIDDEN _____ Profile - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -67,20 +74,22 @@ Version:   1.0.4        December 29, 2013
 
 <h1 id="adam-page-title">HIDDEN _____ Profile</h1>
 
-<div id="tabs">
-<ul>
+<div id="adam-tab-list">
+<ul id="tab-list" class="nav nav-tabs">
 
-<li><a class="click" href="#profile">Profile</a></li>
+<li class="active"><a class="click" href="#profile" data-toggle="tab">Profile</a></li>
 
-<li><a class="click" href="#chart">Chart</a></li>
+<li><a class="click" href="#chart" data-toggle="tab">Chart</a></li>
 
-<li><a class="click" href="#alist">Ancestors List (79)</a></li>
+<li><a class="click" href="#alist" data-toggle="tab">Ancestors List (79)</a></li>
 
-<li><a class="click" href="#map">Ancestors Distribution Map</a></li>
+<li><a class="click" href="#map" data-toggle="tab">Ancestors Distribution Map</a></li>
 
 </ul>
 
-<div id="profile" class="adam-tab">
+<div class="tab-content">
+
+<div id="profile" class="tab-pane active adam-tab">
 
 <ul id="adam-person_profile" class="adam-tab_style">
 <li>
@@ -95,6 +104,9 @@ Version:   1.0.4        December 29, 2013
 
 <tr><td><table class="adam-gender adam-table_box"><tr><td>Male
 </td></tr></table></td></tr>
+<tr><td><table class="adam-name_list adam-table_box">
+<tr class="adam-claim"><td class="adam-claim_tag">Name</td><td class="adam-claim_data"> HIDDEN _____</td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+</table></td></tr>
 <tr><td><table class="adam-parents adam-table_box">
 <tr class="adam-claim_parents">
 <td class="adam-claim_tag">Father</td>
@@ -109,7 +121,7 @@ Version:   1.0.4        December 29, 2013
 </li>
 </ul>
 </div>
-<div id="chart" class="adam-tab">
+<div id="chart" class="tab-pane adam-tab">
 <ul>
 <li id="adam-person_chart">
 <div style="height: 665px;">&nbsp;</div>
@@ -263,7 +275,7 @@ Version:   1.0.4        December 29, 2013
 </li>
 </ul>
 </div>
-<div id="alist" class="adam-tab">
+<div id="alist" class="tab-pane adam-tab">
 
 <div class="adam-al_page">
 <ul class="adam-al_legend">
@@ -277,385 +289,385 @@ Version:   1.0.4        December 29, 2013
 
 <li class="adam-al_generation">Generation 1</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1] &nbsp; <a href="profile-I291.html" class="adam-name_link">HIDDEN _____</a> (-)</div>
+  <div class="adam-al_name">[1] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I291.html" class="adam-name_link">HIDDEN _____</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 2</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[2] &nbsp; <b><a href="profile-I292.html" class="adam-name_link">HIDDEN _____</a> (-)</b></div>
+  <div class="adam-al_name">[2] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I292.html" class="adam-name_link">HIDDEN _____</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3] &nbsp; <a href="profile-I289.html" class="adam-name_link">HIDDEN _____</a> </div>
+  <div class="adam-al_name">[3] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I289.html" class="adam-name_link">HIDDEN _____</a> </div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 3</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[6] &nbsp; <b><a href="profile-I283.html" class="adam-name_link">HIDDEN _____</a> </b></div>
+  <div class="adam-al_name">[6] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I283.html" class="adam-name_link">HIDDEN _____</a> </b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[7] &nbsp; <a href="profile-I282.html" class="adam-name_link">Winnifred Bunbury</a> (1929-1948)</div>
+  <div class="adam-al_name">[7] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I282.html" class="adam-name_link">Winnifred Bunbury</a> (1929-1948)</div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 4</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[14] &nbsp; <i><a href="profile-I154.html" class="adam-name_link">George John Bunbury</a> (1888-1969)</i></div>
+  <div class="adam-al_name">[14] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I154.html" class="adam-name_link">George John Bunbury</a> (1888-1969)</i></div>
   <div class="adam-al_path"><span title="Leinster">L</span>-<span title="Alberta">AB</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[15] &nbsp; <i><a href="profile-I155.html" class="adam-name_link">Sarah Whiteside</a> (1897-1983)</i></div>
+  <div class="adam-al_name">[15] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I155.html" class="adam-name_link">Sarah Whiteside</a> (1897-1983)</i></div>
   <div class="adam-al_path"><span title="Belfast">BFS</span>-<span title="Alberta">AB</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 5</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[28] &nbsp; <a href="profile-I157.html" class="adam-name_link">Captain George William Bunbury</a> (1835-1898)</div>
+  <div class="adam-al_name">[28] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I157.html" class="adam-name_link">Captain George William Bunbury</a> (1835-1898)</div>
   <div class="adam-al_path"><span title="Cork">COR</span>-<span title=""></span>-<span title="Dublin">DUB</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[29] &nbsp; <a href="profile-I158.html" class="adam-name_link">Alice Maud Mary Stone</a> (-1910)</div>
+  <div class="adam-al_name">[29] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I158.html" class="adam-name_link">Alice Maud Mary Stone</a> (-1910)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[30] &nbsp; <a href="profile-I4345.html" class="adam-name_link">Thomas John Whiteside</a> (1867-1905)</div>
+  <div class="adam-al_name">[30] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4345.html" class="adam-name_link">Thomas John Whiteside</a> (1867-1905)</div>
   <div class="adam-al_path"><span title="Belfast">BFS</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[31] &nbsp; <a href="profile-I4346.html" class="adam-name_link">Anne Jane Neill</a> (1868-1937)</div>
+  <div class="adam-al_name">[31] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4346.html" class="adam-name_link">Anne Jane Neill</a> (1868-1937)</div>
   <div class="adam-al_path"><span title="Belfast">BFS</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 6</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[56] &nbsp; <a href="profile-I2129.html" class="adam-name_link">Thomas Bunbury, of Lisbryan</a> (1793-1874)</div>
+  <div class="adam-al_name">[56] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2129.html" class="adam-name_link">Thomas Bunbury, of Lisbryan</a> (1793-1874)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[57] &nbsp; <b><a href="profile-I2130.html" class="adam-name_link">Mary Bernard</a> (-)</b></div>
+  <div class="adam-al_name">[57] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I2130.html" class="adam-name_link">Mary Bernard</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[58] &nbsp; <b><a href="profile-I2144.html" class="adam-name_link">Unknown</a> (-)</b></div>
+  <div class="adam-al_name">[58] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I2144.html" class="adam-name_link">Unknown</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[60] &nbsp; <b><a href="profile-I4347.html" class="adam-name_link">John Whiteside</a> (-)</b></div>
+  <div class="adam-al_name">[60] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4347.html" class="adam-name_link">John Whiteside</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[61] &nbsp; <b><a href="profile-I4348.html" class="adam-name_link">Martha Jane Milbee</a> (-)</b></div>
+  <div class="adam-al_name">[61] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4348.html" class="adam-name_link">Martha Jane Milbee</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[62] &nbsp; <b><a href="profile-I4349.html" class="adam-name_link">James Neill</a> (-)</b></div>
+  <div class="adam-al_name">[62] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4349.html" class="adam-name_link">James Neill</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[63] &nbsp; <b><a href="profile-I4350.html" class="adam-name_link">Sarah Phenix</a> (-)</b></div>
+  <div class="adam-al_name">[63] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4350.html" class="adam-name_link">Sarah Phenix</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 7</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[112] &nbsp; <a href="profile-I2126.html" class="adam-name_link">Thomas Bunbury</a> (1760-<1823)</div>
+  <div class="adam-al_name">[112] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2126.html" class="adam-name_link">Thomas Bunbury</a> (1760-<1823)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[113] &nbsp; <a href="profile-I2127.html" class="adam-name_link">Maria Greene</a> (-1856)</div>
+  <div class="adam-al_name">[113] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2127.html" class="adam-name_link">Maria Greene</a> (-1856)</div>
   <div class="adam-al_path"><span title="Ireland">IRL</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 8</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[224] &nbsp; <a href="profile-I2122.html" class="adam-name_link">Thomas Bunbury, of Kill</a> (1705-1774)</div>
+  <div class="adam-al_name">[224] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2122.html" class="adam-name_link">Thomas Bunbury, of Kill</a> (1705-1774)</div>
   <div class="adam-al_path"><span title="Carlow">CAR</span>-<span title=""></span>-<span title="Carlow">CAR</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[225] &nbsp; <a href="profile-I2123.html" class="adam-name_link">Susan Priscilla Isaac</a> (1738-1797)</div>
+  <div class="adam-al_name">[225] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2123.html" class="adam-name_link">Susan Priscilla Isaac</a> (1738-1797)</div>
   <div class="adam-al_path"><span title="Dublin">DUB</span>-<span title=""></span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[226] &nbsp; <a href="profile-I2199.html" class="adam-name_link">Micheal Greene</a> (-)</div>
+  <div class="adam-al_name">[226] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2199.html" class="adam-name_link">Micheal Greene</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 9</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[448] &nbsp; <a href="profile-I2153.html" class="adam-name_link">William Bunbury, I of Lisnavagh</a> (1674-1710)</div>
+  <div class="adam-al_name">[448] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2153.html" class="adam-name_link">William Bunbury, I of Lisnavagh</a> (1674-1710)</div>
   <div class="adam-al_path"><span title="Carlow">CAR</span>-<span title=""></span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[449] &nbsp; <a href="profile-I2157.html" class="adam-name_link">Elizabeth Pendred</a> (~1674-1710)</div>
+  <div class="adam-al_name">[449] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2157.html" class="adam-name_link">Elizabeth Pendred</a> (~1674-1710)</div>
   <div class="adam-al_path"><span title="Dublin">DUB</span>-<span title=""></span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[450] &nbsp; <a href="profile-I2187.html" class="adam-name_link">Simon Isaac</a> (-)</div>
+  <div class="adam-al_name">[450] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2187.html" class="adam-name_link">Simon Isaac</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[453] &nbsp; <a href="profile-I2200.html" class="adam-name_link">Jane Bunbury</a> (-)</div>
+  <div class="adam-al_name">[453] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2200.html" class="adam-name_link">Jane Bunbury</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 10</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[896] &nbsp; <a href="profile-I2154.html" class="adam-name_link">Benjamin Bunbury</a> (1642-1707)</div>
+  <div class="adam-al_name">[896] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2154.html" class="adam-name_link">Benjamin Bunbury</a> (1642-1707)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[898] &nbsp; <b><a href="profile-I2158.html" class="adam-name_link">William Pendred</a> (-)</b></div>
+  <div class="adam-al_name">[898] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I2158.html" class="adam-name_link">William Pendred</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[899] &nbsp; <b><a href="profile-I2159.html" class="adam-name_link">Catherine Eustace</a> (-)</b></div>
+  <div class="adam-al_name">[899] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I2159.html" class="adam-name_link">Catherine Eustace</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[900] &nbsp; <b><a href="profile-I2188.html" class="adam-name_link">John Isaac</a> (-)</b></div>
+  <div class="adam-al_name">[900] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I2188.html" class="adam-name_link">John Isaac</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[906] &nbsp; <a href="profile-I2201.html" class="adam-name_link">UNKNOWN</a> (-)</div>
+  <div class="adam-al_name">[906] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2201.html" class="adam-name_link">UNKNOWN</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 11</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1792] &nbsp; <a href="profile-I2155.html" class="adam-name_link">Thomas Bunbury</a> (-)</div>
+  <div class="adam-al_name">[1792] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2155.html" class="adam-name_link">Thomas Bunbury</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1793] &nbsp; <a href="profile-I9874.html" class="adam-name_link">Elianor Birkenhead</a> (-)</div>
+  <div class="adam-al_name">[1793] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9874.html" class="adam-name_link">Elianor Birkenhead</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1812] &nbsp; <b><a href="profile-I2202.html" class="adam-name_link">Matthew Bunbury</a> (-)</b></div>
+  <div class="adam-al_name">[1812] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I2202.html" class="adam-name_link">Matthew Bunbury</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 12</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3584] &nbsp; <a href="profile-I2156.html" class="adam-name_link">Sir Henry Bunbury</a> (-)</div>
+  <div class="adam-al_name">[3584] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2156.html" class="adam-name_link">Sir Henry Bunbury</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3585] &nbsp; <a href="profile-I9872.html" class="adam-name_link">Martha Norris</a> (-)</div>
+  <div class="adam-al_name">[3585] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9872.html" class="adam-name_link">Martha Norris</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3586] &nbsp; <b><a href="profile-I9950.html" class="adam-name_link">Henry Birkenhead, Esq.</a> (-)</b></div>
+  <div class="adam-al_name">[3586] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9950.html" class="adam-name_link">Henry Birkenhead, Esq.</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 13</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[7168] &nbsp; <a href="profile-I9865.html" class="adam-name_link">Thomas Bunbury, Esq.</a> (-1601)</div>
+  <div class="adam-al_name">[7168] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9865.html" class="adam-name_link">Thomas Bunbury, Esq.</a> (-1601)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[7169] &nbsp; <a href="profile-I9869.html" class="adam-name_link">Bridget Aston</a> (-)</div>
+  <div class="adam-al_name">[7169] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9869.html" class="adam-name_link">Bridget Aston</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[7170] &nbsp; <b><a href="profile-I9949.html" class="adam-name_link">Sir William Norris, Knt</a> (-)</b></div>
+  <div class="adam-al_name">[7170] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9949.html" class="adam-name_link">Sir William Norris, Knt</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 14</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[14336] &nbsp; <a href="profile-I9863.html" class="adam-name_link">Henry Bunbury, Esq.</a> (~1516-~1547)</div>
+  <div class="adam-al_name">[14336] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9863.html" class="adam-name_link">Henry Bunbury, Esq.</a> (~1516-~1547)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[14337] &nbsp; <a href="profile-I9864.html" class="adam-name_link">Margaret Aldersey</a> (-)</div>
+  <div class="adam-al_name">[14337] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9864.html" class="adam-name_link">Margaret Aldersey</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[14338] &nbsp; <b><a href="profile-I9947.html" class="adam-name_link">John Aston</a> (-)</b></div>
+  <div class="adam-al_name">[14338] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9947.html" class="adam-name_link">John Aston</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 15</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[28672] &nbsp; <a href="profile-I9861.html" class="adam-name_link">Richard Bunbury, Esq.</a> (-~1541)</div>
+  <div class="adam-al_name">[28672] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9861.html" class="adam-name_link">Richard Bunbury, Esq.</a> (-~1541)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[28673] &nbsp; <b><a href="profile-I9862.html" class="adam-name_link">Blanch Poole</a> (-)</b></div>
+  <div class="adam-al_name">[28673] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9862.html" class="adam-name_link">Blanch Poole</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[28674] &nbsp; <a href="profile-I9945.html" class="adam-name_link">Hugh Aldersey</a> (-)</div>
+  <div class="adam-al_name">[28674] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9945.html" class="adam-name_link">Hugh Aldersey</a> (-)</div>
   <div class="adam-al_path"><span title="Cheshire">CHS</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 16</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[57344] &nbsp; <a href="profile-I9859.html" class="adam-name_link">John Bunbury, Esq.</a> (-1507)</div>
+  <div class="adam-al_name">[57344] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9859.html" class="adam-name_link">John Bunbury, Esq.</a> (-1507)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[57345] &nbsp; <a href="profile-I9860.html" class="adam-name_link">Agnes Norris</a> (-)</div>
+  <div class="adam-al_name">[57345] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9860.html" class="adam-name_link">Agnes Norris</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[57348] &nbsp; <b><a href="profile-I9946.html" class="adam-name_link">Henry Aldersey</a> (-)</b></div>
+  <div class="adam-al_name">[57348] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9946.html" class="adam-name_link">Henry Aldersey</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 17</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[114688] &nbsp; <a href="profile-I9857.html" class="adam-name_link">John Bunbury</a> (-1470)</div>
+  <div class="adam-al_name">[114688] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9857.html" class="adam-name_link">John Bunbury</a> (-1470)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[114689] &nbsp; <a href="profile-I9858.html" class="adam-name_link">Catharine Hooks</a> (-)</div>
+  <div class="adam-al_name">[114689] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9858.html" class="adam-name_link">Catharine Hooks</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[114690] &nbsp; <b><a href="profile-I9944.html" class="adam-name_link">William Norris, Esq.</a> (-)</b></div>
+  <div class="adam-al_name">[114690] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9944.html" class="adam-name_link">William Norris, Esq.</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 18</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[229376] &nbsp; <a href="profile-I9855.html" class="adam-name_link">Richard de Bunbury</a> (-~1459)</div>
+  <div class="adam-al_name">[229376] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9855.html" class="adam-name_link">Richard de Bunbury</a> (-~1459)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[229377] &nbsp; <a href="profile-I9856.html" class="adam-name_link">Alice Dutton</a> (-)</div>
+  <div class="adam-al_name">[229377] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9856.html" class="adam-name_link">Alice Dutton</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[229378] &nbsp; <b><a href="profile-I9943.html" class="adam-name_link">John Hooks</a> (-)</b></div>
+  <div class="adam-al_name">[229378] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9943.html" class="adam-name_link">John Hooks</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 19</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[458752] &nbsp; <a href="profile-I9854.html" class="adam-name_link">Henry de Bunbury</a> (-)</div>
+  <div class="adam-al_name">[458752] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9854.html" class="adam-name_link">Henry de Bunbury</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[458754] &nbsp; <b><a href="profile-I9942.html" class="adam-name_link">Edward Dutton</a> (-)</b></div>
+  <div class="adam-al_name">[458754] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9942.html" class="adam-name_link">Edward Dutton</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 20</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[917504] &nbsp; <a href="profile-I9850.html" class="adam-name_link">William de Bunbury</a> (-)</div>
+  <div class="adam-al_name">[917504] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9850.html" class="adam-name_link">William de Bunbury</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 21</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1835008] &nbsp; <a href="profile-I9846.html" class="adam-name_link">David de Bunbury</a> (-)</div>
+  <div class="adam-al_name">[1835008] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9846.html" class="adam-name_link">David de Bunbury</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1835009] &nbsp; <a href="profile-I9849.html" class="adam-name_link">_____ de Stanny</a> (-)</div>
+  <div class="adam-al_name">[1835009] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9849.html" class="adam-name_link">_____ de Stanny</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 22</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3670016] &nbsp; <a href="profile-I9841.html" class="adam-name_link">Richard de Bunbury</a> (-)</div>
+  <div class="adam-al_name">[3670016] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9841.html" class="adam-name_link">Richard de Bunbury</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3670018] &nbsp; <b><a href="profile-I9941.html" class="adam-name_link">David de Stannich</a> (-)</b></div>
+  <div class="adam-al_name">[3670018] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9941.html" class="adam-name_link">David de Stannich</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 23</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[7340032] &nbsp; <a href="profile-I9832.html" class="adam-name_link">Hugh de Bunbury</a> (-)</div>
+  <div class="adam-al_name">[7340032] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9832.html" class="adam-name_link">Hugh de Bunbury</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[7340033] &nbsp; <a href="profile-I9834.html" class="adam-name_link">Dame Christiana Malpas</a> (-)</div>
+  <div class="adam-al_name">[7340033] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9834.html" class="adam-name_link">Dame Christiana Malpas</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 24</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[14680064] &nbsp; <a href="profile-I9825.html" class="adam-name_link">William de Bunbury</a> (-~1288)</div>
+  <div class="adam-al_name">[14680064] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9825.html" class="adam-name_link">William de Bunbury</a> (-~1288)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[14680065] &nbsp; <b><a href="profile-I9831.html" class="adam-name_link">Maud</a> (-)</b></div>
+  <div class="adam-al_name">[14680065] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9831.html" class="adam-name_link">Maud</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[14680066] &nbsp; <a href="profile-I9835.html" class="adam-name_link">David de Malpas</a> (-)</div>
+  <div class="adam-al_name">[14680066] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9835.html" class="adam-name_link">David de Malpas</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[14680067] &nbsp; <a href="profile-I9836.html" class="adam-name_link">Margaret</a> (-)</div>
+  <div class="adam-al_name">[14680067] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9836.html" class="adam-name_link">Margaret</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 25</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[29360128] &nbsp; <a href="profile-I9813.html" class="adam-name_link">Alexander de Bunbury</a> (-)</div>
+  <div class="adam-al_name">[29360128] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9813.html" class="adam-name_link">Alexander de Bunbury</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[29360132] &nbsp; <b><a href="profile-I9838.html" class="adam-name_link">Griffith de Malpas</a> (-)</b></div>
+  <div class="adam-al_name">[29360132] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9838.html" class="adam-name_link">Griffith de Malpas</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[29360133] &nbsp; <a href="profile-I9839.html" class="adam-name_link">Beatrix</a> (-)</div>
+  <div class="adam-al_name">[29360133] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9839.html" class="adam-name_link">Beatrix</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[29360134] &nbsp; <b><a href="profile-I9837.html" class="adam-name_link">Ralph ap Eymon</a> (-)</b></div>
+  <div class="adam-al_name">[29360134] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9837.html" class="adam-name_link">Ralph ap Eymon</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 26</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[58720256] &nbsp; <a href="profile-I9814.html" class="adam-name_link">Patrick de Bonebury</a> (-)</div>
+  <div class="adam-al_name">[58720256] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9814.html" class="adam-name_link">Patrick de Bonebury</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[58720257] &nbsp; <a href="profile-I9815.html" class="adam-name_link">Letitia Fitz-Hugh</a> (-)</div>
+  <div class="adam-al_name">[58720257] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9815.html" class="adam-name_link">Letitia Fitz-Hugh</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[58720266] &nbsp; <b><a href="profile-I9840.html" class="adam-name_link">Randle</a> (-)</b></div>
+  <div class="adam-al_name">[58720266] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9840.html" class="adam-name_link">Randle</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 27</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[117440512] &nbsp; <a href="profile-I9817.html" class="adam-name_link">_____ de Bonebury</a> (-)</div>
+  <div class="adam-al_name">[117440512] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9817.html" class="adam-name_link">_____ de Bonebury</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[117440514] &nbsp; <b><a href="profile-I9816.html" class="adam-name_link">Robert FitzHugh</a> (-)</b></div>
+  <div class="adam-al_name">[117440514] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9816.html" class="adam-name_link">Robert FitzHugh</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 28</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[234881024] &nbsp; <a href="profile-I9819.html" class="adam-name_link">David de Bonebury</a> (-)</div>
+  <div class="adam-al_name">[234881024] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9819.html" class="adam-name_link">David de Bonebury</a> (-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 29</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[469762048] &nbsp; <b><a href="profile-I9818.html" class="adam-name_link">_____ Bonebury</a> (-)</b></div>
+  <div class="adam-al_name">[469762048] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9818.html" class="adam-name_link">_____ Bonebury</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 </ul>
 </div>
 </div>
-<div id="map" class="adam-tab">
+<div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <br/>
 <div class="floatmapbuttons"><p>
@@ -674,15 +686,15 @@ var mcOptions={styles:[{ height:35,width:35,url:"mapmarker1.png"},
  { height:35,width:35,url:"mapmarker4.png"},
  { height:35,width:35,url:"mapmarker5.png"}]};
 function initializePins() {
- addPin(52.4878,-8.07833,1,myImageM,'Matthew Bunbury','<div class="infowindow"><p>Coordinates: 52.4878, -8.07833</p><span class="adam-map-location"><a href="places-ireland-of-kilfeacle.html" class="adam-location_link">of Kilfeacle, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2202.html" class="adam-name_link">Matthew Bunbury</a> (-)</span></div>');addPin(52.8789,-6.69333,1,myImageM,'William Bunbury, I of Lisnavagh','<div class="infowindow"><p>Coordinates: 52.8789, -6.69333</p><span class="adam-map-location"><a href="places-ireland-carlow-rathvilly-of-lisnavagh.html" class="adam-location_link">of Lisnavagh, Rathvilly, Carlow, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2153.html" class="adam-name_link">William Bunbury, I of Lisnavagh</a> (1674-1710)</span></div>');addPin(53.3592,-6.43889,1,myImageW,'Mary Bernard','<div class="infowindow"><p>Coordinates: 53.3592, -6.43889</p><span class="adam-map-location"><a href="places-ireland-dublin-of-lucan.html" class="adam-location_link">of Lucan, Dublin, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2130.html" class="adam-name_link">Mary Bernard</a> (-)</span></div>');addPin(53.3203,-6.26333,1,myImageM,'George John Bunbury','<div class="infowindow"><p>Coordinates: 53.3203, -6.26333</p><span class="adam-map-location"><a href="places-ireland-leinster-rathmines.html" class="adam-location_link">Rathmines, Leinster, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I154.html" class="adam-name_link">George John Bunbury</a> (1888-1969)</span></div>');addPin(53.3331,-6.24889,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 53.3331, -6.24889</p><span class="adam-map-location"><a href="places-ireland-dublin-dublin-st-bridget-s.html" class="adam-location_link">St. Bridget&rsquo;s, Dublin, Dublin, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2123.html" class="adam-name_link">Susan Priscilla Isaac</a> (1738-1797)</span><br/><br/><span class="adam-map-location"><a href="places-ireland-dublin-dublin-st-andrew-s.html" class="adam-location_link">St. Andrew&rsquo;s, Dublin, Dublin, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2157.html" class="adam-name_link">Elizabeth Pendred</a> (~1674-1710)</span></div>');addPin(54.5973,-5.93012,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 54.5973, -5.93012</p><span class="adam-map-location"><a href="places-northern-ireland-belfast.html" class="adam-location_link">Belfast, Northern Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I155.html" class="adam-name_link">Sarah Whiteside</a> (1897-1983)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4346.html" class="adam-name_link">Anne Jane Neill</a> (1868-1937)</span></div>');addPin(53.25,-3.16667,1,myImageM,'John Hooks','<div class="infowindow"><p>Coordinates: 53.25, -3.16667</p><span class="adam-map-location"><a href="places-wales-flintshire-of.html" class="adam-location_link">of, Flintshire, Wales</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9943.html" class="adam-name_link">John Hooks</a> (-)</span></div>');addPin(53.1667,-2.58333,1,myImageM,'Hugh Aldersey','<div class="infowindow"><p>Coordinates: 53.1667, -2.58333</p><span class="adam-map-location"><a href="places-england-cheshire-of.html" class="adam-location_link">of, Cheshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9945.html" class="adam-name_link">Hugh Aldersey</a> (-)</span></div>');addPin(52.2946,-0.797497,1,myImageM,'William Pendred','<div class="infowindow"><p>Coordinates: 52.2946, -0.797497</p><span class="adam-map-location"><a href="places-england-northamptonshire-of-sywell.html" class="adam-location_link">of Sywell, Northamptonshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2158.html" class="adam-name_link">William Pendred</a> (-)</span></div>');addPin(1000,1000,14,myImage,'14 Persons','<div class="infowindow"><p>Coordinates: 1000, 1000</p><span class="adam-map-location"><a href="places-0402.html" class="adam-location_link">0402</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4345.html" class="adam-name_link">Thomas John Whiteside</a> (1867-1905)</span><br/><br/><span class="adam-map-location"><a href="places-tullow.html" class="adam-location_link">Tullow</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2122.html" class="adam-name_link">Thomas Bunbury, of Kill</a> (1705-1774)</span><br/><br/><span class="adam-map-location"><a href="places-ireland-carlow-of-broughillstown.html" class="adam-location_link">of Broughillstown, Carlow, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2159.html" class="adam-name_link">Catherine Eustace</a> (-)</span><br/><br/><span class="adam-map-location"><a href="places-of-stanney.html" class="adam-location_link">of Stanney</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2156.html" class="adam-name_link">Sir Henry Bunbury</a> (-)</span><br/><br/><span class="adam-map-location"><a href="places-of-backford.html" class="adam-location_link">of Backford</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9950.html" class="adam-name_link">Henry Birkenhead, Esq.</a> (-)</span><br/><br/><span class="adam-map-location"><a href="places-of-speake.html" class="adam-location_link">of Speake</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9949.html" class="adam-name_link">Sir William Norris, Knt</a> (-)</span><br/><br/><span class="adam-map-location"><a href="places-of-stanny.html" class="adam-location_link">of Stanny</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9863.html" class="adam-name_link">Henry Bunbury, Esq.</a> (~1516-~1547)</span><br/><br/><span class="adam-map-location"><a href="places-of-aston.html" class="adam-location_link">of Aston</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9947.html" class="adam-name_link">John Aston</a> (-)</span><br/><br/><span class="adam-map-location"><a href="places-of-stanny.html" class="adam-location_link">of Stanny</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9861.html" class="adam-name_link">Richard Bunbury, Esq.</a> (-~1541)</span><br/><br/><span class="adam-map-location"><a href="places-of-stanny.html" class="adam-location_link">of Stanny</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9859.html" class="adam-name_link">John Bunbury, Esq.</a> (-1507)</span><br/><br/><span class="adam-map-location"><a href="places-of-aldersey-and-spurstoe.html" class="adam-location_link">of Aldersey and Spurstoe</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9946.html" class="adam-name_link">Henry Aldersey</a> (-)</span><br/><br/><span class="adam-map-location"><a href="places-of-stanny.html" class="adam-location_link">of Stanny</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9857.html" class="adam-name_link">John Bunbury</a> (-1470)</span><br/><br/><span class="adam-map-location"><a href="places-of-speake.html" class="adam-location_link">of Speake</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9944.html" class="adam-name_link">William Norris, Esq.</a> (-)</span><br/><br/><span class="adam-map-location"><a href="places-in-wirral.html" class="adam-location_link">in Wirral</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9850.html" class="adam-name_link">William de Bunbury</a> (-)</span></div>');
+ addPin(52.4878,-8.07833,1,myImageM,'Matthew Bunbury','<div class="infowindow"><p>Coordinates: 52.4878, -8.07833</p><span class="adam-map-location"><a href="places-ireland-of-kilfeacle.html" class="adam-location_link">of Kilfeacle, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2202.html" class="adam-name_link">Matthew Bunbury</a> (-)</span></div>');addPin(52.8976,-6.71076,1,myImageW,'Catherine Eustace','<div class="infowindow"><p>Coordinates: 52.8976, -6.71076</p><span class="adam-map-location"><a href="places-ireland-carlow-of-broughillstown.html" class="adam-location_link">of Broughillstown, Carlow, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2159.html" class="adam-name_link">Catherine Eustace</a> (-)</span></div>');addPin(52.8789,-6.69333,1,myImageM,'William Bunbury, I of Lisnavagh','<div class="infowindow"><p>Coordinates: 52.8789, -6.69333</p><span class="adam-map-location"><a href="places-ireland-carlow-rathvilly-of-lisnavagh.html" class="adam-location_link">of Lisnavagh, Rathvilly, Carlow, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2153.html" class="adam-name_link">William Bunbury, I of Lisnavagh</a> (1674-1710)</span></div>');addPin(53.3592,-6.43889,1,myImageW,'Mary Bernard','<div class="infowindow"><p>Coordinates: 53.3592, -6.43889</p><span class="adam-map-location"><a href="places-ireland-dublin-of-lucan.html" class="adam-location_link">of Lucan, Dublin, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2130.html" class="adam-name_link">Mary Bernard</a> (-)</span></div>');addPin(53.3203,-6.26333,1,myImageM,'George John Bunbury','<div class="infowindow"><p>Coordinates: 53.3203, -6.26333</p><span class="adam-map-location"><a href="places-ireland-leinster-rathmines.html" class="adam-location_link">Rathmines, Leinster, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I154.html" class="adam-name_link">George John Bunbury</a> (1888-1969)</span></div>');addPin(53.3331,-6.24889,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 53.3331, -6.24889</p><span class="adam-map-location"><a href="places-ireland-dublin-dublin-st-bridget-s.html" class="adam-location_link">St. Bridget&rsquo;s, Dublin, Dublin, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2123.html" class="adam-name_link">Susan Priscilla Isaac</a> (1738-1797)</span><br/><br/><span class="adam-map-location"><a href="places-ireland-dublin-dublin-st-andrew-s.html" class="adam-location_link">St. Andrew&rsquo;s, Dublin, Dublin, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2157.html" class="adam-name_link">Elizabeth Pendred</a> (~1674-1710)</span></div>');addPin(54.5973,-5.93012,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 54.5973, -5.93012</p><span class="adam-map-location"><a href="places-northern-ireland-belfast.html" class="adam-location_link">Belfast, Northern Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I155.html" class="adam-name_link">Sarah Whiteside</a> (1897-1983)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4346.html" class="adam-name_link">Anne Jane Neill</a> (1868-1937)</span></div>');addPin(53.25,-3.16667,1,myImageM,'John Hooks','<div class="infowindow"><p>Coordinates: 53.25, -3.16667</p><span class="adam-map-location"><a href="places-wales-flintshire-of.html" class="adam-location_link">of, Flintshire, Wales</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9943.html" class="adam-name_link">John Hooks</a> (-)</span></div>');addPin(53.1667,-2.58333,1,myImageM,'Hugh Aldersey','<div class="infowindow"><p>Coordinates: 53.1667, -2.58333</p><span class="adam-map-location"><a href="places-england-cheshire-of.html" class="adam-location_link">of, Cheshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9945.html" class="adam-name_link">Hugh Aldersey</a> (-)</span></div>');addPin(52.2946,-0.797497,1,myImageM,'William Pendred','<div class="infowindow"><p>Coordinates: 52.2946, -0.797497</p><span class="adam-map-location"><a href="places-england-northamptonshire-of-sywell.html" class="adam-location_link">of Sywell, Northamptonshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2158.html" class="adam-name_link">William Pendred</a> (-)</span></div>');addPin(1000,1000,13,myImage,'13 Persons','<div class="infowindow"><p>Coordinates: 1000, 1000</p><span class="adam-map-location"><a href="places-0402.html" class="adam-location_link">0402</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4345.html" class="adam-name_link">Thomas John Whiteside</a> (1867-1905)</span><br/><br/><span class="adam-map-location"><a href="places-tullow.html" class="adam-location_link">Tullow</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2122.html" class="adam-name_link">Thomas Bunbury, of Kill</a> (1705-1774)</span><br/><br/><span class="adam-map-location"><a href="places-of-stanney.html" class="adam-location_link">of Stanney</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2156.html" class="adam-name_link">Sir Henry Bunbury</a> (-)</span><br/><br/><span class="adam-map-location"><a href="places-of-backford.html" class="adam-location_link">of Backford</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9950.html" class="adam-name_link">Henry Birkenhead, Esq.</a> (-)</span><br/><br/><span class="adam-map-location"><a href="places-of-speake.html" class="adam-location_link">of Speake</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9949.html" class="adam-name_link">Sir William Norris, Knt</a> (-)</span><br/><br/><span class="adam-map-location"><a href="places-of-stanny.html" class="adam-location_link">of Stanny</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9863.html" class="adam-name_link">Henry Bunbury, Esq.</a> (~1516-~1547)</span><br/><br/><span class="adam-map-location"><a href="places-of-aston.html" class="adam-location_link">of Aston</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9947.html" class="adam-name_link">John Aston</a> (-)</span><br/><br/><span class="adam-map-location"><a href="places-of-stanny.html" class="adam-location_link">of Stanny</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9861.html" class="adam-name_link">Richard Bunbury, Esq.</a> (-~1541)</span><br/><br/><span class="adam-map-location"><a href="places-of-stanny.html" class="adam-location_link">of Stanny</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9859.html" class="adam-name_link">John Bunbury, Esq.</a> (-1507)</span><br/><br/><span class="adam-map-location"><a href="places-of-aldersey-and-spurstoe.html" class="adam-location_link">of Aldersey and Spurstoe</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9946.html" class="adam-name_link">Henry Aldersey</a> (-)</span><br/><br/><span class="adam-map-location"><a href="places-of-stanny.html" class="adam-location_link">of Stanny</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9857.html" class="adam-name_link">John Bunbury</a> (-1470)</span><br/><br/><span class="adam-map-location"><a href="places-of-speake.html" class="adam-location_link">of Speake</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9944.html" class="adam-name_link">William Norris, Esq.</a> (-)</span><br/><br/><span class="adam-map-location"><a href="places-in-wirral.html" class="adam-location_link">in Wirral</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9850.html" class="adam-name_link">William de Bunbury</a> (-)</span></div>');
  markerCluster = new MarkerClusterer(map, myPins, mcOptions);
- var myData={max:1,data:[{lat:52.4878,lng:-8.07833,count:0.3},{lat:52.8789,lng:-6.69333,count:0.3},{lat:53.3592,lng:-6.43889,count:0.3},{lat:53.3203,lng:-6.26333,count:0.3},{lat:53.3331,lng:-6.24889,count:0.6},{lat:54.5973,lng:-5.93012,count:0.6},{lat:53.25,lng:-3.16667,count:0.3},{lat:53.1667,lng:-2.58333,count:0.3},{lat:52.2946,lng:-0.797497,count:0.3},]};
+ var myData={max:1,data:[{lat:52.4878,lng:-8.07833,count:0.3},{lat:52.8976,lng:-6.71076,count:0.3},{lat:52.8789,lng:-6.69333,count:0.3},{lat:53.3592,lng:-6.43889,count:0.3},{lat:53.3203,lng:-6.26333,count:0.3},{lat:53.3331,lng:-6.24889,count:0.6},{lat:54.5973,lng:-5.93012,count:0.6},{lat:53.25,lng:-3.16667,count:0.3},{lat:53.1667,lng:-2.58333,count:0.3},{lat:52.2946,lng:-0.797497,count:0.3},]};
  google.maps.event.addListenerOnce(map,'idle',function(){heatmap.setDataSet(myData);});
 }
 </script>
 <div class="mapstatus">
 <span class="mapstatusspan"><p>
-10 locations have been Splattered across your map where 26 ancestors were born.  The cluster count shows the number of times people appear within each cluster.  Click on a cluster or zoom in for more detail.
+11 locations have been Splattered across your map where 26 ancestors were born.  The cluster count shows the number of times people appear within each cluster.  Click on a cluster or zoom in for more detail.
 </p></span>
 </div>
 <script src="adam-min.js" type="text/javascript"></script>
@@ -690,19 +702,19 @@ function initializePins() {
 </div>
 <script type="text/javascript">
 $(document).ready(function () {
-  $('#tabs').tabs({
-    activate: function (event, ui) {
-      var act = $("#tabs").tabs("option", "active");
-		  if (act == 3) {
-        google.maps.event.trigger(map, 'resize');
-      }
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    e.target
+    e.relatedTarget
+  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      google.maps.event.trigger(map, 'resize');
     }
   });
 });
 </script>
 </div>
+</div>
 
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -722,7 +734,7 @@ $(document).ready(function () {
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="Julia Ann Hammer, (twin) Profile - Minchin Genealogy | Minchin.ca" />
  <title>Julia Ann Hammer, (twin) Profile - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -67,22 +74,24 @@ Version:   1.0.4        December 29, 2013
 
 <h1 id="adam-page-title">Julia Ann Hammer, (twin) Profile</h1>
 
-<div id="tabs">
-<ul>
+<div id="adam-tab-list">
+<ul id="tab-list" class="nav nav-tabs">
 
-<li><a class="click" href="#profile">Profile</a></li>
+<li class="active"><a class="click" href="#profile" data-toggle="tab">Profile</a></li>
 
-<li><a class="click" href="#sources">Sources (1)</a></li>
+<li><a class="click" href="#sources" data-toggle="tab">Sources (1)</a></li>
 
-<li><a class="click" href="#chart">Chart</a></li>
+<li><a class="click" href="#chart" data-toggle="tab">Chart</a></li>
 
-<li><a class="click" href="#alist">Ancestors List (27)</a></li>
+<li><a class="click" href="#alist" data-toggle="tab">Ancestors List (27)</a></li>
 
-<li><a class="click" href="#map">Ancestors Distribution Map</a></li>
+<li><a class="click" href="#map" data-toggle="tab">Ancestors Distribution Map</a></li>
 
 </ul>
 
-<div id="profile" class="adam-tab">
+<div class="tab-content">
+
+<div id="profile" class="tab-pane active adam-tab">
 
 <ul id="adam-person_profile" class="adam-tab_style">
 <li>
@@ -153,7 +162,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="sources" class="adam-tab">
+<div id="sources" class="tab-pane adam-tab">
 
 <ul id="adam-person_sources" class="adam-tab_style">
 <li>
@@ -173,7 +182,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="chart" class="adam-tab">
+<div id="chart" class="tab-pane adam-tab">
 <ul>
 <li id="adam-person_chart">
 <div style="height: 665px;">&nbsp;</div>
@@ -324,7 +333,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="alist" class="adam-tab">
+<div id="alist" class="tab-pane adam-tab">
 
 <div class="adam-al_page">
 <ul class="adam-al_legend">
@@ -338,135 +347,135 @@ GEDCOM file imported on 4 February 2013
 
 <li class="adam-al_generation">Generation 1</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1] &nbsp; <a href="profile-I7876.html" class="adam-name_link">Julia Ann Hammer, (twin)</a> (1836-1920)</div>
+  <div class="adam-al_name">[1] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7876.html" class="adam-name_link">Julia Ann Hammer, (twin)</a> (1836-1920)</div>
   <div class="adam-al_path"><span title="Missouri">MO</span>-<span title="Utah">UT</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 2</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[2] &nbsp; <a href="profile-I7869.html" class="adam-name_link">Austin Hammer</a> (1806-1838)</div>
+  <div class="adam-al_name">[2] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7869.html" class="adam-name_link">Austin Hammer</a> (1806-1838)</div>
   <div class="adam-al_path"><span title="North Carolina">NC</span>-<span title="Indiana">IN</span>-<span title="Missouri">MO</span>-<span title=""></span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3] &nbsp; <a href="profile-I7870.html" class="adam-name_link">Nancy Jane Elston, (twin)</a> (1806-1871)</div>
+  <div class="adam-al_name">[3] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7870.html" class="adam-name_link">Nancy Jane Elston, (twin)</a> (1806-1871)</div>
   <div class="adam-al_path"><span title="Kentucky">KY</span>-<span title="Indiana">IN</span>-<span title="Utah">UT</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 3</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[4] &nbsp; <a href="profile-I7879.html" class="adam-name_link">John Hammer</a> (1769-1841)</div>
+  <div class="adam-al_name">[4] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7879.html" class="adam-name_link">John Hammer</a> (1769-1841)</div>
   <div class="adam-al_path"><span title="North Carolina">NC</span>-<span title="Indiana">IN</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[5] &nbsp; <a href="profile-I7880.html" class="adam-name_link">Nancy York</a> (1785->1806)</div>
+  <div class="adam-al_name">[5] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7880.html" class="adam-name_link">Nancy York</a> (1785->1806)</div>
   <div class="adam-al_path"><span title="North Carolina">NC</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[6] &nbsp; <a href="profile-I7881.html" class="adam-name_link">Josiah Elston</a> (1759-1830)</div>
+  <div class="adam-al_name">[6] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7881.html" class="adam-name_link">Josiah Elston</a> (1759-1830)</div>
   <div class="adam-al_path"><span title="Kentucky">KY</span>-<span title="North Carolina">NC</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[7] &nbsp; <a href="profile-I7882.html" class="adam-name_link">Rebecca Lewis</a> (~1767->1814)</div>
+  <div class="adam-al_name">[7] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7882.html" class="adam-name_link">Rebecca Lewis</a> (~1767->1814)</div>
   <div class="adam-al_path"><span title="Kentucky">KY</span>-<span title="North Carolina">NC</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 4</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[8] &nbsp; <a href="profile-I8007.html" class="adam-name_link">Abraham Hammer</a> (1731-1821)</div>
+  <div class="adam-al_name">[8] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8007.html" class="adam-name_link">Abraham Hammer</a> (1731-1821)</div>
   <div class="adam-al_path"><span title="Pennsylvania">PA</span>-<span title="Tennessee">TN</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[9] &nbsp; <a href="profile-I8008.html" class="adam-name_link">Rachel Hammer</a> (1731->1772)</div>
+  <div class="adam-al_name">[9] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8008.html" class="adam-name_link">Rachel Hammer</a> (1731->1772)</div>
   <div class="adam-al_path"><span title="Pennsylvania">PA</span>-<span title="North Carolina">NC</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[10] &nbsp; <b><a href="profile-I8018.html" class="adam-name_link">John York</a> (~1740-1827)</b></div>
+  <div class="adam-al_name">[10] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8018.html" class="adam-name_link">John York</a> (~1740-1827)</b></div>
   <div class="adam-al_path"><span title="North Carolina">NC</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[11] &nbsp; <b><a href="profile-I7952.html" class="adam-name_link">Mrs John York</a> (~1744->1773)</b></div>
+  <div class="adam-al_name">[11] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7952.html" class="adam-name_link">Mrs John York</a> (~1744->1773)</b></div>
   <div class="adam-al_path"><span title="North Carolina">NC</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[12] &nbsp; <a href="profile-I7962.html" class="adam-name_link">William Elston</a> (1738-1789)</div>
+  <div class="adam-al_name">[12] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7962.html" class="adam-name_link">William Elston</a> (1738-1789)</div>
   <div class="adam-al_path"><span title="New Jersey">NJ</span>-<span title="Kentucky">KY</span>-<span title="Tennessee">TN</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[13] &nbsp; <b><a href="profile-I7963.html" class="adam-name_link">Mrs Mary Elston</a> (~1738->1788)</b></div>
+  <div class="adam-al_name">[13] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7963.html" class="adam-name_link">Mrs Mary Elston</a> (~1738->1788)</b></div>
   <div class="adam-al_path"><span title="New Jersey">NJ</span>-<span title="Kentucky">KY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[14] &nbsp; <b><a href="profile-I8019.html" class="adam-name_link">Benjamin Lewis</a> (~1741->1767)</b></div>
+  <div class="adam-al_name">[14] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8019.html" class="adam-name_link">Benjamin Lewis</a> (~1741->1767)</b></div>
   <div class="adam-al_path"><span title="Kentucky">KY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[15] &nbsp; <b><a href="profile-I7022.html" class="adam-name_link">Mrs Benjamin Lewis</a> (~1743->1767)</b></div>
+  <div class="adam-al_name">[15] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7022.html" class="adam-name_link">Mrs Benjamin Lewis</a> (~1743->1767)</b></div>
   <div class="adam-al_path"><span title="Kentucky">KY</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 5</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[16] &nbsp; <b><a href="profile-I8020.html" class="adam-name_link">John (Johannes) Hammer</a> (1684-1765)</b></div>
+  <div class="adam-al_name">[16] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8020.html" class="adam-name_link">John (Johannes) Hammer</a> (1684-1765)</b></div>
   <div class="adam-al_path"><span title="Germany">DEU</span>-<span title="Yorkshire">YKS</span>-<span title="Germany">DEU</span>-<span title="Pennsylvania">PA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[17] &nbsp; <i><b><a href="profile-I8021.html" class="adam-name_link">Mrs Jane Hammer</a> (1689-<1744)</b></i></div>
+  <div class="adam-al_name">[17] <span class="adam-aid">&nbsp;&nbsp;</span><i><b><a href="profile-I8021.html" class="adam-name_link">Mrs Jane Hammer</a> (1689-<1744)</b></i></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[18] &nbsp; <b><a href="profile-I8027.html" class="adam-name_link">Aaron Hammer</a> (~1705->1731)</b></div>
+  <div class="adam-al_name">[18] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8027.html" class="adam-name_link">Aaron Hammer</a> (~1705->1731)</b></div>
   <div class="adam-al_path"><span title="Germany">DEU</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[19] &nbsp; <b><a href="profile-I8102.html" class="adam-name_link">Mrs Aaron Hammer</a> (->1731)</b></div>
+  <div class="adam-al_name">[19] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8102.html" class="adam-name_link">Mrs Aaron Hammer</a> (->1731)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[24] &nbsp; <a href="profile-I7975.html" class="adam-name_link">William Elston</a> (~1693-1789)</div>
+  <div class="adam-al_name">[24] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7975.html" class="adam-name_link">William Elston</a> (~1693-1789)</div>
   <div class="adam-al_path"><span title="New Jersey">NJ</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[25] &nbsp; <b><a href="profile-I7976.html" class="adam-name_link">Sarah Spencer</a> (~1694->1742)</b></div>
+  <div class="adam-al_name">[25] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7976.html" class="adam-name_link">Sarah Spencer</a> (~1694->1742)</b></div>
   <div class="adam-al_path"><span title="New Jersey">NJ</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 6</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[48] &nbsp; <a href="profile-I7986.html" class="adam-name_link">William Elston</a> (~1660-1727)</div>
+  <div class="adam-al_name">[48] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7986.html" class="adam-name_link">William Elston</a> (~1660-1727)</div>
   <div class="adam-al_path"><span title="New Jersey">NJ</span>-<span title="New York">NY</span>-<span title="New Jersey">NJ</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[49] &nbsp; <a href="profile-I7987.html" class="adam-name_link">Elizabeth Cole</a> (~1662-1738)</div>
+  <div class="adam-al_name">[49] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7987.html" class="adam-name_link">Elizabeth Cole</a> (~1662-1738)</div>
   <div class="adam-al_path"><span title="New York">NY</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 7</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[96] &nbsp; <a href="profile-I7992.html" class="adam-name_link">John Elston</a> (~1634-1700)</div>
+  <div class="adam-al_name">[96] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7992.html" class="adam-name_link">John Elston</a> (~1634-1700)</div>
   <div class="adam-al_path"><span title="New Jersey">NJ</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[97] &nbsp; <b><a href="profile-I7993.html" class="adam-name_link">Joan Clapp</a> (~1638->1681)</b></div>
+  <div class="adam-al_name">[97] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7993.html" class="adam-name_link">Joan Clapp</a> (~1638->1681)</b></div>
   <div class="adam-al_path"><span title="New Jersey">NJ</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[98] &nbsp; <b><a href="profile-I8004.html" class="adam-name_link">Abraham Cole</a> (~1636-)</b></div>
+  <div class="adam-al_name">[98] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8004.html" class="adam-name_link">Abraham Cole</a> (~1636-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 8</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[192] &nbsp; <b><a href="profile-I9449.html" class="adam-name_link">John Elston</a> (~1608-)</b></div>
+  <div class="adam-al_name">[192] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9449.html" class="adam-name_link">John Elston</a> (~1608-)</b></div>
   <div class="adam-al_path"><span title="New Jersey">NJ</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[193] &nbsp; <b><a href="profile-I9450.html" class="adam-name_link">Mrs John Elston</a> (~1612->1634)</b></div>
+  <div class="adam-al_name">[193] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9450.html" class="adam-name_link">Mrs John Elston</a> (~1612->1634)</b></div>
   <div class="adam-al_path"><span title="New Jersey">NJ</span></div><br>
 </li>
 </ul>
 </div>
 </div>
-<div id="map" class="adam-tab">
+<div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <br/>
 <div class="floatmapbuttons"><p>
@@ -485,9 +494,9 @@ var mcOptions={styles:[{ height:35,width:35,url:"mapmarker1.png"},
  { height:35,width:35,url:"mapmarker4.png"},
  { height:35,width:35,url:"mapmarker5.png"}]};
 function initializePins() {
- addPin(38.0406,-84.5037,1,myImageW,'Nancy Jane Elston, (twin)','<div class="infowindow"><p>Coordinates: 38.0406, -84.5037</p><span class="adam-map-location"><a href="places-usa-kentucky-fayette-lexington.html" class="adam-location_link">Lexington, Fayette, Kentucky, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7870.html" class="adam-name_link">Nancy Jane Elston, (twin)</a> (1806-1871)</span></div>');addPin(37.7202,-84.278,4,myImage,'4 Persons','<div class="infowindow"><p>Coordinates: 37.7202, -84.278</p><span class="adam-map-location"><a href="places-usa-kentucky-madison.html" class="adam-location_link">Madison, Kentucky, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7881.html" class="adam-name_link">Josiah Elston</a> (1759-1830)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7882.html" class="adam-name_link">Rebecca Lewis</a> (~1767->1814)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8019.html" class="adam-name_link">Benjamin Lewis</a> (~1741->1767)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7022.html" class="adam-name_link">Mrs Benjamin Lewis</a> (~1743->1767)</span></div>');addPin(35.745,-79.8297,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 35.745, -79.8297</p><span class="adam-map-location"><a href="places-usa-north-carolina-randolph.html" class="adam-location_link">Randolph, North Carolina, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7869.html" class="adam-name_link">Austin Hammer</a> (1806-1838)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7879.html" class="adam-name_link">John Hammer</a> (1769-1841)</span></div>');addPin(35.7997,-79.7483,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 35.7997, -79.7483</p><span class="adam-map-location"><a href="places-usa-north-carolina-randolph-millboro.html" class="adam-location_link">Millboro, Randolph, North Carolina, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7880.html" class="adam-name_link">Nancy York</a> (1785->1806)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8018.html" class="adam-name_link">John York</a> (~1740-1827)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7952.html" class="adam-name_link">Mrs John York</a> (~1744->1773)</span></div>');addPin(40.1551,-74.8288,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 40.1551, -74.8288</p><span class="adam-map-location"><a href="places-usa-pennsylvania-bucks.html" class="adam-location_link">Bucks, Pennsylvania, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8007.html" class="adam-name_link">Abraham Hammer</a> (1731-1821)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8008.html" class="adam-name_link">Rachel Hammer</a> (1731->1772)</span></div>');addPin(40.5576,-74.2846,9,myImage,'9 Persons','<div class="infowindow"><p>Coordinates: 40.5576, -74.2846</p><span class="adam-map-location"><a href="places-usa-new-jersey-middlesex-woodbridge.html" class="adam-location_link">Woodbridge, Middlesex, New Jersey, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7962.html" class="adam-name_link">William Elston</a> (1738-1789)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7963.html" class="adam-name_link">Mrs Mary Elston</a> (~1738->1788)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7975.html" class="adam-name_link">William Elston</a> (~1693-1789)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7976.html" class="adam-name_link">Sarah Spencer</a> (~1694->1742)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7986.html" class="adam-name_link">William Elston</a> (~1660-1727)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7992.html" class="adam-name_link">John Elston</a> (~1634-1700)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7993.html" class="adam-name_link">Joan Clapp</a> (~1638->1681)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9449.html" class="adam-name_link">John Elston</a> (~1608-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9450.html" class="adam-name_link">Mrs John Elston</a> (~1612->1634)</span></div>');addPin(40.5795,-74.1502,1,myImageW,'Elizabeth Cole','<div class="infowindow"><p>Coordinates: 40.5795, -74.1502</p><span class="adam-map-location"><a href="places-usa-new-york-richmond-staten-island.html" class="adam-location_link">Staten Island, Richmond, New York, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7987.html" class="adam-name_link">Elizabeth Cole</a> (~1662-1738)</span></div>');addPin(53.3414,-1.29666,1,myImageW,'Mrs Jane Hammer','<div class="infowindow"><p>Coordinates: 53.3414, -1.29666</p><span class="adam-map-location"><a href="places-england-yorkshire-wales.html" class="adam-location_link">Wales, Yorkshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8021.html" class="adam-name_link">Mrs Jane Hammer</a> (1689-<1744)</span></div>');addPin(49.3662,7.87716,1,myImageM,'John (Johannes) Hammer','<div class="infowindow"><p>Coordinates: 49.3662, 7.87716</p><span class="adam-map-location"><a href="places-germany-palatinate.html" class="adam-location_link">Palatinate, Germany</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8020.html" class="adam-name_link">John (Johannes) Hammer</a> (1684-1765)</span></div>');addPin(51.1657,10.4515,1,myImageM,'Aaron Hammer','<div class="infowindow"><p>Coordinates: 51.1657, 10.4515</p><span class="adam-map-location"><a href="places-germany.html" class="adam-location_link">Germany</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8027.html" class="adam-name_link">Aaron Hammer</a> (~1705->1731)</span></div>');addPin(1000,1000,1,myImageW,'Julia Ann Hammer, (twin)','<div class="infowindow"><p>Coordinates: 1000, 1000</p><span class="adam-map-location"><a href="places-usa-missouri-caldwell-shoal-creek.html" class="adam-location_link">Shoal Creek, Caldwell, Missouri, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7876.html" class="adam-name_link">Julia Ann Hammer, (twin)</a> (1836-1920)</span></div>');
+ addPin(39.6733,-93.7686,1,myImageW,'Julia Ann Hammer, (twin)','<div class="infowindow"><p>Coordinates: 39.6733, -93.7686</p><span class="adam-map-location"><a href="places-usa-missouri-caldwell-shoal-creek.html" class="adam-location_link">Shoal Creek, Caldwell, Missouri, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7876.html" class="adam-name_link">Julia Ann Hammer, (twin)</a> (1836-1920)</span></div>');addPin(38.0406,-84.5037,1,myImageW,'Nancy Jane Elston, (twin)','<div class="infowindow"><p>Coordinates: 38.0406, -84.5037</p><span class="adam-map-location"><a href="places-usa-kentucky-fayette-lexington.html" class="adam-location_link">Lexington, Fayette, Kentucky, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7870.html" class="adam-name_link">Nancy Jane Elston, (twin)</a> (1806-1871)</span></div>');addPin(37.7202,-84.278,4,myImage,'4 Persons','<div class="infowindow"><p>Coordinates: 37.7202, -84.278</p><span class="adam-map-location"><a href="places-usa-kentucky-madison.html" class="adam-location_link">Madison, Kentucky, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7881.html" class="adam-name_link">Josiah Elston</a> (1759-1830)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7882.html" class="adam-name_link">Rebecca Lewis</a> (~1767->1814)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8019.html" class="adam-name_link">Benjamin Lewis</a> (~1741->1767)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7022.html" class="adam-name_link">Mrs Benjamin Lewis</a> (~1743->1767)</span></div>');addPin(35.745,-79.8297,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 35.745, -79.8297</p><span class="adam-map-location"><a href="places-usa-north-carolina-randolph.html" class="adam-location_link">Randolph, North Carolina, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7869.html" class="adam-name_link">Austin Hammer</a> (1806-1838)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7879.html" class="adam-name_link">John Hammer</a> (1769-1841)</span></div>');addPin(35.7997,-79.7483,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 35.7997, -79.7483</p><span class="adam-map-location"><a href="places-usa-north-carolina-randolph-millboro.html" class="adam-location_link">Millboro, Randolph, North Carolina, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7880.html" class="adam-name_link">Nancy York</a> (1785->1806)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8018.html" class="adam-name_link">John York</a> (~1740-1827)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7952.html" class="adam-name_link">Mrs John York</a> (~1744->1773)</span></div>');addPin(40.1551,-74.8288,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 40.1551, -74.8288</p><span class="adam-map-location"><a href="places-usa-pennsylvania-bucks.html" class="adam-location_link">Bucks, Pennsylvania, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8007.html" class="adam-name_link">Abraham Hammer</a> (1731-1821)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8008.html" class="adam-name_link">Rachel Hammer</a> (1731->1772)</span></div>');addPin(40.5576,-74.2846,9,myImage,'9 Persons','<div class="infowindow"><p>Coordinates: 40.5576, -74.2846</p><span class="adam-map-location"><a href="places-usa-new-jersey-middlesex-woodbridge.html" class="adam-location_link">Woodbridge, Middlesex, New Jersey, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7962.html" class="adam-name_link">William Elston</a> (1738-1789)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7963.html" class="adam-name_link">Mrs Mary Elston</a> (~1738->1788)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7975.html" class="adam-name_link">William Elston</a> (~1693-1789)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7976.html" class="adam-name_link">Sarah Spencer</a> (~1694->1742)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7986.html" class="adam-name_link">William Elston</a> (~1660-1727)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7992.html" class="adam-name_link">John Elston</a> (~1634-1700)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7993.html" class="adam-name_link">Joan Clapp</a> (~1638->1681)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9449.html" class="adam-name_link">John Elston</a> (~1608-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9450.html" class="adam-name_link">Mrs John Elston</a> (~1612->1634)</span></div>');addPin(40.5795,-74.1502,1,myImageW,'Elizabeth Cole','<div class="infowindow"><p>Coordinates: 40.5795, -74.1502</p><span class="adam-map-location"><a href="places-usa-new-york-richmond-staten-island.html" class="adam-location_link">Staten Island, Richmond, New York, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7987.html" class="adam-name_link">Elizabeth Cole</a> (~1662-1738)</span></div>');addPin(53.3414,-1.29666,1,myImageW,'Mrs Jane Hammer','<div class="infowindow"><p>Coordinates: 53.3414, -1.29666</p><span class="adam-map-location"><a href="places-england-yorkshire-wales.html" class="adam-location_link">Wales, Yorkshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8021.html" class="adam-name_link">Mrs Jane Hammer</a> (1689-<1744)</span></div>');addPin(49.3662,7.87716,1,myImageM,'John (Johannes) Hammer','<div class="infowindow"><p>Coordinates: 49.3662, 7.87716</p><span class="adam-map-location"><a href="places-germany-palatinate.html" class="adam-location_link">Palatinate, Germany</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8020.html" class="adam-name_link">John (Johannes) Hammer</a> (1684-1765)</span></div>');addPin(51.1657,10.4515,1,myImageM,'Aaron Hammer','<div class="infowindow"><p>Coordinates: 51.1657, 10.4515</p><span class="adam-map-location"><a href="places-germany.html" class="adam-location_link">Germany</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8027.html" class="adam-name_link">Aaron Hammer</a> (~1705->1731)</span></div>');
  markerCluster = new MarkerClusterer(map, myPins, mcOptions);
- var myData={max:1,data:[{lat:38.0406,lng:-84.5037,count:0.3},{lat:37.7202,lng:-84.278,count:1.2},{lat:35.745,lng:-79.8297,count:0.6},{lat:35.7997,lng:-79.7483,count:0.9},{lat:40.1551,lng:-74.8288,count:0.6},{lat:40.5576,lng:-74.2846,count:2.7},{lat:40.5795,lng:-74.1502,count:0.3},{lat:53.3414,lng:-1.29666,count:0.3},{lat:49.3662,lng:7.87716,count:0.3},{lat:51.1657,lng:10.4515,count:0.3},]};
+ var myData={max:1,data:[{lat:39.6733,lng:-93.7686,count:0.3},{lat:38.0406,lng:-84.5037,count:0.3},{lat:37.7202,lng:-84.278,count:1.2},{lat:35.745,lng:-79.8297,count:0.6},{lat:35.7997,lng:-79.7483,count:0.9},{lat:40.1551,lng:-74.8288,count:0.6},{lat:40.5576,lng:-74.2846,count:2.7},{lat:40.5795,lng:-74.1502,count:0.3},{lat:53.3414,lng:-1.29666,count:0.3},{lat:49.3662,lng:7.87716,count:0.3},{lat:51.1657,lng:10.4515,count:0.3},]};
  google.maps.event.addListenerOnce(map,'idle',function(){heatmap.setDataSet(myData);});
 }
 </script>
@@ -501,16 +510,16 @@ function initializePins() {
 </div>
 <script type="text/javascript">
 $(document).ready(function () {
-  $('#tabs').tabs({
-    activate: function (event, ui) {
-      var act = $("#tabs").tabs("option", "active");
-		  if (act == 4) {
-        google.maps.event.trigger(map, 'resize');
-      }
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    e.target
+    e.relatedTarget
+  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      google.maps.event.trigger(map, 'resize');
     }
   });
 });
 </script>
+</div>
 </div>
 
 <ul>
@@ -519,7 +528,7 @@ $(document).ready(function () {
 Last Modified: Feb 4, 2013
 </li>
 </ul>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -539,7 +548,7 @@ Last Modified: Feb 4, 2013
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

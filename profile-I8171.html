@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="Zadock Young Profile - Minchin Genealogy | Minchin.ca" />
  <title>Zadock Young Profile - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -67,22 +74,24 @@ Version:   1.0.4        December 29, 2013
 
 <h1 id="adam-page-title">Zadock Young Profile</h1>
 
-<div id="tabs">
-<ul>
+<div id="adam-tab-list">
+<ul id="tab-list" class="nav nav-tabs">
 
-<li><a class="click" href="#profile">Profile</a></li>
+<li class="active"><a class="click" href="#profile" data-toggle="tab">Profile</a></li>
 
-<li><a class="click" href="#sources">Sources (1)</a></li>
+<li><a class="click" href="#sources" data-toggle="tab">Sources (1)</a></li>
 
-<li><a class="click" href="#chart">Chart</a></li>
+<li><a class="click" href="#chart" data-toggle="tab">Chart</a></li>
 
-<li><a class="click" href="#alist">Ancestors List (18)</a></li>
+<li><a class="click" href="#alist" data-toggle="tab">Ancestors List (18)</a></li>
 
-<li><a class="click" href="#map">Ancestors Distribution Map</a></li>
+<li><a class="click" href="#map" data-toggle="tab">Ancestors Distribution Map</a></li>
 
 </ul>
 
-<div id="profile" class="adam-tab">
+<div class="tab-content">
+
+<div id="profile" class="tab-pane active adam-tab">
 
 <ul id="adam-person_profile" class="adam-tab_style">
 <li>
@@ -147,7 +156,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="sources" class="adam-tab">
+<div id="sources" class="tab-pane adam-tab">
 
 <ul id="adam-person_sources" class="adam-tab_style">
 <li>
@@ -167,7 +176,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="chart" class="adam-tab">
+<div id="chart" class="tab-pane adam-tab">
 <ul>
 <li id="adam-person_chart">
 <div style="height: 665px;">&nbsp;</div>
@@ -319,7 +328,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="alist" class="adam-tab">
+<div id="alist" class="tab-pane adam-tab">
 
 <div class="adam-al_page">
 <ul class="adam-al_legend">
@@ -333,95 +342,95 @@ GEDCOM file imported on 4 February 2013
 
 <li class="adam-al_generation">Generation 1</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1] &nbsp; <a href="profile-I8171.html" class="adam-name_link">Zadock Young</a> (1759->1814)</div>
+  <div class="adam-al_name">[1] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8171.html" class="adam-name_link">Zadock Young</a> (1759->1814)</div>
   <div class="adam-al_path"><span title="Rhode Island">RI</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 2</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[2] &nbsp; <a href="profile-I7140.html" class="adam-name_link">Nathan Young</a> (1722-1810)</div>
+  <div class="adam-al_name">[2] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7140.html" class="adam-name_link">Nathan Young</a> (1722-1810)</div>
   <div class="adam-al_path"><span title="Rhode Island">RI</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3] &nbsp; <b><a href="profile-I7141.html" class="adam-name_link">Judith Dyer</a> (1725->1762)</b></div>
+  <div class="adam-al_name">[3] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7141.html" class="adam-name_link">Judith Dyer</a> (1725->1762)</b></div>
   <div class="adam-al_path"><span title="Rhode Island">RI</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 3</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[4] &nbsp; <a href="profile-I7178.html" class="adam-name_link">James Young</a> (~1683-1747)</div>
+  <div class="adam-al_name">[4] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7178.html" class="adam-name_link">James Young</a> (~1683-1747)</div>
   <div class="adam-al_path"><span title="New Hampshire">NH</span>-<span title="Rhode Island">RI</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[5] &nbsp; <a href="profile-I7179.html" class="adam-name_link">Anne Jemima Blackmar</a> (~1690->1721)</div>
+  <div class="adam-al_name">[5] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7179.html" class="adam-name_link">Anne Jemima Blackmar</a> (~1690->1721)</div>
   <div class="adam-al_path"><span title="Rhode Island">RI</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 4</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[8] &nbsp; <a href="profile-I7192.html" class="adam-name_link">John Young</a> (1653-1697)</div>
+  <div class="adam-al_name">[8] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7192.html" class="adam-name_link">John Young</a> (1653-1697)</div>
   <div class="adam-al_path"><span title="New Hampshire">NH</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[9] &nbsp; <a href="profile-I7193.html" class="adam-name_link">Sarah Wadleigh</a> (1655-1672)</div>
+  <div class="adam-al_name">[9] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7193.html" class="adam-name_link">Sarah Wadleigh</a> (1655-1672)</div>
   <div class="adam-al_path"><span title="Maine">ME</span>-<span title="New Hampshire">NH</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[10] &nbsp; <b><a href="profile-I7194.html" class="adam-name_link">James Blackmar</a> (1639-1709)</b></div>
+  <div class="adam-al_name">[10] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7194.html" class="adam-name_link">James Blackmar</a> (1639-1709)</b></div>
   <div class="adam-al_path"><span title="Rhode Island">RI</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[11] &nbsp; <a href="profile-I7195.html" class="adam-name_link">Mary Hawkins</a> (1649-1724)</div>
+  <div class="adam-al_name">[11] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7195.html" class="adam-name_link">Mary Hawkins</a> (1649-1724)</div>
   <div class="adam-al_path"><span title="Rhode Island">RI</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 5</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[16] &nbsp; <b><a href="profile-I7449.html" class="adam-name_link">John Young</a> (~1621->1653)</b></div>
+  <div class="adam-al_name">[16] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7449.html" class="adam-name_link">John Young</a> (~1621->1653)</b></div>
   <div class="adam-al_path"><span title="New Hampshire">NH</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[17] &nbsp; <b><a href="profile-I7450.html" class="adam-name_link">Mrs Sarah Young</a> (~1625->1653)</b></div>
+  <div class="adam-al_name">[17] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7450.html" class="adam-name_link">Mrs Sarah Young</a> (~1625->1653)</b></div>
   <div class="adam-al_path"><span title="New Hampshire">NH</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[18] &nbsp; <i><a href="profile-I7255.html" class="adam-name_link">Robert Wadleigh, (Judge)</a> (1628->1701)</i></div>
+  <div class="adam-al_name">[18] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I7255.html" class="adam-name_link">Robert Wadleigh, (Judge)</a> (1628->1701)</i></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="New Hampshire">NH</span>-<span title="Maine">ME</span>-<span title="New Hampshire">NH</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[19] &nbsp; <b><a href="profile-I7256.html" class="adam-name_link">Sarah Smith</a> (1632-1698)</b></div>
+  <div class="adam-al_name">[19] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7256.html" class="adam-name_link">Sarah Smith</a> (1632-1698)</b></div>
   <div class="adam-al_path"><span title="New Hampshire">NH</span>-<span title="Maine">ME</span>-<span title="New Hampshire">NH</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[22] &nbsp; <i><a href="profile-I7269.html" class="adam-name_link">William Hawkins</a> (1609-1699)</i></div>
+  <div class="adam-al_name">[22] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I7269.html" class="adam-name_link">William Hawkins</a> (1609-1699)</i></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Rhode Island">RI</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[23] &nbsp; <b><a href="profile-I7270.html" class="adam-name_link">Margaret Harwood</a> (1612->1660)</b></div>
+  <div class="adam-al_name">[23] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7270.html" class="adam-name_link">Margaret Harwood</a> (1612->1660)</b></div>
   <div class="adam-al_path"><span title="Devon">DEV</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 6</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[36] &nbsp; <b><a href="profile-I7404.html" class="adam-name_link">John Wadleigh</a> (1600-1674)</b></div>
+  <div class="adam-al_name">[36] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7404.html" class="adam-name_link">John Wadleigh</a> (1600-1674)</b></div>
   <div class="adam-al_path"><span title="Maine">ME</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[37] &nbsp; <b><a href="profile-I7405.html" class="adam-name_link">Mrs Mary Wadleigh</a> (1600-)</b></div>
+  <div class="adam-al_name">[37] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7405.html" class="adam-name_link">Mrs Mary Wadleigh</a> (1600-)</b></div>
   <div class="adam-al_path"><span title="Maine">ME</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[44] &nbsp; <b><a href="profile-I7414.html" class="adam-name_link">William Hawkins</a> (1569-1589)</b></div>
+  <div class="adam-al_name">[44] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7414.html" class="adam-name_link">William Hawkins</a> (1569-1589)</b></div>
   <div class="adam-al_path"><span title="Wiltshire">WIL</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[45] &nbsp; <b><a href="profile-I7415.html" class="adam-name_link">Mrs William Hawkins</a> (~1571->1609)</b></div>
+  <div class="adam-al_name">[45] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7415.html" class="adam-name_link">Mrs William Hawkins</a> (~1571->1609)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 </ul>
 </div>
 </div>
-<div id="map" class="adam-tab">
+<div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <br/>
 <div class="floatmapbuttons"><p>
@@ -440,9 +449,9 @@ var mcOptions={styles:[{ height:35,width:35,url:"mapmarker1.png"},
  { height:35,width:35,url:"mapmarker4.png"},
  { height:35,width:35,url:"mapmarker5.png"}]};
 function initializePins() {
- addPin(41.8318,-71.5873,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 41.8318, -71.5873</p><span class="adam-map-location"><a href="places-usa-rhode-island-providence-scituate.html" class="adam-location_link">Scituate, Providence, Rhode Island, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8171.html" class="adam-name_link">Zadock Young</a> (1759->1814)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7141.html" class="adam-name_link">Judith Dyer</a> (1725->1762)</span></div>');addPin(41.8239,-71.4133,4,myImage,'4 Persons','<div class="infowindow"><p>Coordinates: 41.8239, -71.4133</p><span class="adam-map-location"><a href="places-usa-rhode-island-providence-providence.html" class="adam-location_link">Providence, Providence, Rhode Island, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7140.html" class="adam-name_link">Nathan Young</a> (1722-1810)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7179.html" class="adam-name_link">Anne Jemima Blackmar</a> (~1690->1721)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7194.html" class="adam-name_link">James Blackmar</a> (1639-1709)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7195.html" class="adam-name_link">Mary Hawkins</a> (1649-1724)</span></div>');addPin(42.9814,-70.9478,6,myImage,'6 Persons','<div class="infowindow"><p>Coordinates: 42.9814, -70.9478</p><span class="adam-map-location"><a href="places-usa-new-hampshire-rockingham-exeter.html" class="adam-location_link">Exeter, Rockingham, New Hampshire, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7178.html" class="adam-name_link">James Young</a> (~1683-1747)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7192.html" class="adam-name_link">John Young</a> (1653-1697)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7193.html" class="adam-name_link">Sarah Wadleigh</a> (1655-1672)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7449.html" class="adam-name_link">John Young</a> (~1621->1653)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7450.html" class="adam-name_link">Mrs Sarah Young</a> (~1625->1653)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7256.html" class="adam-name_link">Sarah Smith</a> (1632-1698)</span></div>');addPin(43.322,-70.5809,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 43.322, -70.5809</p><span class="adam-map-location"><a href="places-usa-maine-york-wells.html" class="adam-location_link">Wells, York, Maine, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7404.html" class="adam-name_link">John Wadleigh</a> (1600-1674)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7405.html" class="adam-name_link">Mrs Mary Wadleigh</a> (1600-)</span></div>');addPin(50.4033,-3.62111,1,myImageW,'Margaret Harwood','<div class="infowindow"><p>Coordinates: 50.4033, -3.62111</p><span class="adam-map-location"><a href="places-england-devon-stoke-gabriel.html" class="adam-location_link">Stoke Gabriel, Devon, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7270.html" class="adam-name_link">Margaret Harwood</a> (1612->1660)</span></div>');addPin(51.4552,-2.59665,1,myImageM,'Robert Wadleigh, (Judge)','<div class="infowindow"><p>Coordinates: 51.4552, -2.59665</p><span class="adam-map-location"><a href="places-england-bristol-bristol.html" class="adam-location_link">Bristol, Bristol, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7255.html" class="adam-name_link">Robert Wadleigh, (Judge)</a> (1628->1701)</span></div>');addPin(52.3555,-1.17432,1,myImageM,'William Hawkins','<div class="infowindow"><p>Coordinates: 52.3555, -1.17432</p><span class="adam-map-location"><a href="places-england.html" class="adam-location_link">England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7269.html" class="adam-name_link">William Hawkins</a> (1609-1699)</span></div>');addPin(1000,1000,1,myImageM,'William Hawkins','<div class="infowindow"><p>Coordinates: 1000, 1000</p><span class="adam-map-location"><a href="places-england-wiltshire-colne.html" class="adam-location_link">Colne, Wiltshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7414.html" class="adam-name_link">William Hawkins</a> (1569-1589)</span></div>');
+ addPin(41.8318,-71.5873,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 41.8318, -71.5873</p><span class="adam-map-location"><a href="places-usa-rhode-island-providence-scituate.html" class="adam-location_link">Scituate, Providence, Rhode Island, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8171.html" class="adam-name_link">Zadock Young</a> (1759->1814)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7141.html" class="adam-name_link">Judith Dyer</a> (1725->1762)</span></div>');addPin(41.8239,-71.4133,4,myImage,'4 Persons','<div class="infowindow"><p>Coordinates: 41.8239, -71.4133</p><span class="adam-map-location"><a href="places-usa-rhode-island-providence-providence.html" class="adam-location_link">Providence, Providence, Rhode Island, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7140.html" class="adam-name_link">Nathan Young</a> (1722-1810)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7179.html" class="adam-name_link">Anne Jemima Blackmar</a> (~1690->1721)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7194.html" class="adam-name_link">James Blackmar</a> (1639-1709)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7195.html" class="adam-name_link">Mary Hawkins</a> (1649-1724)</span></div>');addPin(42.9814,-70.9478,6,myImage,'6 Persons','<div class="infowindow"><p>Coordinates: 42.9814, -70.9478</p><span class="adam-map-location"><a href="places-usa-new-hampshire-rockingham-exeter.html" class="adam-location_link">Exeter, Rockingham, New Hampshire, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7178.html" class="adam-name_link">James Young</a> (~1683-1747)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7192.html" class="adam-name_link">John Young</a> (1653-1697)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7193.html" class="adam-name_link">Sarah Wadleigh</a> (1655-1672)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7449.html" class="adam-name_link">John Young</a> (~1621->1653)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7450.html" class="adam-name_link">Mrs Sarah Young</a> (~1625->1653)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7256.html" class="adam-name_link">Sarah Smith</a> (1632-1698)</span></div>');addPin(43.322,-70.5809,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 43.322, -70.5809</p><span class="adam-map-location"><a href="places-usa-maine-york-wells.html" class="adam-location_link">Wells, York, Maine, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7404.html" class="adam-name_link">John Wadleigh</a> (1600-1674)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7405.html" class="adam-name_link">Mrs Mary Wadleigh</a> (1600-)</span></div>');addPin(50.4033,-3.62111,1,myImageW,'Margaret Harwood','<div class="infowindow"><p>Coordinates: 50.4033, -3.62111</p><span class="adam-map-location"><a href="places-england-devon-stoke-gabriel.html" class="adam-location_link">Stoke Gabriel, Devon, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7270.html" class="adam-name_link">Margaret Harwood</a> (1612->1660)</span></div>');addPin(51.4552,-2.59665,1,myImageM,'Robert Wadleigh, (Judge)','<div class="infowindow"><p>Coordinates: 51.4552, -2.59665</p><span class="adam-map-location"><a href="places-england-bristol-bristol.html" class="adam-location_link">Bristol, Bristol, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7255.html" class="adam-name_link">Robert Wadleigh, (Judge)</a> (1628->1701)</span></div>');addPin(51.4393,-2.00388,1,myImageM,'William Hawkins','<div class="infowindow"><p>Coordinates: 51.4393, -2.00388</p><span class="adam-map-location"><a href="places-england-wiltshire-colne.html" class="adam-location_link">Colne, Wiltshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7414.html" class="adam-name_link">William Hawkins</a> (1569-1589)</span></div>');addPin(52.3555,-1.17432,1,myImageM,'William Hawkins','<div class="infowindow"><p>Coordinates: 52.3555, -1.17432</p><span class="adam-map-location"><a href="places-england.html" class="adam-location_link">England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7269.html" class="adam-name_link">William Hawkins</a> (1609-1699)</span></div>');
  markerCluster = new MarkerClusterer(map, myPins, mcOptions);
- var myData={max:1,data:[{lat:41.8318,lng:-71.5873,count:0.6},{lat:41.8239,lng:-71.4133,count:1.2},{lat:42.9814,lng:-70.9478,count:1.8},{lat:43.322,lng:-70.5809,count:0.6},{lat:50.4033,lng:-3.62111,count:0.3},{lat:51.4552,lng:-2.59665,count:0.3},{lat:52.3555,lng:-1.17432,count:0.3},]};
+ var myData={max:1,data:[{lat:41.8318,lng:-71.5873,count:0.6},{lat:41.8239,lng:-71.4133,count:1.2},{lat:42.9814,lng:-70.9478,count:1.8},{lat:43.322,lng:-70.5809,count:0.6},{lat:50.4033,lng:-3.62111,count:0.3},{lat:51.4552,lng:-2.59665,count:0.3},{lat:51.4393,lng:-2.00388,count:0.3},{lat:52.3555,lng:-1.17432,count:0.3},]};
  google.maps.event.addListenerOnce(map,'idle',function(){heatmap.setDataSet(myData);});
 }
 </script>
@@ -456,16 +465,16 @@ function initializePins() {
 </div>
 <script type="text/javascript">
 $(document).ready(function () {
-  $('#tabs').tabs({
-    activate: function (event, ui) {
-      var act = $("#tabs").tabs("option", "active");
-		  if (act == 4) {
-        google.maps.event.trigger(map, 'resize');
-      }
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    e.target
+    e.relatedTarget
+  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      google.maps.event.trigger(map, 'resize');
     }
   });
 });
 </script>
+</div>
 </div>
 
 <ul>
@@ -474,7 +483,7 @@ $(document).ready(function () {
 Last Modified: Feb 4, 2013
 </li>
 </ul>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -494,7 +503,7 @@ Last Modified: Feb 4, 2013
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

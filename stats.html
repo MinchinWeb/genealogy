@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="Statistics - Minchin Genealogy | Minchin.ca" />
  <title>Statistics - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -66,164 +73,15 @@ Version:   1.0.4        December 29, 2013
 
 
 <h1 id="adam-page-title">Statistics</h1>
-
-<div class="adam-stats-wrapper">
-
-<div class="adam-stats-title">Records</div>
-<div class="adam-stats-line">
-<table class="adam-stats-table"><tr class="adam-stats-table-line adam-stats-legend"><td>&nbsp;</td><td>Total</td></tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">Individual Records</td><td>7959</td></tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">Family Records</td><td>3234</td></tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">Source Records</td><td>41</td></tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">Repository Records</td><td>4</td></tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">Note Records</td><td>0</td></tr>
-</table>
-</div>
-
-</div>
-
-<div class="adam-stats-wrapper">
-
-<div class="adam-stats-title">Claims</div>
-<div class="adam-stats-line">
-<table class="adam-stats-table"><tr class="adam-stats-table-line adam-stats-legend"><td>&nbsp;</td><td>Total</td><td>(% of Claims)</td></tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">Overall Claims</td><td>32554</td><td></td></tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">Documented Claims</td><td>15482</td><td>(47.56%)</td></tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">Impossible Claims</td><td>256</td><td>(0.79%)</td></tr>
-</table>
-</div>
-<br/>
-<div class="adam-stats-line">
-<table class="adam-stats-table">
-<tr class="adam-stats-table-line adam-stats-super-legend"><td>&nbsp;</td><td colspan="4">Documentation</td><td>&nbsp;</td></tr>
-<tr class="adam-stats-table-line adam-stats-legend"><td>Claim Type</td><td>Total</td><td>(% of Claims)</td><td>Excellent</td><td>Good</td><td>Uncertain</td><td>None</td><td>(% of Total)</td></tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">Parental Relationships</td><td>10339</td><td>(31.76%)</td><td>0</td><td>0</td><td>0</td><td>10339</td><td>(100.00%)</td></tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">Census Claims</td><td>5</td><td>(0.02%)</td><td>0</td><td>0</td><td>4</td><td>1</td><td>(20.00%)</td></tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">Vital Events</td><td>10401</td><td>(31.95%)</td><td>0</td><td>3</td><td>8992</td><td>1406</td><td>(13.52%)</td></tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">Non-Vital Events</td><td>430</td><td>(1.32%)</td><td>0</td><td>0</td><td>370</td><td>60</td><td>(13.95%)</td></tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">Non-Parental Associations</td><td>0</td><td>(0.00%)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>(0.00%)</td></tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">Names</td><td>7992</td><td>(24.55%)</td><td>0</td><td>0</td><td>4694</td><td>3298</td><td>(41.27%)</td></tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">Attributes</td><td>3387</td><td>(10.40%)</td><td>0</td><td>0</td><td>1419</td><td>1968</td><td>(58.10%)</td></tr>
-</table>
-</div>
-
-</div>
-
-<div class="adam-stats-wrapper">
-
-<div class="adam-stats-title">Miscellaneous</div>
-<div class="adam-stats-line">
-<table class="adam-stats-table">
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">Total Locations</td><td>1636</td></tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">Total Photos</td><td>11</td></tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">Total External URLs</td><td>6</td></tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">Total Immigrants</td><td>122</td></tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">Total Nobility Titles</td><td>40</td></tr>
-</table>
-</div>
-
-</div>
-
-<div class="adam-stats-wrapper">
-
-<div class="adam-stats-title">Average Life Spans</div>
-<div class="adam-stats-line">
-<table class="adam-stats-table">
-<tr class="adam-stats-table-line adam-stats-legend"><td>Century</td><td>Men</td><td>&nbsp;</td><td>Women</td><td>&nbsp;</td></tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">15th Century</td><td>51 years</td><td>(6 counted)</td><td>44 years</td><td>(3 counted)</td><tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">16th Century</td><td>45 years</td><td>(97 counted)</td><td>36 years</td><td>(86 counted)</td><tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">17th Century</td><td>53 years</td><td>(421 counted)</td><td>42 years</td><td>(381 counted)</td><tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">18th Century</td><td>51 years</td><td>(402 counted)</td><td>43 years</td><td>(361 counted)</td><tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">19th Century</td><td>59 years</td><td>(367 counted)</td><td>59 years</td><td>(345 counted)</td><tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">20th Century</td><td>63 years</td><td>(68 counted)</td><td>63 years</td><td>(60 counted)</td><tr>
-</table>
-</div>
-
-</div>
-
-<div class="adam-stats-wrapper">
-
-<div class="adam-stats-title">Average Ages</div>
-<div class="adam-stats-line">
-<table class="adam-stats-table">
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">First Marriage (Men)</td><td>25 years</td><td>(1295 counted)</td></tr><tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">First Marriage (Women)</td><td>22 years</td><td>(1293 counted)</td></tr>
-<tr class="adam-stats-table-line"><td class="adam-stats-table-line-heading">Years Per Generation (All)</td><td>34 years</td><td>(1413 counted)</td></tr>
-</table>
-</div>
-
-</div>
-
+<div class="bonkers_item"><br/><div id="expandedTotRecordsChartContainer"></div><script type="text/javascript">var expandedTotRecordChartDataSource = [{total: 7959},{total: 3234},{total: 42},{total: 4},{total: 0},{total: 32559},{total: 15483},{total: 256},{total: 1637},{total: 16},{total: 7},{total: 122},{total: 40},];</script></div><div class="bonkers_item"><br/><div id="distOfClaimsChartContainer"></div><script type="text/javascript">var distOfClaimsChartDataSource = [{value: 10339},{value: 0},{value: 7992},{value: 5},{value: 10403},{value: 431},{value: 3389},];</script></div><div class="bonkers_item"><br/><div id="docClaimsChartContainer"></div><script type="text/javascript">var docClaimsChartDataSource = [{total: 10339, documented: 0},{total: 0, documented: 0},{total: 7992, documented: 4694},{total: 5, documented: 4},{total: 10403, documented: 8995},{total: 431, documented: 371},{total: 3389, documented: 1419},];</script></div><div class="bonkers_item"><br/><div id="avgLifeSpanChartContainer"></div><script type="text/javascript">var avgLifeSpanChartDataSource = [{year: 1500, men: 51, count_m: 6, women: 44, count_w: 3},{year: 1600, men: 45, count_m: 97, women: 36, count_w: 86},{year: 1700, men: 53, count_m: 421, women: 42, count_w: 381},{year: 1800, men: 51, count_m: 402, women: 43, count_w: 361},{year: 1900, men: 59, count_m: 367, women: 59, count_w: 345},{year: 2000, men: 63, count_m: 68, women: 63, count_w: 60},];</script></div><div class="bonkers_item"><br/><div id="avgAgesChartContainer"></div><script type="text/javascript">var avgAgesChartDataSource = [{age: 25},{age: 22},{age: 34},];</script></div>
 <div class="row">
-<div class="fourcol col-md-4">
-<div class="bonkers_item">
-<div class="adam-il_title">Most Popular Boys Names</div>
-<div class="adam-il_item">John (469)</div>
-<div class="adam-il_item">William (293)</div>
-<div class="adam-il_item">Thomas (226)</div>
-<div class="adam-il_item">James (157)</div>
-<div class="adam-il_item">Joseph (116)</div>
-<div class="adam-il_item">George (106)</div>
-<div class="adam-il_item">Robert (95)</div>
-<div class="adam-il_item">Samuel (87)</div>
-<div class="adam-il_item">Richard (86)</div>
-<div class="adam-il_item">Henry (79)</div>
-<div class="adam-il_item">David (58)</div>
-<div class="adam-il_item">Benjamin (54)</div>
-<div class="adam-il_item">Edward (47)</div>
-<div class="adam-il_item">Daniel (45)</div>
-<div class="adam-il_item">Charles (39)</div>
-<div class="adam-il_item">Isaac (37)</div>
-<div class="adam-il_item">Nathaniel (32)</div>
-<div class="adam-il_item">Mister (30)</div>
-<div class="adam-il_item">Peter (29)</div>
-<div class="adam-il_item">Jonathan (28)</div></div></div>
-<div class="fourcol col-md-4">
-<div class="bonkers_item">
-<div class="adam-il_title">Most Popular Girls Names</div>
-<div class="adam-il_item">Mary (319)</div>
-<div class="adam-il_item">Elizabeth (226)</div>
-<div class="adam-il_item">Sarah (203)</div>
-<div class="adam-il_item">Mrs (140)</div>
-<div class="adam-il_item">Margaret (92)</div>
-<div class="adam-il_item">Hannah (82)</div>
-<div class="adam-il_item">Ann (70)</div>
-<div class="adam-il_item">Jane (67)</div>
-<div class="adam-il_item">Anne (51)</div>
-<div class="adam-il_item">Rebecca (45)</div>
-<div class="adam-il_item">Martha (44)</div>
-<div class="adam-il_item">Alice (43)</div>
-<div class="adam-il_item">Anna (40)</div>
-<div class="adam-il_item">Catherine (38)</div>
-<div class="adam-il_item">Abigail (33)</div>
-<div class="adam-il_item">Rachel (30)</div>
-<div class="adam-il_item">Joan (28)</div>
-<div class="adam-il_item">Lydia (27)</div>
-<div class="adam-il_item">Grace (26)</div>
-<div class="adam-il_item">Mercy (26)</div></div></div>
-<div class="col-md-4 fourcol last">
-<div class="bonkers_item">
-<div class="adam-il_title">Most Used Surnames</div>
-<div class="adam-il_item">Minchin (341)</div>
-<div class="adam-il_item">Thayer (181)</div>
-<div class="adam-il_item">Bunbury (112)</div>
-<div class="adam-il_item">Reynolds (108)</div>
-<div class="adam-il_item">East (95)</div>
-<div class="adam-il_item">Seaman (85)</div>
-<div class="adam-il_item">Topham (79)</div>
-<div class="adam-il_item">Denison (77)</div>
-<div class="adam-il_item">Williams (75)</div>
-<div class="adam-il_item">Angell (74)</div>
-<div class="adam-il_item">French (72)</div>
-<div class="adam-il_item">Dale (67)</div>
-<div class="adam-il_item">Miner (62)</div>
-<div class="adam-il_item">Jewell (61)</div>
-<div class="adam-il_item">Brown (60)</div>
-<div class="adam-il_item">Elston (57)</div>
-<div class="adam-il_item">Anderson (55)</div>
-<div class="adam-il_item">Baker (54)</div>
-<div class="adam-il_item">Morton (53)</div>
-<div class="adam-il_item">Noyes (52)</div></div></div></div></div>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+<div class="col-md-4">
+<div class="bonkers_item"><div id="boysNamesChartContainer"></div><script type="text/javascript">var boysNamesChartDataSource = [{name: "John", total: 470},{name: "William", total: 293},{name: "Thomas", total: 226},{name: "James", total: 157},{name: "Joseph", total: 116},{name: "George", total: 106},{name: "Robert", total: 95},{name: "Samuel", total: 87},{name: "Richard", total: 86},{name: "Henry", total: 79},{name: "David", total: 58},{name: "Benjamin", total: 54},{name: "Edward", total: 47},{name: "Daniel", total: 45},{name: "Charles", total: 39},{name: "Isaac", total: 37},{name: "Nathaniel", total: 32},{name: "Mister", total: 30},{name: "Peter", total: 29},{name: "Jonathan", total: 28},];</script></div></div>
+<div class="col-md-4">
+<div class="bonkers_item"><div id="girlsNamesChartContainer"></div><script type="text/javascript">var girlsNamesChartDataSource = [{name: "Mary", total: 319},{name: "Elizabeth", total: 226},{name: "Sarah", total: 203},{name: "Mrs", total: 140},{name: "Margaret", total: 92},{name: "Hannah", total: 82},{name: "Ann", total: 70},{name: "Jane", total: 67},{name: "Anne", total: 51},{name: "Rebecca", total: 45},{name: "Martha", total: 44},{name: "Alice", total: 43},{name: "Anna", total: 40},{name: "Catherine", total: 38},{name: "Abigail", total: 33},{name: "Rachel", total: 30},{name: "Joan", total: 28},{name: "Lydia", total: 27},{name: "Grace", total: 26},{name: "Mercy", total: 26},];</script></div></div>
+<div class="col-md-4">
+<div class="bonkers_item"><div id="surnamesChartContainer"></div><script type="text/javascript">var surnamesChartDataSource = [{name: "Minchin", total: 341},{name: "Thayer", total: 181},{name: "Bunbury", total: 112},{name: "Reynolds", total: 108},{name: "East", total: 95},{name: "Seaman", total: 85},{name: "Topham", total: 79},{name: "Denison", total: 77},{name: "Williams", total: 75},{name: "Angell", total: 74},{name: "French", total: 72},{name: "Dale", total: 67},{name: "Miner", total: 62},{name: "Jewell", total: 61},{name: "Brown", total: 60},{name: "Elston", total: 57},{name: "Anderson", total: 55},{name: "Baker", total: 54},{name: "Morton", total: 53},{name: "Noyes", total: 52},];</script></div></div></div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -243,7 +101,7 @@ Version:   1.0.4        December 29, 2013
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

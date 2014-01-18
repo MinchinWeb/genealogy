@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="Mahala Ryan Profile - Minchin Genealogy | Minchin.ca" />
  <title>Mahala Ryan Profile - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -67,22 +74,24 @@ Version:   1.0.4        December 29, 2013
 
 <h1 id="adam-page-title">Mahala Ryan Profile</h1>
 
-<div id="tabs">
-<ul>
+<div id="adam-tab-list">
+<ul id="tab-list" class="nav nav-tabs">
 
-<li><a class="click" href="#profile">Profile</a></li>
+<li class="active"><a class="click" href="#profile" data-toggle="tab">Profile</a></li>
 
-<li><a class="click" href="#sources">Sources (1)</a></li>
+<li><a class="click" href="#sources" data-toggle="tab">Sources (1)</a></li>
 
-<li><a class="click" href="#chart">Chart</a></li>
+<li><a class="click" href="#chart" data-toggle="tab">Chart</a></li>
 
-<li><a class="click" href="#alist">Ancestors List (12)</a></li>
+<li><a class="click" href="#alist" data-toggle="tab">Ancestors List (12)</a></li>
 
-<li><a class="click" href="#map">Ancestors Distribution Map</a></li>
+<li><a class="click" href="#map" data-toggle="tab">Ancestors Distribution Map</a></li>
 
 </ul>
 
-<div id="profile" class="adam-tab">
+<div class="tab-content">
+
+<div id="profile" class="tab-pane active adam-tab">
 
 <ul id="adam-person_profile" class="adam-tab_style">
 <li>
@@ -154,7 +163,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="sources" class="adam-tab">
+<div id="sources" class="tab-pane adam-tab">
 
 <ul id="adam-person_sources" class="adam-tab_style">
 <li>
@@ -174,7 +183,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="chart" class="adam-tab">
+<div id="chart" class="tab-pane adam-tab">
 <ul>
 <li id="adam-person_chart">
 <div style="height: 665px;">&nbsp;</div>
@@ -324,7 +333,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="alist" class="adam-tab">
+<div id="alist" class="tab-pane adam-tab">
 
 <div class="adam-al_page">
 <ul class="adam-al_legend">
@@ -338,69 +347,69 @@ GEDCOM file imported on 4 February 2013
 
 <li class="adam-al_generation">Generation 1</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1] &nbsp; <a href="profile-I8421.html" class="adam-name_link">Mahala Ryan</a> (1870-1947)</div>
+  <div class="adam-al_name">[1] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8421.html" class="adam-name_link">Mahala Ryan</a> (1870-1947)</div>
   <div class="adam-al_path"><span title="Utah">UT</span>-<span title=""></span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 2</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[2] &nbsp; <a href="profile-I6889.html" class="adam-name_link">William Thomas Ryan</a> (1815-1894)</div>
+  <div class="adam-al_name">[2] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6889.html" class="adam-name_link">William Thomas Ryan</a> (1815-1894)</div>
   <div class="adam-al_path"><span title="New York">NY</span>-<span title="Scotland">SCT</span>-<span title="New York">NY</span>-<span title="Utah">UT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3] &nbsp; <a href="profile-I6863.html" class="adam-name_link">Janet Cochrane, (triplet)</a> (1834-1912)</div>
+  <div class="adam-al_name">[3] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6863.html" class="adam-name_link">Janet Cochrane, (triplet)</a> (1834-1912)</div>
   <div class="adam-al_path"><span title="Lanarkshire">LKS</span>-<span title="New York">NY</span>-<span title="Utah">UT</span>-<span title=""></span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 3</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[4] &nbsp; <b><a href="profile-I8414.html" class="adam-name_link">Thomas Ryan</a> (-)</b></div>
+  <div class="adam-al_name">[4] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8414.html" class="adam-name_link">Thomas Ryan</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[5] &nbsp; <b><a href="profile-I8415.html" class="adam-name_link">Sarah van Winkle</a> (-)</b></div>
+  <div class="adam-al_name">[5] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8415.html" class="adam-name_link">Sarah van Winkle</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[6] &nbsp; <a href="profile-I6859.html" class="adam-name_link">John Cochrane</a> (1788-1848)</div>
+  <div class="adam-al_name">[6] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6859.html" class="adam-name_link">John Cochrane</a> (1788-1848)</div>
   <div class="adam-al_path"><span title="Lanarkshire">LKS</span>-<span title="Scotland">SCT</span>-<span title="Lanarkshire">LKS</span>-<span title="Scotland">SCT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[7] &nbsp; <a href="profile-I6860.html" class="adam-name_link">Margaret Swinton</a> (1793-1867)</div>
+  <div class="adam-al_name">[7] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6860.html" class="adam-name_link">Margaret Swinton</a> (1793-1867)</div>
   <div class="adam-al_path"><span title="Ayrshire">AYR</span>-<span title="Lanarkshire">LKS</span>-<span title="Scotland">SCT</span>-<span title="Lanarkshire">LKS</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 4</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[12] &nbsp; <b><a href="profile-I8284.html" class="adam-name_link">James Cochran</a> (~1752->1788)</b></div>
+  <div class="adam-al_name">[12] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8284.html" class="adam-name_link">James Cochran</a> (~1752->1788)</b></div>
   <div class="adam-al_path"><span title="Lanarkshire">LKS</span>-<span title="Scotland">SCT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[13] &nbsp; <a href="profile-I8285.html" class="adam-name_link">Mary Brash</a> (~1756->1788)</div>
+  <div class="adam-al_name">[13] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8285.html" class="adam-name_link">Mary Brash</a> (~1756->1788)</div>
   <div class="adam-al_path"><span title="Lanarkshire">LKS</span>-<span title="Scotland">SCT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[14] &nbsp; <b><a href="profile-I6871.html" class="adam-name_link">James Swinton</a> (~1762->1796)</b></div>
+  <div class="adam-al_name">[14] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6871.html" class="adam-name_link">James Swinton</a> (~1762->1796)</b></div>
   <div class="adam-al_path"><span title="Ayrshire">AYR</span>-<span title="Scotland">SCT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[15] &nbsp; <b><a href="profile-I6872.html" class="adam-name_link">Margaret Hutcheson</a> (~1766->1796)</b></div>
-  <div class="adam-al_path"><span title="Ayrshire">AYR</span>-<span title=""></span></div><br>
+  <div class="adam-al_name">[15] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6872.html" class="adam-name_link">Margaret Hutcheson</a> (~1766->1796)</b></div>
+  <div class="adam-al_path"><span title="Ayrshire">AYR</span>-<span title="Scotland">SCT</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 5</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[26] &nbsp; <b><a href="profile-I9321.html" class="adam-name_link">James Brash</a> (~1728-)</b></div>
+  <div class="adam-al_name">[26] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9321.html" class="adam-name_link">James Brash</a> (~1728-)</b></div>
   <div class="adam-al_path"><span title="Dunbartonshire">DNB</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[27] &nbsp; <b><a href="profile-I9322.html" class="adam-name_link">Catherine Campbell</a> (~1732->1771)</b></div>
+  <div class="adam-al_name">[27] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9322.html" class="adam-name_link">Catherine Campbell</a> (~1732->1771)</b></div>
   <div class="adam-al_path"><span title="Dunbartonshire">DNB</span>-<span title="Scotland">SCT</span></div><br>
 </li>
 </ul>
 </div>
 </div>
-<div id="map" class="adam-tab">
+<div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <br/>
 <div class="floatmapbuttons"><p>
@@ -419,9 +428,9 @@ var mcOptions={styles:[{ height:35,width:35,url:"mapmarker1.png"},
  { height:35,width:35,url:"mapmarker4.png"},
  { height:35,width:35,url:"mapmarker5.png"}]};
 function initializePins() {
- addPin(41.0686,-111.514,1,myImageW,'Mahala Ryan','<div class="infowindow"><p>Coordinates: 41.0686, -111.514</p><span class="adam-map-location"><a href="places-usa-utah-morgan-croydon.html" class="adam-location_link">Croydon, Morgan, Utah, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8421.html" class="adam-name_link">Mahala Ryan</a> (1870-1947)</span></div>');addPin(55.6116,-4.66964,1,myImageW,'Margaret Swinton','<div class="infowindow"><p>Coordinates: 55.6116, -4.66964</p><span class="adam-map-location"><a href="places-scotland-ayrshire-irvine.html" class="adam-location_link">Irvine, Ayrshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6860.html" class="adam-name_link">Margaret Swinton</a> (1793-1867)</span></div>');addPin(55.5159,-4.37775,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 55.5159, -4.37775</p><span class="adam-map-location"><a href="places-scotland-ayrshire-mauchline.html" class="adam-location_link">Mauchline, Ayrshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6871.html" class="adam-name_link">James Swinton</a> (~1762->1796)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6872.html" class="adam-name_link">Margaret Hutcheson</a> (~1766->1796)</span></div>');addPin(55.8642,-4.25181,1,myImageW,'Janet Cochrane, (triplet)','<div class="infowindow"><p>Coordinates: 55.8642, -4.25181</p><span class="adam-map-location"><a href="places-scotland-lanarkshire-glasgow.html" class="adam-location_link">Glasgow, Lanarkshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6863.html" class="adam-name_link">Janet Cochrane, (triplet)</a> (1834-1912)</span></div>');addPin(56.4907,-4.20265,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 56.4907, -4.20265</p><span class="adam-map-location"><a href="places-scotland-lanarkshire-barony.html" class="adam-location_link">Barony, Lanarkshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6859.html" class="adam-name_link">John Cochrane</a> (1788-1848)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8284.html" class="adam-name_link">James Cochran</a> (~1752->1788)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8285.html" class="adam-name_link">Mary Brash</a> (~1756->1788)</span></div>');addPin(1000,1000,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 1000, 1000</p><span class="adam-map-location"><a href="places-usa-new-york-morris-rockaway.html" class="adam-location_link">Rockaway, Morris, New York, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6889.html" class="adam-name_link">William Thomas Ryan</a> (1815-1894)</span><br/><br/><span class="adam-map-location"><a href="places-scotland-dunbartonshire-new-kirkpatrick.html" class="adam-location_link">New Kirkpatrick, Dunbartonshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9321.html" class="adam-name_link">James Brash</a> (~1728-)</span><br/><br/><span class="adam-map-location"><a href="places-scotland-dunbartonshire-new-kirkpatrick.html" class="adam-location_link">New Kirkpatrick, Dunbartonshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9322.html" class="adam-name_link">Catherine Campbell</a> (~1732->1771)</span></div>');
+ addPin(41.0686,-111.514,1,myImageW,'Mahala Ryan','<div class="infowindow"><p>Coordinates: 41.0686, -111.514</p><span class="adam-map-location"><a href="places-usa-utah-morgan-croydon.html" class="adam-location_link">Croydon, Morgan, Utah, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8421.html" class="adam-name_link">Mahala Ryan</a> (1870-1947)</span></div>');addPin(40.6828,-73.8531,1,myImageM,'William Thomas Ryan','<div class="infowindow"><p>Coordinates: 40.6828, -73.8531</p><span class="adam-map-location"><a href="places-usa-new-york-morris-rockaway.html" class="adam-location_link">Rockaway, Morris, New York, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6889.html" class="adam-name_link">William Thomas Ryan</a> (1815-1894)</span></div>');addPin(55.6116,-4.66964,1,myImageW,'Margaret Swinton','<div class="infowindow"><p>Coordinates: 55.6116, -4.66964</p><span class="adam-map-location"><a href="places-scotland-ayrshire-irvine.html" class="adam-location_link">Irvine, Ayrshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6860.html" class="adam-name_link">Margaret Swinton</a> (1793-1867)</span></div>');addPin(55.5159,-4.37775,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 55.5159, -4.37775</p><span class="adam-map-location"><a href="places-scotland-ayrshire-mauchline.html" class="adam-location_link">Mauchline, Ayrshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6871.html" class="adam-name_link">James Swinton</a> (~1762->1796)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6872.html" class="adam-name_link">Margaret Hutcheson</a> (~1766->1796)</span></div>');addPin(55.8642,-4.25181,1,myImageW,'Janet Cochrane, (triplet)','<div class="infowindow"><p>Coordinates: 55.8642, -4.25181</p><span class="adam-map-location"><a href="places-scotland-lanarkshire-glasgow.html" class="adam-location_link">Glasgow, Lanarkshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6863.html" class="adam-name_link">Janet Cochrane, (triplet)</a> (1834-1912)</span></div>');addPin(56.4907,-4.20265,5,myImage,'5 Persons','<div class="infowindow"><p>Coordinates: 56.4907, -4.20265</p><span class="adam-map-location"><a href="places-scotland-lanarkshire-barony.html" class="adam-location_link">Barony, Lanarkshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6859.html" class="adam-name_link">John Cochrane</a> (1788-1848)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8284.html" class="adam-name_link">James Cochran</a> (~1752->1788)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8285.html" class="adam-name_link">Mary Brash</a> (~1756->1788)</span><br/><br/><span class="adam-map-location"><a href="places-scotland-dunbartonshire-new-kirkpatrick.html" class="adam-location_link">New Kirkpatrick, Dunbartonshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9321.html" class="adam-name_link">James Brash</a> (~1728-)</span><br/><br/><span class="adam-map-location"><a href="places-scotland-dunbartonshire-new-kirkpatrick.html" class="adam-location_link">New Kirkpatrick, Dunbartonshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9322.html" class="adam-name_link">Catherine Campbell</a> (~1732->1771)</span></div>');
  markerCluster = new MarkerClusterer(map, myPins, mcOptions);
- var myData={max:1,data:[{lat:41.0686,lng:-111.514,count:0.3},{lat:55.6116,lng:-4.66964,count:0.3},{lat:55.5159,lng:-4.37775,count:0.6},{lat:55.8642,lng:-4.25181,count:0.3},{lat:56.4907,lng:-4.20265,count:0.9},]};
+ var myData={max:1,data:[{lat:41.0686,lng:-111.514,count:0.3},{lat:40.6828,lng:-73.8531,count:0.3},{lat:55.6116,lng:-4.66964,count:0.3},{lat:55.5159,lng:-4.37775,count:0.6},{lat:55.8642,lng:-4.25181,count:0.3},{lat:56.4907,lng:-4.20265,count:1.5},]};
  google.maps.event.addListenerOnce(map,'idle',function(){heatmap.setDataSet(myData);});
 }
 </script>
@@ -435,16 +444,16 @@ function initializePins() {
 </div>
 <script type="text/javascript">
 $(document).ready(function () {
-  $('#tabs').tabs({
-    activate: function (event, ui) {
-      var act = $("#tabs").tabs("option", "active");
-		  if (act == 4) {
-        google.maps.event.trigger(map, 'resize');
-      }
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    e.target
+    e.relatedTarget
+  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      google.maps.event.trigger(map, 'resize');
     }
   });
 });
 </script>
+</div>
 </div>
 
 <ul>
@@ -453,7 +462,7 @@ $(document).ready(function () {
 Last Modified: Feb 4, 2013
 </li>
 </ul>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -473,7 +482,7 @@ Last Modified: Feb 4, 2013
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

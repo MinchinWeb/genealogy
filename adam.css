@@ -85,13 +85,94 @@ img {height: auto;}
   width: auto; float: none; margin-left: 0px; margin-right: 0px; padding-left: 20px; padding-right: 20px; 
   }
 }
+
 /******************/
-/* JQuery UI      */
+/* Navbar         */
 /******************/
-.ui-tabs .ui-tabs-panel {padding: 0;}
-.ui-widget {font-size:14px; font-family: "Open Sans", sans-serif;}
-.ui-widget-content {border: 0; background: transparent;}
-.ui-widget-header {border: 0; background: transparent;}
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a  {color: #fff;}
+.navbar-nav>li {font-size: 1.3em;}
+.navbar-collapse {padding-right: 0px;}
+.paging-navigation {margin: 10px 0;}
+
+
+/******************/
+/* Tabs           */
+/******************/
+
+#adam-tab-list {
+	border: 1px solid #aaa;
+	border-radius: 4px 4px 4px 4px;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;	
+	padding: .2em .2em 0;
+	background: white;
+}
+
+#adam-tab-list>ul {
+	border: 1px solid #aaa;
+	background: #ccc url(http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x;
+	color: #222;
+	font-weight: bold;
+	border-radius: 4px 4px 4px 4px;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	-moz-border-radius: 4px 4px 4px 4px;	
+	padding: .2em .2em 0;
+	margin: 0px;
+}
+
+#adam-tab-list>ul>li {
+	border: 1px solid #ddd;
+	border-radius: 4px 4px 0 0;
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	margin: 1px .2em 0 0;
+	border: 1px solid #d3d3d3;
+	background: #e6e6e6 url(http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
+	font-weight: normal;
+}
+
+#adam-tab-list>ul>li>a {
+	margin-right: 0px;
+	padding: .5em 1em;
+}
+
+#adam-tab-list>ul>li>a,
+#adam-tab-list>ul>li>a:link,
+#adam-tab-list>ul>li>a:visited {
+	color: #555;
+	text-decoration: none;
+}
+
+#adam-tab-list>ul>li>a:hover {
+	color: #212121;
+	text-decoration: none;
+}
+
+#adam-tab-list>ul>li.active {
+	border-bottom-color: #fff;
+	margin-bottom: -1px;
+	padding-bottom: 2px;
+	border-bottom-width: 0;
+	background-image:  -moz-linear-gradient(bottom, #fff 2px, transparent 2px);
+	background-image:  -o-linear-gradient(bottom, #fff 2px, transparent 2px);
+	background-image:  -webkit-linear-gradient(bottom, #fff 2px, transparent 2px);
+	background-image:  linear-gradient(bottom, #fff 2px, transparent 2px);
+}
+
+/******************/
+/* Graphs      */
+/******************/
+#boysNamesChartContainer          {height: 500px;}
+#girlsNamesChartContainer         {height: 500px;}
+#surnamesChartContainer           {height: 500px;} 
+#totRecordsChartContainer         {height: 200px;}
+#expandedTotRecordsChartContainer {height: 400px;}
+#avgRecordsChartContainer         {height: 200px;}
+#distOfClaimsChartContainer       {height: 400px; margin-left:20px;}
+#docClaimsChartContainer          {height: 400px;}
+#avgLifeSpanChartContainer        {height: 600px;}
+#avgAgesChartContainer            {height: 150px;}
+
 
 /******************/
 /* Overrides      */
@@ -114,9 +195,10 @@ img {height: auto;}
 /******************/
 /* Site Wrappers  */
 /******************/
-#site-wrapper       {max-width:1070px;} /* Changing this will require reformatting charts manually */
-#site-footer        {max-width:1070px;}
+#site-wrapper       {max-width:1050px;} /* Making this smaller will require reformatting charts manually */
+#site-footer        {max-width:1050px;}
 #site-content       {/*width:1050px;*/} /* Enable to prevent wrapping on mobile devices */
+#adam-wrapper       {max-width:1050px;}
 
 #site-header{
   background: #CED3E0; 
@@ -144,8 +226,6 @@ img {height: auto;}
 /******************/
 /* Adam Content   */
 /******************/
-#adam-wrapper                    {margin: 0;}
-
 .adam-toc, 
 #adam-menu,
 .adam-stats-wrapper, 
@@ -154,6 +234,9 @@ img {height: auto;}
 .adam-index-wrapper, 
 .adam-birthdays-wrapper,
 .adam-comment-wrapper,
+.adam-timeline-wrapper,
+.adam-immigrants-wrapper,
+.adam-nobility-wrapper,
 #map,
 #comment,
 #adam-person_chart,
@@ -164,6 +247,16 @@ img {height: auto;}
 	padding: 10px 10px 10px 20px;
 	margin: 0;
 	border: 0;
+}
+
+.adam-immigrants-wrapper,
+.adam-nobility-wrapper,
+.adam-timeline-wrapper {
+	padding: 10px 14px 4px 14px;
+}
+
+.adam-heatmap-wrapper {
+	min-height:750px;
 }
 
 .adam-home_title,
@@ -186,7 +279,7 @@ img {height: auto;}
 }
 
 .adam-stats-wrapper {margin-bottom: 10px;}
-
+.adam-aid                        {font-family:Monaco, Consolas, monospace; font-size:.9em;}
 #adam-inner-content              {background:transparent; margin-bottom:10px; padding:0;}
 .adam-alignright                 {float:right;}
 .adam-alignleft                  {/*float:left; position:absolute;*/}
@@ -199,8 +292,8 @@ img {height: auto;}
 #adam-menu a:visited             {color:#282828;}
 #adam-menu a:active              {color:#282828;}
 #adam-menu a:hover               {color:#9e9e9e; text-decoration:none;}
-.adam-tab_table                  {width:100%;}
-.adam-table_box                  {width:100%; border-width:1px; border-style:solid; border-color:black; border-spacing:0px; border-collapse:separate;}
+.adam-tab_table                  {width:100%; margin-top: 2px;}
+.adam-table_box                  {width:100%; border:1px solid #aaa; border-spacing:0px; border-collapse:separate; border-radius: 4px 4px 4px 4px; -webkit-border-radius: 4px 4px 4px 4px; -moz-border-radius: 4px 4px 4px 4px;}
 .adam-heading                    {background:#303030; color:white; font-weight:bold; padding:2px 10px 2px 10px;}
 .adam-heading li.adam-title      {float:left;}
 .adam-heading li.adam-id         {float:right;}
@@ -225,6 +318,7 @@ img {height: auto;}
 .adam-associations               {background:#EDCBAD; padding:5px 10px 5px 10px;}
 .adam-events                     {background:#E7F0FF; padding:5px 10px 5px 10px;}
 .adam-attrs                      {background:#E7F0FF; padding:5px 10px 5px 10px;}
+.adam-claim>td                   {padding-right:.5em;}
 .adam-claim_name                 {padding:0px 1px 0px 0px; white-space:nowrap;}
 .adam-claim_tag                  {padding:0px 1px 0px 0px; white-space:nowrap; min-width:150px;}
 .adam-claim_data                 {padding:0px 1px 0px 0px; width:100%;}
@@ -261,7 +355,7 @@ img {height: auto;}
 .adam-note                       {background:#FFFFFF; margin:5px 0;}
 .adam-note_heading               {background:#959A92; padding:1px 10px 2px 10px; border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(0, 0, 0);}
 .adam-note_text                  {background:#E7F0FF; padding:5px 10px 5px 10px; border-top-width:1px; border-top-style:solid; border-top-color:rgb(0, 0, 0);}
-.adam-list                       {background:#FFFFFF; margin-bottom:5px;}
+.adam-list                       {background:#FFFFFF; margin:5px 0;}
 .adam-list_heading               {background:#959A92; padding:1px 10px 2px 10px; border-bottom-width:1px; border-bottom-style:solid; border-bottom-color:rgb(0, 0, 0);}
 .adam-list_urls                  {background:#FFFAFA; padding:2px 10px 2px 10px;}
 #adam-modified                   {font-size:12px; padding: 2px 0px 0px 0px; margin-top: 20px;}
@@ -290,7 +384,7 @@ div.infowindow                   {max-height:400px; width: 100%; max-width:400px
 .adam-updated_person             {}
 .adam-updated_note               {font-style:italic;}
 .adam-updated_source             {font-style:italic;}
-.adam-al_page                    {background:#E0FFFF; padding:5px; border-color:black; border-style:solid; border-width:2px;}
+.adam-al_page                    {background:#E0FFFF; padding:5px; border: 1px solid #aaa; margin: 2px 0px 2px 0px; border-radius: 4px 4px 4px 4px; -webkit-border-radius: 4px 4px 4px 4px; -moz-border-radius: 4px 4px 4px 4px;}
 .adam-al_page b                  {font-weight:bold;}
 .adam-al_page i                  {font-style:italic;}
 .adam-al_legend                  {width:600px; list-style-type:none; margin:0; padding:0;}
@@ -302,9 +396,9 @@ div.infowindow                   {max-height:400px; width: 100%; max-width:400px
 .adam-al_name                    {float:left;  white-space:nowrap;}
 .adam-al_path                    {float:right; white-space:nowrap;}
 .bonkers_item                    {background:white; border-radius: 5px; -webkit-border-radius: 5px; margin-bottom:20px; padding-left:10px; padding-right:10px; padding-bottom:10px;}
-.adam-il_title                   {padding-left:10px; padding-top:10px; background:white; font-weight:bold; height:30px; vertical-align:bottom;}
+.adam-il_title                   {padding-left:10px; padding-top:10px; background:white; font-weight:bold; min-height:30px; vertical-align:bottom;}
 .adam-il_item                    {padding-left:10px;}
-.adam-il_item_bonkers            {font-size: 24px; font-weight:bold; padding: 10px 0;}
+.adam-il_item_bonkers            {font-size: 1.4em; padding: 10px 0;}
 .adam-il_total                   {padding:10px 0px 0px 10px;}
 .adam-census                     {width:100%; background:lightgrey; padding-left:1px; padding-right:1px; padding-top:1px; padding-bottom:1px; border: 1px solid rgba(196, 196, 196, 0.25);}
 .adam-census i                   {font-style:italic;}
@@ -347,7 +441,7 @@ ul.adam-tabs a.current           {background-color:#efefef; color:#000;border-bo
 .adam-url img                    {cursor:pointer; margin:0 0 3px; background-color:#fff; border:1px solid #ccc; padding:2px; -moz-border-radius:4px; -webkit-border-radius:4px;}
 #adam-person_chart               {position:relative;}
 .adam-chart_node                 {padding:2px; text-align:left; font-size:8pt; font-family:Arial, Helvetica, sans-serif; vertical-align:middle; border-top-width:1px; border-right-width:1px; border-bottom-width:1px; border-left-width:1px; border-top-style:solid; border-right-style:solid; border-bottom-style:solid; border-left-style:solid; border-top-color:rgb(0, 0, 0); border-right-color:rgb(0, 0, 0); border-bottom-color:rgb(0, 0, 0); border-left-color:rgb(0, 0, 0); border-image:initial;}
-.adam-chart_node                 {position:absolute; z-index:5; overflow:hidden; height:30px; width:151px; border-color: #949494; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; -khtml-border-radius:5px;}
+.adam-chart_node                 {position:absolute; z-index:5; overflow:hidden; height:36px; width:156px; border-color: #949494; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; -khtml-border-radius:5px;}
 .adam-chart_nodeshadow           {position:absolute; z-index:1; overflow:hidden; height:33px; width:154px; background-color:#444; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; -khtml-border-radius:5px;}
 .adam-chart_connector            {position:absolute; z-index:3; overflow:hidden; background-color:#949494;}
 .adam-chart_arrow                {position:absolute; z-index:5;}

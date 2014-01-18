@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="Phebe Thayer Profile - Minchin Genealogy | Minchin.ca" />
  <title>Phebe Thayer Profile - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -67,22 +74,24 @@ Version:   1.0.4        December 29, 2013
 
 <h1 id="adam-page-title">Phebe Thayer Profile</h1>
 
-<div id="tabs">
-<ul>
+<div id="adam-tab-list">
+<ul id="tab-list" class="nav nav-tabs">
 
-<li><a class="click" href="#profile">Profile</a></li>
+<li class="active"><a class="click" href="#profile" data-toggle="tab">Profile</a></li>
 
-<li><a class="click" href="#sources">Sources (1)</a></li>
+<li><a class="click" href="#sources" data-toggle="tab">Sources (1)</a></li>
 
-<li><a class="click" href="#chart">Chart</a></li>
+<li><a class="click" href="#chart" data-toggle="tab">Chart</a></li>
 
-<li><a class="click" href="#alist">Ancestors List (24)</a></li>
+<li><a class="click" href="#alist" data-toggle="tab">Ancestors List (24)</a></li>
 
-<li><a class="click" href="#map">Ancestors Distribution Map</a></li>
+<li><a class="click" href="#map" data-toggle="tab">Ancestors Distribution Map</a></li>
 
 </ul>
 
-<div id="profile" class="adam-tab">
+<div class="tab-content">
+
+<div id="profile" class="tab-pane active adam-tab">
 
 <ul id="adam-person_profile" class="adam-tab_style">
 <li>
@@ -148,7 +157,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="sources" class="adam-tab">
+<div id="sources" class="tab-pane adam-tab">
 
 <ul id="adam-person_sources" class="adam-tab_style">
 <li>
@@ -168,7 +177,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="chart" class="adam-tab">
+<div id="chart" class="tab-pane adam-tab">
 <ul>
 <li id="adam-person_chart">
 <div style="height: 665px;">&nbsp;</div>
@@ -321,7 +330,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="alist" class="adam-tab">
+<div id="alist" class="tab-pane adam-tab">
 
 <div class="adam-al_page">
 <ul class="adam-al_legend">
@@ -335,141 +344,141 @@ GEDCOM file imported on 4 February 2013
 
 <li class="adam-al_generation">Generation 1</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1] &nbsp; <a href="profile-I8431.html" class="adam-name_link">Phebe Thayer</a> (1805-1855)</div>
+  <div class="adam-al_name">[1] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8431.html" class="adam-name_link">Phebe Thayer</a> (1805-1855)</div>
   <div class="adam-al_path"><span title="New York">NY</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 2</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[2] &nbsp; <a href="profile-I6875.html" class="adam-name_link">Daniel Thayer</a> (1769-1854)</div>
+  <div class="adam-al_name">[2] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6875.html" class="adam-name_link">Daniel Thayer</a> (1769-1854)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span>-<span title="New York">NY</span>-<span title="Vermont">VT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3] &nbsp; <b><a href="profile-I6876.html" class="adam-name_link">Sarah Lottwell</a> (~1773->1814)</b></div>
+  <div class="adam-al_name">[3] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6876.html" class="adam-name_link">Sarah Lottwell</a> (~1773->1814)</b></div>
   <div class="adam-al_path"><span title="New York">NY</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 3</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[4] &nbsp; <a href="profile-I8449.html" class="adam-name_link">Reuben Thayer, (Dr.)</a> (1747->1839)</div>
+  <div class="adam-al_name">[4] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8449.html" class="adam-name_link">Reuben Thayer, (Dr.)</a> (1747->1839)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[5] &nbsp; <b><a href="profile-I8450.html" class="adam-name_link">Experience White</a> (~1748->1769)</b></div>
+  <div class="adam-al_name">[5] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8450.html" class="adam-name_link">Experience White</a> (~1748->1769)</b></div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 4</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[8] &nbsp; <a href="profile-I8453.html" class="adam-name_link">Isaac Thayer</a> (1717->1763)</div>
+  <div class="adam-al_name">[8] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8453.html" class="adam-name_link">Isaac Thayer</a> (1717->1763)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[9] &nbsp; <a href="profile-I8454.html" class="adam-name_link">Mary Thayer, (twin)</a> (->1763)</div>
+  <div class="adam-al_name">[9] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8454.html" class="adam-name_link">Mary Thayer, (twin)</a> (->1763)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 5</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[16] &nbsp; <a href="profile-I8473.html" class="adam-name_link">Isaac Thayer</a> (1695->1739)</div>
+  <div class="adam-al_name">[16] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8473.html" class="adam-name_link">Isaac Thayer</a> (1695->1739)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[17] &nbsp; <a href="profile-I8474.html" class="adam-name_link">Miriam Thayer</a> (1699->1739)</div>
+  <div class="adam-al_name">[17] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8474.html" class="adam-name_link">Miriam Thayer</a> (1699->1739)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[18] &nbsp; <a href="profile-I8480.html" class="adam-name_link">John Thayer</a> (1686-1747)</div>
+  <div class="adam-al_name">[18] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8480.html" class="adam-name_link">John Thayer</a> (1686-1747)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[19] &nbsp; <b><a href="profile-I8513.html" class="adam-name_link">Lydia Wales</a> (~1690->1737)</b></div>
+  <div class="adam-al_name">[19] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8513.html" class="adam-name_link">Lydia Wales</a> (~1690->1737)</b></div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 6</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[32] &nbsp; <a href="profile-I8475.html" class="adam-name_link">Isaac Thayer</a> (1669->1721)</div>
+  <div class="adam-al_name">[32] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8475.html" class="adam-name_link">Isaac Thayer</a> (1669->1721)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[33] &nbsp; <b><a href="profile-I8476.html" class="adam-name_link">Mercy Mary Ward</a> (~1673-1700)</b></div>
+  <div class="adam-al_name">[33] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8476.html" class="adam-name_link">Mercy Mary Ward</a> (~1673-1700)</b></div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[34] &nbsp; <a href="profile-I8496.html" class="adam-name_link">Josiah Thayer</a> (1671-1728)</div>
+  <div class="adam-al_name">[34] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8496.html" class="adam-name_link">Josiah Thayer</a> (1671-1728)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[35] &nbsp; <b><a href="profile-I8510.html" class="adam-name_link">Sarah Bass</a> (~1673->1710)</b></div>
+  <div class="adam-al_name">[35] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8510.html" class="adam-name_link">Sarah Bass</a> (~1673->1710)</b></div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[36] &nbsp; <a href="profile-I8482.html" class="adam-name_link">John Thayer</a> (1656-1746)</div>
+  <div class="adam-al_name">[36] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8482.html" class="adam-name_link">John Thayer</a> (1656-1746)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[37] &nbsp; <b><a href="profile-I8483.html" class="adam-name_link">Mary Bass</a> (~1658-1724)</b></div>
+  <div class="adam-al_name">[37] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8483.html" class="adam-name_link">Mary Bass</a> (~1658-1724)</b></div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 7</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[64] &nbsp; <i><a href="profile-I8478.html" class="adam-name_link">Ferdinando Thayer</a> (~1616-1713)</i></div>
+  <div class="adam-al_name">[64] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I8478.html" class="adam-name_link">Ferdinando Thayer</a> (~1616-1713)</i></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[65] &nbsp; <b><a href="profile-I8489.html" class="adam-name_link">Huldah Hayward</a> (~1633-1690)</b></div>
+  <div class="adam-al_name">[65] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8489.html" class="adam-name_link">Huldah Hayward</a> (~1633-1690)</b></div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[68] &nbsp; <i><a href="profile-I8478.html" class="adam-name_link">Ferdinando Thayer</a> (~1616-1713)</i> (same as 64)</div>
+  <div class="adam-al_name">[68] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I8478.html" class="adam-name_link">Ferdinando Thayer</a> (~1616-1713)</i> (same as 64)</div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[69] &nbsp; <b><a href="profile-I8489.html" class="adam-name_link">Huldah Hayward</a> (~1633-1690)</b> (same as 65)</div>
+  <div class="adam-al_name">[69] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8489.html" class="adam-name_link">Huldah Hayward</a> (~1633-1690)</b> (same as 65)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[72] &nbsp; <a href="profile-I8484.html" class="adam-name_link">Thomas Thayer</a> (~1620-1693)</div>
+  <div class="adam-al_name">[72] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8484.html" class="adam-name_link">Thomas Thayer</a> (~1620-1693)</div>
   <div class="adam-al_path"><span title="Essex">ESS</span>-<span title="England">ENG</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[73] &nbsp; <b><a href="profile-I8485.html" class="adam-name_link">Mrs Anna (Hannah) Thayer</a> (~1625-1698)</b></div>
+  <div class="adam-al_name">[73] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8485.html" class="adam-name_link">Mrs Anna (Hannah) Thayer</a> (~1625-1698)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 8</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[128] &nbsp; <i><a href="profile-I8486.html" class="adam-name_link">Thomas Thayer</a> (~1598-1665)</i></div>
+  <div class="adam-al_name">[128] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I8486.html" class="adam-name_link">Thomas Thayer</a> (~1598-1665)</i></div>
   <div class="adam-al_path"><span title="Essex">ESS</span>-<span title="England">ENG</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[129] &nbsp; <i><b><a href="profile-I8479.html" class="adam-name_link">Mrs Margery Thayer</a> (~1591->1630)</b></i></div>
+  <div class="adam-al_name">[129] <span class="adam-aid">&nbsp;&nbsp;</span><i><b><a href="profile-I8479.html" class="adam-name_link">Mrs Margery Thayer</a> (~1591->1630)</b></i></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[144] &nbsp; <i><a href="profile-I8486.html" class="adam-name_link">Thomas Thayer</a> (~1598-1665)</i> (same as 128)</div>
+  <div class="adam-al_name">[144] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I8486.html" class="adam-name_link">Thomas Thayer</a> (~1598-1665)</i> (same as 128)</div>
   <div class="adam-al_path"><span title="Essex">ESS</span>-<span title="England">ENG</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[145] &nbsp; <i><b><a href="profile-I8479.html" class="adam-name_link">Mrs Margery Thayer</a> (~1591->1630)</b></i> (same as 129)</div>
+  <div class="adam-al_name">[145] <span class="adam-aid">&nbsp;&nbsp;</span><i><b><a href="profile-I8479.html" class="adam-name_link">Mrs Margery Thayer</a> (~1591->1630)</b></i> (same as 129)</div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 9</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[256] &nbsp; <b><a href="profile-I8710.html" class="adam-name_link">Mr Father Thayer</a> (-)</b></div>
+  <div class="adam-al_name">[256] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8710.html" class="adam-name_link">Mr Father Thayer</a> (-)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[257] &nbsp; <b><a href="profile-I8711.html" class="adam-name_link">Mrs Mother Thayer</a> (-)</b></div>
+  <div class="adam-al_name">[257] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8711.html" class="adam-name_link">Mrs Mother Thayer</a> (-)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 </ul>
 </div>
 </div>
-<div id="map" class="adam-tab">
+<div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <br/>
 <div class="floatmapbuttons"><p>
@@ -504,16 +513,16 @@ function initializePins() {
 </div>
 <script type="text/javascript">
 $(document).ready(function () {
-  $('#tabs').tabs({
-    activate: function (event, ui) {
-      var act = $("#tabs").tabs("option", "active");
-		  if (act == 4) {
-        google.maps.event.trigger(map, 'resize');
-      }
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    e.target
+    e.relatedTarget
+  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      google.maps.event.trigger(map, 'resize');
     }
   });
 });
 </script>
+</div>
 </div>
 
 <ul>
@@ -522,7 +531,7 @@ $(document).ready(function () {
 Last Modified: Feb 4, 2013
 </li>
 </ul>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -542,7 +551,7 @@ Last Modified: Feb 4, 2013
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

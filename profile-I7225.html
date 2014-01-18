@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="Thomas Hiscox Profile - Minchin Genealogy | Minchin.ca" />
  <title>Thomas Hiscox Profile - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -67,22 +74,24 @@ Version:   1.0.4        December 29, 2013
 
 <h1 id="adam-page-title">Thomas Hiscox Profile</h1>
 
-<div id="tabs">
-<ul>
+<div id="adam-tab-list">
+<ul id="tab-list" class="nav nav-tabs">
 
-<li><a class="click" href="#profile">Profile</a></li>
+<li class="active"><a class="click" href="#profile" data-toggle="tab">Profile</a></li>
 
-<li><a class="click" href="#sources">Sources (1)</a></li>
+<li><a class="click" href="#sources" data-toggle="tab">Sources (1)</a></li>
 
-<li><a class="click" href="#chart">Chart</a></li>
+<li><a class="click" href="#chart" data-toggle="tab">Chart</a></li>
 
-<li><a class="click" href="#alist">Ancestors List (24)</a></li>
+<li><a class="click" href="#alist" data-toggle="tab">Ancestors List (24)</a></li>
 
-<li><a class="click" href="#map">Ancestors Distribution Map</a></li>
+<li><a class="click" href="#map" data-toggle="tab">Ancestors Distribution Map</a></li>
 
 </ul>
 
-<div id="profile" class="adam-tab">
+<div class="tab-content">
+
+<div id="profile" class="tab-pane active adam-tab">
 
 <ul id="adam-person_profile" class="adam-tab_style">
 <li>
@@ -146,7 +155,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="sources" class="adam-tab">
+<div id="sources" class="tab-pane adam-tab">
 
 <ul id="adam-person_sources" class="adam-tab_style">
 <li>
@@ -166,7 +175,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="chart" class="adam-tab">
+<div id="chart" class="tab-pane adam-tab">
 <ul>
 <li id="adam-person_chart">
 <div style="height: 665px;">&nbsp;</div>
@@ -320,7 +329,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="alist" class="adam-tab">
+<div id="alist" class="tab-pane adam-tab">
 
 <div class="adam-al_page">
 <ul class="adam-al_legend">
@@ -334,121 +343,121 @@ GEDCOM file imported on 4 February 2013
 
 <li class="adam-al_generation">Generation 1</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1] &nbsp; <a href="profile-I7225.html" class="adam-name_link">Thomas Hiscox</a> (1715-)</div>
+  <div class="adam-al_name">[1] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7225.html" class="adam-name_link">Thomas Hiscox</a> (1715-)</div>
   <div class="adam-al_path"><span title="Rhode Island">RI</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 2</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[2] &nbsp; <a href="profile-I7220.html" class="adam-name_link">Thomas Hiscox, Rev.</a> (1685-1772)</div>
+  <div class="adam-al_name">[2] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7220.html" class="adam-name_link">Thomas Hiscox, Rev.</a> (1685-1772)</div>
   <div class="adam-al_path"><span title="Rhode Island">RI</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3] &nbsp; <a href="profile-I7011.html" class="adam-name_link">Bethiah Clarke</a> (1678-1756)</div>
+  <div class="adam-al_name">[3] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7011.html" class="adam-name_link">Bethiah Clarke</a> (1678-1756)</div>
   <div class="adam-al_path"><span title="Rhode Island">RI</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 3</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[4] &nbsp; <b><a href="profile-I7351.html" class="adam-name_link">William Hiscox</a> (~1656->1685)</b></div>
+  <div class="adam-al_name">[4] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7351.html" class="adam-name_link">William Hiscox</a> (~1656->1685)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[5] &nbsp; <b><a href="profile-I7352.html" class="adam-name_link">Mrs Rebecca Hiscox</a> (~1656->1685)</b></div>
+  <div class="adam-al_name">[5] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7352.html" class="adam-name_link">Mrs Rebecca Hiscox</a> (~1656->1685)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[6] &nbsp; <a href="profile-I7005.html" class="adam-name_link">Joseph Clarke</a> (1642-1726)</div>
+  <div class="adam-al_name">[6] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7005.html" class="adam-name_link">Joseph Clarke</a> (1642-1726)</div>
   <div class="adam-al_path"><span title="Rhode Island">RI</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[7] &nbsp; <a href="profile-I7006.html" class="adam-name_link">Bethiah Hubbard</a> (1646-1707)</div>
+  <div class="adam-al_name">[7] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7006.html" class="adam-name_link">Bethiah Hubbard</a> (1646-1707)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span>-<span title="Rhode Island">RI</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 4</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[12] &nbsp; <i><a href="profile-I8990.html" class="adam-name_link">Joseph Clarke</a> (1618-1694)</i></div>
+  <div class="adam-al_name">[12] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I8990.html" class="adam-name_link">Joseph Clarke</a> (1618-1694)</i></div>
   <div class="adam-al_path"><span title="Suffolk">SFK</span>-<span title="Rhode Island">RI</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[13] &nbsp; <b><a href="profile-I8991.html" class="adam-name_link">Mrs Joseph Clarke</a> (~1621->1668)</b></div>
+  <div class="adam-al_name">[13] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8991.html" class="adam-name_link">Mrs Joseph Clarke</a> (~1621->1668)</b></div>
   <div class="adam-al_path"><span title="Rhode Island">RI</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[14] &nbsp; <i><a href="profile-I9124.html" class="adam-name_link">Samuel Hubbard</a> (1610->1655)</i></div>
+  <div class="adam-al_name">[14] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I9124.html" class="adam-name_link">Samuel Hubbard</a> (1610->1655)</i></div>
   <div class="adam-al_path"><span title="Suffolk">SFK</span>-<span title="Connecticut">CT</span>-<span title="Rhode Island">RI</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[15] &nbsp; <i><b><a href="profile-I9127.html" class="adam-name_link">Tacy Cooper</a> (1609->1655)</b></i></div>
+  <div class="adam-al_name">[15] <span class="adam-aid">&nbsp;&nbsp;</span><i><b><a href="profile-I9127.html" class="adam-name_link">Tacy Cooper</a> (1609->1655)</b></i></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Connecticut">CT</span>-<span title="Rhode Island">RI</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 5</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[24] &nbsp; <a href="profile-I8993.html" class="adam-name_link">Thomas Clarke</a> (1570-1627)</div>
+  <div class="adam-al_name">[24] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8993.html" class="adam-name_link">Thomas Clarke</a> (1570-1627)</div>
   <div class="adam-al_path"><span title="Suffolk">SFK</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[25] &nbsp; <a href="profile-I8994.html" class="adam-name_link">Rose Kerrich (Keridge)</a> (~1572-1627)</div>
+  <div class="adam-al_name">[25] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8994.html" class="adam-name_link">Rose Kerrich (Keridge)</a> (~1572-1627)</div>
   <div class="adam-al_path"><span title="Suffolk">SFK</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[28] &nbsp; <i><a href="profile-I9140.html" class="adam-name_link">James Hubbard</a> (~1578->1618)</i></div>
+  <div class="adam-al_name">[28] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I9140.html" class="adam-name_link">James Hubbard</a> (~1578->1618)</i></div>
   <div class="adam-al_path"><span title="Suffolk">SFK</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[29] &nbsp; <i><a href="profile-I9141.html" class="adam-name_link">Naomi Cocke</a> (~1582->1618)</i></div>
+  <div class="adam-al_name">[29] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I9141.html" class="adam-name_link">Naomi Cocke</a> (~1582->1618)</i></div>
   <div class="adam-al_path"><span title="Suffolk">SFK</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 6</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[48] &nbsp; <a href="profile-I9003.html" class="adam-name_link">John Clarke</a> (~1542-1598)</div>
+  <div class="adam-al_name">[48] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9003.html" class="adam-name_link">John Clarke</a> (~1542-1598)</div>
   <div class="adam-al_path"><span title="Suffolk">SFK</span>-<span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[49] &nbsp; <b><a href="profile-I9019.html" class="adam-name_link">Catherine Cook</a> (~1544->1567)</b></div>
+  <div class="adam-al_name">[49] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9019.html" class="adam-name_link">Catherine Cook</a> (~1544->1567)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[50] &nbsp; <b><a href="profile-I8995.html" class="adam-name_link">William Kerrich</a> (~1550->1570)</b></div>
+  <div class="adam-al_name">[50] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8995.html" class="adam-name_link">William Kerrich</a> (~1550->1570)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[51] &nbsp; <b><a href="profile-I8996.html" class="adam-name_link">Mrs Margery Kerrich</a> (~1552->1570)</b></div>
+  <div class="adam-al_name">[51] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8996.html" class="adam-name_link">Mrs Margery Kerrich</a> (~1552->1570)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[56] &nbsp; <b><a href="profile-I9155.html" class="adam-name_link">Thomas Hubbard</a> (~1549->1578)</b></div>
+  <div class="adam-al_name">[56] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9155.html" class="adam-name_link">Thomas Hubbard</a> (~1549->1578)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Suffolk">SFK</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[57] &nbsp; <b><a href="profile-I9156.html" class="adam-name_link">Mrs Thomas Hubbard</a> (~1554->1578)</b></div>
+  <div class="adam-al_name">[57] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9156.html" class="adam-name_link">Mrs Thomas Hubbard</a> (~1554->1578)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Suffolk">SFK</span>-<span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[58] &nbsp; <b><a href="profile-I9157.html" class="adam-name_link">Thomas Cocke</a> (~1551->1582)</b></div>
+  <div class="adam-al_name">[58] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9157.html" class="adam-name_link">Thomas Cocke</a> (~1551->1582)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[59] &nbsp; <b><a href="profile-I9158.html" class="adam-name_link">Mrs Thomas Cocke</a> (~1553->1582)</b></div>
+  <div class="adam-al_name">[59] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9158.html" class="adam-name_link">Mrs Thomas Cocke</a> (~1553->1582)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 7</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[96] &nbsp; <b><a href="profile-I8997.html" class="adam-name_link">John Clarke</a> (~1510-1559)</b></div>
+  <div class="adam-al_name">[96] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8997.html" class="adam-name_link">John Clarke</a> (~1510-1559)</b></div>
   <div class="adam-al_path"><span title="Suffolk">SFK</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[97] &nbsp; <b><a href="profile-I8998.html" class="adam-name_link">Mrs Margaret Clarke</a> (~1513->1544)</b></div>
+  <div class="adam-al_name">[97] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8998.html" class="adam-name_link">Mrs Margaret Clarke</a> (~1513->1544)</b></div>
   <div class="adam-al_path"><span title="Suffolk">SFK</span></div><br>
 </li>
 </ul>
 </div>
 </div>
-<div id="map" class="adam-tab">
+<div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <br/>
 <div class="floatmapbuttons"><p>
@@ -483,16 +492,16 @@ function initializePins() {
 </div>
 <script type="text/javascript">
 $(document).ready(function () {
-  $('#tabs').tabs({
-    activate: function (event, ui) {
-      var act = $("#tabs").tabs("option", "active");
-		  if (act == 4) {
-        google.maps.event.trigger(map, 'resize');
-      }
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    e.target
+    e.relatedTarget
+  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      google.maps.event.trigger(map, 'resize');
     }
   });
 });
 </script>
+</div>
 </div>
 
 <ul>
@@ -501,7 +510,7 @@ $(document).ready(function () {
 Last Modified: Feb 4, 2013
 </li>
 </ul>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -521,7 +530,7 @@ Last Modified: Feb 4, 2013
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

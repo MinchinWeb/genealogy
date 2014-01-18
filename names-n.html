@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="n - Minchin Genealogy | Minchin.ca" />
  <title>n - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -70,7 +77,8 @@ Version:   1.0.4        December 29, 2013
 <br><a name="top"></a>
 
 <div class="adam-index-wrapper">
-<div class="adam-index_legend"><a href="names-a.html">A</a>&nbsp;
+<div class="adam-index_legend">
+<a href="names-a.html">A</a>&nbsp;
 <a href="names-b.html">B</a>&nbsp;
 <a href="names-c.html">C</a>&nbsp;
 <a href="names-d.html">D</a>&nbsp;
@@ -98,341 +106,177 @@ X&nbsp;
 <a href="names-z.html">Z</a>&nbsp;
 <a href="names-unknown.html">Unknown</a>&nbsp;
 <a href="names-none.html">None</a>&nbsp;
-</div><br>
+</div>
+<br>
 
 <table>
-
 <tr><td align="right"><a name="nagus"></a></td><td><a href="profile-I1291.html" class="adam-name_link">Nagus, Virginia June</a> (-)</td></tr>
-
 <tr><td align="right"><a name="napper"></a></td><td><a href="profile-I8412.html" class="adam-name_link">Napper, Winifred Hudnate, (Widow)</a> (~1648-~1690)</td></tr>
-
 <tr><td align="right"><a name="nash"></a></td><td><a href="profile-I6269.html" class="adam-name_link">Nash, Moses</a> (-)</td></tr>
-
 <tr><td align="right"><a name="neal"></a></td><td><a href="profile-I9895.html" class="adam-name_link">Neal, Letitia</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9667.html" class="adam-name_link">Neal, Mister</a> (~1695-<1763)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8559.html" class="adam-name_link">Neal, Sarah Mills, (widow)</a> (1698-1800)</td></tr>
-
 <tr><td align="right"><a name="neill"></a></td><td><a href="profile-I4346.html" class="adam-name_link">Neill, Anne Jane</a> (1868-1937)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I935.html" class="adam-name_link">Neill, Eveline Jeanette</a> (1886-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I883.html" class="adam-name_link">Neill, George</a> (~1858-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I4349.html" class="adam-name_link">Neill, James</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I884.html" class="adam-name_link">Neill, John</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I933.html" class="adam-name_link">Neill, May Elizabeth</a> (1884-1930)</td></tr>
-
 <tr><td align="right"><a name="nelson"></a></td><td><a href="profile-I4260.html" class="adam-name_link">Nelson, Frederick</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7674.html" class="adam-name_link">Nelson, Sarah</a> (-)</td></tr>
-
 <tr><td align="right"><a name="nelthorpe"></a></td><td><a href="profile-I534.html" class="adam-name_link">Nelthorpe, Lary</a> (1949-1973)</td></tr>
-
 <tr><td align="right"><a name="neu"></a></td><td><a href="profile-I9371.html" class="adam-name_link">Neu, Bertha Agnes Marie</a> (1859-1939)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9374.html" class="adam-name_link">Neu, Fredrick August</a> (1828->1859)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9432.html" class="adam-name_link">Neu, Freidrick August</a> (1799-1856)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9437.html" class="adam-name_link">Neu, Johann Gottfried</a> (~1765->1799)</td></tr>
-
 <tr><td align="right"><a name="newell"></a></td><td><a href="profile-I8639.html" class="adam-name_link">Newell, Charles</a> (~1797-1848)</td></tr>
-
 <tr><td align="right"><a name="newton"></a></td><td><a href="profile-I6045.html" class="adam-name_link">Newton, Elizabeth</a> (1766-1836)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I2014.html" class="adam-name_link">Newton, Mary</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I2015.html" class="adam-name_link">Newton, Sir Peter</a> (-)</td></tr>
-
 <tr><td align="right"><a name="niblock"></a></td><td><a href="profile-I1121.html" class="adam-name_link">Niblock, Mary Jane</a> (~1900-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I1122.html" class="adam-name_link">Niblock, Moses</a> (-)</td></tr>
-
 <tr><td align="right"><a name="nicholls"></a></td><td><a href="profile-I5381.html" class="adam-name_link">Nicholls, Mrs. J. _____</a> (~1542-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5888.html" class="adam-name_link">Nicholls, Alice</a> (~1574-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5872.html" class="adam-name_link">Nicholls, Anne</a> (~1672-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5887.html" class="adam-name_link">Nicholls, Elizabeth</a> (~1641-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5354.html" class="adam-name_link">Nicholls, Hugh</a> (~1638-~1700)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5889.html" class="adam-name_link">Nicholls, Hugh</a> (~1577-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5378.html" class="adam-name_link">Nicholls, Hugh</a> (~1564-~1640)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5877.html" class="adam-name_link">Nicholls, John</a> (~1576-~1576)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5882.html" class="adam-name_link">Nicholls, John</a> (~1632-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5389.html" class="adam-name_link">Nicholls, John</a> (~1572-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5382.html" class="adam-name_link">Nicholls, John</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5870.html" class="adam-name_link">Nicholls, John</a> (~1665-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5380.html" class="adam-name_link">Nicholls, John</a> (~1538-~1611)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5881.html" class="adam-name_link">Nicholls, John</a> (~1634-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5880.html" class="adam-name_link">Nicholls, John</a> (~1610-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5876.html" class="adam-name_link">Nicholls, Leonard</a> (~1573-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5385.html" class="adam-name_link">Nicholls, Margery</a> (~1606-1674)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5361.html" class="adam-name_link">Nicholls, Mary</a> (~1561-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5871.html" class="adam-name_link">Nicholls, Mary</a> (~1670-~1670)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5874.html" class="adam-name_link">Nicholls, Nari</a> (~1602-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5891.html" class="adam-name_link">Nicholls, Nicholas</a> (~1581-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5884.html" class="adam-name_link">Nicholls, Oliver</a> (~1634-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5885.html" class="adam-name_link">Nicholls, Peter</a> (~1637-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5346.html" class="adam-name_link">Nicholls, Peter</a> (~1607-~1683)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5875.html" class="adam-name_link">Nicholls, Peter</a> (~1568-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5372.html" class="adam-name_link">Nicholls, Peter</a> (~1598-~1684)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5873.html" class="adam-name_link">Nicholls, Peter</a> (~1675-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5340.html" class="adam-name_link">Nicholls, Philippa</a> (~1637-~1677)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5391.html" class="adam-name_link">Nicholls, Richard</a> (~1544-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5342.html" class="adam-name_link">Nicholls, Rodagen</a> (~1608-~1643)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5353.html" class="adam-name_link">Nicholls, Sarah</a> (~1667-~1732)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5886.html" class="adam-name_link">Nicholls, Tabitt</a> (~1640-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5883.html" class="adam-name_link">Nicholls, Thomas</a> (~1633-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5890.html" class="adam-name_link">Nicholls, William</a> (~1579-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5879.html" class="adam-name_link">Nicholls, Wilmet</a> (~1606-)</td></tr>
-
 <tr><td align="right"><a name="nicks"></a></td><td><a href="profile-I9408.html" class="adam-name_link">Nicks, Sarah</a> (1815-)</td></tr>
-
 <tr><td align="right"><a name="niels"></a></td><td><a href="profile-I5279.html" class="adam-name_link">Niels, Mrs. _____</a> (~1634-)</td></tr>
-
 <tr><td align="right"><a name="nielsen"></a></td><td><a href="profile-I5593.html" class="adam-name_link">Nielsen, Annanettie</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5476.html" class="adam-name_link">Nielsen, Anne</a> (1803-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5627.html" class="adam-name_link">Nielsen, Christine</a> (1850-1927)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5276.html" class="adam-name_link">Nielsen, Mads</a> (1654-~1744)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5473.html" class="adam-name_link">Nielsen, Marthe</a> (~1796-1845)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5278.html" class="adam-name_link">Nielsen, Niels</a> (1634-1693)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5474.html" class="adam-name_link">Nielsen, Ole</a> (1798-1845)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5475.html" class="adam-name_link">Nielsen, Peder</a> (1800-)</td></tr>
-
 <tr><td align="right"><a name="nielson"></a></td><td><a href="profile-I5625.html" class="adam-name_link">Nielson, Jens</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5175.html" class="adam-name_link">Nielson, Mari</a> (~1794-1867)</td></tr>
-
 <tr><td align="right"><a name="nisbet"></a></td><td><a href="profile-I4143.html" class="adam-name_link">Nisbet, Andrew</a> (~1719-<1782)</td></tr>
-
 <tr><td align="right"><a name="nisbit"></a></td><td><a href="profile-I103.html" class="adam-name_link">Nisbit, Andrew</a> (1749-1790)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I92.html" class="adam-name_link">Nisbit, Margaret</a> (1780-1852)</td></tr>
-
 <tr><td align="right"><a name="norcross"></a></td><td><a href="profile-I6145.html" class="adam-name_link">Norcross, Nancy</a> (-)</td></tr>
-
 <tr><td align="right"><a name="norris"></a></td><td><a href="profile-I9860.html" class="adam-name_link">Norris, Agnes</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9872.html" class="adam-name_link">Norris, Martha</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9944.html" class="adam-name_link">Norris, William, Esq.</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9949.html" class="adam-name_link">Norris, Sir William, Knt</a> (-)</td></tr>
-
 <tr><td align="right"><a name="northcott"></a></td><td><a href="profile-I1398.html" class="adam-name_link">Northcott, Beatrice</a> (-)</td></tr>
-
 <tr><td align="right"><a name="northrop"></a></td><td><a href="profile-I6026.html" class="adam-name_link">Northrop, Hannah</a> (~1699-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6027.html" class="adam-name_link">Northrop, Joseph</a> (-)</td></tr>
-
 <tr><td align="right"><a name="norton"></a></td><td><a href="profile-I7944.html" class="adam-name_link">Norton, David</a> (1773-1860)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5399.html" class="adam-name_link">Norton, David</a> (~1771-1814)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I5396.html" class="adam-name_link">Norton, David</a> (1796-1860)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7839.html" class="adam-name_link">Norton, Elizabeth Ann</a> (1847-1900)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6052.html" class="adam-name_link">Norton, Henry Elliot</a> (1827-1913)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7948.html" class="adam-name_link">Norton, Henry</a> (~1791-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6048.html" class="adam-name_link">Norton, Henry</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6053.html" class="adam-name_link">Norton, Hyrum Fletcher</a> (1829-1907)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6054.html" class="adam-name_link">Norton, Isabella</a> (1836-1922)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6051.html" class="adam-name_link">Norton, James Wiley</a> (1822-1897)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7859.html" class="adam-name_link">Norton, John David</a> (1850-1925)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6047.html" class="adam-name_link">Norton, John N.</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7947.html" class="adam-name_link">Norton, John N.</a> (1790->1811)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6050.html" class="adam-name_link">Norton, John Wesley</a> (1820-1901)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I4176.html" class="adam-name_link">Norton, John</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7960.html" class="adam-name_link">Norton, John</a> (~1738->1770)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7946.html" class="adam-name_link">Norton, Mary Polly</a> (1788-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I4726.html" class="adam-name_link">Norton, Melissa Isabel</a> (1824-1892)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7961.html" class="adam-name_link">Norton, Mrs Mary</a> (~1742->1770)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7861.html" class="adam-name_link">Norton, Nancy Ann</a> (1860-1923)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8074.html" class="adam-name_link">Norton, Nancy Fidelia</a> (->1864)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6049.html" class="adam-name_link">Norton, Polly</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7949.html" class="adam-name_link">Norton, Rachel</a> (1798-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7860.html" class="adam-name_link">Norton, Rebecca Ann</a> (1855-1940)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I4175.html" class="adam-name_link">Norton, Sarah Jane</a> (1854-1937)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7953.html" class="adam-name_link">Norton, Sophia</a> (1792-)</td></tr>
-
 <tr><td align="right"><a name="noyes"></a></td><td><a href="profile-I7174.html" class="adam-name_link">Noyes, Anna</a> (1780->1794)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6935.html" class="adam-name_link">Noyes, Anna</a> (1729->1752)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7234.html" class="adam-name_link">Noyes, Anne</a> (1682-1694)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7170.html" class="adam-name_link">Noyes, Avery</a> (1771->1799)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8897.html" class="adam-name_link">Noyes, Bridget</a> (~1709->1727)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7177.html" class="adam-name_link">Noyes, Denison</a> (1788-1876)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7230.html" class="adam-name_link">Noyes, Dorothy</a> (1675-1714)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8870.html" class="adam-name_link">Noyes, Ephraim</a> (1596-1659)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7353.html" class="adam-name_link">Noyes, James</a> (1608-1656)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7228.html" class="adam-name_link">Noyes, James</a> (1640-1719)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6932.html" class="adam-name_link">Noyes, James</a> (1723-1806)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7231.html" class="adam-name_link">Noyes, James</a> (1677-1718)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8985.html" class="adam-name_link">Noyes, James, Dr.</a> (~1688->1710)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7358.html" class="adam-name_link">Noyes, John</a> (1645-1678)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7748.html" class="adam-name_link">Noyes, John</a> (1649-1678)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6929.html" class="adam-name_link">Noyes, John</a> (1718-1800)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6926.html" class="adam-name_link">Noyes, John</a> (1685-1751)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8873.html" class="adam-name_link">Noyes, John</a> (~1612->1632)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7173.html" class="adam-name_link">Noyes, John</a> (1777-1866)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6936.html" class="adam-name_link">Noyes, Joseph</a> (-1820)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7355.html" class="adam-name_link">Noyes, Joseph</a> (1637-1717)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6930.html" class="adam-name_link">Noyes, Joseph</a> (1720-1723)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7169.html" class="adam-name_link">Noyes, Joseph</a> (1768-1852)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7235.html" class="adam-name_link">Noyes, Joseph</a> (1688-1761)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6933.html" class="adam-name_link">Noyes, Mary</a> (1725-1808)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8872.html" class="adam-name_link">Noyes, Miss</a> (~1610->1630)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7236.html" class="adam-name_link">Noyes, Moses</a> (1692-1692)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7357.html" class="adam-name_link">Noyes, Moses</a> (1643-1726)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8877.html" class="adam-name_link">Noyes, Mrs John</a> (~1614->1631)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8886.html" class="adam-name_link">Noyes, Mrs John</a> (-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8880.html" class="adam-name_link">Noyes, Mrs Robert</a> (~1545->1570)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9530.html" class="adam-name_link">Noyes, Mrs Sara</a> (~1567->1585)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8871.html" class="adam-name_link">Noyes, Nathan</a> (1597-1651)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8874.html" class="adam-name_link">Noyes, Nicholas</a> (1614-1701)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7176.html" class="adam-name_link">Noyes, Polly</a> (1784-1849)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7132.html" class="adam-name_link">Noyes, Prudence</a> (1764-1840)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7175.html" class="adam-name_link">Noyes, Rebecca</a> (1782-1842)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7361.html" class="adam-name_link">Noyes, Rebecca</a> (1651->1671)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8881.html" class="adam-name_link">Noyes, Richard</a> (1565-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8882.html" class="adam-name_link">Noyes, Robert</a> (1570-1659)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8879.html" class="adam-name_link">Noyes, Robert</a> (~1540-1659)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7363.html" class="adam-name_link">Noyes, Sarah</a> (1656-1695)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7356.html" class="adam-name_link">Noyes, Sarah</a> (1641-1653)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6934.html" class="adam-name_link">Noyes, Sarah</a> (1727-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7168.html" class="adam-name_link">Noyes, Sarah</a> (1766-1848)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7171.html" class="adam-name_link">Noyes, Thankful</a> (1773-1860)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7359.html" class="adam-name_link">Noyes, Thomas</a> (1648-1730)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7233.html" class="adam-name_link">Noyes, Thomas</a> (1679-1755)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I6928.html" class="adam-name_link">Noyes, William</a> (1716-1809)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7362.html" class="adam-name_link">Noyes, William</a> (1653-1744)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I8868.html" class="adam-name_link">Noyes, William, Rev.</a> (1568-1622)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I7172.html" class="adam-name_link">Noyes, Zeriah</a> (1775-1821)</td></tr>
-
 <tr><td align="right"><a name="numer"></a></td><td><a href="profile-I575.html" class="adam-name_link">Numer, John</a> (1785-~1843)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I9724.html" class="adam-name_link">Numer, John</a> (1750-)</td></tr>
-
 <tr><td align="right"></td><td><a href="profile-I574.html" class="adam-name_link">Numer, Mary Jane</a> (1833-1917)</td></tr>
-
 </table>
-
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+</div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -452,7 +296,7 @@ X&nbsp;
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

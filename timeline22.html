@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="20th Century - Minchin Genealogy | Minchin.ca" />
  <title>20th Century - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -67,6 +74,8 @@ Version:   1.0.4        December 29, 2013
 
 <h1 id="adam-page-title">20th Century</h1>
 
+<div class="adam-timeline-wrapper">
+
 <ul id="adam-timeline" class="adam-tab_style">
 <li>
 <table class="adam-tab_table">
@@ -103,12 +112,12 @@ GEDCOM file imported on 4 February 2013
 </td><td class="adam-claim_date">Apr 2, 1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I135.html" class="adam-name_link">Kathleen Hannant</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-england-yorkshire-sheffield.html" class="adam-location_link">Sheffield, Yorkshire, England</a>
 </td><td class="adam-claim_date">Apr 21, 1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4807.html" class="adam-name_link">Francis Strang, Jr.</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-utah-carbon-scofield.html" class="adam-location_link">Scofield, Carbon, Utah, United States</a>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4803.html" class="adam-name_link">Francis Strang, Sr.</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-utah-carbon-scofield.html" class="adam-location_link">Scofield, Carbon, Utah, United States</a>
 
 <span>[<a href="sources-S28.html" title="[S28]
 GEDCOM file imported on 10 January 2013
 ">S28</a>]</span> </td><td class="adam-claim_date">May 1, 1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4803.html" class="adam-name_link">Francis Strang, Sr.</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-utah-carbon-scofield.html" class="adam-location_link">Scofield, Carbon, Utah, United States</a>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4807.html" class="adam-name_link">Francis Strang, Jr.</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-utah-carbon-scofield.html" class="adam-location_link">Scofield, Carbon, Utah, United States</a>
 
 <span>[<a href="sources-S28.html" title="[S28]
 GEDCOM file imported on 10 January 2013
@@ -136,12 +145,12 @@ GEDCOM file imported on 4 February 2013
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">Nov 5, 1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6896.html" class="adam-name_link">John Topham</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-utah-iron-paragonah.html" class="adam-location_link">Paragonah, Iron, Utah, United States</a>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I7839.html" class="adam-name_link">Elizabeth Ann Norton</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-usa-utah-garfield-panguitch.html" class="adam-location_link">Panguitch, Garfield, Utah, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">Nov 8, 1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I7839.html" class="adam-name_link">Elizabeth Ann Norton</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-usa-utah-garfield-panguitch.html" class="adam-location_link">Panguitch, Garfield, Utah, United States</a>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6896.html" class="adam-name_link">John Topham</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-utah-iron-paragonah.html" class="adam-location_link">Paragonah, Iron, Utah, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
@@ -161,35 +170,35 @@ GEDCOM file imported on 10 January 2013
 <span>[<a href="sources-S28.html" title="[S28]
 GEDCOM file imported on 10 January 2013
 ">S28</a>]</span> </td><td class="adam-claim_date">Dec 11, 1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I87.html" class="adam-name_link">James Houston</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-canada-prince-edward-island.html" class="adam-location_link">Prince Edward Island, Canada</a>
-</td><td class="adam-claim_date">1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I741.html" class="adam-name_link">John Kelly</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
-<span>[<a href="sources-S8.html" title="[S8]
-The Book of Minchin: A Family for all Seasons
-Page: S8
-">S8:S8</a>]</span> </td><td class="adam-claim_date">1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4463.html" class="adam-name_link">Henry Lee</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I4380.html" class="adam-name_link">Margaret Dale</a></td><td class="adam-claim_date">1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I880.html" class="adam-name_link">George Augustus Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-dundalk.html" class="adam-location_link">Dundalk</a>
-</td><td class="adam-claim_date">1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I7608.html" class="adam-name_link">Carl John Jakobson Underland</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data">
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4416.html" class="adam-name_link">Henery Robert Dale</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I8423.html" class="adam-name_link">Elizabeth Ryan</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I736.html" class="adam-name_link">Jane Gladney</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I771.html" class="adam-name_link">Augustus Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-pennsylvania.html" class="adam-location_link">Pennsylvania, United States</a>
-</td><td class="adam-claim_date">1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I8370.html" class="adam-name_link">Herman Jumper</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-tennessee-pemiscot-caruthersville.html" class="adam-location_link">Caruthersville, Pemiscot, Tennessee, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I87.html" class="adam-name_link">James Houston</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-canada-prince-edward-island.html" class="adam-location_link">Prince Edward Island, Canada</a>
+</td><td class="adam-claim_date">1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I736.html" class="adam-name_link">Jane Gladney</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I741.html" class="adam-name_link">John Kelly</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
+<span>[<a href="sources-S8.html" title="[S8]
+The Book of Minchin: A Family for all Seasons
+Page: S8
+">S8:S8</a>]</span> </td><td class="adam-claim_date">1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4416.html" class="adam-name_link">Henery Robert Dale</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I880.html" class="adam-name_link">George Augustus Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-dundalk.html" class="adam-location_link">Dundalk</a>
+</td><td class="adam-claim_date">1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I875.html" class="adam-name_link">James Burns</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-ireland-dublin.html" class="adam-location_link">Dublin, Ireland</a>
 </td><td class="adam-claim_date">1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I771.html" class="adam-name_link">Augustus Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-pennsylvania.html" class="adam-location_link">Pennsylvania, United States</a>
+</td><td class="adam-claim_date">1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4463.html" class="adam-name_link">Henry Lee</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I4380.html" class="adam-name_link">Margaret Dale</a></td><td class="adam-claim_date">1900</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I7908.html" class="adam-name_link">Martha Minerva Reynolds</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-utah-garfield-panguitch.html" class="adam-location_link">Panguitch, Garfield, Utah, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
@@ -279,22 +288,22 @@ Email from Howard Blaxland
 Page: S26
 ">S26:S26</a>]</span> </td><td class="adam-claim_date">1901</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr><td></td><td></td><td><table><tr><td><div class="adam-comment"></div><div class="adam-comment">Listed as born 8 March 1834 [from Howard Blaxland, July 2012]</div></td></tr></table></td><td></td><td></td><td></td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1565.html" class="adam-name_link">Florence Mable Jewell</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-canada-prince-edward-island-queens-hartsville.html" class="adam-location_link">Hartsville, Queens, Prince Edward Island, Canada</a>
-</td><td class="adam-claim_date">1901</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1513.html" class="adam-name_link">Richard Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1901</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I2061.html" class="adam-name_link">Richard George Edward Minchin</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kings-county-of-busherstown.html" class="adam-location_link">of Busherstown, Kings County, Ireland</a>
 
 <span>[<a href="sources-S8.html" title="[S8]
 The Book of Minchin: A Family for all Seasons
 Page: S8
 ">S8:S8</a>]</span> </td><td class="adam-claim_date">1901</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1513.html" class="adam-name_link">Richard Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1901</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4460.html" class="adam-name_link">Allan Dale</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1901</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I39.html" class="adam-name_link">Mary Ann Ferguson</a></td><td class="adam-claim_tag">Census</td><td class="adam-claim_data">
 <span>[<a href="sources-S26.html" title="[S26]
 Email from Howard Blaxland
 Page: S26
 ">S26:S26</a>]</span> </td><td class="adam-claim_date">1901</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr><td></td><td></td><td><table><tr><td><div class="adam-comment"></div><div class="adam-comment">Listed in the 1901 census as a widow living with her son John and family. [from Howard Blaxland, July 2012]</div></td></tr></table></td><td></td><td></td><td></td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4460.html" class="adam-name_link">Allan Dale</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1901</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1565.html" class="adam-name_link">Florence Mable Jewell</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-canada-prince-edward-island-queens-hartsville.html" class="adam-location_link">Hartsville, Queens, Prince Edward Island, Canada</a>
+</td><td class="adam-claim_date">1901</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6770.html" class="adam-name_link">James Nehemiah Holyoak</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I6715.html" class="adam-name_link">Ellen Reynolds</a>, <a href="places-usa-utah-garfield-panguitch.html" class="adam-location_link">Panguitch, Garfield, Utah, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
@@ -418,7 +427,7 @@ The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl
 Page: S23
 ">S23:S23</a>]</span> </td><td class="adam-claim_date">Dec 1, 1903</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1773.html" class="adam-name_link">Jane Houston</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Dec 4, 1903</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1601.html" class="adam-name_link">Hettie Maude Jewell</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1601.html" class="adam-name_link">Nettie Maude Jewell</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
 </td><td class="adam-claim_date">Dec 17, 1903</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6734.html" class="adam-name_link">Joseph Riley Topham</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-utah-iron-paragonah.html" class="adam-location_link">Paragonah, Iron, Utah, United States</a>
 
@@ -642,9 +651,9 @@ The Bunbury Issac Family
 Page: 21 December 2013
 AccessDate: 21 December 2013
 ">S38</a>]</span> </td><td class="adam-claim_date">Dec 9, 1906</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I785.html" class="adam-name_link">Rebecca Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1906</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I145.html" class="adam-name_link">Gladys Hannant</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-england-yorkshire-sheffield.html" class="adam-location_link">Sheffield, Yorkshire, England</a>
 </td><td class="adam-claim_date">1906</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I785.html" class="adam-name_link">Rebecca Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1906</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9366.html" class="adam-name_link">Wilhelm Leimund Grahnert</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I9367.html" class="adam-name_link">Bessie Belle Brown</a>, <a href="places-usa-missouri-carter-grandin.html" class="adam-location_link">Grandin, Carter, Missouri, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
@@ -701,9 +710,9 @@ Email from Howard Blaxland
 Page: S26
 ">S26:S26</a>]</span> </td><td class="adam-claim_date">Jun 19, 1907</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr><td></td><td></td><td><table><tr><td><div class="adam-comment"></div><div class="adam-comment">"Mass. Marriage records." [from Howard Blaxland, July 2012]</div></td></tr></table></td><td></td><td></td><td></td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1741.html" class="adam-name_link">Catherine Ann Maloney</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">Jun 21, 1907</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1603.html" class="adam-name_link">Benjamin Sterling Jewell</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
 </td><td class="adam-claim_date">Jun 21, 1907</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1741.html" class="adam-name_link">Catherine Ann Maloney</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">Jun 21, 1907</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4449.html" class="adam-name_link">Thomas Dale</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-australia-queensland-gympie.html" class="adam-location_link">Gympie, Queensland, Australia</a>
 </td><td class="adam-claim_date">Jun 29, 1907</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4449.html" class="adam-name_link">Thomas Dale</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-australia-queensland-gympie.html" class="adam-location_link">Gympie, Queensland, Australia</a>
@@ -743,13 +752,6 @@ GEDCOM file imported on 10 January 2013
 ">S28</a>]</span> </td><td class="adam-claim_date">Oct 16, 1907</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I858.html" class="adam-name_link">H. I. Driscoll</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I857.html" class="adam-name_link">Lucile E. Minchin</a>, <a href="places-usa-ohio-warren.html" class="adam-location_link">Warren, Ohio, United States</a>
 </td><td class="adam-claim_date">Dec 28, 1907</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I164.html" class="adam-name_link">David Archibald Duncan</a></td><td class="adam-claim_tag">Misc</td><td class="adam-claim_data"><a href="places-canada-alberta-killam.html" class="adam-location_link">Killam, Alberta, Canada</a>
-,  Moved to Killam
-<span>[<a href="sources-S45.html" title="[S45]
-Bert & Ethel Lees family
-Page: S45
-">S45:S45</a>]</span> </td><td class="adam-claim_date">1907</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4426.html" class="adam-name_link">Valerie Cunningham</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1907</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9741.html" class="adam-name_link">Honourable Matthew James Hastings Fitzmaurice Deane</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
 <span>[<a href="sources-S38.html" title="[S38]
 The Bunbury Issac Family
@@ -758,6 +760,13 @@ AccessDate: 21 December 2013
 ">S38</a>]</span> </td><td class="adam-claim_date">1907</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4359.html" class="adam-name_link">William Dale Corbett</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-n.html" class="adam-location_link">N., Ireland</a>
 </td><td class="adam-claim_date">1907</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4426.html" class="adam-name_link">Valerie Cunningham</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1907</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I164.html" class="adam-name_link">David Archibald Duncan</a></td><td class="adam-claim_tag">Misc</td><td class="adam-claim_data"><a href="places-canada-alberta-killam.html" class="adam-location_link">Killam, Alberta, Canada</a>
+,  Moved to Killam
+<span>[<a href="sources-S45.html" title="[S45]
+Bert & Ethel Lees family
+Page: S45
+">S45:S45</a>]</span> </td><td class="adam-claim_date">1907</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4419.html" class="adam-name_link">Stewart Alley Cunningham</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I4442.html" class="adam-name_link">Sarah Dale</a>, <a href="places-australia-queensland.html" class="adam-location_link">Queensland, Australia</a>
 </td><td class="adam-claim_date">Jan 1, 1908</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4303.html" class="adam-name_link">Wilma Inez Grahnert</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-missouri-carter-grandin.html" class="adam-location_link">Grandin, Carter, Missouri, United States</a>
@@ -824,17 +833,17 @@ Page: S26
 <span>[<a href="sources-S28.html" title="[S28]
 GEDCOM file imported on 10 January 2013
 ">S28</a>]</span> </td><td class="adam-claim_date">Nov 30, 1908</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1580.html" class="adam-name_link">Clayton Edison Jewell</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-montana-cascade-great-falls.html" class="adam-location_link">Great Falls, Cascade, Montana, United States</a>
-</td><td class="adam-claim_date">Dec 7, 1908</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1705.html" class="adam-name_link">Clayton Edison Jewell</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-montana-cascade-great-falls.html" class="adam-location_link">Great Falls, Cascade, Montana, United States</a>
 </td><td class="adam-claim_date">Dec 7, 1908</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1580.html" class="adam-name_link">Clayton Edison Jewell</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-montana-cascade-great-falls.html" class="adam-location_link">Great Falls, Cascade, Montana, United States</a>
+</td><td class="adam-claim_date">Dec 7, 1908</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1120.html" class="adam-name_link">Robert Wallace Minchin</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I1121.html" class="adam-name_link">Mary Jane Niblock</a></td><td class="adam-claim_date">Dec 12, 1908</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1796.html" class="adam-name_link">Robert R. Orr</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1908</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I2087.html" class="adam-name_link">Captain William Reilly-Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
 <span>[<a href="sources-S8.html" title="[S8]
 The Book of Minchin: A Family for all Seasons
 Page: S8
 ">S8:S8</a>]</span> </td><td class="adam-claim_date">1908</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1796.html" class="adam-name_link">Robert R. Orr</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1908</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4397.html" class="adam-name_link">Jean Mc Vitte Cunningham</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-australia-queensland.html" class="adam-location_link">Queensland, Australia</a>
 </td><td class="adam-claim_date">Jan 1, 1909</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6855.html" class="adam-name_link">Heyward H. Polk</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-louisiana-washington-franklinton.html" class="adam-location_link">Franklinton, Washington, Louisiana, United States</a>
@@ -980,6 +989,10 @@ AccessDate: 23 December 2013
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1910</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5605.html" class="adam-name_link">Earl Henning Seeley</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I4782.html" class="adam-name_link">Louie Myrle Miner</a>
+<span>[<a href="sources-S28.html" title="[S28]
+GEDCOM file imported on 10 January 2013
+">S28</a>]</span> </td><td class="adam-claim_date">1910</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I158.html" class="adam-name_link">Alice Maud Mary Stone</a></td><td class="adam-claim_tag">Residence</td><td class="adam-claim_data"><a href="places-woodville-house.html" class="adam-location_link">Woodville House</a>
 
 <span>[<a href="sources-S43.html" title="[S43]
@@ -987,10 +1000,6 @@ Irish Probate - 1911 - Alice Maud Mary Bunbury
 Page: 23 December 2013
 AccessDate: 23 December 2013
 ">S43</a>]</span> </td><td class="adam-claim_date">1910</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5605.html" class="adam-name_link">Earl Henning Seeley</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I4782.html" class="adam-name_link">Louie Myrle Miner</a>
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date">1910</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9364.html" class="adam-name_link">Lillian Estelle Blue</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-iowa-pottawattamie-council-bluffs.html" class="adam-location_link">Council Bluffs, Pottawattamie, Iowa, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
@@ -1188,13 +1197,13 @@ Page: S2
 <span>[<a href="sources-S28.html" title="[S28]
 GEDCOM file imported on 10 January 2013
 ">S28</a>]</span> </td><td class="adam-claim_date">Aug 17, 1913</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I49.html" class="adam-name_link">Caroline Jannet Jewell</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-canada-prince-edward-island.html" class="adam-location_link">Prince Edward Island, Canada</a>
-</td><td class="adam-claim_date">Aug of 1913</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6052.html" class="adam-name_link">Henry Elliot Norton</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-usa-arizona-graham-pima.html" class="adam-location_link">Pima, Graham, Arizona, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">Aug of 1913</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I49.html" class="adam-name_link">Caroline Jannet Jewell</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-canada-prince-edward-island.html" class="adam-location_link">Prince Edward Island, Canada</a>
+</td><td class="adam-claim_date">Aug of 1913</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1598.html" class="adam-name_link">George Clarence Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Sep 17, 1913</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4687.html" class="adam-name_link">Emery Milton Anderson</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I5536.html" class="adam-name_link">Julia Wilcox</a>
 <span>[<a href="sources-S28.html" title="[S28]
@@ -1211,17 +1220,13 @@ GEDCOM file imported on 10 January 2013
 <span>[<a href="sources-S28.html" title="[S28]
 GEDCOM file imported on 10 January 2013
 ">S28</a>]</span> </td><td class="adam-claim_date">Nov 20, 1913</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4548.html" class="adam-name_link">Isaac Sinnamon</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1913</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4509.html" class="adam-name_link">William Ronald Wallace</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1913</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9380.html" class="adam-name_link">Reuben Franklin Miles</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-usa-iowa-pottawattamie-council-bluffs.html" class="adam-location_link">Council Bluffs, Pottawattamie, Iowa, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1913</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4509.html" class="adam-name_link">William Ronald Wallace</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1913</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I31.html" class="adam-name_link">David Dingwall Minchin</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I1179.html" class="adam-name_link">Ethel Charlotte Reid</a>, <a href="places-canada-saskatchewan-superb.html" class="adam-location_link">Superb, Saskatchewan, Canada</a>
-</td><td class="adam-claim_date">1913</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I30.html" class="adam-name_link">Daniel Minchin</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-canada-saskatchewan-kerrobert.html" class="adam-location_link">Kerrobert, Saskatchewan, Canada</a>
-</td><td class="adam-claim_date">1913</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4548.html" class="adam-name_link">Isaac Sinnamon</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1913</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I30.html" class="adam-name_link">Daniel Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-saskatchewan-kerrobert.html" class="adam-location_link">Kerrobert, Saskatchewan, Canada</a>
 </td><td class="adam-claim_date">1913</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4185.html" class="adam-name_link">Alfred Tennyson Seaman</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
@@ -1229,6 +1234,10 @@ GEDCOM file imported on 4 February 2013
 The Descendants of Robert Seaman and Alice Shuckforth - The Island Register
 Page: S2
 ">S2:S2</a>]</span> </td><td class="adam-claim_date">1913</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I30.html" class="adam-name_link">Daniel Minchin</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-canada-saskatchewan-kerrobert.html" class="adam-location_link">Kerrobert, Saskatchewan, Canada</a>
+</td><td class="adam-claim_date">1913</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I31.html" class="adam-name_link">David Dingwall Minchin</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I1179.html" class="adam-name_link">Ethel Charlotte Reid</a>, <a href="places-canada-saskatchewan-superb.html" class="adam-location_link">Superb, Saskatchewan, Canada</a>
+</td><td class="adam-claim_date">1913</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1595.html" class="adam-name_link">Harry Gordon Jewell</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I1726.html" class="adam-name_link">Daisy Ione Young</a>, <a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
 </td><td class="adam-claim_date">Jan 1, 1914</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6485.html" class="adam-name_link">Edward Buys</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
@@ -1279,11 +1288,11 @@ Note: Pulled from New.FamilySearch.org
 <br>
 <br>Date: 18 March 2007">S10:76724556</a>]</span> </td><td class="adam-claim_date">Jun 22, 1914</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I761.html" class="adam-name_link">William Henry Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Aug 3, 1914</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1127.html" class="adam-name_link">Gertrude Laura Georgina Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Oct 14, 1914</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4686.html" class="adam-name_link">Harold Moroni Anderson</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I5535.html" class="adam-name_link">Eva Lillian Hansen</a>
 <span>[<a href="sources-S28.html" title="[S28]
 GEDCOM file imported on 10 January 2013
 ">S28</a>]</span> </td><td class="adam-claim_date">Oct 14, 1914</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1127.html" class="adam-name_link">Gertrude Laura Georgina Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Oct 14, 1914</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5931.html" class="adam-name_link">Charles Heber Williams</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
 <span>[<a href="sources-S28.html" title="[S28]
 GEDCOM file imported on 10 January 2013
@@ -1301,7 +1310,7 @@ Page: S45
 <span>[<a href="sources-S28.html" title="[S28]
 GEDCOM file imported on 10 January 2013
 ">S28</a>]</span> </td><td class="adam-claim_date">Dec 8, 1914</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I8351.html" class="adam-name_link">Amelia Cutter</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-oak-hill-cemetary.html" class="adam-location_link">Oak Hill Cemetary</a>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I8351.html" class="adam-name_link">Amelia Cutter</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-usa-kansas-atchison-post-office.html" class="adam-location_link">Atchison Post Office, Kansas, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
@@ -1422,6 +1431,7 @@ GEDCOM file imported on 4 February 2013
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I45.html" class="adam-name_link">Margaret Martha Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-prince-edward-island.html" class="adam-location_link">Prince Edward Island, Canada</a>
 </td><td class="adam-claim_date">Dec of 1916</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4511.html" class="adam-name_link">Samuel roy Wallace</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1916</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4511.html" class="adam-name_link">Samuel roy Wallace</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1916</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6751.html" class="adam-name_link">Mabel Josephine Cochrane</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-oklahoma-texas-goodwell.html" class="adam-location_link">Goodwell, Texas, Oklahoma, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
@@ -1432,7 +1442,6 @@ GEDCOM file imported on 4 February 2013
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1916</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I47.html" class="adam-name_link">Mary Jane Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1916</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4511.html" class="adam-name_link">Samuel roy Wallace</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1916</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4730.html" class="adam-name_link">Dilbert Hyrum Allred</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
 <span>[<a href="sources-S28.html" title="[S28]
 GEDCOM file imported on 10 January 2013
@@ -1528,7 +1537,7 @@ Page: S23
 David and Jane McGowan Family
 Page: S48
 ">S48:S48</a>]</span> </td><td class="adam-claim_date">Dec 24, 1918</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9214.html" class="adam-name_link">John Echols</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I9213.html" class="adam-name_link">Mrs Beulah Ross</a>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I8836.html" class="adam-name_link">Delia Bertha East</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1918</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
@@ -1537,7 +1546,7 @@ GEDCOM file imported on 4 February 2013
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1918</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I8836.html" class="adam-name_link">Delia Bertha East</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9214.html" class="adam-name_link">John Echols</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I9213.html" class="adam-name_link">Mrs Beulah Ross</a>
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1918</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
@@ -1579,12 +1588,12 @@ GEDCOM file imported on 10 January 2013
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I874.html" class="adam-name_link">Anna Maria Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-england-kent-folkestone.html" class="adam-location_link">Folkestone, Kent, England</a>
 </td><td class="adam-claim_date">Nov of 1919</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4447.html" class="adam-name_link">Joseph Lawson</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1919</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4512.html" class="adam-name_link">Eric Dale Wallace</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1919</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I8370.html" class="adam-name_link">Herman Jumper</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I8369.html" class="adam-name_link">Carolyn Ross</a>, <a href="places-usa-tennessee-shelby-memphis.html" class="adam-location_link">Memphis, Shelby, Tennessee, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1919</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4512.html" class="adam-name_link">Eric Dale Wallace</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1919</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I899.html" class="adam-name_link">Augusta Jane Burns</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-england-kent-folkestone.html" class="adam-location_link">Folkestone, Kent, England</a>
 </td><td class="adam-claim_date">1919</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I7876.html" class="adam-name_link">Julia Ann Hammer, (twin)</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-utah-cache-smithfield.html" class="adam-location_link">Smithfield, Cache, Utah, United States</a>
@@ -1678,7 +1687,7 @@ GEDCOM file imported on 4 February 2013
 Minchin Reunion 2012
 Page: S27
 ">S27:S27</a>]</span> </td><td class="adam-claim_date">Apr 19, 1922</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9370.html" class="adam-name_link">Herman August Grahnert</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-frazier-cemetary.html" class="adam-location_link">Frazier Cemetary</a>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9370.html" class="adam-name_link">Herman August Grahnert</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-usa-arkansas-arkansas-humphrey-east-railroad-avenue.html" class="adam-location_link">East Railroad Avenue, Humphrey, Arkansas, Arkansas, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
@@ -1736,17 +1745,17 @@ GEDCOM file imported on 10 January 2013
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">Dec 24, 1922</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I2076.html" class="adam-name_link">Magor General Frederick Reilly-Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
-<span>[<a href="sources-S8.html" title="[S8]
-The Book of Minchin: A Family for all Seasons
-Page: S8
-">S8:S8</a>]</span> </td><td class="adam-claim_date">1922</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1570.html" class="adam-name_link">James Davis van Iderstine</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I1698.html" class="adam-name_link">Mildred Elizabeth Huestis</a></td><td class="adam-claim_date">1922</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I8147.html" class="adam-name_link">James Prather</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I9254.html" class="adam-name_link">Mrs James Prather</a>, <a href="places-usa-kansas-ford.html" class="adam-location_link">Ford, Kansas, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1922</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1570.html" class="adam-name_link">James Davis van Iderstine</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I1698.html" class="adam-name_link">Mildred Elizabeth Huestis</a></td><td class="adam-claim_date">1922</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I2076.html" class="adam-name_link">Magor General Frederick Reilly-Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
+<span>[<a href="sources-S8.html" title="[S8]
+The Book of Minchin: A Family for all Seasons
+Page: S8
+">S8:S8</a>]</span> </td><td class="adam-claim_date">1922</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1160.html" class="adam-name_link">John Simpson Traquair</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I32.html" class="adam-name_link">Doretta Mae Minchin</a>, <a href="places-canada-prince-edward-island-kings-new-perth.html" class="adam-location_link">New Perth, Kings, Prince Edward Island, Canada</a>
 </td><td class="adam-claim_date">Jan 31, 1923</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I7861.html" class="adam-name_link">Nancy Ann Norton</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-arizona-coconino-fredonia.html" class="adam-location_link">Fredonia, Coconino, Arizona, United States</a>
@@ -1796,7 +1805,7 @@ GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">Jul 25, 1923</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4539.html" class="adam-name_link">William Robert Dale</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-killed-by-train-eagle-junction-station-brisbane.html" class="adam-location_link">killed by train Eagle Junction Station Brisbane</a>
 </td><td class="adam-claim_date">Aug 13, 1923</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1737.html" class="adam-name_link">Philip Hale Butterfield</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I1601.html" class="adam-name_link">Hettie Maude Jewell</a></td><td class="adam-claim_date">Oct 6, 1923</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1737.html" class="adam-name_link">Philip Hale Butterfield</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I1601.html" class="adam-name_link">Nettie Maude Jewell</a></td><td class="adam-claim_date">Oct 6, 1923</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I7608.html" class="adam-name_link">Carl John Jakobson Underland</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I6878.html" class="adam-name_link">Ragna Amanda Warne</a>
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
@@ -1855,12 +1864,12 @@ Page: S18
 The Descendants of Robert Seaman and Alice Shuckforth - The Island Register
 Page: S2
 ">S2:S2</a>]</span> </td><td class="adam-claim_date">Dec 19, 1924</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4522.html" class="adam-name_link">Beryl Jessamine Dale</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1924</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4451.html" class="adam-name_link">Alexander Devene</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I4470.html" class="adam-name_link">Jessie Dale</a></td><td class="adam-claim_date">1924</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1145.html" class="adam-name_link">Mary Shaw</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-prince-edward-island.html" class="adam-location_link">Prince Edward Island, Canada</a>
 </td><td class="adam-claim_date">1924</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4552.html" class="adam-name_link">Benjamin Sinnamon</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1924</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1761.html" class="adam-name_link">Frank Alder Purdy</a></td><td class="adam-claim_tag">Divorce</td><td class="adam-claim_data"><a href="profile-I1615.html" class="adam-name_link">Sara Florence Jewell</a></td><td class="adam-claim_date">1924</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4522.html" class="adam-name_link">Beryl Jessamine Dale</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1924</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4451.html" class="adam-name_link">Alexander Devene</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I4470.html" class="adam-name_link">Jessie Dale</a></td><td class="adam-claim_date">1924</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4552.html" class="adam-name_link">Benjamin Sinnamon</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1924</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6693.html" class="adam-name_link">Thomas Amenzo Topham</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-utah-iron-paragonah.html" class="adam-location_link">Paragonah, Iron, Utah, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
@@ -1946,11 +1955,11 @@ GEDCOM file imported on 4 February 2013
 <span>[<a href="sources-S28.html" title="[S28]
 GEDCOM file imported on 10 January 2013
 ">S28</a>]</span> </td><td class="adam-claim_date">Nov 25, 1926</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4516.html" class="adam-name_link">Shirley Isobel Wallace</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1926</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9222.html" class="adam-name_link">Julia Ann Scott</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1926</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4516.html" class="adam-name_link">Shirley Isobel Wallace</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1926</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I152.html" class="adam-name_link">Isaie Poupart</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I136.html" class="adam-name_link">Joyce Hannant</a>, <a href="places-canada-saskatchewan-richard.html" class="adam-location_link">Richard, Saskatchewan, Canada</a>
 </td><td class="adam-claim_date">1926</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1224.html" class="adam-name_link">John Ellis Warrington</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I1225.html" class="adam-name_link">Clara Agnes Alberts</a>, <a href="places-canada-saskatchewan-loverna.html" class="adam-location_link">Loverna, Saskatchewan, Canada</a>
@@ -2017,22 +2026,22 @@ GEDCOM file imported on 4 February 2013
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I794.html" class="adam-name_link">Horold Winfield Reid</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I795.html" class="adam-name_link">Edna May McGee</a></td><td class="adam-claim_date">Dec 26, 1927</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1548.html" class="adam-name_link">Hammond Nelson Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-prince-edward-island-queens-hartsville.html" class="adam-location_link">Hartsville, Queens, Prince Edward Island, Canada</a>
 </td><td class="adam-claim_date">Dec 26, 1927</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I2143.html" class="adam-name_link">Thomas Delessert Bunbury</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I2148.html" class="adam-name_link">Bessie Matthews</a>
-<span>[<a href="sources-S34.html" title="[S34]
-Email Correspondance with Peter R. Bunbury (Sept 14, 2008)
-Page: S34
-">S34:S34</a>]</span> </td><td class="adam-claim_date">1927</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I8376.html" class="adam-name_link">Sarah Elizabeth East</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-usa-indiana-lawrence-heltonville.html" class="adam-location_link">Heltonville, Lawrence, Indiana, United States</a>
-
-<span>[<a href="sources-S29.html" title="[S29]
-GEDCOM file imported on 4 February 2013
-">S29</a>]</span> </td><td class="adam-claim_date">1927</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I2080.html" class="adam-name_link">Colonel Frederick Reilly-Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
 <span>[<a href="sources-S8.html" title="[S8]
 The Book of Minchin: A Family for all Seasons
 Page: S8
 ">S8:S8</a>]</span> </td><td class="adam-claim_date">1927</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I8376.html" class="adam-name_link">Sarah Elizabeth East</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-indiana-lawrence-pleasant-run.html" class="adam-location_link">Pleasant Run, Lawrence, Indiana, United States</a>
+
+<span>[<a href="sources-S29.html" title="[S29]
+GEDCOM file imported on 4 February 2013
+">S29</a>]</span> </td><td class="adam-claim_date">1927</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I2143.html" class="adam-name_link">Thomas Delessert Bunbury</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I2148.html" class="adam-name_link">Bessie Matthews</a>
+<span>[<a href="sources-S34.html" title="[S34]
+Email Correspondance with Peter R. Bunbury (Sept 14, 2008)
+Page: S34
+">S34:S34</a>]</span> </td><td class="adam-claim_date">1927</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I8376.html" class="adam-name_link">Sarah Elizabeth East</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-usa-indiana-lawrence-heltonville.html" class="adam-location_link">Heltonville, Lawrence, Indiana, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
@@ -2057,20 +2066,20 @@ GEDCOM file imported on 10 January 2013
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">Sep of 1928</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I799.html" class="adam-name_link">William John Reid</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">Oct 6, 1928</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4523.html" class="adam-name_link">Jean Myrtle Dale</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1928</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I777.html" class="adam-name_link">David H. Filson</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1928</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I8354.html" class="adam-name_link">Henry Neal East</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I8357.html" class="adam-name_link">Olive Trullinger</a>, <a href="places-usa-washington-cowlitz-longview.html" class="adam-location_link">Longview, Cowlitz, Washington, United States</a>
-
-<span>[<a href="sources-S29.html" title="[S29]
-GEDCOM file imported on 4 February 2013
-">S29</a>]</span> </td><td class="adam-claim_date">1928</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4478.html" class="adam-name_link">Raymond Hinchcliffe</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1928</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1396.html" class="adam-name_link">Melvin James Ralston</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1928</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I2148.html" class="adam-name_link">Bessie Matthews</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
 <span>[<a href="sources-S34.html" title="[S34]
 Email Correspondance with Peter R. Bunbury (Sept 14, 2008)
 Page: S34
 ">S34:S34</a>]</span> </td><td class="adam-claim_date">1928</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1396.html" class="adam-name_link">Melvin James Ralston</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1928</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4478.html" class="adam-name_link">Raymond Hinchcliffe</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1928</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4523.html" class="adam-name_link">Jean Myrtle Dale</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1928</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I8354.html" class="adam-name_link">Henry Neal East</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I8357.html" class="adam-name_link">Olive Trullinger</a>, <a href="places-usa-washington-cowlitz-longview.html" class="adam-location_link">Longview, Cowlitz, Washington, United States</a>
+
+<span>[<a href="sources-S29.html" title="[S29]
+GEDCOM file imported on 4 February 2013
+">S29</a>]</span> </td><td class="adam-claim_date">1928</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I777.html" class="adam-name_link">David H. Filson</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1928</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I282.html" class="adam-name_link">Winnifred Bunbury</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">Jan 2, 1929</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4741.html" class="adam-name_link">George Edward Angell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
 <span>[<a href="sources-S28.html" title="[S28]
@@ -2166,8 +2175,8 @@ GEDCOM file imported on 10 January 2013
 <span>[<a href="sources-S28.html" title="[S28]
 GEDCOM file imported on 10 January 2013
 ">S28</a>]</span> </td><td class="adam-claim_date">Dec 10, 1930</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4518.html" class="adam-name_link">Harold Vivian Wallace</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1930</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4574.html" class="adam-name_link">Elizabeth Hume Sinnamon</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1930</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4518.html" class="adam-name_link">Harold Vivian Wallace</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1930</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1614.html" class="adam-name_link">James Grant</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I1610.html" class="adam-name_link">Margaret Eliza Spence</a></td><td class="adam-claim_date">1930</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I7460.html" class="adam-name_link">William A. Connelly</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-illinois-vermilion-danville.html" class="adam-location_link">Danville, Vermilion, Illinois, United States</a>
 
@@ -2255,13 +2264,13 @@ The Bunbury Issac Family
 Page: S38
 ">S38:S38</a>]</span> </td><td class="adam-claim_date">Dec 17, 1932</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4454.html" class="adam-name_link">Myra Ellen Garbutt</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1932</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4478.html" class="adam-name_link">Raymond Hinchcliffe</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-from-a-diease-he-was-not-imunised-for.html" class="adam-location_link">from a diease he was not imunised for.</a>
+</td><td class="adam-claim_date">1932</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I2064.html" class="adam-name_link">Jane Pauline Minchin</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data">
 <span>[<a href="sources-S8.html" title="[S8]
 The Book of Minchin: A Family for all Seasons
 Page: S8
 ">S8:S8</a>]</span> </td><td class="adam-claim_date">1932</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4478.html" class="adam-name_link">Raymond Hinchcliffe</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-from-a-diease-he-was-not-imunised-for.html" class="adam-location_link">from a diease he was not imunised for.</a>
-</td><td class="adam-claim_date">1932</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5926.html" class="adam-name_link">Samuel Moroni Williams</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
 <span>[<a href="sources-S28.html" title="[S28]
 GEDCOM file imported on 10 January 2013
@@ -2302,13 +2311,13 @@ GEDCOM file imported on 4 February 2013
 <span>[<a href="sources-S28.html" title="[S28]
 GEDCOM file imported on 10 January 2013
 ">S28</a>]</span> </td><td class="adam-claim_date">Dec 3, 1933</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I763.html" class="adam-name_link">John Robert Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1933</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4169.html" class="adam-name_link">Thomas `Frederick` Seaman</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-massachusetts-essex-lynn.html" class="adam-location_link">Lynn, Essex, Massachusetts, United States</a>
 
 <span>[<a href="sources-S2.html" title="[S2]
 The Descendants of Robert Seaman and Alice Shuckforth - The Island Register
 Page: S2
 ">S2:S2</a>]</span> </td><td class="adam-claim_date">1933</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I763.html" class="adam-name_link">John Robert Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1933</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1518.html" class="adam-name_link">John Boh</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"></td><td class="adam-claim_date">1933</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6917.html" class="adam-name_link">Lydia Rebecca Baker</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-wyoming-uinta-robertson.html" class="adam-location_link">Robertson, Uinta, Wyoming, United States</a>
 
@@ -2367,13 +2376,13 @@ GEDCOM file imported on 4 February 2013
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I25.html" class="adam-name_link">Elva Dorthy Minchin</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-canada-prince-edward-island-kings-new-perth.html" class="adam-location_link">New Perth, Kings, Prince Edward Island, Canada</a>
 </td><td class="adam-claim_date">Dec 1, 1934</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1549.html" class="adam-name_link">Elizabeth Hanna Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Dec 5, 1934</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4431.html" class="adam-name_link">Peter Garbutt</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1934</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I2086.html" class="adam-name_link">William Abbott Minchin</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-of-annagh.html" class="adam-location_link">of Annagh, Ireland</a>
 
 <span>[<a href="sources-S8.html" title="[S8]
 The Book of Minchin: A Family for all Seasons
 Page: S8
 ">S8:S8</a>]</span> </td><td class="adam-claim_date">1934</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4431.html" class="adam-name_link">Peter Garbutt</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1934</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4453.html" class="adam-name_link">Dulcie Mary Dale</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1934</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I25.html" class="adam-name_link">Elva Dorthy Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-prince-edward-island-kings-new-perth.html" class="adam-location_link">New Perth, Kings, Prince Edward Island, Canada</a>
 </td><td class="adam-claim_date">Jan 22, 1935</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
@@ -2418,13 +2427,13 @@ GEDCOM file imported on 10 January 2013
 <span>[<a href="sources-S28.html" title="[S28]
 GEDCOM file imported on 10 January 2013
 ">S28</a>]</span> </td><td class="adam-claim_date">Nov 4, 1935</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I897.html" class="adam-name_link">Margaret Elizabeth Burns</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-york-erie-buffalo.html" class="adam-location_link">Buffalo, Erie, New York, United States</a>
-</td><td class="adam-claim_date">1935</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6786.html" class="adam-name_link">William H. Haggard</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-washington-clark.html" class="adam-location_link">Clark, Washington, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1935</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I897.html" class="adam-name_link">Margaret Elizabeth Burns</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-york-erie-buffalo.html" class="adam-location_link">Buffalo, Erie, New York, United States</a>
+</td><td class="adam-claim_date">1935</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I2143.html" class="adam-name_link">Thomas Delessert Bunbury</a></td><td class="adam-claim_tag">Residence</td><td class="adam-claim_data"> west to the Australian bush
 <span>[<a href="sources-S34.html" title="[S34]
 Email Correspondance with Peter R. Bunbury (Sept 14, 2008)
@@ -2454,12 +2463,12 @@ GEDCOM file imported on 10 January 2013
 <span>[<a href="sources-S28.html" title="[S28]
 GEDCOM file imported on 10 January 2013
 ">S28</a>]</span> </td><td class="adam-claim_date">Nov 29, 1936</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1614.html" class="adam-name_link">James Grant</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1936</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I50.html" class="adam-name_link">Nettie Josephine Seaman</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
 </td><td class="adam-claim_date">1936</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I50.html" class="adam-name_link">Nettie Josephine Seaman</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"></td><td class="adam-claim_date">1936</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4421.html" class="adam-name_link">Dale A. Codding</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I4388.html" class="adam-name_link">Edna Woodward</a>, <a href="places-usa-new-york-west-bloomfield.html" class="adam-location_link">West Bloomfield, New York, United States</a>
 </td><td class="adam-claim_date">1936</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1614.html" class="adam-name_link">James Grant</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1936</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I50.html" class="adam-name_link">Nettie Josephine Seaman</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"></td><td class="adam-claim_date">1936</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4346.html" class="adam-name_link">Anne Jane Neill</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Jan 17, 1937</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I156.html" class="adam-name_link">David Alexander McGowan, Junior</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I159.html" class="adam-name_link">Ethel Marian Lees</a>, <a href="places-canada-alberta-galahad.html" class="adam-location_link">Galahad, Alberta, Canada</a>
 
@@ -2629,10 +2638,10 @@ GEDCOM file imported on 4 February 2013
 <span>[<a href="sources-S28.html" title="[S28]
 GEDCOM file imported on 10 January 2013
 ">S28</a>]</span> </td><td class="adam-claim_date">Dec 26, 1944</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4436.html" class="adam-name_link">James Alexander Dale</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1944</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1509.html" class="adam-name_link">Elizabeth Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1944</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1529.html" class="adam-name_link">Margaret Ann Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1944</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1516.html" class="adam-name_link">Anna Dreeland</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1944</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4436.html" class="adam-name_link">James Alexander Dale</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1944</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1529.html" class="adam-name_link">Margaret Ann Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1944</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1114.html" class="adam-name_link">George Melville Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-bristih-columbia-kamloops.html" class="adam-location_link">Kamloops, Bristih Columbia, Canada</a>
 
 <span>[<a href="sources-S26.html" title="[S26]
@@ -2665,15 +2674,15 @@ GEDCOM file imported on 4 February 2013
 <span>[<a href="sources-S28.html" title="[S28]
 GEDCOM file imported on 10 January 2013
 ">S28</a>]</span> </td><td class="adam-claim_date">Dec 20, 1945</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I144.html" class="adam-name_link">Mary Christina McKinley</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-alberta.html" class="adam-location_link">Alberta, Canada</a>
-</td><td class="adam-claim_date">1945</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I144.html" class="adam-name_link">Mary Christina McKinley</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-canada-alberta-flying-shot.html" class="adam-location_link">Flying Shot, Alberta, Canada</a>
-</td><td class="adam-claim_date">1945</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6750.html" class="adam-name_link">Robert Bruce Cochrane</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-mexico-torrance-estancia.html" class="adam-location_link">Estancia, Torrance, New Mexico, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1945</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I144.html" class="adam-name_link">Mary Christina McKinley</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-canada-alberta-flying-shot.html" class="adam-location_link">Flying Shot, Alberta, Canada</a>
+</td><td class="adam-claim_date">1945</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I144.html" class="adam-name_link">Mary Christina McKinley</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-alberta.html" class="adam-location_link">Alberta, Canada</a>
+</td><td class="adam-claim_date">1945</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6676.html" class="adam-name_link">Abraham Lincoln East</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-oklahoma-woodward-fort-supply.html" class="adam-location_link">Fort Supply, Woodward, Oklahoma, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
@@ -2684,8 +2693,8 @@ GEDCOM file imported on 4 February 2013
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">Apr 14, 1946</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4573.html" class="adam-name_link">William Sinnamon</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1946</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4398.html" class="adam-name_link">Alexander Dale</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1946</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4573.html" class="adam-name_link">William Sinnamon</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1946</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I7912.html" class="adam-name_link">Thomas Reynolds</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
@@ -2776,8 +2785,8 @@ Page: S45
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">Aug 16, 1949</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I264.html" class="adam-name_link">Georgina Bunbury</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Oct 8, 1949</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I265.html" class="adam-name_link">Michael Scott Henderson</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I264.html" class="adam-name_link">Georgina Bunbury</a></td><td class="adam-claim_date">Oct 8, 1949</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I264.html" class="adam-name_link">Georgina Bunbury</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Oct 8, 1949</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I249.html" class="adam-name_link">Cryril Bunbury</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I250.html" class="adam-name_link">Eileen Leslie Ekman</a></td><td class="adam-claim_date">Oct 21, 1949</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5614.html" class="adam-name_link">Edith Mary Haynes</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-utah-millard-delta.html" class="adam-location_link">Delta, Millard, Utah, United States</a>
 
@@ -2841,8 +2850,8 @@ GEDCOM file imported on 4 February 2013
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1950</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4455.html" class="adam-name_link">Jane Brown</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1950</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1135.html" class="adam-name_link">Henry Lapthorne</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1950</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4455.html" class="adam-name_link">Jane Brown</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1950</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6710.html" class="adam-name_link">Francis Edward Reynolds</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-utah-duchesne-altamont.html" class="adam-location_link">Altamont, Duchesne, Utah, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
@@ -2855,16 +2864,16 @@ GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">Jan 10, 1951</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4396.html" class="adam-name_link">Thomas James Dale</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Feb 14, 1951</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I715.html" class="adam-name_link">Mary Jane Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Mar 31, 1951</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4680.html" class="adam-name_link">Joseph Jeppa Anderson</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-usa-california-los-angeles-inglewood.html" class="adam-location_link">Inglewood, Los Angeles, California, United States</a>
-
-<span>[<a href="sources-S29.html" title="[S29]
-GEDCOM file imported on 4 February 2013
-">S29</a>]</span> </td><td class="adam-claim_date">May of 1951</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I160.html" class="adam-name_link">Robert Lees</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I518.html" class="adam-name_link">Dorthy Ehlers</a>
 <span>[<a href="sources-S45.html" title="[S45]
 Bert & Ethel Lees family
 Page: S45
 ">S45:S45</a>]</span> </td><td class="adam-claim_date">May of 1951</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4680.html" class="adam-name_link">Joseph Jeppa Anderson</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-usa-california-los-angeles-inglewood.html" class="adam-location_link">Inglewood, Los Angeles, California, United States</a>
+
+<span>[<a href="sources-S29.html" title="[S29]
+GEDCOM file imported on 4 February 2013
+">S29</a>]</span> </td><td class="adam-claim_date">May of 1951</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4719.html" class="adam-name_link">Luella May Angell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-california-los-angeles-los-angeles.html" class="adam-location_link">Los Angeles, Los Angeles, California, United States</a>
 
 <span>[<a href="sources-S28.html" title="[S28]
@@ -2889,7 +2898,7 @@ GEDCOM file imported on 10 January 2013
 </td><td class="adam-claim_date">Sep 13, 1952</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I966.html" class="adam-name_link">Dennis Alan Cornell</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-new-york-erie-buffalo.html" class="adam-location_link">Buffalo, Erie, New York, United States</a>
 </td><td class="adam-claim_date">Dec 26, 1952</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I143.html" class="adam-name_link">Daniel Howard Minchin</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-canada-alberta-flying-shot.html" class="adam-location_link">Flying Shot, Alberta, Canada</a>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I143.html" class="adam-name_link">Daniel Howard Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-alberta.html" class="adam-location_link">Alberta, Canada</a>
 </td><td class="adam-claim_date">1952</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4421.html" class="adam-name_link">Dale A. Codding</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1952</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6752.html" class="adam-name_link">Sanders Vernon Cochrane</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-oklahoma-comanche-lawton.html" class="adam-location_link">Lawton, Comanche, Oklahoma, United States</a>
@@ -2897,7 +2906,7 @@ GEDCOM file imported on 10 January 2013
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1952</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I143.html" class="adam-name_link">Daniel Howard Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-alberta.html" class="adam-location_link">Alberta, Canada</a>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I143.html" class="adam-name_link">Daniel Howard Minchin</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-canada-alberta-flying-shot.html" class="adam-location_link">Flying Shot, Alberta, Canada</a>
 </td><td class="adam-claim_date">1952</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I8354.html" class="adam-name_link">Henry Neal East</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I9167.html" class="adam-name_link">Milda Adelaide Major</a>, <a href="places-usa-nevada-storey-virginia-city.html" class="adam-location_link">Virginia City, Storey, Nevada, United States</a>
 
@@ -2996,9 +3005,9 @@ GEDCOM file imported on 4 February 2013
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I95.html" class="adam-name_link">Elizabeth Sinnamon</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Jun 30, 1956</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I792.html" class="adam-name_link">Mytle E. Brown</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Jun of 1956</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1510.html" class="adam-name_link">Edison Churchill</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Nov 8, 1956</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I2086.html" class="adam-name_link">William Abbott Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1956</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I48.html" class="adam-name_link">Ernest Joseph Seaman</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-canada-british-columbia-pouce-coupa.html" class="adam-location_link">Pouce CoupÃ©, British Columbia, Canada</a>
 </td><td class="adam-claim_date">1956</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I2086.html" class="adam-name_link">William Abbott Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1956</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I972.html" class="adam-name_link">Henry William Cornell</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-new-york-erie-buffalo.html" class="adam-location_link">Buffalo, Erie, New York, United States</a>
 </td><td class="adam-claim_date">Sep 4, 1957</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I972.html" class="adam-name_link">Henry William Cornell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-york-erie-buffalo.html" class="adam-location_link">Buffalo, Erie, New York, United States</a>
@@ -3053,10 +3062,10 @@ GEDCOM file imported on 4 February 2013
 </td><td class="adam-claim_date">Nov 21, 1958</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I577.html" class="adam-name_link">_____ Bunbury</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-alberta-galahad.html" class="adam-location_link">Galahad, Alberta, Canada</a>
 </td><td class="adam-claim_date">Nov of 1958</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1565.html" class="adam-name_link">Florence Mable Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1958</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4487.html" class="adam-name_link">Vynda Dawn Simpson</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1958</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I76.html" class="adam-name_link">Louise Horner</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-canada-british-columbia-victoria.html" class="adam-location_link">Victoria, British Columbia, Canada</a>
 </td><td class="adam-claim_date">1958</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1565.html" class="adam-name_link">Florence Mable Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1958</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4683.html" class="adam-name_link">Emma Ann Williams</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-california-santa-clara-santa-clara.html" class="adam-location_link">Santa Clara, Santa Clara, California, United States</a>
 
 <span>[<a href="sources-S28.html" title="[S28]
@@ -3126,14 +3135,14 @@ Page: KHLR-3CP
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I786.html" class="adam-name_link">Lewis Staples</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Jun 23, 1960</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1591.html" class="adam-name_link">Eliza Sarah Brown</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
 </td><td class="adam-claim_date">Aug 19, 1960</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4473.html" class="adam-name_link">Henry Alden Dale</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-tiaro-at-the-age-of-54.html" class="adam-location_link">Tiaro at the age of 54</a>
+</td><td class="adam-claim_date">1960</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I7345.html" class="adam-name_link">Elbert E. Souder</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-texas-tarrant-hurst.html" class="adam-location_link">Hurst, Tarrant, Texas, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1960</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1763.html" class="adam-name_link">David P. Leonard</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-massachusetts.html" class="adam-location_link">Massachusetts, United States</a>
-</td><td class="adam-claim_date">1960</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4473.html" class="adam-name_link">Henry Alden Dale</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-tiaro-at-the-age-of-54.html" class="adam-location_link">Tiaro at the age of 54</a>
 </td><td class="adam-claim_date">1960</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6791.html" class="adam-name_link">Bertha Mary Waterbury</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-oregon-marion-salem.html" class="adam-location_link">Salem, Marion, Oregon, United States</a>
 
@@ -3195,17 +3204,17 @@ Page: S48
 ">S48:S48</a>]</span> </td><td class="adam-claim_date">Aug 28, 1963</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1728.html" class="adam-name_link">Carrie Ethel Spinney</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
 </td><td class="adam-claim_date">Sep 4, 1963</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1674.html" class="adam-name_link">Sarah Calder</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1963</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I518.html" class="adam-name_link">Dorthy Ehlers</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
 <span>[<a href="sources-S45.html" title="[S45]
 Bert & Ethel Lees family
 Page: S45
 ">S45:S45</a>]</span> </td><td class="adam-claim_date">1963</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9206.html" class="adam-name_link">Stanley Ross</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1674.html" class="adam-name_link">Sarah Calder</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1963</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9224.html" class="adam-name_link">Alma Mabel East</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1963</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9224.html" class="adam-name_link">Alma Mabel East</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9206.html" class="adam-name_link">Stanley Ross</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1963</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
@@ -3232,14 +3241,14 @@ GEDCOM file imported on 4 February 2013
 <span>[<a href="sources-S28.html" title="[S28]
 GEDCOM file imported on 10 January 2013
 ">S28</a>]</span> </td><td class="adam-claim_date">Oct 25, 1964</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4487.html" class="adam-name_link">Vynda Dawn Simpson</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1964</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4428.html" class="adam-name_link">Allison Margaret Dale</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1964</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1761.html" class="adam-name_link">Frank Alder Purdy</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1964</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9223.html" class="adam-name_link">Harlan East</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1964</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4428.html" class="adam-name_link">Allison Margaret Dale</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1964</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4495.html" class="adam-name_link">Raymond Stewart Dale</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">1964</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4487.html" class="adam-name_link">Vynda Dawn Simpson</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1964</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I767.html" class="adam-name_link">Gertrude Williams</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1964</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4721.html" class="adam-name_link">Luella May Allred</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
 <span>[<a href="sources-S28.html" title="[S28]
@@ -3253,12 +3262,12 @@ GEDCOM file imported on 10 January 2013
 GEDCOM file imported on 10 January 2013
 ">S28</a>]</span> </td><td class="adam-claim_date">Mar 30, 1965</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1735.html" class="adam-name_link">Mary Parsons Walker</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Jun 16, 1965</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I840.html" class="adam-name_link">Robert Irl Shortt</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Jul 7, 1965</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6717.html" class="adam-name_link">Martha Elnora Reynolds</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-utah-washington-st-george.html" class="adam-location_link">St. George, Washington, Utah, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">Jul 7, 1965</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I840.html" class="adam-name_link">Robert Irl Shortt</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Jul 7, 1965</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6717.html" class="adam-name_link">Martha Elnora Reynolds</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-usa-utah-iron-paragonah.html" class="adam-location_link">Paragonah, Iron, Utah, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
@@ -3388,7 +3397,7 @@ Page: S17
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">Oct of 1969</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I8067.html" class="adam-name_link">Ernest Pearson</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I6731.html" class="adam-name_link">Mary Elizabeth East</a>, <a href="places-usa-california-san-diego.html" class="adam-location_link">San Diego, California, United States</a>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9261.html" class="adam-name_link">Baby Pearson</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-oregon.html" class="adam-location_link">Oregon, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
@@ -3398,12 +3407,12 @@ GEDCOM file imported on 4 February 2013
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1969</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9261.html" class="adam-name_link">Baby Pearson</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-oregon.html" class="adam-location_link">Oregon, United States</a>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I8067.html" class="adam-name_link">Ernest Pearson</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-oregon.html" class="adam-location_link">Oregon, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1969</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I8067.html" class="adam-name_link">Ernest Pearson</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-oregon.html" class="adam-location_link">Oregon, United States</a>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I8067.html" class="adam-name_link">Ernest Pearson</a></td><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I6731.html" class="adam-name_link">Mary Elizabeth East</a>, <a href="places-usa-california-san-diego.html" class="adam-location_link">San Diego, California, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
@@ -3520,11 +3529,11 @@ Page: S8
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1569.html" class="adam-name_link">Robert Ira van Iderstine</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Sep 11, 1974</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I102.html" class="adam-name_link">Violet May Sinnamon</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-york.html" class="adam-location_link">New York, United States</a>
 </td><td class="adam-claim_date">Nov 30, 1974</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4492.html" class="adam-name_link">Robert Alden Dale</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1974</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4522.html" class="adam-name_link">Beryl Jessamine Dale</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1974</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4492.html" class="adam-name_link">Robert Alden Dale</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1974</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I794.html" class="adam-name_link">Horold Winfield Reid</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Feb of 1975</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4427.html" class="adam-name_link">James Alexander Dale</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1975</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4438.html" class="adam-name_link">Jessie Dale</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1975</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4427.html" class="adam-name_link">James Alexander Dale</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1975</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1573.html" class="adam-name_link">Roy Bell van Iderstine</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-saskatchewan-regina.html" class="adam-location_link">Regina, Saskatchewan, Canada</a>
 </td><td class="adam-claim_date">1975</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4460.html" class="adam-name_link">Allan Dale</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Apr 3, 1976</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
@@ -3552,13 +3561,13 @@ Page: S48
 ">S48:S48</a>]</span> </td><td class="adam-claim_date">Jun 15, 1976</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4442.html" class="adam-name_link">Sarah Dale</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-australia-queensland-maryborough.html" class="adam-location_link">Maryborough, Queensland, Australia</a>
 </td><td class="adam-claim_date">Aug 23, 1976</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4480.html" class="adam-name_link">Joan Mavis Devene</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1976</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4187.html" class="adam-name_link">Bessie Margaret Seaman</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-prince-edward-island-queens-charlottetown.html" class="adam-location_link">Charlottetown, Queens, Prince Edward Island, Canada</a>
 
 <span>[<a href="sources-S2.html" title="[S2]
 The Descendants of Robert Seaman and Alice Shuckforth - The Island Register
 Page: S2
 ">S2:S2</a>]</span> </td><td class="adam-claim_date">1976</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4480.html" class="adam-name_link">Joan Mavis Devene</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1976</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4762.html" class="adam-name_link">Melvin Edwin Miner</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
 <span>[<a href="sources-S28.html" title="[S28]
 GEDCOM file imported on 10 January 2013
@@ -3614,14 +3623,14 @@ GEDCOM file imported on 4 February 2013
 David and Jane McGowan Family
 Page: S48
 ">S48:S48</a>]</span> </td><td class="adam-claim_date">Dec 31, 1978</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1714.html" class="adam-name_link">Warren Ellsworth Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-idaho-blaine-ketchum.html" class="adam-location_link">Ketchum, Blaine, Idaho, United States</a>
+</td><td class="adam-claim_date">1978</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I398.html" class="adam-name_link">Steven Wallace Johnson</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-canada-british-columbia-kelowna.html" class="adam-location_link">Kelowna, British Columbia, Canada</a>
 
 <span>[<a href="sources-S18.html" title="[S18]
 McGowan Reunion 2008
 Page: S18
 ">S18:S18</a>]</span> </td><td class="adam-claim_date">1978</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1714.html" class="adam-name_link">Warren Ellsworth Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-idaho-blaine-ketchum.html" class="adam-location_link">Ketchum, Blaine, Idaho, United States</a>
-</td><td class="adam-claim_date">1978</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I18.html" class="adam-name_link">Katherine Muriel Seaman</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-canada-saskatchewan-major.html" class="adam-location_link">Major, Saskatchewan, Canada</a>
 </td><td class="adam-claim_date">Jan 2, 1979</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I815.html" class="adam-name_link">Irene May Staples</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Jun 3, 1979</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
@@ -3824,8 +3833,7 @@ GEDCOM file imported on 4 February 2013
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">Aug 9, 1989</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I170.html" class="adam-name_link">Albert (Ab) Lloyd Matier</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Nov 29, 1989</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4302.html" class="adam-name_link">Floyd Cleir Miles</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-usa-california-el-dorado-el-dorado.html" class="adam-location_link">El Dorado, El Dorado, California, United States</a>
-
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9668.html" class="adam-name_link">Maudena D. Plunkett</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data">
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1989</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
@@ -3835,7 +3843,8 @@ GEDCOM file imported on 4 February 2013
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1989</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4418.html" class="adam-name_link">John Lee</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1989</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9668.html" class="adam-name_link">Maudena D. Plunkett</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data">
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4302.html" class="adam-name_link">Floyd Cleir Miles</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-usa-california-el-dorado-el-dorado.html" class="adam-location_link">El Dorado, El Dorado, California, United States</a>
+
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1989</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
@@ -3851,9 +3860,9 @@ GEDCOM file imported on 4 February 2013
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">Apr 23, 1990</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4405.html" class="adam-name_link">Jessie Rae Gordon</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-maryborough.html" class="adam-location_link">Maryborough</a>
-</td><td class="adam-claim_date">Aug 8, 1990</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4453.html" class="adam-name_link">Dulcie Mary Dale</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-tiaro.html" class="adam-location_link">Tiaro</a>
+</td><td class="adam-claim_date">Aug 8, 1990</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4405.html" class="adam-name_link">Jessie Rae Gordon</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-maryborough.html" class="adam-location_link">Maryborough</a>
 </td><td class="adam-claim_date">Aug 8, 1990</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4658.html" class="adam-name_link">Dirk Kuiken</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-british-columbia-victoria.html" class="adam-location_link">Victoria, British Columbia, Canada</a>
 
@@ -3880,7 +3889,7 @@ Page: S48
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I35.html" class="adam-name_link">Linda Ann Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Oct 22, 1991</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I945.html" class="adam-name_link">Frederick Howard Irwin Minchin</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-ontario-toronto.html" class="adam-location_link">Toronto, Ontario, Canada</a>
 </td><td class="adam-claim_date">Nov 16, 1991</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1601.html" class="adam-name_link">Hettie Maude Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1601.html" class="adam-name_link">Nettie Maude Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
 </td><td class="adam-claim_date">Nov 23, 1991</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I250.html" class="adam-name_link">Eileen Leslie Ekman</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">Dec 21, 1991</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I795.html" class="adam-name_link">Edna May McGee</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1991</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
@@ -3902,12 +3911,12 @@ Page: S45
 ">S45:S45</a>]</span> </td><td class="adam-claim_date">Nov 10, 1992</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4488.html" class="adam-name_link">David Allan Dale</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1992</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4512.html" class="adam-name_link">Eric Dale Wallace</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1992</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6783.html" class="adam-name_link">Golda McBride</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-usa-utah-iron-paragonah.html" class="adam-location_link">Paragonah, Iron, Utah, United States</a>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6783.html" class="adam-name_link">Golda McBride</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-utah-davis-sunset.html" class="adam-location_link">Sunset, Davis, Utah, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">Mar 25, 1993</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6783.html" class="adam-name_link">Golda McBride</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-utah-davis-sunset.html" class="adam-location_link">Sunset, Davis, Utah, United States</a>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6783.html" class="adam-name_link">Golda McBride</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-usa-utah-iron-paragonah.html" class="adam-location_link">Paragonah, Iron, Utah, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
@@ -3935,11 +3944,6 @@ Brad and Jacquie Munro wed
 Page: S49
 ">S49:S49</a>]</span> </td><td class="adam-claim_date">Jul 31, 1993</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4475.html" class="adam-name_link">Vivien Annie Dale</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1993</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6736.html" class="adam-name_link">Orson Topham</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-utah-washington-hurricane.html" class="adam-location_link">Hurricane, Washington, Utah, United States</a>
-
-<span>[<a href="sources-S29.html" title="[S29]
-GEDCOM file imported on 4 February 2013
-">S29</a>]</span> </td><td class="adam-claim_date">1993</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6732.html" class="adam-name_link">John Prather East</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-california-merced-merced.html" class="adam-location_link">Merced, Merced, California, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
@@ -3951,6 +3955,11 @@ GEDCOM file imported on 4 February 2013
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">1993</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4509.html" class="adam-name_link">William Ronald Wallace</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"></td><td class="adam-claim_date">1993</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6736.html" class="adam-name_link">Orson Topham</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-utah-washington-hurricane.html" class="adam-location_link">Hurricane, Washington, Utah, United States</a>
+
+<span>[<a href="sources-S29.html" title="[S29]
+GEDCOM file imported on 4 February 2013
+">S29</a>]</span> </td><td class="adam-claim_date">1993</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I363.html" class="adam-name_link">Jeanie McGowan</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-alberta-cold-lake.html" class="adam-location_link">Cold Lake, Alberta, Canada</a>
 
 <span>[<a href="sources-S48.html" title="[S48]
@@ -4060,12 +4069,12 @@ GEDCOM file imported on 4 February 2013
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">Apr 10, 1999</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6803.html" class="adam-name_link">Michelle Suzanne East, (twin)</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-usa-california-san-diego-san-diego.html" class="adam-location_link">San Diego, San Diego, California, United States</a>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6803.html" class="adam-name_link">Michelle Suzanne East, (twin)</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-california-san-diego-san-diego.html" class="adam-location_link">San Diego, San Diego, California, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
 ">S29</a>]</span> </td><td class="adam-claim_date">Sep of 1999</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6803.html" class="adam-name_link">Michelle Suzanne East, (twin)</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-california-san-diego-san-diego.html" class="adam-location_link">San Diego, San Diego, California, United States</a>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I6803.html" class="adam-name_link">Michelle Suzanne East, (twin)</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-usa-california-san-diego-san-diego.html" class="adam-location_link">San Diego, San Diego, California, United States</a>
 
 <span>[<a href="sources-S29.html" title="[S29]
 GEDCOM file imported on 4 February 2013
@@ -4074,8 +4083,8 @@ GEDCOM file imported on 4 February 2013
 </table></td></tr>
 </table>
 </li>
-</ul>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+</ul></div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -4095,7 +4104,7 @@ GEDCOM file imported on 4 February 2013
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

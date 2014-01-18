@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="Dorothy East Profile - Minchin Genealogy | Minchin.ca" />
  <title>Dorothy East Profile - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -67,24 +74,26 @@ Version:   1.0.4        December 29, 2013
 
 <h1 id="adam-page-title">Dorothy East Profile</h1>
 
-<div id="tabs">
-<ul>
+<div id="adam-tab-list">
+<ul id="tab-list" class="nav nav-tabs">
 
-<li><a class="click" href="#profile">Profile</a></li>
+<li class="active"><a class="click" href="#profile" data-toggle="tab">Profile</a></li>
 
-<li><a class="click" href="#sources">Sources (1)</a></li>
+<li><a class="click" href="#sources" data-toggle="tab">Sources (1)</a></li>
 
-<li><a class="click" href="#notes">Notes (1)</a></li>
+<li><a class="click" href="#notes" data-toggle="tab">Notes (1)</a></li>
 
-<li><a class="click" href="#chart">Chart</a></li>
+<li><a class="click" href="#chart" data-toggle="tab">Chart</a></li>
 
-<li><a class="click" href="#alist">Ancestors List (92)</a></li>
+<li><a class="click" href="#alist" data-toggle="tab">Ancestors List (92)</a></li>
 
-<li><a class="click" href="#map">Ancestors Distribution Map</a></li>
+<li><a class="click" href="#map" data-toggle="tab">Ancestors Distribution Map</a></li>
 
 </ul>
 
-<div id="profile" class="adam-tab">
+<div class="tab-content">
+
+<div id="profile" class="tab-pane active adam-tab">
 
 <ul id="adam-person_profile" class="adam-tab_style">
 <li>
@@ -141,7 +150,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="sources" class="adam-tab">
+<div id="sources" class="tab-pane adam-tab">
 
 <ul id="adam-person_sources" class="adam-tab_style">
 <li>
@@ -161,7 +170,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="notes" class="adam-tab">
+<div id="notes" class="tab-pane adam-tab">
 <ul id="adam-person_notes" class="adam-tab_style">
 <li>
 <table class="adam-tab_table">
@@ -181,7 +190,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="chart" class="adam-tab">
+<div id="chart" class="tab-pane adam-tab">
 <ul>
 <li id="adam-person_chart">
 <div style="height: 665px;">&nbsp;</div>
@@ -338,7 +347,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="alist" class="adam-tab">
+<div id="alist" class="tab-pane adam-tab">
 
 <div class="adam-al_page">
 <ul class="adam-al_legend">
@@ -352,427 +361,427 @@ GEDCOM file imported on 4 February 2013
 
 <li class="adam-al_generation">Generation 1</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1] &nbsp; <a href="profile-I6850.html" class="adam-name_link">Dorothy East</a> (1905-1999)</div>
+  <div class="adam-al_name">[1] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6850.html" class="adam-name_link">Dorothy East</a> (1905-1999)</div>
   <div class="adam-al_path"><span title="Oklahoma">OK</span>-<span title="California">CA</span>-<span title="Oklahoma">OK</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 2</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[2] &nbsp; <a href="profile-I6676.html" class="adam-name_link">Abraham Lincoln East</a> (1865-1946)</div>
+  <div class="adam-al_name">[2] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6676.html" class="adam-name_link">Abraham Lincoln East</a> (1865-1946)</div>
   <div class="adam-al_path"><span title="Indiana">IN</span>-<span title="Kansas">KS</span>-<span title="Oklahoma">OK</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3] &nbsp; <a href="profile-I6677.html" class="adam-name_link">Margaret Allison Cochrane</a> (1875-1971)</div>
+  <div class="adam-al_name">[3] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6677.html" class="adam-name_link">Margaret Allison Cochrane</a> (1875-1971)</div>
   <div class="adam-al_path"><span title="Kansas">KS</span>-<span title="California">CA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 3</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[4] &nbsp; <a href="profile-I6796.html" class="adam-name_link">Neal East</a> (1823-1897)</div>
+  <div class="adam-al_name">[4] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6796.html" class="adam-name_link">Neal East</a> (1823-1897)</div>
   <div class="adam-al_path"><span title="Indiana">IN</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[5] &nbsp; <a href="profile-I6697.html" class="adam-name_link">Mary Deweise (Dwees) Prather, (widow)</a> (1825-1902)</div>
+  <div class="adam-al_name">[5] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6697.html" class="adam-name_link">Mary Deweise (Dwees) Prather, (widow)</a> (1825-1902)</div>
   <div class="adam-al_path"><span title="Indiana">IN</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[6] &nbsp; <i><a href="profile-I6749.html" class="adam-name_link">Sanders Swinton Cochrane</a> (1825-1898)</i></div>
+  <div class="adam-al_name">[6] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I6749.html" class="adam-name_link">Sanders Swinton Cochrane</a> (1825-1898)</i></div>
   <div class="adam-al_path"><span title="Lanarkshire">LKS</span>-<span title="Wisconsin">WI</span>-<span title=""></span>-<span title="Kansas">KS</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[7] &nbsp; <a href="profile-I6846.html" class="adam-name_link">Martha Elizabeth Willis</a> (1846-1942)</div>
+  <div class="adam-al_name">[7] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6846.html" class="adam-name_link">Martha Elizabeth Willis</a> (1846-1942)</div>
   <div class="adam-al_path"><span title="Wisconsin">WI</span>-<span title=""></span>-<span title="Kansas">KS</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 4</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[8] &nbsp; <a href="profile-I6806.html" class="adam-name_link">John East</a> (1796-1833)</div>
+  <div class="adam-al_name">[8] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6806.html" class="adam-name_link">John East</a> (1796-1833)</div>
   <div class="adam-al_path"><span title="Kentucky">KY</span>-<span title="Indiana">IN</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[9] &nbsp; <a href="profile-I6902.html" class="adam-name_link">Elleanor East</a> (1798-1881)</div>
+  <div class="adam-al_name">[9] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6902.html" class="adam-name_link">Elleanor East</a> (1798-1881)</div>
   <div class="adam-al_path"><span title="Kentucky">KY</span>-<span title="Indiana">IN</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[10] &nbsp; <b><a href="profile-I6836.html" class="adam-name_link">Mister Dwees</a> (~1799->1825)</b></div>
+  <div class="adam-al_name">[10] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6836.html" class="adam-name_link">Mister Dwees</a> (~1799->1825)</b></div>
   <div class="adam-al_path"><span title="South Carolina">SC</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[11] &nbsp; <b><a href="profile-I6837.html" class="adam-name_link">Miss Griffith</a> (~1807->1825)</b></div>
+  <div class="adam-al_name">[11] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6837.html" class="adam-name_link">Miss Griffith</a> (~1807->1825)</b></div>
   <div class="adam-al_path"><span title="South Carolina">SC</span>-<span title="Indiana">IN</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[12] &nbsp; <a href="profile-I6859.html" class="adam-name_link">John Cochrane</a> (1788-1848)</div>
+  <div class="adam-al_name">[12] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6859.html" class="adam-name_link">John Cochrane</a> (1788-1848)</div>
   <div class="adam-al_path"><span title="Lanarkshire">LKS</span>-<span title="Scotland">SCT</span>-<span title="Lanarkshire">LKS</span>-<span title="Scotland">SCT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[13] &nbsp; <a href="profile-I6860.html" class="adam-name_link">Margaret Swinton</a> (1793-1867)</div>
+  <div class="adam-al_name">[13] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6860.html" class="adam-name_link">Margaret Swinton</a> (1793-1867)</div>
   <div class="adam-al_path"><span title="Ayrshire">AYR</span>-<span title="Lanarkshire">LKS</span>-<span title="Scotland">SCT</span>-<span title="Lanarkshire">LKS</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[14] &nbsp; <a href="profile-I6866.html" class="adam-name_link">Robert Berwick Willis</a> (1808-1887)</div>
+  <div class="adam-al_name">[14] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6866.html" class="adam-name_link">Robert Berwick Willis</a> (1808-1887)</div>
   <div class="adam-al_path"><span title="New York">NY</span>-<span title=""></span>-<span title="Kansas">KS</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[15] &nbsp; <a href="profile-I6867.html" class="adam-name_link">Eliza Thayer</a> (1807->1873)</div>
+  <div class="adam-al_name">[15] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6867.html" class="adam-name_link">Eliza Thayer</a> (1807->1873)</div>
   <div class="adam-al_path"><span title="New York">NY</span>-<span title="Kansas">KS</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 5</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[16] &nbsp; <a href="profile-I6776.html" class="adam-name_link">James East</a> (1770-1825)</div>
+  <div class="adam-al_name">[16] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6776.html" class="adam-name_link">James East</a> (1770-1825)</div>
   <div class="adam-al_path"><span title="Virginia">VA</span>-<span title="Kentucky">KY</span>-<span title="Indiana">IN</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[17] &nbsp; <a href="profile-I6893.html" class="adam-name_link">Lucy Ann English</a> (1773-1814)</div>
+  <div class="adam-al_name">[17] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6893.html" class="adam-name_link">Lucy Ann English</a> (1773-1814)</div>
   <div class="adam-al_path"><span title="Virginia">VA</span>-<span title="Kentucky">KY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[18] &nbsp; <a href="profile-I6814.html" class="adam-name_link">Cornelius East</a> (1760-1821)</div>
+  <div class="adam-al_name">[18] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6814.html" class="adam-name_link">Cornelius East</a> (1760-1821)</div>
   <div class="adam-al_path"><span title="Virginia">VA</span>-<span title="Indiana">IN</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[19] &nbsp; <b><a href="profile-I8128.html" class="adam-name_link">Mary Hanna</a> (1764->1821)</b></div>
+  <div class="adam-al_name">[19] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8128.html" class="adam-name_link">Mary Hanna</a> (1764->1821)</b></div>
   <div class="adam-al_path"><span title="Virginia">VA</span>-<span title="Indiana">IN</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[24] &nbsp; <b><a href="profile-I8284.html" class="adam-name_link">James Cochran</a> (~1752->1788)</b></div>
+  <div class="adam-al_name">[24] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8284.html" class="adam-name_link">James Cochran</a> (~1752->1788)</b></div>
   <div class="adam-al_path"><span title="Lanarkshire">LKS</span>-<span title="Scotland">SCT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[25] &nbsp; <a href="profile-I8285.html" class="adam-name_link">Mary Brash</a> (~1756->1788)</div>
+  <div class="adam-al_name">[25] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8285.html" class="adam-name_link">Mary Brash</a> (~1756->1788)</div>
   <div class="adam-al_path"><span title="Lanarkshire">LKS</span>-<span title="Scotland">SCT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[26] &nbsp; <b><a href="profile-I6871.html" class="adam-name_link">James Swinton</a> (~1762->1796)</b></div>
+  <div class="adam-al_name">[26] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6871.html" class="adam-name_link">James Swinton</a> (~1762->1796)</b></div>
   <div class="adam-al_path"><span title="Ayrshire">AYR</span>-<span title="Scotland">SCT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[27] &nbsp; <b><a href="profile-I6872.html" class="adam-name_link">Margaret Hutcheson</a> (~1766->1796)</b></div>
-  <div class="adam-al_path"><span title="Ayrshire">AYR</span>-<span title=""></span></div><br>
+  <div class="adam-al_name">[27] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6872.html" class="adam-name_link">Margaret Hutcheson</a> (~1766->1796)</b></div>
+  <div class="adam-al_path"><span title="Ayrshire">AYR</span>-<span title="Scotland">SCT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[28] &nbsp; <a href="profile-I6873.html" class="adam-name_link">Benjamin Willis</a> (1764-1843)</div>
+  <div class="adam-al_name">[28] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6873.html" class="adam-name_link">Benjamin Willis</a> (1764-1843)</div>
   <div class="adam-al_path"><span title="New York">NY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[29] &nbsp; <a href="profile-I6874.html" class="adam-name_link">Bridget Cole</a> (1766-1858)</div>
+  <div class="adam-al_name">[29] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6874.html" class="adam-name_link">Bridget Cole</a> (1766-1858)</div>
   <div class="adam-al_path"><span title="New York">NY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[30] &nbsp; <a href="profile-I6875.html" class="adam-name_link">Daniel Thayer</a> (1769-1854)</div>
+  <div class="adam-al_name">[30] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6875.html" class="adam-name_link">Daniel Thayer</a> (1769-1854)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span>-<span title="New York">NY</span>-<span title="Vermont">VT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[31] &nbsp; <b><a href="profile-I6876.html" class="adam-name_link">Sarah Lottwell</a> (~1773->1814)</b></div>
+  <div class="adam-al_name">[31] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6876.html" class="adam-name_link">Sarah Lottwell</a> (~1773->1814)</b></div>
   <div class="adam-al_path"><span title="New York">NY</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 6</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[32] &nbsp; <a href="profile-I8131.html" class="adam-name_link">Josiah East</a> (1736->1785)</div>
+  <div class="adam-al_name">[32] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8131.html" class="adam-name_link">Josiah East</a> (1736->1785)</div>
   <div class="adam-al_path"><span title="Virginia">VA</span>-<span title="Kentucky">KY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[33] &nbsp; <b><a href="profile-I8127.html" class="adam-name_link">Mrs Eleanor East</a> (1739->1785)</b></div>
+  <div class="adam-al_name">[33] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8127.html" class="adam-name_link">Mrs Eleanor East</a> (1739->1785)</b></div>
   <div class="adam-al_path"><span title="Virginia">VA</span>-<span title="Kentucky">KY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[34] &nbsp; <a href="profile-I8129.html" class="adam-name_link">Charles Frederick English</a> (1742-1805)</div>
+  <div class="adam-al_name">[34] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8129.html" class="adam-name_link">Charles Frederick English</a> (1742-1805)</div>
   <div class="adam-al_path"><span title="Virginia">VA</span>-<span title="Kentucky">KY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[35] &nbsp; <b><a href="profile-I8126.html" class="adam-name_link">Mrs Anne English</a> (1746-1805)</b></div>
+  <div class="adam-al_name">[35] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8126.html" class="adam-name_link">Mrs Anne English</a> (1746-1805)</b></div>
   <div class="adam-al_path"><span title="Virginia">VA</span>-<span title="Kentucky">KY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[36] &nbsp; <a href="profile-I8131.html" class="adam-name_link">Josiah East</a> (1736->1785) (same as 32)</div>
+  <div class="adam-al_name">[36] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8131.html" class="adam-name_link">Josiah East</a> (1736->1785) (same as 32)</div>
   <div class="adam-al_path"><span title="Virginia">VA</span>-<span title="Kentucky">KY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[37] &nbsp; <b><a href="profile-I8127.html" class="adam-name_link">Mrs Eleanor East</a> (1739->1785)</b> (same as 33)</div>
+  <div class="adam-al_name">[37] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8127.html" class="adam-name_link">Mrs Eleanor East</a> (1739->1785)</b> (same as 33)</div>
   <div class="adam-al_path"><span title="Virginia">VA</span>-<span title="Kentucky">KY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[50] &nbsp; <b><a href="profile-I9321.html" class="adam-name_link">James Brash</a> (~1728-)</b></div>
+  <div class="adam-al_name">[50] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9321.html" class="adam-name_link">James Brash</a> (~1728-)</b></div>
   <div class="adam-al_path"><span title="Dunbartonshire">DNB</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[51] &nbsp; <b><a href="profile-I9322.html" class="adam-name_link">Catherine Campbell</a> (~1732->1771)</b></div>
+  <div class="adam-al_name">[51] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9322.html" class="adam-name_link">Catherine Campbell</a> (~1732->1771)</b></div>
   <div class="adam-al_path"><span title="Dunbartonshire">DNB</span>-<span title="Scotland">SCT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[56] &nbsp; <i><b><a href="profile-I7461.html" class="adam-name_link">Amos Willis</a> (1742->1764)</b></i></div>
+  <div class="adam-al_name">[56] <span class="adam-aid">&nbsp;&nbsp;</span><i><b><a href="profile-I7461.html" class="adam-name_link">Amos Willis</a> (1742->1764)</b></i></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="New York">NY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[57] &nbsp; <b><a href="profile-I6903.html" class="adam-name_link">Amy Hutchings</a> (1746->1764)</b></div>
+  <div class="adam-al_name">[57] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6903.html" class="adam-name_link">Amy Hutchings</a> (1746->1764)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[58] &nbsp; <a href="profile-I6743.html" class="adam-name_link">Isaac Abrahamsen Cole</a> (1741-1800)</div>
+  <div class="adam-al_name">[58] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6743.html" class="adam-name_link">Isaac Abrahamsen Cole</a> (1741-1800)</div>
   <div class="adam-al_path"><span title="New York">NY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[59] &nbsp; <a href="profile-I8124.html" class="adam-name_link">Catharine Serven</a> (~1747-1832)</div>
+  <div class="adam-al_name">[59] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8124.html" class="adam-name_link">Catharine Serven</a> (~1747-1832)</div>
   <div class="adam-al_path"><span title="New York">NY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[60] &nbsp; <a href="profile-I8449.html" class="adam-name_link">Reuben Thayer, (Dr.)</a> (1747->1839)</div>
+  <div class="adam-al_name">[60] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8449.html" class="adam-name_link">Reuben Thayer, (Dr.)</a> (1747->1839)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[61] &nbsp; <b><a href="profile-I8450.html" class="adam-name_link">Experience White</a> (~1748->1769)</b></div>
+  <div class="adam-al_name">[61] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8450.html" class="adam-name_link">Experience White</a> (~1748->1769)</b></div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 7</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[64] &nbsp; <a href="profile-I8199.html" class="adam-name_link">Joseph East</a> (~1710-1772)</div>
+  <div class="adam-al_name">[64] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8199.html" class="adam-name_link">Joseph East</a> (~1710-1772)</div>
   <div class="adam-al_path"><span title="Virginia">VA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[65] &nbsp; <b><a href="profile-I8178.html" class="adam-name_link">Mary Barnet</a> (~1714->1772)</b></div>
+  <div class="adam-al_name">[65] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8178.html" class="adam-name_link">Mary Barnet</a> (~1714->1772)</b></div>
   <div class="adam-al_path"><span title="Virginia">VA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[68] &nbsp; <b><a href="profile-I8377.html" class="adam-name_link">Stephen English</a> (1720-1781)</b></div>
+  <div class="adam-al_name">[68] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8377.html" class="adam-name_link">Stephen English</a> (1720-1781)</b></div>
   <div class="adam-al_path"><span title="Virginia">VA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[69] &nbsp; <a href="profile-I8378.html" class="adam-name_link">Diana Haynes</a> (~1725->1765)</div>
+  <div class="adam-al_name">[69] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8378.html" class="adam-name_link">Diana Haynes</a> (~1725->1765)</div>
   <div class="adam-al_path"><span title="Virginia">VA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[116] &nbsp; <a href="profile-I6744.html" class="adam-name_link">Abram Jacobsen Kool</a> (1707->1751)</div>
+  <div class="adam-al_name">[116] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6744.html" class="adam-name_link">Abram Jacobsen Kool</a> (1707->1751)</div>
   <div class="adam-al_path"><span title="New York">NY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[117] &nbsp; <a href="profile-I8251.html" class="adam-name_link">Annetje Meyer</a> (1711->1751)</div>
+  <div class="adam-al_name">[117] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8251.html" class="adam-name_link">Annetje Meyer</a> (1711->1751)</div>
   <div class="adam-al_path"><span title="New York">NY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[118] &nbsp; <a href="profile-I6748.html" class="adam-name_link">Abraham Serven</a> (1719->1772)</div>
+  <div class="adam-al_name">[118] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6748.html" class="adam-name_link">Abraham Serven</a> (1719->1772)</div>
   <div class="adam-al_path"><span title="New York">NY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[119] &nbsp; <b><a href="profile-I8150.html" class="adam-name_link">Breghje Smith</a> (1723->1772)</b></div>
+  <div class="adam-al_name">[119] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8150.html" class="adam-name_link">Breghje Smith</a> (1723->1772)</b></div>
   <div class="adam-al_path"><span title="New York">NY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[120] &nbsp; <a href="profile-I8453.html" class="adam-name_link">Isaac Thayer</a> (1717->1763)</div>
+  <div class="adam-al_name">[120] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8453.html" class="adam-name_link">Isaac Thayer</a> (1717->1763)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[121] &nbsp; <a href="profile-I8454.html" class="adam-name_link">Mary Thayer, (twin)</a> (->1763)</div>
+  <div class="adam-al_name">[121] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8454.html" class="adam-name_link">Mary Thayer, (twin)</a> (->1763)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 8</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[128] &nbsp; <i><a href="profile-I8400.html" class="adam-name_link">Edward East</a> (~1689-1734)</i></div>
+  <div class="adam-al_name">[128] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I8400.html" class="adam-name_link">Edward East</a> (~1689-1734)</i></div>
   <div class="adam-al_path"><span title="Somerset">SOM</span>-<span title="Virginia">VA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[129] &nbsp; <b><a href="profile-I8928.html" class="adam-name_link">Mrs Edward East</a> (~1691->1718)</b></div>
+  <div class="adam-al_name">[129] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8928.html" class="adam-name_link">Mrs Edward East</a> (~1691->1718)</b></div>
   <div class="adam-al_path"><span title="Virginia">VA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[138] &nbsp; <b><a href="profile-I8379.html" class="adam-name_link">Henry Haynes</a> (~1701-1784)</b></div>
+  <div class="adam-al_name">[138] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8379.html" class="adam-name_link">Henry Haynes</a> (~1701-1784)</b></div>
   <div class="adam-al_path"><span title="Virginia">VA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[139] &nbsp; <b><a href="profile-I8929.html" class="adam-name_link">Mrs Mary Haynes</a> (~1707->1723)</b></div>
+  <div class="adam-al_name">[139] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8929.html" class="adam-name_link">Mrs Mary Haynes</a> (~1707->1723)</b></div>
   <div class="adam-al_path"><span title="Virginia">VA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[232] &nbsp; <a href="profile-I6812.html" class="adam-name_link">Jacob Jacobsen Kool</a> (1673->1707)</div>
+  <div class="adam-al_name">[232] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6812.html" class="adam-name_link">Jacob Jacobsen Kool</a> (1673->1707)</div>
   <div class="adam-al_path"><span title="New York">NY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[233] &nbsp; <b><a href="profile-I6745.html" class="adam-name_link">Barbara Hanse</a> (1673->1707)</b></div>
+  <div class="adam-al_name">[233] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6745.html" class="adam-name_link">Barbara Hanse</a> (1673->1707)</b></div>
   <div class="adam-al_path"><span title="New York">NY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[234] &nbsp; <a href="profile-I8265.html" class="adam-name_link">Ide Meyer</a> (1687->1761)</div>
+  <div class="adam-al_name">[234] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8265.html" class="adam-name_link">Ide Meyer</a> (1687->1761)</div>
   <div class="adam-al_path"><span title="New York">NY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[235] &nbsp; <i><b><a href="profile-I8266.html" class="adam-name_link">Geertruyt Vandalsen</a> (1690-<1746)</b></i></div>
+  <div class="adam-al_name">[235] <span class="adam-aid">&nbsp;&nbsp;</span><i><b><a href="profile-I8266.html" class="adam-name_link">Geertruyt Vandalsen</a> (1690-<1746)</b></i></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[236] &nbsp; <b><a href="profile-I8319.html" class="adam-name_link">Philip E. Serven</a> (~1688-<1723)</b></div>
+  <div class="adam-al_name">[236] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8319.html" class="adam-name_link">Philip E. Serven</a> (~1688-<1723)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[237] &nbsp; <i><b><a href="profile-I8320.html" class="adam-name_link">Katrina Stypers</a> (1689-1768)</b></i></div>
-  <div class="adam-al_path"><span title="Netherlands">NLD</span>-<span title="New York">NY</span>-<span title=""></span>-<span title="New York">NY</span></div><br>
+  <div class="adam-al_name">[237] <span class="adam-aid">&nbsp;&nbsp;</span><i><b><a href="profile-I8320.html" class="adam-name_link">Katrina Stypers</a> (1689-1768)</b></i></div>
+  <div class="adam-al_path"><span title="Netherlands">NLD</span>-<span title="New York">NY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[240] &nbsp; <a href="profile-I8473.html" class="adam-name_link">Isaac Thayer</a> (1695->1739)</div>
+  <div class="adam-al_name">[240] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8473.html" class="adam-name_link">Isaac Thayer</a> (1695->1739)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[241] &nbsp; <a href="profile-I8474.html" class="adam-name_link">Miriam Thayer</a> (1699->1739)</div>
+  <div class="adam-al_name">[241] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8474.html" class="adam-name_link">Miriam Thayer</a> (1699->1739)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[242] &nbsp; <a href="profile-I8480.html" class="adam-name_link">John Thayer</a> (1686-1747)</div>
+  <div class="adam-al_name">[242] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8480.html" class="adam-name_link">John Thayer</a> (1686-1747)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[243] &nbsp; <b><a href="profile-I8513.html" class="adam-name_link">Lydia Wales</a> (~1690->1737)</b></div>
+  <div class="adam-al_name">[243] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8513.html" class="adam-name_link">Lydia Wales</a> (~1690->1737)</b></div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 9</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[256] &nbsp; <i><b><a href="profile-I8411.html" class="adam-name_link">Thomas East</a> (1640-1727)</b></i></div>
+  <div class="adam-al_name">[256] <span class="adam-aid">&nbsp;&nbsp;</span><i><b><a href="profile-I8411.html" class="adam-name_link">Thomas East</a> (1640-1727)</b></i></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Virginia">VA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[257] &nbsp; <b><a href="profile-I8412.html" class="adam-name_link">Winifred Hudnate Napper, (Widow)</a> (~1648-~1690)</b></div>
+  <div class="adam-al_name">[257] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8412.html" class="adam-name_link">Winifred Hudnate Napper, (Widow)</a> (~1648-~1690)</b></div>
   <div class="adam-al_path"><span title="Virginia">VA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[464] &nbsp; <a href="profile-I8252.html" class="adam-name_link">Jacob Barentsen Kool</a> (1638-1719)</div>
+  <div class="adam-al_name">[464] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8252.html" class="adam-name_link">Jacob Barentsen Kool</a> (1638-1719)</div>
   <div class="adam-al_path"><span title="New York">NY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[465] &nbsp; <b><a href="profile-I8281.html" class="adam-name_link">Marretje Symons</a> (1639->1687)</b></div>
+  <div class="adam-al_name">[465] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8281.html" class="adam-name_link">Marretje Symons</a> (1639->1687)</b></div>
   <div class="adam-al_path"><span title="New York">NY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[468] &nbsp; <a href="profile-I8267.html" class="adam-name_link">Jan Jansen Meyer</a> (1656->1697)</div>
+  <div class="adam-al_name">[468] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8267.html" class="adam-name_link">Jan Jansen Meyer</a> (1656->1697)</div>
   <div class="adam-al_path"><span title="New York">NY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[469] &nbsp; <a href="profile-I8268.html" class="adam-name_link">Annetje Idense van Vorst</a> (~1657->1677)</div>
+  <div class="adam-al_name">[469] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8268.html" class="adam-name_link">Annetje Idense van Vorst</a> (~1657->1677)</div>
   <div class="adam-al_path"><span title="New York">NY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[480] &nbsp; <a href="profile-I8475.html" class="adam-name_link">Isaac Thayer</a> (1669->1721)</div>
+  <div class="adam-al_name">[480] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8475.html" class="adam-name_link">Isaac Thayer</a> (1669->1721)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[481] &nbsp; <b><a href="profile-I8476.html" class="adam-name_link">Mercy Mary Ward</a> (~1673-1700)</b></div>
+  <div class="adam-al_name">[481] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8476.html" class="adam-name_link">Mercy Mary Ward</a> (~1673-1700)</b></div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[482] &nbsp; <a href="profile-I8496.html" class="adam-name_link">Josiah Thayer</a> (1671-1728)</div>
+  <div class="adam-al_name">[482] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8496.html" class="adam-name_link">Josiah Thayer</a> (1671-1728)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[483] &nbsp; <b><a href="profile-I8510.html" class="adam-name_link">Sarah Bass</a> (~1673->1710)</b></div>
+  <div class="adam-al_name">[483] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8510.html" class="adam-name_link">Sarah Bass</a> (~1673->1710)</b></div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[484] &nbsp; <a href="profile-I8482.html" class="adam-name_link">John Thayer</a> (1656-1746)</div>
+  <div class="adam-al_name">[484] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8482.html" class="adam-name_link">John Thayer</a> (1656-1746)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[485] &nbsp; <b><a href="profile-I8483.html" class="adam-name_link">Mary Bass</a> (~1658-1724)</b></div>
+  <div class="adam-al_name">[485] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8483.html" class="adam-name_link">Mary Bass</a> (~1658-1724)</b></div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 10</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[928] &nbsp; <i><a href="profile-I8253.html" class="adam-name_link">Barent Jacobsen Kool</a> (1605->1657)</i></div>
+  <div class="adam-al_name">[928] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I8253.html" class="adam-name_link">Barent Jacobsen Kool</a> (1605->1657)</i></div>
   <div class="adam-al_path"><span title="Netherlands">NLD</span>-<span title="New York">NY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[929] &nbsp; <b><a href="profile-I8282.html" class="adam-name_link">Marietje Leenderts</a> (1609->1657)</b></div>
+  <div class="adam-al_name">[929] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8282.html" class="adam-name_link">Marietje Leenderts</a> (1609->1657)</b></div>
   <div class="adam-al_path"><span title="New York">NY</span>-<span title=""></span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[936] &nbsp; <a href="profile-I8271.html" class="adam-name_link">Jan Dircksen Meyer</a> (~1631->1677)</div>
+  <div class="adam-al_name">[936] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8271.html" class="adam-name_link">Jan Dircksen Meyer</a> (~1631->1677)</div>
   <div class="adam-al_path"><span title="Netherlands">NLD</span>-<span title="New York">NY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[937] &nbsp; <i><b><a href="profile-I8272.html" class="adam-name_link">Mrs. Jan Meyer</a> (~1634->1663)</b></i></div>
+  <div class="adam-al_name">[937] <span class="adam-aid">&nbsp;&nbsp;</span><i><b><a href="profile-I8272.html" class="adam-name_link">Mrs. Jan Meyer</a> (~1634->1663)</b></i></div>
   <div class="adam-al_path"><span title="Netherlands">NLD</span>-<span title="New York">NY</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[938] &nbsp; <b><a href="profile-I8269.html" class="adam-name_link">Ide Cornelisen van Vorst</a> (-)</b></div>
+  <div class="adam-al_name">[938] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8269.html" class="adam-name_link">Ide Cornelisen van Vorst</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[939] &nbsp; <b><a href="profile-I8270.html" class="adam-name_link">Hilletje Jans</a> (-)</b></div>
+  <div class="adam-al_name">[939] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8270.html" class="adam-name_link">Hilletje Jans</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[960] &nbsp; <i><a href="profile-I8478.html" class="adam-name_link">Ferdinando Thayer</a> (~1616-1713)</i></div>
+  <div class="adam-al_name">[960] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I8478.html" class="adam-name_link">Ferdinando Thayer</a> (~1616-1713)</i></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[961] &nbsp; <b><a href="profile-I8489.html" class="adam-name_link">Huldah Hayward</a> (~1633-1690)</b></div>
+  <div class="adam-al_name">[961] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8489.html" class="adam-name_link">Huldah Hayward</a> (~1633-1690)</b></div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[964] &nbsp; <i><a href="profile-I8478.html" class="adam-name_link">Ferdinando Thayer</a> (~1616-1713)</i> (same as 960)</div>
+  <div class="adam-al_name">[964] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I8478.html" class="adam-name_link">Ferdinando Thayer</a> (~1616-1713)</i> (same as 960)</div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[965] &nbsp; <b><a href="profile-I8489.html" class="adam-name_link">Huldah Hayward</a> (~1633-1690)</b> (same as 961)</div>
+  <div class="adam-al_name">[965] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8489.html" class="adam-name_link">Huldah Hayward</a> (~1633-1690)</b> (same as 961)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[968] &nbsp; <a href="profile-I8484.html" class="adam-name_link">Thomas Thayer</a> (~1620-1693)</div>
+  <div class="adam-al_name">[968] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8484.html" class="adam-name_link">Thomas Thayer</a> (~1620-1693)</div>
   <div class="adam-al_path"><span title="Essex">ESS</span>-<span title="England">ENG</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[969] &nbsp; <b><a href="profile-I8485.html" class="adam-name_link">Mrs Anna (Hannah) Thayer</a> (~1625-1698)</b></div>
+  <div class="adam-al_name">[969] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8485.html" class="adam-name_link">Mrs Anna (Hannah) Thayer</a> (~1625-1698)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 11</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1856] &nbsp; <b><a href="profile-I8254.html" class="adam-name_link">Jacob Kool</a> (1580-)</b></div>
+  <div class="adam-al_name">[1856] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8254.html" class="adam-name_link">Jacob Kool</a> (1580-)</b></div>
   <div class="adam-al_path"><span title="Netherlands">NLD</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1857] &nbsp; <b><a href="profile-I8283.html" class="adam-name_link">Mrs. Jacob Kool</a> (-)</b></div>
+  <div class="adam-al_name">[1857] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8283.html" class="adam-name_link">Mrs. Jacob Kool</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1872] &nbsp; <b><a href="profile-I8276.html" class="adam-name_link">Dirck Meyer</a> (~1601->1631)</b></div>
+  <div class="adam-al_name">[1872] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8276.html" class="adam-name_link">Dirck Meyer</a> (~1601->1631)</b></div>
   <div class="adam-al_path"><span title="Netherlands">NLD</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1873] &nbsp; <b><a href="profile-I6900.html" class="adam-name_link">Mrs Dirck Meyer</a> (~1603->1631)</b></div>
+  <div class="adam-al_name">[1873] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6900.html" class="adam-name_link">Mrs Dirck Meyer</a> (~1603->1631)</b></div>
   <div class="adam-al_path"><span title="Netherlands">NLD</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1920] &nbsp; <i><a href="profile-I8486.html" class="adam-name_link">Thomas Thayer</a> (~1598-1665)</i></div>
+  <div class="adam-al_name">[1920] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I8486.html" class="adam-name_link">Thomas Thayer</a> (~1598-1665)</i></div>
   <div class="adam-al_path"><span title="Essex">ESS</span>-<span title="England">ENG</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1921] &nbsp; <i><b><a href="profile-I8479.html" class="adam-name_link">Mrs Margery Thayer</a> (~1591->1630)</b></i></div>
+  <div class="adam-al_name">[1921] <span class="adam-aid">&nbsp;&nbsp;</span><i><b><a href="profile-I8479.html" class="adam-name_link">Mrs Margery Thayer</a> (~1591->1630)</b></i></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1936] &nbsp; <i><a href="profile-I8486.html" class="adam-name_link">Thomas Thayer</a> (~1598-1665)</i> (same as 1920)</div>
+  <div class="adam-al_name">[1936] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I8486.html" class="adam-name_link">Thomas Thayer</a> (~1598-1665)</i> (same as 1920)</div>
   <div class="adam-al_path"><span title="Essex">ESS</span>-<span title="England">ENG</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1937] &nbsp; <i><b><a href="profile-I8479.html" class="adam-name_link">Mrs Margery Thayer</a> (~1591->1630)</b></i> (same as 1921)</div>
+  <div class="adam-al_name">[1937] <span class="adam-aid">&nbsp;&nbsp;</span><i><b><a href="profile-I8479.html" class="adam-name_link">Mrs Margery Thayer</a> (~1591->1630)</b></i> (same as 1921)</div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 12</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3840] &nbsp; <b><a href="profile-I8710.html" class="adam-name_link">Mr Father Thayer</a> (-)</b></div>
+  <div class="adam-al_name">[3840] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8710.html" class="adam-name_link">Mr Father Thayer</a> (-)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3841] &nbsp; <b><a href="profile-I8711.html" class="adam-name_link">Mrs Mother Thayer</a> (-)</b></div>
+  <div class="adam-al_name">[3841] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8711.html" class="adam-name_link">Mrs Mother Thayer</a> (-)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 </ul>
 </div>
 </div>
-<div id="map" class="adam-tab">
+<div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <br/>
 <div class="floatmapbuttons"><p>
@@ -791,15 +800,15 @@ var mcOptions={styles:[{ height:35,width:35,url:"mapmarker1.png"},
  { height:35,width:35,url:"mapmarker4.png"},
  { height:35,width:35,url:"mapmarker5.png"}]};
 function initializePins() {
- addPin(42.6331,-88.6437,1,myImageW,'Martha Elizabeth Willis','<div class="infowindow"><p>Coordinates: 42.6331, -88.6437</p><span class="adam-map-location"><a href="places-usa-wisconsin-walworth-delavan.html" class="adam-location_link">Delavan, Walworth, Wisconsin, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6846.html" class="adam-name_link">Martha Elizabeth Willis</a> (1846-1942)</span></div>');addPin(38.9278,-86.3756,1,myImageM,'Abraham Lincoln East','<div class="infowindow"><p>Coordinates: 38.9278, -86.3756</p><span class="adam-map-location"><a href="places-usa-indiana-lawrence-heltonville.html" class="adam-location_link">Heltonville, Lawrence, Indiana, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6676.html" class="adam-name_link">Abraham Lincoln East</a> (1865-1946)</span></div>');addPin(38.1951,-86.1113,1,myImageW,'Mary Deweise (Dwees) Prather, (widow)','<div class="infowindow"><p>Coordinates: 38.1951, -86.1113</p><span class="adam-map-location"><a href="places-usa-indiana-harrison.html" class="adam-location_link">Harrison, Indiana, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6697.html" class="adam-name_link">Mary Deweise (Dwees) Prather, (widow)</a> (1825-1902)</span></div>');addPin(39.1035,-85.2624,1,myImageM,'Neal East','<div class="infowindow"><p>Coordinates: 39.1035, -85.2624</p><span class="adam-map-location"><a href="places-usa-indiana-ripley.html" class="adam-location_link">Ripley, Indiana, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6796.html" class="adam-name_link">Neal East</a> (1823-1897)</span></div>');addPin(37.6195,-84.578,1,myImageW,'Elleanor East','<div class="infowindow"><p>Coordinates: 37.6195, -84.578</p><span class="adam-map-location"><a href="places-usa-kentucky-garrard-lancaster.html" class="adam-location_link">Lancaster, Garrard, Kentucky, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6902.html" class="adam-name_link">Elleanor East</a> (1798-1881)</span></div>');addPin(33.8361,-81.1637,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 33.8361, -81.1637</p><span class="adam-map-location"><a href="places-usa-south-carolina.html" class="adam-location_link">South Carolina, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6837.html" class="adam-name_link">Miss Griffith</a> (~1807->1825)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6836.html" class="adam-name_link">Mister Dwees</a> (~1799->1825)</span></div>');addPin(36.6667,-79.8833,1,myImageW,'Mrs Mary Haynes','<div class="infowindow"><p>Coordinates: 36.6667, -79.8833</p><span class="adam-map-location"><a href="places-usa-virginia-henry.html" class="adam-location_link">Henry, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8929.html" class="adam-name_link">Mrs Mary Haynes</a> (~1707->1723)</span></div>');addPin(37.5775,-79.7848,1,myImageW,'Lucy Ann English','<div class="infowindow"><p>Coordinates: 37.5775, -79.7848</p><span class="adam-map-location"><a href="places-usa-virginia-botetourt.html" class="adam-location_link">Botetourt, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6893.html" class="adam-name_link">Lucy Ann English</a> (1773-1814)</span></div>');addPin(37.3343,-79.5231,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 37.3343, -79.5231</p><span class="adam-map-location"><a href="places-usa-virginia-bedford.html" class="adam-location_link">Bedford, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8379.html" class="adam-name_link">Henry Haynes</a> (~1701-1784)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8377.html" class="adam-name_link">Stephen English</a> (1720-1781)</span></div>');addPin(37.8,-79.4333,1,myImageW,'Mary Hanna','<div class="infowindow"><p>Coordinates: 37.8, -79.4333</p><span class="adam-map-location"><a href="places-usa-virginia-rockbridge.html" class="adam-location_link">Rockbridge, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8128.html" class="adam-name_link">Mary Hanna</a> (1764->1821)</span></div>');addPin(37.4316,-78.6569,5,myImage,'5 Persons','<div class="infowindow"><p>Coordinates: 37.4316, -78.6569</p><span class="adam-map-location"><a href="places-usa-virginia.html" class="adam-location_link">Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8127.html" class="adam-name_link">Mrs Eleanor East</a> (1739->1785)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8127.html" class="adam-name_link">Mrs Eleanor East</a> (1739->1785)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8126.html" class="adam-name_link">Mrs Anne English</a> (1746-1805)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8129.html" class="adam-name_link">Charles Frederick English</a> (1742-1805)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8412.html" class="adam-name_link">Winifred Hudnate Napper, (Widow)</a> (~1648-~1690)</span></div>');addPin(37.9782,-77.963,5,myImage,'5 Persons','<div class="infowindow"><p>Coordinates: 37.9782, -77.963</p><span class="adam-map-location"><a href="places-usa-virginia-louisa.html" class="adam-location_link">Louisa, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6776.html" class="adam-name_link">James East</a> (1770-1825)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6814.html" class="adam-name_link">Cornelius East</a> (1760-1821)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8178.html" class="adam-name_link">Mary Barnet</a> (~1714->1772)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8131.html" class="adam-name_link">Josiah East</a> (1736->1785)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8131.html" class="adam-name_link">Josiah East</a> (1736->1785)</span></div>');addPin(38.185,-77.656,1,myImageW,'Diana Haynes','<div class="infowindow"><p>Coordinates: 38.185, -77.656</p><span class="adam-map-location"><a href="places-usa-virginia-spotsylvania.html" class="adam-location_link">Spotsylvania, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8378.html" class="adam-name_link">Diana Haynes</a> (~1725->1765)</span></div>');addPin(37.55,-77.3667,1,myImageM,'Joseph East','<div class="infowindow"><p>Coordinates: 37.55, -77.3667</p><span class="adam-map-location"><a href="places-usa-virginia-henrico.html" class="adam-location_link">Henrico, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8199.html" class="adam-name_link">Joseph East</a> (~1710-1772)</span></div>');addPin(41.402,-74.3243,1,myImageM,'Benjamin Willis','<div class="infowindow"><p>Coordinates: 41.402, -74.3243</p><span class="adam-map-location"><a href="places-usa-new-york-orange-goshen.html" class="adam-location_link">Goshen, Orange, New York, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6873.html" class="adam-name_link">Benjamin Willis</a> (1764-1843)</span></div>');addPin(43.0587,-74.1965,1,myImageM,'Robert Berwick Willis','<div class="infowindow"><p>Coordinates: 43.0587, -74.1965</p><span class="adam-map-location"><a href="places-usa-new-york-fulton-broadalbin.html" class="adam-location_link">Broadalbin, Fulton, New York, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6866.html" class="adam-name_link">Robert Berwick Willis</a> (1808-1887)</span></div>');addPin(40.7144,-74.006,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 40.7144, -74.006</p><span class="adam-map-location"><a href="places-usa-new-york.html" class="adam-location_link">New York, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8150.html" class="adam-name_link">Breghje Smith</a> (1723->1772)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8265.html" class="adam-name_link">Ide Meyer</a> (1687->1761)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8267.html" class="adam-name_link">Jan Jansen Meyer</a> (1656->1697)</span></div>');addPin(41.9269,-73.9978,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 41.9269, -73.9978</p><span class="adam-map-location"><a href="places-usa-new-york-ulster-kingston.html" class="adam-location_link">Kingston, Ulster, New York, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8252.html" class="adam-name_link">Jacob Barentsen Kool</a> (1638-1719)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8281.html" class="adam-name_link">Marretje Symons</a> (1639->1687)</span></div>');addPin(41.1476,-73.9893,1,myImageW,'Bridget Cole','<div class="infowindow"><p>Coordinates: 41.1476, -73.9893</p><span class="adam-map-location"><a href="places-usa-new-york-rockland-new-city.html" class="adam-location_link">New City, Rockland, New York, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6874.html" class="adam-name_link">Bridget Cole</a> (1766-1858)</span></div>');addPin(41.022,-73.9474,8,myImage,'8 Persons','<div class="infowindow"><p>Coordinates: 41.022, -73.9474</p><span class="adam-map-location"><a href="places-usa-new-york-rockland-tappan.html" class="adam-location_link">Tappan, Rockland, New York, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6812.html" class="adam-name_link">Jacob Jacobsen Kool</a> (1673->1707)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6745.html" class="adam-name_link">Barbara Hanse</a> (1673->1707)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6748.html" class="adam-name_link">Abraham Serven</a> (1719->1772)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8319.html" class="adam-name_link">Philip E. Serven</a> (~1688-<1723)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6744.html" class="adam-name_link">Abram Jacobsen Kool</a> (1707->1751)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8251.html" class="adam-name_link">Annetje Meyer</a> (1711->1751)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6743.html" class="adam-name_link">Isaac Abrahamsen Cole</a> (1741-1800)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8124.html" class="adam-name_link">Catharine Serven</a> (~1747-1832)</span></div>');addPin(41.7667,-73.7333,1,myImageW,'Sarah Lottwell','<div class="infowindow"><p>Coordinates: 41.7667, -73.7333</p><span class="adam-map-location"><a href="places-usa-new-york-dutchess-of-dover.html" class="adam-location_link">of Dover, Dutchess, New York, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6876.html" class="adam-name_link">Sarah Lottwell</a> (~1773->1814)</span></div>');addPin(42.0773,-71.6295,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 42.0773, -71.6295</p><span class="adam-map-location"><a href="places-usa-massachusetts-worcester-uxbridge.html" class="adam-location_link">Uxbridge, Worcester, Massachusetts, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8450.html" class="adam-name_link">Experience White</a> (~1748->1769)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6875.html" class="adam-name_link">Daniel Thayer</a> (1769-1854)</span></div>');addPin(42.1056,-71.5528,5,myImage,'5 Persons','<div class="infowindow"><p>Coordinates: 42.1056, -71.5528</p><span class="adam-map-location"><a href="places-usa-massachusetts-worcester-mendon.html" class="adam-location_link">Mendon, Worcester, Massachusetts, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8453.html" class="adam-name_link">Isaac Thayer</a> (1717->1763)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8473.html" class="adam-name_link">Isaac Thayer</a> (1695->1739)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8474.html" class="adam-name_link">Miriam Thayer</a> (1699->1739)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8475.html" class="adam-name_link">Isaac Thayer</a> (1669->1721)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8496.html" class="adam-name_link">Josiah Thayer</a> (1671-1728)</span></div>');addPin(42.0868,-71.4746,1,myImageM,'Reuben Thayer, (Dr.)','<div class="infowindow"><p>Coordinates: 42.0868, -71.4746</p><span class="adam-map-location"><a href="places-usa-massachusetts-norfolk-bellingham.html" class="adam-location_link">Bellingham, Norfolk, Massachusetts, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8449.html" class="adam-name_link">Reuben Thayer, (Dr.)</a> (1747->1839)</span></div>');addPin(42.4072,-71.3824,1,myImageW,'Lydia Wales','<div class="infowindow"><p>Coordinates: 42.4072, -71.3824</p><span class="adam-map-location"><a href="places-usa-massachusetts.html" class="adam-location_link">Massachusetts, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8513.html" class="adam-name_link">Lydia Wales</a> (~1690->1737)</span></div>');addPin(42.2556,-71.04,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 42.2556, -71.04</p><span class="adam-map-location"><a href="places-usa-massachusetts-suffolk-braintree.html" class="adam-location_link">Braintree, Suffolk, Massachusetts, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8454.html" class="adam-name_link">Mary Thayer, (twin)</a> (->1763)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8480.html" class="adam-name_link">John Thayer</a> (1686-1747)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8482.html" class="adam-name_link">John Thayer</a> (1656-1746)</span></div>');addPin(55.6116,-4.66964,1,myImageW,'Margaret Swinton','<div class="infowindow"><p>Coordinates: 55.6116, -4.66964</p><span class="adam-map-location"><a href="places-scotland-ayrshire-irvine.html" class="adam-location_link">Irvine, Ayrshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6860.html" class="adam-name_link">Margaret Swinton</a> (1793-1867)</span></div>');addPin(55.5159,-4.37775,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 55.5159, -4.37775</p><span class="adam-map-location"><a href="places-scotland-ayrshire-mauchline.html" class="adam-location_link">Mauchline, Ayrshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6871.html" class="adam-name_link">James Swinton</a> (~1762->1796)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6872.html" class="adam-name_link">Margaret Hutcheson</a> (~1766->1796)</span></div>');addPin(55.8642,-4.25181,1,myImageM,'Sanders Swinton Cochrane','<div class="infowindow"><p>Coordinates: 55.8642, -4.25181</p><span class="adam-map-location"><a href="places-scotland-lanarkshire-glasgow.html" class="adam-location_link">Glasgow, Lanarkshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6749.html" class="adam-name_link">Sanders Swinton Cochrane</a> (1825-1898)</span></div>');addPin(56.4907,-4.20265,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 56.4907, -4.20265</p><span class="adam-map-location"><a href="places-scotland-lanarkshire-barony.html" class="adam-location_link">Barony, Lanarkshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8284.html" class="adam-name_link">James Cochran</a> (~1752->1788)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8285.html" class="adam-name_link">Mary Brash</a> (~1756->1788)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6859.html" class="adam-name_link">John Cochrane</a> (1788-1848)</span></div>');addPin(51.3758,-2.3599,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 51.3758, -2.3599</p><span class="adam-map-location"><a href="places-england-somerset-bath.html" class="adam-location_link">Bath, Somerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8400.html" class="adam-name_link">Edward East</a> (~1689-1734)</span><br/><br/><span class="adam-map-location"><a href="places-england-bath.html" class="adam-location_link">Bath, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8411.html" class="adam-name_link">Thomas East</a> (1640-1727)</span></div>');addPin(52.3555,-1.17432,9,myImage,'9 Persons','<div class="infowindow"><p>Coordinates: 52.3555, -1.17432</p><span class="adam-map-location"><a href="places-england.html" class="adam-location_link">England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6903.html" class="adam-name_link">Amy Hutchings</a> (1746->1764)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7461.html" class="adam-name_link">Amos Willis</a> (1742->1764)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8478.html" class="adam-name_link">Ferdinando Thayer</a> (~1616-1713)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8478.html" class="adam-name_link">Ferdinando Thayer</a> (~1616-1713)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8711.html" class="adam-name_link">Mrs Mother Thayer</a> (-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8485.html" class="adam-name_link">Mrs Anna (Hannah) Thayer</a> (~1625-1698)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8479.html" class="adam-name_link">Mrs Margery Thayer</a> (~1591->1630)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8479.html" class="adam-name_link">Mrs Margery Thayer</a> (~1591->1630)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8710.html" class="adam-name_link">Mr Father Thayer</a> (-)</span></div>');addPin(51.7659,0.667367,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 51.7659, 0.667367</p><span class="adam-map-location"><a href="places-england-essex.html" class="adam-location_link">Essex, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8486.html" class="adam-name_link">Thomas Thayer</a> (~1598-1665)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8486.html" class="adam-name_link">Thomas Thayer</a> (~1598-1665)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8484.html" class="adam-name_link">Thomas Thayer</a> (~1620-1693)</span></div>');addPin(52.3808,4.63683,1,myImageW,'Geertruyt Vandalsen','<div class="infowindow"><p>Coordinates: 52.3808, 4.63683</p><span class="adam-map-location"><a href="places-netherlands-noord-holland-haarlem.html" class="adam-location_link">Haarlem, Noord-Holland, Netherlands</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8266.html" class="adam-name_link">Geertruyt Vandalsen</a> (1690-<1746)</span></div>');addPin(52.1326,5.29127,4,myImage,'4 Persons','<div class="infowindow"><p>Coordinates: 52.1326, 5.29127</p><span class="adam-map-location"><a href="places-netherlands-wiltserlingen.html" class="adam-location_link">Wiltserlingen, Netherlands</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8320.html" class="adam-name_link">Katrina Stypers</a> (1689-1768)</span><br/><br/><span class="adam-map-location"><a href="places-netherlands.html" class="adam-location_link">Netherlands</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8254.html" class="adam-name_link">Jacob Kool</a> (1580-)</span><br/><br/><span class="adam-map-location"><a href="places-netherlands.html" class="adam-location_link">Netherlands</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8276.html" class="adam-name_link">Dirck Meyer</a> (~1601->1631)</span><br/><br/><span class="adam-map-location"><a href="places-netherlands.html" class="adam-location_link">Netherlands</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6900.html" class="adam-name_link">Mrs Dirck Meyer</a> (~1603->1631)</span></div>');addPin(1000,1000,8,myImage,'8 Persons','<div class="infowindow"><p>Coordinates: 1000, 1000</p><span class="adam-map-location"><a href="places-usa-kentucky-lincoln-lancaster.html" class="adam-location_link">Lancaster, Lincoln, Kentucky, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6806.html" class="adam-name_link">John East</a> (1796-1833)</span><br/><br/><span class="adam-map-location"><a href="places-usa-kansas-reno-haven.html" class="adam-location_link">Haven, Reno, Kansas, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6677.html" class="adam-name_link">Margaret Allison Cochrane</a> (1875-1971)</span><br/><br/><span class="adam-map-location"><a href="places-scotland-dunbartonshire-new-kirkpatrick.html" class="adam-location_link">New Kirkpatrick, Dunbartonshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9321.html" class="adam-name_link">James Brash</a> (~1728-)</span><br/><br/><span class="adam-map-location"><a href="places-scotland-dunbartonshire-new-kirkpatrick.html" class="adam-location_link">New Kirkpatrick, Dunbartonshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9322.html" class="adam-name_link">Catherine Campbell</a> (~1732->1771)</span><br/><br/><span class="adam-map-location"><a href="places-usa-oklahoma-woods-jet.html" class="adam-location_link">Jet, Woods, Oklahoma, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6850.html" class="adam-name_link">Dorothy East</a> (1905-1999)</span><br/><br/><span class="adam-map-location"><a href="places-usa-new-york-duchess-dover.html" class="adam-location_link">Dover, Duchess, New York, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6867.html" class="adam-name_link">Eliza Thayer</a> (1807->1873)</span><br/><br/><span class="adam-map-location"><a href="places-netherlands-nholland-amsterdam.html" class="adam-location_link">Amsterdam, N.Holland, Netherlands</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8253.html" class="adam-name_link">Barent Jacobsen Kool</a> (1605->1657)</span><br/><br/><span class="adam-map-location"><a href="places-new-netherland.html" class="adam-location_link">New Netherland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8282.html" class="adam-name_link">Marietje Leenderts</a> (1609->1657)</span></div>');
+ addPin(36.7182,-98.7481,1,myImageW,'Dorothy East','<div class="infowindow"><p>Coordinates: 36.7182, -98.7481</p><span class="adam-map-location"><a href="places-usa-oklahoma-woods-jet.html" class="adam-location_link">Jet, Woods, Oklahoma, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6850.html" class="adam-name_link">Dorothy East</a> (1905-1999)</span></div>');addPin(37.8989,-97.7828,1,myImageW,'Margaret Allison Cochrane','<div class="infowindow"><p>Coordinates: 37.8989, -97.7828</p><span class="adam-map-location"><a href="places-usa-kansas-reno-haven.html" class="adam-location_link">Haven, Reno, Kansas, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6677.html" class="adam-name_link">Margaret Allison Cochrane</a> (1875-1971)</span></div>');addPin(42.6331,-88.6437,1,myImageW,'Martha Elizabeth Willis','<div class="infowindow"><p>Coordinates: 42.6331, -88.6437</p><span class="adam-map-location"><a href="places-usa-wisconsin-walworth-delavan.html" class="adam-location_link">Delavan, Walworth, Wisconsin, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6846.html" class="adam-name_link">Martha Elizabeth Willis</a> (1846-1942)</span></div>');addPin(38.9278,-86.3756,1,myImageM,'Abraham Lincoln East','<div class="infowindow"><p>Coordinates: 38.9278, -86.3756</p><span class="adam-map-location"><a href="places-usa-indiana-lawrence-heltonville.html" class="adam-location_link">Heltonville, Lawrence, Indiana, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6676.html" class="adam-name_link">Abraham Lincoln East</a> (1865-1946)</span></div>');addPin(38.1951,-86.1113,1,myImageW,'Mary Deweise (Dwees) Prather, (widow)','<div class="infowindow"><p>Coordinates: 38.1951, -86.1113</p><span class="adam-map-location"><a href="places-usa-indiana-harrison.html" class="adam-location_link">Harrison, Indiana, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6697.html" class="adam-name_link">Mary Deweise (Dwees) Prather, (widow)</a> (1825-1902)</span></div>');addPin(39.1035,-85.2624,1,myImageM,'Neal East','<div class="infowindow"><p>Coordinates: 39.1035, -85.2624</p><span class="adam-map-location"><a href="places-usa-indiana-ripley.html" class="adam-location_link">Ripley, Indiana, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6796.html" class="adam-name_link">Neal East</a> (1823-1897)</span></div>');addPin(37.5429,-84.6506,1,myImageM,'John East','<div class="infowindow"><p>Coordinates: 37.5429, -84.6506</p><span class="adam-map-location"><a href="places-usa-kentucky-lincoln-lancaster.html" class="adam-location_link">Lancaster, Lincoln, Kentucky, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6806.html" class="adam-name_link">John East</a> (1796-1833)</span></div>');addPin(37.6195,-84.578,1,myImageW,'Elleanor East','<div class="infowindow"><p>Coordinates: 37.6195, -84.578</p><span class="adam-map-location"><a href="places-usa-kentucky-garrard-lancaster.html" class="adam-location_link">Lancaster, Garrard, Kentucky, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6902.html" class="adam-name_link">Elleanor East</a> (1798-1881)</span></div>');addPin(33.8361,-81.1637,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 33.8361, -81.1637</p><span class="adam-map-location"><a href="places-usa-south-carolina.html" class="adam-location_link">South Carolina, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6836.html" class="adam-name_link">Mister Dwees</a> (~1799->1825)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6837.html" class="adam-name_link">Miss Griffith</a> (~1807->1825)</span></div>');addPin(36.6667,-79.8833,1,myImageW,'Mrs Mary Haynes','<div class="infowindow"><p>Coordinates: 36.6667, -79.8833</p><span class="adam-map-location"><a href="places-usa-virginia-henry.html" class="adam-location_link">Henry, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8929.html" class="adam-name_link">Mrs Mary Haynes</a> (~1707->1723)</span></div>');addPin(37.5775,-79.7848,1,myImageW,'Lucy Ann English','<div class="infowindow"><p>Coordinates: 37.5775, -79.7848</p><span class="adam-map-location"><a href="places-usa-virginia-botetourt.html" class="adam-location_link">Botetourt, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6893.html" class="adam-name_link">Lucy Ann English</a> (1773-1814)</span></div>');addPin(37.3343,-79.5231,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 37.3343, -79.5231</p><span class="adam-map-location"><a href="places-usa-virginia-bedford.html" class="adam-location_link">Bedford, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8379.html" class="adam-name_link">Henry Haynes</a> (~1701-1784)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8377.html" class="adam-name_link">Stephen English</a> (1720-1781)</span></div>');addPin(37.8,-79.4333,1,myImageW,'Mary Hanna','<div class="infowindow"><p>Coordinates: 37.8, -79.4333</p><span class="adam-map-location"><a href="places-usa-virginia-rockbridge.html" class="adam-location_link">Rockbridge, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8128.html" class="adam-name_link">Mary Hanna</a> (1764->1821)</span></div>');addPin(37.4316,-78.6569,5,myImage,'5 Persons','<div class="infowindow"><p>Coordinates: 37.4316, -78.6569</p><span class="adam-map-location"><a href="places-usa-virginia.html" class="adam-location_link">Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8129.html" class="adam-name_link">Charles Frederick English</a> (1742-1805)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8412.html" class="adam-name_link">Winifred Hudnate Napper, (Widow)</a> (~1648-~1690)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8127.html" class="adam-name_link">Mrs Eleanor East</a> (1739->1785)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8127.html" class="adam-name_link">Mrs Eleanor East</a> (1739->1785)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8126.html" class="adam-name_link">Mrs Anne English</a> (1746-1805)</span></div>');addPin(37.9782,-77.963,5,myImage,'5 Persons','<div class="infowindow"><p>Coordinates: 37.9782, -77.963</p><span class="adam-map-location"><a href="places-usa-virginia-louisa.html" class="adam-location_link">Louisa, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6776.html" class="adam-name_link">James East</a> (1770-1825)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6814.html" class="adam-name_link">Cornelius East</a> (1760-1821)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8178.html" class="adam-name_link">Mary Barnet</a> (~1714->1772)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8131.html" class="adam-name_link">Josiah East</a> (1736->1785)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8131.html" class="adam-name_link">Josiah East</a> (1736->1785)</span></div>');addPin(38.185,-77.656,1,myImageW,'Diana Haynes','<div class="infowindow"><p>Coordinates: 38.185, -77.656</p><span class="adam-map-location"><a href="places-usa-virginia-spotsylvania.html" class="adam-location_link">Spotsylvania, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8378.html" class="adam-name_link">Diana Haynes</a> (~1725->1765)</span></div>');addPin(37.55,-77.3667,1,myImageM,'Joseph East','<div class="infowindow"><p>Coordinates: 37.55, -77.3667</p><span class="adam-map-location"><a href="places-usa-virginia-henrico.html" class="adam-location_link">Henrico, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8199.html" class="adam-name_link">Joseph East</a> (~1710-1772)</span></div>');addPin(41.402,-74.3243,1,myImageM,'Benjamin Willis','<div class="infowindow"><p>Coordinates: 41.402, -74.3243</p><span class="adam-map-location"><a href="places-usa-new-york-orange-goshen.html" class="adam-location_link">Goshen, Orange, New York, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6873.html" class="adam-name_link">Benjamin Willis</a> (1764-1843)</span></div>');addPin(43.0587,-74.1965,1,myImageM,'Robert Berwick Willis','<div class="infowindow"><p>Coordinates: 43.0587, -74.1965</p><span class="adam-map-location"><a href="places-usa-new-york-fulton-broadalbin.html" class="adam-location_link">Broadalbin, Fulton, New York, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6866.html" class="adam-name_link">Robert Berwick Willis</a> (1808-1887)</span></div>');addPin(40.7144,-74.006,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 40.7144, -74.006</p><span class="adam-map-location"><a href="places-usa-new-york.html" class="adam-location_link">New York, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8267.html" class="adam-name_link">Jan Jansen Meyer</a> (1656->1697)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8150.html" class="adam-name_link">Breghje Smith</a> (1723->1772)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8265.html" class="adam-name_link">Ide Meyer</a> (1687->1761)</span></div>');addPin(41.9269,-73.9978,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 41.9269, -73.9978</p><span class="adam-map-location"><a href="places-usa-new-york-ulster-kingston.html" class="adam-location_link">Kingston, Ulster, New York, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8281.html" class="adam-name_link">Marretje Symons</a> (1639->1687)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8252.html" class="adam-name_link">Jacob Barentsen Kool</a> (1638-1719)</span></div>');addPin(41.1476,-73.9893,1,myImageW,'Bridget Cole','<div class="infowindow"><p>Coordinates: 41.1476, -73.9893</p><span class="adam-map-location"><a href="places-usa-new-york-rockland-new-city.html" class="adam-location_link">New City, Rockland, New York, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6874.html" class="adam-name_link">Bridget Cole</a> (1766-1858)</span></div>');addPin(41.022,-73.9474,8,myImage,'8 Persons','<div class="infowindow"><p>Coordinates: 41.022, -73.9474</p><span class="adam-map-location"><a href="places-usa-new-york-rockland-tappan.html" class="adam-location_link">Tappan, Rockland, New York, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8319.html" class="adam-name_link">Philip E. Serven</a> (~1688-<1723)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6745.html" class="adam-name_link">Barbara Hanse</a> (1673->1707)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6812.html" class="adam-name_link">Jacob Jacobsen Kool</a> (1673->1707)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6743.html" class="adam-name_link">Isaac Abrahamsen Cole</a> (1741-1800)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8124.html" class="adam-name_link">Catharine Serven</a> (~1747-1832)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6744.html" class="adam-name_link">Abram Jacobsen Kool</a> (1707->1751)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8251.html" class="adam-name_link">Annetje Meyer</a> (1711->1751)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6748.html" class="adam-name_link">Abraham Serven</a> (1719->1772)</span></div>');addPin(41.7667,-73.7333,1,myImageW,'Sarah Lottwell','<div class="infowindow"><p>Coordinates: 41.7667, -73.7333</p><span class="adam-map-location"><a href="places-usa-new-york-dutchess-of-dover.html" class="adam-location_link">of Dover, Dutchess, New York, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6876.html" class="adam-name_link">Sarah Lottwell</a> (~1773->1814)</span></div>');addPin(41.6962,-73.583,1,myImageW,'Eliza Thayer','<div class="infowindow"><p>Coordinates: 41.6962, -73.583</p><span class="adam-map-location"><a href="places-usa-new-york-duchess-dover.html" class="adam-location_link">Dover, Duchess, New York, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6867.html" class="adam-name_link">Eliza Thayer</a> (1807->1873)</span></div>');addPin(42.0773,-71.6295,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 42.0773, -71.6295</p><span class="adam-map-location"><a href="places-usa-massachusetts-worcester-uxbridge.html" class="adam-location_link">Uxbridge, Worcester, Massachusetts, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6875.html" class="adam-name_link">Daniel Thayer</a> (1769-1854)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8450.html" class="adam-name_link">Experience White</a> (~1748->1769)</span></div>');addPin(42.1056,-71.5528,5,myImage,'5 Persons','<div class="infowindow"><p>Coordinates: 42.1056, -71.5528</p><span class="adam-map-location"><a href="places-usa-massachusetts-worcester-mendon.html" class="adam-location_link">Mendon, Worcester, Massachusetts, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8474.html" class="adam-name_link">Miriam Thayer</a> (1699->1739)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8453.html" class="adam-name_link">Isaac Thayer</a> (1717->1763)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8473.html" class="adam-name_link">Isaac Thayer</a> (1695->1739)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8475.html" class="adam-name_link">Isaac Thayer</a> (1669->1721)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8496.html" class="adam-name_link">Josiah Thayer</a> (1671-1728)</span></div>');addPin(42.0868,-71.4746,1,myImageM,'Reuben Thayer, (Dr.)','<div class="infowindow"><p>Coordinates: 42.0868, -71.4746</p><span class="adam-map-location"><a href="places-usa-massachusetts-norfolk-bellingham.html" class="adam-location_link">Bellingham, Norfolk, Massachusetts, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8449.html" class="adam-name_link">Reuben Thayer, (Dr.)</a> (1747->1839)</span></div>');addPin(42.4072,-71.3824,1,myImageW,'Lydia Wales','<div class="infowindow"><p>Coordinates: 42.4072, -71.3824</p><span class="adam-map-location"><a href="places-usa-massachusetts.html" class="adam-location_link">Massachusetts, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8513.html" class="adam-name_link">Lydia Wales</a> (~1690->1737)</span></div>');addPin(42.2556,-71.04,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 42.2556, -71.04</p><span class="adam-map-location"><a href="places-usa-massachusetts-suffolk-braintree.html" class="adam-location_link">Braintree, Suffolk, Massachusetts, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8454.html" class="adam-name_link">Mary Thayer, (twin)</a> (->1763)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8480.html" class="adam-name_link">John Thayer</a> (1686-1747)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8482.html" class="adam-name_link">John Thayer</a> (1656-1746)</span></div>');addPin(55.6116,-4.66964,1,myImageW,'Margaret Swinton','<div class="infowindow"><p>Coordinates: 55.6116, -4.66964</p><span class="adam-map-location"><a href="places-scotland-ayrshire-irvine.html" class="adam-location_link">Irvine, Ayrshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6860.html" class="adam-name_link">Margaret Swinton</a> (1793-1867)</span></div>');addPin(55.5159,-4.37775,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 55.5159, -4.37775</p><span class="adam-map-location"><a href="places-scotland-ayrshire-mauchline.html" class="adam-location_link">Mauchline, Ayrshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6872.html" class="adam-name_link">Margaret Hutcheson</a> (~1766->1796)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6871.html" class="adam-name_link">James Swinton</a> (~1762->1796)</span></div>');addPin(55.8642,-4.25181,1,myImageM,'Sanders Swinton Cochrane','<div class="infowindow"><p>Coordinates: 55.8642, -4.25181</p><span class="adam-map-location"><a href="places-scotland-lanarkshire-glasgow.html" class="adam-location_link">Glasgow, Lanarkshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6749.html" class="adam-name_link">Sanders Swinton Cochrane</a> (1825-1898)</span></div>');addPin(56.4907,-4.20265,5,myImage,'5 Persons','<div class="infowindow"><p>Coordinates: 56.4907, -4.20265</p><span class="adam-map-location"><a href="places-scotland-dunbartonshire-new-kirkpatrick.html" class="adam-location_link">New Kirkpatrick, Dunbartonshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9321.html" class="adam-name_link">James Brash</a> (~1728-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9322.html" class="adam-name_link">Catherine Campbell</a> (~1732->1771)</span><br/><br/><span class="adam-map-location"><a href="places-scotland-lanarkshire-barony.html" class="adam-location_link">Barony, Lanarkshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8285.html" class="adam-name_link">Mary Brash</a> (~1756->1788)</span><br/><br/><span class="adam-map-location"><a href="places-scotland-lanarkshire-barony.html" class="adam-location_link">Barony, Lanarkshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8284.html" class="adam-name_link">James Cochran</a> (~1752->1788)</span><br/><br/><span class="adam-map-location"><a href="places-scotland-lanarkshire-barony.html" class="adam-location_link">Barony, Lanarkshire, Scotland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6859.html" class="adam-name_link">John Cochrane</a> (1788-1848)</span></div>');addPin(51.3758,-2.3599,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 51.3758, -2.3599</p><span class="adam-map-location"><a href="places-england-somerset-bath.html" class="adam-location_link">Bath, Somerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8400.html" class="adam-name_link">Edward East</a> (~1689-1734)</span><br/><br/><span class="adam-map-location"><a href="places-england-bath.html" class="adam-location_link">Bath, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8411.html" class="adam-name_link">Thomas East</a> (1640-1727)</span></div>');addPin(52.3555,-1.17432,9,myImage,'9 Persons','<div class="infowindow"><p>Coordinates: 52.3555, -1.17432</p><span class="adam-map-location"><a href="places-england.html" class="adam-location_link">England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6903.html" class="adam-name_link">Amy Hutchings</a> (1746->1764)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7461.html" class="adam-name_link">Amos Willis</a> (1742->1764)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8478.html" class="adam-name_link">Ferdinando Thayer</a> (~1616-1713)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8478.html" class="adam-name_link">Ferdinando Thayer</a> (~1616-1713)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8711.html" class="adam-name_link">Mrs Mother Thayer</a> (-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8485.html" class="adam-name_link">Mrs Anna (Hannah) Thayer</a> (~1625-1698)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8479.html" class="adam-name_link">Mrs Margery Thayer</a> (~1591->1630)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8479.html" class="adam-name_link">Mrs Margery Thayer</a> (~1591->1630)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8710.html" class="adam-name_link">Mr Father Thayer</a> (-)</span></div>');addPin(51.7659,0.667367,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 51.7659, 0.667367</p><span class="adam-map-location"><a href="places-england-essex.html" class="adam-location_link">Essex, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8486.html" class="adam-name_link">Thomas Thayer</a> (~1598-1665)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8486.html" class="adam-name_link">Thomas Thayer</a> (~1598-1665)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8484.html" class="adam-name_link">Thomas Thayer</a> (~1620-1693)</span></div>');addPin(52.3808,4.63683,1,myImageW,'Geertruyt Vandalsen','<div class="infowindow"><p>Coordinates: 52.3808, 4.63683</p><span class="adam-map-location"><a href="places-netherlands-noord-holland-haarlem.html" class="adam-location_link">Haarlem, Noord-Holland, Netherlands</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8266.html" class="adam-name_link">Geertruyt Vandalsen</a> (1690-<1746)</span></div>');addPin(52.3702,4.89517,1,myImageM,'Barent Jacobsen Kool','<div class="infowindow"><p>Coordinates: 52.3702, 4.89517</p><span class="adam-map-location"><a href="places-netherlands-nholland-amsterdam.html" class="adam-location_link">Amsterdam, N.Holland, Netherlands</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8253.html" class="adam-name_link">Barent Jacobsen Kool</a> (1605->1657)</span></div>');addPin(52.1326,5.29127,4,myImage,'4 Persons','<div class="infowindow"><p>Coordinates: 52.1326, 5.29127</p><span class="adam-map-location"><a href="places-netherlands-wiltserlingen.html" class="adam-location_link">Wiltserlingen, Netherlands</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8320.html" class="adam-name_link">Katrina Stypers</a> (1689-1768)</span><br/><br/><span class="adam-map-location"><a href="places-netherlands.html" class="adam-location_link">Netherlands</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8254.html" class="adam-name_link">Jacob Kool</a> (1580-)</span><br/><br/><span class="adam-map-location"><a href="places-netherlands.html" class="adam-location_link">Netherlands</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8276.html" class="adam-name_link">Dirck Meyer</a> (~1601->1631)</span><br/><br/><span class="adam-map-location"><a href="places-netherlands.html" class="adam-location_link">Netherlands</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6900.html" class="adam-name_link">Mrs Dirck Meyer</a> (~1603->1631)</span></div>');addPin(1000,1000,1,myImageW,'Marietje Leenderts','<div class="infowindow"><p>Coordinates: 1000, 1000</p><span class="adam-map-location"><a href="places-new-netherland.html" class="adam-location_link">New Netherland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8282.html" class="adam-name_link">Marietje Leenderts</a> (1609->1657)</span></div>');
  markerCluster = new MarkerClusterer(map, myPins, mcOptions);
- var myData={max:1,data:[{lat:42.6331,lng:-88.6437,count:0.3},{lat:38.9278,lng:-86.3756,count:0.3},{lat:38.1951,lng:-86.1113,count:0.3},{lat:39.1035,lng:-85.2624,count:0.3},{lat:37.6195,lng:-84.578,count:0.3},{lat:33.8361,lng:-81.1637,count:0.6},{lat:36.6667,lng:-79.8833,count:0.3},{lat:37.5775,lng:-79.7848,count:0.3},{lat:37.3343,lng:-79.5231,count:0.6},{lat:37.8,lng:-79.4333,count:0.3},{lat:37.4316,lng:-78.6569,count:1.5},{lat:37.9782,lng:-77.963,count:1.5},{lat:38.185,lng:-77.656,count:0.3},{lat:37.55,lng:-77.3667,count:0.3},{lat:41.402,lng:-74.3243,count:0.3},{lat:43.0587,lng:-74.1965,count:0.3},{lat:40.7144,lng:-74.006,count:0.9},{lat:41.9269,lng:-73.9978,count:0.6},{lat:41.1476,lng:-73.9893,count:0.3},{lat:41.022,lng:-73.9474,count:2.4},{lat:41.7667,lng:-73.7333,count:0.3},{lat:42.0773,lng:-71.6295,count:0.6},{lat:42.1056,lng:-71.5528,count:1.5},{lat:42.0868,lng:-71.4746,count:0.3},{lat:42.4072,lng:-71.3824,count:0.3},{lat:42.2556,lng:-71.04,count:0.9},{lat:55.6116,lng:-4.66964,count:0.3},{lat:55.5159,lng:-4.37775,count:0.6},{lat:55.8642,lng:-4.25181,count:0.3},{lat:56.4907,lng:-4.20265,count:0.9},{lat:51.3758,lng:-2.3599,count:0.6},{lat:52.3555,lng:-1.17432,count:2.7},{lat:51.7659,lng:0.667367,count:0.9},{lat:52.3808,lng:4.63683,count:0.3},{lat:52.1326,lng:5.29127,count:1.2},]};
+ var myData={max:1,data:[{lat:36.7182,lng:-98.7481,count:0.3},{lat:37.8989,lng:-97.7828,count:0.3},{lat:42.6331,lng:-88.6437,count:0.3},{lat:38.9278,lng:-86.3756,count:0.3},{lat:38.1951,lng:-86.1113,count:0.3},{lat:39.1035,lng:-85.2624,count:0.3},{lat:37.5429,lng:-84.6506,count:0.3},{lat:37.6195,lng:-84.578,count:0.3},{lat:33.8361,lng:-81.1637,count:0.6},{lat:36.6667,lng:-79.8833,count:0.3},{lat:37.5775,lng:-79.7848,count:0.3},{lat:37.3343,lng:-79.5231,count:0.6},{lat:37.8,lng:-79.4333,count:0.3},{lat:37.4316,lng:-78.6569,count:1.5},{lat:37.9782,lng:-77.963,count:1.5},{lat:38.185,lng:-77.656,count:0.3},{lat:37.55,lng:-77.3667,count:0.3},{lat:41.402,lng:-74.3243,count:0.3},{lat:43.0587,lng:-74.1965,count:0.3},{lat:40.7144,lng:-74.006,count:0.9},{lat:41.9269,lng:-73.9978,count:0.6},{lat:41.1476,lng:-73.9893,count:0.3},{lat:41.022,lng:-73.9474,count:2.4},{lat:41.7667,lng:-73.7333,count:0.3},{lat:41.6962,lng:-73.583,count:0.3},{lat:42.0773,lng:-71.6295,count:0.6},{lat:42.1056,lng:-71.5528,count:1.5},{lat:42.0868,lng:-71.4746,count:0.3},{lat:42.4072,lng:-71.3824,count:0.3},{lat:42.2556,lng:-71.04,count:0.9},{lat:55.6116,lng:-4.66964,count:0.3},{lat:55.5159,lng:-4.37775,count:0.6},{lat:55.8642,lng:-4.25181,count:0.3},{lat:56.4907,lng:-4.20265,count:1.5},{lat:51.3758,lng:-2.3599,count:0.6},{lat:52.3555,lng:-1.17432,count:2.7},{lat:51.7659,lng:0.667367,count:0.9},{lat:52.3808,lng:4.63683,count:0.3},{lat:52.3702,lng:4.89517,count:0.3},{lat:52.1326,lng:5.29127,count:1.2},]};
  google.maps.event.addListenerOnce(map,'idle',function(){heatmap.setDataSet(myData);});
 }
 </script>
 <div class="mapstatus">
 <span class="mapstatusspan"><p>
-36 locations have been Splattered across your map where 87 ancestors were born.  The cluster count shows the number of times people appear within each cluster.  Click on a cluster or zoom in for more detail.
+41 locations have been Splattered across your map where 87 ancestors were born.  The cluster count shows the number of times people appear within each cluster.  Click on a cluster or zoom in for more detail.
 </p></span>
 </div>
 <script src="adam-min.js" type="text/javascript"></script>
@@ -807,16 +816,16 @@ function initializePins() {
 </div>
 <script type="text/javascript">
 $(document).ready(function () {
-  $('#tabs').tabs({
-    activate: function (event, ui) {
-      var act = $("#tabs").tabs("option", "active");
-		  if (act == 5) {
-        google.maps.event.trigger(map, 'resize');
-      }
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    e.target
+    e.relatedTarget
+  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      google.maps.event.trigger(map, 'resize');
     }
   });
 });
 </script>
+</div>
 </div>
 
 <ul>
@@ -825,7 +834,7 @@ $(document).ready(function () {
 Last Modified: Feb 4, 2013
 </li>
 </ul>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -845,7 +854,7 @@ Last Modified: Feb 4, 2013
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

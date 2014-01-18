@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="Concord, Merrimack, New Hampshire, United States - Minchin Genealogy | Minchin.ca" />
  <title>Concord, Merrimack, New Hampshire, United States - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -67,23 +74,25 @@ Version:   1.0.4        December 29, 2013
 
 <h1 id="adam-page-title">Concord, Merrimack, New Hampshire, United States</h1>
 
-<div id="tabs">
-<ul>
+<div id="adam-tab-list">
+<ul id="tab-list" class="nav nav-tabs">
 
-<li><a class="click" href="#profile">Profile</a></li>
+<li class="active"><a class="click" href="#profile" data-toggle="tab">Profile</a></li>
 
-<li><a class="click" href="#claims">Claims (23)</a></li>
+<li><a class="click" href="#claims" data-toggle="tab">Claims (25)</a></li>
 
 </ul>
 
-<div id="profile" class="adam-tab">
+<div class="tab-content">
+
+<div id="profile" class="tab-pane active adam-tab">
 
 <ul id="adam-location_profile" class="adam-tab_style">
 <li>
 <table class="adam-tab_table">
 
 <tr><td><table class="adam-referrers adam-table_box"><tr><td>
-<b>Linked To:</b> <a href="profile-I1591.html" class="adam-name_link">Eliza Sarah Brown</a> (1872-1960), <a href="profile-I1600.html" class="adam-name_link">_____ Jewell</a> (1902-1902), <a href="profile-I1602.html" class="adam-name_link">_____ Jewell</a> (1906-1906), <a href="profile-I1552.html" class="adam-name_link">Benjamin Rattenbury Jewell</a> (1868-1909), <a href="profile-I1603.html" class="adam-name_link">Benjamin Sterling Jewell</a> (1907-), <a href="profile-I1731.html" class="adam-name_link">Beryl Maud Jewell</a> (1913-1913), <a href="profile-I1596.html" class="adam-name_link">Chester Brown Jewell</a> (1893-1972), <a href="profile-I1604.html" class="adam-name_link">Emily Eliza Phoebe Jewell</a> (1909-), <a href="profile-I1597.html" class="adam-name_link">Ernest Heber Jewell</a> (1894-1972), <a href="profile-I1595.html" class="adam-name_link">Harry Gordon Jewell</a> (1891-1969), <a href="profile-I1601.html" class="adam-name_link">Hettie Maude Jewell</a> (1903-1991), <a href="profile-I1555.html" class="adam-name_link">Robert Chester Jewell</a> (1872-1925), <a href="profile-I1609.html" class="adam-name_link">Robert Isaiah Jewell</a> (1906-), <a href="profile-I1615.html" class="adam-name_link">Sara Florence Jewell</a> (1902-1992), <a href="profile-I1741.html" class="adam-name_link">Catherine Ann Maloney</a> (1907-), <a href="profile-I50.html" class="adam-name_link">Nettie Josephine Seaman</a> (1900-1936), <a href="profile-I1610.html" class="adam-name_link">Margaret Eliza Spence</a> (1879-1955), <a href="profile-I1728.html" class="adam-name_link">Carrie Ethel Spinney</a> (1895-1963), <a href="profile-I1748.html" class="adam-name_link">Ellen Ruth Yeadon</a> (1903-1985), <a href="profile-I1726.html" class="adam-name_link">Daisy Ione Young</a> (1893-1977)
+<b>Linked To:</b> <a href="profile-I1738.html" class="adam-name_link">HIDDEN _____</a> , <a href="profile-I1739.html" class="adam-name_link">HIDDEN _____</a> , <a href="profile-I1591.html" class="adam-name_link">Eliza Sarah Brown</a> (1872-1960), <a href="profile-I1600.html" class="adam-name_link">_____ Jewell</a> (1902-1902), <a href="profile-I1602.html" class="adam-name_link">_____ Jewell</a> (1906-1906), <a href="profile-I1552.html" class="adam-name_link">Benjamin Rattenbury Jewell</a> (1868-1909), <a href="profile-I1603.html" class="adam-name_link">Benjamin Sterling Jewell</a> (1907-), <a href="profile-I1731.html" class="adam-name_link">Beryl Maud Jewell</a> (1913-1913), <a href="profile-I1596.html" class="adam-name_link">Chester Brown Jewell</a> (1893-1972), <a href="profile-I1604.html" class="adam-name_link">Emily Eliza Phoebe Jewell</a> (1909-), <a href="profile-I1597.html" class="adam-name_link">Ernest Heber Jewell</a> (1894-1972), <a href="profile-I1595.html" class="adam-name_link">Harry Gordon Jewell</a> (1891-1969), <a href="profile-I1601.html" class="adam-name_link">Nettie Maude Jewell</a> (1903-1991), <a href="profile-I1555.html" class="adam-name_link">Robert Chester Jewell</a> (1872-1925), <a href="profile-I1609.html" class="adam-name_link">Robert Isaiah Jewell</a> (1906-), <a href="profile-I1615.html" class="adam-name_link">Sara Florence Jewell</a> (1902-1992), <a href="profile-I1741.html" class="adam-name_link">Catherine Ann Maloney</a> (1907-), <a href="profile-I50.html" class="adam-name_link">Nettie Josephine Seaman</a> (1900-1936), <a href="profile-I1610.html" class="adam-name_link">Margaret Eliza Spence</a> (1879-1955), <a href="profile-I1728.html" class="adam-name_link">Carrie Ethel Spinney</a> (1895-1963), <a href="profile-I1748.html" class="adam-name_link">Ellen Ruth Yeadon</a> (1903-1985), <a href="profile-I1726.html" class="adam-name_link">Daisy Ione Young</a> (1893-1977)
 </td></tr></table></td></tr>
 
 <tr><td><table class="adam-location adam-table_box">
@@ -297,7 +306,7 @@ function initialize() {
 
 </div>
 
-<div id="claims" class="adam-tab">
+<div id="claims" class="tab-pane adam-tab">
 
 <ul id="adam-location_claims" class="adam-tab_style">
 <li>
@@ -314,7 +323,7 @@ function initialize() {
 </td><td class="adam-claim_date">Jul 12, 1902</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1748.html" class="adam-name_link">Ellen Ruth Yeadon</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
 </td><td class="adam-claim_date">Feb 8, 1903</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1601.html" class="adam-name_link">Hettie Maude Jewell</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1601.html" class="adam-name_link">Nettie Maude Jewell</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
 </td><td class="adam-claim_date">Dec 17, 1903</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1602.html" class="adam-name_link">_____ Jewell</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
 </td><td class="adam-claim_date">Feb 6, 1906</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
@@ -348,7 +357,7 @@ function initialize() {
 </td><td class="adam-claim_date">Jul 14, 1972</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1596.html" class="adam-name_link">Chester Brown Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
 </td><td class="adam-claim_date">Dec 21, 1972</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1601.html" class="adam-name_link">Hettie Maude Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1601.html" class="adam-name_link">Nettie Maude Jewell</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-new-hampshire-merrimack-concord.html" class="adam-location_link">Concord, Merrimack, New Hampshire, United States</a>
 </td><td class="adam-claim_date">Nov 23, 1991</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 </table></td></tr>
 </table>
@@ -358,8 +367,9 @@ function initialize() {
 </div>
 
 </div>
+</div>
 
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -379,7 +389,7 @@ function initialize() {
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

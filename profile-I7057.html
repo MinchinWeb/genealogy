@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="Joseph Denison Profile - Minchin Genealogy | Minchin.ca" />
  <title>Joseph Denison Profile - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -67,22 +74,24 @@ Version:   1.0.4        December 29, 2013
 
 <h1 id="adam-page-title">Joseph Denison Profile</h1>
 
-<div id="tabs">
-<ul>
+<div id="adam-tab-list">
+<ul id="tab-list" class="nav nav-tabs">
 
-<li><a class="click" href="#profile">Profile</a></li>
+<li class="active"><a class="click" href="#profile" data-toggle="tab">Profile</a></li>
 
-<li><a class="click" href="#sources">Sources (1)</a></li>
+<li><a class="click" href="#sources" data-toggle="tab">Sources (1)</a></li>
 
-<li><a class="click" href="#chart">Chart</a></li>
+<li><a class="click" href="#chart" data-toggle="tab">Chart</a></li>
 
-<li><a class="click" href="#alist">Ancestors List (34)</a></li>
+<li><a class="click" href="#alist" data-toggle="tab">Ancestors List (34)</a></li>
 
-<li><a class="click" href="#map">Ancestors Distribution Map</a></li>
+<li><a class="click" href="#map" data-toggle="tab">Ancestors Distribution Map</a></li>
 
 </ul>
 
-<div id="profile" class="adam-tab">
+<div class="tab-content">
+
+<div id="profile" class="tab-pane active adam-tab">
 
 <ul id="adam-person_profile" class="adam-tab_style">
 <li>
@@ -140,7 +149,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="sources" class="adam-tab">
+<div id="sources" class="tab-pane adam-tab">
 
 <ul id="adam-person_sources" class="adam-tab_style">
 <li>
@@ -160,7 +169,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="chart" class="adam-tab">
+<div id="chart" class="tab-pane adam-tab">
 <ul>
 <li id="adam-person_chart">
 <div style="height: 665px;">&nbsp;</div>
@@ -314,7 +323,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="alist" class="adam-tab">
+<div id="alist" class="tab-pane adam-tab">
 
 <div class="adam-al_page">
 <ul class="adam-al_legend">
@@ -328,163 +337,163 @@ GEDCOM file imported on 4 February 2013
 
 <li class="adam-al_generation">Generation 1</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1] &nbsp; <a href="profile-I7057.html" class="adam-name_link">Joseph Denison</a> (1681-)</div>
+  <div class="adam-al_name">[1] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7057.html" class="adam-name_link">Joseph Denison</a> (1681-)</div>
   <div class="adam-al_path"><span title="Rhode Island">RI</span>-<span title="Connecticut">CT</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 2</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[2] &nbsp; <a href="profile-I7054.html" class="adam-name_link">George Denison</a> (1653-1711)</div>
+  <div class="adam-al_name">[2] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7054.html" class="adam-name_link">George Denison</a> (1653-1711)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span>-<span title="Rhode Island">RI</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3] &nbsp; <a href="profile-I7055.html" class="adam-name_link">Mercy Gorham</a> (1658-1725)</div>
+  <div class="adam-al_name">[3] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7055.html" class="adam-name_link">Mercy Gorham</a> (1658-1725)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span>-<span title="Connecticut">CT</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 3</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[4] &nbsp; <i><a href="profile-I7028.html" class="adam-name_link">George Denison, Capt.</a> (1620-1694)</i></div>
+  <div class="adam-al_name">[4] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I7028.html" class="adam-name_link">George Denison, Capt.</a> (1620-1694)</i></div>
   <div class="adam-al_path"><span title="Hertfordshire">HRT</span>-<span title="Northamptonshire">NTH</span>-<span title="Hertfordshire">HRT</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[5] &nbsp; <a href="profile-I6974.html" class="adam-name_link">Ann Borodell</a> (1615-1712)</div>
+  <div class="adam-al_name">[5] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6974.html" class="adam-name_link">Ann Borodell</a> (1615-1712)</div>
   <div class="adam-al_path"><span title="Hertfordshire">HRT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[6] &nbsp; <a href="profile-I8953.html" class="adam-name_link">John Gorham</a> (~1620-1675)</div>
+  <div class="adam-al_name">[6] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8953.html" class="adam-name_link">John Gorham</a> (~1620-1675)</div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Northamptonshire">NTH</span>-<span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[7] &nbsp; <i><a href="profile-I8954.html" class="adam-name_link">Desire Howland</a> (1621-1683)</i></div>
+  <div class="adam-al_name">[7] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I8954.html" class="adam-name_link">Desire Howland</a> (1621-1683)</i></div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span>-<span title="Northamptonshire">NTH</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 4</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[8] &nbsp; <i><a href="profile-I7794.html" class="adam-name_link">William Denison</a> (~1571-)</i></div>
+  <div class="adam-al_name">[8] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I7794.html" class="adam-name_link">William Denison</a> (~1571-)</i></div>
   <div class="adam-al_path"><span title="Hertfordshire">HRT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[9] &nbsp; <i><a href="profile-I8943.html" class="adam-name_link">Margaret Chandler</a> (~1577-1645)</i></div>
+  <div class="adam-al_name">[9] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I8943.html" class="adam-name_link">Margaret Chandler</a> (~1577-1645)</i></div>
   <div class="adam-al_path"><span title="Hertfordshire">HRT</span>-<span title="England">ENG</span>-<span title="Hertfordshire">HRT</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[10] &nbsp; <b><a href="profile-I7584.html" class="adam-name_link">John Borodell, Sir</a> (~1590->1615)</b></div>
+  <div class="adam-al_name">[10] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7584.html" class="adam-name_link">John Borodell, Sir</a> (~1590->1615)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[11] &nbsp; <b><a href="profile-I6931.html" class="adam-name_link">Ann Broughton</a> (~1595->1615)</b></div>
+  <div class="adam-al_name">[11] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6931.html" class="adam-name_link">Ann Broughton</a> (~1595->1615)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[12] &nbsp; <a href="profile-I9562.html" class="adam-name_link">Ralph Gorham</a> (1575->1620)</div>
+  <div class="adam-al_name">[12] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9562.html" class="adam-name_link">Ralph Gorham</a> (1575->1620)</div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[13] &nbsp; <b><a href="profile-I9563.html" class="adam-name_link">Mrs Ralph Gorham</a> (~1577->1620)</b></div>
+  <div class="adam-al_name">[13] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9563.html" class="adam-name_link">Mrs Ralph Gorham</a> (~1577->1620)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[14] &nbsp; <i><b><a href="profile-I8955.html" class="adam-name_link">John Howland, Capt.</a> (1593-1675)</b></i></div>
+  <div class="adam-al_name">[14] <span class="adam-aid">&nbsp;&nbsp;</span><i><b><a href="profile-I8955.html" class="adam-name_link">John Howland, Capt.</a> (1593-1675)</b></i></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[15] &nbsp; <i><a href="profile-I8956.html" class="adam-name_link">Elizabeth Tilley</a> (1607-1687)</i></div>
+  <div class="adam-al_name">[15] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I8956.html" class="adam-name_link">Elizabeth Tilley</a> (1607-1687)</i></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 5</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[16] &nbsp; <a href="profile-I8945.html" class="adam-name_link">John Denison</a> (~1540-1582)</div>
+  <div class="adam-al_name">[16] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8945.html" class="adam-name_link">John Denison</a> (~1540-1582)</div>
   <div class="adam-al_path"><span title="Hertfordshire">HRT</span>-<span title=""></span>-<span title="Hertfordshire">HRT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[17] &nbsp; <a href="profile-I8946.html" class="adam-name_link">Agnes Willie</a> (~1544->1586)</div>
+  <div class="adam-al_name">[17] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8946.html" class="adam-name_link">Agnes Willie</a> (~1544->1586)</div>
   <div class="adam-al_path"><span title="Hertfordshire">HRT</span>-<span title=""></span>-<span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[18] &nbsp; <a href="profile-I9089.html" class="adam-name_link">Tobias Chandler</a> (~1551-1629)</div>
+  <div class="adam-al_name">[18] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9089.html" class="adam-name_link">Tobias Chandler</a> (~1551-1629)</div>
   <div class="adam-al_path"><span title="Hertfordshire">HRT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[19] &nbsp; <b><a href="profile-I9090.html" class="adam-name_link">Joan Momford</a> (~1556-1618)</b></div>
+  <div class="adam-al_name">[19] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9090.html" class="adam-name_link">Joan Momford</a> (~1556-1618)</b></div>
   <div class="adam-al_path"><span title="Hertfordshire">HRT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[24] &nbsp; <b><a href="profile-I9564.html" class="adam-name_link">James Gorham</a> (-)</b></div>
+  <div class="adam-al_name">[24] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9564.html" class="adam-name_link">James Gorham</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[25] &nbsp; <b><a href="profile-I9565.html" class="adam-name_link">Mrs James Gorham</a> (-)</b></div>
+  <div class="adam-al_name">[25] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9565.html" class="adam-name_link">Mrs James Gorham</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[30] &nbsp; <i><a href="profile-I8957.html" class="adam-name_link">John Tilley</a> (1575-1620)</i></div>
+  <div class="adam-al_name">[30] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I8957.html" class="adam-name_link">John Tilley</a> (1575-1620)</i></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[31] &nbsp; <i><b><a href="profile-I8970.html" class="adam-name_link">Mrs John Tilley</a> (~1586-1620)</b></i></div>
+  <div class="adam-al_name">[31] <span class="adam-aid">&nbsp;&nbsp;</span><i><b><a href="profile-I8970.html" class="adam-name_link">Mrs John Tilley</a> (~1586-1620)</b></i></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 6</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[32] &nbsp; <b><a href="profile-I8947.html" class="adam-name_link">Bishop Denyson</a> (~1513->1547)</b></div>
+  <div class="adam-al_name">[32] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8947.html" class="adam-name_link">Bishop Denyson</a> (~1513->1547)</b></div>
   <div class="adam-al_path"><span title="Hertfordshire">HRT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[33] &nbsp; <b><a href="profile-I8948.html" class="adam-name_link">Mrs Bishop Denyson</a> (~1517->1547)</b></div>
+  <div class="adam-al_name">[33] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8948.html" class="adam-name_link">Mrs Bishop Denyson</a> (~1517->1547)</b></div>
   <div class="adam-al_path"><span title="Hertfordshire">HRT</span>-<span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[34] &nbsp; <b><a href="profile-I8971.html" class="adam-name_link">John Wyllie</a> (~1520->1544)</b></div>
+  <div class="adam-al_name">[34] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8971.html" class="adam-name_link">John Wyllie</a> (~1520->1544)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[35] &nbsp; <b><a href="profile-I8972.html" class="adam-name_link">Joan Marsead (Marshall)</a> (~1521->1544)</b></div>
+  <div class="adam-al_name">[35] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8972.html" class="adam-name_link">Joan Marsead (Marshall)</a> (~1521->1544)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[36] &nbsp; <a href="profile-I9091.html" class="adam-name_link">John Chandler</a> (~1525->1560)</div>
+  <div class="adam-al_name">[36] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9091.html" class="adam-name_link">John Chandler</a> (~1525->1560)</div>
   <div class="adam-al_path"><span title="Hertfordshire">HRT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[37] &nbsp; <b><a href="profile-I9092.html" class="adam-name_link">Mrs Joane Chandler</a> (~1529->1560)</b></div>
+  <div class="adam-al_name">[37] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9092.html" class="adam-name_link">Mrs Joane Chandler</a> (~1529->1560)</b></div>
   <div class="adam-al_path"><span title="Hertfordshire">HRT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[60] &nbsp; <b><a href="profile-I8958.html" class="adam-name_link">Mister Tilley</a> (-)</b></div>
+  <div class="adam-al_name">[60] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8958.html" class="adam-name_link">Mister Tilley</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[61] &nbsp; <b><a href="profile-I8959.html" class="adam-name_link">Mrs Mister Tilley</a> (-)</b></div>
+  <div class="adam-al_name">[61] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8959.html" class="adam-name_link">Mrs Mister Tilley</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 7</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[72] &nbsp; <a href="profile-I9093.html" class="adam-name_link">Thomas Chandler</a> (~1500-~1554)</div>
+  <div class="adam-al_name">[72] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9093.html" class="adam-name_link">Thomas Chandler</a> (~1500-~1554)</div>
   <div class="adam-al_path"><span title="Hertfordshire">HRT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[73] &nbsp; <b><a href="profile-I9094.html" class="adam-name_link">Mrs Agnes Chandler</a> (~1502->1532)</b></div>
+  <div class="adam-al_name">[73] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9094.html" class="adam-name_link">Mrs Agnes Chandler</a> (~1502->1532)</b></div>
   <div class="adam-al_path"><span title="Hertfordshire">HRT</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 8</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[144] &nbsp; <b><a href="profile-I9095.html" class="adam-name_link">Thomas Chandler</a> (~1468-1550)</b></div>
+  <div class="adam-al_name">[144] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9095.html" class="adam-name_link">Thomas Chandler</a> (~1468-1550)</b></div>
   <div class="adam-al_path"><span title="Hertfordshire">HRT</span>-<span title="England">ENG</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[145] &nbsp; <b><a href="profile-I9096.html" class="adam-name_link">Mrs Thomas Chandler</a> (~1472-~1514)</b></div>
+  <div class="adam-al_name">[145] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I9096.html" class="adam-name_link">Mrs Thomas Chandler</a> (~1472-~1514)</b></div>
   <div class="adam-al_path"><span title="Hertfordshire">HRT</span></div><br>
 </li>
 </ul>
 </div>
 </div>
-<div id="map" class="adam-tab">
+<div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <br/>
 <div class="floatmapbuttons"><p>
@@ -503,9 +512,9 @@ var mcOptions={styles:[{ height:35,width:35,url:"mapmarker1.png"},
  { height:35,width:35,url:"mapmarker4.png"},
  { height:35,width:35,url:"mapmarker5.png"}]};
 function initializePins() {
- addPin(41.3776,-71.8273,1,myImageM,'Joseph Denison','<div class="infowindow"><p>Coordinates: 41.3776, -71.8273</p><span class="adam-map-location"><a href="places-usa-rhode-island-washington-westerly.html" class="adam-location_link">Westerly, Washington, Rhode Island, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7057.html" class="adam-name_link">Joseph Denison</a> (1681-)</span></div>');addPin(42.3152,-71.0914,1,myImageM,'George Denison','<div class="infowindow"><p>Coordinates: 42.3152, -71.0914</p><span class="adam-map-location"><a href="places-usa-massachusetts-suffolk-roxbury.html" class="adam-location_link">Roxbury, Suffolk, Massachusetts, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7054.html" class="adam-name_link">George Denison</a> (1653-1711)</span></div>');addPin(41.7,-70.3,1,myImageW,'Mercy Gorham','<div class="infowindow"><p>Coordinates: 41.7, -70.3</p><span class="adam-map-location"><a href="places-usa-massachusetts-barnstable-barnstable.html" class="adam-location_link">Barnstable, Barnstable, Massachusetts, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7055.html" class="adam-name_link">Mercy Gorham</a> (1658-1725)</span></div>');addPin(52.3555,-1.17432,6,myImage,'6 Persons','<div class="infowindow"><p>Coordinates: 52.3555, -1.17432</p><span class="adam-map-location"><a href="places-england.html" class="adam-location_link">England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8953.html" class="adam-name_link">John Gorham</a> (~1620-1675)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6931.html" class="adam-name_link">Ann Broughton</a> (~1595->1615)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8955.html" class="adam-name_link">John Howland, Capt.</a> (1593-1675)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8956.html" class="adam-name_link">Elizabeth Tilley</a> (1607-1687)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8971.html" class="adam-name_link">John Wyllie</a> (~1520->1544)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8972.html" class="adam-name_link">Joan Marsead (Marshall)</a> (~1521->1544)</span></div>');addPin(52.4857,-0.55566,1,myImageW,'Desire Howland','<div class="infowindow"><p>Coordinates: 52.4857, -0.55566</p><span class="adam-map-location"><a href="places-england-northamptonshire-benefield.html" class="adam-location_link">Benefield, Northamptonshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8954.html" class="adam-name_link">Desire Howland</a> (1621-1683)</span></div>');addPin(51.8488,0.1419,4,myImage,'4 Persons','<div class="infowindow"><p>Coordinates: 51.8488, 0.1419</p><span class="adam-map-location"><a href="places-england-hertfordshire-thorley.html" class="adam-location_link">Thorley, Hertfordshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8945.html" class="adam-name_link">John Denison</a> (~1540-1582)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8946.html" class="adam-name_link">Agnes Willie</a> (~1544->1586)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8947.html" class="adam-name_link">Bishop Denyson</a> (~1513->1547)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8948.html" class="adam-name_link">Mrs Bishop Denyson</a> (~1517->1547)</span></div>');addPin(51.8711,0.158679,12,myImage,'12 Persons','<div class="infowindow"><p>Coordinates: 51.8711, 0.158679</p><span class="adam-map-location"><a href="places-england-hertfordshire-bishop-s-stortford.html" class="adam-location_link">Bishop&rsquo;s Stortford, Hertfordshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7028.html" class="adam-name_link">George Denison, Capt.</a> (1620-1694)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6974.html" class="adam-name_link">Ann Borodell</a> (1615-1712)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7794.html" class="adam-name_link">William Denison</a> (~1571-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8943.html" class="adam-name_link">Margaret Chandler</a> (~1577-1645)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9089.html" class="adam-name_link">Tobias Chandler</a> (~1551-1629)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9090.html" class="adam-name_link">Joan Momford</a> (~1556-1618)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9091.html" class="adam-name_link">John Chandler</a> (~1525->1560)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9092.html" class="adam-name_link">Mrs Joane Chandler</a> (~1529->1560)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9093.html" class="adam-name_link">Thomas Chandler</a> (~1500-~1554)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9094.html" class="adam-name_link">Mrs Agnes Chandler</a> (~1502->1532)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9095.html" class="adam-name_link">Thomas Chandler</a> (~1468-1550)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9096.html" class="adam-name_link">Mrs Thomas Chandler</a> (~1472-~1514)</span></div>');addPin(1000,1000,1,myImageM,'Ralph Gorham','<div class="infowindow"><p>Coordinates: 1000, 1000</p><span class="adam-map-location"><a href="places-england-duxbury.html" class="adam-location_link">Duxbury, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9562.html" class="adam-name_link">Ralph Gorham</a> (1575->1620)</span></div>');
+ addPin(41.3776,-71.8273,1,myImageM,'Joseph Denison','<div class="infowindow"><p>Coordinates: 41.3776, -71.8273</p><span class="adam-map-location"><a href="places-usa-rhode-island-washington-westerly.html" class="adam-location_link">Westerly, Washington, Rhode Island, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7057.html" class="adam-name_link">Joseph Denison</a> (1681-)</span></div>');addPin(42.3152,-71.0914,1,myImageM,'George Denison','<div class="infowindow"><p>Coordinates: 42.3152, -71.0914</p><span class="adam-map-location"><a href="places-usa-massachusetts-suffolk-roxbury.html" class="adam-location_link">Roxbury, Suffolk, Massachusetts, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7054.html" class="adam-name_link">George Denison</a> (1653-1711)</span></div>');addPin(41.7,-70.3,1,myImageW,'Mercy Gorham','<div class="infowindow"><p>Coordinates: 41.7, -70.3</p><span class="adam-map-location"><a href="places-usa-massachusetts-barnstable-barnstable.html" class="adam-location_link">Barnstable, Barnstable, Massachusetts, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7055.html" class="adam-name_link">Mercy Gorham</a> (1658-1725)</span></div>');addPin(53.7039,-1.69694,1,myImageM,'Ralph Gorham','<div class="infowindow"><p>Coordinates: 53.7039, -1.69694</p><span class="adam-map-location"><a href="places-england-duxbury.html" class="adam-location_link">Duxbury, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9562.html" class="adam-name_link">Ralph Gorham</a> (1575->1620)</span></div>');addPin(52.3555,-1.17432,6,myImage,'6 Persons','<div class="infowindow"><p>Coordinates: 52.3555, -1.17432</p><span class="adam-map-location"><a href="places-england.html" class="adam-location_link">England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8953.html" class="adam-name_link">John Gorham</a> (~1620-1675)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6931.html" class="adam-name_link">Ann Broughton</a> (~1595->1615)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8955.html" class="adam-name_link">John Howland, Capt.</a> (1593-1675)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8956.html" class="adam-name_link">Elizabeth Tilley</a> (1607-1687)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8971.html" class="adam-name_link">John Wyllie</a> (~1520->1544)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8972.html" class="adam-name_link">Joan Marsead (Marshall)</a> (~1521->1544)</span></div>');addPin(52.4857,-0.55566,1,myImageW,'Desire Howland','<div class="infowindow"><p>Coordinates: 52.4857, -0.55566</p><span class="adam-map-location"><a href="places-england-northamptonshire-benefield.html" class="adam-location_link">Benefield, Northamptonshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8954.html" class="adam-name_link">Desire Howland</a> (1621-1683)</span></div>');addPin(51.8488,0.1419,4,myImage,'4 Persons','<div class="infowindow"><p>Coordinates: 51.8488, 0.1419</p><span class="adam-map-location"><a href="places-england-hertfordshire-thorley.html" class="adam-location_link">Thorley, Hertfordshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8945.html" class="adam-name_link">John Denison</a> (~1540-1582)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8946.html" class="adam-name_link">Agnes Willie</a> (~1544->1586)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8947.html" class="adam-name_link">Bishop Denyson</a> (~1513->1547)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8948.html" class="adam-name_link">Mrs Bishop Denyson</a> (~1517->1547)</span></div>');addPin(51.8711,0.158679,12,myImage,'12 Persons','<div class="infowindow"><p>Coordinates: 51.8711, 0.158679</p><span class="adam-map-location"><a href="places-england-hertfordshire-bishop-s-stortford.html" class="adam-location_link">Bishop&rsquo;s Stortford, Hertfordshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7028.html" class="adam-name_link">George Denison, Capt.</a> (1620-1694)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6974.html" class="adam-name_link">Ann Borodell</a> (1615-1712)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I7794.html" class="adam-name_link">William Denison</a> (~1571-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8943.html" class="adam-name_link">Margaret Chandler</a> (~1577-1645)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9089.html" class="adam-name_link">Tobias Chandler</a> (~1551-1629)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9090.html" class="adam-name_link">Joan Momford</a> (~1556-1618)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9091.html" class="adam-name_link">John Chandler</a> (~1525->1560)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9092.html" class="adam-name_link">Mrs Joane Chandler</a> (~1529->1560)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9093.html" class="adam-name_link">Thomas Chandler</a> (~1500-~1554)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9094.html" class="adam-name_link">Mrs Agnes Chandler</a> (~1502->1532)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9095.html" class="adam-name_link">Thomas Chandler</a> (~1468-1550)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9096.html" class="adam-name_link">Mrs Thomas Chandler</a> (~1472-~1514)</span></div>');
  markerCluster = new MarkerClusterer(map, myPins, mcOptions);
- var myData={max:1,data:[{lat:41.3776,lng:-71.8273,count:0.3},{lat:42.3152,lng:-71.0914,count:0.3},{lat:41.7,lng:-70.3,count:0.3},{lat:52.3555,lng:-1.17432,count:1.8},{lat:52.4857,lng:-0.55566,count:0.3},{lat:51.8488,lng:0.1419,count:1.2},{lat:51.8711,lng:0.158679,count:3.6},]};
+ var myData={max:1,data:[{lat:41.3776,lng:-71.8273,count:0.3},{lat:42.3152,lng:-71.0914,count:0.3},{lat:41.7,lng:-70.3,count:0.3},{lat:53.7039,lng:-1.69694,count:0.3},{lat:52.3555,lng:-1.17432,count:1.8},{lat:52.4857,lng:-0.55566,count:0.3},{lat:51.8488,lng:0.1419,count:1.2},{lat:51.8711,lng:0.158679,count:3.6},]};
  google.maps.event.addListenerOnce(map,'idle',function(){heatmap.setDataSet(myData);});
 }
 </script>
@@ -519,16 +528,16 @@ function initializePins() {
 </div>
 <script type="text/javascript">
 $(document).ready(function () {
-  $('#tabs').tabs({
-    activate: function (event, ui) {
-      var act = $("#tabs").tabs("option", "active");
-		  if (act == 4) {
-        google.maps.event.trigger(map, 'resize');
-      }
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    e.target
+    e.relatedTarget
+  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      google.maps.event.trigger(map, 'resize');
     }
   });
 });
 </script>
+</div>
 </div>
 
 <ul>
@@ -537,7 +546,7 @@ $(document).ready(function () {
 Last Modified: Feb 4, 2013
 </li>
 </ul>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -557,7 +566,7 @@ Last Modified: Feb 4, 2013
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

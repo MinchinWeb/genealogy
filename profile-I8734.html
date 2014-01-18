@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="Eunice French Profile - Minchin Genealogy | Minchin.ca" />
  <title>Eunice French Profile - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -67,22 +74,24 @@ Version:   1.0.4        December 29, 2013
 
 <h1 id="adam-page-title">Eunice French Profile</h1>
 
-<div id="tabs">
-<ul>
+<div id="adam-tab-list">
+<ul id="tab-list" class="nav nav-tabs">
 
-<li><a class="click" href="#profile">Profile</a></li>
+<li class="active"><a class="click" href="#profile" data-toggle="tab">Profile</a></li>
 
-<li><a class="click" href="#sources">Sources (1)</a></li>
+<li><a class="click" href="#sources" data-toggle="tab">Sources (1)</a></li>
 
-<li><a class="click" href="#chart">Chart</a></li>
+<li><a class="click" href="#chart" data-toggle="tab">Chart</a></li>
 
-<li><a class="click" href="#alist">Ancestors List (28)</a></li>
+<li><a class="click" href="#alist" data-toggle="tab">Ancestors List (28)</a></li>
 
-<li><a class="click" href="#map">Ancestors Distribution Map</a></li>
+<li><a class="click" href="#map" data-toggle="tab">Ancestors Distribution Map</a></li>
 
 </ul>
 
-<div id="profile" class="adam-tab">
+<div class="tab-content">
+
+<div id="profile" class="tab-pane active adam-tab">
 
 <ul id="adam-person_profile" class="adam-tab_style">
 <li>
@@ -147,7 +156,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="sources" class="adam-tab">
+<div id="sources" class="tab-pane adam-tab">
 
 <ul id="adam-person_sources" class="adam-tab_style">
 <li>
@@ -167,7 +176,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="chart" class="adam-tab">
+<div id="chart" class="tab-pane adam-tab">
 <ul>
 <li id="adam-person_chart">
 <div style="height: 665px;">&nbsp;</div>
@@ -322,7 +331,7 @@ GEDCOM file imported on 4 February 2013
 </li>
 </ul>
 </div>
-<div id="alist" class="adam-tab">
+<div id="alist" class="tab-pane adam-tab">
 
 <div class="adam-al_page">
 <ul class="adam-al_legend">
@@ -336,137 +345,137 @@ GEDCOM file imported on 4 February 2013
 
 <li class="adam-al_generation">Generation 1</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1] &nbsp; <a href="profile-I8734.html" class="adam-name_link">Eunice French</a> (1786->1813)</div>
+  <div class="adam-al_name">[1] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8734.html" class="adam-name_link">Eunice French</a> (1786->1813)</div>
   <div class="adam-al_path"><span title="Connecticut">CT</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 2</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[2] &nbsp; <a href="profile-I7142.html" class="adam-name_link">Isaac French</a> (1750-1814)</div>
+  <div class="adam-al_name">[2] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7142.html" class="adam-name_link">Isaac French</a> (1750-1814)</div>
   <div class="adam-al_path"><span title="Connecticut">CT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3] &nbsp; <b><a href="profile-I7143.html" class="adam-name_link">Mrs Isaac French</a> (~1754->1793)</b></div>
+  <div class="adam-al_name">[3] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7143.html" class="adam-name_link">Mrs Isaac French</a> (~1754->1793)</b></div>
   <div class="adam-al_path"><span title="Connecticut">CT</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 3</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[4] &nbsp; <a href="profile-I7180.html" class="adam-name_link">Nathaniel French</a> (~1708-1753)</div>
+  <div class="adam-al_name">[4] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7180.html" class="adam-name_link">Nathaniel French</a> (~1708-1753)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span>-<span title="Connecticut">CT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[5] &nbsp; <a href="profile-I7181.html" class="adam-name_link">Sarah Spaulding</a> (1717->1758)</div>
+  <div class="adam-al_name">[5] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7181.html" class="adam-name_link">Sarah Spaulding</a> (1717->1758)</div>
   <div class="adam-al_path"><span title="Connecticut">CT</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 4</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[8] &nbsp; <a href="profile-I7200.html" class="adam-name_link">Nathaniel French</a> (1674-1748)</div>
+  <div class="adam-al_name">[8] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7200.html" class="adam-name_link">Nathaniel French</a> (1674-1748)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[9] &nbsp; <a href="profile-I7201.html" class="adam-name_link">Abigail Smith</a> (1678->1721)</div>
+  <div class="adam-al_name">[9] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7201.html" class="adam-name_link">Abigail Smith</a> (1678->1721)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span>-<span title="Connecticut">CT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[10] &nbsp; <a href="profile-I7202.html" class="adam-name_link">Thomas Spaulding</a> (1690-1761)</div>
+  <div class="adam-al_name">[10] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7202.html" class="adam-name_link">Thomas Spaulding</a> (1690-1761)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span>-<span title="Maine">ME</span>-<span title="Connecticut">CT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[11] &nbsp; <a href="profile-I6986.html" class="adam-name_link">Mercy Welsch</a> (1689-1784)</div>
+  <div class="adam-al_name">[11] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6986.html" class="adam-name_link">Mercy Welsch</a> (1689-1784)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span>-<span title="Maine">ME</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 5</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[16] &nbsp; <a href="profile-I7275.html" class="adam-name_link">Joseph French</a> (1640-1694)</div>
+  <div class="adam-al_name">[16] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7275.html" class="adam-name_link">Joseph French</a> (1640-1694)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[17] &nbsp; <a href="profile-I7276.html" class="adam-name_link">Experience Foster</a> (1643->1720)</div>
+  <div class="adam-al_name">[17] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7276.html" class="adam-name_link">Experience Foster</a> (1643->1720)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[18] &nbsp; <b><a href="profile-I7451.html" class="adam-name_link">Francis Smith</a> (1648-)</b></div>
+  <div class="adam-al_name">[18] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7451.html" class="adam-name_link">Francis Smith</a> (1648-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[19] &nbsp; <b><a href="profile-I7452.html" class="adam-name_link">Mrs Ann Smith</a> (1650-)</b></div>
+  <div class="adam-al_name">[19] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7452.html" class="adam-name_link">Mrs Ann Smith</a> (1650-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[20] &nbsp; <a href="profile-I7069.html" class="adam-name_link">Joseph Spaulding</a> (1646-1740)</div>
+  <div class="adam-al_name">[20] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7069.html" class="adam-name_link">Joseph Spaulding</a> (1646-1740)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span>-<span title="Connecticut">CT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[21] &nbsp; <a href="profile-I7277.html" class="adam-name_link">Mercy Jewell</a> (1651-1728)</div>
+  <div class="adam-al_name">[21] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I7277.html" class="adam-name_link">Mercy Jewell</a> (1651-1728)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span>-<span title="Connecticut">CT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[22] &nbsp; <b><a href="profile-I6982.html" class="adam-name_link">James Welsch</a> (1658-1724)</b></div>
+  <div class="adam-al_name">[22] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6982.html" class="adam-name_link">James Welsch</a> (1658-1724)</b></div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[23] &nbsp; <a href="profile-I6983.html" class="adam-name_link">Mercy Sabin</a> (1666->1705)</div>
+  <div class="adam-al_name">[23] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6983.html" class="adam-name_link">Mercy Sabin</a> (1666->1705)</div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 6</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[32] &nbsp; <i><a href="profile-I7416.html" class="adam-name_link">John French</a> (1600-1646)</i></div>
+  <div class="adam-al_name">[32] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I7416.html" class="adam-name_link">John French</a> (1600-1646)</i></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[33] &nbsp; <i><b><a href="profile-I7417.html" class="adam-name_link">Mrs Joanna French</a> (1611-1646)</b></i></div>
+  <div class="adam-al_name">[33] <span class="adam-aid">&nbsp;&nbsp;</span><i><b><a href="profile-I7417.html" class="adam-name_link">Mrs Joanna French</a> (1611-1646)</b></i></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[34] &nbsp; <b><a href="profile-I7422.html" class="adam-name_link">Thomas Foster</a> (1600-1682)</b></div>
+  <div class="adam-al_name">[34] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7422.html" class="adam-name_link">Thomas Foster</a> (1600-1682)</b></div>
   <div class="adam-al_path"><span title="Suffolk">SFK</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[35] &nbsp; <b><a href="profile-I7423.html" class="adam-name_link">Elizabeth Whitmore</a> (1618-1695)</b></div>
+  <div class="adam-al_name">[35] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7423.html" class="adam-name_link">Elizabeth Whitmore</a> (1618-1695)</b></div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[40] &nbsp; <b><a href="profile-I7065.html" class="adam-name_link">Edward Spaulding(Spalde</a> (~1616-1670)</b></div>
+  <div class="adam-al_name">[40] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7065.html" class="adam-name_link">Edward Spaulding(Spalde</a> (~1616-1670)</b></div>
   <div class="adam-al_path"><span title="England">ENG</span>-<span title="Norfolk">NFK</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[41] &nbsp; <b><a href="profile-I7066.html" class="adam-name_link">Mrs Rachel Spaulding</a> (~1618-1670)</b></div>
+  <div class="adam-al_name">[41] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7066.html" class="adam-name_link">Mrs Rachel Spaulding</a> (~1618-1670)</b></div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[42] &nbsp; <b><a href="profile-I7437.html" class="adam-name_link">Thomas Jewell</a> (1608-1654)</b></div>
+  <div class="adam-al_name">[42] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7437.html" class="adam-name_link">Thomas Jewell</a> (1608-1654)</b></div>
   <div class="adam-al_path"><span title="Surrey">SRY</span>-<span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[43] &nbsp; <b><a href="profile-I7438.html" class="adam-name_link">Grissell (Grizel) Fletcher</a> (1612-1669)</b></div>
+  <div class="adam-al_name">[43] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7438.html" class="adam-name_link">Grissell (Grizel) Fletcher</a> (1612-1669)</b></div>
   <div class="adam-al_path"><span title="Essex">ESS</span>-<span title="Massachusetts">MA</span>-<span title="Essex">ESS</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[46] &nbsp; <b><a href="profile-I7075.html" class="adam-name_link">Samuel Sabin, (Sgt.)</a> (1640-1699)</b></div>
+  <div class="adam-al_name">[46] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7075.html" class="adam-name_link">Samuel Sabin, (Sgt.)</a> (1640-1699)</b></div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[47] &nbsp; <b><a href="profile-I7076.html" class="adam-name_link">Mary Billington</a> (1640->1678)</b></div>
+  <div class="adam-al_name">[47] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I7076.html" class="adam-name_link">Mary Billington</a> (1640->1678)</b></div>
   <div class="adam-al_path"><span title="Massachusetts">MA</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 7</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[64] &nbsp; <b><a href="profile-I8739.html" class="adam-name_link">Father French</a> (~1575-)</b></div>
+  <div class="adam-al_name">[64] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8739.html" class="adam-name_link">Father French</a> (~1575-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[65] &nbsp; <b><a href="profile-I8740.html" class="adam-name_link">Mrs Father French</a> (~1577-)</b></div>
+  <div class="adam-al_name">[65] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8740.html" class="adam-name_link">Mrs Father French</a> (~1577-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 </ul>
 </div>
 </div>
-<div id="map" class="adam-tab">
+<div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <br/>
 <div class="floatmapbuttons"><p>
@@ -501,16 +510,16 @@ function initializePins() {
 </div>
 <script type="text/javascript">
 $(document).ready(function () {
-  $('#tabs').tabs({
-    activate: function (event, ui) {
-      var act = $("#tabs").tabs("option", "active");
-		  if (act == 4) {
-        google.maps.event.trigger(map, 'resize');
-      }
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    e.target
+    e.relatedTarget
+  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      google.maps.event.trigger(map, 'resize');
     }
   });
 });
 </script>
+</div>
 </div>
 
 <ul>
@@ -519,7 +528,7 @@ $(document).ready(function () {
 Last Modified: Feb 4, 2013
 </li>
 </ul>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -539,7 +548,7 @@ Last Modified: Feb 4, 2013
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 

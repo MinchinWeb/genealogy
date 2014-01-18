@@ -1,14 +1,21 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.37.0.0)" />
+ <meta name="generator" content="Tim Forsythe (Adam 1.45.0.195)" />
  <meta property="og:title" content="Goldie Pearl Brown Profile - Minchin Genealogy | Minchin.ca" />
  <title>Goldie Pearl Brown Profile - Minchin Genealogy | Minchin.ca</title>
   <head>
  <meta charset="UTF-8" />
   <!-- end Header code -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script>$(document).ready(function () { $('#tabs').tabs(); });</script>
-  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+  <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
+  <script type="text/javascript" src="graph-handler.js"></script>
+  <script type="text/javascript" src="tab-list-handler.js"></script>
   <!-- start Post-header code -->
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
@@ -20,7 +27,7 @@
 Minchin.ca / Genealogy Pages
 Copyright 1994-2013 W. Minchin
 Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.4        December 29, 2013
+Version:   1.0.5        January 17, 2014
 ----------------------------------------------- -->
 </head>	
 <!-- end Post-header code -->
@@ -67,22 +74,24 @@ Version:   1.0.4        December 29, 2013
 
 <h1 id="adam-page-title">Goldie Pearl Brown Profile</h1>
 
-<div id="tabs">
-<ul>
+<div id="adam-tab-list">
+<ul id="tab-list" class="nav nav-tabs">
 
-<li><a class="click" href="#profile">Profile</a></li>
+<li class="active"><a class="click" href="#profile" data-toggle="tab">Profile</a></li>
 
-<li><a class="click" href="#sources">Sources (1)</a></li>
+<li><a class="click" href="#sources" data-toggle="tab">Sources (1)</a></li>
 
-<li><a class="click" href="#chart">Chart</a></li>
+<li><a class="click" href="#chart" data-toggle="tab">Chart</a></li>
 
-<li><a class="click" href="#alist">Ancestors List (24)</a></li>
+<li><a class="click" href="#alist" data-toggle="tab">Ancestors List (24)</a></li>
 
-<li><a class="click" href="#map">Ancestors Distribution Map</a></li>
+<li><a class="click" href="#map" data-toggle="tab">Ancestors Distribution Map</a></li>
 
 </ul>
 
-<div id="profile" class="adam-tab">
+<div class="tab-content">
+
+<div id="profile" class="tab-pane active adam-tab">
 
 <ul id="adam-person_profile" class="adam-tab_style">
 <li>
@@ -148,7 +157,7 @@ GEDCOM file imported on 10 January 2013
 </li>
 </ul>
 </div>
-<div id="sources" class="adam-tab">
+<div id="sources" class="tab-pane adam-tab">
 
 <ul id="adam-person_sources" class="adam-tab_style">
 <li>
@@ -168,7 +177,7 @@ GEDCOM file imported on 10 January 2013
 </li>
 </ul>
 </div>
-<div id="chart" class="adam-tab">
+<div id="chart" class="tab-pane adam-tab">
 <ul>
 <li id="adam-person_chart">
 <div style="height: 665px;">&nbsp;</div>
@@ -318,7 +327,7 @@ GEDCOM file imported on 10 January 2013
 </li>
 </ul>
 </div>
-<div id="alist" class="adam-tab">
+<div id="alist" class="tab-pane adam-tab">
 
 <div class="adam-al_page">
 <ul class="adam-al_legend">
@@ -332,117 +341,117 @@ GEDCOM file imported on 10 January 2013
 
 <li class="adam-al_generation">Generation 1</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[1] &nbsp; <a href="profile-I4794.html" class="adam-name_link">Goldie Pearl Brown</a> (1891-)</div>
+  <div class="adam-al_name">[1] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4794.html" class="adam-name_link">Goldie Pearl Brown</a> (1891-)</div>
   <div class="adam-al_path"></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 2</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[2] &nbsp; <i><a href="profile-I4783.html" class="adam-name_link">Edwin Brown</a> (1841-1928)</i></div>
+  <div class="adam-al_name">[2] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I4783.html" class="adam-name_link">Edwin Brown</a> (1841-1928)</i></div>
   <div class="adam-al_path"><span title="Somerset">SOM</span>-<span title="Utah">UT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[3] &nbsp; <i><a href="profile-I4784.html" class="adam-name_link">Desdemona Fox</a> (1847-1935)</i></div>
+  <div class="adam-al_name">[3] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I4784.html" class="adam-name_link">Desdemona Fox</a> (1847-1935)</i></div>
   <div class="adam-al_path"><span title="Warwickshire">WAR</span>-<span title="Utah">UT</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 3</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[4] &nbsp; <a href="profile-I4879.html" class="adam-name_link">Jonathan Brown</a> (1818-1860)</div>
+  <div class="adam-al_name">[4] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4879.html" class="adam-name_link">Jonathan Brown</a> (1818-1860)</div>
   <div class="adam-al_path"><span title="Lincolnshire">LIN</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[5] &nbsp; <i><a href="profile-I4880.html" class="adam-name_link">Sarah Ann Cousins</a> (1819-1898)</i></div>
+  <div class="adam-al_name">[5] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I4880.html" class="adam-name_link">Sarah Ann Cousins</a> (1819-1898)</i></div>
   <div class="adam-al_path"><span title="Berkshire">BRK</span>-<span title="Utah">UT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[6] &nbsp; <a href="profile-I4891.html" class="adam-name_link">George Sellman Fox</a> (1819-1904)</div>
+  <div class="adam-al_name">[6] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4891.html" class="adam-name_link">George Sellman Fox</a> (1819-1904)</div>
   <div class="adam-al_path"><span title="Worcestershire">WOR</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[7] &nbsp; <i><a href="profile-I4892.html" class="adam-name_link">Elizabeth Jones</a> (1824-1901)</i></div>
+  <div class="adam-al_name">[7] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I4892.html" class="adam-name_link">Elizabeth Jones</a> (1824-1901)</i></div>
   <div class="adam-al_path"><span title="Warwickshire">WAR</span>-<span title="Idaho">ID</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 4</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[8] &nbsp; <a href="profile-I4881.html" class="adam-name_link">Jonathan Brown</a> (1794-1860)</div>
+  <div class="adam-al_name">[8] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4881.html" class="adam-name_link">Jonathan Brown</a> (1794-1860)</div>
   <div class="adam-al_path"><span title="Lincolnshire">LIN</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[9] &nbsp; <a href="profile-I4882.html" class="adam-name_link">Frances Mary Green</a> (1796-1878)</div>
+  <div class="adam-al_name">[9] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4882.html" class="adam-name_link">Frances Mary Green</a> (1796-1878)</div>
   <div class="adam-al_path"><span title="Norfolk">NFK</span>-<span title="Utah">UT</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[10] &nbsp; <a href="profile-I4887.html" class="adam-name_link">George Cousins</a> (1800-1880)</div>
+  <div class="adam-al_name">[10] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4887.html" class="adam-name_link">George Cousins</a> (1800-1880)</div>
   <div class="adam-al_path"><span title="Berkshire">BRK</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[11] &nbsp; <b><a href="profile-I4888.html" class="adam-name_link">Ann Herridge</a> (~1800-1898)</b></div>
+  <div class="adam-al_name">[11] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4888.html" class="adam-name_link">Ann Herridge</a> (~1800-1898)</b></div>
   <div class="adam-al_path"><span title="Berkshire">BRK</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[12] &nbsp; <b><a href="profile-I4893.html" class="adam-name_link">Richard Fox</a> (1790-1811)</b></div>
+  <div class="adam-al_name">[12] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4893.html" class="adam-name_link">Richard Fox</a> (1790-1811)</b></div>
   <div class="adam-al_path"><span title="Oxfordshire">OXF</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[13] &nbsp; <a href="profile-I4894.html" class="adam-name_link">Mary Sellman</a> (1793-~1850)</div>
+  <div class="adam-al_name">[13] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4894.html" class="adam-name_link">Mary Sellman</a> (1793-~1850)</div>
   <div class="adam-al_path"><span title="Oxfordshire">OXF</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[14] &nbsp; <b><a href="profile-I4897.html" class="adam-name_link">William Jones</a> (1804-)</b></div>
+  <div class="adam-al_name">[14] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4897.html" class="adam-name_link">William Jones</a> (1804-)</b></div>
   <div class="adam-al_path"><span title="Warwickshire">WAR</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[15] &nbsp; <a href="profile-I4898.html" class="adam-name_link">Marie Reed (Reid)</a> (~1805-)</div>
+  <div class="adam-al_name">[15] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4898.html" class="adam-name_link">Marie Reed (Reid)</a> (~1805-)</div>
   <div class="adam-al_path"><span title="Warwickshire">WAR</span></div><br>
 </li>
 
 <li class="adam-al_generation">Generation 5</li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[16] &nbsp; <b><a href="profile-I4883.html" class="adam-name_link">Jonathan Brown</a> (1762-1799)</b></div>
+  <div class="adam-al_name">[16] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4883.html" class="adam-name_link">Jonathan Brown</a> (1762-1799)</b></div>
   <div class="adam-al_path"><span title="Lincolnshire">LIN</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[17] &nbsp; <b><a href="profile-I4884.html" class="adam-name_link">Mary Taylor</a> (~1766-1826)</b></div>
+  <div class="adam-al_name">[17] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4884.html" class="adam-name_link">Mary Taylor</a> (~1766-1826)</b></div>
   <div class="adam-al_path"><span title="Lincolnshire">LIN</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[18] &nbsp; <b><a href="profile-I4885.html" class="adam-name_link">Henry William Green</a> (~1764-)</b></div>
+  <div class="adam-al_name">[18] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4885.html" class="adam-name_link">Henry William Green</a> (~1764-)</b></div>
   <div class="adam-al_path"><span title="Norfolk">NFK</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[19] &nbsp; <b><a href="profile-I4886.html" class="adam-name_link">Frances Mary Roberts</a> (~1768-)</b></div>
+  <div class="adam-al_name">[19] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4886.html" class="adam-name_link">Frances Mary Roberts</a> (~1768-)</b></div>
   <div class="adam-al_path"><span title="Norfolk">NFK</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[20] &nbsp; <b><a href="profile-I4889.html" class="adam-name_link">William Cousins</a> (~1768-)</b></div>
+  <div class="adam-al_name">[20] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4889.html" class="adam-name_link">William Cousins</a> (~1768-)</b></div>
   <div class="adam-al_path"><span title="Berkshire">BRK</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[21] &nbsp; <b><a href="profile-I4890.html" class="adam-name_link">Elizabeth Alburg</a> (~1772-)</b></div>
+  <div class="adam-al_name">[21] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4890.html" class="adam-name_link">Elizabeth Alburg</a> (~1772-)</b></div>
   <div class="adam-al_path"><span title="Berkshire">BRK</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[26] &nbsp; <b><a href="profile-I4895.html" class="adam-name_link">John Sellman</a> (1767-1826)</b></div>
+  <div class="adam-al_name">[26] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4895.html" class="adam-name_link">John Sellman</a> (1767-1826)</b></div>
   <div class="adam-al_path"><span title="Oxfordshire">OXF</span></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[27] &nbsp; <b><a href="profile-I4896.html" class="adam-name_link">Mary</a> (1768-1842)</b></div>
+  <div class="adam-al_name">[27] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4896.html" class="adam-name_link">Mary</a> (1768-1842)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[30] &nbsp; <b><a href="profile-I4899.html" class="adam-name_link">John Reed</a> (-)</b></div>
+  <div class="adam-al_name">[30] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4899.html" class="adam-name_link">John Reed</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 <li class="adam-al_item">
-  <div class="adam-al_name">[31] &nbsp; <b><a href="profile-I4900.html" class="adam-name_link">Marie Parsons</a> (-)</b></div>
+  <div class="adam-al_name">[31] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4900.html" class="adam-name_link">Marie Parsons</a> (-)</b></div>
   <div class="adam-al_path"></div><br>
 </li>
 </ul>
 </div>
 </div>
-<div id="map" class="adam-tab">
+<div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <br/>
 <div class="floatmapbuttons"><p>
@@ -461,9 +470,9 @@ var mcOptions={styles:[{ height:35,width:35,url:"mapmarker1.png"},
  { height:35,width:35,url:"mapmarker4.png"},
  { height:35,width:35,url:"mapmarker5.png"}]};
 function initializePins() {
- addPin(51.0833,-3,1,myImageM,'Edwin Brown','<div class="infowindow"><p>Coordinates: 51.0833, -3</p><span class="adam-map-location"><a href="places-england-somerset-newberry.html" class="adam-location_link">Newberry, Somerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4783.html" class="adam-name_link">Edwin Brown</a> (1841-1928)</span></div>');addPin(51.9435,-1.54219,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 51.9435, -1.54219</p><span class="adam-map-location"><a href="places-england-oxfordshire-chipping-norton.html" class="adam-location_link">Chipping Norton, Oxfordshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4894.html" class="adam-name_link">Mary Sellman</a> (1793-~1850)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4895.html" class="adam-name_link">John Sellman</a> (1767-1826)</span></div>');addPin(52.2671,-1.46752,4,myImage,'4 Persons','<div class="infowindow"><p>Coordinates: 52.2671, -1.46752</p><span class="adam-map-location"><a href="places-england-warwickshire-birmingham.html" class="adam-location_link">Birmingham, Warwickshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4784.html" class="adam-name_link">Desdemona Fox</a> (1847-1935)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4892.html" class="adam-name_link">Elizabeth Jones</a> (1824-1901)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4897.html" class="adam-name_link">William Jones</a> (1804-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4898.html" class="adam-name_link">Marie Reed (Reid)</a> (~1805-)</span></div>');addPin(51.425,-1.07,5,myImage,'5 Persons','<div class="infowindow"><p>Coordinates: 51.425, -1.07</p><span class="adam-map-location"><a href="places-england-berkshire-thatham.html" class="adam-location_link">Thatham, Berkshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4880.html" class="adam-name_link">Sarah Ann Cousins</a> (1819-1898)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4887.html" class="adam-name_link">George Cousins</a> (1800-1880)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4888.html" class="adam-name_link">Ann Herridge</a> (~1800-1898)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4889.html" class="adam-name_link">William Cousins</a> (~1768-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4890.html" class="adam-name_link">Elizabeth Alburg</a> (~1772-)</span></div>');addPin(53.1747,0.09144,4,myImage,'4 Persons','<div class="infowindow"><p>Coordinates: 53.1747, 0.09144</p><span class="adam-map-location"><a href="places-england-lincolnshire-spilsby.html" class="adam-location_link">Spilsby, Lincolnshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4879.html" class="adam-name_link">Jonathan Brown</a> (1818-1860)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4881.html" class="adam-name_link">Jonathan Brown</a> (1794-1860)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4883.html" class="adam-name_link">Jonathan Brown</a> (1762-1799)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4884.html" class="adam-name_link">Mary Taylor</a> (~1766-1826)</span></div>');addPin(52.4167,0.75,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 52.4167, 0.75</p><span class="adam-map-location"><a href="places-england-norfolk-thetford.html" class="adam-location_link">Thetford, Norfolk, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4882.html" class="adam-name_link">Frances Mary Green</a> (1796-1878)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4885.html" class="adam-name_link">Henry William Green</a> (~1764-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4886.html" class="adam-name_link">Frances Mary Roberts</a> (~1768-)</span></div>');addPin(1000,1000,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 1000, 1000</p><span class="adam-map-location"><a href="places-england-worcestershire-sheepston.html" class="adam-location_link">Sheepston, Worcestershire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4891.html" class="adam-name_link">George Sellman Fox</a> (1819-1904)</span><br/><br/><span class="adam-map-location"><a href="places-england-oxfordshire-birdthrop-parish.html" class="adam-location_link">Birdthrop Parish, Oxfordshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4893.html" class="adam-name_link">Richard Fox</a> (1790-1811)</span></div>');
+ addPin(51.0833,-3,1,myImageM,'Edwin Brown','<div class="infowindow"><p>Coordinates: 51.0833, -3</p><span class="adam-map-location"><a href="places-england-somerset-newberry.html" class="adam-location_link">Newberry, Somerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4783.html" class="adam-name_link">Edwin Brown</a> (1841-1928)</span></div>');addPin(51.9435,-1.54219,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 51.9435, -1.54219</p><span class="adam-map-location"><a href="places-england-oxfordshire-chipping-norton.html" class="adam-location_link">Chipping Norton, Oxfordshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4894.html" class="adam-name_link">Mary Sellman</a> (1793-~1850)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4895.html" class="adam-name_link">John Sellman</a> (1767-1826)</span></div>');addPin(52.2671,-1.46752,4,myImage,'4 Persons','<div class="infowindow"><p>Coordinates: 52.2671, -1.46752</p><span class="adam-map-location"><a href="places-england-warwickshire-birmingham.html" class="adam-location_link">Birmingham, Warwickshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4784.html" class="adam-name_link">Desdemona Fox</a> (1847-1935)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4892.html" class="adam-name_link">Elizabeth Jones</a> (1824-1901)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4897.html" class="adam-name_link">William Jones</a> (1804-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4898.html" class="adam-name_link">Marie Reed (Reid)</a> (~1805-)</span></div>');addPin(52.3555,-1.17432,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 52.3555, -1.17432</p><span class="adam-map-location"><a href="places-england-worcestershire-sheepston.html" class="adam-location_link">Sheepston, Worcestershire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4891.html" class="adam-name_link">George Sellman Fox</a> (1819-1904)</span><br/><br/><span class="adam-map-location"><a href="places-england-oxfordshire-birdthrop-parish.html" class="adam-location_link">Birdthrop Parish, Oxfordshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4893.html" class="adam-name_link">Richard Fox</a> (1790-1811)</span></div>');addPin(51.425,-1.07,5,myImage,'5 Persons','<div class="infowindow"><p>Coordinates: 51.425, -1.07</p><span class="adam-map-location"><a href="places-england-berkshire-thatham.html" class="adam-location_link">Thatham, Berkshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4880.html" class="adam-name_link">Sarah Ann Cousins</a> (1819-1898)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4887.html" class="adam-name_link">George Cousins</a> (1800-1880)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4888.html" class="adam-name_link">Ann Herridge</a> (~1800-1898)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4889.html" class="adam-name_link">William Cousins</a> (~1768-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4890.html" class="adam-name_link">Elizabeth Alburg</a> (~1772-)</span></div>');addPin(53.1747,0.09144,4,myImage,'4 Persons','<div class="infowindow"><p>Coordinates: 53.1747, 0.09144</p><span class="adam-map-location"><a href="places-england-lincolnshire-spilsby.html" class="adam-location_link">Spilsby, Lincolnshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4879.html" class="adam-name_link">Jonathan Brown</a> (1818-1860)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4881.html" class="adam-name_link">Jonathan Brown</a> (1794-1860)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4883.html" class="adam-name_link">Jonathan Brown</a> (1762-1799)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4884.html" class="adam-name_link">Mary Taylor</a> (~1766-1826)</span></div>');addPin(52.4167,0.75,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 52.4167, 0.75</p><span class="adam-map-location"><a href="places-england-norfolk-thetford.html" class="adam-location_link">Thetford, Norfolk, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4882.html" class="adam-name_link">Frances Mary Green</a> (1796-1878)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4885.html" class="adam-name_link">Henry William Green</a> (~1764-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I4886.html" class="adam-name_link">Frances Mary Roberts</a> (~1768-)</span></div>');
  markerCluster = new MarkerClusterer(map, myPins, mcOptions);
- var myData={max:1,data:[{lat:51.0833,lng:-3,count:0.3},{lat:51.9435,lng:-1.54219,count:0.6},{lat:52.2671,lng:-1.46752,count:1.2},{lat:51.425,lng:-1.07,count:1.5},{lat:53.1747,lng:0.09144,count:1.2},{lat:52.4167,lng:0.75,count:0.9},]};
+ var myData={max:1,data:[{lat:51.0833,lng:-3,count:0.3},{lat:51.9435,lng:-1.54219,count:0.6},{lat:52.2671,lng:-1.46752,count:1.2},{lat:52.3555,lng:-1.17432,count:0.6},{lat:51.425,lng:-1.07,count:1.5},{lat:53.1747,lng:0.09144,count:1.2},{lat:52.4167,lng:0.75,count:0.9},]};
  google.maps.event.addListenerOnce(map,'idle',function(){heatmap.setDataSet(myData);});
 }
 </script>
@@ -477,16 +486,16 @@ function initializePins() {
 </div>
 <script type="text/javascript">
 $(document).ready(function () {
-  $('#tabs').tabs({
-    activate: function (event, ui) {
-      var act = $("#tabs").tabs("option", "active");
-		  if (act == 4) {
-        google.maps.event.trigger(map, 'resize');
-      }
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    e.target
+    e.relatedTarget
+  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      google.maps.event.trigger(map, 'resize');
     }
   });
 });
 </script>
+</div>
 </div>
 
 <ul>
@@ -495,7 +504,7 @@ $(document).ready(function () {
 Last Modified: Dec 30, 2012
 </li>
 </ul>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.37.0.0</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.45.0.195</a>. </div>
 
 <!-- start footer code -->
       </div>
@@ -515,7 +524,7 @@ Last Modified: Dec 30, 2012
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.37.0.0. - Last Updated: January 4, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 1.45.0.195. - Last Updated: January 17, 2014</p>
 
 </div></div></div>
 
