@@ -122,7 +122,9 @@ for filename in all_files:
 		to_delete.append(filename)
 	elif filename.endswith(".png"):
 		to_delete.append(filename)
-	elif filename in ["adam.css", "adam-min.js"]:
+		elif filename.endswith(".js"):
+		to_delete.append(filename)
+	elif filename in ["adam.css"]:
 		to_delete.append(filename)
 for myfile in to_delete:
 	winshell.delete_file(myfile, no_confirm = True, allow_undo = False, silent = True)
@@ -159,7 +161,12 @@ zf = zipfile.ZipFile(adam_zip)
 zf.extractall()
 zf.close()
 
-wmtext.clock_on_right(" 8. Replacing Adam version number.")
+wmtext.clock_on_right(" 8. Copy over index.html")
+os.chdir(github_folder)
+winshell.delete_file("index.html", no_confirm = True, allow_undo = False, silent = True)
+winshell.copy_file("_adam/index.html", "index.html", no_confirm = True)
+
+wmtext.clock_on_right(" 9. Replacing Adam version number.")
 print("    Updated dates")
 print("    Hiding emails")
 soup_file = open('names.html', 'r')
@@ -181,11 +188,6 @@ for line1 in fileinput.input(all_html_files, inplace=1):
 	line4 = pattern.sub('[email redacted]', line3)
 	print line4,
 	
-wmtext.clock_on_right(" 9. Copy over index.html")
-os.chdir(github_folder)
-winshell.delete_file("index.html", no_confirm = True, allow_undo = False, silent = True)
-winshell.copy_file("_adam/index.html", "index.html", no_confirm = True)
-
 wmtext.clock_on_right("10. Create deploy tracking file")
 # create a 'random' number using UUID
 # note that the last set of digits will correspond to the workstation
@@ -198,12 +200,15 @@ target.write(gedcom_expected + "\n")
 target.close()
 
 wmtext.clock_on_right("11. Git -> commit and push")
-commit_msg = "Adam generated upload from " + gedcom_expected
+#commit_msg = "Adam generated upload from " + gedcom_expected
 os.chdir(github_folder)
+print ('$ git add -A')
 r1 = envoy.run('git add -A')
 print r1.std_err,
+print ('$ git commit -m Adam_upload')
 r2 = envoy.run('git commit -m Adam_upload')
 print r2.std_out, r2.std_err,
+print ('$ git push origin')
 r3 = envoy.run('git push origin')
 print r3.std_out, r3.std_err
 
@@ -213,7 +218,7 @@ while True:
 	if r.status_code == requests.codes.ok:
 		break
 	else:
-		wmtext.wait(60)
+		wmtext.wait(180)
 
 wmtext.clock_on_right(Fore.GREEN + Style.BRIGHT + "Update is Live")
 print Style.RESET_ALL	
