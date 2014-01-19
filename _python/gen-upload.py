@@ -122,7 +122,7 @@ for filename in all_files:
 		to_delete.append(filename)
 	elif filename.endswith(".png"):
 		to_delete.append(filename)
-		elif filename.endswith(".js"):
+	elif filename.endswith(".js"):
 		to_delete.append(filename)
 	elif filename in ["adam.css"]:
 		to_delete.append(filename)
@@ -134,10 +134,10 @@ print("        " + str(len(to_delete)) + " files deleted.")
 wmtext.clock_on_right(" 6. Get new Adam output.")
 adam_zip = ''
 os.chdir(download_folder)
-all_files = os.listdir(download_folder)
 
 count_loops = 0
 while True:
+	all_files = os.listdir(download_folder)
 	for filename in all_files:
 		if filename.startswith('adam_') and filename.endswith(".zip"):
 			if datetime.fromtimestamp(os.stat(filename).st_ctime) > start_time:
