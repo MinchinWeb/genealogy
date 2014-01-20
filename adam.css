@@ -400,7 +400,7 @@ img {height: auto;}
 .adam-url                        {background:#CBCCE6; padding:2px 10px 2px 10px;}
 .adam-citation                   {/*background:#FFFFFF; margin:5px 0;*/}
 .adam-citation_heading           {background:#959A92; padding:1px 10px 2px 10px;}
-.adam-citation_text              {background:#E7F0FF; padding:5px 10px 5px 10px;}
+.adam-citation_text              {background:#E7F0FF; padding:5px 10px 10px 10px;}
 .adam-citation_text pre					 {margin: 5px 0px;}
 .adam-location                   {background:#E7F0FF; padding:5px 10px 5px 10px;}
 .adam-map                        {padding:0px 0px 0px 00px;}

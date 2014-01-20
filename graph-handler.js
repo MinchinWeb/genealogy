@@ -1,3 +1,5 @@
+// Palettes: 'default', 'harmony light', 'soft pastel', 'pastel', 'bright', 'soft', 'ocean', 'vintage', 'vintage_desktop-dark', 'violet'
+
 $(document).ready(function () {
 
 	//////////////////////////////////////////////////////////////	
@@ -200,5 +202,5 @@ $(document).ready(function () {
 		 legend: {visible: false}
 		});
 	}
-						  
+	
 });
