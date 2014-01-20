@@ -73,7 +73,6 @@ f_out.close()
 wmtext.clock_on_right(" 3. The file is now ready to upload to Adam.")
 webbrowser.open("http://timforsythe.com/tools/adam", new=2)
 print("        log-in (using Facebook)")
-print("        in the footer: update the 'Updated' date")
 print("        now click 'generate report'")
 
 wmtext.clock_on_right(" 4. Checking images...")
@@ -85,7 +84,7 @@ missing_matches = []
 matches = 0
 wrapper = textwrap.TextWrapper(width=79, initial_indent=" "*8, subsequent_indent=" "*12)
 pattern_bad = re.compile("missing ")
-for match in re.findall(r'(images/.+\.(jpg|jpeg|png|gif))', subject, re.IGNORECASE):
+for match in re.findall(r'(images/.+\.(jpg|jpeg|png|gif|pdf))', subject, re.IGNORECASE):
 	r = requests.head(url_root + "/" + str(match[0]))
 	if not r.status_code == requests.codes.ok:
 		mytext = wrapper.fill("missing " + str(r.status_code) + " -> " + match[0])
@@ -174,7 +173,7 @@ soup = BeautifulSoup(soup_file)
 soup_file.close()
 adam_version_text = soup.find(True, "adam-version").get_text().encode('utf-8') # 'Built by Adam 1.35.0.0 ' or the like
 date_in_text = date.today().strftime("%B %d, %Y").replace(' 0', ' ') # 'January 7, 2014' or the like
-pattern = re.compile('(w_minchin@hotmail\.com|nysgys@shaw\.ca|bunburypr@ozemail\.com\.au|turtle@turtlebunbury\.com|howard\.blaxland@gmail\.com|kenhazel@gmail\.com|canrcr@gmail\.com|david@westerhamworkshop\.co\.uk)', re.I) # replace and hide emails; but some of these are over lines breaks, so we'll have to search and replace through the output
+pattern = re.compile('(w_minchin@hotmail\.com|w\.minchin@gmail\.com|webmaster@minchin\.ca|nysgys@shaw\.ca|bunburypr@ozemail\.com\.au|turtle@turtlebunbury\.com|howard\.blaxland@gmail\.com|kenhazel@gmail\.com|canrcr@gmail\.com|david@westerhamworkshop\.co\.uk|d3gl@shaw\.ca|cardena\.depper@gmx\.net|redjoanne_58@hotmail\.com|lbwong@charter\.net)', re.I) # replace and hide emails; but some of these are over lines breaks, so we'll have to search and replace through the output
 
 all_files = os.listdir(github_folder)
 all_html_files = []
@@ -202,13 +201,13 @@ target.close()
 wmtext.clock_on_right("11. Git -> commit and push")
 #commit_msg = "Adam generated upload from " + gedcom_expected
 os.chdir(github_folder)
-print ('$ git add -A')
+print Fore.YELLOW + ' > git add -A' + Style.RESET_ALL
 r1 = envoy.run('git add -A')
 print r1.std_err,
-print ('$ git commit -m Adam_upload')
+print Fore.YELLOW + '> git commit -m Adam_upload' + Style.RESET_ALL
 r2 = envoy.run('git commit -m Adam_upload')
 print r2.std_out, r2.std_err,
-print ('$ git push origin')
+print Fore.YELLOW + '> git push origin' + Style.RESET_ALL
 r3 = envoy.run('git push origin')
 print r3.std_out, r3.std_err
 
