@@ -85,7 +85,7 @@ matches = 0
 wrapper = textwrap.TextWrapper(width=79, initial_indent=" "*8, subsequent_indent=" "*12)
 pattern_bad = re.compile("missing ")
 for match in re.findall(r'(images/.+\.(jpg|jpeg|png|gif|pdf))', subject, re.IGNORECASE):
-	r = requests.head(url_root + "/" + str(match[0]))
+	r = requests.head(url_root + "/" + str(match[0]), allow_redirects=True)
 	if not r.status_code == requests.codes.ok:
 		mytext = wrapper.fill("missing " + str(r.status_code) + " -> " + match[0])
 		print pattern_bad.sub(Fore.RED + Style.BRIGHT + "missing " + Style.RESET_ALL, mytext)
@@ -138,7 +138,7 @@ count_loops = 0
 while True:
 	all_files = os.listdir(download_folder)
 	for filename in all_files:
-		if filename.startswith('adam_') and filename.endswith(".zip"):
+		if filename.startswith('adam-1246-') and filename.endswith(".zip"):
 			if datetime.fromtimestamp(os.stat(filename).st_ctime) > start_time:
 				adam_zip = filename
 	if adam_zip != '' and os.stat(adam_zip).st_size > 1000:
@@ -201,19 +201,19 @@ target.close()
 wmtext.clock_on_right("11. Git -> commit and push")
 #commit_msg = "Adam generated upload from " + gedcom_expected
 os.chdir(github_folder)
-print Fore.YELLOW + ' > git add -A' + Style.RESET_ALL
+wmtext.clock_on_right(Fore.YELLOW + ' > git add -A' + Style.RESET_ALL)
 r1 = envoy.run('git add -A')
 print r1.std_err,
-print Fore.YELLOW + '> git commit -m Adam_upload' + Style.RESET_ALL
+wmtext.clock_on_right(Fore.YELLOW + '> git commit -m Adam_upload' + Style.RESET_ALL)
 r2 = envoy.run('git commit -m Adam_upload')
 print r2.std_out, r2.std_err,
-print Fore.YELLOW + '> git push origin' + Style.RESET_ALL
+wmtext.clock_on_right(Fore.YELLOW + '> git push origin' + Style.RESET_ALL)
 r3 = envoy.run('git push origin')
 print r3.std_out, r3.std_err
 
 wmtext.clock_on_right("12. Wait to go live")
 while True:
-	r = requests.head(url_root + "/" + tracking_filename)
+	r = requests.head(url_root + "/" + tracking_filename, allow_redirects=True)
 	if r.status_code == requests.codes.ok:
 		break
 	else:

@@ -90,7 +90,6 @@ $(document).ready(function () {
 		 series: {name: "Groups", valueField: "total", label: {visible: true} },
 		 tooltip: {enabled: true, percentPrecision: 2, font: {size: 16}},
 		 legend: {visible: false},
-		 valueAxis: {label: {format: "millions"}}
 		});
 	}
 	

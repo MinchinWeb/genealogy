@@ -40,3 +40,8 @@ coverage.xml
 
 # Translations
 *.mo
+
+# MS Visual Studio
+_python/obj/
+*.sln
+*.pyproj

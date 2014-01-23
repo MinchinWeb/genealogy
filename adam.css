@@ -296,11 +296,18 @@ img {height: auto;}
 	text-shadow: none;
 	color: #fff;
 	position: relative;
-	display: inline-block;
+	display: inline;
 	font-size: 1.3em;
 	line-height: 2.3em;
 	padding: 0 0.8em 0 0.8em; 
 	margin: 10px 0px 10px 0px;
+	
+	min-height: 2.5em; /* needed by IE */
+	font-family:  "Roboto Condensed", "Open Sans Condensed", "Open Sans", sans-serif;
+	font-size: 1.5em;
+	line-height: 2.5em;
+	padding: 0 1.0em 0 1.0em; /* vertical center */
+	
 }
 
 .adam-stats-wrapper {margin-bottom: 10px;}
