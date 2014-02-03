@@ -1,5 +1,5 @@
 '''Genealogy Uploader
-v.2 - WM - Jan. 6, 2014
+v.2.2 - WM - Feb. 2, 2014
 
 This script serves to semi-automate the building and uploading of my
 genealogy website. It is intended to be semi-interactive and run from the
@@ -10,8 +10,7 @@ github_folder = "S:\\Documents\\GitHub\\genealogy"
 photo_folder = "S:\\Documents\\genealogy"
 download_folder = "S:\\Downloads\\Firefox"
 url_root = "http://minchin.ca/genealogy"
-repo_url = "git@github.com:MinchinWeb/genealogy.git"
-my_key_file = "C:\\Users\\William\\.ssh\\github_rsa"
+repo_url = "https://github.com/MinchinWeb/genealogy.git"
 
 from datetime import datetime
 from datetime import date
@@ -60,7 +59,7 @@ gedcom_file = file(my_gedcom, 'r')
 subject = gedcom_file.read()
 gedcom_file.close()
 
-pattern = re.compile(r'S:\\Documents\\Genealogy\\[0-9]+[\.[a-z]+]*\.? ') # path start
+pattern = re.compile(r'S:\\Documents\\Genealogy\\([0-9]+[\.[a-z]+]*\.? )*', re.IGNORECASE) # path start
 result = pattern.sub('images/', subject)
 pattern2 = re.compile(r'(images.*)\\') # reverse slashes in rest of path
 result2 = pattern2.sub(r'\1/', result)
