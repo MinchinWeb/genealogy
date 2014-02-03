@@ -1,14 +1,13 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.49.0.266)" />
+ <head>
+ <meta name="generator" content="Tim Forsythe (Adam 2.11.0.23)" />
  <meta property="og:title" content="Thomastown, Kilkenny, Ireland - Minchin Genealogy | Minchin.ca" />
  <title>Thomastown, Kilkenny, Ireland - Minchin Genealogy | Minchin.ca</title>
-  <head>
- <meta charset="UTF-8" />
-  <!-- end Header code -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="adam.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
@@ -16,23 +15,36 @@
   <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
   <script type="text/javascript" src="graph-handler.js"></script>
   <script type="text/javascript" src="tab-list-handler.js"></script>
-  <!-- start Post-header code -->
+  <script type="text/javascript" src="tooltip-handler.js"></script>
+  <!-- start header code -->
+  <meta charset="UTF-8" />
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-384291-3', 'minchin.ca');
+    ga('send', 'pageview');
+
+  </script>
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
   <link rel="stylesheet" href="adam.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/screen.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/adam-overrides.css" type="text/css" />
-<!--
------------------------------------------------
-Minchin.ca / Genealogy Pages
-Copyright 1994-2013 W. Minchin
-Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.5        January 17, 2014
------------------------------------------------ -->
-</head>	
-<!-- end Post-header code -->
+  <!--
+  -----------------------------------------------
+  Minchin.ca / Genealogy Pages
+  Copyright 1994-2014 W. Minchin
+  Prototype: 1.1.1 (rev C) January 13, 2010
+  Version:   1.0.4        December 29, 2013
+  ----------------------------------------------- -->
+  <!-- end Header code -->
+ </head>
+
+ <body class="container">
   <!-- start body code -->
-<body>
 <!-- Begin #content - Centers all content and provides edges for floated columns -->
 
 <div id="content">
@@ -52,9 +64,9 @@ Version:   1.0.5        January 17, 2014
 		</ul>
 	</div>
 	<div id="breadcrumbs">
-	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <span class="here"><a href=".">Genealogy</a></span> </p>
+	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <a href=".">Genealogy</a> > <span class="here">Minchin Genealogy | Minchin.ca<span></p>
 	</div>
-    <h1 id="blog-title"><a href=".">Genealogy</a></h1>
+    <h1 id="blog-title">Minchin Genealogy | Minchin.ca</h1>
     <p id="description"> </p>
 </div></div>
 
@@ -63,13 +75,7 @@ Version:   1.0.5        January 17, 2014
 <div id="full-width"><div id="full-width2"><div id="full-width3"><div class="post"><div class="post-body">
 
 <!-- Begin Adam code -->
- <div id="site-wrapper">
-  <div id="site-header"><a href=".">W. Minchin Presents</a></div>
-   <div id="site-content">
-    <div id="adam-wrapper">
-     <div id="adam-outer-content">
-      <div id="adam-inner-content">
-      <!-- end body code -->
+<div id="site-content">
 
 
 <h1 id="adam-page-title">Thomastown, Kilkenny, Ireland</h1>
@@ -79,7 +85,7 @@ Version:   1.0.5        January 17, 2014
 
 <li class="active"><a class="click" href="#profile" data-toggle="tab">Profile</a></li>
 
-<li><a class="click" href="#claims" data-toggle="tab">Claims (3)</a></li>
+<li><a class="click" href="#claims" data-toggle="tab">Claims (28)</a></li>
 
 </ul>
 
@@ -92,7 +98,7 @@ Version:   1.0.5        January 17, 2014
 <table class="adam-tab_table">
 
 <tr><td><table class="adam-referrers adam-table_box"><tr><td>
-<b>Linked To:</b> <a href="profile-I725.html" class="adam-name_link">Doretta Minchin</a> (~1793-1874), <a href="profile-I724.html" class="adam-name_link">Humphrey Minchin</a> (~1793-), <a href="profile-I1080.html" class="adam-name_link">William Augustus Minchin</a> (1796-1867)
+<b>Linked To:</b> <a href="profile-I4192.html" class="adam-name_link">Dorothy Bassett</a> (~1745-~1850), <a href="profile-I4208.html" class="adam-name_link">Catherine Bull</a> (1809-), <a href="profile-I4199.html" class="adam-name_link">Christopher Bull</a> (~1780-), <a href="profile-I4203.html" class="adam-name_link">Christopher Bull</a> (1800-), <a href="profile-I1081.html" class="adam-name_link">Dorothy Bull</a> (1805-1867), <a href="profile-I4207.html" class="adam-name_link">Elizabeth Bull</a> (1808->1881), <a href="profile-I4196.html" class="adam-name_link">James Bull</a> (~1772-), <a href="profile-I107.html" class="adam-name_link">Jane Bull</a> (~1781-1874), <a href="profile-I4198.html" class="adam-name_link">John Bull</a> (~1777-), <a href="profile-I4209.html" class="adam-name_link">John Bull</a> (1813->1881), <a href="profile-I4204.html" class="adam-name_link">Mary Bull</a> (1802-), <a href="profile-I4191.html" class="adam-name_link">Robert Bull</a> (~1736-1791), <a href="profile-I4202.html" class="adam-name_link">Robert Bull</a> (1797-1876), <a href="profile-I4200.html" class="adam-name_link">Robert Bull, Jr.</a> (1782-1841), <a href="profile-I4193.html" class="adam-name_link">William Bull</a> (~1702-), <a href="profile-I4197.html" class="adam-name_link">William Bull</a> (1775-1850), <a href="profile-I4205.html" class="adam-name_link">William Bull</a> (1803-1884), <a href="profile-I4212.html" class="adam-name_link">Mary Grace</a> (1783-1848), <a href="profile-I725.html" class="adam-name_link">Doretta Minchin</a> (~1793-1874), <a href="profile-I4215.html" class="adam-name_link">Doretta Minchin</a> (~1805-1874), <a href="profile-I724.html" class="adam-name_link">Humphrey Minchin</a> (~1793-), <a href="profile-I4214.html" class="adam-name_link">Humphrey Minchin</a> (~1799-), <a href="profile-I1080.html" class="adam-name_link">William Augustus Minchin</a> (1796-1867), <a href="profile-I4201.html" class="adam-name_link">Jenny Steves</a> (1780-)
 </td></tr></table></td></tr>
 
 <tr><td><table class="adam-location adam-table_box">
@@ -311,12 +317,87 @@ function initialize() {
 <table class="adam-tab_table">
 
 <tr><td><table class="adam-events adam-table_box">
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4191.html" class="adam-name_link">Robert Bull</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">abt 1736</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4196.html" class="adam-name_link">James Bull</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">abt 1772</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4197.html" class="adam-name_link">William Bull</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">1775</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4198.html" class="adam-name_link">John Bull</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">abt 1777</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4201.html" class="adam-name_link">Jenny Steves</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">1780</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4199.html" class="adam-name_link">Christopher Bull</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">abt 1780</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I107.html" class="adam-name_link">Jane Bull</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">abt 1781</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4200.html" class="adam-name_link">Robert Bull, Jr.</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">Aug 27, 1782</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4212.html" class="adam-name_link">Mary Grace</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">1783</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4191.html" class="adam-name_link">Robert Bull</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">Jan 1, 1791</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1080.html" class="adam-name_link">William Augustus Minchin</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
 </td><td class="adam-claim_date">Apr 11, 1796</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4202.html" class="adam-name_link">Robert Bull</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">1797</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4214.html" class="adam-name_link">Humphrey Minchin</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">abt 1799</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4203.html" class="adam-name_link">Christopher Bull</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">1800</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4204.html" class="adam-name_link">Mary Bull</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">1802</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4205.html" class="adam-name_link">William Bull</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">1803</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I1081.html" class="adam-name_link">Dorothy Bull</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">1805</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4215.html" class="adam-name_link">Doretta Minchin</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">abt 1805</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4207.html" class="adam-name_link">Elizabeth Bull</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">1808</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4208.html" class="adam-name_link">Catherine Bull</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">1809</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4209.html" class="adam-name_link">John Bull</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">1813</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4212.html" class="adam-name_link">Mary Grace</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">1848</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4192.html" class="adam-name_link">Dorothy Bassett</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">abt 1850</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4197.html" class="adam-name_link">William Bull</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date">Nov 17, 1850</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I724.html" class="adam-name_link">Humphrey Minchin</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
 </td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I725.html" class="adam-name_link">Doretta Minchin</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
 </td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_unsupported">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4193.html" class="adam-name_link">William Bull</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I4197.html" class="adam-name_link">William Bull</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-ireland-kilkenny-thomastown.html" class="adam-location_link">Thomastown, Kilkenny, Ireland</a>
+
+<span>[<a href="sources-S23.html" data-toggle="popover" title="[S23] The Bull/ Buell family from Ireland to Canada Cape Breton and Prince Edward Isl">S23</a>]</span> </td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 </table></td></tr>
 </table>
 </li>
@@ -327,15 +408,11 @@ function initialize() {
 </div>
 </div>
 
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.49.0.266</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 2.11.0.23</a>. </div>
 
 <!-- start footer code -->
-      </div>
-     </div>
-    </div>
-   </div>
   </div>
- <div id="site-footer">Brought to you by Tim Forsythe (<a href="http://timforsythe.com" target="_blank">http://timforsythe.com</a>)</div>
+ <div id="site-footer"></div>
 
 <!-- End Adam code -->
 
@@ -347,7 +424,7 @@ function initialize() {
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br /><a href="http://www.timforsythe.com/tools/adam">Built by Adam 1.49.0.266. </a>- Last Updated: January 23, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 2.11.0.23.  - Last Updated: February 2, 2014</p>
 
 </div></div></div>
 
@@ -356,6 +433,5 @@ function initialize() {
 </div>
 
 <!-- End #content -->
-
-</body>
-</html>
+  </body>
+ </html>

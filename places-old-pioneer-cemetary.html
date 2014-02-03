@@ -1,14 +1,13 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.49.0.266)" />
+ <head>
+ <meta name="generator" content="Tim Forsythe (Adam 2.11.0.23)" />
  <meta property="og:title" content="Old Pioneer Cemetary - Minchin Genealogy | Minchin.ca" />
  <title>Old Pioneer Cemetary - Minchin Genealogy | Minchin.ca</title>
-  <head>
- <meta charset="UTF-8" />
-  <!-- end Header code -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="adam.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
@@ -16,23 +15,36 @@
   <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
   <script type="text/javascript" src="graph-handler.js"></script>
   <script type="text/javascript" src="tab-list-handler.js"></script>
-  <!-- start Post-header code -->
+  <script type="text/javascript" src="tooltip-handler.js"></script>
+  <!-- start header code -->
+  <meta charset="UTF-8" />
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-384291-3', 'minchin.ca');
+    ga('send', 'pageview');
+
+  </script>
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
   <link rel="stylesheet" href="adam.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/screen.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/adam-overrides.css" type="text/css" />
-<!--
------------------------------------------------
-Minchin.ca / Genealogy Pages
-Copyright 1994-2013 W. Minchin
-Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.5        January 17, 2014
------------------------------------------------ -->
-</head>	
-<!-- end Post-header code -->
+  <!--
+  -----------------------------------------------
+  Minchin.ca / Genealogy Pages
+  Copyright 1994-2014 W. Minchin
+  Prototype: 1.1.1 (rev C) January 13, 2010
+  Version:   1.0.4        December 29, 2013
+  ----------------------------------------------- -->
+  <!-- end Header code -->
+ </head>
+
+ <body class="container">
   <!-- start body code -->
-<body>
 <!-- Begin #content - Centers all content and provides edges for floated columns -->
 
 <div id="content">
@@ -52,9 +64,9 @@ Version:   1.0.5        January 17, 2014
 		</ul>
 	</div>
 	<div id="breadcrumbs">
-	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <span class="here"><a href=".">Genealogy</a></span> </p>
+	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <a href=".">Genealogy</a> > <span class="here">Minchin Genealogy | Minchin.ca<span></p>
 	</div>
-    <h1 id="blog-title"><a href=".">Genealogy</a></h1>
+    <h1 id="blog-title">Minchin Genealogy | Minchin.ca</h1>
     <p id="description"> </p>
 </div></div>
 
@@ -63,13 +75,7 @@ Version:   1.0.5        January 17, 2014
 <div id="full-width"><div id="full-width2"><div id="full-width3"><div class="post"><div class="post-body">
 
 <!-- Begin Adam code -->
- <div id="site-wrapper">
-  <div id="site-header"><a href=".">W. Minchin Presents</a></div>
-   <div id="site-content">
-    <div id="adam-wrapper">
-     <div id="adam-outer-content">
-      <div id="adam-inner-content">
-      <!-- end body code -->
+<div id="site-content">
 
 
 <h1 id="adam-page-title">Old Pioneer Cemetary</h1>
@@ -309,9 +315,7 @@ function initialize() {
 <tr><td><table class="adam-events adam-table_box">
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5396.html" class="adam-name_link">David Norton</a></td><td class="adam-claim_tag">Burial</td><td class="adam-claim_data"><a href="places-old-pioneer-cemetary.html" class="adam-location_link">Old Pioneer Cemetary</a>
 
-<span>[<a href="sources-S29.html" title="[S29]
-GEDCOM file imported on 4 February 2013
-">S29</a>]</span> </td><td class="adam-claim_date">Jun of 1860</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S29.html" data-toggle="popover" title="[S29] GEDCOM file imported on 4 February 2013">S29</a>]</span> </td><td class="adam-claim_date">Jun of 1860</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 </table></td></tr>
 </table>
 </li>
@@ -322,15 +326,11 @@ GEDCOM file imported on 4 February 2013
 </div>
 </div>
 
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.49.0.266</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 2.11.0.23</a>. </div>
 
 <!-- start footer code -->
-      </div>
-     </div>
-    </div>
-   </div>
   </div>
- <div id="site-footer">Brought to you by Tim Forsythe (<a href="http://timforsythe.com" target="_blank">http://timforsythe.com</a>)</div>
+ <div id="site-footer"></div>
 
 <!-- End Adam code -->
 
@@ -342,7 +342,7 @@ GEDCOM file imported on 4 February 2013
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br /><a href="http://www.timforsythe.com/tools/adam">Built by Adam 1.49.0.266. </a>- Last Updated: January 23, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 2.11.0.23.  - Last Updated: February 2, 2014</p>
 
 </div></div></div>
 
@@ -351,6 +351,5 @@ GEDCOM file imported on 4 February 2013
 </div>
 
 <!-- End #content -->
-
-</body>
-</html>
+  </body>
+ </html>

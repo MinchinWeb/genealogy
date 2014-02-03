@@ -1,14 +1,13 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.49.0.266)" />
+ <head>
+ <meta name="generator" content="Tim Forsythe (Adam 2.11.0.23)" />
  <meta property="og:title" content="14th Century - Minchin Genealogy | Minchin.ca" />
  <title>14th Century - Minchin Genealogy | Minchin.ca</title>
-  <head>
- <meta charset="UTF-8" />
-  <!-- end Header code -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="adam.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
@@ -16,23 +15,36 @@
   <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
   <script type="text/javascript" src="graph-handler.js"></script>
   <script type="text/javascript" src="tab-list-handler.js"></script>
-  <!-- start Post-header code -->
+  <script type="text/javascript" src="tooltip-handler.js"></script>
+  <!-- start header code -->
+  <meta charset="UTF-8" />
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-384291-3', 'minchin.ca');
+    ga('send', 'pageview');
+
+  </script>
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
   <link rel="stylesheet" href="adam.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/screen.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/adam-overrides.css" type="text/css" />
-<!--
------------------------------------------------
-Minchin.ca / Genealogy Pages
-Copyright 1994-2013 W. Minchin
-Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.5        January 17, 2014
------------------------------------------------ -->
-</head>	
-<!-- end Post-header code -->
+  <!--
+  -----------------------------------------------
+  Minchin.ca / Genealogy Pages
+  Copyright 1994-2014 W. Minchin
+  Prototype: 1.1.1 (rev C) January 13, 2010
+  Version:   1.0.4        December 29, 2013
+  ----------------------------------------------- -->
+  <!-- end Header code -->
+ </head>
+
+ <body class="container">
   <!-- start body code -->
-<body>
 <!-- Begin #content - Centers all content and provides edges for floated columns -->
 
 <div id="content">
@@ -52,9 +64,9 @@ Version:   1.0.5        January 17, 2014
 		</ul>
 	</div>
 	<div id="breadcrumbs">
-	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <span class="here"><a href=".">Genealogy</a></span> </p>
+	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <a href=".">Genealogy</a> > <span class="here">Minchin Genealogy | Minchin.ca<span></p>
 	</div>
-    <h1 id="blog-title"><a href=".">Genealogy</a></h1>
+    <h1 id="blog-title">Minchin Genealogy | Minchin.ca</h1>
     <p id="description"> </p>
 </div></div>
 
@@ -63,13 +75,7 @@ Version:   1.0.5        January 17, 2014
 <div id="full-width"><div id="full-width2"><div id="full-width3"><div class="post"><div class="post-body">
 
 <!-- Begin Adam code -->
- <div id="site-wrapper">
-  <div id="site-header"><a href=".">W. Minchin Presents</a></div>
-   <div id="site-content">
-    <div id="adam-wrapper">
-     <div id="adam-outer-content">
-      <div id="adam-inner-content">
-      <!-- end body code -->
+<div id="site-content">
 
 
 <h1 id="adam-page-title">14th Century</h1>
@@ -81,97 +87,68 @@ Version:   1.0.5        January 17, 2014
 <table class="adam-tab_table">
 
 <tr><td><table class="adam-timeline_list adam-table_box">
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5224.html" class="adam-name_link">Isabelle Southeron</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1300</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5223.html" class="adam-name_link">Walter de Hawksworth</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data">
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date">1300</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date">1300</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5224.html" class="adam-name_link">Isabelle Southeron</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1300</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5235.html" class="adam-name_link">William Wentworth</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1304</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9851.html" class="adam-name_link">David de Bunbury</a></td><td class="adam-claim_tag">Title</td><td class="adam-claim_data"><a href="places-england-cheshire-bunbury.html" class="adam-location_link">Bunbury, Cheshire, England</a>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9851.html" class="adam-name_link">David de Bunbury</a></td><td class="adam-claim_tag">Title</td><td class="adam-claim_data"><a href="places-england-chestershire-bunbury.html" class="adam-location_link">Bunbury, Chestershire, England</a>
 ,  Prior of Bunbury
-<span>[<a href="sources-S41.html" title="[S41]
-The Baronetage of England
-Page: 48
-Page: 48
-">S41:48</a>]</span> </td><td class="adam-claim_date">1311</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S41.html" data-toggle="popover" title="[S41] The Baronetage of England
+Page: 48">S41:48</a>]</span> </td><td class="adam-claim_date">1311</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr><td></td><td></td><td><table><tr><td><div class="adam-comment"></div><div class="adam-comment">prior of Bunbury, 4 Edw II</div></td></tr></table></td><td></td><td></td><td></td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9849.html" class="adam-name_link">_____ de Stanny</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1312</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9842.html" class="adam-name_link">Adam de Bunbury</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1322</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9841.html" class="adam-name_link">Richard de Bunbury</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1322</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9845.html" class="adam-name_link">Robert de Bunbury</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1322</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9843.html" class="adam-name_link">David de Bunbury</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1322</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9842.html" class="adam-name_link">Adam de Bunbury</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1322</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9845.html" class="adam-name_link">Robert de Bunbury</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1322</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9841.html" class="adam-name_link">Richard de Bunbury</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1322</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9844.html" class="adam-name_link">Mabell de Bunbury</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1322</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5222.html" class="adam-name_link">Thomas de Hawksworth</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data">
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date">1330</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date">1330</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5234.html" class="adam-name_link">Joan Letyas</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1332</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5233.html" class="adam-name_link">John Wentworth</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data">
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date">1332</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date">1332</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5219.html" class="adam-name_link">Richard Radcliffe</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1341</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9850.html" class="adam-name_link">William de Bunbury</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1346</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5220.html" class="adam-name_link">Walter de Hawksworth</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data">
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date">1350</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date">1350</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5221.html" class="adam-name_link">Elizabeth Bradley</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1350</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9848.html" class="adam-name_link">Matilda de Bunbury</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1356</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9847.html" class="adam-name_link">Richard de Bunbury</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1356</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9848.html" class="adam-name_link">Matilda de Bunbury</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1356</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9853.html" class="adam-name_link">Roger de Bunbury</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
-<span>[<a href="sources-S41.html" title="[S41]
-The Baronetage of England
-Page: 49
-Page: 49
-">S41:49</a>]</span> </td><td class="adam-claim_date">aft 1363</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S41.html" data-toggle="popover" title="[S41] The Baronetage of England
+Page: 49">S41:49</a>]</span> </td><td class="adam-claim_date">aft 1363</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9853.html" class="adam-name_link">Roger de Bunbury</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1363</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9853.html" class="adam-name_link">Roger de Bunbury</a></td><td class="adam-claim_tag">Living</td><td class="adam-claim_data">
-<span>[<a href="sources-S41.html" title="[S41]
-The Baronetage of England
-Page: 48
-Page: 48
-">S41:48</a>]</span> </td><td class="adam-claim_date">calc 1363</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S41.html" data-toggle="popover" title="[S41] The Baronetage of England
+Page: 48">S41:48</a>]</span> </td><td class="adam-claim_date">calc 1363</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr><td></td><td></td><td><table><tr><td><div class="adam-comment"></div><div class="adam-comment">living 36 Edw III</div></td></tr></table></td><td></td><td></td><td></td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5231.html" class="adam-name_link">John Wentworth</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data">
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date">1369</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5232.html" class="adam-name_link">Agnes Dronsfield</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1369</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5231.html" class="adam-name_link">John Wentworth</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data">
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date">1369</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5118.html" class="adam-name_link">Robergia</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1370</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5117.html" class="adam-name_link">Henry Borden</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-england-kent-headcorn.html" class="adam-location_link">Headcorn, Kent, England</a>
 
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date">bet 1370 and 1380</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5118.html" class="adam-name_link">Robergia</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1370</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5217.html" class="adam-name_link">John de Hawksworth</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data">
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date">1375</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date">bet 1370 and 1380</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5218.html" class="adam-name_link">_____ Radcliffe</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1375</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9942.html" class="adam-name_link">Edward Dutton</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1380</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5217.html" class="adam-name_link">John de Hawksworth</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data">
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date">1375</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9854.html" class="adam-name_link">Henry de Bunbury</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1380</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
-<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5213.html" class="adam-name_link">Sir Thomas Wortley</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1391</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I9942.html" class="adam-name_link">Edward Dutton</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1380</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5214.html" class="adam-name_link">Catherine Fitzwilliam</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1391</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
+<tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5213.html" class="adam-name_link">Sir Thomas Wortley</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1391</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5114.html" class="adam-name_link">Thomas Tornor</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1393</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5230.html" class="adam-name_link">Joan E. Beaumont</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"></td><td class="adam-claim_date">est 1395</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_estimated">estimated</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I5229.html" class="adam-name_link">John Wentworth</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data">
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date">1395</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date">1395</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 </table></td></tr>
 </table>
 </li>
 </ul></div>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.49.0.266</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 2.11.0.23</a>. </div>
 
 <!-- start footer code -->
-      </div>
-     </div>
-    </div>
-   </div>
   </div>
- <div id="site-footer">Brought to you by Tim Forsythe (<a href="http://timforsythe.com" target="_blank">http://timforsythe.com</a>)</div>
+ <div id="site-footer"></div>
 
 <!-- End Adam code -->
 
@@ -183,7 +160,7 @@ GEDCOM file imported on 10 January 2013
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br /><a href="http://www.timforsythe.com/tools/adam">Built by Adam 1.49.0.266. </a>- Last Updated: January 23, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 2.11.0.23.  - Last Updated: February 2, 2014</p>
 
 </div></div></div>
 
@@ -192,6 +169,5 @@ GEDCOM file imported on 10 January 2013
 </div>
 
 <!-- End #content -->
-
-</body>
-</html>
+  </body>
+ </html>

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.49.0.266)" />
+ <head>
+ <meta name="generator" content="Tim Forsythe (Adam 2.11.0.23)" />
  <meta property="og:title" content="HIDDEN _____ Profile - Minchin Genealogy | Minchin.ca" />
  <title>HIDDEN _____ Profile - Minchin Genealogy | Minchin.ca</title>
-  <head>
- <meta charset="UTF-8" />
-  <!-- end Header code -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="adam.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
@@ -16,23 +15,36 @@
   <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
   <script type="text/javascript" src="graph-handler.js"></script>
   <script type="text/javascript" src="tab-list-handler.js"></script>
-  <!-- start Post-header code -->
+  <script type="text/javascript" src="tooltip-handler.js"></script>
+  <!-- start header code -->
+  <meta charset="UTF-8" />
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-384291-3', 'minchin.ca');
+    ga('send', 'pageview');
+
+  </script>
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
   <link rel="stylesheet" href="adam.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/screen.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/adam-overrides.css" type="text/css" />
-<!--
------------------------------------------------
-Minchin.ca / Genealogy Pages
-Copyright 1994-2013 W. Minchin
-Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.5        January 17, 2014
------------------------------------------------ -->
-</head>	
-<!-- end Post-header code -->
+  <!--
+  -----------------------------------------------
+  Minchin.ca / Genealogy Pages
+  Copyright 1994-2014 W. Minchin
+  Prototype: 1.1.1 (rev C) January 13, 2010
+  Version:   1.0.4        December 29, 2013
+  ----------------------------------------------- -->
+  <!-- end Header code -->
+ </head>
+
+ <body class="container">
   <!-- start body code -->
-<body>
 <!-- Begin #content - Centers all content and provides edges for floated columns -->
 
 <div id="content">
@@ -52,9 +64,9 @@ Version:   1.0.5        January 17, 2014
 		</ul>
 	</div>
 	<div id="breadcrumbs">
-	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <span class="here"><a href=".">Genealogy</a></span> </p>
+	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <a href=".">Genealogy</a> > <span class="here">Minchin Genealogy | Minchin.ca<span></p>
 	</div>
-    <h1 id="blog-title"><a href=".">Genealogy</a></h1>
+    <h1 id="blog-title">Minchin Genealogy | Minchin.ca</h1>
     <p id="description"> </p>
 </div></div>
 
@@ -63,13 +75,7 @@ Version:   1.0.5        January 17, 2014
 <div id="full-width"><div id="full-width2"><div id="full-width3"><div class="post"><div class="post-body">
 
 <!-- Begin Adam code -->
- <div id="site-wrapper">
-  <div id="site-header"><a href=".">W. Minchin Presents</a></div>
-   <div id="site-content">
-    <div id="adam-wrapper">
-     <div id="adam-outer-content">
-      <div id="adam-inner-content">
-      <!-- end body code -->
+<div id="site-content">
 
 
 <h1 id="adam-page-title">HIDDEN _____ Profile</h1>
@@ -291,131 +297,131 @@ Version:   1.0.5        January 17, 2014
 <tr><td class="adam-al_generation">Generation 2</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[2] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8815.html" class="adam-name_link">Enoch Sexton</a> (~1877->1915)</b></td>
-  <td class="adam-al_path"><span title="Indiana">IN</span>-<span title="Texas">TX</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Indiana">IN</span>-<span data-toggle="tooltip" title="Texas">TX</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[3] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8778.html" class="adam-name_link">Nellie Jane Souder</a> (~1880->1915)</td>
-  <td class="adam-al_path"><span title="Texas">TX</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Texas">TX</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 3</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[6] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8362.html" class="adam-name_link">Jefferson Souder</a> (1844->1887)</b></td>
-  <td class="adam-al_path"><span title="Indiana">IN</span>-<span title="Texas">TX</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Indiana">IN</span>-<span data-toggle="tooltip" title="Texas">TX</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[7] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8361.html" class="adam-name_link">Mary Ellen East</a> (1845->1887)</td>
-  <td class="adam-al_path"><span title="Indiana">IN</span>-<span title="Texas">TX</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Indiana">IN</span>-<span data-toggle="tooltip" title="Texas">TX</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 4</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[14] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6796.html" class="adam-name_link">Neal East</a> (1823-1897)</td>
-  <td class="adam-al_path"><span title="Indiana">IN</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Indiana">IN</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[15] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6712.html" class="adam-name_link">Elizabeth Arwine</a> (1825-1855)</b></td>
-  <td class="adam-al_path"><span title="Indiana">IN</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Indiana">IN</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 5</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[28] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6806.html" class="adam-name_link">John East</a> (1796-1833)</td>
-  <td class="adam-al_path"><span title="Kentucky">KY</span>-<span title="Indiana">IN</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Kentucky">KY</span>-<span data-toggle="tooltip" title="Indiana">IN</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[29] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6902.html" class="adam-name_link">Elleanor East</a> (1798-1881)</td>
-  <td class="adam-al_path"><span title="Kentucky">KY</span>-<span title="Indiana">IN</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Kentucky">KY</span>-<span data-toggle="tooltip" title="Indiana">IN</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 6</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[56] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6776.html" class="adam-name_link">James East</a> (1770-1825)</td>
-  <td class="adam-al_path"><span title="Virginia">VA</span>-<span title="Kentucky">KY</span>-<span title="Indiana">IN</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Virginia">VA</span>-<span data-toggle="tooltip" title="Kentucky">KY</span>-<span data-toggle="tooltip" title="Indiana">IN</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[57] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6893.html" class="adam-name_link">Lucy Ann English</a> (1773-1814)</td>
-  <td class="adam-al_path"><span title="Virginia">VA</span>-<span title="Kentucky">KY</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Virginia">VA</span>-<span data-toggle="tooltip" title="Kentucky">KY</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[58] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6814.html" class="adam-name_link">Cornelius East</a> (1760-1821)</td>
-  <td class="adam-al_path"><span title="Virginia">VA</span>-<span title="Indiana">IN</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Virginia">VA</span>-<span data-toggle="tooltip" title="Indiana">IN</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[59] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8128.html" class="adam-name_link">Mary Hanna</a> (1764->1821)</b></td>
-  <td class="adam-al_path"><span title="Virginia">VA</span>-<span title="Indiana">IN</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Virginia">VA</span>-<span data-toggle="tooltip" title="Indiana">IN</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 7</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[112] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8131.html" class="adam-name_link">Josiah East</a> (1736->1785)</td>
-  <td class="adam-al_path"><span title="Virginia">VA</span>-<span title="Kentucky">KY</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Virginia">VA</span>-<span data-toggle="tooltip" title="Kentucky">KY</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[113] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8127.html" class="adam-name_link">Mrs Eleanor East</a> (1739->1785)</b></td>
-  <td class="adam-al_path"><span title="Virginia">VA</span>-<span title="Kentucky">KY</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Virginia">VA</span>-<span data-toggle="tooltip" title="Kentucky">KY</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[114] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8129.html" class="adam-name_link">Charles Frederick English</a> (1742-1805)</td>
-  <td class="adam-al_path"><span title="Virginia">VA</span>-<span title="Kentucky">KY</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Virginia">VA</span>-<span data-toggle="tooltip" title="Kentucky">KY</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[115] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8126.html" class="adam-name_link">Mrs Anne English</a> (1746-1805)</b></td>
-  <td class="adam-al_path"><span title="Virginia">VA</span>-<span title="Kentucky">KY</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Virginia">VA</span>-<span data-toggle="tooltip" title="Kentucky">KY</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[116] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8131.html" class="adam-name_link">Josiah East</a> (1736->1785) (same as 112)</td>
-  <td class="adam-al_path"><span title="Virginia">VA</span>-<span title="Kentucky">KY</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Virginia">VA</span>-<span data-toggle="tooltip" title="Kentucky">KY</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[117] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8127.html" class="adam-name_link">Mrs Eleanor East</a> (1739->1785)</b> (same as 113)</td>
-  <td class="adam-al_path"><span title="Virginia">VA</span>-<span title="Kentucky">KY</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Virginia">VA</span>-<span data-toggle="tooltip" title="Kentucky">KY</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 8</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[224] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8199.html" class="adam-name_link">Joseph East</a> (~1710-1772)</td>
-  <td class="adam-al_path"><span title="Virginia">VA</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Virginia">VA</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[225] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8178.html" class="adam-name_link">Mary Barnet</a> (~1714->1772)</b></td>
-  <td class="adam-al_path"><span title="Virginia">VA</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Virginia">VA</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[228] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8377.html" class="adam-name_link">Stephen English</a> (1720-1781)</b></td>
-  <td class="adam-al_path"><span title="Virginia">VA</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Virginia">VA</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[229] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I8378.html" class="adam-name_link">Diana Haynes</a> (~1725->1765)</td>
-  <td class="adam-al_path"><span title="Virginia">VA</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Virginia">VA</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 9</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[448] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I8400.html" class="adam-name_link">Edward East</a> (~1689-1734)</i></td>
-  <td class="adam-al_path"><span title="Somerset">SOM</span>-<span title="Virginia">VA</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Somerset">SOM</span>-<span data-toggle="tooltip" title="Virginia">VA</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[449] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8928.html" class="adam-name_link">Mrs Edward East</a> (~1691->1718)</b></td>
-  <td class="adam-al_path"><span title="Virginia">VA</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Virginia">VA</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[458] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8379.html" class="adam-name_link">Henry Haynes</a> (~1701-1784)</b></td>
-  <td class="adam-al_path"><span title="Virginia">VA</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Virginia">VA</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[459] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8929.html" class="adam-name_link">Mrs Mary Haynes</a> (~1707->1723)</b></td>
-  <td class="adam-al_path"><span title="Virginia">VA</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Virginia">VA</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 10</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[896] <span class="adam-aid">&nbsp;&nbsp;</span><i><b><a href="profile-I8411.html" class="adam-name_link">Thomas East</a> (1640-1727)</b></i></td>
-  <td class="adam-al_path"><span title="England">ENG</span>-<span title="Virginia">VA</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Somerset">SOM</span>-<span data-toggle="tooltip" title="Virginia">VA</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[897] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I8412.html" class="adam-name_link">Winifred Hudnate Napper, (Widow)</a> (~1648-~1690)</b></td>
-  <td class="adam-al_path"><span title="Virginia">VA</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Virginia">VA</span></td>
 </tr>
 </table>
 </div>
@@ -423,7 +429,7 @@ Version:   1.0.5        January 17, 2014
 <div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <div class="floatmapbuttons"><p>
-<span class="mapbuttonspan"><a href="javascript:void(0);" id="togglemarkers" class="mapbutton">Toggle Markers</a></span>
+<span class="mapbuttonspan"><a href="javascript:void(0);" id="togglemarkers" class="btn btn-success">Toggle Markers</a></span>
 </p></div>
 
 <div id='adam-heat-map'></div>
@@ -438,7 +444,7 @@ var mcOptions={styles:[{ height:35,width:35,url:"mapmarker1.png"},
  { height:35,width:35,url:"mapmarker4.png"},
  { height:35,width:35,url:"mapmarker5.png"}]};
 function initializePins() {
- addPin(31.9686,-99.9018,1,myImageW,'Nellie Jane Souder','<div class="infowindow"><p>Coordinates: 31.9686, -99.9018</p><span class="adam-map-location"><a href="places-usa-texas.html" class="adam-location_link">Texas, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8778.html" class="adam-name_link">Nellie Jane Souder</a> (~1880->1915)</span></div>');addPin(40.2672,-86.1349,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 40.2672, -86.1349</p><span class="adam-map-location"><a href="places-usa-indiana.html" class="adam-location_link">Indiana, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8815.html" class="adam-name_link">Enoch Sexton</a> (~1877->1915)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8362.html" class="adam-name_link">Jefferson Souder</a> (1844->1887)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8361.html" class="adam-name_link">Mary Ellen East</a> (1845->1887)</span></div>');addPin(39.1035,-85.2624,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 39.1035, -85.2624</p><span class="adam-map-location"><a href="places-usa-indiana-ripley.html" class="adam-location_link">Ripley, Indiana, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6796.html" class="adam-name_link">Neal East</a> (1823-1897)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6712.html" class="adam-name_link">Elizabeth Arwine</a> (1825-1855)</span></div>');addPin(37.5429,-84.6506,1,myImageM,'John East','<div class="infowindow"><p>Coordinates: 37.5429, -84.6506</p><span class="adam-map-location"><a href="places-usa-kentucky-lincoln-lancaster.html" class="adam-location_link">Lancaster, Lincoln, Kentucky, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6806.html" class="adam-name_link">John East</a> (1796-1833)</span></div>');addPin(37.6195,-84.578,1,myImageW,'Elleanor East','<div class="infowindow"><p>Coordinates: 37.6195, -84.578</p><span class="adam-map-location"><a href="places-usa-kentucky-garrard-lancaster.html" class="adam-location_link">Lancaster, Garrard, Kentucky, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6902.html" class="adam-name_link">Elleanor East</a> (1798-1881)</span></div>');addPin(36.6667,-79.8833,1,myImageW,'Mrs Mary Haynes','<div class="infowindow"><p>Coordinates: 36.6667, -79.8833</p><span class="adam-map-location"><a href="places-usa-virginia-henry.html" class="adam-location_link">Henry, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8929.html" class="adam-name_link">Mrs Mary Haynes</a> (~1707->1723)</span></div>');addPin(37.5775,-79.7848,1,myImageW,'Lucy Ann English','<div class="infowindow"><p>Coordinates: 37.5775, -79.7848</p><span class="adam-map-location"><a href="places-usa-virginia-botetourt.html" class="adam-location_link">Botetourt, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6893.html" class="adam-name_link">Lucy Ann English</a> (1773-1814)</span></div>');addPin(37.3343,-79.5231,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 37.3343, -79.5231</p><span class="adam-map-location"><a href="places-usa-virginia-bedford.html" class="adam-location_link">Bedford, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8377.html" class="adam-name_link">Stephen English</a> (1720-1781)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8379.html" class="adam-name_link">Henry Haynes</a> (~1701-1784)</span></div>');addPin(37.8,-79.4333,1,myImageW,'Mary Hanna','<div class="infowindow"><p>Coordinates: 37.8, -79.4333</p><span class="adam-map-location"><a href="places-usa-virginia-rockbridge.html" class="adam-location_link">Rockbridge, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8128.html" class="adam-name_link">Mary Hanna</a> (1764->1821)</span></div>');addPin(37.4316,-78.6569,5,myImage,'5 Persons','<div class="infowindow"><p>Coordinates: 37.4316, -78.6569</p><span class="adam-map-location"><a href="places-usa-virginia.html" class="adam-location_link">Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8127.html" class="adam-name_link">Mrs Eleanor East</a> (1739->1785)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8129.html" class="adam-name_link">Charles Frederick English</a> (1742-1805)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8126.html" class="adam-name_link">Mrs Anne English</a> (1746-1805)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8127.html" class="adam-name_link">Mrs Eleanor East</a> (1739->1785)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8412.html" class="adam-name_link">Winifred Hudnate Napper, (Widow)</a> (~1648-~1690)</span></div>');addPin(37.9782,-77.963,5,myImage,'5 Persons','<div class="infowindow"><p>Coordinates: 37.9782, -77.963</p><span class="adam-map-location"><a href="places-usa-virginia-louisa.html" class="adam-location_link">Louisa, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6776.html" class="adam-name_link">James East</a> (1770-1825)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6814.html" class="adam-name_link">Cornelius East</a> (1760-1821)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8131.html" class="adam-name_link">Josiah East</a> (1736->1785)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8131.html" class="adam-name_link">Josiah East</a> (1736->1785)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8178.html" class="adam-name_link">Mary Barnet</a> (~1714->1772)</span></div>');addPin(38.185,-77.656,1,myImageW,'Diana Haynes','<div class="infowindow"><p>Coordinates: 38.185, -77.656</p><span class="adam-map-location"><a href="places-usa-virginia-spotsylvania.html" class="adam-location_link">Spotsylvania, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8378.html" class="adam-name_link">Diana Haynes</a> (~1725->1765)</span></div>');addPin(37.55,-77.3667,1,myImageM,'Joseph East','<div class="infowindow"><p>Coordinates: 37.55, -77.3667</p><span class="adam-map-location"><a href="places-usa-virginia-henrico.html" class="adam-location_link">Henrico, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8199.html" class="adam-name_link">Joseph East</a> (~1710-1772)</span></div>');addPin(51.3758,-2.3599,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 51.3758, -2.3599</p><span class="adam-map-location"><a href="places-england-somerset-bath.html" class="adam-location_link">Bath, Somerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8400.html" class="adam-name_link">Edward East</a> (~1689-1734)</span><br/><br/><span class="adam-map-location"><a href="places-england-bath.html" class="adam-location_link">Bath, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8411.html" class="adam-name_link">Thomas East</a> (1640-1727)</span></div>');
+ addPin(31.9686,-99.9018,1,myImageW,'Nellie Jane Souder','<div class="infowindow"><p>Coordinates: 31.9686, -99.9018</p><span class="adam-map-location"><a href="places-usa-texas.html" class="adam-location_link">Texas, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8778.html" class="adam-name_link">Nellie Jane Souder</a> (~1880->1915)</span></div>');addPin(40.2672,-86.1349,3,myImage,'3 Persons','<div class="infowindow"><p>Coordinates: 40.2672, -86.1349</p><span class="adam-map-location"><a href="places-usa-indiana.html" class="adam-location_link">Indiana, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8815.html" class="adam-name_link">Enoch Sexton</a> (~1877->1915)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8362.html" class="adam-name_link">Jefferson Souder</a> (1844->1887)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8361.html" class="adam-name_link">Mary Ellen East</a> (1845->1887)</span></div>');addPin(39.1035,-85.2624,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 39.1035, -85.2624</p><span class="adam-map-location"><a href="places-usa-indiana-ripley.html" class="adam-location_link">Ripley, Indiana, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6796.html" class="adam-name_link">Neal East</a> (1823-1897)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6712.html" class="adam-name_link">Elizabeth Arwine</a> (1825-1855)</span></div>');addPin(37.5429,-84.6506,1,myImageM,'John East','<div class="infowindow"><p>Coordinates: 37.5429, -84.6506</p><span class="adam-map-location"><a href="places-usa-kentucky-lincoln-lancaster.html" class="adam-location_link">Lancaster, Lincoln, Kentucky, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6806.html" class="adam-name_link">John East</a> (1796-1833)</span></div>');addPin(37.6195,-84.578,1,myImageW,'Elleanor East','<div class="infowindow"><p>Coordinates: 37.6195, -84.578</p><span class="adam-map-location"><a href="places-usa-kentucky-garrard-lancaster.html" class="adam-location_link">Lancaster, Garrard, Kentucky, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6902.html" class="adam-name_link">Elleanor East</a> (1798-1881)</span></div>');addPin(36.6667,-79.8833,1,myImageW,'Mrs Mary Haynes','<div class="infowindow"><p>Coordinates: 36.6667, -79.8833</p><span class="adam-map-location"><a href="places-usa-virginia-henry.html" class="adam-location_link">Henry, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8929.html" class="adam-name_link">Mrs Mary Haynes</a> (~1707->1723)</span></div>');addPin(37.5775,-79.7848,1,myImageW,'Lucy Ann English','<div class="infowindow"><p>Coordinates: 37.5775, -79.7848</p><span class="adam-map-location"><a href="places-usa-virginia-botetourt.html" class="adam-location_link">Botetourt, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6893.html" class="adam-name_link">Lucy Ann English</a> (1773-1814)</span></div>');addPin(37.3343,-79.5231,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 37.3343, -79.5231</p><span class="adam-map-location"><a href="places-usa-virginia-bedford.html" class="adam-location_link">Bedford, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8377.html" class="adam-name_link">Stephen English</a> (1720-1781)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8379.html" class="adam-name_link">Henry Haynes</a> (~1701-1784)</span></div>');addPin(37.8,-79.4333,1,myImageW,'Mary Hanna','<div class="infowindow"><p>Coordinates: 37.8, -79.4333</p><span class="adam-map-location"><a href="places-usa-virginia-rockbridge.html" class="adam-location_link">Rockbridge, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8128.html" class="adam-name_link">Mary Hanna</a> (1764->1821)</span></div>');addPin(37.4316,-78.6569,5,myImage,'5 Persons','<div class="infowindow"><p>Coordinates: 37.4316, -78.6569</p><span class="adam-map-location"><a href="places-usa-virginia.html" class="adam-location_link">Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8127.html" class="adam-name_link">Mrs Eleanor East</a> (1739->1785)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8129.html" class="adam-name_link">Charles Frederick English</a> (1742-1805)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8126.html" class="adam-name_link">Mrs Anne English</a> (1746-1805)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8127.html" class="adam-name_link">Mrs Eleanor East</a> (1739->1785)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8412.html" class="adam-name_link">Winifred Hudnate Napper, (Widow)</a> (~1648-~1690)</span></div>');addPin(37.9782,-77.963,5,myImage,'5 Persons','<div class="infowindow"><p>Coordinates: 37.9782, -77.963</p><span class="adam-map-location"><a href="places-usa-virginia-louisa.html" class="adam-location_link">Louisa, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6776.html" class="adam-name_link">James East</a> (1770-1825)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6814.html" class="adam-name_link">Cornelius East</a> (1760-1821)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8131.html" class="adam-name_link">Josiah East</a> (1736->1785)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8131.html" class="adam-name_link">Josiah East</a> (1736->1785)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8178.html" class="adam-name_link">Mary Barnet</a> (~1714->1772)</span></div>');addPin(38.185,-77.656,1,myImageW,'Diana Haynes','<div class="infowindow"><p>Coordinates: 38.185, -77.656</p><span class="adam-map-location"><a href="places-usa-virginia-spotsylvania.html" class="adam-location_link">Spotsylvania, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8378.html" class="adam-name_link">Diana Haynes</a> (~1725->1765)</span></div>');addPin(37.55,-77.3667,1,myImageM,'Joseph East','<div class="infowindow"><p>Coordinates: 37.55, -77.3667</p><span class="adam-map-location"><a href="places-usa-virginia-henrico.html" class="adam-location_link">Henrico, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8199.html" class="adam-name_link">Joseph East</a> (~1710-1772)</span></div>');addPin(51.3758,-2.3599,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 51.3758, -2.3599</p><span class="adam-map-location"><a href="places-england-somerset-bath.html" class="adam-location_link">Bath, Somerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8400.html" class="adam-name_link">Edward East</a> (~1689-1734)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8411.html" class="adam-name_link">Thomas East</a> (1640-1727)</span></div>');
  markerCluster = new MarkerClusterer(map, myPins, mcOptions);
  var myData={max:1,data:[{lat:31.9686,lng:-99.9018,count:0.3},{lat:40.2672,lng:-86.1349,count:0.9},{lat:39.1035,lng:-85.2624,count:0.6},{lat:37.5429,lng:-84.6506,count:0.3},{lat:37.6195,lng:-84.578,count:0.3},{lat:36.6667,lng:-79.8833,count:0.3},{lat:37.5775,lng:-79.7848,count:0.3},{lat:37.3343,lng:-79.5231,count:0.6},{lat:37.8,lng:-79.4333,count:0.3},{lat:37.4316,lng:-78.6569,count:1.5},{lat:37.9782,lng:-77.963,count:1.5},{lat:38.185,lng:-77.656,count:0.3},{lat:37.55,lng:-77.3667,count:0.3},{lat:51.3758,lng:-2.3599,count:0.6},]};
  google.maps.event.addListenerOnce(map,'idle',function(){heatmap.setDataSet(myData);});
@@ -452,8 +458,10 @@ $(document).ready(function () {
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     e.target
     e.relatedTarget
-  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+    if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      var currCenter = map.getCenter();
       google.maps.event.trigger(map, 'resize');
+      map.setCenter(currCenter);
     }
   });
 });
@@ -461,15 +469,11 @@ $(document).ready(function () {
 </div>
 </div>
 
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.49.0.266</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 2.11.0.23</a>. </div>
 
 <!-- start footer code -->
-      </div>
-     </div>
-    </div>
-   </div>
   </div>
- <div id="site-footer">Brought to you by Tim Forsythe (<a href="http://timforsythe.com" target="_blank">http://timforsythe.com</a>)</div>
+ <div id="site-footer"></div>
 
 <!-- End Adam code -->
 
@@ -481,7 +485,7 @@ $(document).ready(function () {
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br /><a href="http://www.timforsythe.com/tools/adam">Built by Adam 1.49.0.266. </a>- Last Updated: January 23, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 2.11.0.23.  - Last Updated: February 2, 2014</p>
 
 </div></div></div>
 
@@ -490,6 +494,5 @@ $(document).ready(function () {
 </div>
 
 <!-- End #content -->
-
-</body>
-</html>
+  </body>
+ </html>

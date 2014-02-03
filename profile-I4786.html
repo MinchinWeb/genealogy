@@ -1,14 +1,13 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.49.0.266)" />
+ <head>
+ <meta name="generator" content="Tim Forsythe (Adam 2.11.0.23)" />
  <meta property="og:title" content="Sarah Elizabeth Brown Profile - Minchin Genealogy | Minchin.ca" />
  <title>Sarah Elizabeth Brown Profile - Minchin Genealogy | Minchin.ca</title>
-  <head>
- <meta charset="UTF-8" />
-  <!-- end Header code -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="adam.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
@@ -16,23 +15,36 @@
   <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
   <script type="text/javascript" src="graph-handler.js"></script>
   <script type="text/javascript" src="tab-list-handler.js"></script>
-  <!-- start Post-header code -->
+  <script type="text/javascript" src="tooltip-handler.js"></script>
+  <!-- start header code -->
+  <meta charset="UTF-8" />
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-384291-3', 'minchin.ca');
+    ga('send', 'pageview');
+
+  </script>
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
   <link rel="stylesheet" href="adam.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/screen.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/adam-overrides.css" type="text/css" />
-<!--
------------------------------------------------
-Minchin.ca / Genealogy Pages
-Copyright 1994-2013 W. Minchin
-Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.5        January 17, 2014
------------------------------------------------ -->
-</head>	
-<!-- end Post-header code -->
+  <!--
+  -----------------------------------------------
+  Minchin.ca / Genealogy Pages
+  Copyright 1994-2014 W. Minchin
+  Prototype: 1.1.1 (rev C) January 13, 2010
+  Version:   1.0.4        December 29, 2013
+  ----------------------------------------------- -->
+  <!-- end Header code -->
+ </head>
+
+ <body class="container">
   <!-- start body code -->
-<body>
 <!-- Begin #content - Centers all content and provides edges for floated columns -->
 
 <div id="content">
@@ -52,9 +64,9 @@ Version:   1.0.5        January 17, 2014
 		</ul>
 	</div>
 	<div id="breadcrumbs">
-	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <span class="here"><a href=".">Genealogy</a></span> </p>
+	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <a href=".">Genealogy</a> > <span class="here">Minchin Genealogy | Minchin.ca<span></p>
 	</div>
-    <h1 id="blog-title"><a href=".">Genealogy</a></h1>
+    <h1 id="blog-title">Minchin Genealogy | Minchin.ca</h1>
     <p id="description"> </p>
 </div></div>
 
@@ -63,13 +75,7 @@ Version:   1.0.5        January 17, 2014
 <div id="full-width"><div id="full-width2"><div id="full-width3"><div class="post"><div class="post-body">
 
 <!-- Begin Adam code -->
- <div id="site-wrapper">
-  <div id="site-header"><a href=".">W. Minchin Presents</a></div>
-   <div id="site-content">
-    <div id="adam-wrapper">
-     <div id="adam-outer-content">
-      <div id="adam-inner-content">
-      <!-- end body code -->
+<div id="site-content">
 
 
 <h1 id="adam-page-title">Sarah Elizabeth Brown Profile</h1>
@@ -108,9 +114,7 @@ Version:   1.0.5        January 17, 2014
 </td></tr></table></td></tr>
 <tr><td><table class="adam-name_list adam-table_box">
 <tr class="adam-claim"><td class="adam-claim_tag">Name</td><td class="adam-claim_data"> Sarah Elizabeth Brown
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 </table></td></tr>
 <tr><td><table class="adam-userids adam-table_box">
 <tr class="adam-claim"><td class="adam-claim_tag">Reference: </td><td class="adam-claim_data"> 178EBEAC786F45F08E35A0573C6292FC11F5</td></tr>
@@ -143,23 +147,15 @@ GEDCOM file imported on 10 January 2013
 <tr><td><table class="adam-events adam-table_box">
 <tr class="adam-claim"><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-utah-salt-lake-murray.html" class="adam-location_link">Murray, Salt Lake, Utah, United States</a>
 
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date">Feb 21, 1868</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date">Feb 21, 1868</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I5582.html" class="adam-name_link">Lorenzo Williams</a> (~1868-)
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date">Nov 2, 1890</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date">Nov 2, 1890</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date">May 8, 1962</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date">May 8, 1962</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 </table></td></tr>
 <tr><td><table class="adam-attrs adam-table_box">
 <tr class="adam-claim"><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I5581.html" class="adam-name_link">Charles Clayton</a> (~1868-)
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 </table></td></tr>
 </table>
 </li>
@@ -350,99 +346,99 @@ GEDCOM file imported on 10 January 2013
 <tr><td class="adam-al_generation">Generation 1</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4786.html" class="adam-name_link">Sarah Elizabeth Brown</a> (1868-1962)</td>
-  <td class="adam-al_path"><span title="Utah">UT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Utah">UT</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 2</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[2] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I4783.html" class="adam-name_link">Edwin Brown</a> (1841-1928)</i></td>
-  <td class="adam-al_path"><span title="Somerset">SOM</span>-<span title="Utah">UT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Somerset">SOM</span>-<span data-toggle="tooltip" title="Utah">UT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[3] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I4784.html" class="adam-name_link">Desdemona Fox</a> (1847-1935)</i></td>
-  <td class="adam-al_path"><span title="Warwickshire">WAR</span>-<span title="Utah">UT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Warwickshire">WAR</span>-<span data-toggle="tooltip" title="Utah">UT</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 3</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[4] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4879.html" class="adam-name_link">Jonathan Brown</a> (1818-1860)</td>
-  <td class="adam-al_path"><span title="Lincolnshire">LIN</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Lincolnshire">LIN</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[5] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I4880.html" class="adam-name_link">Sarah Ann Cousins</a> (1819-1898)</i></td>
-  <td class="adam-al_path"><span title="Berkshire">BRK</span>-<span title="Utah">UT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Berkshire">BRK</span>-<span data-toggle="tooltip" title="Utah">UT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[6] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4891.html" class="adam-name_link">George Sellman Fox</a> (1819-1904)</td>
-  <td class="adam-al_path"><span title="Worcestershire">WOR</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Worcestershire">WOR</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[7] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I4892.html" class="adam-name_link">Elizabeth Jones</a> (1824-1901)</i></td>
-  <td class="adam-al_path"><span title="Warwickshire">WAR</span>-<span title="Idaho">ID</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Warwickshire">WAR</span>-<span data-toggle="tooltip" title="Idaho">ID</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 4</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[8] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4881.html" class="adam-name_link">Jonathan Brown</a> (1794-1860)</td>
-  <td class="adam-al_path"><span title="Lincolnshire">LIN</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Lincolnshire">LIN</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[9] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4882.html" class="adam-name_link">Frances Mary Green</a> (1796-1878)</td>
-  <td class="adam-al_path"><span title="Norfolk">NFK</span>-<span title="Utah">UT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Norfolk">NFK</span>-<span data-toggle="tooltip" title="Utah">UT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[10] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4887.html" class="adam-name_link">George Cousins</a> (1800-1880)</td>
-  <td class="adam-al_path"><span title="Berkshire">BRK</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Berkshire">BRK</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[11] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4888.html" class="adam-name_link">Ann Herridge</a> (~1800-1898)</b></td>
-  <td class="adam-al_path"><span title="Berkshire">BRK</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Berkshire">BRK</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[12] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4893.html" class="adam-name_link">Richard Fox</a> (1790-1811)</b></td>
-  <td class="adam-al_path"><span title="Oxfordshire">OXF</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Oxfordshire">OXF</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[13] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4894.html" class="adam-name_link">Mary Sellman</a> (1793-~1850)</td>
-  <td class="adam-al_path"><span title="Oxfordshire">OXF</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Oxfordshire">OXF</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[14] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4897.html" class="adam-name_link">William Jones</a> (1804-)</b></td>
-  <td class="adam-al_path"><span title="Warwickshire">WAR</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Warwickshire">WAR</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[15] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4898.html" class="adam-name_link">Marie Reed (Reid)</a> (~1805-)</td>
-  <td class="adam-al_path"><span title="Warwickshire">WAR</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Warwickshire">WAR</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 5</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[16] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4883.html" class="adam-name_link">Jonathan Brown</a> (1762-1799)</b></td>
-  <td class="adam-al_path"><span title="Lincolnshire">LIN</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Lincolnshire">LIN</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[17] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4884.html" class="adam-name_link">Mary Taylor</a> (~1766-1826)</b></td>
-  <td class="adam-al_path"><span title="Lincolnshire">LIN</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Lincolnshire">LIN</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[18] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4885.html" class="adam-name_link">Henry William Green</a> (~1764-)</b></td>
-  <td class="adam-al_path"><span title="Norfolk">NFK</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Norfolk">NFK</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[19] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4886.html" class="adam-name_link">Frances Mary Roberts</a> (~1768-)</b></td>
-  <td class="adam-al_path"><span title="Norfolk">NFK</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Norfolk">NFK</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[20] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4889.html" class="adam-name_link">William Cousins</a> (~1768-)</b></td>
-  <td class="adam-al_path"><span title="Berkshire">BRK</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Berkshire">BRK</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[21] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4890.html" class="adam-name_link">Elizabeth Alburg</a> (~1772-)</b></td>
-  <td class="adam-al_path"><span title="Berkshire">BRK</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Berkshire">BRK</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[26] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4895.html" class="adam-name_link">John Sellman</a> (1767-1826)</b></td>
-  <td class="adam-al_path"><span title="Oxfordshire">OXF</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Oxfordshire">OXF</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[27] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4896.html" class="adam-name_link">Mary</a> (1768-1842)</b></td>
@@ -462,7 +458,7 @@ GEDCOM file imported on 10 January 2013
 <div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <div class="floatmapbuttons"><p>
-<span class="mapbuttonspan"><a href="javascript:void(0);" id="togglemarkers" class="mapbutton">Toggle Markers</a></span>
+<span class="mapbuttonspan"><a href="javascript:void(0);" id="togglemarkers" class="btn btn-success">Toggle Markers</a></span>
 </p></div>
 
 <div id='adam-heat-map'></div>
@@ -491,8 +487,10 @@ $(document).ready(function () {
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     e.target
     e.relatedTarget
-  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+    if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      var currCenter = map.getCenter();
       google.maps.event.trigger(map, 'resize');
+      map.setCenter(currCenter);
     }
   });
 });
@@ -506,15 +504,11 @@ $(document).ready(function () {
 Last Modified: Dec 30, 2012
 </li>
 </ul>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.49.0.266</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 2.11.0.23</a>. </div>
 
 <!-- start footer code -->
-      </div>
-     </div>
-    </div>
-   </div>
   </div>
- <div id="site-footer">Brought to you by Tim Forsythe (<a href="http://timforsythe.com" target="_blank">http://timforsythe.com</a>)</div>
+ <div id="site-footer"></div>
 
 <!-- End Adam code -->
 
@@ -526,7 +520,7 @@ Last Modified: Dec 30, 2012
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br /><a href="http://www.timforsythe.com/tools/adam">Built by Adam 1.49.0.266. </a>- Last Updated: January 23, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 2.11.0.23.  - Last Updated: February 2, 2014</p>
 
 </div></div></div>
 
@@ -535,6 +529,5 @@ Last Modified: Dec 30, 2012
 </div>
 
 <!-- End #content -->
-
-</body>
-</html>
+  </body>
+ </html>

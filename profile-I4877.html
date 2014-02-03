@@ -1,14 +1,13 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.49.0.266)" />
+ <head>
+ <meta name="generator" content="Tim Forsythe (Adam 2.11.0.23)" />
  <meta property="og:title" content="Uriah Curtis Profile - Minchin Genealogy | Minchin.ca" />
  <title>Uriah Curtis Profile - Minchin Genealogy | Minchin.ca</title>
-  <head>
- <meta charset="UTF-8" />
-  <!-- end Header code -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="adam.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
@@ -16,23 +15,36 @@
   <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
   <script type="text/javascript" src="graph-handler.js"></script>
   <script type="text/javascript" src="tab-list-handler.js"></script>
-  <!-- start Post-header code -->
+  <script type="text/javascript" src="tooltip-handler.js"></script>
+  <!-- start header code -->
+  <meta charset="UTF-8" />
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-384291-3', 'minchin.ca');
+    ga('send', 'pageview');
+
+  </script>
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
   <link rel="stylesheet" href="adam.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/screen.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/adam-overrides.css" type="text/css" />
-<!--
------------------------------------------------
-Minchin.ca / Genealogy Pages
-Copyright 1994-2013 W. Minchin
-Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.5        January 17, 2014
------------------------------------------------ -->
-</head>	
-<!-- end Post-header code -->
+  <!--
+  -----------------------------------------------
+  Minchin.ca / Genealogy Pages
+  Copyright 1994-2014 W. Minchin
+  Prototype: 1.1.1 (rev C) January 13, 2010
+  Version:   1.0.4        December 29, 2013
+  ----------------------------------------------- -->
+  <!-- end Header code -->
+ </head>
+
+ <body class="container">
   <!-- start body code -->
-<body>
 <!-- Begin #content - Centers all content and provides edges for floated columns -->
 
 <div id="content">
@@ -52,9 +64,9 @@ Version:   1.0.5        January 17, 2014
 		</ul>
 	</div>
 	<div id="breadcrumbs">
-	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <span class="here"><a href=".">Genealogy</a></span> </p>
+	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <a href=".">Genealogy</a> > <span class="here">Minchin Genealogy | Minchin.ca<span></p>
 	</div>
-    <h1 id="blog-title"><a href=".">Genealogy</a></h1>
+    <h1 id="blog-title">Minchin Genealogy | Minchin.ca</h1>
     <p id="description"> </p>
 </div></div>
 
@@ -63,13 +75,7 @@ Version:   1.0.5        January 17, 2014
 <div id="full-width"><div id="full-width2"><div id="full-width3"><div class="post"><div class="post-body">
 
 <!-- Begin Adam code -->
- <div id="site-wrapper">
-  <div id="site-header"><a href=".">W. Minchin Presents</a></div>
-   <div id="site-content">
-    <div id="adam-wrapper">
-     <div id="adam-outer-content">
-      <div id="adam-inner-content">
-      <!-- end body code -->
+<div id="site-content">
 
 
 <h1 id="adam-page-title">Uriah Curtis Profile</h1>
@@ -108,9 +114,7 @@ Version:   1.0.5        January 17, 2014
 </td></tr></table></td></tr>
 <tr><td><table class="adam-name_list adam-table_box">
 <tr class="adam-claim"><td class="adam-claim_tag">Name</td><td class="adam-claim_data"> Uriah Curtis
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 </table></td></tr>
 <tr><td><table class="adam-userids adam-table_box">
 <tr class="adam-claim"><td class="adam-claim_tag">Reference: </td><td class="adam-claim_data"> 25E3E6581BB841699E95FB2226F1DE969E5C</td></tr>
@@ -149,20 +153,14 @@ GEDCOM file imported on 10 January 2013
 <tr><td><table class="adam-events adam-table_box">
 <tr class="adam-claim"><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-new-york-rensselaer-stephentown.html" class="adam-location_link">Stephentown, Rensselaer, New York, United States</a>
 
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date">May 5, 1805</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date">May 5, 1805</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-usa-utah-salem.html" class="adam-location_link">Salem, Utah, United States</a>
 
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date">Oct 18, 1863</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date">Oct 18, 1863</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 </table></td></tr>
 <tr><td><table class="adam-attrs adam-table_box">
 <tr class="adam-claim"><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I4878.html" class="adam-name_link">Phoebe Martin</a> (1806-)
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 </table></td></tr>
 </table>
 </li>
@@ -365,27 +363,27 @@ GEDCOM file imported on 10 January 2013
 <tr><td class="adam-al_generation">Generation 1</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4877.html" class="adam-name_link">Uriah Curtis</a> (1805-1863)</td>
-  <td class="adam-al_path"><span title="New York">NY</span>-<span title="Utah">UT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="New York">NY</span>-<span data-toggle="tooltip" title="Utah">UT</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 2</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[2] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4950.html" class="adam-name_link">Joseph Curtis</a> (1769-1848)</td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span>-<span title="Iowa">IA</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span>-<span data-toggle="tooltip" title="Iowa">IA</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[3] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4951.html" class="adam-name_link">Elsa Diadama Brockway</a> (1773-1847)</td>
-  <td class="adam-al_path"><span title="New York">NY</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="New York">NY</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 3</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[4] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4952.html" class="adam-name_link">Thomas Curtis</a> (1734-)</td>
-  <td class="adam-al_path"><span title="Connecticut">CT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Connecticut">CT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[5] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4953.html" class="adam-name_link">Bridget Crandall</a> (1739-)</td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[6] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4954.html" class="adam-name_link">Justus Brockway</a> (~1747-1827)</td>
@@ -393,29 +391,29 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[7] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4955.html" class="adam-name_link">Alsa Gardner</a> (1756-1847)</td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span>-<span title="New York">NY</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span>-<span data-toggle="tooltip" title="New York">NY</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 4</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[8] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4956.html" class="adam-name_link">James Curtis</a> (1691-1741)</td>
-  <td class="adam-al_path"><span title="Connecticut">CT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Connecticut">CT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[9] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4957.html" class="adam-name_link">Anna Shaw</a> (1695-)</td>
-  <td class="adam-al_path"><span title="Connecticut">CT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Connecticut">CT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[10] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4969.html" class="adam-name_link">Peter Crandall</a> (1715-)</td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[11] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4970.html" class="adam-name_link">Bridget Brownell</a> (1713-)</td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[12] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5008.html" class="adam-name_link">Samuel Brockway</a> (~1717-1806)</td>
-  <td class="adam-al_path"><span title="Connecticut">CT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Connecticut">CT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[13] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5009.html" class="adam-name_link">Margaret Smith</a> (1725-)</td>
@@ -423,17 +421,17 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[14] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5027.html" class="adam-name_link">Benjamin Gardner</a> (1733-1809)</td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span>-<span title="New York">NY</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span>-<span data-toggle="tooltip" title="New York">NY</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[15] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5028.html" class="adam-name_link">Elizabeth Olin</a> (1737-1813)</td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span>-<span title="New York">NY</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span>-<span data-toggle="tooltip" title="New York">NY</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 5</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[16] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4958.html" class="adam-name_link">Issac Curtis</a> (~1664-)</td>
-  <td class="adam-al_path"><span title="Connecticut">CT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Connecticut">CT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[17] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4959.html" class="adam-name_link">Mrs. _____ Curtis</a> (1668-)</b></td>
@@ -441,35 +439,35 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[18] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4965.html" class="adam-name_link">Daniel Shaw</a> (~1650-)</td>
-  <td class="adam-al_path"><span title="Connecticut">CT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Connecticut">CT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[19] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4966.html" class="adam-name_link">Ruth William</a> (~1654-)</b></td>
-  <td class="adam-al_path"><span title="Connecticut">CT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Connecticut">CT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[20] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4973.html" class="adam-name_link">Samuel Crandall</a> (1686-)</td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[21] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4974.html" class="adam-name_link">Mary Wilbor (Wilbur)</a> (1685-1771)</td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[22] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4971.html" class="adam-name_link">Thomas Brownell</a> (1687-)</b></td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[23] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4972.html" class="adam-name_link">Grace Eldred</a> (~1686-)</b></td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[24] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5010.html" class="adam-name_link">Samuel Brockway</a> (1692-1757)</td>
-  <td class="adam-al_path"><span title="Connecticut">CT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Connecticut">CT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[25] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5011.html" class="adam-name_link">Lydia Johnson</a> (1695-)</td>
-  <td class="adam-al_path"><span title="Connecticut">CT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Connecticut">CT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[26] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5025.html" class="adam-name_link">Joseph Smith</a> (~1687-)</b></td>
@@ -477,29 +475,29 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[27] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5026.html" class="adam-name_link">Margaret Brockway</a> (1701-)</td>
-  <td class="adam-al_path"><span title="Connecticut">CT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Connecticut">CT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[28] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5043.html" class="adam-name_link">Benjamin Gardner</a> (1705-1749)</td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span>-<span title="Connecticut">CT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span>-<span data-toggle="tooltip" title="Connecticut">CT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[29] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5044.html" class="adam-name_link">Mary Howland</a> (1710-)</td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[30] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5029.html" class="adam-name_link">Joseph Olin</a> (1710-)</td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[31] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5030.html" class="adam-name_link">Mary Aylesworth</a> (~1741-)</td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 6</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[32] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I4960.html" class="adam-name_link">Thomas Curtis</a> (1594-1681)</i></td>
-  <td class="adam-al_path"><span title="Essex">ESS</span>-<span title="Connecticut">CT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Essex">ESS</span>-<span data-toggle="tooltip" title="Connecticut">CT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[33] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4961.html" class="adam-name_link">Elizabeth Salmon</a> (~1614-)</b></td>
@@ -507,23 +505,23 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[36] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4967.html" class="adam-name_link">Thomas Shaw</a> (~1622-1701)</b></td>
-  <td class="adam-al_path"><span title="Mississippi">MS</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Mississippi">MS</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[37] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4968.html" class="adam-name_link">Mrs. Mary Shaw</a> (~1626-)</b></td>
-  <td class="adam-al_path"><span title="Mississippi">MS</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Mississippi">MS</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[40] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4975.html" class="adam-name_link">Samuel Crandall</a> (1663-1737)</td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[41] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4976.html" class="adam-name_link">Sarah Colby</a> (1666-1758)</td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[42] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4981.html" class="adam-name_link">William Wilbor</a> (1660-1738)</td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[43] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4982.html" class="adam-name_link">Sarah Tallman</a> (~1664-<1732)</td>
@@ -531,7 +529,7 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[48] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5012.html" class="adam-name_link">Wolston Brockway</a> (1668-1707)</td>
-  <td class="adam-al_path"><span title="Connecticut">CT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Connecticut">CT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[49] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5013.html" class="adam-name_link">Margaret</a> (~1668-)</b></td>
@@ -539,15 +537,15 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[50] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5019.html" class="adam-name_link">Nathaniel Johnson</a> (1670-1726)</td>
-  <td class="adam-al_path"><span title="Connecticut">CT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Connecticut">CT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[51] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5020.html" class="adam-name_link">Hannah Hoadley</a> (1670-1725)</td>
-  <td class="adam-al_path"><span title="Connecticut">CT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Connecticut">CT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[54] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5012.html" class="adam-name_link">Wolston Brockway</a> (1668-1707) (same as 48)</td>
-  <td class="adam-al_path"><span title="Connecticut">CT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Connecticut">CT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[55] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5013.html" class="adam-name_link">Margaret</a> (~1668-)</b> (same as 49)</td>
@@ -555,11 +553,11 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[56] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5050.html" class="adam-name_link">Nathaniel Gardner</a> (1673-1734)</td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[57] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5051.html" class="adam-name_link">Mary Greene</a> (~1677-)</b></td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[58] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5045.html" class="adam-name_link">Daniel Howland</a> (1661-<1714)</td>
@@ -567,19 +565,19 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[59] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5046.html" class="adam-name_link">Mary Sampson</a> (~1663-1736)</td>
-  <td class="adam-al_path"><span title="Massachusetts">MA</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Massachusetts">MA</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[60] <span class="adam-aid">&nbsp;&nbsp;</span><i><b><a href="profile-I5031.html" class="adam-name_link">John Olin</a> (1664-1725)</b></i></td>
-  <td class="adam-al_path"><span title="Wales">WLS</span>-<span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Wales">WLS</span>-<span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[61] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5032.html" class="adam-name_link">Susannah Spencer</a> (1681-)</td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[62] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5035.html" class="adam-name_link">John Aylesworth</a> (~1685-1771)</td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[63] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5036.html" class="adam-name_link">Dorcas Jones</a> (~1689-)</td>
@@ -589,47 +587,47 @@ GEDCOM file imported on 10 January 2013
 <tr><td class="adam-al_generation">Generation 7</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[64] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4962.html" class="adam-name_link">Thomas Curtis</a> (1560-1605)</td>
-  <td class="adam-al_path"><span title="Essex">ESS</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Essex">ESS</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[80] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4977.html" class="adam-name_link">John Crandall</a> (~1629-1676)</b></td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[81] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4978.html" class="adam-name_link">_____ #1 Mrs. Crandall</a> (~1633-1670)</b></td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[82] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4979.html" class="adam-name_link">Edward Colby</a> (1638-)</b></td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[83] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4980.html" class="adam-name_link">Mrs. _____ Colby</a> (~1642-)</b></td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[84] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4983.html" class="adam-name_link">William Wilbor</a> (1630-1710)</td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[85] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4984.html" class="adam-name_link">Martha</a> (~1634-)</b></td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[86] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I4987.html" class="adam-name_link">Peter Tallman</a> (1623-1708)</i></td>
-  <td class="adam-al_path"><span title="Germany">DEU</span>-<span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Germany">DEU</span>-<span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[87] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4988.html" class="adam-name_link">Ann Hill</a> (~1628-)</td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[96] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I5014.html" class="adam-name_link">Wolston Brockway</a> (~1638-1717)</i></td>
-  <td class="adam-al_path"><span title="England">ENG</span>-<span title="Connecticut">CT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="England">ENG</span>-<span data-toggle="tooltip" title="Connecticut">CT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[97] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5015.html" class="adam-name_link">Hannah Briggs</a> (1642-1687)</td>
-  <td class="adam-al_path"><span title="Massachusetts">MA</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Massachusetts">MA</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[100] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5021.html" class="adam-name_link">Nathaniel Johnson</a> (~1636-)</b></td>
@@ -641,19 +639,19 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[102] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5023.html" class="adam-name_link">William Hoadley</a> (~1630-1709)</b></td>
-  <td class="adam-al_path"><span title="Connecticut">CT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Connecticut">CT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[103] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5024.html" class="adam-name_link">Mary</a> (~1634-1703)</b></td>
-  <td class="adam-al_path"><span title="Connecticut">CT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Connecticut">CT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[112] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I5052.html" class="adam-name_link">Benoni Gardner</a> (1636-1731)</i></td>
-  <td class="adam-al_path"><span title="England">ENG</span>-<span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="England">ENG</span>-<span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[113] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5053.html" class="adam-name_link">Mary</a> (1645-)</b></td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[116] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5048.html" class="adam-name_link">Zoeth Howland</a> (~1627-)</b></td>
@@ -673,11 +671,11 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[123] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5034.html" class="adam-name_link">Susanna Griffin</a> (~1644-1719)</b></td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[124] <span class="adam-aid">&nbsp;&nbsp;</span><i><b><a href="profile-I5039.html" class="adam-name_link">Arthur Aylesworth</a> (~1656-1725)</b></i></td>
-  <td class="adam-al_path"><span title="Wales">WLS</span>-<span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Wales">WLS</span>-<span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[125] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5040.html" class="adam-name_link">Mary Brown</a> (~1660-<1725)</td>
@@ -695,35 +693,35 @@ GEDCOM file imported on 10 January 2013
 <tr><td class="adam-al_generation">Generation 8</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[128] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4963.html" class="adam-name_link">William Curtis</a> (~1540-1585)</td>
-  <td class="adam-al_path"><span title="Essex">ESS</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Essex">ESS</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[129] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4964.html" class="adam-name_link">Mrs. Agnes (Curtis)</a> (~1540-1585)</b></td>
-  <td class="adam-al_path"><span title="Essex">ESS</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Essex">ESS</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[168] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4985.html" class="adam-name_link">Samuel Wilbore</a> (~1588-1656)</b></td>
-  <td class="adam-al_path"><span title="Lancashire">LAN</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Lancashire">LAN</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[169] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4986.html" class="adam-name_link">Ann Smith</a> (~1598-)</b></td>
-  <td class="adam-al_path"><span title="England">ENG</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="England">ENG</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[172] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4991.html" class="adam-name_link">Peter Talemann</a> (1589-)</td>
-  <td class="adam-al_path"><span title="Belgium">BEL</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Belgium">BEL</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[173] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4992.html" class="adam-name_link">Marie von Peen</a> (~1601-)</td>
-  <td class="adam-al_path"><span title="Netherlands">NLD</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Netherlands">NLD</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[174] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4989.html" class="adam-name_link">Phillip Hill</a> (~1602-)</b></td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[175] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4990.html" class="adam-name_link">Ann</a> (~1606-)</b></td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[193] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5016.html" class="adam-name_link">_____ Wolterton</a> (~1604-)</b></td>
@@ -731,19 +729,19 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[194] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5017.html" class="adam-name_link">William Briggs</a> (1616-1687)</b></td>
-  <td class="adam-al_path"><span title="Massachusetts">MA</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Massachusetts">MA</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[195] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5018.html" class="adam-name_link">Mary</a> (~1620-)</b></td>
-  <td class="adam-al_path"><span title="Massachusetts">MA</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Massachusetts">MA</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[224] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5054.html" class="adam-name_link">George Gardner</a> (1600-1677)</td>
-  <td class="adam-al_path"><span title="Middlesex">MDX</span>-<span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Middlesex">MDX</span>-<span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[225] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5055.html" class="adam-name_link">Sarah Slaughter</a> (~1604-1637)</td>
-  <td class="adam-al_path"><span title="Middlesex">MDX</span>-<span title=""></span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Middlesex">MDX</span>-<span data-toggle="tooltip" title=""></span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[250] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5041.html" class="adam-name_link">John Brown</a> (~1626-)</b></td>
@@ -757,19 +755,19 @@ GEDCOM file imported on 10 January 2013
 <tr><td class="adam-al_generation">Generation 9</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[256] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5161.html" class="adam-name_link">John Curtis</a> (~1515-)</td>
-  <td class="adam-al_path"><span title="Essex">ESS</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Essex">ESS</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[257] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5162.html" class="adam-name_link">Elizabeth Wells</a> (~1519-)</td>
-  <td class="adam-al_path"><span title="Essex">ESS</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Essex">ESS</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[344] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4994.html" class="adam-name_link">Jaques Talemann</a> (~1544-)</td>
-  <td class="adam-al_path"><span title="Belgium">BEL</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Belgium">BEL</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[345] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4995.html" class="adam-name_link">Anna or Tanneken de Litche</a> (~1558-)</td>
-  <td class="adam-al_path"><span title="Belgium">BEL</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Belgium">BEL</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[346] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4993.html" class="adam-name_link">Johann Peene</a> (~1567-)</b></td>
@@ -777,49 +775,49 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[448] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5058.html" class="adam-name_link">Michael Gardner, Rev.</a> (1552-1630)</td>
-  <td class="adam-al_path"><span title="Middlesex">MDX</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Middlesex">MDX</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[449] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5059.html" class="adam-name_link">Margaret Browne</a> (1552-1638)</td>
-  <td class="adam-al_path"><span title="Middlesex">MDX</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Middlesex">MDX</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[450] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5056.html" class="adam-name_link">John Slaughter</a> (~1576-)</b></td>
-  <td class="adam-al_path"><span title="Middlesex">MDX</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Middlesex">MDX</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[451] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5057.html" class="adam-name_link">Mrs. _____ Slaughter</a> (~1580-)</b></td>
-  <td class="adam-al_path"><span title="Middlesex">MDX</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Middlesex">MDX</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 10</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[512] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5163.html" class="adam-name_link">John Curtis</a> (~1483-)</b></td>
-  <td class="adam-al_path"><span title="Essex">ESS</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Essex">ESS</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[514] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5164.html" class="adam-name_link">John Wells</a> (~1487-)</td>
-  <td class="adam-al_path"><span title="Essex">ESS</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Essex">ESS</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[515] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5165.html" class="adam-name_link">Mrs J. Wells</a> (~1491-)</b></td>
-  <td class="adam-al_path"><span title="Essex">ESS</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Essex">ESS</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[688] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4996.html" class="adam-name_link">Michael Taleman</a> (~1520-)</b></td>
-  <td class="adam-al_path"><span title="Belgium">BEL</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Belgium">BEL</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[689] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4997.html" class="adam-name_link">Mrs. _____ Taleman</a> (~1531-)</b></td>
-  <td class="adam-al_path"><span title="Belgium">BEL</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Belgium">BEL</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[690] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4998.html" class="adam-name_link">Peter de Litche</a> (~1531-1602)</td>
-  <td class="adam-al_path"><span title="Belgium">BEL</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Belgium">BEL</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[691] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4999.html" class="adam-name_link">Peternelle de Neve</a> (~1535-)</td>
-  <td class="adam-al_path"><span title="Belgium">BEL</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Belgium">BEL</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[896] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5060.html" class="adam-name_link">Henry Gardner</a> (~1518-)</b></td>
@@ -831,29 +829,29 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[898] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5062.html" class="adam-name_link">Thomas Browne</a> (~1531-)</b></td>
-  <td class="adam-al_path"><span title="Buckinghamshire">BKM</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Buckinghamshire">BKM</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[899] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5063.html" class="adam-name_link">Alice Chapman</a> (~1539-)</td>
-  <td class="adam-al_path"><span title="Norfolk">NFK</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Norfolk">NFK</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 11</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1028] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5166.html" class="adam-name_link">Thomas Wells</a> (~1445-)</b></td>
-  <td class="adam-al_path"><span title="Essex">ESS</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Essex">ESS</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1029] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5167.html" class="adam-name_link">Mrs. T. _____ Wells</a> (~1459-)</b></td>
-  <td class="adam-al_path"><span title="Essex">ESS</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Essex">ESS</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1380] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5002.html" class="adam-name_link">Aaert de Litche</a> (~1503-)</td>
-  <td class="adam-al_path"><span title="Belgium">BEL</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Belgium">BEL</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1381] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5003.html" class="adam-name_link">Katline&rsquo;s Wayers\Herwijn</a> (~1500-)</b></td>
-  <td class="adam-al_path"><span title="Belgium">BEL</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Belgium">BEL</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1382] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5000.html" class="adam-name_link">Anthonis de Neve</a> (~1501-)</b></td>
@@ -865,29 +863,29 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1798] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5064.html" class="adam-name_link">Thomas Chapman</a> (~1505-)</td>
-  <td class="adam-al_path"><span title="Norfolk">NFK</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Norfolk">NFK</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1799] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5065.html" class="adam-name_link">Mrs. _____ Chapman</a> (~1509-)</b></td>
-  <td class="adam-al_path"><span title="Norfolk">NFK</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Norfolk">NFK</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 12</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[2760] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5004.html" class="adam-name_link">Peter de Litche</a> (~1474-)</td>
-  <td class="adam-al_path"><span title="Belgium">BEL</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Belgium">BEL</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[2761] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5005.html" class="adam-name_link">Kateline Scheelkens</a> (1476-)</td>
-  <td class="adam-al_path"><span title="Belgium">BEL</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Belgium">BEL</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[3596] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5066.html" class="adam-name_link">Alexander Chapman</a> (~1475-)</b></td>
-  <td class="adam-al_path"><span title="Norfolk">NFK</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Norfolk">NFK</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[3597] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5067.html" class="adam-name_link">Mrs. _____ Chapman</a> (~1479-)</b></td>
-  <td class="adam-al_path"><span title="Norfolk">NFK</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Norfolk">NFK</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 13</td></tr>
@@ -905,7 +903,7 @@ GEDCOM file imported on 10 January 2013
 <div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <div class="floatmapbuttons"><p>
-<span class="mapbuttonspan"><a href="javascript:void(0);" id="togglemarkers" class="mapbutton">Toggle Markers</a></span>
+<span class="mapbuttonspan"><a href="javascript:void(0);" id="togglemarkers" class="btn btn-success">Toggle Markers</a></span>
 </p></div>
 
 <div id='adam-heat-map'></div>
@@ -934,8 +932,10 @@ $(document).ready(function () {
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     e.target
     e.relatedTarget
-  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+    if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      var currCenter = map.getCenter();
       google.maps.event.trigger(map, 'resize');
+      map.setCenter(currCenter);
     }
   });
 });
@@ -949,15 +949,11 @@ $(document).ready(function () {
 Last Modified: Dec 30, 2012
 </li>
 </ul>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.49.0.266</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 2.11.0.23</a>. </div>
 
 <!-- start footer code -->
-      </div>
-     </div>
-    </div>
-   </div>
   </div>
- <div id="site-footer">Brought to you by Tim Forsythe (<a href="http://timforsythe.com" target="_blank">http://timforsythe.com</a>)</div>
+ <div id="site-footer"></div>
 
 <!-- End Adam code -->
 
@@ -969,7 +965,7 @@ Last Modified: Dec 30, 2012
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br /><a href="http://www.timforsythe.com/tools/adam">Built by Adam 1.49.0.266. </a>- Last Updated: January 23, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 2.11.0.23.  - Last Updated: February 2, 2014</p>
 
 </div></div></div>
 
@@ -978,6 +974,5 @@ Last Modified: Dec 30, 2012
 </div>
 
 <!-- End #content -->
-
-</body>
-</html>
+  </body>
+ </html>

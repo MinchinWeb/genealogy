@@ -1,14 +1,13 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.49.0.266)" />
+ <head>
+ <meta name="generator" content="Tim Forsythe (Adam 2.11.0.23)" />
  <meta property="og:title" content="Enquiry at TurtleBunbury.com by David Prout (Feb. 11, 2010) - Minchin Genealogy | Minchin.ca" />
  <title>Enquiry at TurtleBunbury.com by David Prout (Feb. 11, 2010) - Minchin Genealogy | Minchin.ca</title>
-  <head>
- <meta charset="UTF-8" />
-  <!-- end Header code -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="adam.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
@@ -16,23 +15,36 @@
   <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
   <script type="text/javascript" src="graph-handler.js"></script>
   <script type="text/javascript" src="tab-list-handler.js"></script>
-  <!-- start Post-header code -->
+  <script type="text/javascript" src="tooltip-handler.js"></script>
+  <!-- start header code -->
+  <meta charset="UTF-8" />
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-384291-3', 'minchin.ca');
+    ga('send', 'pageview');
+
+  </script>
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
   <link rel="stylesheet" href="adam.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/screen.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/adam-overrides.css" type="text/css" />
-<!--
------------------------------------------------
-Minchin.ca / Genealogy Pages
-Copyright 1994-2013 W. Minchin
-Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.5        January 17, 2014
------------------------------------------------ -->
-</head>	
-<!-- end Post-header code -->
+  <!--
+  -----------------------------------------------
+  Minchin.ca / Genealogy Pages
+  Copyright 1994-2014 W. Minchin
+  Prototype: 1.1.1 (rev C) January 13, 2010
+  Version:   1.0.4        December 29, 2013
+  ----------------------------------------------- -->
+  <!-- end Header code -->
+ </head>
+
+ <body class="container">
   <!-- start body code -->
-<body>
 <!-- Begin #content - Centers all content and provides edges for floated columns -->
 
 <div id="content">
@@ -52,9 +64,9 @@ Version:   1.0.5        January 17, 2014
 		</ul>
 	</div>
 	<div id="breadcrumbs">
-	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <span class="here"><a href=".">Genealogy</a></span> </p>
+	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <a href=".">Genealogy</a> > <span class="here">Minchin Genealogy | Minchin.ca<span></p>
 	</div>
-    <h1 id="blog-title"><a href=".">Genealogy</a></h1>
+    <h1 id="blog-title">Minchin Genealogy | Minchin.ca</h1>
     <p id="description"> </p>
 </div></div>
 
@@ -63,13 +75,7 @@ Version:   1.0.5        January 17, 2014
 <div id="full-width"><div id="full-width2"><div id="full-width3"><div class="post"><div class="post-body">
 
 <!-- Begin Adam code -->
- <div id="site-wrapper">
-  <div id="site-header"><a href=".">W. Minchin Presents</a></div>
-   <div id="site-content">
-    <div id="adam-wrapper">
-     <div id="adam-outer-content">
-      <div id="adam-inner-content">
-      <!-- end body code -->
+<div id="site-content">
 
 
 <h1 id="adam-page-title">Enquiry at TurtleBunbury.com by David Prout (Feb. 11, 2010)</h1>
@@ -78,8 +84,6 @@ Version:   1.0.5        January 17, 2014
 <ul id="tab-list" class="nav nav-tabs">
 
 <li class="active"><a class="click" href="#profile" data-toggle="tab">Profile</a></li>
-
-<li><a class="click" href="#notes" data-toggle="tab">Data</a></li>
 
 </ul>
 
@@ -98,6 +102,9 @@ Version:   1.0.5        January 17, 2014
 </ul>
 </td></tr></table></td></tr>
 
+<tr><td><table class="adam-source_header adam-table_box"><tr><td>Full Title: Enquiry at TurtleBunbury.com by David Prout (Feb. 11, 2010)</td></tr>
+
+</table></td></tr>
 <tr><td><table class="adam-source_template adam-table_box">
 <tr><td>Footnote: Enquiry at TurtleBunbury.com by David Prout (Feb. 11, 2010)</td></tr>
 
@@ -106,31 +113,18 @@ Version:   1.0.5        January 17, 2014
 <b>Linked To:</b> <a href="profile-I2142.html" class="adam-name_link">Kathleen Susan Bunbury</a> (1890-), <a href="profile-I9729.html" class="adam-name_link">Reverend Robert Miller</a> (~1890-)
 </td></tr></table></td></tr>
 
-<tr><td><table class="adam-citation adam-table_box">
-</table></td></tr>
-<tr><td><table class="adam-citation adam-table_box">
-</table></td></tr>
-<tr><td><table class="adam-citation adam-table_box">
-</table></td></tr>
-</table>
-</li>
-</ul>
-</div>
+<tr><td><table class="adam-citation adam-table_box"><tr><td>
 
-<div id="notes" class="tab-pane adam-tab">
-
-<ul id="adam-source_data" class="adam-tab_style">
-<li>
-<table class="adam-tab_table">
-
-<tr><td><table class="adam-source_text adam-table_box"><tr><td>From: "" <[email redacted]>
+<div class="adam-citation_heading">Page: Not Found</div>
+<div class="adam-citation">
+<div class="adam-citation_text">Text: From: "" <[email redacted]>
 <br>Date: 11 February 2010 17:51:37 GMT
 <br>To: [email redacted]
 <br>Subject: Enquiry from turtlebunbury.com
 <br>Reply-To: "" <[email redacted]>
 <br>
 <br>This message was sent from:
-<br><a href="http://www.turtlebunbury.com/contact.html"target="_blank">http://www.turtlebunbury.com/contact.html</a>
+<br><a href="http://www.turtlebunbury.com/contact.html" target="_blank">http://www.turtlebunbury.com/contact.html</a>
 <br>
 <br>------------------------------------------------------------
 <br>NAME: David Prout
@@ -143,8 +137,9 @@ Version:   1.0.5        January 17, 2014
 <br>
 <br>I am looking to trace my grandmother's origins in Ireland. She was kathleen Susan Bunbury and married a Reverend Robert Miller, like you a Trinity man. Her brother was George Bunbury Both were orphaned her father was an Indian Army officer. George was apprenticed at the age of 16 to Canada where he prospered. Her husband died early and in the early 1920's she came to England. The family were friend with the Frenches, although better she thought. Best wishes, David Prout
 <br>
-<br>------------------------------------------------------------
-</td></tr></table></td></tr>
+<br>------------------------------------------------------------</div></div>
+</td>
+</tr></table></td></tr>
 
 </table>
 </li>
@@ -154,15 +149,11 @@ Version:   1.0.5        January 17, 2014
 </div>
 </div>
 
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.49.0.266</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 2.11.0.23</a>. </div>
 
 <!-- start footer code -->
-      </div>
-     </div>
-    </div>
-   </div>
   </div>
- <div id="site-footer">Brought to you by Tim Forsythe (<a href="http://timforsythe.com" target="_blank">http://timforsythe.com</a>)</div>
+ <div id="site-footer"></div>
 
 <!-- End Adam code -->
 
@@ -174,7 +165,7 @@ Version:   1.0.5        January 17, 2014
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br /><a href="http://www.timforsythe.com/tools/adam">Built by Adam 1.49.0.266. </a>- Last Updated: January 23, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 2.11.0.23.  - Last Updated: February 2, 2014</p>
 
 </div></div></div>
 
@@ -183,6 +174,5 @@ Version:   1.0.5        January 17, 2014
 </div>
 
 <!-- End #content -->
-
-</body>
-</html>
+  </body>
+ </html>

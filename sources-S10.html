@@ -1,14 +1,13 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.49.0.266)" />
+ <head>
+ <meta name="generator" content="Tim Forsythe (Adam 2.11.0.23)" />
  <meta property="og:title" content="LDS Church Temple Records - Minchin Genealogy | Minchin.ca" />
  <title>LDS Church Temple Records - Minchin Genealogy | Minchin.ca</title>
-  <head>
- <meta charset="UTF-8" />
-  <!-- end Header code -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="adam.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
@@ -16,23 +15,36 @@
   <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
   <script type="text/javascript" src="graph-handler.js"></script>
   <script type="text/javascript" src="tab-list-handler.js"></script>
-  <!-- start Post-header code -->
+  <script type="text/javascript" src="tooltip-handler.js"></script>
+  <!-- start header code -->
+  <meta charset="UTF-8" />
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-384291-3', 'minchin.ca');
+    ga('send', 'pageview');
+
+  </script>
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
   <link rel="stylesheet" href="adam.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/screen.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/adam-overrides.css" type="text/css" />
-<!--
------------------------------------------------
-Minchin.ca / Genealogy Pages
-Copyright 1994-2013 W. Minchin
-Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.5        January 17, 2014
------------------------------------------------ -->
-</head>	
-<!-- end Post-header code -->
+  <!--
+  -----------------------------------------------
+  Minchin.ca / Genealogy Pages
+  Copyright 1994-2014 W. Minchin
+  Prototype: 1.1.1 (rev C) January 13, 2010
+  Version:   1.0.4        December 29, 2013
+  ----------------------------------------------- -->
+  <!-- end Header code -->
+ </head>
+
+ <body class="container">
   <!-- start body code -->
-<body>
 <!-- Begin #content - Centers all content and provides edges for floated columns -->
 
 <div id="content">
@@ -52,9 +64,9 @@ Version:   1.0.5        January 17, 2014
 		</ul>
 	</div>
 	<div id="breadcrumbs">
-	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <span class="here"><a href=".">Genealogy</a></span> </p>
+	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <a href=".">Genealogy</a> > <span class="here">Minchin Genealogy | Minchin.ca<span></p>
 	</div>
-    <h1 id="blog-title"><a href=".">Genealogy</a></h1>
+    <h1 id="blog-title">Minchin Genealogy | Minchin.ca</h1>
     <p id="description"> </p>
 </div></div>
 
@@ -63,13 +75,7 @@ Version:   1.0.5        January 17, 2014
 <div id="full-width"><div id="full-width2"><div id="full-width3"><div class="post"><div class="post-body">
 
 <!-- Begin Adam code -->
- <div id="site-wrapper">
-  <div id="site-header"><a href=".">W. Minchin Presents</a></div>
-   <div id="site-content">
-    <div id="adam-wrapper">
-     <div id="adam-outer-content">
-      <div id="adam-inner-content">
-      <!-- end body code -->
+<div id="site-content">
 
 
 <h1 id="adam-page-title">LDS Church Temple Records</h1>
@@ -99,6 +105,7 @@ Version:   1.0.5        January 17, 2014
 </td></tr></table></td></tr>
 
 <tr><td><table class="adam-source_header adam-table_box"><tr><td>Full Title: <i>LDS Church Temple Records</i></td></tr>
+<tr><td>Short Title: <i>LDS Church Temple Records</i></td></tr>
 
 </table></td></tr>
 <tr><td><table class="adam-source_template adam-table_box">
@@ -118,245 +125,124 @@ Repository: The Temples of The Church of Jesus Christ of Latter-day Saints<br />
 <b>Linked To:</b> <a href="profile-I57.html" class="adam-name_link">Sophiah Andrews</a> (1840-1914), <a href="profile-I113.html" class="adam-name_link">Mary Culham</a> (1757-1795), <a href="profile-I115.html" class="adam-name_link">Hepzibah Green</a> (~1771-1852), <a href="profile-I2118.html" class="adam-name_link">Ann Kemp</a> (1709-), <a href="profile-I117.html" class="adam-name_link">Frances Kerr</a> (1734-1779), <a href="profile-I2112.html" class="adam-name_link">Ann Masterson</a> (1734-1799), <a href="profile-I56.html" class="adam-name_link">Thomas James Wells Seaman</a> (1837-1923), <a href="profile-I114.html" class="adam-name_link">James Wells</a> (1761-1844), <a href="profile-I2111.html" class="adam-name_link">James Wells</a> (1734-1796), <a href="profile-I2115.html" class="adam-name_link">John Wells</a> (1707-~1770), <a href="profile-I2114.html" class="adam-name_link">Sarah</a> (1739-1804)
 </td></tr></table></td></tr>
 
-<tr><td><table class="adam-citation adam-table_box">
-<div class="adam-citation_heading"><b>[Page: 346517871]</b></div>
-<tr><td>Page: 346517871</td></tr>
-
-</table></td></tr>
-<tr><td><table class="adam-citation adam-table_box">
-<div class="adam-citation_heading"><b>[Page: 346517878]</b></div>
-<tr><td>Page: 346517878</td></tr>
-
-</table></td></tr>
-<tr><td><table class="adam-citation adam-table_box">
-<div class="adam-citation_heading"><b>[Page: 76725197]</b></div>
-<tr><td>Page: 76725197</td></tr>
-
-</table></td></tr>
-<tr><td><table class="adam-citation adam-table_box">
-<div class="adam-citation_heading"><b>[Page: 76724556]</b></div>
-<tr><td>Page: 76724556</td></tr>
-
-</table></td></tr>
-<tr><td><table class="adam-citation adam-table_box">
-<div class="adam-citation_heading"><b>[Page: 346517981]</b></div>
-<tr><td>Page: 346517981</td></tr>
-
-</table></td></tr>
-<tr><td><table class="adam-citation adam-table_box">
-<div class="adam-citation_heading"><b>[Page: 269299579]</b></div>
-<tr><td>Page: 269299579</td></tr>
-
-</table></td></tr>
-<tr><td><table class="adam-citation adam-table_box">
-<div class="adam-citation_heading"><b>[Page: 4367619253]</b></div>
-<tr><td>Page: 4367619253</td></tr>
-
-</table></td></tr>
-<tr><td><table class="adam-citation adam-table_box">
-<div class="adam-citation_heading"><b>[Page: 4367619253]</b></div>
-<tr><td>Page: 4367619253</td></tr>
-
-</table></td></tr>
-<tr><td><table class="adam-citation adam-table_box">
-<div class="adam-citation_heading"><b>[Page: 4367619253]</b></div>
-<tr><td>Page: 4367619253</td></tr>
-
-</table></td></tr>
-<tr><td><table class="adam-citation adam-table_box">
-<div class="adam-citation_heading"><b>[Page: 4367977217]</b></div>
-<tr><td>Page: 4367977217</td></tr>
-
-</table></td></tr>
-<tr><td><table class="adam-citation adam-table_box">
-<div class="adam-citation_heading"><b>[Page: 4367977217]</b></div>
-<tr><td>Page: 4367977217</td></tr>
-
-</table></td></tr>
-<tr><td><table class="adam-citation adam-table_box">
-<div class="adam-citation_heading"><b>[Page: 4367797919]</b></div>
-<tr><td>Page: 4367797919</td></tr>
-
-</table></td></tr>
-<tr><td><table class="adam-citation adam-table_box">
-<div class="adam-citation_heading"><b>[Page: 4367807594]</b></div>
-<tr><td>Page: 4367807594</td></tr>
-
-</table></td></tr>
-<tr><td><table class="adam-citation adam-table_box">
-<div class="adam-citation_heading"><b>[Page: 4367807594]</b></div>
-<tr><td>Page: 4367807594</td></tr>
-
-</table></td></tr>
-<tr><td><table class="adam-citation adam-table_box">
-<div class="adam-citation_heading"><b>[Page: 269164593]</b></div>
-<tr><td>Page: 269164593</td></tr>
-
-</table></td></tr>
-<tr><td><table class="adam-citation adam-table_box">
-<div class="adam-citation_heading"><b>[Page: 736345904]</b></div>
-<tr><td>Page: 736345904</td></tr>
-
-</table></td></tr>
-<tr><td><table class="adam-citation adam-table_box">
-<div class="adam-citation_heading"><b>[Page: 4368656373]</b></div>
-<tr><td>Page: 4368656373</td></tr>
-
-</table></td></tr>
-<tr><td><table class="adam-citation adam-table_box">
-<div class="adam-citation_heading"><b>[Page: 794039901]</b></div>
-<tr><td>Page: 794039901</td></tr>
-
-</table></td></tr>
 <tr><td><table class="adam-citation adam-table_box"><tr><td>
 
-<div class="adam-citation_heading"><a name="S10:346517871"></a>
-<b>[Page: 346517871]</b></div>
-<div class="adam-citation_text">Date: 19 March 2007</div>
+<div class="adam-citation_heading">Page: 269164593</div>
+<div class="adam-citation">
+<div class="adam-citation_text">Note: Date: 18 March 2007</div></div>
 </td>
 </tr></table></td></tr>
 
 <tr><td><table class="adam-citation adam-table_box"><tr><td>
 
-<div class="adam-citation_heading"><a name="S10:346517878"></a>
-<b>[Page: 346517878]</b></div>
-<div class="adam-citation_text">Pulled from New.FamilySearch.org
+<div class="adam-citation_heading">Page: 269299579</div>
+<div class="adam-citation">
+<div class="adam-citation_text">Note: Date: 18 March 2007</div></div>
+</td>
+</tr></table></td></tr>
+
+<tr><td><table class="adam-citation adam-table_box"><tr><td>
+
+<div class="adam-citation_heading">Page: 346517871</div>
+<div class="adam-citation">
+<div class="adam-citation_text">Note: Date: 19 March 2007</div></div>
+</td>
+</tr></table></td></tr>
+
+<tr><td><table class="adam-citation adam-table_box"><tr><td>
+
+<div class="adam-citation_heading">Page: 346517878</div>
+<div class="adam-citation">
+<div class="adam-citation_text">Note: Pulled from New.FamilySearch.org
 <br>
-<br>Date: 19 March 2007</div>
+<br>Date: 19 March 2007</div></div>
 </td>
 </tr></table></td></tr>
 
 <tr><td><table class="adam-citation adam-table_box"><tr><td>
 
-<div class="adam-citation_heading"><a name="S10:76725197"></a>
-<b>[Page: 76725197]</b></div>
-<div class="adam-citation_text">Pulled from New.FamilySearch.org
-<br>
-<br>Date: 18 March 2007</div>
+<div class="adam-citation_heading">Page: 346517981</div>
+<div class="adam-citation">
+<div class="adam-citation_text">Note: Date: 19 March 2007</div></div>
 </td>
 </tr></table></td></tr>
 
 <tr><td><table class="adam-citation adam-table_box"><tr><td>
 
-<div class="adam-citation_heading"><a name="S10:76724556"></a>
-<b>[Page: 76724556]</b></div>
-<div class="adam-citation_text">Pulled from New.FamilySearch.org
-<br>
-<br>Date: 18 March 2007</div>
+<div class="adam-citation_heading">Page: 4367619253</div>
+<div class="adam-citation">
+<div class="adam-citation_text">Note: Date: 21 March 2007</div></div>
 </td>
 </tr></table></td></tr>
 
 <tr><td><table class="adam-citation adam-table_box"><tr><td>
 
-<div class="adam-citation_heading"><a name="S10:346517981"></a>
-<b>[Page: 346517981]</b></div>
-<div class="adam-citation_text">Date: 19 March 2007</div>
+<div class="adam-citation_heading">Page: 4367797919</div>
+<div class="adam-citation">
+<div class="adam-citation_text">Note: Date: 21 March 2007</div></div>
 </td>
 </tr></table></td></tr>
 
 <tr><td><table class="adam-citation adam-table_box"><tr><td>
 
-<div class="adam-citation_heading"><a name="S10:269299579"></a>
-<b>[Page: 269299579]</b></div>
-<div class="adam-citation_text">Date: 18 March 2007</div>
+<div class="adam-citation_heading">Page: 4367807594</div>
+<div class="adam-citation">
+<div class="adam-citation_text">Note: Date: 21 March 2007</div></div>
 </td>
 </tr></table></td></tr>
 
 <tr><td><table class="adam-citation adam-table_box"><tr><td>
 
-<div class="adam-citation_heading"><a name="S10:4367619253"></a>
-<b>[Page: 4367619253]</b></div>
-<div class="adam-citation_text">Date: 21 March 2007</div>
-</td>
-</tr></table></td></tr>
-
-<tr><td><table class="adam-citation adam-table_box"><tr><td>
-
-<div class="adam-citation_heading"><a name="S10:4367619253"></a>
-<b>[Page: 4367619253]</b></div>
-<div class="adam-citation_text">Date: 21 March 2007</div>
-</td>
-</tr></table></td></tr>
-
-<tr><td><table class="adam-citation adam-table_box"><tr><td>
-
-<div class="adam-citation_heading"><a name="S10:4367619253"></a>
-<b>[Page: 4367619253]</b></div>
-<div class="adam-citation_text">Date: 21 March 2007</div>
-</td>
-</tr></table></td></tr>
-
-<tr><td><table class="adam-citation adam-table_box"><tr><td>
-
-<div class="adam-citation_heading"><a name="S10:4367977217"></a>
-<b>[Page: 4367977217]</b></div>
-<div class="adam-citation_text">pulled from New.FamilySearch.org
+<div class="adam-citation_heading">Page: 4367977217</div>
+<div class="adam-citation">
+<div class="adam-citation_text">Note: pulled from New.FamilySearch.org
 <br>
 <br>Date: 21 March 2007</div>
+<div class="adam-citation_text">Note: Date: 21 March 2007</div></div>
 </td>
 </tr></table></td></tr>
 
 <tr><td><table class="adam-citation adam-table_box"><tr><td>
 
-<div class="adam-citation_heading"><a name="S10:4367977217"></a>
-<b>[Page: 4367977217]</b></div>
-<div class="adam-citation_text">Date: 21 March 2007</div>
+<div class="adam-citation_heading">Page: 4368656373</div>
+<div class="adam-citation">
+<div class="adam-citation_text">Note: Date: 21 March 2007</div></div>
 </td>
 </tr></table></td></tr>
 
 <tr><td><table class="adam-citation adam-table_box"><tr><td>
 
-<div class="adam-citation_heading"><a name="S10:4367797919"></a>
-<b>[Page: 4367797919]</b></div>
-<div class="adam-citation_text">Date: 21 March 2007</div>
+<div class="adam-citation_heading">Page: 736345904</div>
+<div class="adam-citation">
+<div class="adam-citation_text">Note: Date: 19 March 2007</div></div>
 </td>
 </tr></table></td></tr>
 
 <tr><td><table class="adam-citation adam-table_box"><tr><td>
 
-<div class="adam-citation_heading"><a name="S10:4367807594"></a>
-<b>[Page: 4367807594]</b></div>
-<div class="adam-citation_text">Date: 21 March 2007</div>
+<div class="adam-citation_heading">Page: 76724556</div>
+<div class="adam-citation">
+<div class="adam-citation_text">Note: Pulled from New.FamilySearch.org
+<br>
+<br>Date: 18 March 2007</div></div>
 </td>
 </tr></table></td></tr>
 
 <tr><td><table class="adam-citation adam-table_box"><tr><td>
 
-<div class="adam-citation_heading"><a name="S10:4367807594"></a>
-<b>[Page: 4367807594]</b></div>
-<div class="adam-citation_text">Date: 21 March 2007</div>
+<div class="adam-citation_heading">Page: 76725197</div>
+<div class="adam-citation">
+<div class="adam-citation_text">Note: Pulled from New.FamilySearch.org
+<br>
+<br>Date: 18 March 2007</div></div>
 </td>
 </tr></table></td></tr>
 
 <tr><td><table class="adam-citation adam-table_box"><tr><td>
 
-<div class="adam-citation_heading"><a name="S10:269164593"></a>
-<b>[Page: 269164593]</b></div>
-<div class="adam-citation_text">Date: 18 March 2007</div>
-</td>
-</tr></table></td></tr>
-
-<tr><td><table class="adam-citation adam-table_box"><tr><td>
-
-<div class="adam-citation_heading"><a name="S10:736345904"></a>
-<b>[Page: 736345904]</b></div>
-<div class="adam-citation_text">Date: 19 March 2007</div>
-</td>
-</tr></table></td></tr>
-
-<tr><td><table class="adam-citation adam-table_box"><tr><td>
-
-<div class="adam-citation_heading"><a name="S10:4368656373"></a>
-<b>[Page: 4368656373]</b></div>
-<div class="adam-citation_text">Date: 21 March 2007</div>
-</td>
-</tr></table></td></tr>
-
-<tr><td><table class="adam-citation adam-table_box"><tr><td>
-
-<div class="adam-citation_heading"><a name="S10:794039901"></a>
-<b>[Page: 794039901]</b></div>
-<div class="adam-citation_text">Date: 20 March 2007</div>
+<div class="adam-citation_heading">Page: 794039901</div>
+<div class="adam-citation">
+<div class="adam-citation_text">Note: Date: 20 March 2007</div></div>
 </td>
 </tr></table></td></tr>
 
@@ -374,208 +260,114 @@ Repository: The Temples of The Church of Jesus Christ of Latter-day Saints<br />
 <tr><td><table class="adam-events adam-table_box">
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I2118.html" class="adam-name_link">Ann Kemp</a></td><td class="adam-claim_tag">Christening</td><td class="adam-claim_data"><a href="places-england-suffolk-cratfield.html" class="adam-location_link">Cratfield, Suffolk, England</a>
 
-<span>[<a href="sources-S10.html" title="[S10]
-LDS Church Temple Records
+<span>[<a href="sources-S10.html" data-toggle="popover" title="[S10] LDS Church Temple Records
 Page: 794039901
-Page: 794039901
-
 Note: Date: 20 March 2007">S10:794039901</a>]</span> </td><td class="adam-claim_date">Jul 17, 1707</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I2112.html" class="adam-name_link">Ann Masterson</a></td><td class="adam-claim_tag">Christening</td><td class="adam-claim_data"><a href="places-england-suffolk-laxfield.html" class="adam-location_link">Laxfield, Suffolk, England</a>
 
-<span>[<a href="sources-S10.html" title="[S10]
-LDS Church Temple Records
+<span>[<a href="sources-S10.html" data-toggle="popover" title="[S10] LDS Church Temple Records
 Page: 4367807594
-Page: 4367807594
-
 Note: Date: 21 March 2007">S10:4367807594</a>]</span> </td><td class="adam-claim_date">Nov 14, 1731</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I2112.html" class="adam-name_link">Ann Masterson</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-england-suffolk-laxfield.html" class="adam-location_link">Laxfield, Suffolk, England</a>
 
-<span>[<a href="sources-S10.html" title="[S10]
-LDS Church Temple Records
+<span>[<a href="sources-S10.html" data-toggle="popover" title="[S10] LDS Church Temple Records
 Page: 4367807594
-Page: 4367807594
-
 Note: Date: 21 March 2007">S10:4367807594</a>]</span> 
-<span>[<a href="sources-S30.html" title="[S30]
-Find a Grave - Ann Masterson Wells
+<span>[<a href="sources-S30.html" data-toggle="popover" title="[S30] Find a Grave - Ann Masterson Wells
 Page: accessed; 9 February 2013; Find A Grave Memorial# 82830405
 AccessType: accessed
 AccessDate: 9 February 2013
-ItemOfInterest: Find A Grave Memorial# 82830405
-">S30</a>]</span> </td><td class="adam-claim_date">1734</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+ItemOfInterest: Find A Grave Memorial# 82830405">S30</a>]</span> </td><td class="adam-claim_date">1734</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I117.html" class="adam-name_link">Frances Kerr</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-england-suffolk.html" class="adam-location_link">Suffolk, England</a>
 
-<span>[<a href="sources-S2.html" title="[S2]
-The Descendants of Robert Seaman and Alice Shuckforth - The Island Register
-Page: S2
-">S2:S2</a>]</span> 
-<span>[<a href="sources-S10.html" title="[S10]
-LDS Church Temple Records
+<span>[<a href="sources-S2.html" data-toggle="popover" title="[S2] The Descendants of Robert Seaman and Alice Shuckforth - The Island Register">S2</a>]</span> 
+<span>[<a href="sources-S10.html" data-toggle="popover" title="[S10] LDS Church Temple Records
 Page: 4367977217
-Page: 4367977217
-
-Note: pulled from New.FamilySearch.org
-<br>
-<br>Date: 21 March 2007">S10:4367977217</a>]</span> </td><td class="adam-claim_date">Jun 5, 1734</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+Note: pulled from New.FamilySearch.org &lt;br> &lt;br>Date: 21 March 2007">S10:4367977217</a>]</span> </td><td class="adam-claim_date">Jun 5, 1734</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I117.html" class="adam-name_link">Frances Kerr</a></td><td class="adam-claim_tag">Christening</td><td class="adam-claim_data"><a href="places-england-suffolk-woodbridge-quay-metting-house-independent.html" class="adam-location_link">Quay Metting House-Independent, Woodbridge, Suffolk, England</a>
 
-<span>[<a href="sources-S10.html" title="[S10]
-LDS Church Temple Records
+<span>[<a href="sources-S10.html" data-toggle="popover" title="[S10] LDS Church Temple Records
 Page: 4367977217
-Page: 4367977217
-
 Note: Date: 21 March 2007">S10:4367977217</a>]</span> </td><td class="adam-claim_date">Jul 9, 1734</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I2115.html" class="adam-name_link">John Wells</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-england-suffolk-of-brusyard.html" class="adam-location_link">of Brusyard, Suffolk, England</a>
 
-<span>[<a href="sources-S10.html" title="[S10]
-LDS Church Temple Records
+<span>[<a href="sources-S10.html" data-toggle="popover" title="[S10] LDS Church Temple Records
 Page: 4368656373
-Page: 4368656373
-
 Note: Date: 21 March 2007">S10:4368656373</a>]</span> </td><td class="adam-claim_date">abt 1770</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I115.html" class="adam-name_link">Hepzibah Green</a></td><td class="adam-claim_tag">Christening</td><td class="adam-claim_data"><a href="places-england-suffolk-wrentham.html" class="adam-location_link">Wrentham, Suffolk, England</a>
 
-<span>[<a href="sources-S10.html" title="[S10]
-LDS Church Temple Records
+<span>[<a href="sources-S10.html" data-toggle="popover" title="[S10] LDS Church Temple Records
 Page: 4367619253
-Page: 4367619253
-
 Note: Date: 21 March 2007">S10:4367619253</a>]</span> </td><td class="adam-claim_date">Nov 6, 1771</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I113.html" class="adam-name_link">Mary Culham</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-england-suffolk-blythburgh.html" class="adam-location_link">Blythburgh, Suffolk, England</a>
 
-<span>[<a href="sources-S2.html" title="[S2]
-The Descendants of Robert Seaman and Alice Shuckforth - The Island Register
-Page: S2
-">S2:S2</a>]</span> 
-<span>[<a href="sources-S10.html" title="[S10]
-LDS Church Temple Records
+<span>[<a href="sources-S2.html" data-toggle="popover" title="[S2] The Descendants of Robert Seaman and Alice Shuckforth - The Island Register">S2</a>]</span> 
+<span>[<a href="sources-S10.html" data-toggle="popover" title="[S10] LDS Church Temple Records
 Page: 346517981
-Page: 346517981
-
 Note: Date: 19 March 2007">S10:346517981</a>]</span> </td><td class="adam-claim_date">Oct 28, 1795</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I2112.html" class="adam-name_link">Ann Masterson</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-england-suffolk-dennington.html" class="adam-location_link">Dennington, Suffolk, England</a>
 
-<span>[<a href="sources-S10.html" title="[S10]
-LDS Church Temple Records
+<span>[<a href="sources-S10.html" data-toggle="popover" title="[S10] LDS Church Temple Records
 Page: 269164593
-Page: 269164593
-
 Note: Date: 18 March 2007">S10:269164593</a>]</span> 
-<span>[<a href="sources-S30.html" title="[S30]
-Find a Grave - Ann Masterson Wells
+<span>[<a href="sources-S30.html" data-toggle="popover" title="[S30] Find a Grave - Ann Masterson Wells
 Page: accessed; 9 February 2013; Find A Grave Memorial# 82830405
 AccessType: accessed
 AccessDate: 9 February 2013
-ItemOfInterest: Find A Grave Memorial# 82830405
-">S30</a>]</span> </td><td class="adam-claim_date">Feb 19, 1799</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+ItemOfInterest: Find A Grave Memorial# 82830405">S30</a>]</span> </td><td class="adam-claim_date">Feb 19, 1799</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I2114.html" class="adam-name_link">Sarah</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-england-suffolk-dennington.html" class="adam-location_link">Dennington, Suffolk, England</a>
 
-<span>[<a href="sources-S10.html" title="[S10]
-LDS Church Temple Records
+<span>[<a href="sources-S10.html" data-toggle="popover" title="[S10] LDS Church Temple Records
 Page: 736345904
-Page: 736345904
-
 Note: Date: 19 March 2007">S10:736345904</a>]</span> </td><td class="adam-claim_date">Feb 22, 1804</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I2111.html" class="adam-name_link">James Wells</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
-<span>[<a href="sources-S10.html" title="[S10]
-LDS Church Temple Records
+<span>[<a href="sources-S10.html" data-toggle="popover" title="[S10] LDS Church Temple Records
 Page: 4367797919
-Page: 4367797919
-
 Note: Date: 21 March 2007">S10:4367797919</a>]</span> </td><td class="adam-claim_date">1806</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I56.html" class="adam-name_link">Thomas James Wells Seaman</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-friston-road.html" class="adam-location_link">Friston Road</a>
 
-<span>[<a href="sources-S2.html" title="[S2]
-The Descendants of Robert Seaman and Alice Shuckforth - The Island Register
-Page: S2
-">S2:S2</a>]</span> 
-<span>[<a href="sources-S10.html" title="[S10]
-LDS Church Temple Records
+<span>[<a href="sources-S2.html" data-toggle="popover" title="[S2] The Descendants of Robert Seaman and Alice Shuckforth - The Island Register">S2</a>]</span> 
+<span>[<a href="sources-S10.html" data-toggle="popover" title="[S10] LDS Church Temple Records
 Page: 346517871
-Page: 346517871
-
 Note: Date: 19 March 2007">S10:346517871</a>]</span> </td><td class="adam-claim_date">Jan 15, 1837</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I114.html" class="adam-name_link">James Wells</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-england-suffolk-dennington.html" class="adam-location_link">Dennington, Suffolk, England</a>
 
-<span>[<a href="sources-S10.html" title="[S10]
-LDS Church Temple Records
+<span>[<a href="sources-S10.html" data-toggle="popover" title="[S10] LDS Church Temple Records
 Page: 269299579
-Page: 269299579
-
 Note: Date: 18 March 2007">S10:269299579</a>]</span> </td><td class="adam-claim_date">Jul 10, 1844</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I115.html" class="adam-name_link">Hepzibah Green</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-england-suffolk-saxmundham.html" class="adam-location_link">Saxmundham, Suffolk, England</a>
 
-<span>[<a href="sources-S10.html" title="[S10]
-LDS Church Temple Records
+<span>[<a href="sources-S10.html" data-toggle="popover" title="[S10] LDS Church Temple Records
 Page: 4367619253
-Page: 4367619253
-
 Note: Date: 21 March 2007">S10:4367619253</a>]</span> </td><td class="adam-claim_date">Apr 24, 1852</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I57.html" class="adam-name_link">Sophiah Andrews</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-prince-edward-island-queens-new-glasgow.html" class="adam-location_link">New Glasgow, Queens, Prince Edward Island, Canada</a>
 
-<span>[<a href="sources-S2.html" title="[S2]
-The Descendants of Robert Seaman and Alice Shuckforth - The Island Register
-Page: S2
-">S2:S2</a>]</span> 
-<span>[<a href="sources-S10.html" title="[S10]
-LDS Church Temple Records
+<span>[<a href="sources-S2.html" data-toggle="popover" title="[S2] The Descendants of Robert Seaman and Alice Shuckforth - The Island Register">S2</a>]</span> 
+<span>[<a href="sources-S10.html" data-toggle="popover" title="[S10] LDS Church Temple Records
 Page: 76725197
-Page: 76725197
-
-Note: Pulled from New.FamilySearch.org
-<br>
-<br>Date: 18 March 2007">S10:76725197</a>]</span> 
-<span>[<a href="sources-S10.html" title="[S10]
-LDS Church Temple Records
+Note: Pulled from New.FamilySearch.org &lt;br> &lt;br>Date: 18 March 2007">S10:76725197</a>]</span> 
+<span>[<a href="sources-S10.html" data-toggle="popover" title="[S10] LDS Church Temple Records
 Page: 76724556
-Page: 76724556
-
-Note: Pulled from New.FamilySearch.org
-<br>
-<br>Date: 18 March 2007">S10:76724556</a>]</span> </td><td class="adam-claim_date">Jun 22, 1914</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+Note: Pulled from New.FamilySearch.org &lt;br> &lt;br>Date: 18 March 2007">S10:76724556</a>]</span> </td><td class="adam-claim_date">Jun 22, 1914</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I57.html" class="adam-name_link">Sophiah Andrews</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-prince-edward-island-queens-new-glasgow.html" class="adam-location_link">New Glasgow, Queens, Prince Edward Island, Canada</a>
 
-<span>[<a href="sources-S2.html" title="[S2]
-The Descendants of Robert Seaman and Alice Shuckforth - The Island Register
-Page: S2
-">S2:S2</a>]</span> 
-<span>[<a href="sources-S10.html" title="[S10]
-LDS Church Temple Records
+<span>[<a href="sources-S2.html" data-toggle="popover" title="[S2] The Descendants of Robert Seaman and Alice Shuckforth - The Island Register">S2</a>]</span> 
+<span>[<a href="sources-S10.html" data-toggle="popover" title="[S10] LDS Church Temple Records
 Page: 76725197
-Page: 76725197
-
-Note: Pulled from New.FamilySearch.org
-<br>
-<br>Date: 18 March 2007">S10:76725197</a>]</span> 
-<span>[<a href="sources-S10.html" title="[S10]
-LDS Church Temple Records
+Note: Pulled from New.FamilySearch.org &lt;br> &lt;br>Date: 18 March 2007">S10:76725197</a>]</span> 
+<span>[<a href="sources-S10.html" data-toggle="popover" title="[S10] LDS Church Temple Records
 Page: 76724556
-Page: 76724556
-
-Note: Pulled from New.FamilySearch.org
-<br>
-<br>Date: 18 March 2007">S10:76724556</a>]</span> </td><td class="adam-claim_date">Jun 22, 1914</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+Note: Pulled from New.FamilySearch.org &lt;br> &lt;br>Date: 18 March 2007">S10:76724556</a>]</span> </td><td class="adam-claim_date">Jun 22, 1914</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I56.html" class="adam-name_link">Thomas James Wells Seaman</a></td><td class="adam-claim_tag">Death</td><td class="adam-claim_data"><a href="places-canada-prince-edward-island-queens-hunter-river.html" class="adam-location_link">Hunter River, Queens, Prince Edward Island, Canada</a>
 
-<span>[<a href="sources-S2.html" title="[S2]
-The Descendants of Robert Seaman and Alice Shuckforth - The Island Register
-Page: S2
-">S2:S2</a>]</span> 
-<span>[<a href="sources-S10.html" title="[S10]
-LDS Church Temple Records
+<span>[<a href="sources-S2.html" data-toggle="popover" title="[S2] The Descendants of Robert Seaman and Alice Shuckforth - The Island Register">S2</a>]</span> 
+<span>[<a href="sources-S10.html" data-toggle="popover" title="[S10] LDS Church Temple Records
 Page: 346517878
-Page: 346517878
-
-Note: Pulled from New.FamilySearch.org
-<br>
-<br>Date: 19 March 2007">S10:346517878</a>]</span> </td><td class="adam-claim_date">May 1, 1923</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+Note: Pulled from New.FamilySearch.org &lt;br> &lt;br>Date: 19 March 2007">S10:346517878</a>]</span> </td><td class="adam-claim_date">May 1, 1923</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_name"><a href="profile-I115.html" class="adam-name_link">Hepzibah Green</a></td><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-england-suffolk-wrentham.html" class="adam-location_link">Wrentham, Suffolk, England</a>
 
-<span>[<a href="sources-S10.html" title="[S10]
-LDS Church Temple Records
+<span>[<a href="sources-S10.html" data-toggle="popover" title="[S10] LDS Church Temple Records
 Page: 4367619253
-Page: 4367619253
-
 Note: Date: 21 March 2007">S10:4367619253</a>]</span> </td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 </table></td></tr>
 </table>
@@ -586,15 +378,11 @@ Note: Date: 21 March 2007">S10:4367619253</a>]</span> </td><td class="adam-claim
 </div>
 </div>
 
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.49.0.266</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 2.11.0.23</a>. </div>
 
 <!-- start footer code -->
-      </div>
-     </div>
-    </div>
-   </div>
   </div>
- <div id="site-footer">Brought to you by Tim Forsythe (<a href="http://timforsythe.com" target="_blank">http://timforsythe.com</a>)</div>
+ <div id="site-footer"></div>
 
 <!-- End Adam code -->
 
@@ -606,7 +394,7 @@ Note: Date: 21 March 2007">S10:4367619253</a>]</span> </td><td class="adam-claim
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br /><a href="http://www.timforsythe.com/tools/adam">Built by Adam 1.49.0.266. </a>- Last Updated: January 23, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 2.11.0.23.  - Last Updated: February 2, 2014</p>
 
 </div></div></div>
 
@@ -615,6 +403,5 @@ Note: Date: 21 March 2007">S10:4367619253</a>]</span> </td><td class="adam-claim
 </div>
 
 <!-- End #content -->
-
-</body>
-</html>
+  </body>
+ </html>

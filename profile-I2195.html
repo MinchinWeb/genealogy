@@ -1,14 +1,13 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.49.0.266)" />
+ <head>
+ <meta name="generator" content="Tim Forsythe (Adam 2.11.0.23)" />
  <meta property="og:title" content="Susanna Arthure Profile - Minchin Genealogy | Minchin.ca" />
  <title>Susanna Arthure Profile - Minchin Genealogy | Minchin.ca</title>
-  <head>
- <meta charset="UTF-8" />
-  <!-- end Header code -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="adam.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
@@ -16,23 +15,36 @@
   <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
   <script type="text/javascript" src="graph-handler.js"></script>
   <script type="text/javascript" src="tab-list-handler.js"></script>
-  <!-- start Post-header code -->
+  <script type="text/javascript" src="tooltip-handler.js"></script>
+  <!-- start header code -->
+  <meta charset="UTF-8" />
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-384291-3', 'minchin.ca');
+    ga('send', 'pageview');
+
+  </script>
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
   <link rel="stylesheet" href="adam.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/screen.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/adam-overrides.css" type="text/css" />
-<!--
------------------------------------------------
-Minchin.ca / Genealogy Pages
-Copyright 1994-2013 W. Minchin
-Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.5        January 17, 2014
------------------------------------------------ -->
-</head>	
-<!-- end Post-header code -->
+  <!--
+  -----------------------------------------------
+  Minchin.ca / Genealogy Pages
+  Copyright 1994-2014 W. Minchin
+  Prototype: 1.1.1 (rev C) January 13, 2010
+  Version:   1.0.4        December 29, 2013
+  ----------------------------------------------- -->
+  <!-- end Header code -->
+ </head>
+
+ <body class="container">
   <!-- start body code -->
-<body>
 <!-- Begin #content - Centers all content and provides edges for floated columns -->
 
 <div id="content">
@@ -52,9 +64,9 @@ Version:   1.0.5        January 17, 2014
 		</ul>
 	</div>
 	<div id="breadcrumbs">
-	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <span class="here"><a href=".">Genealogy</a></span> </p>
+	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <a href=".">Genealogy</a> > <span class="here">Minchin Genealogy | Minchin.ca<span></p>
 	</div>
-    <h1 id="blog-title"><a href=".">Genealogy</a></h1>
+    <h1 id="blog-title">Minchin Genealogy | Minchin.ca</h1>
     <p id="description"> </p>
 </div></div>
 
@@ -63,13 +75,7 @@ Version:   1.0.5        January 17, 2014
 <div id="full-width"><div id="full-width2"><div id="full-width3"><div class="post"><div class="post-body">
 
 <!-- Begin Adam code -->
- <div id="site-wrapper">
-  <div id="site-header"><a href=".">W. Minchin Presents</a></div>
-   <div id="site-content">
-    <div id="adam-wrapper">
-     <div id="adam-outer-content">
-      <div id="adam-inner-content">
-      <!-- end body code -->
+<div id="site-content">
 
 
 <h1 id="adam-page-title">Susanna Arthure Profile</h1>
@@ -339,11 +345,11 @@ Version:   1.0.5        January 17, 2014
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[6] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2122.html" class="adam-name_link">Thomas Bunbury, of Kill</a> (1705-1774)</td>
-  <td class="adam-al_path"><span title="Carlow">CAR</span>-<span title=""></span>-<span title="Carlow">CAR</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Carlow">CAR</span>-<span data-toggle="tooltip" title=""></span>-<span data-toggle="tooltip" title="Carlow">CAR</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[7] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2123.html" class="adam-name_link">Susan Priscilla Isaac</a> (1738-1797)</td>
-  <td class="adam-al_path"><span title="Dublin">DUB</span>-<span title=""></span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Dublin">DUB</span>-<span data-toggle="tooltip" title=""></span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 4</td></tr>
@@ -353,11 +359,11 @@ Version:   1.0.5        January 17, 2014
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[12] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2153.html" class="adam-name_link">William Bunbury, I of Lisnavagh</a> (1674-1710)</td>
-  <td class="adam-al_path"><span title="Carlow">CAR</span>-<span title=""></span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Carlow">CAR</span>-<span data-toggle="tooltip" title=""></span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[13] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2157.html" class="adam-name_link">Elizabeth Pendred</a> (~1674-1710)</td>
-  <td class="adam-al_path"><span title="Dublin">DUB</span>-<span title=""></span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Dublin">DUB</span>-<span data-toggle="tooltip" title=""></span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[14] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2187.html" class="adam-name_link">Simon Isaac</a> (~1704-)</td>
@@ -367,7 +373,7 @@ Version:   1.0.5        January 17, 2014
 <tr><td class="adam-al_generation">Generation 5</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[24] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I2154.html" class="adam-name_link">Benjamin Bunbury, of Killerig</a> (1642-1707)</td>
-  <td class="adam-al_path"><span title="Carlow">CAR</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Carlow">CAR</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[26] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I2158.html" class="adam-name_link">William Pendred</a> (~1640-)</b></td>
@@ -445,7 +451,7 @@ Version:   1.0.5        January 17, 2014
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[770] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I9945.html" class="adam-name_link">Hugh Aldersey</a> (~1483-)</td>
-  <td class="adam-al_path"><span title="Cheshire">CHS</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Cheshire">CHS</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 11</td></tr>
@@ -613,7 +619,7 @@ Version:   1.0.5        January 17, 2014
 <div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <div class="floatmapbuttons"><p>
-<span class="mapbuttonspan"><a href="javascript:void(0);" id="togglemarkers" class="mapbutton">Toggle Markers</a></span>
+<span class="mapbuttonspan"><a href="javascript:void(0);" id="togglemarkers" class="btn btn-success">Toggle Markers</a></span>
 </p></div>
 
 <div id='adam-heat-map'></div>
@@ -628,9 +634,9 @@ var mcOptions={styles:[{ height:35,width:35,url:"mapmarker1.png"},
  { height:35,width:35,url:"mapmarker4.png"},
  { height:35,width:35,url:"mapmarker5.png"}]};
 function initializePins() {
- addPin(52.8976,-6.71076,1,myImageW,'Catherine Eustace','<div class="infowindow"><p>Coordinates: 52.8976, -6.71076</p><span class="adam-map-location"><a href="places-ireland-carlow-of-broughillstown.html" class="adam-location_link">of Broughillstown, Carlow, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2159.html" class="adam-name_link">Catherine Eustace</a> (~1640-)</span></div>');addPin(52.8789,-6.69333,1,myImageM,'William Bunbury, I of Lisnavagh','<div class="infowindow"><p>Coordinates: 52.8789, -6.69333</p><span class="adam-map-location"><a href="places-ireland-carlow-rathvilly-of-lisnavagh.html" class="adam-location_link">of Lisnavagh, Rathvilly, Carlow, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2153.html" class="adam-name_link">William Bunbury, I of Lisnavagh</a> (1674-1710)</span></div>');addPin(53.3331,-6.24889,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 53.3331, -6.24889</p><span class="adam-map-location"><a href="places-ireland-dublin-dublin-st-bridget-s.html" class="adam-location_link">St. Bridget&rsquo;s, Dublin, Dublin, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2123.html" class="adam-name_link">Susan Priscilla Isaac</a> (1738-1797)</span><br/><br/><span class="adam-map-location"><a href="places-ireland-dublin-dublin-st-andrew-s.html" class="adam-location_link">St. Andrew&rsquo;s, Dublin, Dublin, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2157.html" class="adam-name_link">Elizabeth Pendred</a> (~1674-1710)</span></div>');addPin(53.25,-3.16667,1,myImageM,'John Hooks','<div class="infowindow"><p>Coordinates: 53.25, -3.16667</p><span class="adam-map-location"><a href="places-wales-flintshire-of.html" class="adam-location_link">of, Flintshire, Wales</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9943.html" class="adam-name_link">John Hooks</a> (~1403-)</span></div>');addPin(53.1667,-2.58333,1,myImageM,'Hugh Aldersey','<div class="infowindow"><p>Coordinates: 53.1667, -2.58333</p><span class="adam-map-location"><a href="places-england-cheshire-of.html" class="adam-location_link">of, Cheshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9945.html" class="adam-name_link">Hugh Aldersey</a> (~1483-)</span></div>');addPin(52.2946,-0.797497,1,myImageM,'William Pendred','<div class="infowindow"><p>Coordinates: 52.2946, -0.797497</p><span class="adam-map-location"><a href="places-england-northamptonshire-of-sywell.html" class="adam-location_link">of Sywell, Northamptonshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2158.html" class="adam-name_link">William Pendred</a> (~1640-)</span></div>');addPin(1000,1000,13,myImage,'13 Persons','<div class="infowindow"><p>Coordinates: 1000, 1000</p><span class="adam-map-location"><a href="places-tullow.html" class="adam-location_link">Tullow</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2122.html" class="adam-name_link">Thomas Bunbury, of Kill</a> (1705-1774)</span><br/><br/><span class="adam-map-location"><a href="places-ireland-carlow-of-killerig.html" class="adam-location_link">of Killerig, Carlow, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2154.html" class="adam-name_link">Benjamin Bunbury, of Killerig</a> (1642-1707)</span><br/><br/><span class="adam-map-location"><a href="places-of-stanney.html" class="adam-location_link">of Stanney</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2156.html" class="adam-name_link">Sir Henry Bunbury</a> (~1582-)</span><br/><br/><span class="adam-map-location"><a href="places-of-backford.html" class="adam-location_link">of Backford</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9950.html" class="adam-name_link">Henry Birkenhead, Esq.</a> (~1574-)</span><br/><br/><span class="adam-map-location"><a href="places-of-speake.html" class="adam-location_link">of Speake</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9949.html" class="adam-name_link">Sir William Norris, Knt</a> (~1548-)</span><br/><br/><span class="adam-map-location"><a href="places-of-stanny.html" class="adam-location_link">of Stanny</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9863.html" class="adam-name_link">Henry Bunbury, Esq.</a> (~1516-~1547)</span><br/><br/><span class="adam-map-location"><a href="places-of-aston.html" class="adam-location_link">of Aston</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9947.html" class="adam-name_link">John Aston</a> (~1513-)</span><br/><br/><span class="adam-map-location"><a href="places-of-stanny.html" class="adam-location_link">of Stanny</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9861.html" class="adam-name_link">Richard Bunbury, Esq.</a> (~1482-~1541)</span><br/><br/><span class="adam-map-location"><a href="places-of-stanny.html" class="adam-location_link">of Stanny</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9859.html" class="adam-name_link">John Bunbury, Esq.</a> (~1452-1507)</span><br/><br/><span class="adam-map-location"><a href="places-of-aldersey-and-spurstoe.html" class="adam-location_link">of Aldersey and Spurstoe</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9946.html" class="adam-name_link">Henry Aldersey</a> (~1449-)</span><br/><br/><span class="adam-map-location"><a href="places-of-stanny.html" class="adam-location_link">of Stanny</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9857.html" class="adam-name_link">John Bunbury</a> (~1437-1470)</span><br/><br/><span class="adam-map-location"><a href="places-of-speake.html" class="adam-location_link">of Speake</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9944.html" class="adam-name_link">William Norris, Esq.</a> (~1418-)</span><br/><br/><span class="adam-map-location"><a href="places-in-wirral.html" class="adam-location_link">in Wirral</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9850.html" class="adam-name_link">William de Bunbury</a> (~1346-)</span></div>');
+ addPin(52.8431,-6.78906,1,myImageM,'Benjamin Bunbury, of Killerig','<div class="infowindow"><p>Coordinates: 52.8431, -6.78906</p><span class="adam-map-location"><a href="places-ireland-carlow-of-killerig.html" class="adam-location_link">of Killerig, Carlow, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2154.html" class="adam-name_link">Benjamin Bunbury, of Killerig</a> (1642-1707)</span></div>');addPin(52.8976,-6.71076,1,myImageW,'Catherine Eustace','<div class="infowindow"><p>Coordinates: 52.8976, -6.71076</p><span class="adam-map-location"><a href="places-ireland-carlow-of-broughillstown.html" class="adam-location_link">of Broughillstown, Carlow, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2159.html" class="adam-name_link">Catherine Eustace</a> (~1640-)</span></div>');addPin(52.8789,-6.69333,1,myImageM,'William Bunbury, I of Lisnavagh','<div class="infowindow"><p>Coordinates: 52.8789, -6.69333</p><span class="adam-map-location"><a href="places-ireland-carlow-rathvilly-of-lisnavagh.html" class="adam-location_link">of Lisnavagh, Rathvilly, Carlow, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2153.html" class="adam-name_link">William Bunbury, I of Lisnavagh</a> (1674-1710)</span></div>');addPin(53.3331,-6.24889,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 53.3331, -6.24889</p><span class="adam-map-location"><a href="places-ireland-dublin-dublin-st-bridget-s.html" class="adam-location_link">St. Bridget&rsquo;s, Dublin, Dublin, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2123.html" class="adam-name_link">Susan Priscilla Isaac</a> (1738-1797)</span><br/><br/><span class="adam-map-location"><a href="places-ireland-dublin-dublin-st-andrew-s.html" class="adam-location_link">St. Andrew&rsquo;s, Dublin, Dublin, Ireland</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2157.html" class="adam-name_link">Elizabeth Pendred</a> (~1674-1710)</span></div>');addPin(53.25,-3.16667,1,myImageM,'John Hooks','<div class="infowindow"><p>Coordinates: 53.25, -3.16667</p><span class="adam-map-location"><a href="places-wales-flintshire-of.html" class="adam-location_link">of, Flintshire, Wales</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9943.html" class="adam-name_link">John Hooks</a> (~1403-)</span></div>');addPin(53.1667,-2.58333,1,myImageM,'Hugh Aldersey','<div class="infowindow"><p>Coordinates: 53.1667, -2.58333</p><span class="adam-map-location"><a href="places-england-cheshire-of.html" class="adam-location_link">of, Cheshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9945.html" class="adam-name_link">Hugh Aldersey</a> (~1483-)</span></div>');addPin(52.2946,-0.797497,1,myImageM,'William Pendred','<div class="infowindow"><p>Coordinates: 52.2946, -0.797497</p><span class="adam-map-location"><a href="places-england-northamptonshire-of-sywell.html" class="adam-location_link">of Sywell, Northamptonshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2158.html" class="adam-name_link">William Pendred</a> (~1640-)</span></div>');addPin(1000,1000,12,myImage,'12 Persons','<div class="infowindow"><p>Coordinates: 1000, 1000</p><span class="adam-map-location"><a href="places-tullow.html" class="adam-location_link">Tullow</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2122.html" class="adam-name_link">Thomas Bunbury, of Kill</a> (1705-1774)</span><br/><br/><span class="adam-map-location"><a href="places-of-stanney.html" class="adam-location_link">of Stanney</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I2156.html" class="adam-name_link">Sir Henry Bunbury</a> (~1582-)</span><br/><br/><span class="adam-map-location"><a href="places-of-backford.html" class="adam-location_link">of Backford</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9950.html" class="adam-name_link">Henry Birkenhead, Esq.</a> (~1574-)</span><br/><br/><span class="adam-map-location"><a href="places-of-speake.html" class="adam-location_link">of Speake</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9949.html" class="adam-name_link">Sir William Norris, Knt</a> (~1548-)</span><br/><br/><span class="adam-map-location"><a href="places-of-stanny.html" class="adam-location_link">of Stanny</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9863.html" class="adam-name_link">Henry Bunbury, Esq.</a> (~1516-~1547)</span><br/><br/><span class="adam-map-location"><a href="places-of-aston.html" class="adam-location_link">of Aston</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9947.html" class="adam-name_link">John Aston</a> (~1513-)</span><br/><br/><span class="adam-map-location"><a href="places-of-stanny.html" class="adam-location_link">of Stanny</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9861.html" class="adam-name_link">Richard Bunbury, Esq.</a> (~1482-~1541)</span><br/><br/><span class="adam-map-location"><a href="places-of-stanny.html" class="adam-location_link">of Stanny</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9859.html" class="adam-name_link">John Bunbury, Esq.</a> (~1452-1507)</span><br/><br/><span class="adam-map-location"><a href="places-of-aldersey-and-spurstoe.html" class="adam-location_link">of Aldersey and Spurstoe</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9946.html" class="adam-name_link">Henry Aldersey</a> (~1449-)</span><br/><br/><span class="adam-map-location"><a href="places-of-stanny.html" class="adam-location_link">of Stanny</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9857.html" class="adam-name_link">John Bunbury</a> (~1437-1470)</span><br/><br/><span class="adam-map-location"><a href="places-of-speake.html" class="adam-location_link">of Speake</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9944.html" class="adam-name_link">William Norris, Esq.</a> (~1418-)</span><br/><br/><span class="adam-map-location"><a href="places-in-wirral.html" class="adam-location_link">in Wirral</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I9850.html" class="adam-name_link">William de Bunbury</a> (~1346-)</span></div>');
  markerCluster = new MarkerClusterer(map, myPins, mcOptions);
- var myData={max:1,data:[{lat:52.8976,lng:-6.71076,count:0.3},{lat:52.8789,lng:-6.69333,count:0.3},{lat:53.3331,lng:-6.24889,count:0.6},{lat:53.25,lng:-3.16667,count:0.3},{lat:53.1667,lng:-2.58333,count:0.3},{lat:52.2946,lng:-0.797497,count:0.3},]};
+ var myData={max:1,data:[{lat:52.8431,lng:-6.78906,count:0.3},{lat:52.8976,lng:-6.71076,count:0.3},{lat:52.8789,lng:-6.69333,count:0.3},{lat:53.3331,lng:-6.24889,count:0.6},{lat:53.25,lng:-3.16667,count:0.3},{lat:53.1667,lng:-2.58333,count:0.3},{lat:52.2946,lng:-0.797497,count:0.3},]};
  google.maps.event.addListenerOnce(map,'idle',function(){heatmap.setDataSet(myData);});
 }
 </script>
@@ -642,8 +648,10 @@ $(document).ready(function () {
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     e.target
     e.relatedTarget
-  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+    if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      var currCenter = map.getCenter();
       google.maps.event.trigger(map, 'resize');
+      map.setCenter(currCenter);
     }
   });
 });
@@ -657,15 +665,11 @@ $(document).ready(function () {
 Last Modified: Apr 11, 2012
 </li>
 </ul>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.49.0.266</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 2.11.0.23</a>. </div>
 
 <!-- start footer code -->
-      </div>
-     </div>
-    </div>
-   </div>
   </div>
- <div id="site-footer">Brought to you by Tim Forsythe (<a href="http://timforsythe.com" target="_blank">http://timforsythe.com</a>)</div>
+ <div id="site-footer"></div>
 
 <!-- End Adam code -->
 
@@ -677,7 +681,7 @@ Last Modified: Apr 11, 2012
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br /><a href="http://www.timforsythe.com/tools/adam">Built by Adam 1.49.0.266. </a>- Last Updated: January 23, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 2.11.0.23.  - Last Updated: February 2, 2014</p>
 
 </div></div></div>
 
@@ -686,6 +690,5 @@ Last Modified: Apr 11, 2012
 </div>
 
 <!-- End #content -->
-
-</body>
-</html>
+  </body>
+ </html>

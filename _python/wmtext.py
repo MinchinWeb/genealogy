@@ -1,30 +1,40 @@
 '''WMText
-v.2 - WM - Jan. 5, 2014
+v.3.1 - WM - Feb. 2, 2014
 
 This is a helper file, containing formatting helps for creating command line
 programs.
 '''
 
-version = 2
+__version__ = 3.1
 
 import colorama
 import sys
 import time
+import re
+
+re_ansi_control_codes = re.compile(r'\033\[[017](;[034][0-9])*m|\x1b\[[034][0-9]*m') #term colour control codes
+
+def length_no_ansi(mystring):
+	'''Takes a string, strips out the ANSI escape codes
+	(used for colouring terminal output, etc.), and returns
+	the length of the resulting string'''
+	newstring = re.sub(re_ansi_control_codes, "", mystring)
+	return len(newstring)
 
 def centered (mystring, linewidth=79, fill=" "):
-	'''Takes a string, centers it, and pads it on both sides'''
-	sides = (linewidth - len(mystring))/2
+	'''Takes a string, centres it, and pads it on both sides'''
+	sides = (linewidth - length_no_ansi(mystring))/2
 	sidestring = ""
 	for i in range(sides):
 		sidestring = sidestring + fill
 	newstring = sidestring + mystring + sidestring
-	while len(newstring) < linewidth:
+	while length_no_ansi(newstring) < linewidth:
 		newstring = newstring + " "
 	return newstring
 
 def clock_on_right(mystring):
 	'''Takes a string, and prints it with the clock right aligned'''
-	taken = len(mystring)
+	taken = length_no_ansi(mystring)
 	padding = 79 - taken - 5
 	clock = time.strftime("%I:%M", time.localtime())
 	print mystring + " "*padding + clock
@@ -150,3 +160,7 @@ def title(mytitle):
 	
 def subtitle(mysubtitle):
 	print colorama.Style.BRIGHT + centered(mysubtitle) + colorama.Style.RESET_ALL
+	
+'''To-Do:
+* add a 'rainbow-ize function to make text a rainbox of colours!
+'''

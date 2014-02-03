@@ -1,14 +1,13 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.49.0.266)" />
+ <head>
+ <meta name="generator" content="Tim Forsythe (Adam 2.11.0.23)" />
  <meta property="og:title" content="Margaret Evelena Williams Profile - Minchin Genealogy | Minchin.ca" />
  <title>Margaret Evelena Williams Profile - Minchin Genealogy | Minchin.ca</title>
-  <head>
- <meta charset="UTF-8" />
-  <!-- end Header code -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="adam.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
@@ -16,23 +15,36 @@
   <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
   <script type="text/javascript" src="graph-handler.js"></script>
   <script type="text/javascript" src="tab-list-handler.js"></script>
-  <!-- start Post-header code -->
+  <script type="text/javascript" src="tooltip-handler.js"></script>
+  <!-- start header code -->
+  <meta charset="UTF-8" />
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-384291-3', 'minchin.ca');
+    ga('send', 'pageview');
+
+  </script>
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
   <link rel="stylesheet" href="adam.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/screen.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/adam-overrides.css" type="text/css" />
-<!--
------------------------------------------------
-Minchin.ca / Genealogy Pages
-Copyright 1994-2013 W. Minchin
-Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.5        January 17, 2014
------------------------------------------------ -->
-</head>	
-<!-- end Post-header code -->
+  <!--
+  -----------------------------------------------
+  Minchin.ca / Genealogy Pages
+  Copyright 1994-2014 W. Minchin
+  Prototype: 1.1.1 (rev C) January 13, 2010
+  Version:   1.0.4        December 29, 2013
+  ----------------------------------------------- -->
+  <!-- end Header code -->
+ </head>
+
+ <body class="container">
   <!-- start body code -->
-<body>
 <!-- Begin #content - Centers all content and provides edges for floated columns -->
 
 <div id="content">
@@ -52,9 +64,9 @@ Version:   1.0.5        January 17, 2014
 		</ul>
 	</div>
 	<div id="breadcrumbs">
-	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <span class="here"><a href=".">Genealogy</a></span> </p>
+	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <a href=".">Genealogy</a> > <span class="here">Minchin Genealogy | Minchin.ca<span></p>
 	</div>
-    <h1 id="blog-title"><a href=".">Genealogy</a></h1>
+    <h1 id="blog-title">Minchin Genealogy | Minchin.ca</h1>
     <p id="description"> </p>
 </div></div>
 
@@ -63,13 +75,7 @@ Version:   1.0.5        January 17, 2014
 <div id="full-width"><div id="full-width2"><div id="full-width3"><div class="post"><div class="post-body">
 
 <!-- Begin Adam code -->
- <div id="site-wrapper">
-  <div id="site-header"><a href=".">W. Minchin Presents</a></div>
-   <div id="site-content">
-    <div id="adam-wrapper">
-     <div id="adam-outer-content">
-      <div id="adam-inner-content">
-      <!-- end body code -->
+<div id="site-content">
 
 
 <h1 id="adam-page-title">Margaret Evelena Williams Profile</h1>
@@ -108,9 +114,7 @@ Version:   1.0.5        January 17, 2014
 </td></tr></table></td></tr>
 <tr><td><table class="adam-name_list adam-table_box">
 <tr class="adam-claim"><td class="adam-claim_tag">Name</td><td class="adam-claim_data"> Margaret Evelena Williams
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 </table></td></tr>
 <tr><td><table class="adam-userids adam-table_box">
 <tr class="adam-claim"><td class="adam-claim_tag">Reference: </td><td class="adam-claim_data"> D7F159080D594C9E8597233139E431D80FA4</td></tr>
@@ -129,13 +133,9 @@ GEDCOM file imported on 10 January 2013
 <tr><td><table class="adam-events adam-table_box">
 <tr class="adam-claim"><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-utah-sanpete-mayfield.html" class="adam-location_link">Mayfield, Sanpete, Utah, United States</a>
 
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date">Jan 25, 1885</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date">Jan 25, 1885</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date">Apr 13, 1889</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date">Apr 13, 1889</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 </table></td></tr>
 </table>
 </li>
@@ -333,53 +333,53 @@ GEDCOM file imported on 10 January 2013
 <tr><td class="adam-al_generation">Generation 1</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4716.html" class="adam-name_link">Margaret Evelena Williams</a> (1885-1889)</td>
-  <td class="adam-al_path"><span title="Utah">UT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Utah">UT</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 2</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[2] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I4705.html" class="adam-name_link">Thomas Andrew Williams</a> (1845-1919)</i></td>
-  <td class="adam-al_path"><span title="Somerset">SOM</span>-<span title="Utah">UT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Somerset">SOM</span>-<span data-toggle="tooltip" title="Utah">UT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[3] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4706.html" class="adam-name_link">Jane Elettice Edwards</a> (1847-1909)</td>
-  <td class="adam-al_path"><span title="Iowa">IA</span>-<span title="Utah">UT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Iowa">IA</span>-<span data-toggle="tooltip" title="Utah">UT</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 3</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[4] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5178.html" class="adam-name_link">Stephen Williams</a> (1816-1897)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span>-<span title="Somerset">SOM</span>-<span title="Utah">UT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span>-<span data-toggle="tooltip" title="Somerset">SOM</span>-<span data-toggle="tooltip" title="Utah">UT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[5] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5179.html" class="adam-name_link">Emma Jane Hillard</a> (1826-1897)</td>
-  <td class="adam-al_path"><span title="Somerset">SOM</span>-<span title="Utah">UT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Somerset">SOM</span>-<span data-toggle="tooltip" title="Utah">UT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[6] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5180.html" class="adam-name_link">Caleb Gibbins Edwards</a> (1819-1867)</td>
-  <td class="adam-al_path"><span title="Iowa">IA</span>-<span title="Utah">UT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Iowa">IA</span>-<span data-toggle="tooltip" title="Utah">UT</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[7] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5181.html" class="adam-name_link">Cynthia Jane Shepherd</a> (1829-1891)</b></td>
-  <td class="adam-al_path"><span title="United States">USA</span>-<span title="Utah">UT</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="United States">USA</span>-<span data-toggle="tooltip" title="Utah">UT</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 4</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[8] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5306.html" class="adam-name_link">Thomas Williams</a> (~1782-~1858)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[9] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5307.html" class="adam-name_link">Sarah Elliot</a> (~1786-1869)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[10] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5302.html" class="adam-name_link">Andrew Hillard</a> (1799-1873)</td>
-  <td class="adam-al_path"><span title="Somerset">SOM</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Somerset">SOM</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[11] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5303.html" class="adam-name_link">Mary Higgins</a> (1803-1857)</td>
-  <td class="adam-al_path"><span title="Somerset">SOM</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Somerset">SOM</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[12] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5395.html" class="adam-name_link">Rufus Edwards</a> (~1785-)</b></td>
@@ -389,45 +389,45 @@ GEDCOM file imported on 10 January 2013
 <tr><td class="adam-al_generation">Generation 5</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[16] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5308.html" class="adam-name_link">Humphrey Williams</a> (1746-1812)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[17] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5309.html" class="adam-name_link">Elizabeth Peardon</a> (~1744-)</td>
-  <td class="adam-al_path"><span title="Cornwall">CON</span>-<span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Cornwall">CON</span>-<span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[18] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5312.html" class="adam-name_link">Stephen Eliot</a> (1752-1829)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[19] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5313.html" class="adam-name_link">Sarah Galsworthy</a> (~1763-)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[20] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5681.html" class="adam-name_link">Ambrose Hillard</a> (1770-)</td>
-  <td class="adam-al_path"><span title="Somerset">SOM</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Somerset">SOM</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[21] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5682.html" class="adam-name_link">Eleanor Cleeves</a> (~1770-)</td>
-  <td class="adam-al_path"><span title="Somerset">SOM</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Somerset">SOM</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[22] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5304.html" class="adam-name_link">Moses Higgins</a> (~1778-)</td>
-  <td class="adam-al_path"><span title="Somerset">SOM</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Somerset">SOM</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[23] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5305.html" class="adam-name_link">Rachel Chennock</a> (~1776-1835)</b></td>
-  <td class="adam-al_path"><span title="Somerset">SOM</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Somerset">SOM</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 6</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[32] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6533.html" class="adam-name_link">Edward Manning</a> (~1721-~1779)</td>
-  <td class="adam-al_path"><span title="Cornwall">CON</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Cornwall">CON</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[33] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5311.html" class="adam-name_link">Elizabeth Williams</a> (~1712-)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[35] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5310.html" class="adam-name_link">Anne Peardon</a> (~1709-)</b></td>
@@ -435,23 +435,23 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[36] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5314.html" class="adam-name_link">Stephen Elliott</a> (~1725-~1785)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[37] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5315.html" class="adam-name_link">Grace Ham</a> (~1725-)</td>
-  <td class="adam-al_path"><span title="Cornwall">CON</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Cornwall">CON</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[38] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5327.html" class="adam-name_link">William Galsworthy</a> (~1737-~1822)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[39] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5328.html" class="adam-name_link">Catherine Whitlock</a> (~1742-)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[40] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5812.html" class="adam-name_link">John Hillard</a> (~1730-1789)</td>
-  <td class="adam-al_path"><span title="Somerset">SOM</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Somerset">SOM</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[41] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5813.html" class="adam-name_link">Hannah Day</a> (~1729-)</b></td>
@@ -459,25 +459,25 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[42] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5683.html" class="adam-name_link">John Cleeves</a> (~1743-~1787)</b></td>
-  <td class="adam-al_path"><span title="Somerset">SOM</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Somerset">SOM</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[43] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5684.html" class="adam-name_link">Unity Sutton</a> (~1740-)</td>
-  <td class="adam-al_path"><span title="Somerset">SOM</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Somerset">SOM</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[44] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6540.html" class="adam-name_link">John Higgins</a> (~1742-)</td>
-  <td class="adam-al_path"><span title="England">ENG</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="England">ENG</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[45] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6541.html" class="adam-name_link">Mary Wilson</a> (~1748-)</td>
-  <td class="adam-al_path"><span title="England">ENG</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="England">ENG</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 7</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[64] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6536.html" class="adam-name_link">Anthony Manning</a> (1681-1734)</td>
-  <td class="adam-al_path"><span title="Cornwall">CON</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Cornwall">CON</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[65] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6537.html" class="adam-name_link">Mary Ham</a> (~1681-)</b></td>
@@ -493,47 +493,47 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[72] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5320.html" class="adam-name_link">Stephen Elliott</a> (~1677-~1745)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[73] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5321.html" class="adam-name_link">Jane Williams</a> (~1700-)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[74] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5316.html" class="adam-name_link">Benjamin Ham</a> (~1696-)</b></td>
-  <td class="adam-al_path"><span title="Cornwall">CON</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Cornwall">CON</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[75] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5317.html" class="adam-name_link">Jane Trick</a> (~1696-)</td>
-  <td class="adam-al_path"><span title="Cornwall">CON</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Cornwall">CON</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[76] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5335.html" class="adam-name_link">Thomas Galsworthy</a> (~1706-~1796)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[77] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5336.html" class="adam-name_link">Sarah Mountjoy</a> (~1700-~1782)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[78] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5329.html" class="adam-name_link">Phillip Whitlock</a> (1712-)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[79] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5330.html" class="adam-name_link">Mary Pithrick</a> (~1716-)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[80] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6539.html" class="adam-name_link">Leonard Hillard</a> (~1691-)</b></td>
-  <td class="adam-al_path"><span title="Somerset">SOM</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Somerset">SOM</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[86] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5698.html" class="adam-name_link">George Sutton</a> (~1708-)</b></td>
-  <td class="adam-al_path"><span title="Somerset">SOM</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Somerset">SOM</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[87] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5699.html" class="adam-name_link">Rebecca</a> (~1712-)</b></td>
-  <td class="adam-al_path"><span title="Somerset">SOM</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Somerset">SOM</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[88] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6544.html" class="adam-name_link">John Stone</a> (~1719-)</b></td>
@@ -541,11 +541,11 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[89] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6545.html" class="adam-name_link">Ann Higgins</a> (~1719-)</td>
-  <td class="adam-al_path"><span title="England">ENG</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="England">ENG</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[90] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6542.html" class="adam-name_link">Samuel Wilson</a> (~1726-)</td>
-  <td class="adam-al_path"><span title="England">ENG</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="England">ENG</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[91] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6543.html" class="adam-name_link">Mary</a> (~1726-)</b></td>
@@ -555,47 +555,47 @@ GEDCOM file imported on 10 January 2013
 <tr><td class="adam-al_generation">Generation 8</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[128] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6538.html" class="adam-name_link">Edward Manning</a> (~1656-)</b></td>
-  <td class="adam-al_path"><span title="Cornwall">CON</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Cornwall">CON</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[144] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5322.html" class="adam-name_link">William Eliot</a> (~1652-)</td>
-  <td class="adam-al_path"><span title="Cornwall">CON</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Cornwall">CON</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[145] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5323.html" class="adam-name_link">Philippe (Philippa)</a> (~1655-)</b></td>
-  <td class="adam-al_path"><span title="Cornwall">CON</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Cornwall">CON</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[150] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5318.html" class="adam-name_link">Elias Trick</a> (~1666-~1735)</b></td>
-  <td class="adam-al_path"><span title="Cornwall">CON</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Cornwall">CON</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[151] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5319.html" class="adam-name_link">Jane Prout</a> (~1670-)</b></td>
-  <td class="adam-al_path"><span title="Cornwall">CON</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Cornwall">CON</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[152] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5337.html" class="adam-name_link">Thomas Galsworthy</a> (~1674-)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[153] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5338.html" class="adam-name_link">Margaret</a> (~1680-)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[154] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5352.html" class="adam-name_link">William Mountjoy</a> (~1657-1733)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[155] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5353.html" class="adam-name_link">Sarah Nicholls</a> (~1667-~1732)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[156] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5331.html" class="adam-name_link">Richard Whitlock</a> (~1675-~1760)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[157] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5332.html" class="adam-name_link">Catherine Bagelhole</a> (~1679-~1723)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[178] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6546.html" class="adam-name_link">James Higgins</a> (~1685-)</b></td>
@@ -607,7 +607,7 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[180] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I6548.html" class="adam-name_link">Richard Wilson</a> (1696-)</td>
-  <td class="adam-al_path"><span title="England">ENG</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="England">ENG</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[181] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6549.html" class="adam-name_link">Ann Gibbs</a> (~1696-)</b></td>
@@ -617,43 +617,43 @@ GEDCOM file imported on 10 January 2013
 <tr><td class="adam-al_generation">Generation 9</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[288] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5324.html" class="adam-name_link">William Eliot, Jr.</a> (~1614-)</td>
-  <td class="adam-al_path"><span title="Cornwall">CON</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Cornwall">CON</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[289] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5325.html" class="adam-name_link">Joan</a> (~1618-1657)</b></td>
-  <td class="adam-al_path"><span title="Cornwall">CON</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Cornwall">CON</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[304] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5339.html" class="adam-name_link">Thomas Galsworthy</a> (~1641-)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[305] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5340.html" class="adam-name_link">Philippa Nicholls</a> (~1637-~1677)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[308] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5356.html" class="adam-name_link">William Mountjoy</a> (~1631-~1706)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[309] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5357.html" class="adam-name_link">Grace Heard</a> (~1640-1699)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[310] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5354.html" class="adam-name_link">Hugh Nicholls</a> (~1638-~1700)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[311] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5355.html" class="adam-name_link">Anne Galsworthy</a> (~1640-~1705)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[313] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5333.html" class="adam-name_link">Elizabeth Whitlock</a> (~1653-)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[360] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I6550.html" class="adam-name_link">Ralph Wilson</a> (~1670-)</b></td>
-  <td class="adam-al_path"><span title="England">ENG</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="England">ENG</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 10</td></tr>
@@ -663,125 +663,125 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[608] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5341.html" class="adam-name_link">Alexander Galsworthy</a> (~1601-~1676)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[609] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5342.html" class="adam-name_link">Rodagen Nicholls</a> (~1608-~1643)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[610] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5346.html" class="adam-name_link">Peter Nicholls</a> (~1607-~1683)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[611] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5347.html" class="adam-name_link">Anna Jewel</a> (~1605-~1678)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[616] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5358.html" class="adam-name_link">William Mountjoy</a> (~1582-)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[617] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5359.html" class="adam-name_link">Isot</a> (~1589-~1667)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[618] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5362.html" class="adam-name_link">Nicholas Heard</a> (~1605-~1651)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[619] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5363.html" class="adam-name_link">Joan Snow</a> (~1606-~1662)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[620] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5372.html" class="adam-name_link">Peter Nicholls</a> (~1598-~1684)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[621] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5373.html" class="adam-name_link">Mary\Maria Cleverdon</a> (~1608-)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[622] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5387.html" class="adam-name_link">William Galsworthy</a> (~1607-)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[623] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5385.html" class="adam-name_link">Margery Nicholls</a> (~1606-1674)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 11</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1216] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5343.html" class="adam-name_link">John Galsworthy</a> (1568-1627)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1217] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5344.html" class="adam-name_link">Anne Cooke</a> (1572-1645)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1222] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5348.html" class="adam-name_link">Richard Jewel</a> (~1564-1646)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1223] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5349.html" class="adam-name_link">Isot Shaplee</a> (~1564-~1637)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1232] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5360.html" class="adam-name_link">Hugh Mountjoy</a> (~1557-1582)</td>
-  <td class="adam-al_path"><span title="Sussex">SSX</span>-<span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Sussex">SSX</span>-<span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1233] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5361.html" class="adam-name_link">Mary Nicholls</a> (~1561-)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1236] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5364.html" class="adam-name_link">Barnabas Heard</a> (~1579-~1633)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1237] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5365.html" class="adam-name_link">Grace</a> (~1583-~1628)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1238] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5366.html" class="adam-name_link">Thomas Snow</a> (~1571-~1639)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1239] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5367.html" class="adam-name_link">Christiana or Christina Cole</a> (~1572-~1639)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1240] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5378.html" class="adam-name_link">Hugh Nicholls</a> (~1564-~1640)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1241] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5379.html" class="adam-name_link">Thomasin Heard</a> (~1568-~1640)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1242] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5374.html" class="adam-name_link">Robert Cleverdon</a> (~1575-1661)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1243] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5375.html" class="adam-name_link">Jane Vine</a> (~1579-~1651)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1244] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5343.html" class="adam-name_link">John Galsworthy</a> (1568-1627) (same as 1216)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1245] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5344.html" class="adam-name_link">Anne Cooke</a> (1572-1645)</b> (same as 1217)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1246] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5389.html" class="adam-name_link">John Nicholls</a> (~1572-)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[1247] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5390.html" class="adam-name_link">Philippa Bagelhole</a> (~1576-)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 12</td></tr>
@@ -791,11 +791,11 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[2446] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5350.html" class="adam-name_link">Thomas Shaplee</a> (~1538-)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[2447] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5351.html" class="adam-name_link">Alice Snow</a> (~1542-~1564)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[2464] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5831.html" class="adam-name_link">Hugh Mountjoy</a> (~1523-)</b></td>
@@ -803,51 +803,51 @@ GEDCOM file imported on 10 January 2013
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[2476] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5368.html" class="adam-name_link">Peter Snow</a> (~1541-1603)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[2477] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5369.html" class="adam-name_link">Mrs. Peter _____ Snow</a> (~1545-)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[2478] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5370.html" class="adam-name_link">John Cole</a> (~1540-)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[2479] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5371.html" class="adam-name_link">Charity Heddon</a> (~1544-1601)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[2480] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5380.html" class="adam-name_link">John Nicholls</a> (~1538-~1611)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[2481] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5381.html" class="adam-name_link">Mrs. J. _____ Nicholls</a> (~1542-)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[2484] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5376.html" class="adam-name_link">Robert Cleverdon</a> (~1541-1599)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[2485] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5377.html" class="adam-name_link">Joan Inglet</a> (~1545-1583)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[2492] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5391.html" class="adam-name_link">Richard Nicholls</a> (~1544-)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[2493] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5392.html" class="adam-name_link">Margaret White</a> (~1548-)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[2494] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5393.html" class="adam-name_link">Richard Bagelhole</a> (~1549-)</td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[2495] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5394.html" class="adam-name_link">Joan Caslake</a> (~1553-)</b></td>
-  <td class="adam-al_path"><span title="Devon">DEV</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Devon">DEV</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 13</td></tr>
@@ -873,7 +873,7 @@ GEDCOM file imported on 10 January 2013
 <div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <div class="floatmapbuttons"><p>
-<span class="mapbuttonspan"><a href="javascript:void(0);" id="togglemarkers" class="mapbutton">Toggle Markers</a></span>
+<span class="mapbuttonspan"><a href="javascript:void(0);" id="togglemarkers" class="btn btn-success">Toggle Markers</a></span>
 </p></div>
 
 <div id='adam-heat-map'></div>
@@ -902,8 +902,10 @@ $(document).ready(function () {
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     e.target
     e.relatedTarget
-  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+    if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      var currCenter = map.getCenter();
       google.maps.event.trigger(map, 'resize');
+      map.setCenter(currCenter);
     }
   });
 });
@@ -917,15 +919,11 @@ $(document).ready(function () {
 Last Modified: Dec 30, 2012
 </li>
 </ul>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.49.0.266</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 2.11.0.23</a>. </div>
 
 <!-- start footer code -->
-      </div>
-     </div>
-    </div>
-   </div>
   </div>
- <div id="site-footer">Brought to you by Tim Forsythe (<a href="http://timforsythe.com" target="_blank">http://timforsythe.com</a>)</div>
+ <div id="site-footer"></div>
 
 <!-- End Adam code -->
 
@@ -937,7 +935,7 @@ Last Modified: Dec 30, 2012
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br /><a href="http://www.timforsythe.com/tools/adam">Built by Adam 1.49.0.266. </a>- Last Updated: January 23, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 2.11.0.23.  - Last Updated: February 2, 2014</p>
 
 </div></div></div>
 
@@ -946,6 +944,5 @@ Last Modified: Dec 30, 2012
 </div>
 
 <!-- End #content -->
-
-</body>
-</html>
+  </body>
+ </html>

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.49.0.266)" />
+ <head>
+ <meta name="generator" content="Tim Forsythe (Adam 2.11.0.23)" />
  <meta property="og:title" content="Locations - Minchin Genealogy | Minchin.ca" />
  <title>Locations - Minchin Genealogy | Minchin.ca</title>
-  <head>
- <meta charset="UTF-8" />
-  <!-- end Header code -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="adam.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
@@ -16,23 +15,36 @@
   <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
   <script type="text/javascript" src="graph-handler.js"></script>
   <script type="text/javascript" src="tab-list-handler.js"></script>
-  <!-- start Post-header code -->
+  <script type="text/javascript" src="tooltip-handler.js"></script>
+  <!-- start header code -->
+  <meta charset="UTF-8" />
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-384291-3', 'minchin.ca');
+    ga('send', 'pageview');
+
+  </script>
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
   <link rel="stylesheet" href="adam.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/screen.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/adam-overrides.css" type="text/css" />
-<!--
------------------------------------------------
-Minchin.ca / Genealogy Pages
-Copyright 1994-2013 W. Minchin
-Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.5        January 17, 2014
------------------------------------------------ -->
-</head>	
-<!-- end Post-header code -->
+  <!--
+  -----------------------------------------------
+  Minchin.ca / Genealogy Pages
+  Copyright 1994-2014 W. Minchin
+  Prototype: 1.1.1 (rev C) January 13, 2010
+  Version:   1.0.4        December 29, 2013
+  ----------------------------------------------- -->
+  <!-- end Header code -->
+ </head>
+
+ <body class="container">
   <!-- start body code -->
-<body>
 <!-- Begin #content - Centers all content and provides edges for floated columns -->
 
 <div id="content">
@@ -52,9 +64,9 @@ Version:   1.0.5        January 17, 2014
 		</ul>
 	</div>
 	<div id="breadcrumbs">
-	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <span class="here"><a href=".">Genealogy</a></span> </p>
+	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <a href=".">Genealogy</a> > <span class="here">Minchin Genealogy | Minchin.ca<span></p>
 	</div>
-    <h1 id="blog-title"><a href=".">Genealogy</a></h1>
+    <h1 id="blog-title">Minchin Genealogy | Minchin.ca</h1>
     <p id="description"> </p>
 </div></div>
 
@@ -63,13 +75,7 @@ Version:   1.0.5        January 17, 2014
 <div id="full-width"><div id="full-width2"><div id="full-width3"><div class="post"><div class="post-body">
 
 <!-- Begin Adam code -->
- <div id="site-wrapper">
-  <div id="site-header"><a href=".">W. Minchin Presents</a></div>
-   <div id="site-content">
-    <div id="adam-wrapper">
-     <div id="adam-outer-content">
-      <div id="adam-inner-content">
-      <!-- end body code -->
+<div id="site-content">
 
 
 <h1 id="adam-page-title">Locations</h1>
@@ -584,6 +590,11 @@ Version:   1.0.5        January 17, 2014
 </li>
 
 <li><span class="adam-alignleft">
+<a href="places-nw-14-31-13-w4.html">NW-14-31-13-W4</a>
+</span><span class="adam-alignright"></span></li>
+</li>
+
+<li><span class="adam-alignleft">
 <a href="places-nyork.html">Nyork</a>
 </span><span class="adam-alignright"></span></li>
 </li>
@@ -669,17 +680,22 @@ Version:   1.0.5        January 17, 2014
 </li>
 
 <li><span class="adam-alignleft">
-<a href="places-on-mississippi-river.html">On Mississippi River</a>
-</span><span class="adam-alignright"></span></li>
-</li>
-
-<li><span class="adam-alignleft">
 <a href="places-on-the-gaynadah-line-it-was-a-dairy-farm-occupation-contractor-who-had-a-tractor-and-did-contract-ploughing-and-hors.html">on the Gaynadah line. It was a dairy farm.; Occupation: contractor who had a tractor and did contract ploughing and hors</a>
 </span><span class="adam-alignright"></span></li>
 </li>
 
 <li><span class="adam-alignleft">
+<a href="places-on-the-mississippi-river.html">on the Mississippi River</a>
+</span><span class="adam-alignright"></span></li>
+</li>
+
+<li><span class="adam-alignleft">
 <a href="places-page-65-baker.html">Page 65 - Baker</a>
+</span><span class="adam-alignright"></span></li>
+</li>
+
+<li><span class="adam-alignleft">
+<a href="places-paintearth-district.html">Paintearth district</a>
 </span><span class="adam-alignright"></span></li>
 </li>
 
@@ -1034,7 +1050,7 @@ Version:   1.0.5        January 17, 2014
 </li>
 
 <li><span class="adam-alignleft">
-<a href="places-whitehall-cem.html">Whitehall Cem</a>
+<a href="places-whitehall-cemetary.html">Whitehall Cemetary</a>
 </span><span class="adam-alignright"></span></li>
 </li>
 
@@ -1240,6 +1256,11 @@ Version:   1.0.5        January 17, 2014
 
 <li><span class="adam-alignleft">
 <a href="places-canada-alberta-galahad.html">Canada, Alberta, Galahad</a>
+</span><span class="adam-alignright"></span></li>
+</li>
+
+<li><span class="adam-alignleft">
+<a href="places-canada-alberta-hanna.html">Canada, Alberta, Hanna</a>
 </span><span class="adam-alignright"></span></li>
 </li>
 
@@ -1774,11 +1795,6 @@ Version:   1.0.5        January 17, 2014
 </li>
 
 <li><span class="adam-alignleft">
-<a href="places-canada-prince-edward-island-new-perth.html">Canada, Prince Edward Island, New Perth</a>
-</span><span class="adam-alignright"></span></li>
-</li>
-
-<li><span class="adam-alignleft">
 <a href="places-canada-prince-edward-island-rustico.html">Canada, Prince Edward Island, Queens County, Rustico, Lot 24</a>
 </span><span class="adam-alignright"></span></li>
 </li>
@@ -2119,17 +2135,17 @@ Version:   1.0.5        January 17, 2014
 </li>
 
 <li><span class="adam-alignleft">
-<a href="places-england-bath.html">England, Bath</a>
-</span><span class="adam-alignright"></span></li>
-</li>
-
-<li><span class="adam-alignleft">
 <a href="places-england-bridgeport-st-mary-s-parish.html">England, Bridgeport, St. Mary&rsquo;s Parish</a>
 </span><span class="adam-alignright"></span></li>
 </li>
 
 <li><span class="adam-alignleft">
 <a href="places-england-bristol-bristol.html">England, Bristol, Bristol</a>
+</span><span class="adam-alignright"></span></li>
+</li>
+
+<li><span class="adam-alignleft">
+<a href="places-england-chestershire-bunbury.html">England, Chestershire, Bunbury</a>
 </span><span class="adam-alignright"></span></li>
 </li>
 
@@ -2145,11 +2161,6 @@ Version:   1.0.5        January 17, 2014
 
 <li><span class="adam-alignleft">
 <a href="places-england-hartford-stortford.html">England, Hartford, Stortford</a>
-</span><span class="adam-alignright"></span></li>
-</li>
-
-<li><span class="adam-alignleft">
-<a href="places-england-hertshire-bis-stortford.html">England, Hertshire, Bis. Stortford</a>
 </span><span class="adam-alignright"></span></li>
 </li>
 
@@ -2185,11 +2196,6 @@ Version:   1.0.5        January 17, 2014
 
 <li><span class="adam-alignleft">
 <a href="places-england-rendham-chapel-blythburgh.html">England, Rendham Chapel, Blythburgh</a>
-</span><span class="adam-alignright"></span></li>
-</li>
-
-<li><span class="adam-alignleft">
-<a href="places-england-somersett-chew-magna.html">England, Somersett, Chew Magna</a>
 </span><span class="adam-alignright"></span></li>
 </li>
 
@@ -2264,11 +2270,6 @@ Version:   1.0.5        January 17, 2014
 </li>
 
 <li><span class="adam-alignleft">
-<a href="places-england-bournemouth.html">England, Bournemouth</a>
-</span><span class="adam-alignright"></span></li>
-</li>
-
-<li><span class="adam-alignleft">
 <a href="places-england-buckinghamshire.html">England, Buckinghamshire</a>
 </span><span class="adam-alignright"></span></li>
 </li>
@@ -2290,11 +2291,6 @@ Version:   1.0.5        January 17, 2014
 
 <li><span class="adam-alignleft">
 <a href="places-england-cheshire-of.html">England, Cheshire, of</a>
-</span><span class="adam-alignright"></span></li>
-</li>
-
-<li><span class="adam-alignleft">
-<a href="places-england-cheshire-bunbury.html">England, Cheshire, Bunbury</a>
 </span><span class="adam-alignright"></span></li>
 </li>
 
@@ -2839,11 +2835,6 @@ Version:   1.0.5        January 17, 2014
 </li>
 
 <li><span class="adam-alignleft">
-<a href="places-england-somerset-bath.html">England, Somerset, Bath</a>
-</span><span class="adam-alignright"></span></li>
-</li>
-
-<li><span class="adam-alignleft">
 <a href="places-england-somerset-bristol.html">England, Somerset, Bristol</a>
 </span><span class="adam-alignright"></span></li>
 </li>
@@ -2880,6 +2871,11 @@ Version:   1.0.5        January 17, 2014
 
 <li><span class="adam-alignleft">
 <a href="places-england-somerset-wrington.html">England, Somerset, Wrington</a>
+</span><span class="adam-alignright"></span></li>
+</li>
+
+<li><span class="adam-alignleft">
+<a href="places-england-somerset-bath.html">England, Somerset, Bath</a>
 </span><span class="adam-alignright"></span></li>
 </li>
 
@@ -3044,11 +3040,6 @@ Version:   1.0.5        January 17, 2014
 </li>
 
 <li><span class="adam-alignleft">
-<a href="places-england-suffolk-saxmundhan.html">England, Suffolk, Saxmundhan</a>
-</span><span class="adam-alignright"></span></li>
-</li>
-
-<li><span class="adam-alignleft">
 <a href="places-england-suffolk-saxted.html">England, Suffolk, Saxted</a>
 </span><span class="adam-alignright"></span></li>
 </li>
@@ -3174,7 +3165,7 @@ Version:   1.0.5        January 17, 2014
 </li>
 
 <li><span class="adam-alignleft">
-<a href="places-england-warwickshire-of-foleshill.html">England, Warwickshire, Of Foleshill</a>
+<a href="places-england-warwickshire-of-foleshill.html">England, Warwickshire, of Foleshill</a>
 </span><span class="adam-alignright"></span></li>
 </li>
 
@@ -3634,11 +3625,6 @@ Version:   1.0.5        January 17, 2014
 </li>
 
 <li><span class="adam-alignleft">
-<a href="places-ireland-kilkenny-country-thomastown.html">Ireland, Kilkenny Country, Thomastown</a>
-</span><span class="adam-alignright"></span></li>
-</li>
-
-<li><span class="adam-alignleft">
 <a href="places-ireland-kings-county-and-ballynalkill-of-busherstown.html">Ireland, Kings County & Ballynalkill, of Busherstown</a>
 </span><span class="adam-alignright"></span></li>
 </li>
@@ -4009,6 +3995,11 @@ Version:   1.0.5        January 17, 2014
 </li>
 
 <li><span class="adam-alignleft">
+<a href="places-northern-ireland-county-tyrone-derryloran-parish-cookstown.html">Northern Ireland, County Tyrone, Derryloran Parish, Cookstown</a>
+</span><span class="adam-alignright"></span></li>
+</li>
+
+<li><span class="adam-alignleft">
 <a href="places-northern-ireland-county-tyrone-desertcreat-parish-pomery.html">Northern Ireland, County Tyrone, Desertcreat Parish, Pomery</a>
 </span><span class="adam-alignright"></span></li>
 </li>
@@ -4080,11 +4071,6 @@ Version:   1.0.5        January 17, 2014
 
 <li><span class="adam-alignleft">
 <a href="places-norway-hedemarken-ringsaker-vardberg.html">Norway, Hedemarken, Ringsaker, Vardberg</a>
-</span><span class="adam-alignright"></span></li>
-</li>
-
-<li><span class="adam-alignleft">
-<a href="places-norway-ringsaker-nar-hole.html">Norway, Ringsaker, Nar-Hole</a>
 </span><span class="adam-alignright"></span></li>
 </li>
 
@@ -4204,16 +4190,6 @@ Version:   1.0.5        January 17, 2014
 </li>
 
 <li><span class="adam-alignleft">
-<a href="places-scotland-e-lothian-haddington-tranet-parrish.html">Scotland, E. Lothian, Haddington, Tranet Parrish</a>
-</span><span class="adam-alignright"></span></li>
-</li>
-
-<li><span class="adam-alignleft">
-<a href="places-scotland-elothian-haddington-tranent.html">Scotland, E.Lothian, Haddington, Tranent</a>
-</span><span class="adam-alignright"></span></li>
-</li>
-
-<li><span class="adam-alignleft">
 <a href="places-scotland-glasgow-tradeston-district.html">Scotland, Glasgow, Tradeston District</a>
 </span><span class="adam-alignright"></span></li>
 </li>
@@ -4309,6 +4285,16 @@ Version:   1.0.5        January 17, 2014
 </li>
 
 <li><span class="adam-alignleft">
+<a href="places-scotland-east-lothian-haddington-tranent.html">Scotland, East Lothian, Haddington, Tranent</a>
+</span><span class="adam-alignright"></span></li>
+</li>
+
+<li><span class="adam-alignleft">
+<a href="places-scotland-east-lothian-haddington-tranet-parrish.html">Scotland, East Lothian, Haddington, Tranet Parrish</a>
+</span><span class="adam-alignright"></span></li>
+</li>
+
+<li><span class="adam-alignleft">
 <a href="places-scotland-fife-dunfermline.html">Scotland, Fife, Dunfermline</a>
 </span><span class="adam-alignright"></span></li>
 </li>
@@ -4359,22 +4345,12 @@ Version:   1.0.5        January 17, 2014
 </li>
 
 <li><span class="adam-alignleft">
-<a href="places-scotland-perthshire-balqudidder.html">Scotland, Perthshire, Balqudidder</a>
-</span><span class="adam-alignright"></span></li>
-</li>
-
-<li><span class="adam-alignleft">
 <a href="places-scotland-perthshire-balquhidder.html">Scotland, Perthshire, Balquhidder</a>
 </span><span class="adam-alignright"></span></li>
 </li>
 
 <li><span class="adam-alignleft">
 <a href="places-scotland-perthshire-blair-athol.html">Scotland, Perthshire, Blair Athol</a>
-</span><span class="adam-alignright"></span></li>
-</li>
-
-<li><span class="adam-alignleft">
-<a href="places-scotland-perthshire-blair-atholl.html">Scotland, Perthshire, Blair Atholl</a>
 </span><span class="adam-alignright"></span></li>
 </li>
 
@@ -4699,6 +4675,11 @@ Version:   1.0.5        January 17, 2014
 </li>
 
 <li><span class="adam-alignleft">
+<a href="places-usa-california-san-joaquin-stockton.html">United States, California, San Joaquin, Stockton</a>
+</span><span class="adam-alignright"></span></li>
+</li>
+
+<li><span class="adam-alignleft">
 <a href="places-usa-california-santa-clara-los-altos.html">United States, California, Santa Clara, Los Altos</a>
 </span><span class="adam-alignright"></span></li>
 </li>
@@ -4715,11 +4696,6 @@ Version:   1.0.5        January 17, 2014
 
 <li><span class="adam-alignleft">
 <a href="places-usa-california-santa-clara-santa-clara.html">United States, California, Santa Clara, Santa Clara</a>
-</span><span class="adam-alignright"></span></li>
-</li>
-
-<li><span class="adam-alignleft">
-<a href="places-usa-california-stockton.html">United States, California, Stockton</a>
 </span><span class="adam-alignright"></span></li>
 </li>
 
@@ -5709,11 +5685,6 @@ Version:   1.0.5        January 17, 2014
 </li>
 
 <li><span class="adam-alignleft">
-<a href="places-usa-massachusetts-colerain.html">United States, Massachusetts, Colerain</a>
-</span><span class="adam-alignright"></span></li>
-</li>
-
-<li><span class="adam-alignleft">
 <a href="places-usa-massachusetts-franklin.html">United States, Massachusetts, Franklin</a>
 </span><span class="adam-alignright"></span></li>
 </li>
@@ -5789,11 +5760,6 @@ Version:   1.0.5        January 17, 2014
 </li>
 
 <li><span class="adam-alignleft">
-<a href="places-usa-massachusetts-bristol-dartmouth.html">United States, Massachusetts, Bristol, Dartmouth</a>
-</span><span class="adam-alignright"></span></li>
-</li>
-
-<li><span class="adam-alignleft">
 <a href="places-usa-massachusetts-bristol-dartsmouth.html">United States, Massachusetts, Bristol, Dartsmouth</a>
 </span><span class="adam-alignright"></span></li>
 </li>
@@ -5830,6 +5796,11 @@ Version:   1.0.5        January 17, 2014
 
 <li><span class="adam-alignleft">
 <a href="places-usa-massachusetts-bristol-tauton.html">United States, Massachusetts, Bristol, Tauton</a>
+</span><span class="adam-alignright"></span></li>
+</li>
+
+<li><span class="adam-alignleft">
+<a href="places-usa-massachusetts-colerain.html">United States, Massachusetts, Colerain</a>
 </span><span class="adam-alignright"></span></li>
 </li>
 
@@ -6369,11 +6340,6 @@ Version:   1.0.5        January 17, 2014
 </li>
 
 <li><span class="adam-alignleft">
-<a href="places-usa-nevada-las-vegas.html">United States, Nevada, Las Vegas</a>
-</span><span class="adam-alignright"></span></li>
-</li>
-
-<li><span class="adam-alignleft">
 <a href="places-usa-nevada-winnermucca.html">United States, Nevada, Winnermucca</a>
 </span><span class="adam-alignright"></span></li>
 </li>
@@ -6534,11 +6500,6 @@ Version:   1.0.5        January 17, 2014
 </li>
 
 <li><span class="adam-alignleft">
-<a href="places-usa-new-york-schuyler-county-monterey.html">United States, New York, Monterey</a>
-</span><span class="adam-alignright"></span></li>
-</li>
-
-<li><span class="adam-alignleft">
 <a href="places-usa-new-york.html">United States, New York</a>
 </span><span class="adam-alignright"></span></li>
 </li>
@@ -6645,11 +6606,6 @@ Version:   1.0.5        January 17, 2014
 
 <li><span class="adam-alignleft">
 <a href="places-usa-new-york-chautauqua-pomfret.html">United States, New York, Chautauqua, Pomfret</a>
-</span><span class="adam-alignright"></span></li>
-</li>
-
-<li><span class="adam-alignleft">
-<a href="places-usa-new-york-duchess-dover.html">United States, New York, Duchess, Dover</a>
 </span><span class="adam-alignright"></span></li>
 </li>
 
@@ -7004,6 +6960,11 @@ Version:   1.0.5        January 17, 2014
 </li>
 
 <li><span class="adam-alignleft">
+<a href="places-usa-new-york-schuyler-monterey-892-county-route-16.html">United States, New York, Schuyler, Monterey, 892 County Route 16</a>
+</span><span class="adam-alignright"></span></li>
+</li>
+
+<li><span class="adam-alignleft">
 <a href="places-usa-new-york-schuyler-sugar-hill.html">United States, New York, Schuyler, Sugar Hill</a>
 </span><span class="adam-alignright"></span></li>
 </li>
@@ -7170,11 +7131,6 @@ Version:   1.0.5        January 17, 2014
 
 <li><span class="adam-alignleft">
 <a href="places-usa-ohio-gallis.html">United States, Ohio, Gallis</a>
-</span><span class="adam-alignright"></span></li>
-</li>
-
-<li><span class="adam-alignleft">
-<a href="places-usa-ohio-kirtland.html">United States, Ohio, Kirtland</a>
 </span><span class="adam-alignright"></span></li>
 </li>
 
@@ -8345,15 +8301,11 @@ Version:   1.0.5        January 17, 2014
 </ul>
 </div>
 
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.49.0.266</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 2.11.0.23</a>. </div>
 
 <!-- start footer code -->
-      </div>
-     </div>
-    </div>
-   </div>
   </div>
- <div id="site-footer">Brought to you by Tim Forsythe (<a href="http://timforsythe.com" target="_blank">http://timforsythe.com</a>)</div>
+ <div id="site-footer"></div>
 
 <!-- End Adam code -->
 
@@ -8365,7 +8317,7 @@ Version:   1.0.5        January 17, 2014
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br /><a href="http://www.timforsythe.com/tools/adam">Built by Adam 1.49.0.266. </a>- Last Updated: January 23, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 2.11.0.23.  - Last Updated: February 2, 2014</p>
 
 </div></div></div>
 
@@ -8374,6 +8326,5 @@ Version:   1.0.5        January 17, 2014
 </div>
 
 <!-- End #content -->
-
-</body>
-</html>
+  </body>
+ </html>

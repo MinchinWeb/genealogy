@@ -1,14 +1,13 @@
 <!DOCTYPE html>
- <meta name="generator" content="Tim Forsythe (Adam 1.49.0.266)" />
+ <head>
+ <meta name="generator" content="Tim Forsythe (Adam 2.11.0.23)" />
  <meta property="og:title" content="Sarah Tallman Profile - Minchin Genealogy | Minchin.ca" />
  <title>Sarah Tallman Profile - Minchin Genealogy | Minchin.ca</title>
-  <head>
- <meta charset="UTF-8" />
-  <!-- end Header code -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+  <link rel="stylesheet" href="adam.css">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
   <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
@@ -16,23 +15,36 @@
   <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
   <script type="text/javascript" src="graph-handler.js"></script>
   <script type="text/javascript" src="tab-list-handler.js"></script>
-  <!-- start Post-header code -->
+  <script type="text/javascript" src="tooltip-handler.js"></script>
+  <!-- start header code -->
+  <meta charset="UTF-8" />
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-384291-3', 'minchin.ca');
+    ga('send', 'pageview');
+
+  </script>
   <link rel="shortcut icon" href="http://www.minchin.ca/minchin.ico" />
 
   <link rel="stylesheet" href="adam.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/screen.css" type="text/css" />
   <link rel="stylesheet" media="all" href="http://www.minchin.ca/css/adam-overrides.css" type="text/css" />
-<!--
------------------------------------------------
-Minchin.ca / Genealogy Pages
-Copyright 1994-2013 W. Minchin
-Prototype: 1.1.1 (rev C) January 13, 2010
-Version:   1.0.5        January 17, 2014
------------------------------------------------ -->
-</head>	
-<!-- end Post-header code -->
+  <!--
+  -----------------------------------------------
+  Minchin.ca / Genealogy Pages
+  Copyright 1994-2014 W. Minchin
+  Prototype: 1.1.1 (rev C) January 13, 2010
+  Version:   1.0.4        December 29, 2013
+  ----------------------------------------------- -->
+  <!-- end Header code -->
+ </head>
+
+ <body class="container">
   <!-- start body code -->
-<body>
 <!-- Begin #content - Centers all content and provides edges for floated columns -->
 
 <div id="content">
@@ -52,9 +64,9 @@ Version:   1.0.5        January 17, 2014
 		</ul>
 	</div>
 	<div id="breadcrumbs">
-	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <span class="here"><a href=".">Genealogy</a></span> </p>
+	<p>You are here > <a href="http://www.minchin.ca/index.htm">Home</a> > <a href=".">Genealogy</a> > <span class="here">Minchin Genealogy | Minchin.ca<span></p>
 	</div>
-    <h1 id="blog-title"><a href=".">Genealogy</a></h1>
+    <h1 id="blog-title">Minchin Genealogy | Minchin.ca</h1>
     <p id="description"> </p>
 </div></div>
 
@@ -63,13 +75,7 @@ Version:   1.0.5        January 17, 2014
 <div id="full-width"><div id="full-width2"><div id="full-width3"><div class="post"><div class="post-body">
 
 <!-- Begin Adam code -->
- <div id="site-wrapper">
-  <div id="site-header"><a href=".">W. Minchin Presents</a></div>
-   <div id="site-content">
-    <div id="adam-wrapper">
-     <div id="adam-outer-content">
-      <div id="adam-inner-content">
-      <!-- end body code -->
+<div id="site-content">
 
 
 <h1 id="adam-page-title">Sarah Tallman Profile</h1>
@@ -108,9 +114,7 @@ Version:   1.0.5        January 17, 2014
 </td></tr></table></td></tr>
 <tr><td><table class="adam-name_list adam-table_box">
 <tr class="adam-claim"><td class="adam-claim_tag">Name</td><td class="adam-claim_data"> Sarah Tallman
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 </table></td></tr>
 <tr><td><table class="adam-userids adam-table_box">
 <tr class="adam-claim"><td class="adam-claim_tag">Reference: </td><td class="adam-claim_data"> 7DCB14EC79F645478E8E15CA21C776B34F72</td></tr>
@@ -149,19 +153,13 @@ GEDCOM file imported on 10 January 2013
 <tr><td><table class="adam-events adam-table_box">
 <tr class="adam-claim"><td class="adam-claim_tag">Birth</td><td class="adam-claim_data"><a href="places-usa-rhode-island-newport-portsmouth.html" class="adam-location_link">Portsmouth, Newport, Rhode Island, United States</a>
 
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date">abt 1664</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date">abt 1664</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 <tr class="adam-claim"><td class="adam-claim_tag">Death</td><td class="adam-claim_data">
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date">bef 1732</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date">bef 1732</td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 </table></td></tr>
 <tr><td><table class="adam-attrs adam-table_box">
 <tr class="adam-claim"><td class="adam-claim_tag">Marriage</td><td class="adam-claim_data"><a href="profile-I4981.html" class="adam-name_link">William Wilbor</a> (1660-1738)
-<span>[<a href="sources-S28.html" title="[S28]
-GEDCOM file imported on 10 January 2013
-">S28</a>]</span> </td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
+<span>[<a href="sources-S28.html" data-toggle="popover" title="[S28] GEDCOM file imported on 10 January 2013">S28</a>]</span> </td><td class="adam-claim_date"></td><td class="adam-claim_age"></td><td class="adam-claim_quality adam-claim_quality_uncertain">&nbsp;</td></tr>
 </table></td></tr>
 </table>
 </li>
@@ -361,39 +359,39 @@ GEDCOM file imported on 10 January 2013
 <tr><td class="adam-al_generation">Generation 2</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[2] <span class="adam-aid">&nbsp;&nbsp;</span><i><a href="profile-I4987.html" class="adam-name_link">Peter Tallman</a> (1623-1708)</i></td>
-  <td class="adam-al_path"><span title="Germany">DEU</span>-<span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Germany">DEU</span>-<span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[3] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4988.html" class="adam-name_link">Ann Hill</a> (~1628-)</td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 3</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[4] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4991.html" class="adam-name_link">Peter Talemann</a> (1589-)</td>
-  <td class="adam-al_path"><span title="Belgium">BEL</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Belgium">BEL</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[5] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4992.html" class="adam-name_link">Marie von Peen</a> (~1601-)</td>
-  <td class="adam-al_path"><span title="Netherlands">NLD</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Netherlands">NLD</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[6] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4989.html" class="adam-name_link">Phillip Hill</a> (~1602-)</b></td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[7] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4990.html" class="adam-name_link">Ann</a> (~1606-)</b></td>
-  <td class="adam-al_path"><span title="Rhode Island">RI</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Rhode Island">RI</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 4</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[8] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4994.html" class="adam-name_link">Jaques Talemann</a> (~1544-)</td>
-  <td class="adam-al_path"><span title="Belgium">BEL</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Belgium">BEL</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[9] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4995.html" class="adam-name_link">Anna or Tanneken de Litche</a> (~1558-)</td>
-  <td class="adam-al_path"><span title="Belgium">BEL</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Belgium">BEL</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[10] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4993.html" class="adam-name_link">Johann Peene</a> (~1567-)</b></td>
@@ -403,29 +401,29 @@ GEDCOM file imported on 10 January 2013
 <tr><td class="adam-al_generation">Generation 5</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[16] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4996.html" class="adam-name_link">Michael Taleman</a> (~1520-)</b></td>
-  <td class="adam-al_path"><span title="Belgium">BEL</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Belgium">BEL</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[17] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I4997.html" class="adam-name_link">Mrs. _____ Taleman</a> (~1531-)</b></td>
-  <td class="adam-al_path"><span title="Belgium">BEL</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Belgium">BEL</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[18] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4998.html" class="adam-name_link">Peter de Litche</a> (~1531-1602)</td>
-  <td class="adam-al_path"><span title="Belgium">BEL</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Belgium">BEL</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[19] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I4999.html" class="adam-name_link">Peternelle de Neve</a> (~1535-)</td>
-  <td class="adam-al_path"><span title="Belgium">BEL</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Belgium">BEL</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 6</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[36] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5002.html" class="adam-name_link">Aaert de Litche</a> (~1503-)</td>
-  <td class="adam-al_path"><span title="Belgium">BEL</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Belgium">BEL</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[37] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5003.html" class="adam-name_link">Katline&rsquo;s Wayers\Herwijn</a> (~1500-)</b></td>
-  <td class="adam-al_path"><span title="Belgium">BEL</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Belgium">BEL</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[38] <span class="adam-aid">&nbsp;&nbsp;</span><b><a href="profile-I5000.html" class="adam-name_link">Anthonis de Neve</a> (~1501-)</b></td>
@@ -439,11 +437,11 @@ GEDCOM file imported on 10 January 2013
 <tr><td class="adam-al_generation">Generation 7</td></tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[72] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5004.html" class="adam-name_link">Peter de Litche</a> (~1474-)</td>
-  <td class="adam-al_path"><span title="Belgium">BEL</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Belgium">BEL</span></td>
 </tr>
 <tr class="adam-al_item">
   <td class="adam-al_name">[73] <span class="adam-aid">&nbsp;&nbsp;</span><a href="profile-I5005.html" class="adam-name_link">Kateline Scheelkens</a> (1476-)</td>
-  <td class="adam-al_path"><span title="Belgium">BEL</span></td>
+  <td class="adam-al_path"><span data-toggle="tooltip" title="Belgium">BEL</span></td>
 </tr>
 
 <tr><td class="adam-al_generation">Generation 8</td></tr>
@@ -461,7 +459,7 @@ GEDCOM file imported on 10 January 2013
 <div id="map" class="tab-pane adam-tab">
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <div class="floatmapbuttons"><p>
-<span class="mapbuttonspan"><a href="javascript:void(0);" id="togglemarkers" class="mapbutton">Toggle Markers</a></span>
+<span class="mapbuttonspan"><a href="javascript:void(0);" id="togglemarkers" class="btn btn-success">Toggle Markers</a></span>
 </p></div>
 
 <div id='adam-heat-map'></div>
@@ -490,8 +488,10 @@ $(document).ready(function () {
   $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     e.target
     e.relatedTarget
-  if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+    if ($('.nav-tabs .active').text() == "Ancestors Distribution Map") {
+      var currCenter = map.getCenter();
       google.maps.event.trigger(map, 'resize');
+      map.setCenter(currCenter);
     }
   });
 });
@@ -505,15 +505,11 @@ $(document).ready(function () {
 Last Modified: Dec 30, 2012
 </li>
 </ul>
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 1.49.0.266</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 2.11.0.23</a>. </div>
 
 <!-- start footer code -->
-      </div>
-     </div>
-    </div>
-   </div>
   </div>
- <div id="site-footer">Brought to you by Tim Forsythe (<a href="http://timforsythe.com" target="_blank">http://timforsythe.com</a>)</div>
+ <div id="site-footer"></div>
 
 <!-- End Adam code -->
 
@@ -525,7 +521,7 @@ Last Modified: Dec 30, 2012
 <!-- Begin #footer -->
 
 <div id="footer"><div><div><hr />
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br /><a href="http://www.timforsythe.com/tools/adam">Built by Adam 1.49.0.266. </a>- Last Updated: January 23, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br />Built by Adam 2.11.0.23.  - Last Updated: February 2, 2014</p>
 
 </div></div></div>
 
@@ -534,6 +530,5 @@ Last Modified: Dec 30, 2012
 </div>
 
 <!-- End #content -->
-
-</body>
-</html>
+  </body>
+ </html>
