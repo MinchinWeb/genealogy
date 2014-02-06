@@ -1,11 +1,11 @@
 '''Genealogy Uploader
-v.2.2 - WM - Feb. 2, 2014
+v.2.3 - WM - Feb. 6, 2014
 
 This script serves to semi-automate the building and uploading of my
 genealogy website. It is intended to be semi-interactive and run from the
 command line.'''
 
-__version__ = 2
+__version__ = 2.3
 github_folder = "S:\\Documents\\GitHub\\genealogy"
 photo_folder = "S:\\Documents\\genealogy"
 download_folder = "S:\\Downloads\\Firefox"
@@ -113,6 +113,8 @@ wmtext.clock_on_right(" 5. Deleting old Adam output.")
 to_delete = []
 os.chdir(github_folder)
 all_files = os.listdir(github_folder)
+counter = 0
+bar = wmtext.progressbar(maximum = len(all_files))
 for filename in all_files:
 	if filename.startswith('adam_') and filename.endswith(".zip"):
 		to_delete.append(filename)
@@ -124,10 +126,12 @@ for filename in all_files:
 		to_delete.append(filename)
 	elif filename in ["adam.css"]:
 		to_delete.append(filename)
+	counter += 1
+	bar.update(counter)
 for myfile in to_delete:
 	winshell.delete_file(myfile, no_confirm = True, allow_undo = False, silent = True)
 	pass
-print("        " + str(len(to_delete)) + " files deleted.")
+print("\n        " + str(len(to_delete)) + " files deleted.")
 
 wmtext.clock_on_right(" 6. Get new Adam output.")
 adam_zip = ''
@@ -179,12 +183,17 @@ all_html_files = []
 for my_file in all_files:
 	if my_file.endswith(".html"):
 		all_html_files.append(my_file)
+counter = 0
+bar = wmtext.progressbar(maximum = len(all_html_files))
 # inline search and replace
 for line1 in fileinput.input(all_html_files, inplace=1):
 	line2 = line1.replace("$adam-version$", adam_version_text)
 	line3 = line2.replace("$tree-updated$", date_in_text)
 	line4 = pattern.sub('[email redacted]', line3)
 	print line4,
+	counter += 1
+	bar.update(counter)
+print # clear progress bar
 	
 wmtext.clock_on_right("10. Create deploy tracking file")
 # create a 'random' number using UUID
