@@ -42,6 +42,22 @@ def addimage(image):
 	'''TO-DO: implement this!!'''
 	pass
 
+# multiple replacement
+# form 	http://stackoverflow.com/questions/6116978/python-replace-multiple-strings
+#
+# Usage:
+# >>> replacements = (u"café", u"tea"), (u"tea", u"café"), (u"like", u"love")
+# >>> print multiple_replace(u"Do you like café? No, I prefer tea.", *replacements)
+# Do you love tea? No, I prefer café.
+def multiple_replacer(*key_values):
+    replace_dict = dict(key_values)
+    replacement_function = lambda match: replace_dict[match.group(0)]
+    pattern = re.compile("|".join([re.escape(k) for k, v in key_values]), re.M | re.I)
+    return lambda string: pattern.sub(replacement_function, string)
+
+def multiple_replace(string, *key_values):
+    return multiple_replacer(*key_values)(string)
+
 
 wmtext.title("Genealogy Uploader, v." + str(__version__))
 print
@@ -176,7 +192,24 @@ soup = BeautifulSoup(soup_file)
 soup_file.close()
 adam_version_text = soup.find(True, "adam-version").get_text().encode('utf-8') # 'Built by Adam 1.35.0.0 ' or the like
 date_in_text = date.today().strftime("%B %d, %Y").replace(' 0', ' ') # 'January 7, 2014' or the like
-pattern = re.compile('(w_minchin@hotmail\.com|w\.minchin@gmail\.com|webmaster@minchin\.ca|nysgys@shaw\.ca|bunburypr@ozemail\.com\.au|turtle@turtlebunbury\.com|howard\.blaxland@gmail\.com|kenhazel@gmail\.com|canrcr@gmail\.com|david@westerhamworkshop\.co\.uk|d3gl@shaw\.ca|cardena\.depper@gmx\.net|redjoanne_58@hotmail\.com|lbwong@charter\.net)', re.I) # replace and hide emails; but some of these are over lines breaks, so we'll have to search and replace through the output
+# replace and hide emails; but some of these are over lines breaks,
+#  so we'll have to search and replace through the output
+replacements = ("$adam-version$", adam_version_text), \
+				("$tree-updated$", date_in_text), \
+				("w_minchin@hotmail\.com", '[email redacted]'), \
+				("w\.minchin@gmail\.com", '[email redacted]'), \
+				("webmaster@minchin\.ca", '[email redacted]'), \
+				("nysgys@shaw\.ca", '[email redacted]'), \
+				("bunburypr@ozemail\.com\.au", '[email redacted]'), \
+				("turtle@turtlebunbury\.com", '[email redacted]'), \
+				("howard\.blaxland@gmail\.com", '[email redacted]'), \
+				("kenhazel@gmail\.com", '[email redacted]'), \
+				("canrcr@gmail\.com", '[email redacted]'), \
+				("david@westerhamworkshop\.co\.uk", '[email redacted]'), \
+				("d3gl@shaw\.ca", '[email redacted]'), \
+				("cardena\.depper@gmx\.net", '[email redacted]'), \
+				("redjoanne_58@hotmail\.com", '[email redacted]'), \
+				("lbwong@charter\.net", '[email redacted]')
 
 all_files = os.listdir(github_folder)
 all_html_files = []
@@ -186,11 +219,9 @@ for my_file in all_files:
 counter = 0
 bar = wmtext.progressbar(maximum = len(all_html_files))
 # inline search and replace
-for line1 in fileinput.input(all_html_files, inplace=1):
-	line2 = line1.replace("$adam-version$", adam_version_text)
-	line3 = line2.replace("$tree-updated$", date_in_text)
-	line4 = pattern.sub('[email redacted]', line3)
-	print line4,
+for file in all_html_files:
+	for line in fileinput.input(file, inplace=1):
+		print multiple_replace(line, *replacements)
 	counter += 1
 	bar.update(counter)
 print # clear progress bar
