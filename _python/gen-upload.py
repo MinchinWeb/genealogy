@@ -1,3 +1,6 @@
+Ôªø#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 '''Genealogy Uploader
 v.2.3 - WM - Feb. 6, 2014
 
@@ -46,9 +49,9 @@ def addimage(image):
 # form 	http://stackoverflow.com/questions/6116978/python-replace-multiple-strings
 #
 # Usage:
-# >>> replacements = (u"cafÈ", u"tea"), (u"tea", u"cafÈ"), (u"like", u"love")
-# >>> print multiple_replace(u"Do you like cafÈ? No, I prefer tea.", *replacements)
-# Do you love tea? No, I prefer cafÈ.
+# >>> replacements = (u"caf√©", u"tea"), (u"tea", u"caf√©"), (u"like", u"love")
+# >>> print multiple_replace(u"Do you like caf√©? No, I prefer tea.", *replacements)
+# Do you love tea? No, I prefer caf√©.
 def multiple_replacer(*key_values):
     replace_dict = dict(key_values)
     replacement_function = lambda match: replace_dict[match.group(0)]
