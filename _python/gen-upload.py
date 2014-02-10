@@ -32,7 +32,7 @@ import winshell
 import requests
 from bs4 import BeautifulSoup
 import envoy
-import wmtext
+from wmtext import wmtext
 
 today = '' + str(date.today().year)[2:] + str.zfill(str(date.today().month), 2) + str.zfill(str(date.today().day), 2)
 gedcom_expected = 'William ' + today + '.ged'
@@ -132,8 +132,7 @@ wmtext.clock_on_right(" 5. Deleting old Adam output.")
 to_delete = []
 os.chdir(github_folder)
 all_files = os.listdir(github_folder)
-counter = 0
-bar = wmtext.progressbar(maximum = len(all_files))
+
 for filename in all_files:
 	if filename.startswith('adam_') and filename.endswith(".zip"):
 		to_delete.append(filename)
@@ -145,11 +144,13 @@ for filename in all_files:
 		to_delete.append(filename)
 	elif filename in ["adam.css"]:
 		to_delete.append(filename)
-	counter += 1
-	bar.update(counter)
+
+counter = 0
+bar = wmtext.progressbar(maximum = len(to_delete))
 for myfile in to_delete:
 	winshell.delete_file(myfile, no_confirm = True, allow_undo = False, silent = True)
-	pass
+	counter += 1
+	bar.update(counter)
 print("\n        " + str(len(to_delete)) + " files deleted.")
 
 wmtext.clock_on_right(" 6. Get new Adam output.")

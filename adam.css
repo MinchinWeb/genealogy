@@ -110,6 +110,12 @@ ul {list-style:none; margin-left:0px; padding-left:0px;}
 #avgLifeSpanChartContainer        {height: 600px;}
 #avgAgesChartContainer            {height: 150px;}
 
+#expandedTotRecordsChartContainer2 {height: 600px;}
+
+#xfactorChartContainer             {height: 350px;}
+#xfactorTotRecordsChartContainer   {height: 300px;}
+#xfactorStatsChartContainer   		 {height: 300px;}
+
 /******************/
 /* Bloxxen        */
 /******************/

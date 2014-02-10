@@ -1,5 +1,18 @@
 // Palettes: 'default', 'harmony light', 'soft pastel', 'pastel', 'bright', 'soft', 'ocean', 'vintage', 'vintage_desktop-dark', 'violet'
 
+/*
+"default":["#5F8B95","#BA4D51","#AF8A53","#955F71","#859666","#7E688C"],
+"harmony light":["#FCB65E","#679EC5","#AD79CE","#A6C567","#E18E92","#DDED6E","#B7ABEA","#A8E7E3"],
+"soft pastel":["#7CBAB4","#92C7E2","#75B5D6","#B78C9B","#F2CA84","#A7CA74"],
+pastel:["#bb7862","#a4d5c2","#bb626a","#057d85","#a12135","#f5e7c9","#153459","#b1d2c6"],
+bright:["#70c92f","#f8ca00","#e97f02","#bd1550","#800969","#7e4452","#9ab57e","#36a3a6"],
+soft:["#ebdd8f","#9ab57e","#e55253","#7e4452","#e8c267","#565077","#6babac","#7e4452"],
+ocean:["#75c099","#cff499","#378a8a","#a5dda5","#064970","#38c5d2","#00a7c6","#a2cefb"],
+vintage:["#ebb192","#f2d1b5","#cb715e","#eb9692","#a85c4c","#f2c0b5","#f6ead7","#dd956c"],
+"vintage_desktop-dark":["#e4a58b","#edc4a8","#be7060","#e48e8b","#9d5f51","#edb2a8","#f3e3cb","#dd956c"],
+violet:["#d1a1d1","#f5ccdb","#7b5685","#7e7cad","#55263f","#5b41ab","#d9d3d9","#689cc1"]
+*/
+
 $(document).ready(function () {
 
 	//////////////////////////////////////////////////////////////	
@@ -197,9 +210,99 @@ $(document).ready(function () {
 		 commonSeriesSettings: {argumentField: "group", type: "bar"},
 		 rotated: true,
 		 series: {name: "Groups", valueField: "age", label: {visible: true, customizeText: function(arg) {return arg.valueText + "y";}} },
+	   valueAxis: {grid: {visible: false}, label: {visible: false}},
 		 tooltip: {enabled: true, percentPrecision: 2, font: {size: 16}},
 		 legend: {visible: false}
 		});
 	}
 	
+	//////////////////////////////////////////////////////////////	
+  if(document.getElementById("xfactorChartContainer") != null) {			
+		$("#xfactorChartContainer").dxChart({
+		 title: {text: "Claim Type vs. Documentation Quality"},
+		 dataSource: xfactorChartDataSource,
+		 commonSeriesSettings: {argumentField: "claim", type: "fullstackedbar", selectionStyle: {hatching: {direction: "left"}} },
+		 rotated: true,
+		 pointSelectionMode: "multiple",
+		 series: [
+		   {name: "No Documentation",valueField: "none",    color: "#D33737"},
+		   {name: "Average Quality", valueField: "average", color: "#FDD147"},
+		   {name: "Good Quality",    valueField: "good",    color: "#5FA267"},
+		   {name: "Best Quality",    valueField: "best",    color: "#5F88C5"},
+		 ],
+		 tooltip: {enabled: true, percentPrecision: 2, font: {size: 16}, customizeText: function () {return this.percentText + " (" + this.valueText + ")";}},
+		 legend: {verticalAlignment: "bottom", horizontalAlignment: "center"},
+//	   valueAxis: {grid: {visible: false}, label: {visible: false}},
+	   pointClick: function(point) { point.isSelected() ? point.clearSelection() : point.select(); }		 
+		});
+	}
+
+	//////////////////////////////////////////////////////////////
+  if(document.getElementById("xfactorTotRecordsChartContainer") != null) {			
+		xfactorTotRecordChartDataSource[0]["group"] = "Sources";
+		xfactorTotRecordChartDataSource[1]["group"] = "Source Quality";
+		xfactorTotRecordChartDataSource[2]["group"] = "Citations";
+		xfactorTotRecordChartDataSource[3]["group"] = "Notes";
+		xfactorTotRecordChartDataSource[4]["group"] = "Source References";
+		xfactorTotRecordChartDataSource[5]["group"] = "Documented Claims";
+		xfactorTotRecordChartDataSource[6]["group"] = "Parental Claims";
+		xfactorTotRecordChartDataSource[7]["group"] = "Vital Claims";
+		xfactorTotRecordChartDataSource[8]["group"] = "Impossible Claims";
+
+		$("#xfactorTotRecordsChartContainer").dxChart({
+		 title: {text: "Scores"},
+		 dataSource: xfactorTotRecordChartDataSource,
+		 commonSeriesSettings: {argumentField: "group", type: "bar"},
+		 rotated: true,
+		 series: {name: "Groups", valueField: "score", color: "#D8733B", label: {visible: true, format: 'fixedPoint', precision: 0, customizeText: function () {return this.valueText + " out of 100"}} },
+	   valueAxis: {grid: {visible: false}, label: {visible: false}},
+		 legend: {visible: false},
+		});
+	}
+
+	if(document.getElementById("xfactorStatsChartContainer") != null) {
+	  $("#xfactorStatsChartContainer").dxChart({
+	   title: {text: "Top X X-Factors"},
+	   series: {type: "bar", color: "#5F88C5", selectionStyle: {color: "#D33737",	hatching: "none"}, label: {visible: true}},
+	   rotated: true,
+	   legend: {visible: false},
+	   tooltip: {enabled: false},
+	   valueAxis: {grid: {visible: false}, label: {visible: false}},
+		}); 
+  }
+	
+	//////////////////////////////////////////////////////////////
+  if(document.getElementById("expandedTotRecordsChartContainer2") != null) {			
+		expandedTotRecordChartDataSource2[0]["group"]  = "Individuals";
+		expandedTotRecordChartDataSource2[1]["group"]  = "Families";
+		expandedTotRecordChartDataSource2[2]["group"]  = "Repositories";
+		expandedTotRecordChartDataSource2[3]["group"]  = "Sources";
+		expandedTotRecordChartDataSource2[4]["group"]  = "Notes";
+		expandedTotRecordChartDataSource2[5]["group"]  = "Locations";
+
+		expandedTotRecordChartDataSource2[6]["group"]  = "Source Citations";
+		expandedTotRecordChartDataSource2[7]["group"]  = "Source References";
+		expandedTotRecordChartDataSource2[8]["group"]  = "Note References";
+
+		expandedTotRecordChartDataSource2[9]["group"]  = "Claims";
+		expandedTotRecordChartDataSource2[10]["group"] = "Documented Claims";
+		expandedTotRecordChartDataSource2[11]["group"] = "Impossible Claims";
+		expandedTotRecordChartDataSource2[12]["group"] = "Census";
+		expandedTotRecordChartDataSource2[13]["group"] = "Photos";
+		expandedTotRecordChartDataSource2[14]["group"] = "External URLs";
+		expandedTotRecordChartDataSource2[15]["group"] = "Immigrants";
+		expandedTotRecordChartDataSource2[16]["group"] = "Nobility Titles";
+
+		$("#expandedTotRecordsChartContainer2").dxChart({
+		 title: {text: "Total Records Processed"},
+		 dataSource: expandedTotRecordChartDataSource2,
+		 palette: "Soft Pastel",
+		 commonSeriesSettings: {argumentField: "group", type: "bar"},
+		 rotated: true,
+		 series: {name: "Groups", valueField: "total", label: {visible: true} },
+		 tooltip: {enabled: true, percentPrecision: 2, font: {size: 16}},
+		 legend: {visible: false},
+		});
+	}
+
 });
