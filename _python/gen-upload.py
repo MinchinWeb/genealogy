@@ -2,13 +2,13 @@
 # -*- coding: utf-8 -*-
 
 '''Genealogy Uploader
-v.2.3 - WM - Feb. 6, 2014
+v.2.4 - WM - Feb. 16, 2014
 
 This script serves to semi-automate the building and uploading of my
 genealogy website. It is intended to be semi-interactive and run from the
 command line.'''
 
-__version__ = 2.3
+__version__ = 2.4
 github_folder = "S:\\Documents\\GitHub\\genealogy"
 photo_folder = "S:\\Documents\\genealogy"
 download_folder = "S:\\Downloads\\Firefox"
@@ -74,7 +74,7 @@ if not wmtext.query_yes_quit("    Next?", default="yes"):
 wmtext.clock_on_right(" 2. Cleaning up GEDCOM...")
 start_time = datetime.fromtimestamp(os.stat(my_gedcom).st_ctime)
 # replace image paths
-gedcom_file = file(my_gedcom, 'r')
+gedcom_file = file(my_gedcom, 'r') # add failsafe is the fail doesn't exist yet or is still being written to
 subject = gedcom_file.read()
 gedcom_file.close()
 
@@ -198,22 +198,25 @@ adam_version_text = soup.find(True, "adam-version").get_text().encode('utf-8') #
 date_in_text = date.today().strftime("%B %d, %Y").replace(' 0', ' ') # 'January 7, 2014' or the like
 # replace and hide emails; but some of these are over lines breaks,
 #  so we'll have to search and replace through the output
-replacements = ("$adam-version$", adam_version_text), \
-				("$tree-updated$", date_in_text), \
-				("w_minchin@hotmail\.com", '[email redacted]'), \
-				("w\.minchin@gmail\.com", '[email redacted]'), \
-				("webmaster@minchin\.ca", '[email redacted]'), \
-				("nysgys@shaw\.ca", '[email redacted]'), \
-				("bunburypr@ozemail\.com\.au", '[email redacted]'), \
-				("turtle@turtlebunbury\.com", '[email redacted]'), \
-				("howard\.blaxland@gmail\.com", '[email redacted]'), \
-				("kenhazel@gmail\.com", '[email redacted]'), \
-				("canrcr@gmail\.com", '[email redacted]'), \
-				("david@westerhamworkshop\.co\.uk", '[email redacted]'), \
-				("d3gl@shaw\.ca", '[email redacted]'), \
-				("cardena\.depper@gmx\.net", '[email redacted]'), \
-				("redjoanne_58@hotmail\.com", '[email redacted]'), \
-				("lbwong@charter\.net", '[email redacted]')
+replacements =	("$adam-version$",					adam_version_text), \
+				("$tree-updated$",					date_in_text), \
+				("w_minchin@hotmail.com",			'[email redacted]'), \
+				("w.minchin@gmail.com",				'[email redacted]'), \
+				("webmaster@minchin.ca",			'[email redacted]'), \
+				("minchinweb@gmail.com",			'[email redacted]'), \
+				("nysgys@shaw.ca",					'[email redacted]'), \
+				("bunburypr@ozemail.com.au",		'[email redacted]'), \
+				("turtle@turtlebunbury.com",		'[email redacted]'), \
+				("howard.blaxland@gmail.com",		'[email redacted]'), \
+				("kenhazel@gmail.com",				'[email redacted]'), \
+				("canrcr@gmail.com",				'[email redacted]'), \
+				("david@westerhamworkshop.co.uk",	'[email redacted]'), \
+				("d3gl@shaw.ca",					'[email redacted]'), \
+				("cardena.depper@gmx.net",			'[email redacted]'), \
+				("redjoanne_58@hotmail.com",		'[email redacted]'), \
+				("lbwong@charter.net",				'[email redacted]'), \
+				("djcmgf@optonline.net",			'[email redacted]'), \
+				("jerry.doyle@sbcglobal.net",		'[email redacted]')
 
 all_files = os.listdir(github_folder)
 all_html_files = []

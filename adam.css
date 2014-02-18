@@ -116,6 +116,10 @@ ul {list-style:none; margin-left:0px; padding-left:0px;}
 #xfactorTotRecordsChartContainer   {height: 300px;}
 #xfactorStatsChartContainer   		 {height: 300px;}
 
+@media only screen and (max-width:1200px) { 
+  g.dxc-title g text tspan {font-size: .7em;}
+}
+
 /******************/
 /* Bloxxen        */
 /******************/
