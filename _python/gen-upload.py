@@ -2,13 +2,13 @@
 # -*- coding: utf-8 -*-
 
 '''Genealogy Uploader
-v.2.4 - WM - Feb. 16, 2014
+v.2.5 - WM - Feb. 17, 2014
 
 This script serves to semi-automate the building and uploading of my
 genealogy website. It is intended to be semi-interactive and run from the
 command line.'''
 
-__version__ = 2.4
+__version__ = 2.5
 github_folder = "S:\\Documents\\GitHub\\genealogy"
 photo_folder = "S:\\Documents\\genealogy"
 download_folder = "S:\\Downloads\\Firefox"
@@ -216,7 +216,10 @@ replacements =	("$adam-version$",					adam_version_text), \
 				("redjoanne_58@hotmail.com",		'[email redacted]'), \
 				("lbwong@charter.net",				'[email redacted]'), \
 				("djcmgf@optonline.net",			'[email redacted]'), \
-				("jerry.doyle@sbcglobal.net",		'[email redacted]')
+				("jerry.doyle@sbcglobal.net",		'[email redacted]'), \
+				("sonofcam@bigpond.com",			'[email redacted]'), \
+				("stewdee@hotmail.com",				'[email redacted]'), \
+				("nysgys@shaw.ca",					'[email redacted]')
 
 all_files = os.listdir(github_folder)
 all_html_files = []

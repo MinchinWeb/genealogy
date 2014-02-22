@@ -2,7 +2,7 @@
 
  <head>
 
- <meta name="generator" content="Tim Forsythe (Adam 2.0.9.283)" />
+ <meta name="generator" content="Tim Forsythe (Adam 2.0.11.325)" />
 
  <meta property="og:title" content="James East Profile - Minchin Genealogy | Minchin.ca" />
 
@@ -33,6 +33,8 @@
   <script type="text/javascript" src="tab-list-handler.js"></script>
 
   <script type="text/javascript" src="tooltip-handler.js"></script>
+
+  <meta charset="UTF-8" />
 
   <!-- start header code -->
 
@@ -788,11 +790,11 @@ var mcOptions={styles:[{ height:35,width:35,url:"mapmarker1.png"},
 
 function initializePins() {
 
- addPin(37.4316,-78.6569,1,myImageW,'Winifred Hudnate Napper, (Widow)','<div class="infowindow"><p>Coordinates: 37.4316, -78.6569</p><span class="adam-map-location"><a href="places-usa-virginia.html" class="adam-location_link">Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8412.html" class="adam-name_link">Winifred Hudnate Napper, (Widow)</a> (~1648-~1690)</span></div>');addPin(37.9782,-77.963,1,myImageW,'Mary Barnet','<div class="infowindow"><p>Coordinates: 37.9782, -77.963</p><span class="adam-map-location"><a href="places-usa-virginia-louisa.html" class="adam-location_link">Louisa, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8178.html" class="adam-name_link">Mary Barnet</a> (~1714->1772)</span></div>');addPin(37.722,-77.9164,1,myImageM,'James East','<div class="infowindow"><p>Coordinates: 37.722, -77.9164</p><span class="adam-map-location"><a href="places-usa-virginia-goochland.html" class="adam-location_link">Goochland, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8403.html" class="adam-name_link">James East</a> (1753-1844)</span></div>');addPin(37.55,-77.3667,1,myImageM,'Joseph East','<div class="infowindow"><p>Coordinates: 37.55, -77.3667</p><span class="adam-map-location"><a href="places-usa-virginia-henrico.html" class="adam-location_link">Henrico, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8199.html" class="adam-name_link">Joseph East</a> (~1710-1772)</span></div>');addPin(51.3758,-2.3599,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 51.3758, -2.3599</p><span class="adam-map-location"><a href="places-england-somerset-bath.html" class="adam-location_link">Bath, Somerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8400.html" class="adam-name_link">Edward East</a> (~1689-1734)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8411.html" class="adam-name_link">Thomas East</a> (1640-1727)</span></div>');
+ addPin(37.4316,-78.6569,1,myImageW,'Winifred Hudnate Napper, (Widow)','<div class="infowindow"><p>Coordinates: 37.4316, -78.6569</p><span class="adam-map-location"><a href="places-usa-virginia.html" class="adam-location_link">Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8412.html" class="adam-name_link">Winifred Hudnate Napper, (Widow)</a> (~1648-~1690)</span></div>');addPin(38.025,-78.0044,1,myImageW,'Mary Barnet','<div class="infowindow"><p>Coordinates: 38.025, -78.0044</p><span class="adam-map-location"><a href="places-usa-virginia-louisa.html" class="adam-location_link">Louisa, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8178.html" class="adam-name_link">Mary Barnet</a> (~1714->1772)</span></div>');addPin(37.6842,-77.8856,1,myImageM,'James East','<div class="infowindow"><p>Coordinates: 37.6842, -77.8856</p><span class="adam-map-location"><a href="places-usa-virginia-goochland.html" class="adam-location_link">Goochland, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8403.html" class="adam-name_link">James East</a> (1753-1844)</span></div>');addPin(37.55,-77.3667,1,myImageM,'Joseph East','<div class="infowindow"><p>Coordinates: 37.55, -77.3667</p><span class="adam-map-location"><a href="places-usa-virginia-henrico.html" class="adam-location_link">Henrico, Virginia, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8199.html" class="adam-name_link">Joseph East</a> (~1710-1772)</span></div>');addPin(51.3758,-2.3599,2,myImage,'2 Persons','<div class="infowindow"><p>Coordinates: 51.3758, -2.3599</p><span class="adam-map-location"><a href="places-england-somerset-bath.html" class="adam-location_link">Bath, Somerset, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8400.html" class="adam-name_link">Edward East</a> (~1689-1734)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I8411.html" class="adam-name_link">Thomas East</a> (1640-1727)</span></div>');
 
  markerCluster = new MarkerClusterer(map, myPins, mcOptions);
 
- var myData={max:1,data:[{lat:37.4316,lng:-78.6569,count:0.3},{lat:37.9782,lng:-77.963,count:0.3},{lat:37.722,lng:-77.9164,count:0.3},{lat:37.55,lng:-77.3667,count:0.3},{lat:51.3758,lng:-2.3599,count:0.6},]};
+ var myData={max:1,data:[{lat:37.4316,lng:-78.6569,count:0.3},{lat:38.025,lng:-78.0044,count:0.3},{lat:37.6842,lng:-77.8856,count:0.3},{lat:37.55,lng:-77.3667,count:0.3},{lat:51.3758,lng:-2.3599,count:0.6},]};
 
  google.maps.event.addListenerOnce(map,'idle',function(){heatmap.setDataSet(myData);});
 
@@ -850,7 +852,7 @@ Last Modified: Feb 4, 2013
 
 </ul>
 
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 2.0.9.283</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 2.0.11.325</a>. </div>
 
 
 
@@ -882,7 +884,7 @@ Last Modified: Feb 4, 2013
 
 <div id="footer"><div><div><hr />
 
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br /><a href="http://www.timforsythe.com/tools/adam">Built by Adam 2.0.9.283. </a>- Last Updated: February 17, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br /><a href="http://www.timforsythe.com/tools/adam">Built by Adam 2.0.11.325. </a>- Last Updated: February 22, 2014</p>
 
 
 

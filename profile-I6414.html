@@ -2,7 +2,7 @@
 
  <head>
 
- <meta name="generator" content="Tim Forsythe (Adam 2.0.9.283)" />
+ <meta name="generator" content="Tim Forsythe (Adam 2.0.11.325)" />
 
  <meta property="og:title" content="Elizabeth Olney Profile - Minchin Genealogy | Minchin.ca" />
 
@@ -33,6 +33,8 @@
   <script type="text/javascript" src="tab-list-handler.js"></script>
 
   <script type="text/javascript" src="tooltip-handler.js"></script>
+
+  <meta charset="UTF-8" />
 
   <!-- start header code -->
 
@@ -842,11 +844,11 @@ var mcOptions={styles:[{ height:35,width:35,url:"mapmarker1.png"},
 
 function initializePins() {
 
- addPin(41.8239,-71.4133,1,myImageW,'Elizabeth Olney','<div class="infowindow"><p>Coordinates: 41.8239, -71.4133</p><span class="adam-map-location"><a href="places-usa-rhode-island-providence-providence.html" class="adam-location_link">Providence, Providence, Rhode Island, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6414.html" class="adam-name_link">Elizabeth Olney</a> (1666-1699)</span></div>');addPin(41.49,-71.3133,1,myImageW,'Elizabeth Marsh','<div class="infowindow"><p>Coordinates: 41.49, -71.3133</p><span class="adam-map-location"><a href="places-usa-rhode-island-newport-newport.html" class="adam-location_link">Newport, Newport, Rhode Island, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5433.html" class="adam-name_link">Elizabeth Marsh</a> (~1636-)</span></div>');addPin(51.75,-0.333333,5,myImage,'5 Persons','<div class="infowindow"><p>Coordinates: 51.75, -0.333333</p><span class="adam-map-location"><a href="places-england-hertfordshire-hertford-st-albans.html" class="adam-location_link">St. Albans, Hertford, Hertfordshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5434.html" class="adam-name_link">Thomas Olney</a> (~1600-1682)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5435.html" class="adam-name_link">Mary Ashton</a> (1605-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5436.html" class="adam-name_link">James Ashton</a> (~1579-~1650)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5437.html" class="adam-name_link">Alice</a> (1583-~1643)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6042.html" class="adam-name_link">James Ashton</a> (~1550-~1624)</span></div>');addPin(51.7958,-0.081157,1,myImageM,'Thomas Olney','<div class="infowindow"><p>Coordinates: 51.7958, -0.081157</p><span class="adam-map-location"><a href="places-england-hertfordshire-hertford.html" class="adam-location_link">Hertford, Hertfordshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5432.html" class="adam-name_link">Thomas Olney</a> (1632-1722)</span></div>');
+ addPin(41.8239,-71.4133,1,myImageW,'Elizabeth Olney','<div class="infowindow"><p>Coordinates: 41.8239, -71.4133</p><span class="adam-map-location"><a href="places-usa-rhode-island-providence-providence.html" class="adam-location_link">Providence, Providence, Rhode Island, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6414.html" class="adam-name_link">Elizabeth Olney</a> (1666-1699)</span></div>');addPin(41.49,-71.3133,1,myImageW,'Elizabeth Marsh','<div class="infowindow"><p>Coordinates: 41.49, -71.3133</p><span class="adam-map-location"><a href="places-usa-rhode-island-newport-newport.html" class="adam-location_link">Newport, Newport, Rhode Island, United States</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5433.html" class="adam-name_link">Elizabeth Marsh</a> (~1636-)</span></div>');addPin(51.75,-0.33333,5,myImage,'5 Persons','<div class="infowindow"><p>Coordinates: 51.75, -0.33333</p><span class="adam-map-location"><a href="places-england-hertfordshire-hertford-st-albans.html" class="adam-location_link">St. Albans, Hertford, Hertfordshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5434.html" class="adam-name_link">Thomas Olney</a> (~1600-1682)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5435.html" class="adam-name_link">Mary Ashton</a> (1605-)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5436.html" class="adam-name_link">James Ashton</a> (~1579-~1650)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5437.html" class="adam-name_link">Alice</a> (1583-~1643)</span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I6042.html" class="adam-name_link">James Ashton</a> (~1550-~1624)</span></div>');addPin(51.7958,-0.081157,1,myImageM,'Thomas Olney','<div class="infowindow"><p>Coordinates: 51.7958, -0.081157</p><span class="adam-map-location"><a href="places-england-hertfordshire-hertford.html" class="adam-location_link">Hertford, Hertfordshire, England</a></span><br/><span class="adam-map-person">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="profile-I5432.html" class="adam-name_link">Thomas Olney</a> (1632-1722)</span></div>');
 
  markerCluster = new MarkerClusterer(map, myPins, mcOptions);
 
- var myData={max:1,data:[{lat:41.8239,lng:-71.4133,count:0.3},{lat:41.49,lng:-71.3133,count:0.3},{lat:51.75,lng:-0.333333,count:1.5},{lat:51.7958,lng:-0.081157,count:0.3},]};
+ var myData={max:1,data:[{lat:41.8239,lng:-71.4133,count:0.3},{lat:41.49,lng:-71.3133,count:0.3},{lat:51.75,lng:-0.33333,count:1.5},{lat:51.7958,lng:-0.081157,count:0.3},]};
 
  google.maps.event.addListenerOnce(map,'idle',function(){heatmap.setDataSet(myData);});
 
@@ -904,7 +906,7 @@ Last Modified: Dec 30, 2012
 
 </ul>
 
-<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 2.0.9.283</a>. </div>
+<div class="adam-version">Built by <a href="http://www.timforsythe.com/tools/adam">Adam 2.0.11.325</a>. </div>
 
 
 
@@ -936,7 +938,7 @@ Last Modified: Dec 30, 2012
 
 <div id="footer"><div><div><hr />
 
-  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br /><a href="http://www.timforsythe.com/tools/adam">Built by Adam 2.0.9.283. </a>- Last Updated: February 17, 2014</p>
+  <p><a href="http://www.Minchin.ca/genealogy/">www.Minchin.ca/genealogy/</a> - Copyright 1987-2014 D. Minchin & W. Minchin<br /><a href="http://www.timforsythe.com/tools/adam">Built by Adam 2.0.11.325. </a>- Last Updated: February 22, 2014</p>
 
 
 
