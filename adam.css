@@ -149,6 +149,9 @@ ul   {list-style:none; margin-left:0px; padding-left:0px;}
 .commentMarkup {
 	padding-bottom: 0px;
 }
+#adamAddCommentContainer textarea{
+	width:99%;
+}
 
 /******************/
 /* Adam Content   */
