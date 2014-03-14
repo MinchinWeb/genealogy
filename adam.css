@@ -9,11 +9,14 @@ ul   {list-style:none; margin-left:0px; padding-left:0px;}
 /* Bootstrap Overrides */
 /***********************/
 .popover {max-width: 600px;}
-.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a  {color: #fff;}
 .navbar-inverse {background:url('bg-black.png');}
 .navbar-nav>li {font-size: 1.3em;}
 .navbar-collapse {padding-right: 0px;}
 .navbar-inverse {background-color: #363D47;}
+.navbar-inverse .navbar-brand:hover, 
+.navbar-inverse .navbar-brand:focus, 
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus { background-color: rgba(255,255,255,0.35);}
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a {-webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px;}
 .paging-navigation {margin: 10px 0;}
 .tooltip-inner {white-space:pre-wrap; }
 .popover-inner {white-space:pre-wrap; }
@@ -427,7 +430,7 @@ ul.adam-tabs a.current           {background-color:#efefef; color:#000;border-bo
 .adam-article_text img,
 .adam-url img                    {cursor:pointer; margin:0 0 3px; background-color:#fff; border:1px solid #ccc; padding:2px; -moz-border-radius:4px; -webkit-border-radius:4px;}
 .adam-article_text img					 {max-height: 100%; max-width: 100%; margin:auto; display:block; }
-.adam-map-status                 {display: inline-block; max-width:1024px; width:auto;}
+.adam-map-status                 {display: inline-block; max-width:1024px; width:auto; margin: 15px 0 15px 0;}
 #adam-person_chart               {position:relative;}
 .adam-chart_node                 {padding:2px; text-align:left; font-size:8pt; font-family:Arial, Helvetica, sans-serif; vertical-align:middle; border-top-width:1px; border-right-width:1px; border-bottom-width:1px; border-left-width:1px; border-top-style:solid; border-right-style:solid; border-bottom-style:solid; border-left-style:solid; border-top-color:rgb(0, 0, 0); border-right-color:rgb(0, 0, 0); border-bottom-color:rgb(0, 0, 0); border-left-color:rgb(0, 0, 0); border-image:initial;}
 .adam-chart_node                 {position:absolute; z-index:5; overflow:hidden; height:36px; width:156px; border-color: #949494; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; -khtml-border-radius:5px;}

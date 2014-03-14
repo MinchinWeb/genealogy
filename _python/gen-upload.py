@@ -32,7 +32,7 @@ import winshell
 import requests
 from bs4 import BeautifulSoup
 import envoy
-from wmtext import wmtext
+import wmtext
 
 today = '' + str(date.today().year)[2:] + str.zfill(str(date.today().month), 2) + str.zfill(str(date.today().day), 2)
 gedcom_expected = 'William ' + today + '.ged'
@@ -46,7 +46,7 @@ def addimage(image):
 	pass
 
 # multiple replacement
-# form 	http://stackoverflow.com/questions/6116978/python-replace-multiple-strings
+# from 	http://stackoverflow.com/questions/6116978/python-replace-multiple-strings
 #
 # Usage:
 # >>> replacements = (u"café", u"tea"), (u"tea", u"café"), (u"like", u"love")
