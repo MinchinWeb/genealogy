@@ -2,13 +2,13 @@
 # -*- coding: utf-8 -*-
 
 '''Genealogy Uploader
-v.2.5 - WM - Feb. 17, 2014
+v.2.6 - WM - March 19, 2014
 
 This script serves to semi-automate the building and uploading of my
 genealogy website. It is intended to be semi-interactive and run from the
 command line.'''
 
-__version__ = 2.5
+__version__ = 2.6
 github_folder = "S:\\Documents\\GitHub\\genealogy"
 photo_folder = "S:\\Documents\\genealogy"
 download_folder = "S:\\Downloads\\Firefox"
@@ -198,8 +198,8 @@ adam_version_text = soup.find(True, "adam-version").get_text().encode('utf-8') #
 date_in_text = date.today().strftime("%B %d, %Y").replace(' 0', ' ') # 'January 7, 2014' or the like
 # replace and hide emails; but some of these are over lines breaks,
 #  so we'll have to search and replace through the output
-replacements =	("$adam-version$",					adam_version_text), \
-				("$tree-updated$",					date_in_text), \
+replacements =	("$adam-version$",					 adam_version_text), \
+				("$tree-updated$",					 date_in_text),      \
 				("w_minchin@hotmail.com",			'[email redacted]'), \
 				("w.minchin@gmail.com",				'[email redacted]'), \
 				("webmaster@minchin.ca",			'[email redacted]'), \
@@ -219,7 +219,8 @@ replacements =	("$adam-version$",					adam_version_text), \
 				("jerry.doyle@sbcglobal.net",		'[email redacted]'), \
 				("sonofcam@bigpond.com",			'[email redacted]'), \
 				("stewdee@hotmail.com",				'[email redacted]'), \
-				("nysgys@shaw.ca",					'[email redacted]')
+				("nysgys@shaw.ca",					'[email redacted]'), \
+				("gloog@eircom.net",				'[email redacted]')
 
 all_files = os.listdir(github_folder)
 all_html_files = []
