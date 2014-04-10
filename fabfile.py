@@ -3,7 +3,7 @@ import fabric.contrib.project as project
 import os
 
 # Local path configuration (can be absolute or relative to fabfile)
-env.deploy_path = '../minchinweb.github.io-master'
+env.deploy_path = '../genealogy-gh-pages'
 DEPLOY_PATH = env.deploy_path
 
 # Remote server configuration

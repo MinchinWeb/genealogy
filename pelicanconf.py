@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Wm. Minchin'
 SITENAME = u'Minchin.ca'
-SITEURL = 'http://minchin.ca'
+SITEURL = 'http://minchin.ca/genealogy'
 
 TIMEZONE = 'America/Edmonton'
 
@@ -44,10 +44,7 @@ EXTRA_PATH_METADATA = {
 	'..\.gitattributes': 			{'path': '.gitattributes'},
 	'..\.gitignore': 				{'path': '.gitignore'},
 	'..\README.txt': 				{'path': 'README.txt'},
-	'..\extras\CNAME': 				{'path': 'CNAME'},
     '..\extras\minchin.ico': 		{'path': 'favicon.ico'},
-	'..\extras\MTS_1v1.xlsm': 		{'path': 'MTS_1v1.xlsm'},
-	'..\extras\TRB_Minchin.ca.XSL': {'path': 'TRB_Minchin.ca.XSL'},
     }
 
 
@@ -62,11 +59,18 @@ MARKUP = (( 'rst',
 			'html',
 			'htm'       ))
 PATH = 'content'
-OUTPUT_PATH = '../minchinweb.github.io-master/'
+OUTPUT_PATH = '../genealogy-gh-pages/'
 
 # Add Blog to sidebar
-MENUITEMS = ( 	('Blog', 	'http://blog.minchin.ca/', 'fa fa-pencil'), )
-DISPLAY_PAGES_ON_MENU = True
+MENUITEMS = ( 	('Blog', 		'http://blog.minchin.ca/',		'fa fa-pencil'),
+				('Genealogy',	'http://minchin.ca/genealogy/',	'glyphicon glyphicon-tree-deciduous'),
+				('My Projects',	'http://minchin.ca/projects/',	'fa fa-flask'),
+				('Search',		'http://minchin.ca/search/',	'fa fa-search'),
+				('About',		'http://minchin.ca/about/',		'fa fa-info-circle'),
+				('Contact Me',	'http://minchin.ca/contact/',	'fa fa-envelope'),
+			)
+				
+DISPLAY_PAGES_ON_MENU = False
 
 # disable Tags
 TAGS_SAVE_AS = ''
@@ -96,7 +100,8 @@ GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY = 'minchin.ca'
 
 # Plugins
 PLUGIN_PATH = '../pelican-plugins'
-PLUGINS = ['assets', 'minify', 'sitemap', 'optimize_images']
+# PLUGINS = ['assets', 'minify', 'sitemap', 'optimize_images']
+PLUGINS = ['assets', ]
 
 ASSET_CSS = False	
 ASSET_JS = False
@@ -112,6 +117,7 @@ SITEMAP = {
 # `optimize_images` works, but I don't have many images yet
 #		- requires `jpegtran.exe` <http://jpegclub.org/jpegtran/> and
 #			`optinpng.exe` <http://sourceforge.net/projects/optipng/>
+# look into 'neighbors' plugin for profiles
 
 
 # # Make things disappear
