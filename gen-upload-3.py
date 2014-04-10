@@ -71,6 +71,7 @@ def step_export():
 	global step_no
 	step_no += 1
 	wmtext.clock_on_right(str(step_no).rjust(2) + ". Export from RootsMagic.")
+
 	print("        call the file " + Style.BRIGHT + gedcom_expected + Style.RESET_ALL + " and save it to the desktop")
 	print("        do not include LDS information")
 	print("        no need to privatize individuals (at this step)")
@@ -79,11 +80,12 @@ def step_export():
 	global start_time
 	start_time = datetime.fromtimestamp(os.stat(my_gedcom).st_ctime)
 
+
 def step_clean_gedcom():
 	global step_no
 	step_no += 1
 	wmtext.clock_on_right(str(step_no).rjust(2) + ". Cleaning up GEDCOM...")
-	
+
 	# replace image paths
 	gedcom_file = file(my_gedcom, 'r') # add failsafe is the fail doesn't exist yet or is still being written to
 	subject = gedcom_file.read()
@@ -99,27 +101,42 @@ def step_clean_gedcom():
 	f_out.write(result3)
 	f_out.close()
 
-def step_upload():
+
+def step_upload_gedcom():
 	global step_no
 	step_no += 1
 	wmtext.clock_on_right(str(step_no).rjust(2) + ". The file is now ready to upload to Adam.")
+
 	webbrowser.open("http://timforsythe.com/tools/adam", new=2)
 	print("        log-in (using Facebook)")
 	print("        now click 'generate report'")
+	# check to see if we're logged in
+	# log in, if needed
+	# discard old GEDCOM
+	# upload new GEDCOM
+	# run generator
+	# download new output
+
 
 def step_check_images():
 	global step_no
 	step_no += 1
 	wmtext.clock_on_right(str(step_no).rjust(2) + ". Checking images...")
+
 	gedcom_file = open(my_gedcom, 'r')
 	subject = gedcom_file.read()
 	gedcom_file.close()
 
 	missing_matches = []
+	all_matches = []
 	matches = 0
-	wrapper = textwrap.TextWrapper(width=79, initial_indent=" "*8, subsequent_indent=" "*12)
+	wrapper = textwrap.TextWrapper(width=79, initial_indent=" "*6, subsequent_indent=" "*10)
 	pattern_bad = re.compile("missing ")
 	for match in re.findall(r'(images/.+\.(jpg|jpeg|png|gif|pdf))', subject, re.IGNORECASE):
+		all_matches.append(match)
+	
+	all_matches = set(all_matches) # remove duplicates
+	for match in all_matches:
 		r = requests.head(url_root + "/" + str(match[0]), allow_redirects=True)
 		if not r.status_code == requests.codes.ok:
 			mytext = wrapper.fill("missing " + str(r.status_code) + " -> " + match[0])
@@ -140,15 +157,27 @@ def step_check_images():
 			for image in missing_matches:
 				if wmtext.querry_yes_no("        Add " + image + "?", default="yes"):
 					addimage(image)
+					# TO-DO: implement this!
 				else:
 					pass
 		else: #no
 			pass
+			
+		# write missing images to a file
+		f = open('missing-images.txt', 'w')
+		f.write("Genealogy Uploader, v." + str(__version__) + '\n')
+		f.write(my_gedcom + '\n')
+		f.write('\n')
+		for missing in missing_matches:
+			f.write(missing + '\n')
+		f.close()
+		
 
 def step_clean_old_output():
 	global step_no
 	step_no += 1
 	wmtext.clock_on_right(str(step_no).rjust(2) + ". Deleting old Adam output.")
+
 	to_delete = []
 	os.chdir(github_folder)
 	all_files = os.listdir(github_folder)
@@ -167,10 +196,12 @@ def step_clean_old_output():
 		bar.update(counter)
 	print("\n        " + str(len(to_delete)) + " files deleted.")
 
+	
 def step_get_new_output():
 	global step_no
 	step_no += 1
 	wmtext.clock_on_right(str(step_no).rjust(2) + ". Get new Adam output.")
+
 	global adam_zip
 	adam_zip = ''
 	os.chdir(download_folder)
@@ -195,61 +226,71 @@ def step_get_new_output():
 		
 	winshell.copy_file(adam_zip, github_folder)
 
+
 def step_unzip():
 	# 6:48.948 for 9,999 files
 	global step_no
 	step_no += 1
 	wmtext.clock_on_right(str(step_no).rjust(2) + ". Unzip new Adam output.")
+
 	os.chdir(github_folder)
 	zf = zipfile.ZipFile(adam_zip)
 	zf.extractall()
 	zf.close()
-	
+
+
 def step_unzip_faster():
 	# see http://dmarkey.com/wordpress/2011/10/15/python-zipfile-speedup-tips/
 	# 4:44.459 for 9,999 files
 	global step_no
 	step_no += 1
 	wmtext.clock_on_right(str(step_no).rjust(2) + ". Unzip new Adam output.")
+
 	os.chdir(github_folder)
 	zf = zipfile.ZipFile(open(adam_zip, 'r'))
 	zf.extractall()
 	zf.close()
-	
+
+
 def step_unzip_czip():
 	# 4:46.109 for 9,999 files
 	global step_no
 	step_no += 1
 	wmtext.clock_on_right(str(step_no).rjust(2) + ". Unzip new Adam output.")
+
 	os.chdir(github_folder)
 	zf = czipfile.ZipFile(adam_zip)
 	zf.extractall()
 	zf.close()
-	
+
+
 def step_unzip_7zip():
 	#  5:39.121 for 9,999 files
 	global step_no
 	step_no += 1
 	wmtext.clock_on_right(str(step_no).rjust(2) + ". Unzip new Adam output.")
+
 	os.chdir(github_folder)
 	my_cmd = r'"C:\Program Files\7-Zip\7z.exe" e ' + adam_zip + ' > nul'
 	#print my_cmd
 	r4 = os.system(my_cmd)
-	#with open(os.devnull, 'w') as null:
-	#	subprocess.Popen([r'"C:\Program Files\7-Zip\7z.exe"', 'e', adam_zip], stdout=null, stderr=null)
+
 
 def step_replace_index():
 	global step_no
 	step_no += 1
 	wmtext.clock_on_right(str(step_no).rjust(2) + ". Copy over index.html")
+
 	os.chdir(github_folder)
 	winshell.delete_file("index.html", no_confirm = True, allow_undo = False, silent = True)
 	winshell.copy_file("_adam/index.html", "index.html", no_confirm = True)
 
+	
 def step_replace_text():
 	global step_no
 	step_no += 1
 	wmtext.clock_on_right(str(step_no).rjust(2) + ". Replacing Adam version number.")
+
 	print("    Updated dates")
 	print("    Hiding emails")
 	soup_file = open('names.html', 'r')
@@ -298,10 +339,12 @@ def step_replace_text():
 		bar.update(counter)
 	print # clear progress bar
 
+
 def step_clean_html():
 	global step_no
 	step_no += 1
 	wmtext.clock_on_right(str(step_no).rjust(2) + ". Remove nasty HTML")
+
 	counter = 0
 	bar = wmtext.progressbar(maximum = len(all_html_files))
 	for file in all_html_files:
@@ -314,10 +357,12 @@ def step_clean_html():
 		bar.update(counter)
 	print # clear progress bar
 
+
 def step_tracking():
 	global step_no
 	step_no += 1
 	wmtext.clock_on_right(str(step_no).rjust(2) + ". Create deploy tracking file")
+
 	# create a 'random' number using UUID
 	# note that the last set of digits will correspond to the workstation
 	myUUID = str(uuid.uuid1())
@@ -328,10 +373,12 @@ def step_tracking():
 	target.write(gedcom_expected + "\n")
 	target.close()
 
+
 def step_git():
 	global step_no
 	step_no += 1
 	wmtext.clock_on_right(str(step_no).rjust(2) + ". Git -> commit and push")
+
 	#commit_msg = "Adam generated upload from " + gedcom_expected
 	os.chdir(github_folder)
 	wmtext.clock_on_right(Fore.YELLOW + ' > git add -A' + Style.RESET_ALL)
@@ -343,6 +390,7 @@ def step_git():
 	wmtext.clock_on_right(Fore.YELLOW + '> git push origin' + Style.RESET_ALL)
 	r3 = envoy.run('git push origin')
 	print r3.std_out, r3.std_err
+
 
 def step_live():
 	global step_no
@@ -361,15 +409,12 @@ if __name__ == "__main__":
 	print
 	
 	#step_export()
-	#step_clean_gedcom()
-	#step_upload()
-	##step_check_images()
+	step_clean_gedcom()
+	#step_upload_gedcom()
+	step_check_images()
 	#step_clean_old_output()
 	#step_get_new_output()
-	#step_unzip()
-	step_unzip_faster()
-	#step_unzip_czip()
-	#step_unzip_7zip()
+	#step_unzip_faster()
 	#step_replace_index()
 	#step_replace_text()
 	#step_clean_html()

@@ -221,3 +221,4 @@ env/
 _env/
 _pelican/errors.txt
 _extras/
+missing-images.txt
