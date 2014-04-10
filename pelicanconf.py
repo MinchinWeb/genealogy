@@ -70,7 +70,7 @@ MENUITEMS = ( 	('Blog', 		'http://blog.minchin.ca/',		'fa fa-pencil'),
 				('Contact Me',	'http://minchin.ca/contact/',	'fa fa-envelope'),
 			)
 				
-DISPLAY_PAGES_ON_MENU = False
+DISPLAY_PAGES_ON_MENU = True
 
 # disable Tags
 TAGS_SAVE_AS = ''
