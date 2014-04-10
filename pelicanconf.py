@@ -70,15 +70,21 @@ MENUITEMS = ( 	('Blog', 		'http://blog.minchin.ca/',		'fa fa-pencil'),
 				('Contact Me',	'http://minchin.ca/contact/',	'fa fa-envelope'),
 			)
 				
-DISPLAY_PAGES_ON_MENU = True
+DISPLAY_PAGES_ON_MENU = False
 
-# disable Tags
+# disable Tags, etc
 TAGS_SAVE_AS = ''
 TAG_SAVE_AS = ''
 CATEGORY_URL = ''
 CATEGORY_SAVE_AS = ''
+CATEGORIES_URL = ''
+CATEGORIES_SAVE_AS = ''
 ARTICLE_URL = ''
 ARTICLE_SAVE_AS = ''
+AUTHORS_URL = ''
+AUTHORS_SAVE_AS = ''
+ARCHIVES_URL = ''
+ARCHIVES_SAVE_AS = ''
 PAGE_URL = "{slug}/"
 PAGE_SAVE_AS = "{slug}/index.html"
 
