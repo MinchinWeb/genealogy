@@ -136,3 +136,6 @@ GITHUB_USER = False
 ADDTHIS_PROFILE = False
 DISQUS_SITENAME = False
 PDF_PROCESSOR = False
+
+# Adam configuration options
+from adamconf import *
