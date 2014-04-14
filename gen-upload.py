@@ -249,8 +249,8 @@ def get_new_adam():
 	while True:
 		all_files = os.listdir(env.download_folder)
 		for filename in all_files:
-			if filename.startswith(adam_prefix) and filename.endswith(".zip"):
-				if datetime.fromtimestamp(os.stat(filename).st_ctime) > local_start_time:
+			if filename.startswith(env.adam_prefix) and filename.endswith(".zip"):
+				if datetime.fromtimestamp(os.stat(filename).st_ctime) > env.start_time:
 					env.adam_zip = filename
 		if env.adam_zip != '' and os.stat(env.adam_zip).st_size > 1000:
 			break
@@ -299,7 +299,7 @@ def step_unzip_czip():
 	zf.extractall()
 	zf.close()
 
-
+@task
 def step_unzip_7zip():
 	#  5:09.974 for 9,999 files
 	env.step_no += 1
@@ -328,6 +328,10 @@ def replace_index():
 	except:
 		pass
 	try:
+		winshell.delete_file("index.html", no_confirm = True, allow_undo = False, silent = True)
+	except:
+		pass
+	try:
 		winshell.delete_file("404.md", no_confirm = True, allow_undo = False, silent = True)
 	except:
 		pass
@@ -347,6 +351,7 @@ def set_pelican_variables():
 	f = open(env.working_folder + '\\adamconf.py', 'w')
 	f.write("# Genealogy Uploader, v." + str(__version__) + '\n')
 	f.write('# ' + env.my_gedcom + '\n\n')
+	f.write('ADAM = True\n')
 	f.write('ADAM_VERSION = "' + adam_version_text + '"\n')
 	f.write('ADAM_UPDATED = "' + date_in_text + '"\n')
 	f.close()
@@ -452,6 +457,16 @@ def pelican():
 	
 	os.chdir(env.working_folder)
 	local ('pelican -s publishconf.py')
+	
+	
+@task
+def pelican_local():
+	'''Run Pelican (in local, developmental mode)'''
+	env.step_no += 1
+	wmtext.clock_on_right(str(env.step_no).rjust(2) + ". Run Pelican (site generator)")
+	
+	os.chdir(env.working_folder)
+	local ('pelican -s pelicanconf.py')
 
 
 @task
@@ -534,7 +549,7 @@ def all_steps():
 	wmtext.clock_on_right(Fore.GREEN + Style.BRIGHT + "Update is Live")
 	print Style.RESET_ALL
 	
-	print datetime.now() - start_time
+	print datetime.now() - env.start_time
 
 @task(default=True)
 def does_nothing():
