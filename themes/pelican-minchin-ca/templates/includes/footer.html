@@ -22,6 +22,14 @@
 			  &middot;
 			  Last Updated {{ modified }}
 			{% endif %}
+			{% if ADAM_VERSION %}
+			  &middot;
+			  {{ ADAM_VERSION }}
+			  {% if ADAM_UPDATED %}
+			    &middot;
+				Data Last Updated {{ ADAM_UPDATED }}
+			  {% endif %}
+			{% endif %}
             {%- if CC_LICENSE or CC_LICENSE_DERIVATIVES or CC_LICENSE_COMMERCIAL %}
 			  &middot;
               {% from 'includes/cc-license.html' import cc_license_mark %}

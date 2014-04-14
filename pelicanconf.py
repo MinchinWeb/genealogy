@@ -2,6 +2,13 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
+import os
+import sys
+sys.path.append(os.curdir)
+
+# Adam configuration options
+from adamconf import *
+
 AUTHOR = u'Wm. Minchin'
 SITENAME = u'Minchin.ca'
 SITEURL = 'http://minchin.ca/genealogy'
@@ -51,6 +58,11 @@ EXTRA_PATH_METADATA = {
 
 # Custom settings
 #FILENAME_METADATA = ('(?P<date>\d{4}-\d{2}-\d{2}).*')	#default?
+#FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.*)' #extract date and slug
+FILENAME_METADATA = '(?P<slug>[\w-]*)'		# so anything before the file extension becomes the slug
+## Please note that the metadata available inside your files takes precedence
+#  over the metadata extracted from the filename.
+
 MARKUP = (( 'rst',
 			'md',
 			'markdown',
@@ -85,8 +97,8 @@ AUTHORS_URL = ''
 AUTHORS_SAVE_AS = ''
 ARCHIVES_URL = ''
 ARCHIVES_SAVE_AS = ''
-PAGE_URL = "{slug}/"
-PAGE_SAVE_AS = "{slug}/index.html"
+PAGE_URL = "{slug}.html"
+PAGE_SAVE_AS = "{slug}.html"
 
 # Theme Related
 TYPOGRIFY = True
@@ -136,6 +148,3 @@ GITHUB_USER = False
 ADDTHIS_PROFILE = False
 DISQUS_SITENAME = False
 PDF_PROCESSOR = False
-
-# Adam configuration options
-from adamconf import *

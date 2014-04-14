@@ -72,6 +72,10 @@
 	{% endassets %}
 
   {% else %}
+  	{% if ADAM %}
+	  <link rel="stylesheet" href="adam.css">
+	{% endif %}
+  
     <!-- Bootstrap -->
     {% if BOOTSTRAP_THEME %}
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/bootstrap.{{ BOOTSTRAP_THEME }}.min.css" type="text/css"/>
@@ -183,6 +187,11 @@
 
 	<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
 	<script src="{{ SITEURL }}/theme/js/respond.min.js"></script>
+{% endif %}
+{% if ADAM %}
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+	<script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"></script>
 {% endif %}
 
 {% include 'includes/github-js.html' %}

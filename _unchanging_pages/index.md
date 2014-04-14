@@ -19,20 +19,20 @@ Several lines immigrated to Canada around 1800.
 
 To jump right into my online genealogy, select a link from below:
 
--   [Surnames](names/)
--   [Updates](updates/)
--   [Sources](sources/)
--   [Distribution Map](map/)
--   [Timelines](timeline/)
--   [Immigrants](immigrants/)
--   [Nobility](titles/)
--   [Locations](places/)
--   [Bonkers Report](bonkers-report/)
--   [Photos](photos/)
--   [External Links](links/)
--   [Statistics](stats/)
+-   [Surnames]({filename}names.html)
+-   [Updates]({filename}updates.html)
+-   [Sources]({filename}sources.html)
+-   [Distribution Map]({filename}map.html)
+-   [Timelines]({filename}timeline.html)
+-   [Immigrants]({filename}immigrants.html)
+-   [Nobility]({filename}titles.html)
+-   [Locations]({filename}places.html)
+-   [Bonkers Report]({filename}bonkers-report.html)
+-   [Photos]({filename}photos.html)
+-   [External Links]({filename}links.html)
+-   [Statistics]({filename}stats.html)
 
-The tree was last updated on \$tree-updated\$.
+<!-- The tree was last updated on \$tree-updated\$. -->
 
 * * * * *
 
