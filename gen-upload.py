@@ -2,13 +2,13 @@
 # -*- coding: utf-8 -*-
 
 '''Genealogy Uploader
-v.3.0 - WM - April 12, 2014
+v.3.1 - WM - July 5, 2014
 
 This script serves to semi-automate the building and uploading of my
 genealogy website. It is intended to be semi-interactive and run from the
 command line.'''
 
-__version__ = 3.0
+__version__ = 3.1
 
 
 from datetime import datetime
@@ -37,7 +37,7 @@ env.photo_folder = "S:\\Documents\\genealogy"
 env.download_folder = "S:\\Downloads\\Firefox"
 env.url_root = "http://minchin.ca/genealogy"
 env.repo_url = "https://github.com/MinchinWeb/genealogy.git"
-env.adam_prefix = 'adam-1246-'
+env.adam_prefix = 'william-minchin-gigatree-offline-'
 env.today = '' + str(date.today().year)[2:] + str.zfill(str(date.today().month), 2) + str.zfill(str(date.today().day), 2)
 env.gedcom_expected = 'William ' + env.today + '.ged'
 env.my_gedcom = winshell.desktop() + "\\" + env.gedcom_expected
@@ -77,7 +77,7 @@ def get_adam_version():
 	soup_file = open(env.content_folder + '\\names.html', 'r')
 	soup = BeautifulSoup(soup_file)
 	soup_file.close()
-	return soup.find(True, "adam-version").get_text().encode('utf-8')[:-2] # 'Built by Adam 1.35.0.0' or the like
+	return soup.find(True, "gt-version").get_text().encode('utf-8')[:-2] # 'Built by Adam 1.35.0.0' or the like
 
 
 @task
@@ -121,11 +121,11 @@ def clean_gedcom():
 
 @task
 def upload_gedcom():
-	'''Upload GEDCOM to Adam'''
+	'''Upload GEDCOM to Gigatree'''
 	env.step_no += 1
-	wmtext.clock_on_right(str(env.step_no).rjust(2) + ". The file is now ready to upload to Adam.")
+	wmtext.clock_on_right(str(env.step_no).rjust(2) + ". The file is now ready to upload to Gigatrees.")
 
-	webbrowser.open("http://timforsythe.com/tools/adam", new=2)
+	webbrowser.open("http://gigatrees.com/toolbox/gigatree", new=2)
 	print("        log-in (using Facebook)")
 	print("        now click 'generate report'")
 	# check to see if we're logged in
@@ -228,9 +228,9 @@ def delete_old_output():
 
 @task
 def delete_old_adam():
-	'''Delete old Adam output'''
+	'''Delete old Gigatrees output'''
 	env.step_no += 1
-	wmtext.clock_on_right(str(env.step_no).rjust(2) + ". Deleting old Adam output.")
+	wmtext.clock_on_right(str(env.step_no).rjust(2) + ". Deleting old Gigatree output.")
 	
 	os.chdir(env.content_folder)
 	local('del *.* /q')
@@ -238,10 +238,10 @@ def delete_old_adam():
 
 @task	
 def get_new_adam():
-	'''Get new Adam output'''
+	'''Get new Gigatree output'''
 	# TO-DO: allow override of 'start time'
 	env.step_no += 1
-	wmtext.clock_on_right(str(env.step_no).rjust(2) + ". Get new Adam output.")
+	wmtext.clock_on_right(str(env.step_no).rjust(2) + ". Get new Gigatree output.")
 
 	os.chdir(env.download_folder)
 
@@ -269,7 +269,7 @@ def get_new_adam():
 def step_unzip():
 	# 6:48.948 for 9,999 files
 	env.step_no += 1
-	wmtext.clock_on_right(str(env.step_no).rjust(2) + ". Unzip new Adam output.")
+	wmtext.clock_on_right(str(env.step_no).rjust(2) + ". Unzip new Gigatree output.")
 
 	os.chdir(env.content_folder)
 	zf = zipfile.ZipFile(env.adam_zip)
@@ -281,7 +281,7 @@ def step_unzip_faster():
 	# see http://dmarkey.com/wordpress/2011/10/15/python-zipfile-speedup-tips/
 	# 4:44.459 for 9,999 files
 	env.step_no += 1
-	wmtext.clock_on_right(str(env.step_no).rjust(2) + ". Unzip new Adam output.")
+	wmtext.clock_on_right(str(env.step_no).rjust(2) + ". Unzip new Gigatree output.")
 
 	os.chdir(env.content_folder)
 	zf = zipfile.ZipFile(open(env.adam_zip, 'r'))
@@ -292,7 +292,7 @@ def step_unzip_faster():
 def step_unzip_czip():
 	# 4:46.109 for 9,999 files
 	env.step_no += 1
-	wmtext.clock_on_right(str(env.step_no).rjust(2) + ". Unzip new Adam output.")
+	wmtext.clock_on_right(str(env.step_no).rjust(2) + ". Unzip new Gigatree output.")
 
 	os.chdir(env.content_folder)
 	zf = czipfile.ZipFile(env.adam_zip)
@@ -303,7 +303,7 @@ def step_unzip_czip():
 def step_unzip_7zip():
 	#  5:09.974 for 9,999 files
 	env.step_no += 1
-	wmtext.clock_on_right(str(env.step_no).rjust(2) + ". Unzip new Adam output.")
+	wmtext.clock_on_right(str(env.step_no).rjust(2) + ". Unzip new Gigatree output.")
 	
 	os.chdir(env.content_folder)
 	local('"C:\\Program Files\\7-Zip\\7z.exe" e ' + env.adam_zip + ' > nul')
@@ -313,7 +313,10 @@ def step_unzip_7zip():
 @task
 def unzip_adam():
 	'''Unzip new Adam output'''
-	step_unzip_faster()
+	try:
+		step_unzip_faster()
+	except:
+		step_unzip_7zip()
 
 
 @task
@@ -532,7 +535,7 @@ def all_steps():
 	export_gedcom()				# works
 	clean_gedcom()				# works
 	upload_gedcom()				# doesn't open webbrowser
-	check_images()				# works
+	#check_images()				# works
 	delete_old_output()			# works
 	delete_old_adam()			# works ~2 min
 	get_new_adam()				#
@@ -542,9 +545,10 @@ def all_steps():
 	clean_adam_html()			# doesn't crash
 	replace_emails()			# doesn't crash
 	create_tracking()			# works ~10 sec
-	pelican() 					# works (assuming Pelican works)
-	git()						#
-	live()						#
+	#pelican() 					# works (assuming Pelican works)
+	pelican_local()
+	#git()						#
+	#live()						#
 	
 	wmtext.clock_on_right(Fore.GREEN + Style.BRIGHT + "Update is Live")
 	print Style.RESET_ALL

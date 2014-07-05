@@ -117,7 +117,8 @@ GOOGLE_ANALYTICS_UNIVERSAL = 'UA-384291-3'
 GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY = 'minchin.ca'
 
 # Plugins
-PLUGIN_PATH = '../pelican-plugins'
+#PLUGIN_PATH = '../pelican-plugins'
+PLUGIN_PATHS = ('../pelican-plugins',)
 # PLUGINS = ['assets', 'minify', 'sitemap', 'optimize_images']
 PLUGINS = ['assets', ]
 
