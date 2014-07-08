@@ -27,6 +27,7 @@ import sys
 import winshell
 import requests
 from bs4 import BeautifulSoup
+import codecs
 # import envoy
 import wmtext
 from fabric.api import local, task, env
@@ -77,7 +78,7 @@ def get_adam_version():
 	soup_file = open(env.content_folder + '\\names.html', 'r')
 	soup = BeautifulSoup(soup_file)
 	soup_file.close()
-	return soup.find(True, "gt-version").get_text().encode('utf-8')[:-2] # 'Built by Adam 1.35.0.0' or the like
+	return soup.find(True, "gt-version").get_text().encode('utf-8') # 'Built by Adam 1.35.0.0' or the like
 
 
 @task
@@ -320,6 +321,51 @@ def unzip_adam():
 
 
 @task
+def php_to_html():
+	'''Change any .php files to .html'''
+	env.step_no += 1
+	wmtext.clock_on_right(str(env.step_no).rjust(2) + ". Name all .php files")
+	os.chdir(env.content_folder)
+	local('rename *.php *.html')
+	
+	
+@task
+def copy_js():
+	'''Copy Gigatree .js files'''
+	env.step_no += 1
+	wmtext.clock_on_right(str(env.step_no).rjust(2) + ". Copy Gigatree .js files")
+	os.chdir(env.content_folder)
+	
+	js_files = ('tab-list-handler.js',
+				'tooltip-handler.js',
+				'graph-handler.js',
+				'gigatrees-map-min.js', )
+	
+	for my_file in js_files:
+		try:
+			winshell.delete_file("../js/" + my_file, no_confirm = True, allow_undo = False, silent = True)
+		except:
+			pass
+		winshell.copy_file(my_file, "../js/" + my_file, no_confirm = True)
+		
+@task
+def copy_css():
+	'''Copy Gigatree .css files'''
+	env.step_no += 1
+	wmtext.clock_on_right(str(env.step_no).rjust(2) + ". Copy Gigatree .css files")
+	os.chdir(env.content_folder)
+	
+	js_files = ('gigatrees.css', )
+	
+	for my_file in js_files:
+		try:
+			winshell.delete_file("../css/" + my_file, no_confirm = True, allow_undo = False, silent = True)
+		except:
+			pass
+		winshell.copy_file(my_file, "../css/" + my_file, no_confirm = True)
+
+
+@task
 def replace_index():
 	'''Copy over index.md, 404.md'''
 	env.step_no += 1
@@ -427,25 +473,39 @@ def clean_adam_html():
 	counter = 0
 	bar = wmtext.progressbar(maximum = len(all_html_files))
 	for file in all_html_files:
-		with open(env.content_folder + '\\' + file, 'r') as html_doc:
+		with codecs.open(env.content_folder + '\\' + file, 'r', 'utf-8') as html_doc:
 			my_html = html_doc.read()
 
 		soup = BeautifulSoup(my_html)
-		for tag in soup(property="og:title", limit=1):
+		# change page title
+		title_tag = soup.html.head.title
+		for tag in soup(id="gt-page-title", limit=1):
+			title_tag.string.replace_with(tag.string)
 			tag.decompose()
-		for tag in soup(charset=True):
+		# dump all the meta tags in the head section
+		for tag in soup("meta"):
 			tag.decompose()
-		for tag in soup.find_all(id="site-header"):
+		# fix links that point to php pages
+		for tag in soup("a", href=True):
+			tag['href'] = tag['href'].replace('.php', '.html')
+		# remove wrapper lists (ul/li) to tables
+		#for tag in soup("ul"):
+		#	tag2 = tag.findParent('ul')
+		#		if tag2:
+		#			tag2.replace_with(tag2.contents)
+		#			# replace 'li' tags with 'p'
+		#			#for tag3 in tag2("li"):
+		#			#	tag3.name = 'p'
+		
+		# other stuff
+		for tag in soup(id="gt-page-title"):
 			tag.decompose()
-		for tag in soup(id="adam-page-title"):
-			tag.decompose()
-		for tag in soup(class_="adam-version", limit=1):
-			tag.decompose()
-		for tag in soup(id="site-footer"):
+		for tag in soup(class_="gt-version", limit=1):
 			tag.decompose()
 
-		with open(env.content_folder + '\\' + file, 'w') as html_doc:
-			html_doc.write(str(soup))
+		with codecs.open(env.content_folder + '\\' + file, 'w', 'utf-8') as html_doc:
+			#html_doc.write(str(soup))
+			html_doc.write(unicode(soup))
 
 		counter += 1
 		bar.update(counter)
@@ -534,12 +594,15 @@ def all_steps():
 	
 	export_gedcom()				# works
 	clean_gedcom()				# works
-	upload_gedcom()				# doesn't open webbrowser
+	#upload_gedcom()				# works
 	#check_images()				# works
 	delete_old_output()			# works
 	delete_old_adam()			# works ~2 min
 	get_new_adam()				#
 	unzip_adam()				# pretty sure works ~5 min
+	php_to_html()				# works
+	copy_js()					# works
+	#copy_css()
 	replace_index()				# works
 	set_pelican_variables()		# works
 	clean_adam_html()			# doesn't crash

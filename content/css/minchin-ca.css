@@ -17,3 +17,178 @@ body {
 	/*  This is too much is the screen is narrow than about 250px */
   }
 }
+
+  
+/* Gigatrees */
+
+
+
+.gt-heading {
+  padding: 2px 10px;
+}
+
+.gt-gender {
+  padding: 3px 10px;
+}
+
+.gt-table-box {
+  border-collapse: seperate;
+}
+
+ul,
+#gt-person-profile {
+  list-style: none;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+  
+/******************/
+/* Graphs      */
+/******************/
+#boysNamesChartContainer          {height: 500px;}
+#girlsNamesChartContainer         {height: 500px;}
+#surnamesChartContainer           {height: 500px;} 
+#totRecordsChartContainer         {height: 200px;}
+#expandedTotRecordsChartContainer {height: 400px;}
+#avgRecordsChartContainer         {height: 200px;}
+#distOfClaimsChartContainer       {height: 400px; margin-left:20px;}
+#docClaimsChartContainer          {height: 400px;}
+#avgLifeSpanChartContainer        {height: 600px;}
+#avgAgesChartContainer            {height: 150px;}
+
+#expandedTotRecordsChartContainer2 {height: 600px;}
+
+#xfactorChartContainer             {height: 350px;}
+#xfactorTotRecordsChartContainer   {height: 300px;}
+#xfactorStatsChartContainer   		 {height: 300px;}
+
+@media only screen and (max-width:1200px) { 
+  g.dxc-title g text tspan {font-size: .7em;}
+
+  
+/******************/
+/* Adam Content   */
+/******************/
+.gt-image-photo-box {
+	max-width: 100px;
+	max-height: 100px;
+	display: -moz-inline-box; 
+	display: inline-block;
+	overflow: hidden;
+}
+.gt-image-file-box {
+	max-width: 50px;
+	max-height: 50px;
+	width: 50px;
+	height: 50px;
+	display: -moz-inline-box; 
+	display: inline-block;
+	overflow: hidden;
+}
+
+.gt-image-photo {
+    max-height: 100%;
+    max-width: 100%;
+    display:block;
+		margin-left:auto;
+		margin-right:auto;
+}
+.gt-image-file {
+    max-height: 100%;
+    max-width: 100%;
+		width: 50px;
+		height: 50px;
+    display:block;
+		margin-left:auto;
+		margin-right:auto;   
+}
+
+#map {
+	min-height:750px;
+	padding: 10px 10px 10px 10px;
+}
+
+.gt-heatmap-wrapper {
+	min-height:750px;
+	padding: 3px 13px 5px 14px;
+/*    margin-bottom: 20px;*/
+}
+
+.gt-tab-table {
+  border-collapse: separate;
+  border-spacing: 0.5em;
+}
+
+.gt-table-box {
+  border-spacing:0px;
+  border-collapse:separate;
+}
+
+.gt-photos-wrapper {
+  margin-right:auto;
+  margin-left:auto;
+}
+.gt-gender {
+  padding:3px 10px 3px 10px;
+} 
+.gt-user-ids,
+.gt-name-list,
+.gt-parents,
+.gt-spouses,
+.gt-children,
+.gt-associations,
+.gt-events,
+.gt-attrs
+.gt-source-text,
+.gt-source-header,
+.gt-source-bibliography,
+.gt-source-template,
+.gt-source-type,
+.gt-source-repository,
+.gt-source-quality,
+.gt-referrers,
+.gt-names,
+.gt-location,
+.gt-article-text {
+  padding:5px 10px 5px 10px;
+}
+.gt-note,
+.gt-list {
+  margin:3px 0;
+}
+.gt-note-heading,
+.gt-list-heading,
+.gt-citation-heading {
+  padding:1px 10px 2px 10px;
+}
+.gt-note-text {
+  padding:5px 10px 3px 10px;
+}
+.gt-list-urls,
+.gt-url {
+  padding:2px 10px 2px 10px;
+}
+#gt-modified {
+  padding: 2px 0px 0px 0px;
+}
+.gt-citation-text {
+  padding:5px 10px 10px 10px;
+}
+.gt-citation-text pre {
+  margin: 5px 0px;
+}
+.gt-map {
+  padding:0px 0px 0px 00px;
+}
+#gt-map-canvas {
+  height: 500px;
+}
+
+.gt-claim-spouse>td,
+.gt-claim-parents>td,
+.gt-claim>td {
+  padding-right:1em;
+}
+#gt-location-profile           {margin-bottom: 4px;}
+#gt-source-profile             {margin-bottom: 0px;}
+#gt-person-sources             {margin-bottom: 0px;}

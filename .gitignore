@@ -223,3 +223,5 @@ _pelican/errors.txt
 _extras/
 missing-images.txt
 adamconf.py
+cache/
+

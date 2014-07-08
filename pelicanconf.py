@@ -43,6 +43,7 @@ STATIC_PATHS = ['images',
 				'..\extras',
 				'css',
 				'design',
+				'js',
 				'..\.gitattributes',
 				'..\.gitignore',
 				'..\README.txt',]
