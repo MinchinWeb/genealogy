@@ -12,6 +12,7 @@ from adamconf import *
 AUTHOR = u'Wm. Minchin'
 SITENAME = u'Minchin.ca'
 SITEURL = 'http://minchin.ca/genealogy'
+BASESITEURL = 'http://minchin.ca'
 
 TIMEZONE = 'America/Edmonton'
 
