@@ -8,8 +8,9 @@ sys.path.append(os.curdir)
 
 # Adam configuration options
 from adamconf import *
+# ADAM = True  is used by the theme tempates to display 'Genealogy only' things
 
-AUTHOR = u'Wm. Minchin'
+AUTHOR = u'D. Minchin & Wm. Minchin'
 SITENAME = u'Minchin.ca'
 SITEURL = 'http://minchin.ca/genealogy'
 BASESITEURL = 'http://minchin.ca'
@@ -85,6 +86,7 @@ MENUITEMS = ( ('Blog',        'http://blog.minchin.ca/',      'fa fa-pencil'),
             )
 
 MENUITEMS_2_AT = 'Genealogy'
+MENUITEMS_2_AT_LINK = r'genealogy/'  # this is added to SITEURL
 
 MENUITEMS_2 = ( ('Surnames',         'http://minchin.ca/genealogy/names/',          False),
                 ('Updates',          'http://minchin.ca/genealogy/updates/',        False),
@@ -100,7 +102,7 @@ MENUITEMS_2 = ( ('Surnames',         'http://minchin.ca/genealogy/names/',      
                 ('Statistics',       'http://minchin.ca/genealogy/stats/',          False),
               )
 
-                
+
 DISPLAY_PAGES_ON_MENU = False
 
 # disable Tags, etc

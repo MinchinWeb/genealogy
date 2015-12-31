@@ -36,6 +36,9 @@ __version__ = '3.1.2'
 colorama.init()
 
 
+COPYRIGHT_START_YEAR = 1987
+ADAM_LINK = "http://gigatrees.com"
+ADAM_FOOTER = "<p><strong>Are we related?</strong> Are you a long lost cousin? Spotted an error here? This website remains a work-in-progress and I would love to hear from you. Drop me a line at minchinweb [at] gmail [dot] com.</p>"
 GITHUB_FOLDER = Path("S:\Documents\GitHub\genealogy-gh-pages")
 PHOTO_FOLER = Path("S:\Documents\Genealogy")
 DOWNLOAD_FOLDER = Path("S:\Downloads\Firefox")
@@ -432,14 +435,18 @@ def set_pelican_variables():
     adam_version_text = get_adam_version()  # 'Built by Adam 1.35.0.0 ' or the like
     adam_version_text = adam_version_text.decode('utf-8').strip()
     date_in_text = date.today().strftime("%B %d, %Y").replace(' 0', ' ')  # 'January 7, 2014' or the like
+    year_range = "{}-{}".format(COPYRIGHT_START_YEAR, datetime.now().year)
     print('        {} - {}'.format(adam_version_text, date_in_text))
 
     f = open(str(WORKING_FOLDER / 'adamconf.py'), 'w')
-    f.write("# Genealogy Uploader, v." + str(__version__) + '\n')
-    f.write('# ' + str(MY_GEDCOM) + '\n\n')
+    f.write('# Genealogy Uploader, v.{}\n'.format(str(__version__)))
+    f.write('# {}\n\n'.format(str(MY_GEDCOM)))
     f.write('ADAM = True\n')
-    f.write('ADAM_VERSION = "' + adam_version_text + '"\n')
-    f.write('ADAM_UPDATED = "' + date_in_text + '"\n')
+    f.write('ADAM_VERSION = "{}"\n'.format(adam_version_text))
+    f.write('ADAM_UPDATED = "{}"\n'.format(date_in_text))
+    f.write('ADAM_COPY_DATE = "{}"'.format(year_range))
+    f.write('ADAM_LINK = "{}"'.format(ADAM_LINK))
+    f.write('ADAM_FOOTER = "{}"'.format(ADAM_FOOTER))
     f.close()
 
 
