@@ -40,50 +40,67 @@ DEFAULT_PAGINATION = False
 
 # static paths will be copied under the same name
 STATIC_PATHS = ['images',
-				'..\extras',
-				'css',
-				'design',
-				'js',
-				'..\.gitattributes',
-				'..\.gitignore',
-				'..\README.txt',]
+                '..\extras',
+                'css',
+                'design',
+                'js',
+                '..\.gitattributes',
+                '..\.gitignore',
+                '..\README.txt',]
 
 # A list of files to copy from the source to the destination
 EXTRA_PATH_METADATA = {
-	'..\.gitattributes': 			{'path': '.gitattributes'},
-	'..\.gitignore': 				{'path': '.gitignore'},
-	'..\README.txt': 				{'path': 'README.txt'},
-    '..\extras\minchin.ico': 		{'path': 'favicon.ico'},
+    '..\.gitattributes':            {'path': '.gitattributes'},
+    '..\.gitignore':                {'path': '.gitignore'},
+    '..\README.txt':                {'path': 'README.txt'},
+    '..\extras\minchin.ico':        {'path': 'favicon.ico'},
     }
 
 
 
 # Custom settings
-#FILENAME_METADATA = ('(?P<date>\d{4}-\d{2}-\d{2}).*')	#default?
+#FILENAME_METADATA = ('(?P<date>\d{4}-\d{2}-\d{2}).*')  #default?
 #FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.*)' #extract date and slug
-FILENAME_METADATA = '(?P<slug>[\w-]*)'		# so anything before the file extension becomes the slug
+FILENAME_METADATA = '(?P<slug>[\w-]*)'      # so anything before the file extension becomes the slug
 ## Please note that the metadata available inside your files takes precedence
 #  over the metadata extracted from the filename.
 
 MARKUP = (( 'rst',
-			'md',
-			'markdown',
-			'mkd',
-			'mdown',
-			'html',
-			'htm'       ))
+            'md',
+            'markdown',
+            'mkd',
+            'mdown',
+            'html',
+            'htm'       ))
 PATH = 'content'
 OUTPUT_PATH = '../genealogy-gh-pages/'
 
 # Add Blog to sidebar
-MENUITEMS = ( 	('Blog', 		'http://blog.minchin.ca/',		'fa fa-pencil'),
-				('Genealogy',	'http://minchin.ca/genealogy/',	'glyphicon glyphicon-tree-deciduous'),
-				('My Projects',	'http://minchin.ca/projects/',	'fa fa-flask'),
-				('Search',		'http://minchin.ca/search/',	'fa fa-search'),
-				('About',		'http://minchin.ca/about/',		'fa fa-info-circle'),
-				('Contact Me',	'http://minchin.ca/contact/',	'fa fa-envelope'),
-			)
-				
+MENUITEMS = ( ('Blog',        'http://blog.minchin.ca/',      'fa fa-pencil'),
+              ('Genealogy',   'http://minchin.ca/genealogy/', 'glyphicon glyphicon-tree-deciduous'),
+              ('My Projects', 'http://minchin.ca/projects/',  'fa fa-flask'),
+              ('Search',      'http://minchin.ca/search/',    'fa fa-search'),
+              ('About',       'http://minchin.ca/about/',     'fa fa-info-circle'),
+              ('Contact Me',  'http://minchin.ca/contact/',   'fa fa-envelope'),
+            )
+
+MENUITEMS_2_AT = 'Genealogy'
+
+MENUITEMS_2 = ( ('Surnames',         'http://minchin.ca/genealogy/names/',          False),
+                ('Updates',          'http://minchin.ca/genealogy/updates/',        False),
+                ('Sources',          'http://minchin.ca/genealogy/sources/',        False),
+                ('Distribution Map', 'http://minchin.ca/genealogy/map/',            False),
+                ('Timelines',        'http://minchin.ca/genealogy/timeline/',       False),
+                ('Immigrants',       'http://minchin.ca/genealogy/immigrants/',     False),
+                ('Nobility',         'http://minchin.ca/genealogy/titles/',         False),
+                ('Locations',        'http://minchin.ca/genealogy/places/',         False),
+                ('Bonkers Report',   'http://minchin.ca/genealogy/bonkers-report/', False),
+                ('Photos',           'http://minchin.ca/genealogy/photos/',         False),
+                ('External Links',   'http://minchin.ca/genealogy/links/',          False),
+                ('Statistics',       'http://minchin.ca/genealogy/stats/',          False),
+              )
+
+                
 DISPLAY_PAGES_ON_MENU = False
 
 # disable Tags, etc
@@ -103,8 +120,8 @@ PAGE_URL = "{slug}.html"
 PAGE_SAVE_AS = "{slug}.html"
 
 # Theme Related
-TYPOGRIFY = True
-THEME = 'themes/pelican-minchin-ca'
+TYPOGRIFY = False  # turn off for HIDDEN names...
+THEME = '../minchinweb.github.io/themes/pelican-minchin-ca'
 SITELOGO = 'images/MinchindotCA-200.png'
 SITELOGO_SIZE = '100%'
 PYGMENTS_STYLE = 'friendly'
@@ -124,11 +141,11 @@ PLUGIN_PATHS = ('../pelican-plugins',)
 # PLUGINS = ['assets', 'minify', 'sitemap', 'optimize_images']
 PLUGINS = ['assets', ]
 
-ASSET_CSS = False	
+ASSET_CSS = False
 ASSET_JS = False
 
 SITEMAP = {
-	"format": "xml",
+    "format": "xml",
 }
 
 # `assets` sounds good, but I can't figure out how to get it to work for my CSS
@@ -136,8 +153,8 @@ SITEMAP = {
 # `gallery` looks good, but don't have a use here yet
 # `liquid_tags` & `pelican_comment_system` might be useful...
 # `optimize_images` works, but I don't have many images yet
-#		- requires `jpegtran.exe` <http://jpegclub.org/jpegtran/> and
-#			`optinpng.exe` <http://sourceforge.net/projects/optipng/>
+#       - requires `jpegtran.exe` <http://jpegclub.org/jpegtran/> and
+#           `optinpng.exe` <http://sourceforge.net/projects/optipng/>
 # look into 'neighbors' plugin for profiles
 
 

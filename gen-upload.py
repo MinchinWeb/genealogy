@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 '''Genealogy Uploader
-v.3.1.1 - WM - November 24, 2014
+v.3.1.2 - WM - December 30, 2015
 
 This script serves to semi-automate the building and uploading of my
 genealogy website. It is intended to be semi-interactive and run from the
@@ -27,17 +27,17 @@ import requests
 from bs4 import BeautifulSoup
 from colorama import Back, Fore, Style
 from invoke import run, task
+import winshell
 
 # import envoy
 # import winshell
 
-__version__ = '3.1.1'
+__version__ = '3.1.2'
 colorama.init()
 
 
 GITHUB_FOLDER = Path("S:\Documents\GitHub\genealogy-gh-pages")
-GITHUB_FOLDER = Path("S:\Documents\GitHub\genealogy-gh-pages")
-PHOTO_FOLER = Path("S:\Documents\enealogy")
+PHOTO_FOLER = Path("S:\Documents\Genealogy")
 DOWNLOAD_FOLDER = Path("S:\Downloads\Firefox")
 URL_ROOT = "http://minchin.ca/genealogy"
 REPO_URL = "https://github.com/MinchinWeb/genealogy.git"
@@ -49,11 +49,17 @@ MY_GEDCOM = USER_FOLDER / 'Desktop' / GEDCOM_EXPECTED
 #start_time = datetime.now()
 step_no = 0  # step counter
 start_time = datetime.now()
-HERE_FOLDER = Path.getcwd()
-WORKING_FOLDER = HERE  # current working directory
+HERE_FOLDER = Path.cwd()
+WORKING_FOLDER = HERE_FOLDER  # current working directory
 CONTENT_FOLDER = HERE_FOLDER / 'content' / 'pages'
-adam_zip = 'adam.zip'       # set later
+adam_zip = ''               # set later
 tracking_filename = ''      # set later
+
+
+# globals for Lenovo X201
+GITHUB_FOLDER = Path(r"C:\Users\User\Documents\GitHub\genealogy-gh-pages")
+PHOTO_FOLER = Path(r"C:\Users\User\Documents\Genealogy")
+DOWNLOAD_FOLDER = Path(r"C:\Users\User\Downloads")
 
 
 def addimage(image):
@@ -81,8 +87,8 @@ def multiple_replace(string, *key_values):
 
 
 def get_adam_version():
-    soup_file = open(CONTENT_FOLDER / 'names.html', 'r')
-    soup = BeautifulSoup(soup_file)
+    soup_file = open(str(CONTENT_FOLDER / 'names.html'), 'r')
+    soup = BeautifulSoup(soup_file, "lxml")
     soup_file.close()
     return soup.find(True, "gt-version").get_text().encode('utf-8')  # 'Built by Adam 1.35.0.0' or the like
 
@@ -90,6 +96,7 @@ def get_adam_version():
 @task
 def export_gedcom():
     '''Export from RootsMagic'''
+    global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Export from RootsMagic.")
 
@@ -107,11 +114,12 @@ def export_gedcom():
 @task
 def clean_gedcom():
     '''Cleaning up GEDCOM'''
+    global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Cleaning up GEDCOM...")
 
     # replace image paths
-    gedcom_file = file(MY_GEDCOM, 'r')  # add failsafe is the fail doesn't exist yet or is still being written to
+    gedcom_file = open(str(MY_GEDCOM), 'r', encoding='utf-8')  # add failsafe is the fail doesn't exist yet or is still being written to
     subject = gedcom_file.read()
     gedcom_file.close()
 
@@ -121,7 +129,7 @@ def clean_gedcom():
     result2 = pattern2.sub(r'\1/', result)
     result3 = pattern2.sub(r'\1/', result2)
 
-    f_out = file(MY_GEDCOM, 'w')
+    f_out = open(str(MY_GEDCOM), 'w', encoding='utf-8')
     f_out.write(result3)
     f_out.close()
 
@@ -129,6 +137,7 @@ def clean_gedcom():
 @task
 def upload_gedcom():
     '''Upload GEDCOM to Gigatree'''
+    global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". The file is now ready to upload to Gigatrees.")
 
@@ -146,10 +155,11 @@ def upload_gedcom():
 @task
 def check_images():
     '''Check which images have already been uploaded'''
+    global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Checking images...")
 
-    gedcom_file = open(MY_GEDCOM, 'r')
+    gedcom_file = open(str(MY_GEDCOM), 'r', encoding='utf-8')
     subject = gedcom_file.read()
     gedcom_file.close()
 
@@ -166,7 +176,7 @@ def check_images():
         r = requests.head(env.url_root + "/" + str(match[0]), allow_redirects=True)
         if not r.status_code == requests.codes.ok:
             mytext = wrapper.fill("missing " + str(r.status_code) + " -> " + match[0])
-            print pattern_bad.sub(Fore.RED + Style.BRIGHT + "missing " + Style.RESET_ALL, mytext)
+            print(pattern_bad.sub(Fore.RED + Style.BRIGHT + "missing " + Style.RESET_ALL, mytext))
             missing_matches.append(match[0])
         else:
             matches += 1
@@ -190,7 +200,7 @@ def check_images():
             pass
 
         # write missing images to a file
-        f = open('missing-images.txt', 'w')
+        f = open('missing-images.txt', 'w', encoding='utf-8')
         f.write("Genealogy Uploader, v." + str(__version__) + '\n')
         f.write(MY_GEDCOM + '\n')
         f.write('\n')
@@ -202,13 +212,14 @@ def check_images():
 @task
 def delete_old_output():
     '''Delete old Pelican output'''
+    global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Deleting old Pelican output.")
 
     to_delete = []
     html_files = 0
-    os.chdir(GITHUB_FOLDER)
-    all_files = os.listdir(GITHUB_FOLDER)
+    os.chdir(str(GITHUB_FOLDER))
+    all_files = os.listdir(str(GITHUB_FOLDER))
 
     for filename in all_files:
         if filename == ('.git'):
@@ -221,7 +232,7 @@ def delete_old_output():
     counter = 0
 
     # delete HTML files
-    local('del *.html -y')
+    run('del *.html -y')
     bar = minchin.text.progressbar(maximum=len(to_delete) + html_files)
     counter = html_files
     bar.update(counter)
@@ -237,30 +248,34 @@ def delete_old_output():
 @task
 def delete_old_adam():
     '''Delete old Gigatrees output'''
+    global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Deleting old Gigatree output.")
 
-    os.chdir(CONTENT_FOLDER)
-    local('del *.* /q')
+    os.chdir(str(CONTENT_FOLDER))
+    run('del *.* /q')
 
 
 @task
 def get_new_adam():
     '''Get new Gigatree output'''
     # TO-DO: allow override of 'start time'
+    global step_no
+    global adam_zip
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Get new Gigatree output.")
 
-    os.chdir(DOWNLOAD_FOLDER)
+    os.chdir(str(DOWNLOAD_FOLDER))
+    gedcom_time = datetime.fromtimestamp(os.stat(str(MY_GEDCOM)).st_ctime)
 
     count_loops = 0
     while True:
-        all_files = os.listdir(DOWNLOAD_FOLDER)
+        all_files = os.listdir(str(DOWNLOAD_FOLDER))
         for filename in all_files:
-            if filename.startswith(adam_prefix) and filename.endswith(".zip"):
-                if datetime.fromtimestamp(os.stat(filename).st_ctime) > env.start_time:
-                    env.adam_zip = filename
-        if env.adam_zip != '' and os.stat(env.adam_zip).st_size > 1000:
+            if filename.startswith(ADAM_PREFIX) and filename.endswith(".zip"):
+                if datetime.fromtimestamp(os.stat(filename).st_ctime) > gedcom_time:
+                    adam_zip = filename
+        if adam_zip != '' and os.stat(adam_zip).st_size > 1000:
             break
         count_loops += 1
         if count_loops > 60:
@@ -271,15 +286,16 @@ def get_new_adam():
         else:
             minchin.text.wait(30)
 
-    winshell.copy_file(adam_zip, CONTENT_FOLDER)
+    winshell.copy_file(adam_zip, str(CONTENT_FOLDER))
 
 
 def step_unzip():
     # 6:48.948 for 9,999 files
+    global step_no
     step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Unzip new Gigatree output.")
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Unzip new Gigatree output (Zipfile).")
 
-    os.chdir(CONTENT_FOLDER)
+    os.chdir(str(CONTENT_FOLDER))
     zf = zipfile.ZipFile(adam_zip)
     zf.extractall()
     zf.close()
@@ -288,10 +304,11 @@ def step_unzip():
 def step_unzip_faster():
     # see http://dmarkey.com/wordpress/2011/10/15/python-zipfile-speedup-tips/
     # 4:44.459 for 9,999 files
+    global step_no
     step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Unzip new Gigatree output.")
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Unzip new Gigatree output (Zipfile faster).")
 
-    os.chdir(CONTENT_FOLDER)
+    os.chdir(str(CONTENT_FOLDER))
     zf = zipfile.ZipFile(open(adam_zip, 'r'))
     zf.extractall()
     zf.close()
@@ -299,10 +316,11 @@ def step_unzip_faster():
 
 def step_unzip_czip():
     # 4:46.109 for 9,999 files
+    global step_no
     step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Unzip new Gigatree output.")
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Unzip new Gigatree output (czip).")
 
-    os.chdir(CONTENT_FOLDER)
+    os.chdir(str(CONTENT_FOLDER))
     zf = czipfile.ZipFile(adam_zip)
     zf.extractall()
     zf.close()
@@ -311,12 +329,14 @@ def step_unzip_czip():
 @task
 def step_unzip_7zip():
     #  5:09.974 for 9,999 files
+    global step_no
+    start_time_local = datetime.now()
     step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Unzip new Gigatree output.")
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Unzip new Gigatree output (7-zip).")
 
-    os.chdir(env.content_folder)
+    os.chdir(str(CONTENT_FOLDER))
     run('"C:\\Program Files\\7-Zip\\7z.exe" e {} > nul'.format(adam_zip))
-    print datetime.now() - start_time
+    print(" "*7, datetime.now() - start_time_local)
 
 
 @task
@@ -331,18 +351,20 @@ def unzip_adam():
 @task
 def php_to_html():
     '''Change any .php files to .html'''
+    global step_no
     step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Name all .php files")
-    os.chdir(CONTENT_FOLDER)
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Rename all .php files")
+    os.chdir(str(CONTENT_FOLDER))
     run('rename *.php *.html')
 
 
 @task
 def copy_js():
     '''Copy Gigatree .js files'''
+    global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Copy Gigatree .js files")
-    os.chdir(CONTENT_FOLDER)
+    os.chdir(str(CONTENT_FOLDER))
 
     js_files = ('tab-list-handler.js',
                 'tooltip-handler.js',
@@ -360,9 +382,10 @@ def copy_js():
 @task
 def copy_css():
     '''Copy Gigatree .css files'''
+    global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Copy Gigatree .css files")
-    os.chdir(CONTENT_FOLDER)
+    os.chdir(str(CONTENT_FOLDER))
 
     js_files = ('gigatrees.css', )
 
@@ -377,10 +400,11 @@ def copy_css():
 @task
 def replace_index():
     '''Copy over index.md, 404.md'''
+    global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Copy over index.md, 404.md")
 
-    os.chdir(CONTENT_FOLDER)
+    os.chdir(str(CONTENT_FOLDER))
     try:
         winshell.delete_file("index.md", no_confirm=True, allow_undo=False, silent=True)
     except:
@@ -401,14 +425,18 @@ def replace_index():
 @task
 def set_pelican_variables():
     '''Sets a couple of variables that Pelican uses while generating the site.'''
+    global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Setting up Pelican.")
 
     adam_version_text = get_adam_version()  # 'Built by Adam 1.35.0.0 ' or the like
+    adam_version_text = adam_version_text.decode('utf-8').strip()
     date_in_text = date.today().strftime("%B %d, %Y").replace(' 0', ' ')  # 'January 7, 2014' or the like
-    f = open(WORKING_FOLDER / 'adamconf.py', 'w')
+    print('        {} - {}'.format(adam_version_text, date_in_text))
+
+    f = open(str(WORKING_FOLDER / 'adamconf.py'), 'w')
     f.write("# Genealogy Uploader, v." + str(__version__) + '\n')
-    f.write('# ' + MY_GEDCOM + '\n\n')
+    f.write('# ' + str(MY_GEDCOM) + '\n\n')
     f.write('ADAM = True\n')
     f.write('ADAM_VERSION = "' + adam_version_text + '"\n')
     f.write('ADAM_UPDATED = "' + date_in_text + '"\n')
@@ -418,6 +446,7 @@ def set_pelican_variables():
 @task
 def replace_emails():
     '''Hide emails in Sources'''
+    global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Hiding Emails.")
 
@@ -448,8 +477,8 @@ def replace_emails():
                     ("gloog@eircom.net",                '[email redacted]'), \
                     ("donaldminchin@yahoo.com",         '[email redacted]'),
 
-    os.chdir(env.content_folder)
-    all_files = os.listdir(env.content_folder)
+    os.chdir(str(CONTENT_FOLDER))
+    all_files = os.listdir(str(CONTENT_FOLDER))
     all_html_files = []
     for my_file in all_files:
         #if my_file.endswith(".html"):
@@ -460,20 +489,21 @@ def replace_emails():
     # inline search and replace
     for file in all_html_files:
         for line in fileinput.input(file, inplace=1):
-            print multiple_replace(line, *replacements)
+            print(multiple_replace(line, *replacements))
         counter += 1
         bar.update(counter)
-    print  # clear progress bar
+    print()  # clear progress bar
 
 
 @task
 def clean_adam_html():
     '''Remove nasty and extra HTML.'''
+    global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Remove nasty and extra HTML.")
 
-    os.chdir(CONTENT_FOLDER)
-    all_files = os.listdir(CONTENT_FOLDER)
+    os.chdir(str(CONTENT_FOLDER))
+    all_files = os.listdir(str(CONTENT_FOLDER))
     all_html_files = []
     for my_file in all_files:
         if my_file.endswith(".html"):
@@ -482,10 +512,10 @@ def clean_adam_html():
     counter = 0
     bar = minchin.text.progressbar(maximum=len(all_html_files))
     for file in all_html_files:
-        with codecs.open(env.content_folder + '\\' + file, 'r', 'utf-8') as html_doc:
+        with codecs.open(str(CONTENT_FOLDER / file), 'r', 'utf-8') as html_doc:
             my_html = html_doc.read()
 
-        soup = BeautifulSoup(my_html)
+        soup = BeautifulSoup(my_html, "lxml")
         # change page title
         title_tag = soup.html.head.title
         for tag in soup(id="gt-page-title", limit=1):
@@ -512,38 +542,43 @@ def clean_adam_html():
         for tag in soup(class_="gt-version", limit=1):
             tag.decompose()
 
-        with codecs.open(env.content_folder + '\\' + file, 'w', 'utf-8') as html_doc:
+        with codecs.open(str(CONTENT_FOLDER / file), 'w', 'utf-8') as html_doc:
             #html_doc.write(str(soup))
-            html_doc.write(unicode(soup))
+            #html_doc.write(unicode(soup))
+            html_doc.write(soup.prettify())
 
         counter += 1
         bar.update(counter)
-    print  # clear progress bar
+    print()  # clear progress bar
 
 
 @task
 def pelican():
     '''Run Pelican'''
+    global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Run Pelican (site generator)")
 
-    os.chdir(WORKING_FOLDER)
+    os.chdir(str(WORKING_FOLDER))
     run('pelican -s publishconf.py')
 
 
 @task
 def pelican_local():
     '''Run Pelican (in local, developmental mode)'''
+    global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Run Pelican (site generator)")
 
-    os.chdir(WORKING_FOLDER)
+    os.chdir(str(WORKING_FOLDER))
     run('pelican -s pelicanconf.py')
 
 
 @task
 def create_tracking():
     '''Create deploy tracking file'''
+    global step_no
+    global tracking_filename
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Create deploy tracking file.")
 
@@ -551,7 +586,7 @@ def create_tracking():
     # note that the last set of digits will correspond to the workstation
     myUUID = str(uuid.uuid1())
     tracking_filename = myUUID + ".txt"
-    target = open(GITHUB_FOLDER / tracking_filename, 'w')
+    target = open(str(GITHUB_FOLDER / tracking_filename), 'w')
     target.write(myUUID + "\n")
     target.write("Adam upload by Python script.\n")
     target.write(GEDCOM_EXPECTED + "\n")
@@ -561,26 +596,28 @@ def create_tracking():
 @task
 def git():
     '''Git commit and push'''
+    global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Git -> commit and push")
 
     commit_msg = "Adam generated upload from " + GEDCOM_EXPECTED.name
-    os.chdir(GITHUB_FOLDER)
+    os.chdir(str(GITHUB_FOLDER))
     minchin.text.clock_on_right('{}> git add -A{}'.format(Fore.YELLOW, Style.RESET_ALL))
     r1 = run('git add -A')
-    print r1.std_err,
+    print(r1.std_err,)
     minchin.text.clock_on_right('{}> git commit -m "{}"{}'.format(Fore.YELLOW, commit_msg, Style.RESET_ALL))
-    r2 = run('git commit -m Adam_upload')
-    print r2.std_out, r2.std_err,
+    r2 = run('git commit -m Gigatrees_upload')
+    print(r2.std_out, r2.std_err,)
     minchin.text.clock_on_right('{}> git push origin{}'.format(Fore.YELLOW, Style.RESET_ALL))
     r3 = run('git push origin')
-    print r3.std_out, r3.std_err
+    print(r3.std_out, r3.std_err)
 
 
 @task
 def live():
     '''Tell us when we're live'''
     # TO-DO: find tracking file based on creation/modified date
+    global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Wait to go live")
 
@@ -601,7 +638,7 @@ def all_steps():
     minchin.text.title("Genealogy Uploader, v." + str(__version__))
     print
 
-    export_gedcom()             # works
+    export_gedcom()             # works 151230
     clean_gedcom()              # works
     #upload_gedcom()            # works
     #check_images()             # works
@@ -609,7 +646,7 @@ def all_steps():
     delete_old_adam()           # works ~2 min
     get_new_adam()              #
     unzip_adam()                # pretty sure works ~5 min
-    php_to_html()               # works
+    #php_to_html()              # works, brakes if there are no PHP files
     copy_js()                   # works
     #copy_css()
     replace_index()             # works
@@ -623,14 +660,14 @@ def all_steps():
     #live()                     #
 
     minchin.text.clock_on_right(Fore.GREEN + Style.BRIGHT + "Update is Live")
-    print Style.RESET_ALL
+    print(Style.RESET_ALL)
 
-    print datetime.now() - env.start_time
+    print(" "*7, datetime.now() - start_time)
 
 
 @task(default=True)
 def does_nothing():
-    print ('this does nothing')
+    print('this does nothing')
 
 
 if __name__ == "__main__":
