@@ -39,6 +39,7 @@ colorama.init()
 COPYRIGHT_START_YEAR = 1987
 ADAM_LINK = "http://gigatrees.com"
 ADAM_FOOTER = "<p><strong>Are we related?</strong> Are you a long lost cousin? Spotted an error here? This website remains a work-in-progress and I would love to hear from you. Drop me a line at minchinweb [at] gmail [dot] com.</p>"
+INDENT = " "*7
 GITHUB_FOLDER = Path("S:\Documents\GitHub\genealogy-gh-pages")
 PHOTO_FOLER = Path("S:\Documents\Genealogy")
 DOWNLOAD_FOLDER = Path("S:\Downloads\Firefox")
@@ -103,9 +104,9 @@ def export_gedcom():
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Export from RootsMagic.")
 
-    print("        call the file " + Style.BRIGHT + GEDCOM_EXPECTED + Style.RESET_ALL + " and save it to the desktop")
-    print("        do not include LDS information")
-    print("        no need to privatize individuals (at this step)")
+    print("{}call the file {}{}{} and save it to the desktop".format(INDENT, Style.BRIGHT, GEDCOM_EXPECTED, Style.RESET_ALL))
+    print("{}do not include LDS information".format(INDENT))
+    print("{}no need to privatize individuals (at this step)".format(INDENT))
     if not minchin.text.query_yes_quit("    Next?", default="yes"):
         sys.exit()
     try:
@@ -145,8 +146,8 @@ def upload_gedcom():
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". The file is now ready to upload to Gigatrees.")
 
     webbrowser.open("http://gigatrees.com/toolbox/gigatree", new=2)
-    print("        log-in (using Facebook)")
-    print("        now click 'generate report'")
+    print("{}log-in (using Facebook)".format(INDENT))
+    print("{}now click 'generate report'".format(INDENT))
     # check to see if we're logged in
     # log in, if needed
     # discard old GEDCOM
@@ -176,7 +177,7 @@ def check_images():
 
     all_matches = sorted(set(all_matches))  # remove duplicates and sort
     for match in all_matches:
-        r = requests.head(env.url_root + "/" + str(match[0]), allow_redirects=True)
+        r = requests.head(URL_ROOT + "/" + str(match[0]), allow_redirects=True)
         if not r.status_code == requests.codes.ok:
             mytext = wrapper.fill("missing " + str(r.status_code) + " -> " + match[0])
             print(pattern_bad.sub(Fore.RED + Style.BRIGHT + "missing " + Style.RESET_ALL, mytext))
@@ -185,9 +186,9 @@ def check_images():
             matches += 1
 
     if len(missing_matches) == 0:
-        print("        " + str(matches) + " images matching. No missing images.")
+        print("{}{} images matching. No missing images.".format(INDENT, str(matches)))
     else:
-        print("        " + str(matches) + " images matching.")
+        print("{}{} images matching.".format(INDENT, str(matches)))
         q_add_images = minchin.text.query_yes_no_all("        " + str(len(missing_matches)) + " missing images. Add them?", default="no")
         if q_add_images == 2:  # all
             for image in missing_matches:
@@ -204,11 +205,10 @@ def check_images():
 
         # write missing images to a file
         f = open('missing-images.txt', 'w', encoding='utf-8')
-        f.write("Genealogy Uploader, v." + str(__version__) + '\n')
-        f.write(MY_GEDCOM + '\n')
-        f.write('\n')
+        f.write("Genealogy Uploader, v.{}\n".format(str(__version__)))
+        f.write('{}\n\n'.format(MY_GEDCOM))
         for missing in missing_matches:
-            f.write(missing + '\n')
+            f.write('{}\n'.format(missing))
         f.close()
 
 
@@ -339,7 +339,7 @@ def step_unzip_7zip():
 
     os.chdir(str(CONTENT_FOLDER))
     run('"C:\\Program Files\\7-Zip\\7z.exe" e {} > nul'.format(adam_zip))
-    print(" "*7, datetime.now() - start_time_local)
+    print(INDENT, datetime.now() - start_time_local)
 
 
 @task
@@ -367,7 +367,8 @@ def copy_js():
     global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Copy Gigatree .js files")
-    os.chdir(str(CONTENT_FOLDER))
+    # files are copied from the base CONTENT_FOLDER (where they are put by unzipping
+    # the adam.zip) to the CONTENT_FOLDER / js (where Pelican will find them)
 
     js_files = ('tab-list-handler.js',
                 'tooltip-handler.js',
@@ -376,12 +377,14 @@ def copy_js():
 
     for my_file in js_files:
         try:
-            winshell.delete_file("../js/" + my_file, no_confirm=True, allow_undo=False, silent=True)
+            winshell.delete_file(str(CONTENT_FOLDER / 'js' / my_file), no_confirm=True, allow_undo=False, silent=True)
         except:
             pass
-        winshell.copy_file(my_file, "../js/" + my_file, no_confirm=True)
+        winshell.copy_file(str(CONTENT_FOLDER / my_file), str(CONTENT_FOLDER / 'js' / my_file), no_confirm=True)
 
 
+# not needed; the elements of the 'gigatrees.css' needed have been folded
+# directly into the theme LESS files
 @task
 def copy_css():
     '''Copy Gigatree .css files'''
@@ -390,14 +393,50 @@ def copy_css():
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Copy Gigatree .css files")
     os.chdir(str(CONTENT_FOLDER))
 
-    js_files = ('gigatrees.css', )
+    css_files = ('gigatrees.css', )
 
-    for my_file in js_files:
+    for my_file in css_files:
         try:
             winshell.delete_file("../css/" + my_file, no_confirm=True, allow_undo=False, silent=True)
         except:
             pass
         winshell.copy_file(my_file, "../css/" + my_file, no_confirm=True)
+
+
+@task
+def copy_img():
+    '''Copy Gigatree image files'''
+    global step_no
+    step_no += 1
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Copy Gigatree image files")
+    # files are copied from the base CONTENT_FOLDER (where they are put by unzipping
+    # the adam.zip) to the CONTENT_FOLDER / img (where Pelican will find them)
+
+    img_files = ('arrowd.png',
+                 'arrowl.png',
+                 'arrowr.png',
+                 'arrowu.png',
+                 'bg-black.png',
+                 'bg-pattern.png',
+                 'mapicon_f.png',
+                 'mapicon_m.png',
+                 'mapicon_u.png',
+                 'mapmarker1.png',
+                 'mapmarker2.png',
+                 'mapmarker3.png',
+                 'mapmarker4.png',
+                 'mapmarker5.png',
+                 'avatar.jpg',
+                 'image.jpg',
+                 'pdf.jpg', )
+
+    for my_file in img_files:
+        try:
+            winshell.delete_file(str(CONTENT_FOLDER / 'img' / my_file), no_confirm=True, allow_undo=False, silent=True)
+        except:
+            pass
+        winshell.copy_file(str(CONTENT_FOLDER / my_file), str(CONTENT_FOLDER / 'img' / my_file), no_confirm=True)
+
 
 
 @task
@@ -436,7 +475,7 @@ def set_pelican_variables():
     adam_version_text = adam_version_text.decode('utf-8').strip()
     date_in_text = date.today().strftime("%B %d, %Y").replace(' 0', ' ')  # 'January 7, 2014' or the like
     year_range = "{}-{}".format(COPYRIGHT_START_YEAR, datetime.now().year)
-    print('        {} - {}'.format(adam_version_text, date_in_text))
+    print('{}{} - {}'.format(INDENT, adam_version_text, date_in_text))
 
     f = open(str(WORKING_FOLDER / 'adamconf.py'), 'w')
     f.write('# Genealogy Uploader, v.{}\n'.format(str(__version__)))
@@ -444,9 +483,10 @@ def set_pelican_variables():
     f.write('ADAM = True\n')
     f.write('ADAM_VERSION = "{}"\n'.format(adam_version_text))
     f.write('ADAM_UPDATED = "{}"\n'.format(date_in_text))
-    f.write('ADAM_COPY_DATE = "{}"'.format(year_range))
-    f.write('ADAM_LINK = "{}"'.format(ADAM_LINK))
-    f.write('ADAM_FOOTER = "{}"'.format(ADAM_FOOTER))
+    f.write('ADAM_COPY_DATE = "{}"\n'.format(year_range))
+    f.write('ADAM_LINK = "{}"\n'.format(ADAM_LINK))
+    f.write('ADAM_FOOTER = "{}"\n'.format(ADAM_FOOTER))
+    f.write('ADAM_PUBLISH = True\n')
     f.close()
 
 
@@ -494,8 +534,8 @@ def replace_emails():
     counter = 0
     bar = minchin.text.progressbar(maximum=len(all_html_files))
     # inline search and replace
-    for file in all_html_files:
-        for line in fileinput.input(file, inplace=1):
+    for my_file in all_html_files:
+        for line in fileinput.input(my_file, inplace=1):
             print(multiple_replace(line, *replacements))
         counter += 1
         bar.update(counter)
@@ -509,7 +549,7 @@ def clean_adam_html():
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Remove nasty and extra HTML.")
 
-    os.chdir(str(CONTENT_FOLDER))
+    #os.chdir(str(CONTENT_FOLDER))
     all_files = os.listdir(str(CONTENT_FOLDER))
     all_html_files = []
     for my_file in all_files:
@@ -518,30 +558,52 @@ def clean_adam_html():
 
     counter = 0
     bar = minchin.text.progressbar(maximum=len(all_html_files))
-    for file in all_html_files:
-        with codecs.open(str(CONTENT_FOLDER / file), 'r', 'utf-8') as html_doc:
+    for my_file in all_html_files:
+        with codecs.open(str(CONTENT_FOLDER / my_file), 'r', 'utf-8') as html_doc:
             my_html = html_doc.read()
 
         soup = BeautifulSoup(my_html, "lxml")
+
         # change page title
         title_tag = soup.html.head.title
         for tag in soup(id="gt-page-title", limit=1):
-            title_tag.string.replace_with(tag.string)
+            title_tag.string.replace_with(tag.string.strip())
             tag.decompose()
+
         # dump all the meta tags in the head section
         for tag in soup("meta"):
             tag.decompose()
+
         # fix links that point to php pages
         for tag in soup("a", href=True):
             tag['href'] = tag['href'].replace('.php', '.html')
+
+        '''
         # remove wrapper lists (ul/li) to tables
-        #for tag in soup("ul"):
-        #   tag2 = tag.findParent('ul')
-        #       if tag2:
-        #           tag2.replace_with(tag2.contents)
-        #           # replace 'li' tags with 'p'
-        #           #for tag3 in tag2("li"):
-        #           #   tag3.name = 'p'
+        for tag in soup("ul"):
+           tag2 = tag.findParent('ul')
+               if tag2:
+                   tag2.replace_with(tag2.contents)
+                   # replace 'li' tags with 'p'
+                   for tag3 in tag2("li"):
+                      tag3.name = 'p'
+        '''
+
+        # Remove links to CDN stuff I serve locally
+        js_served_locally = ('jquery.min.js',
+                             'jquery-ui.min.js',
+                             'bootstrap.min.js',
+                             'globalize.min.js',
+                             'dx.chartjs.js')
+        for tag in soup("script"):
+            try:
+                link = tag["src"]
+                if link.endswith(js_served_locally):
+                    tag.decompose()
+            except:
+                pass
+
+        # fix pdf paths?
 
         # other stuff
         for tag in soup(id="gt-page-title"):
@@ -549,7 +611,8 @@ def clean_adam_html():
         for tag in soup(class_="gt-version", limit=1):
             tag.decompose()
 
-        with codecs.open(str(CONTENT_FOLDER / file), 'w', 'utf-8') as html_doc:
+        # write fixed version of file to disk
+        with codecs.open(str(CONTENT_FOLDER / my_file), 'w', 'utf-8') as html_doc:
             #html_doc.write(str(soup))
             #html_doc.write(unicode(soup))
             html_doc.write(soup.prettify())
@@ -564,7 +627,7 @@ def pelican():
     '''Run Pelican'''
     global step_no
     step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Run Pelican (site generator)")
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Run Pelican (site generator).")
 
     os.chdir(str(WORKING_FOLDER))
     run('pelican -s publishconf.py')
@@ -575,7 +638,7 @@ def pelican_local():
     '''Run Pelican (in local, developmental mode)'''
     global step_no
     step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Run Pelican (site generator)")
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Run Pelican (site generator) in local mode.")
 
     os.chdir(str(WORKING_FOLDER))
     run('pelican -s pelicanconf.py')
@@ -607,17 +670,19 @@ def git():
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Git -> commit and push")
 
-    commit_msg = "Adam generated upload from " + GEDCOM_EXPECTED.name
+    commit_msg = "Gigatrees generated upload from {}".format(GEDCOM_EXPECTED)
     os.chdir(str(GITHUB_FOLDER))
-    minchin.text.clock_on_right('{}> git add -A{}'.format(Fore.YELLOW, Style.RESET_ALL))
+    minchin.text.clock_on_right('{}{}> git add -A{}'.format(INDENT, Fore.YELLOW, Style.RESET_ALL))
     r1 = run('git add -A')
-    print(r1.std_err,)
-    minchin.text.clock_on_right('{}> git commit -m "{}"{}'.format(Fore.YELLOW, commit_msg, Style.RESET_ALL))
+    #print(r1.stdout)
+    print(r1.stderr)
+    minchin.text.clock_on_right('{}{}> git commit -m "{}"{}'.format(INDENT, Fore.YELLOW, commit_msg, Style.RESET_ALL))
     r2 = run('git commit -m Gigatrees_upload')
-    print(r2.std_out, r2.std_err,)
-    minchin.text.clock_on_right('{}> git push origin{}'.format(Fore.YELLOW, Style.RESET_ALL))
+    #print(r2.stdout)
+    print(r2.stderr)
+    minchin.text.clock_on_right('{}{}> git push origin{}'.format(INDENT, Fore.YELLOW, Style.RESET_ALL))
     r3 = run('git push origin')
-    print(r3.std_out, r3.std_err)
+    print(r3.stdout, r3.stderr)
 
 
 @task
@@ -647,8 +712,8 @@ def all_steps():
 
     export_gedcom()             # works 151230
     clean_gedcom()              # works
-    #upload_gedcom()            # works
-    #check_images()             # works
+    upload_gedcom()             # works
+    #check_images()              # works
     delete_old_output()         # works
     delete_old_adam()           # works ~2 min
     get_new_adam()              #
@@ -656,20 +721,21 @@ def all_steps():
     #php_to_html()              # works, brakes if there are no PHP files
     copy_js()                   # works
     #copy_css()
+    copy_img()
     replace_index()             # works
     set_pelican_variables()     # works
     clean_adam_html()           # doesn't crash
     replace_emails()            # doesn't crash
     create_tracking()           # works ~10 sec
-    #pelican()                  # works (assuming Pelican works)
-    pelican_local()
-    #git()                      #
-    #live()                     #
+    pelican()                   # works (assuming Pelican works)
+    #pelican_local()
+    git()                      #
+    live()                     #
 
     minchin.text.clock_on_right(Fore.GREEN + Style.BRIGHT + "Update is Live")
     print(Style.RESET_ALL)
 
-    print(" "*7, datetime.now() - start_time)
+    print(INDENT, datetime.now() - start_time)
 
 
 @task(default=True)

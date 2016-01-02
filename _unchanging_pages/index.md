@@ -1,11 +1,9 @@
 title: Genealogy
 url:
 save_as: index.html
-copy_date: 2007-14
+copy_date: 2007-16
 status: hidden
-last_modified: April 9, 2014
-
-<!-- _ -->
+modified: April 9, 2014
 
 I got into Genealogy a few years back, and started by transcribing a few
 of the books we had laying around from family reunions into my genealogy
@@ -17,8 +15,9 @@ cousins rather than my ancestors. I have managed to add many ancestors,
 with the furthest back lines stretching to the 4th century AD Wales.
 Several lines immigrated to Canada around 1800.
 
-To jump right into my online genealogy, select a link from below:
+To jump right into my online genealogy, select a link from left, or start with the [Surnames list]({filename}names.html).
 
+<!--
 -   [Surnames]({filename}names.html)
 -   [Updates]({filename}updates.html)
 -   [Sources]({filename}sources.html)
@@ -31,6 +30,7 @@ To jump right into my online genealogy, select a link from below:
 -   [Photos]({filename}photos.html)
 -   [External Links]({filename}links.html)
 -   [Statistics]({filename}stats.html)
+-->
 
 <!-- The tree was last updated on \$tree-updated\$. -->
 
@@ -42,18 +42,18 @@ Minchin
 -------
 
 <div class="text-center img-responsive" markdown=1>
-![Minchin Coat of Arms](images/minchin-tipperary.gif)
+![Minchin Coat of Arms]({filename}../images/minchin-tipperary.gif)
 </div>
 
 The Minchin line is probably my best researched line. The Minchin’s left
 Ireland about 1802 to settle in Prince Edward Island (PEI) (then a
 British colony; this is some 60 years before Canada was even a
-country!). **[Humphrey Howard Minchin](profile-I106/)** (abt. 1761 -
+country!). **[Humphrey Howard Minchin]({filename}profile-I106.html)** (abt. 1761 -
 1849) was the one that made the move from Ireland to Canada. He operated
 a ferry in New Ross, Co. Wexford, Ireland before he moved to PEI, and
 operated a ferry across Charlottetown harbour once he got to PEI. The
 family lived in PEI for several generations. **[Alex
-Minchin](profile-I17/)** (1890 - 1963) (my great-grandfather) was
+Minchin]({filename}profile-I17.html)** (1890 - 1963) (my great-grandfather) was
 born in PEI but eventually settled in Saskatchewan to farm. During the
 Dirty Thirties (the 1930’s), the drought was so bad in Saskatchewan that
 Alex took the family back to PEI to live and farm potatoes with his
@@ -62,7 +62,7 @@ PEI.
 
 Reaching back further in time, the Minchin’s came to Ireland from
 Gloucestershire, in England near the Welsh border. It was **[Colonel
-Charles Minchin](profile-I580/)** (abt. 1628-1681) that came to
+Charles Minchin]({filename}profile-I580.html)** (abt. 1628-1681) that came to
 Ireland, with two of his brothers. Charles is my 8th great-grandfather.
 At the time, the English crown was looking to send Protestants to
 Ireland to have a stronger Protestant presence there. Basically, if you
@@ -79,6 +79,7 @@ region in modern day Germany) in the 6th century AD.
 
 Other Minchin’s around the world:
 
+<div class="real-list" markdown=1>
 -   **The Boer War (South Africa)**: During the siege of Mafeking,
     Robert Banden-Powell (who later founded Scouting) established his
     offices above those of a lawyer by the name of Minchin. I have heard
@@ -110,6 +111,7 @@ Other Minchin’s around the world:
 -   **Tim Minchin**: A comedian from Australia.
 -   **Nick Minchin**: An Australian politician. He is currently serving
     as the Minister of Finance.
+</div>
 
 Walcot
 ------
@@ -135,9 +137,9 @@ World.
 Shaw
 ----
 
-**[Allan Shaw](profile-I1154/)** was born in 1803 en route to
+**[Allan Shaw]({filename}profile-I1154.html)** was born in 1803 en route to
 Canada. I have lots of old ties to Canada! Allan’s father, **[Donald
-Shaw](profile-I1156/)**, (1768 - 1836) is from Colonsay Island,
+Shaw]({filename}profile-I1156.html)**, (1768 - 1836) is from Colonsay Island,
 Scotland, an island just west of mainland Scotland that measures 2 miles
 by 10 miles and has a population of 135 today. I’ll have to look more
 into this…
@@ -151,19 +153,19 @@ and seem to have come to PEI in the early 1800’s.
 Seaman
 ------
 
-The Seaman line goes back to **[Robert Seaman](profile-I125/)**
-(1641-1693) and **[Alice Shuckforth](profile-I126/)** (1630-1709).
+The Seaman line goes back to **[Robert Seaman]({filename}profile-I125.html)**
+(1641-1693) and **[Alice Shuckforth]({filename}profile-I126.html)** (1630-1709).
 The family goes back to Suffolk, England. **[William
-Seaman](profile-I110/)** (1792 - 1864) and **[Hephzebah Chaman
-Wells](profile-I111/)** (1798 - 1865) came to PEI about 1830 from
+Seaman]({filename}profile-I110.html)** (1792 - 1864) and **[Hephzebah Chaman
+Wells]({filename}profile-I111.html)** (1798 - 1865) came to PEI about 1830 from
 England.
 
 Wells
 -----
 
-The Wells line goes back to **[Peter Wells](profile-I9688/)** (abt.
+The Wells line goes back to **[Peter Wells]({filename}profile-I9688.html)** (abt.
 1620 - abt. Nov 1693) and
-**[Jane](profile-I9689/)** (died abt.
+**[Jane]({filename}profile-I9689.html)** (died abt.
 Dec. 1667), again to Suffolk, England.
 
 Jewell
@@ -188,7 +190,7 @@ Bunbury
 -------
 
 <div class="text-center img-responsive" markdown=1>
-![Bunbury Coat of Arms](images/bunbury-wexford.gif)
+![Bunbury Coat of Arms]({filename}../images/bunbury-wexford.gif)
 </div>
 
 The Bunbury’s are an old line. We have it traced back to 1066 when the
@@ -199,21 +201,22 @@ Bunbury’s have often been involved in the British or English military.
 In time, they too ended up in Ireland.
 
 The Bunbury’s first came to Canada with **[George John
-Bunbury](profile-I154/)** (1888-1969), my great-grandfather. With
-his father (**[George William Bunbury](profile-I157/)** (1835 -
+Bunbury]({filename}profile-I154.html)** (1888-1969), my great-grandfather. With
+his father (**[George William Bunbury]({filename}profile-I157.html)** (1835 -
 1898)) in the Army in India, he (George, the son) got himself kicked out
 of boarding school. So at age 15 (about 1903, before Alberta was a
 province) he was sent to Canada to work as a farmhand. He worked around
 High River, Alberta. George would eventually homestead near Castor,
 Alberta, and that land is still in the family. George’s wife, **[Sarah
-Whiteside](profile-I155/)** (1897 - 1983) was from a working class
+Whiteside]({filename}profile-I155.html)** (1897 - 1983) was from a working class
 family in Belfast and originally came as a nanny to work for George.
 (George would actually have three wives in his lifetime. Sarah came over
 to look after the children of George's first wife, **[Greta
-Lynes](profile-I166/)** (d. 1920) who died in childbrith.)
+Lynes]({filename}profile-I166.html)** (d. 1920) who died in childbrith.)
 
 Other Bunbury’s around the world:
 
+<div class="real-list" markdown=1>
 -   **Bunbury, Prince Edward Island**: I'd need to find it on a map
     again, but I think it exists...
 -   **Bunbury, Australia**: The Bunburys were active in the British
@@ -224,19 +227,20 @@ Other Bunbury’s around the world:
     county, Ireland, not far from the Balarny stone, for a set of
     Bunbury brothers in the 18th or 19th century. I have not been able
     to confirm their exact locations.
+</div>
 
 McGowan
 -------
 
 <div class="text-center img-responsive" markdown=1>
-![Hotel MacDonald](images/OldMac2.jpg)
+![Hotel MacDonald]({filename}../images/OldMac2.jpg)
 </div>
 
 The McGowan’s go back to Scotland. My Grandma was telling me some of the
-story last time she visited. **[David McGowan Sr.](profile-I357/)**
+story last time she visited. **[David McGowan Sr.]({filename}profile-I357.html)**
 (1873-1956) (my great-great grandfather) worked on the docks in Glasgow,
 Scotland, and played music (a harmonica?) for various gatherings.
-**[Jane McCover](profile-I358/)** (1876 - 1963) met him at one of
+**[Jane McCover]({filename}profile-I358.html)** (1876 - 1963) met him at one of
 these gatherings when she had gone to Glasgow to do shopping with her
 Mom. David and Jane were married in Scotland. The family moved to
 Alberta (or what would soon be Alberta) about 1904. They first came to

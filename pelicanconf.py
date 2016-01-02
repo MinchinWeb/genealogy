@@ -1,26 +1,31 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
 
 import os
 import sys
 sys.path.append(os.curdir)
 
 # Adam configuration options
+ADAM_PUBLISH = False
 from adamconf import *
 # ADAM = True  is used by the theme tempates to display 'Genealogy only' things
 
-AUTHOR = u'D. Minchin & Wm. Minchin'
-SITENAME = u'Minchin.ca'
-SITEURL = 'http://minchin.ca/genealogy'
-BASESITEURL = 'http://minchin.ca'
+AUTHOR = 'D. Minchin & Wm. Minchin'
+SITENAME = 'Minchin.ca'
+#SITEURL = 'http://minchin.ca/genealogy'
+if ADAM_PUBLISH:
+    SITEURL = 'http://minchin.ca/genealogy'
+    RELATIVE_URLS = False
+else:
+    SITEURL = '.'
+    # Uncomment following line if you want document-relative URLs when developing
+    RELATIVE_URLS = True
+SITE_ROOT_URL = 'http://minchin.ca'
 
 TIMEZONE = 'America/Edmonton'
 
-DEFAULT_LANG = u'en'
+DEFAULT_LANG = 'en'
 
-# Uncomment following line if you want document-relative URLs when developing
-RELATIVE_URLS = True
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -40,28 +45,52 @@ TRANSLATION_FEED_ATOM = None
 DEFAULT_PAGINATION = False
 
 # static paths will be copied under the same name
+# these are relative to the base CONTENT folder
 STATIC_PATHS = ['images',
-                '..\extras',
+                '../extras',
                 'css',
                 'design',
                 'js',
-                '..\.gitattributes',
-                '..\.gitignore',
-                '..\README.txt',]
+                'pages/img',
+                '../.gitattributes',
+                '../.gitignore',
+                '../README.txt',
+               ]
 
 # A list of files to copy from the source to the destination
 EXTRA_PATH_METADATA = {
-    '..\.gitattributes':            {'path': '.gitattributes'},
-    '..\.gitignore':                {'path': '.gitignore'},
-    '..\README.txt':                {'path': 'README.txt'},
-    '..\extras\minchin.ico':        {'path': 'favicon.ico'},
+    '../.gitattributes':            {'path': '.gitattributes'},
+    '../.gitignore':                {'path': '.gitignore'},
+    '../README.txt':                {'path': 'README.txt'},
+    '../extras/minchin.ico':        {'path': 'favicon.ico'},
+    '../extras/.nojekyll':          {'path': '.nojekyll'},
+    'js/tab-list-handler.js':       {'path': 'tab-list-handler.js'},
+    'js/tooltip-handler.js':        {'path': 'tooltip-handler.js'},
+    'js/graph-handler.js':          {'path': 'graph-handler.js'},
+    'js/gigatrees-map-min.js':      {'path': 'gigatrees-map-min.js'},
+    'pages/img/arrowd.png':         {'path': 'arrowd.png'},
+    'pages/img/arrowl.png':         {'path': 'arrowl.png'},
+    'pages/img/arrowr.png':         {'path': 'arrowr.png'},
+    'pages/img/arrowu.png':         {'path': 'arrowu.png'},
+    'pages/img/bg-black.png':       {'path': 'bg-black.png'},
+    'pages/img/bg-pattern.png':     {'path': 'bg-pattern.png'},
+    'pages/img/mapicon_f.png':      {'path': 'mapicon_f.png'},
+    'pages/img/mapicon_m.png':      {'path': 'mapicon_m.png'},
+    'pages/img/mapicon_u.png':      {'path': 'mapicon_u.png'},
+    'pages/img/mapmarker1.png':     {'path': 'mapmarker1.png'},
+    'pages/img/mapmarker2.png':     {'path': 'mapmarker2.png'},
+    'pages/img/mapmarker3.png':     {'path': 'mapmarker3.png'},
+    'pages/img/mapmarker4.png':     {'path': 'mapmarker4.png'},
+    'pages/img/mapmarker5.png':     {'path': 'mapmarker5.png'},
+    'pages/img/avatar.jpg':         {'path': 'avatar.jpg'},
+    'pages/img/image.jpg':          {'path': 'image.jpg'},
+    'pages/img/pdf.jpg':            {'path': 'pdf.jpg'},
     }
 
 
-
 # Custom settings
-#FILENAME_METADATA = ('(?P<date>\d{4}-\d{2}-\d{2}).*')  #default?
-#FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.*)' #extract date and slug
+#FILENAME_METADATA = ('(?P<date>\d{4}-\d{2}-\d{2}).*')  # default?
+#FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.*)'  # extract date and slug
 FILENAME_METADATA = '(?P<slug>[\w-]*)'      # so anything before the file extension becomes the slug
 ## Please note that the metadata available inside your files takes precedence
 #  over the metadata extracted from the filename.
@@ -78,7 +107,7 @@ OUTPUT_PATH = '../genealogy-gh-pages/'
 
 # Add Blog to sidebar
 MENUITEMS = ( ('Blog',        'http://blog.minchin.ca/',      'fa fa-pencil'),
-              ('Genealogy',   'http://minchin.ca/genealogy/', 'glyphicon glyphicon-tree-deciduous'),
+              ('Genealogy',   SITEURL,                        'glyphicon glyphicon-tree-deciduous'),
               ('My Projects', 'http://minchin.ca/projects/',  'fa fa-flask'),
               ('Search',      'http://minchin.ca/search/',    'fa fa-search'),
               ('About',       'http://minchin.ca/about/',     'fa fa-info-circle'),
@@ -86,20 +115,20 @@ MENUITEMS = ( ('Blog',        'http://blog.minchin.ca/',      'fa fa-pencil'),
             )
 
 MENUITEMS_2_AT = 'Genealogy'
-MENUITEMS_2_AT_LINK = r'genealogy/'  # this is added to SITEURL
+MENUITEMS_2_AT_LINK = ''  # this is added to SITEURL
 
-MENUITEMS_2 = ( ('Surnames',         'http://minchin.ca/genealogy/names/',          False),
-                ('Updates',          'http://minchin.ca/genealogy/updates/',        False),
-                ('Sources',          'http://minchin.ca/genealogy/sources/',        False),
-                ('Distribution Map', 'http://minchin.ca/genealogy/map/',            False),
-                ('Timelines',        'http://minchin.ca/genealogy/timeline/',       False),
-                ('Immigrants',       'http://minchin.ca/genealogy/immigrants/',     False),
-                ('Nobility',         'http://minchin.ca/genealogy/titles/',         False),
-                ('Locations',        'http://minchin.ca/genealogy/places/',         False),
-                ('Bonkers Report',   'http://minchin.ca/genealogy/bonkers-report/', False),
-                ('Photos',           'http://minchin.ca/genealogy/photos/',         False),
-                ('External Links',   'http://minchin.ca/genealogy/links/',          False),
-                ('Statistics',       'http://minchin.ca/genealogy/stats/',          False),
+MENUITEMS_2 = ( ('Surnames',         SITEURL + '/names.html',          False),
+                ('Updates',          SITEURL + '/updates.html',        False),
+                ('Sources',          SITEURL + '/sources.html',        False),
+                ('Distribution Map', SITEURL + '/map.html',            False),
+                ('Timelines',        SITEURL + '/timeline.html',       False),
+                #('Immigrants',       SITEURL + '/immigrants.html',     False),  # doens't exist in current builds
+                #('Nobility',         SITEURL + '/titles.html',         False),  # doens't exist in current builds
+                ('Locations',        SITEURL + '/places.html',         False),
+                ('Bonkers Report',   SITEURL + '/bonkers-report.html', False),
+                ('Photos',           SITEURL + '/photos.html',         False),
+                #('External Links',   SITEURL + '/links.html',          False),  # doens't exist in current builds
+                #('Statistics',       SITEURL + '/stats.html',          False),  # stats graphs aren't working right now
               )
 
 
@@ -133,6 +162,10 @@ BOOTSTRAP_THEME = 'minchin-ca'
 USE_OPEN_GRAPH = True
 CUSTOM_CSS = 'css/minchin-ca.css'
 DOCUTIL_CSS = False
+CUSTOM_JS_LIST = ['js/jquery-ui.min.js',
+                  'js/globalize.min.js',
+                  'js/dx.chartjs.js',
+                 ]
 
 GOOGLE_ANALYTICS_UNIVERSAL = 'UA-384291-3'
 GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY = 'minchin.ca'

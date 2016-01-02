@@ -10,7 +10,7 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = ''
+SITEURL = 'http://minchin.ca/genealogy'
 RELATIVE_URLS = False
 
 #FEED_ALL_ATOM = 'feeds/all.atom.xml'
@@ -23,4 +23,4 @@ RELATIVE_URLS = False
 #DISQUS_SITENAME = ""
 #GOOGLE_ANALYTICS = ""
 
-PLUGINS = ['assets', 'minify', 'sitemap', 'optimize_images']
+# PLUGINS = ['assets', 'minify', 'sitemap', 'optimize_images']
