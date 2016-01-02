@@ -25,6 +25,7 @@ $(document).ready(function () {
 			series: {name: "Names", valueField: "total", label: {visible: false} },
 			tooltip: {enabled: true, font: {size: 16}},
 			legend: {visible: false},
+//			argumentAxis: {label: {font: {size: 11}}}
 //  	  valueAxis: {label: {format: "thousands"}}
 		});
 	}
