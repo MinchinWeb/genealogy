@@ -5,6 +5,8 @@ To-Do
 
 - underline bars under arrows on pedigree chart on profile pages
 - review gigatrees.html page for styles
+- census chart (on individual pages)?
+- display ancestor list on mobile?
 
 ## Gen-Upload Script
 
@@ -20,5 +22,7 @@ To-Do
     + image checking
     + replace emails
     + clean adam html
-- 
 
+## Other
+
+- adjust theme to use only the base version of CSS (i.e. on base domain)

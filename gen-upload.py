@@ -39,7 +39,7 @@ colorama.init()
 COPYRIGHT_START_YEAR = 1987
 ADAM_LINK = "http://gigatrees.com"
 ADAM_FOOTER = "<p><strong>Are we related?</strong> Are you a long lost cousin? Spotted an error here? This website remains a work-in-progress and I would love to hear from you. Drop me a line at minchinweb [at] gmail [dot] com.</p>"
-INDENT = " "*7
+INDENT = " "*4
 GITHUB_FOLDER = Path("S:\Documents\GitHub\genealogy-gh-pages")
 PHOTO_FOLER = Path("S:\Documents\Genealogy")
 DOWNLOAD_FOLDER = Path("S:\Downloads\Firefox")
@@ -104,15 +104,15 @@ def export_gedcom():
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Export from RootsMagic.")
 
-    print("{}call the file {}{}{} and save it to the desktop".format(INDENT, Style.BRIGHT, GEDCOM_EXPECTED, Style.RESET_ALL))
-    print("{}do not include LDS information".format(INDENT))
-    print("{}no need to privatize individuals (at this step)".format(INDENT))
-    if not minchin.text.query_yes_quit("    Next?", default="yes"):
+    print("{}call the file {}{}{} and save it to the desktop".format(INDENT*2, Style.BRIGHT, GEDCOM_EXPECTED, Style.RESET_ALL))
+    print("{}do not include LDS information".format(INDENT*2))
+    print("{}no need to privatize individuals (at this step)".format(INDENT*2))
+    if not minchin.text.query_yes_quit("{}Next?".format(INDENT), default="yes"):
         sys.exit()
     try:
         start_time = datetime.fromtimestamp(os.stat(MY_GEDCOM).st_ctime)
     except:
-        print("    Your file doesn't seem to exist. Exiting...")
+        print("{}Your file doesn't seem to exist. Exiting...".format(INDENT))
 
 
 @task
@@ -146,8 +146,8 @@ def upload_gedcom():
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". The file is now ready to upload to Gigatrees.")
 
     webbrowser.open("http://gigatrees.com/toolbox/gigatree", new=2)
-    print("{}log-in (using Facebook)".format(INDENT))
-    print("{}now click 'generate report'".format(INDENT))
+    print("{}log-in (using Facebook)".format(INDENT*2))
+    print("{}now click 'generate report'".format(INDENT*2))
     # check to see if we're logged in
     # log in, if needed
     # discard old GEDCOM
@@ -195,7 +195,7 @@ def check_images():
                 addimage(image)
         elif q_add_images == 1:  # yes
             for image in missing_matches:
-                if minchin.text.querry_yes_no("        Add " + image + "?", default="yes"):
+                if minchin.text.querry_yes_no("{}Add {}?".format(INDENT*2, image), default="yes"):
                     addimage(image)
                     # TO-DO: implement this!
                 else:
@@ -241,11 +241,11 @@ def delete_old_output():
     bar.update(counter)
 
     # delete everything else
-    for myfile in to_delete:
-        winshell.delete_file(myfile, no_confirm=True, allow_undo=False, silent=True)
+    for my_file in to_delete:
+        winshell.delete_file(my_file, no_confirm=True, allow_undo=False, silent=True)
         counter += 1
         bar.update(counter)
-    print("\n      " + str(len(to_delete) + html_files) + " files deleted.")
+    print("\n{}{} files deleted.".format(INDENT*2, str(len(to_delete) + html_files)))
 
 
 @task
@@ -282,7 +282,7 @@ def get_new_adam():
             break
         count_loops += 1
         if count_loops > 60:
-            if minchin.text.query_yes_quit("    We've waited 30 minutes. Keep waiting?", default="yes") is False:
+            if minchin.text.query_yes_quit("{}We've waited 30 minutes. Keep waiting?".format(INDENT), default="yes") is False:
                 sys.exit()
             else:
                 count_loops = 0
@@ -447,18 +447,11 @@ def replace_index():
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Copy over index.md, 404.md")
 
     os.chdir(str(CONTENT_FOLDER))
-    try:
-        winshell.delete_file("index.md", no_confirm=True, allow_undo=False, silent=True)
-    except:
-        pass
-    try:
-        winshell.delete_file("index.html", no_confirm=True, allow_undo=False, silent=True)
-    except:
-        pass
-    try:
-        winshell.delete_file("404.md", no_confirm=True, allow_undo=False, silent=True)
-    except:
-        pass
+    for my_file in ("index.md", "index.html", "404.md"):
+        try:
+            winshell.delete_file(my_file, no_confirm=True, allow_undo=False, silent=True)
+        except:
+            pass
 
     winshell.copy_file("../../_unchanging_pages/index.md", "index.md", no_confirm=True)
     winshell.copy_file("../../_unchanging_pages/404.md", "404.md", no_confirm=True)
@@ -682,7 +675,8 @@ def git():
     print(r2.stderr)
     minchin.text.clock_on_right('{}{}> git push origin{}'.format(INDENT, Fore.YELLOW, Style.RESET_ALL))
     r3 = run('git push origin')
-    print(r3.stdout, r3.stderr)
+    print(r3.stdout)
+    print(r3.stderr)
 
 
 @task
@@ -707,7 +701,7 @@ def live():
 @task
 def all_steps():
     '''Everything!'''
-    minchin.text.title("Genealogy Uploader, v." + str(__version__))
+    minchin.text.title("Genealogy Uploader, v.{}".format(str(__version__)))
     print
 
     export_gedcom()             # works 151230
