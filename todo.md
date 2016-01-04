@@ -22,6 +22,7 @@ To-Do
     + image checking
     + replace emails
     + clean adam html
+- hide emails in script
 
 ## Other
 

@@ -99,7 +99,7 @@ def get_adam_version():
 
 @task
 def export_gedcom():
-    '''Export from RootsMagic'''
+    '''Export from RootsMagic.'''
     global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Export from RootsMagic.")
@@ -117,10 +117,10 @@ def export_gedcom():
 
 @task
 def clean_gedcom():
-    '''Cleaning up GEDCOM'''
+    '''Cleaning up GEDCOM.'''
     global step_no
     step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Cleaning up GEDCOM...")
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Cleaning up GEDCOM.")
 
     # replace image paths
     gedcom_file = open(str(MY_GEDCOM), 'r', encoding='utf-8')  # add failsafe is the fail doesn't exist yet or is still being written to
@@ -140,7 +140,7 @@ def clean_gedcom():
 
 @task
 def upload_gedcom():
-    '''Upload GEDCOM to Gigatree'''
+    '''Upload GEDCOM to Gigatree.'''
     global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". The file is now ready to upload to Gigatrees.")
@@ -158,10 +158,10 @@ def upload_gedcom():
 
 @task
 def check_images():
-    '''Check which images have already been uploaded'''
+    '''Check which images have already been uploaded.'''
     global step_no
     step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Checking images...")
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Checking images.")
 
     gedcom_file = open(str(MY_GEDCOM), 'r', encoding='utf-8')
     subject = gedcom_file.read()
@@ -170,7 +170,7 @@ def check_images():
     missing_matches = []
     all_matches = []
     matches = 0
-    wrapper = textwrap.TextWrapper(width=79, initial_indent=" "*6, subsequent_indent=" "*10)
+    wrapper = textwrap.TextWrapper(width=79, initial_indent=INDENT, subsequent_indent=INDENT*2)
     pattern_bad = re.compile("missing ")
     for match in re.findall(r'(images/.+\.(jpg|jpeg|png|gif|pdf))', subject, re.IGNORECASE):
         all_matches.append(match)
@@ -179,7 +179,7 @@ def check_images():
     for match in all_matches:
         r = requests.head(URL_ROOT + "/" + str(match[0]), allow_redirects=True)
         if not r.status_code == requests.codes.ok:
-            mytext = wrapper.fill("missing " + str(r.status_code) + " -> " + match[0])
+            mytext = wrapper.fill("missing {} -> {}".format(str(r.status_code), match[0]))
             print(pattern_bad.sub(Fore.RED + Style.BRIGHT + "missing " + Style.RESET_ALL, mytext))
             missing_matches.append(match[0])
         else:
@@ -189,7 +189,7 @@ def check_images():
         print("{}{} images matching. No missing images.".format(INDENT, str(matches)))
     else:
         print("{}{} images matching.".format(INDENT, str(matches)))
-        q_add_images = minchin.text.query_yes_no_all("        " + str(len(missing_matches)) + " missing images. Add them?", default="no")
+        q_add_images = minchin.text.query_yes_no_all("{}{} missing images. Add them?".format(INDENT, str(len(missing_matches))), default="no")
         if q_add_images == 2:  # all
             for image in missing_matches:
                 addimage(image)
@@ -214,7 +214,7 @@ def check_images():
 
 @task
 def delete_old_output():
-    '''Delete old Pelican output'''
+    '''Delete old Pelican output.'''
     global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Deleting old Pelican output.")
@@ -250,7 +250,7 @@ def delete_old_output():
 
 @task
 def delete_old_adam():
-    '''Delete old Gigatrees output'''
+    '''Delete old Gigatrees output.'''
     global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Deleting old Gigatree output.")
@@ -261,7 +261,7 @@ def delete_old_adam():
 
 @task
 def get_new_adam():
-    '''Get new Gigatree output'''
+    '''Get new Gigatree output.'''
     # TO-DO: allow override of 'start time'
     global step_no
     global adam_zip
@@ -344,7 +344,7 @@ def step_unzip_7zip():
 
 @task
 def unzip_adam():
-    '''Unzip new Adam output'''
+    '''Unzip new Adam output.'''
     try:
         step_unzip_faster()
     except:
@@ -353,20 +353,20 @@ def unzip_adam():
 
 @task
 def php_to_html():
-    '''Change any .php files to .html'''
+    '''Change any .php files to .html.'''
     global step_no
     step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Rename all .php files")
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Rename all .php files.")
     os.chdir(str(CONTENT_FOLDER))
     run('rename *.php *.html')
 
 
 @task
 def copy_js():
-    '''Copy Gigatree .js files'''
+    '''Copy Gigatree .js files.'''
     global step_no
     step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Copy Gigatree .js files")
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Copy Gigatree .js files.")
     # files are copied from the base CONTENT_FOLDER (where they are put by unzipping
     # the adam.zip) to the CONTENT_FOLDER / js (where Pelican will find them)
 
@@ -387,10 +387,10 @@ def copy_js():
 # directly into the theme LESS files
 @task
 def copy_css():
-    '''Copy Gigatree .css files'''
+    '''Copy Gigatree .css files.'''
     global step_no
     step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Copy Gigatree .css files")
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Copy Gigatree .css files.")
     os.chdir(str(CONTENT_FOLDER))
 
     css_files = ('gigatrees.css', )
@@ -405,10 +405,10 @@ def copy_css():
 
 @task
 def copy_img():
-    '''Copy Gigatree image files'''
+    '''Copy Gigatree image files.'''
     global step_no
     step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Copy Gigatree image files")
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Copy Gigatree image files.")
     # files are copied from the base CONTENT_FOLDER (where they are put by unzipping
     # the adam.zip) to the CONTENT_FOLDER / img (where Pelican will find them)
 
@@ -441,10 +441,10 @@ def copy_img():
 
 @task
 def replace_index():
-    '''Copy over index.md, 404.md'''
+    '''Copy over index.md, 404.md.'''
     global step_no
     step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Copy over index.md, 404.md")
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Copy over index.md, 404.md.")
 
     os.chdir(str(CONTENT_FOLDER))
     for my_file in ("index.md", "index.html", "404.md"):
@@ -453,8 +453,8 @@ def replace_index():
         except:
             pass
 
-    winshell.copy_file("../../_unchanging_pages/index.md", "index.md", no_confirm=True)
-    winshell.copy_file("../../_unchanging_pages/404.md", "404.md", no_confirm=True)
+    for my_file in ("index.md", "404.md"):
+        winshell.copy_file("../../_unchanging_pages/{}".format(my_file), my_file, no_confirm=True)
 
 
 @task
@@ -485,7 +485,7 @@ def set_pelican_variables():
 
 @task
 def replace_emails():
-    '''Hide emails in Sources'''
+    '''Hide emails in Sources.'''
     global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Hiding Emails.")
@@ -617,7 +617,7 @@ def clean_adam_html():
 
 @task
 def pelican():
-    '''Run Pelican'''
+    '''Run Pelican.'''
     global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Run Pelican (site generator).")
@@ -628,7 +628,7 @@ def pelican():
 
 @task
 def pelican_local():
-    '''Run Pelican (in local, developmental mode)'''
+    '''Run Pelican (in local, developmental mode).'''
     global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Run Pelican (site generator) in local mode.")
@@ -639,7 +639,7 @@ def pelican_local():
 
 @task
 def create_tracking():
-    '''Create deploy tracking file'''
+    '''Create deploy tracking file.'''
     global step_no
     global tracking_filename
     step_no += 1
@@ -658,10 +658,10 @@ def create_tracking():
 
 @task
 def git():
-    '''Git commit and push'''
+    '''Git commit and push.'''
     global step_no
     step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Git -> commit and push")
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Git -> commit and push.")
 
     commit_msg = "Gigatrees generated upload from {}".format(GEDCOM_EXPECTED)
     os.chdir(str(GITHUB_FOLDER))
@@ -681,14 +681,14 @@ def git():
 
 @task
 def live():
-    '''Tell us when we're live'''
+    '''Tell us when we're live.'''
     # TO-DO: find tracking file based on creation/modified date
     global step_no
     step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Wait to go live")
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Wait to go live.")
 
     if tracking_filename is None:
-        print('No tracking file set.')
+        print('{}No tracking file set.'.format(INDENT))
     else:
         while True:
             r = requests.head(URL_ROOT + "/" + tracking_filename, allow_redirects=True)
@@ -702,7 +702,7 @@ def live():
 def all_steps():
     '''Everything!'''
     minchin.text.title("Genealogy Uploader, v.{}".format(str(__version__)))
-    print
+    print()
 
     export_gedcom()             # works 151230
     clean_gedcom()              # works
@@ -726,7 +726,7 @@ def all_steps():
     git()                      #
     live()                     #
 
-    minchin.text.clock_on_right(Fore.GREEN + Style.BRIGHT + "Update is Live")
+    minchin.text.clock_on_right(Fore.GREEN + Style.BRIGHT + "Update is Live!")
     print(Style.RESET_ALL)
 
     print(INDENT, datetime.now() - start_time)
