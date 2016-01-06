@@ -24,6 +24,11 @@ To-Do
     + clean adam html
 - hide emails in script
 
+## Pelican
+
+- <https://github.com/cmacmackin/pdf-img> -- create image previews of PDF's
+- <https://github.com/getpelican/pelican-plugins/tree/master/thumbnailer> -- create thumbnails for images
+
 ## Other
 
 - adjust theme to use only the base version of CSS (i.e. on base domain)

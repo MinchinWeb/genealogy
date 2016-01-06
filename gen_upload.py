@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 '''Genealogy Uploader
-v.3.2.0 - WM - January 3, 2016
+v.3.2.1 - WM - January 6, 2016
 
 This script serves to semi-automate the building and uploading of my
 genealogy website. It is intended to be semi-interactive and run from the
@@ -10,31 +10,32 @@ command line.'''
 
 
 import codecs
+from datetime import date, datetime
 import fileinput
+import multiprocessing
 import os
+from pathlib import Path
 import re
 import sys
 import textwrap
 import uuid
 import webbrowser
 import zipfile
-from datetime import date, datetime
-from pathlib import Path
-import multiprocessing
-from multiprocessing import Value
 
-import colorama
-import minchin.text
-import requests
 from bs4 import BeautifulSoup
-from colorama import Back, Fore, Style
+import colorama
+from colorama import Fore, Style
 from invoke import run, task
+import requests
 import winshell
 
-# import envoy
-# import winshell
+import minchin.text
 
-__version__ = '3.2.0'
+# import envoy
+# from colorama import Back
+
+
+__version__ = '3.2.1'
 colorama.init()
 
 
@@ -52,7 +53,7 @@ TODAY_STR = '' + str(date.today().year)[2:] + str.zfill(str(date.today().month),
 GEDCOM_EXPECTED = 'William ' + TODAY_STR + '.ged'
 USER_FOLDER = Path(os.path.expanduser('~'))
 MY_GEDCOM = USER_FOLDER / 'Desktop' / GEDCOM_EXPECTED
-#start_time = datetime.now()
+start_time = datetime.now()
 step_no = 0  # step counter
 start_time = datetime.now()
 HERE_FOLDER = Path.cwd()
@@ -61,11 +62,10 @@ CONTENT_FOLDER = HERE_FOLDER / 'content' / 'pages'
 adam_zip = ''               # set later
 tracking_filename = ''      # set later
 
-
 # globals for Lenovo X201
-GITHUB_FOLDER = Path(r"C:\Users\User\Documents\GitHub\genealogy-gh-pages")
-PHOTO_FOLER = Path(r"C:\Users\User\Documents\Genealogy")
-DOWNLOAD_FOLDER = Path(r"C:\Users\User\Downloads")
+#GITHUB_FOLDER = Path(r"C:\Users\User\Documents\GitHub\genealogy-gh-pages")
+#PHOTO_FOLER = Path(r"C:\Users\User\Documents\Genealogy")
+#DOWNLOAD_FOLDER = Path(r"C:\Users\User\Downloads")
 
 
 def addimage(image):
@@ -88,6 +88,7 @@ def multiple_replacer(*key_values):
     pattern = re.compile("|".join([re.escape(k) for k, v in key_values]), re.M | re.I)
     return lambda string: pattern.sub(replacement_function, string)
 
+
 def multiple_replace(string, *key_values):
     return multiple_replacer(*key_values)(string)
 
@@ -103,6 +104,7 @@ def get_adam_version():
 def export_gedcom():
     '''Export from RootsMagic.'''
     global step_no
+    global start_time
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Export from RootsMagic.")
 
@@ -295,7 +297,8 @@ def get_new_adam():
 
 
 def step_unzip():
-    # 6:48.948 for 9,999 files
+    # Test 1: 6:48.948 for 9,999 files
+    # Test 2: 2:05.188204 for 11,1698 files
     global step_no
     start_time_local = datetime.now()
     step_no += 1
@@ -310,8 +313,8 @@ def step_unzip():
 
 def step_unzip_faster():
     # see http://dmarkey.com/wordpress/2011/10/15/python-zipfile-speedup-tips/
-    # 4:44.459 for 9,999 files
-    # this doesn't appear to work on Python 3.5.1
+    # Test 1: 4:44.459 for 9,999 files
+    # this doesn't appear to work on Python 3.5.1, says it's not a zip file
     global step_no
     start_time_local = datetime.now()
     step_no += 1
@@ -325,7 +328,8 @@ def step_unzip_faster():
 
 
 def step_unzip_czip():
-    # 4:46.109 for 9,999 files
+    # Test 1: 4:46.109 for 9,999 files
+    # Test 2: xx for 11,1698 files
     global step_no
     start_time_local = datetime.now()
     step_no += 1
@@ -340,7 +344,8 @@ def step_unzip_czip():
 
 @task
 def step_unzip_7zip():
-    #  5:09.974 for 9,999 files
+    # Test 1: 5:09.974 for 9,999 files
+    # Test 2: 1:43.229726 for 11,1698 files
     global step_no
     start_time_local = datetime.now()
     step_no += 1
@@ -351,13 +356,25 @@ def step_unzip_7zip():
     print(INDENT, datetime.now() - start_time_local)
 
 
+def step_unzip_infozip():
+    # Test 2: 1:51.550671 for 11,1698 files
+    global step_no
+    start_time_local = datetime.now()
+    step_no += 1
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Unzip new Gigatree output (unzip.exe).")
+
+    os.chdir(str(CONTENT_FOLDER))
+    run('C:\\bin\\unzip.exe {} > nul'.format(adam_zip))
+    print(INDENT, datetime.now() - start_time_local)
+
+
 @task
 def unzip_adam():
     '''Unzip new Adam output.'''
     try:
-        step_unzip()
-    except:
         step_unzip_7zip()
+    except:
+        step_unzip()
 
 
 @task
