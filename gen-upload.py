@@ -1,8 +1,8 @@
-﻿#!/usr/bin/python
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 
 '''Genealogy Uploader
-v.3.1.2 - WM - December 30, 2015
+v.3.2.0 - WM - January 3, 2016
 
 This script serves to semi-automate the building and uploading of my
 genealogy website. It is intended to be semi-interactive and run from the
@@ -20,6 +20,8 @@ import webbrowser
 import zipfile
 from datetime import date, datetime
 from pathlib import Path
+import multiprocessing
+from multiprocessing import Value
 
 import colorama
 import minchin.text
@@ -32,7 +34,7 @@ import winshell
 # import envoy
 # import winshell
 
-__version__ = '3.1.2'
+__version__ = '3.2.0'
 colorama.init()
 
 
@@ -295,6 +297,7 @@ def get_new_adam():
 def step_unzip():
     # 6:48.948 for 9,999 files
     global step_no
+    start_time_local = datetime.now()
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Unzip new Gigatree output (Zipfile).")
 
@@ -302,12 +305,15 @@ def step_unzip():
     zf = zipfile.ZipFile(adam_zip)
     zf.extractall()
     zf.close()
+    print(INDENT, datetime.now() - start_time_local)
 
 
 def step_unzip_faster():
     # see http://dmarkey.com/wordpress/2011/10/15/python-zipfile-speedup-tips/
     # 4:44.459 for 9,999 files
+    # this doesn't appear to work on Python 3.5.1
     global step_no
+    start_time_local = datetime.now()
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Unzip new Gigatree output (Zipfile faster).")
 
@@ -315,11 +321,13 @@ def step_unzip_faster():
     zf = zipfile.ZipFile(open(adam_zip, 'r'))
     zf.extractall()
     zf.close()
+    print(INDENT, datetime.now() - start_time_local)
 
 
 def step_unzip_czip():
     # 4:46.109 for 9,999 files
     global step_no
+    start_time_local = datetime.now()
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Unzip new Gigatree output (czip).")
 
@@ -327,6 +335,7 @@ def step_unzip_czip():
     zf = czipfile.ZipFile(adam_zip)
     zf.extractall()
     zf.close()
+    print(INDENT, datetime.now() - start_time_local)
 
 
 @task
@@ -346,7 +355,7 @@ def step_unzip_7zip():
 def unzip_adam():
     '''Unzip new Adam output.'''
     try:
-        step_unzip_faster()
+        step_unzip()
     except:
         step_unzip_7zip()
 
@@ -535,12 +544,100 @@ def replace_emails():
     print()  # clear progress bar
 
 
+def html_fixes(my_file, my_bar, my_counter):
+    '''
+    Applies the various updates and changes I want done to the raw Gigatrees
+    HTML.
+
+    Assumes 'my_file' is in the CONTENT_FOLDER.
+    Assumes 'my_file' is a string.
+    Assumes 'my_bar' is of type minchin.text.progressbar
+    Assumes 'my_counter' is of type multiprocessing.Value
+    '''
+
+    with codecs.open(str(CONTENT_FOLDER / my_file), 'r', 'utf-8') as html_doc:
+        my_html = html_doc.read()
+
+    soup = BeautifulSoup(my_html, "lxml")
+
+    # change page title
+    title_tag = soup.html.head.title
+    for tag in soup(id="gt-page-title", limit=1):
+        title_tag.string.replace_with(tag.string.strip())
+        tag.decompose()
+
+    # dump all the meta tags in the head section
+    for tag in soup("meta"):
+        tag.decompose()
+
+    '''
+    # fix links that point to php pages
+    for tag in soup("a", href=True):
+        tag['href'] = tag['href'].replace('.php', '.html')
+    '''
+    '''
+    # remove wrapper lists (ul/li) to tables
+    for tag in soup("ul"):
+       tag2 = tag.findParent('ul')
+           if tag2:
+               tag2.replace_with(tag2.contents)
+               # replace 'li' tags with 'p'
+               for tag3 in tag2("li"):
+                  tag3.name = 'p'
+    '''
+
+    # Remove links to CDN stuff I serve locally
+    js_served_locally = ('jquery.min.js',
+                         'jquery-ui.min.js',
+                         'bootstrap.min.js',
+                         'globalize.min.js',
+                         'dx.chartjs.js')
+    for tag in soup("script"):
+        try:
+            link = tag["src"]
+            if link.endswith(js_served_locally):
+                tag.decompose()
+        except:
+            pass
+
+    # fix pdf paths?
+
+    # other stuff
+    for tag in soup(id="gt-page-title"):
+        tag.decompose()
+    for tag in soup(class_="gt-version", limit=1):
+        tag.decompose()
+
+    # write fixed version of file to disk
+    with codecs.open(str(CONTENT_FOLDER / my_file), 'w', 'utf-8') as html_doc:
+        #html_doc.write(str(soup))
+        #html_doc.write(unicode(soup))
+        html_doc.write(soup.prettify())
+
+    # get the lock so that different threads can't update it at the same time
+    with my_counter.get_lock():
+        my_counter.value += 1
+        my_bar.update(my_counter.value)
+
+
+'''
+For 14 html files (2 core, 4 thread machine, program run time):
+    - single threaded:
+        34.4s, 44.8s, 34.2s, 33.9s, 26.7s
+    - multi-treaded:
+        28.7s, 30.6s, 27.7s, 28.2s
+
+For 11,168 files (2 core, 4 thread machine, program run time):
+    - no html cleaning (so just overhead):
+        13:50 (partial delete, 7-Zip), 24:52, 21:56, 25:59 (Zipfile)
+'''
+
 @task
-def clean_adam_html():
+def clean_adam_html_single_thread():
     '''Remove nasty and extra HTML.'''
     global step_no
     step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Remove nasty and extra HTML.")
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Remove nasty and extra HTML (single threaded).")
 
     #os.chdir(str(CONTENT_FOLDER))
     all_files = os.listdir(str(CONTENT_FOLDER))
@@ -549,69 +646,42 @@ def clean_adam_html():
         if my_file.endswith(".html"):
             all_html_files.append(my_file)
 
-    counter = 0
+    # this gives us a C-type integer, useful for accessing from multiple threads
+    counter = multiprocessing.Value('i', 0)
     bar = minchin.text.progressbar(maximum=len(all_html_files))
+    bar.update(counter.value)
     for my_file in all_html_files:
-        with codecs.open(str(CONTENT_FOLDER / my_file), 'r', 'utf-8') as html_doc:
-            my_html = html_doc.read()
+        html_fixes(my_file, bar, counter)
+    print()  # clear progress bar
 
-        soup = BeautifulSoup(my_html, "lxml")
 
-        # change page title
-        title_tag = soup.html.head.title
-        for tag in soup(id="gt-page-title", limit=1):
-            title_tag.string.replace_with(tag.string.strip())
-            tag.decompose()
+@task
+def clean_adam_html_multithreaded():
+    '''Remove nasty and extra HTML (multi-threaded).'''
+    global step_no
+    step_no += 1
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Remove nasty and extra HTML (multi-threaded).")
 
-        # dump all the meta tags in the head section
-        for tag in soup("meta"):
-            tag.decompose()
+    #os.chdir(str(CONTENT_FOLDER))
+    all_files = os.listdir(str(CONTENT_FOLDER))
+    all_html_files = []
+    for my_file in all_files:
+        if my_file.endswith(".html"):
+            all_html_files.append(my_file)
 
-        # fix links that point to php pages
-        for tag in soup("a", href=True):
-            tag['href'] = tag['href'].replace('.php', '.html')
+    # this gives us a C-type integer, useful for accessing from multiple threads
+    counter = multiprocessing.Value('i', 0)
+    bar = minchin.text.progressbar(maximum=len(all_html_files))
+    bar.update(counter.value)
 
-        '''
-        # remove wrapper lists (ul/li) to tables
-        for tag in soup("ul"):
-           tag2 = tag.findParent('ul')
-               if tag2:
-                   tag2.replace_with(tag2.contents)
-                   # replace 'li' tags with 'p'
-                   for tag3 in tag2("li"):
-                      tag3.name = 'p'
-        '''
+    jobs = []
+    for my_file in all_html_files:
+        p = multiprocessing.Process(target=html_fixes, args=(my_file, bar, counter))
+        jobs.append(p)
+        p.start()
+    for job in jobs:
+        job.join()
 
-        # Remove links to CDN stuff I serve locally
-        js_served_locally = ('jquery.min.js',
-                             'jquery-ui.min.js',
-                             'bootstrap.min.js',
-                             'globalize.min.js',
-                             'dx.chartjs.js')
-        for tag in soup("script"):
-            try:
-                link = tag["src"]
-                if link.endswith(js_served_locally):
-                    tag.decompose()
-            except:
-                pass
-
-        # fix pdf paths?
-
-        # other stuff
-        for tag in soup(id="gt-page-title"):
-            tag.decompose()
-        for tag in soup(class_="gt-version", limit=1):
-            tag.decompose()
-
-        # write fixed version of file to disk
-        with codecs.open(str(CONTENT_FOLDER / my_file), 'w', 'utf-8') as html_doc:
-            #html_doc.write(str(soup))
-            #html_doc.write(unicode(soup))
-            html_doc.write(soup.prettify())
-
-        counter += 1
-        bar.update(counter)
     print()  # clear progress bar
 
 
@@ -704,27 +774,36 @@ def all_steps():
     minchin.text.title("Genealogy Uploader, v.{}".format(str(__version__)))
     print()
 
+    '''
     export_gedcom()             # works 151230
     clean_gedcom()              # works
     upload_gedcom()             # works
     #check_images()              # works
     delete_old_output()         # works
+    '''
     delete_old_adam()           # works ~2 min
     get_new_adam()              #
     unzip_adam()                # pretty sure works ~5 min
+    '''
     #php_to_html()              # works, brakes if there are no PHP files
     copy_js()                   # works
     #copy_css()
     copy_img()
     replace_index()             # works
     set_pelican_variables()     # works
-    clean_adam_html()           # doesn't crash
+    clean_adam_html_single_thread()  # doesn't crash
+    '''
+    '''
+    clean_adam_html_multithreaded()
+    '''
+    '''
     replace_emails()            # doesn't crash
     create_tracking()           # works ~10 sec
     pelican()                   # works (assuming Pelican works)
     #pelican_local()
     git()                      #
     live()                     #
+    '''
 
     minchin.text.clock_on_right(Fore.GREEN + Style.BRIGHT + "Update is Live!")
     print(Style.RESET_ALL)
