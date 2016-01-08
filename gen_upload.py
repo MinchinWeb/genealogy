@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 '''Genealogy Uploader
-v.3.2.1 - WM - January 6, 2016
+v.3.2.3 - WM - January 7, 2016
 
 This script serves to semi-automate the building and uploading of my
 genealogy website. It is intended to be semi-interactive and run from the
@@ -12,7 +12,7 @@ command line.'''
 import codecs
 from datetime import date, datetime
 import fileinput
-import multiprocessing
+import multiprocessing as mp
 import os
 from pathlib import Path
 import re
@@ -26,16 +26,16 @@ from bs4 import BeautifulSoup
 import colorama
 from colorama import Fore, Style
 from invoke import run, task
+from joblib import Parallel, delayed
 import requests
 import winshell
 
 import minchin.text
 
-# import envoy
 # from colorama import Back
 
 
-__version__ = '3.2.1'
+__version__ = '3.2.3'
 colorama.init()
 
 
@@ -464,7 +464,6 @@ def copy_img():
         winshell.copy_file(str(CONTENT_FOLDER / my_file), str(CONTENT_FOLDER / 'img' / my_file), no_confirm=True)
 
 
-
 @task
 def replace_index():
     '''Copy over index.md, 404.md.'''
@@ -561,15 +560,13 @@ def replace_emails():
     print()  # clear progress bar
 
 
-def html_fixes(my_file, my_bar, my_counter):
+def html_fixes(my_file):
     '''
     Applies the various updates and changes I want done to the raw Gigatrees
     HTML.
 
     Assumes 'my_file' is in the CONTENT_FOLDER.
     Assumes 'my_file' is a string.
-    Assumes 'my_bar' is of type minchin.text.progressbar
-    Assumes 'my_counter' is of type multiprocessing.Value
     '''
 
     with codecs.open(str(CONTENT_FOLDER / my_file), 'r', 'utf-8') as html_doc:
@@ -631,6 +628,15 @@ def html_fixes(my_file, my_bar, my_counter):
         #html_doc.write(unicode(soup))
         html_doc.write(soup.prettify())
 
+
+def html_fixes_2(my_file, my_bar, my_counter):
+    '''
+    Applies the HTML changes and then updates the counter.
+
+    Assumes 'my_bar' is of type minchin.text.progressbar
+    Assumes 'my_counter' is of type multiprocessing.Value
+    '''
+    html_fixes(my_file)
     # get the lock so that different threads can't update it at the same time
     with my_counter.get_lock():
         my_counter.value += 1
@@ -638,21 +644,19 @@ def html_fixes(my_file, my_bar, my_counter):
 
 
 '''
-For 14 html files (2 core, 4 thread machine, program run time):
-    - single threaded:
-        34.4s, 44.8s, 34.2s, 33.9s, 26.7s
-    - multi-treaded:
-        28.7s, 30.6s, 27.7s, 28.2s
-
-For 11,168 files (2 core, 4 thread machine, program run time):
+For 11,146 files (2 core, 4 thread machine, program run time):
     - no html cleaning (so just overhead):
         13:50 (partial delete, 7-Zip), 24:52, 21:56, 25:59 (Zipfile)
+    - single thread: 18:49.190113
+    - multi-threaded (n_jobs=9): 4:59.657586
 '''
+
 
 @task
 def clean_adam_html_single_thread():
     '''Remove nasty and extra HTML.'''
     global step_no
+    start_time_local = datetime.now()
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Remove nasty and extra HTML (single threaded).")
 
@@ -664,42 +668,41 @@ def clean_adam_html_single_thread():
             all_html_files.append(my_file)
 
     # this gives us a C-type integer, useful for accessing from multiple threads
-    counter = multiprocessing.Value('i', 0)
+    counter = mp.Value('i', 0)
     bar = minchin.text.progressbar(maximum=len(all_html_files))
     bar.update(counter.value)
     for my_file in all_html_files:
-        html_fixes(my_file, bar, counter)
+        html_fixes_2(my_file, bar, counter)
     print()  # clear progress bar
+    print(INDENT, datetime.now() - start_time_local)
 
 
 @task
-def clean_adam_html_multithreaded():
+def clean_adam_html_multithreaded(my_n_jobs=None):
     '''Remove nasty and extra HTML (multi-threaded).'''
+    '''
+    Benchmarks
+
+    n_jobs      time
+    9           6:20
+    6           6:18  (machine has 6 cores)
+    4           7:16
+    '''
     global step_no
+    #start_time_local = datetime.now()
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Remove nasty and extra HTML (multi-threaded).")
 
-    #os.chdir(str(CONTENT_FOLDER))
     all_files = os.listdir(str(CONTENT_FOLDER))
     all_html_files = []
     for my_file in all_files:
         if my_file.endswith(".html"):
             all_html_files.append(my_file)
 
-    # this gives us a C-type integer, useful for accessing from multiple threads
-    counter = multiprocessing.Value('i', 0)
-    bar = minchin.text.progressbar(maximum=len(all_html_files))
-    bar.update(counter.value)
-
-    jobs = []
-    for my_file in all_html_files:
-        p = multiprocessing.Process(target=html_fixes, args=(my_file, bar, counter))
-        jobs.append(p)
-        p.start()
-    for job in jobs:
-        job.join()
-
-    print()  # clear progress bar
+    if my_n_jobs is None:
+        my_n_jobs = int(os.cpu_count())
+    Parallel(n_jobs=my_n_jobs, verbose=5)(delayed(html_fixes)(my_file) for my_file in all_html_files)
+    #print(INDENT, datetime.now() - start_time_local)
 
 
 @task
@@ -791,36 +794,28 @@ def all_steps():
     minchin.text.title("Genealogy Uploader, v.{}".format(str(__version__)))
     print()
 
-    '''
     export_gedcom()             # works 151230
     clean_gedcom()              # works
     upload_gedcom()             # works
     #check_images()              # works
     delete_old_output()         # works
-    '''
     delete_old_adam()           # works ~2 min
     get_new_adam()              #
     unzip_adam()                # pretty sure works ~5 min
-    '''
-    #php_to_html()              # works, brakes if there are no PHP files
+    #php_to_html()               # works, brakes if there are no PHP files
     copy_js()                   # works
     #copy_css()
     copy_img()
     replace_index()             # works
     set_pelican_variables()     # works
-    clean_adam_html_single_thread()  # doesn't crash
-    '''
-    '''
+    # clean_adam_html_single_thread()  # doesn't crash
     clean_adam_html_multithreaded()
-    '''
-    '''
     replace_emails()            # doesn't crash
     create_tracking()           # works ~10 sec
     pelican()                   # works (assuming Pelican works)
     #pelican_local()
-    git()                      #
-    live()                     #
-    '''
+    git()                       #
+    live()                      #
 
     minchin.text.clock_on_right(Fore.GREEN + Style.BRIGHT + "Update is Live!")
     print(Style.RESET_ALL)
