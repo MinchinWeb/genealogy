@@ -152,7 +152,7 @@ PAGE_SAVE_AS = "{slug}.html"
 
 # Theme Related
 TYPOGRIFY = False  # turn off for HIDDEN names...
-THEME = '../minchinweb.github.io/themes/pelican-minchin-ca'
+THEME = '../minchinweb.github.io-pelican/themes/pelican-minchin-ca'
 SITELOGO = 'images/MinchindotCA-200.png'
 SITELOGO_SIZE = '100%'
 PYGMENTS_STYLE = 'friendly'
