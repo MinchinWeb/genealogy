@@ -96,6 +96,6 @@ def less():
     #run('lessc theme\\burst-energy\\less\\bootstrap.burst-energy.less > ' +
     #    env_deploy_path + '\\css\\style.css')
     #   lessc themes\pelican-minchin-ca\static\less\bootstrap.minchin-ca.min.less > themes\pelican-minchin-ca\static\css\bootstrap.minchin-ca.min.css
-    source = p / '..' / 'minchinweb.github.io/themes\pelican-minchin-ca\static\less\\bootstrap.minchin-ca.min.less'
-    dest = p / '..' / 'minchinweb.github.io/themes\pelican-minchin-ca\static\css\\bootstrap.minchin-ca.min.css'
+    source = p / '..' / 'minchinweb.github.io-pelican/themes\pelican-minchin-ca\static\less\\bootstrap.minchin-ca.min.less'
+    dest = p / '..' / 'minchinweb.github.io-pelican/themes\pelican-minchin-ca\static\css\\bootstrap.minchin-ca.min.css'
     run('lessc {} > {}'.format(source, dest))

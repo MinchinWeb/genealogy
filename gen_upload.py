@@ -622,11 +622,42 @@ def html_fixes(my_file):
     for tag in soup(class_="gt-version", limit=1):
         tag.decompose()
 
+    # at meta tags, used for the breadcrumbs in the link.
+    # they need to be in the <head> section, in the form
+    #
+    # <head>
+    #    <!-- other stuff... -->
+    #    <meta name="at" content="Locations" />
+    #    <meta name="at_link" content="places.html" />  <!-- this is added to SITEURL -->
+    # </head>
+    new_tags = False
+    if my_file.startswith("names-"):
+        new_tag_1 = soup.new_tag("meta", content="Surnames")
+        new_tag_2 = soup.new_tag("meta", content="names.html")
+        new_tags = True
+    elif my_file.startswith("places-"):
+        new_tag_1 = soup.new_tag("meta", content="Locations")
+        new_tag_2 = soup.new_tag("meta", content="places.html")
+        new_tags = True
+    elif my_file.startswith("sources-"):
+        new_tag_1 = soup.new_tag("meta", content="Sources")
+        new_tag_2 = soup.new_tag("meta", content="sources.html")
+        new_tags = True
+    elif my_file.startswith("timeline") and my_file != "timeline.html":
+        new_tag_1 = soup.new_tag("meta", content="Timelines")
+        new_tag_2 = soup.new_tag("meta", content="timeline.html")
+        new_tags = True
+
+    if new_tags:
+        new_tag_1.attrs['name'] = 'at'
+        new_tag_2.attrs['name'] = 'at_link'
+        soup.html.head.append(new_tag_1)
+        soup.html.head.append(new_tag_2)
+
     # write fixed version of file to disk
     with codecs.open(str(CONTENT_FOLDER / my_file), 'w', 'utf-8') as html_doc:
-        #html_doc.write(str(soup))
-        #html_doc.write(unicode(soup))
-        html_doc.write(soup.prettify())
+        html_doc.write(str(soup))
+        #html_doc.write(soup.prettify())
 
 
 def html_fixes_2(my_file, my_bar, my_counter):

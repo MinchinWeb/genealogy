@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 
 import os
@@ -55,7 +55,7 @@ STATIC_PATHS = ['images',
                 '../.gitattributes',
                 '../.gitignore',
                 '../README.txt',
-               ]
+                ]
 
 # A list of files to copy from the source to the destination
 EXTRA_PATH_METADATA = {
@@ -95,41 +95,41 @@ FILENAME_METADATA = '(?P<slug>[\w-]*)'      # so anything before the file extens
 ## Please note that the metadata available inside your files takes precedence
 #  over the metadata extracted from the filename.
 
-MARKUP = (( 'rst',
-            'md',
-            'markdown',
-            'mkd',
-            'mdown',
-            'html',
-            'htm'       ))
+MARKUP = (('rst',
+           'md',
+           'markdown',
+           'mkd',
+           'mdown',
+           'html',
+           'htm'))
 PATH = 'content'
 OUTPUT_PATH = '../genealogy-gh-pages/'
 
 # Add Blog to sidebar
-MENUITEMS = ( ('Blog',        'http://blog.minchin.ca/',      'fa fa-pencil'),
-              ('Genealogy',   SITEURL,                        'glyphicon glyphicon-tree-deciduous'),
-              ('My Projects', 'http://minchin.ca/projects/',  'fa fa-flask'),
-              ('Search',      'http://minchin.ca/search/',    'fa fa-search'),
-              ('About',       'http://minchin.ca/about/',     'fa fa-info-circle'),
-              ('Contact Me',  'http://minchin.ca/contact/',   'fa fa-envelope'),
-            )
+MENUITEMS = (('Blog',        'http://blog.minchin.ca/',      'fa fa-pencil'),
+             ('Genealogy',   SITEURL,                        'glyphicon glyphicon-tree-deciduous'),
+             ('My Projects', 'http://minchin.ca/projects/',  'fa fa-flask'),
+             ('Search',      'http://minchin.ca/search/',    'fa fa-search'),
+             ('About',       'http://minchin.ca/about/',     'fa fa-info-circle'),
+             ('Contact Me',  'http://minchin.ca/contact/',   'fa fa-envelope'),
+             )
 
 MENUITEMS_2_AT = 'Genealogy'
 MENUITEMS_2_AT_LINK = ''  # this is added to SITEURL
 
-MENUITEMS_2 = ( ('Surnames',         SITEURL + '/names.html',          False),
-                ('Updates',          SITEURL + '/updates.html',        False),
-                ('Sources',          SITEURL + '/sources.html',        False),
-                ('Distribution Map', SITEURL + '/map.html',            False),
-                ('Timelines',        SITEURL + '/timeline.html',       False),
-                #('Immigrants',       SITEURL + '/immigrants.html',     False),  # doens't exist in current builds
-                #('Nobility',         SITEURL + '/titles.html',         False),  # doens't exist in current builds
-                ('Locations',        SITEURL + '/places.html',         False),
-                ('Bonkers Report',   SITEURL + '/bonkers-report.html', False),
-                ('Photos',           SITEURL + '/photos.html',         False),
-                #('External Links',   SITEURL + '/links.html',          False),  # doens't exist in current builds
-                #('Statistics',       SITEURL + '/stats.html',          False),  # stats graphs aren't working right now
-              )
+MENUITEMS_2 = (('Surnames',         SITEURL + '/names.html',          False),
+               ('Updates',          SITEURL + '/updates.html',        False),
+               ('Sources',          SITEURL + '/sources.html',        False),
+               ('Distribution Map', SITEURL + '/map.html',            False),
+               ('Timelines',        SITEURL + '/timeline.html',       False),
+               #('Immigrants',       SITEURL + '/immigrants.html',     False),  # doens't exist in current builds
+               #('Nobility',         SITEURL + '/titles.html',         False),  # doens't exist in current builds
+               ('Locations',        SITEURL + '/places.html',         False),
+               ('Bonkers Report',   SITEURL + '/bonkers-report.html', False),
+               ('Photos',           SITEURL + '/photos.html',         False),
+               #('External Links',   SITEURL + '/links.html',          False),  # doens't exist in current builds
+               #('Statistics',       SITEURL + '/stats.html',          False),  # stats graphs aren't working right now
+               )
 
 
 DISPLAY_PAGES_ON_MENU = False
@@ -165,7 +165,7 @@ DOCUTIL_CSS = False
 CUSTOM_JS_LIST = ['js/jquery-ui.min.js',
                   'js/globalize.min.js',
                   'js/dx.chartjs.js',
-                 ]
+                  ]
 
 GOOGLE_ANALYTICS_UNIVERSAL = 'UA-384291-3'
 GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY = 'minchin.ca'
