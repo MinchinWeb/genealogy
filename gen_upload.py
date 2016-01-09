@@ -45,7 +45,7 @@ ADAM_FOOTER = "<p><strong>Are we related?</strong> Are you a long lost cousin? S
 INDENT = " "*4
 GITHUB_FOLDER = Path("S:\Documents\GitHub\genealogy-gh-pages")
 PHOTO_FOLER = Path("S:\Documents\Genealogy")
-DOWNLOAD_FOLDER = Path("S:\Downloads\Firefox")
+DOWNLOAD_FOLDER = Path("S:\Downloads\Chrome")
 URL_ROOT = "http://minchin.ca/genealogy"
 REPO_URL = "https://github.com/MinchinWeb/genealogy.git"
 ADAM_PREFIX = 'william-minchin-gigatree-offline-'
@@ -56,7 +56,8 @@ MY_GEDCOM = USER_FOLDER / 'Desktop' / GEDCOM_EXPECTED
 start_time = datetime.now()
 step_no = 0  # step counter
 start_time = datetime.now()
-HERE_FOLDER = Path.cwd()
+# folder where the script is saved
+HERE_FOLDER = Path(os.path.dirname(os.path.realpath(__file__)))
 WORKING_FOLDER = HERE_FOLDER  # current working directory
 CONTENT_FOLDER = HERE_FOLDER / 'content' / 'pages'
 adam_zip = ''               # set later
@@ -230,7 +231,9 @@ def delete_old_output():
 
     for filename in all_files:
         if filename == ('.git'):
-            pass
+            pass  # don't drop the GIT repo
+        elif filename == ('images'):
+            pass  # don't drop the image folder
         elif filename.endswith('.html'):
             html_files += 1
         else:
@@ -787,15 +790,15 @@ def git():
     commit_msg = "Gigatrees generated upload from {}".format(GEDCOM_EXPECTED)
     os.chdir(str(GITHUB_FOLDER))
     minchin.text.clock_on_right('{}{}> git add -A{}'.format(INDENT, Fore.YELLOW, Style.RESET_ALL))
-    r1 = run('git add -A')
+    r1 = run('git add -A', hide=True)
     #print(r1.stdout)
     print(r1.stderr)
     minchin.text.clock_on_right('{}{}> git commit -m "{}"{}'.format(INDENT, Fore.YELLOW, commit_msg, Style.RESET_ALL))
-    r2 = run('git commit -m Gigatrees_upload')
+    r2 = run('git commit -m Gigatrees_upload', hide=True)
     #print(r2.stdout)
     print(r2.stderr)
     minchin.text.clock_on_right('{}{}> git push origin{}'.format(INDENT, Fore.YELLOW, Style.RESET_ALL))
-    r3 = run('git push origin')
+    r3 = run('git push origin', hide=True)
     print(r3.stdout)
     print(r3.stderr)
 
