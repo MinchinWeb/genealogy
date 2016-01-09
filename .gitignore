@@ -217,8 +217,8 @@ pip-log.txt
 #############
 ## Pelican
 #############
-env/
-_env/
+env*/
+_env*/
 _pelican/errors.txt
 _extras/
 missing-images.txt
@@ -227,3 +227,6 @@ cache/
 
 *.sublime-workspace
 
+# pulled in my gen-upload.py script
+content/pages/
+content/pages/img/
