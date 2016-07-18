@@ -248,14 +248,13 @@ def delete_old_output():
 
 
 @task
-def delete_old_adam():
+def delete_old_gigatrees(ctx):
     '''Delete old Gigatrees output.'''
     global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Deleting old Gigatree output.")
 
-    os.chdir(str(CONTENT_FOLDER))
-    run('del *.* /q')
+    run('del {}\*.* /q'.format(CONTENT_FOLDER), shell=INVOKE_SHELL)
 
 
 @task
@@ -700,7 +699,6 @@ def all_steps():
     clean_gedcom()              # works
     #check_images()              # works
     delete_old_output()         # works
-    delete_old_adam()           # works ~2 min
     copy_js()                   # works
     #copy_css()
     copy_img()
@@ -714,6 +712,7 @@ def all_steps():
     #pelican_local()
     git()                       #
     live()                      #
+    delete_old_gigatrees(ctx)      # works ~2 min
 
     minchin.text.clock_on_right(Fore.GREEN + Style.BRIGHT + "Update is Live!")
     print(Style.RESET_ALL)
