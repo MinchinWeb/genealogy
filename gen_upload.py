@@ -213,7 +213,7 @@ def check_images():
 
 
 @task
-def delete_old_output():
+def delete_old_output(ctx):
     '''Delete old Pelican output.'''
     global step_no
     step_no += 1
@@ -237,7 +237,7 @@ def delete_old_output():
     counter = 0
 
     # delete HTML files
-    run('del *.html -y')
+    run('del {}\*.html -y'.format(GITHUB_FOLDER), shell=INVOKE_SHELL)
     bar = minchin.text.progressbar(maximum=len(to_delete) + html_files)
     counter = html_files
     bar.update(counter)
