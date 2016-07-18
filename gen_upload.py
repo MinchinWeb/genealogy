@@ -8,6 +8,10 @@ This script serves to semi-automate the building and uploading of my
 genealogy website. It is intended to be semi-interactive and run from the
 command line.'''
 
+# to call these tasks via `invoke`, use the `-c` parameter
+# eg.
+#       invoke -c gen_upload <task_name>
+
 
 import codecs
 from datetime import date, datetime
@@ -25,7 +29,7 @@ import zipfile
 from bs4 import BeautifulSoup
 import colorama
 from colorama import Fore, Style
-from invoke import run, task
+from invoke import run, task            # requires invoke >= 0.13
 from joblib import Parallel, delayed
 import requests
 import winshell
@@ -62,6 +66,11 @@ WORKING_FOLDER = HERE_FOLDER  # current working directory
 CONTENT_FOLDER = HERE_FOLDER / 'content' / 'pages'
 adam_zip = ''               # set later
 tracking_filename = ''      # set later
+ERROR_COLOUR = colorama.Fore.RED
+WARNING_COLOUR = colorama.Fore.YELLOW
+RESET_COLOUR = colorama.Fore.RESET
+ERROR_CODE = '[{}ERRO{}]'.format(ERROR_COLOUR, RESET_COLOUR)
+WARNING_CODE = '[{}WARN{}]'.format(WARNING_COLOUR, RESET_COLOUR)
 
 # globals for Lenovo X201
 #GITHUB_FOLDER = Path(r"C:\Users\User\Documents\GitHub\genealogy-gh-pages")
@@ -102,7 +111,7 @@ def get_adam_version():
 
 
 @task
-def export_gedcom():
+def export_gedcom(ctx):
     '''Export from RootsMagic.'''
     global step_no
     global start_time
@@ -115,9 +124,9 @@ def export_gedcom():
     if not minchin.text.query_yes_quit("{}Next?".format(INDENT), default="yes"):
         sys.exit()
     try:
-        start_time = datetime.fromtimestamp(os.stat(MY_GEDCOM).st_ctime)
-    except:
-        print("{}Your file doesn't seem to exist. Exiting...".format(INDENT))
+        start_time = datetime.fromtimestamp(os.stat(str(MY_GEDCOM)).st_ctime)
+    except FileNotFoundError:
+        print("{1} Your file doesn't seem to exist.\n{0}   Expecting {2}\n{0}   Exiting...".format(INDENT, ERROR_CODE, MY_GEDCOM))
 
 
 @task
