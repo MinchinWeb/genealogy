@@ -1,0 +1,13 @@
+<!--
+	Gigatrees is written by Tim Forsythe and is available for download at http://timforsythe.com/gigatrees
+	Gigatrees is subject to the license agreements found on that page.
+//-->
+
+<Options>
+
+<!-- =====================================================================================================================
+ Enable the Data Consistency report only
+===================================================================================================================== -->
+<Pages><P> <Bonkers> <Menu> </Menu> <Title> Gigatrees Data Consistency Report </Title> <File> report-bonkers </File> <Enable> true  </Enable> </Bonkers> </P></Pages>
+
+</Options>

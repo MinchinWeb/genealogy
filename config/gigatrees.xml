@@ -1,0 +1,102 @@
+<!--
+	Gigatrees is written by Tim Forsythe and is available for download at http://timforsythe.com/gigatrees
+	Gigatrees is subject to the license agreements found on that page.
+//-->
+
+<Options>
+
+<!-- =====================================================================================================================
+ The Profiles page does not appear in any menus.  They are only linked to.	
+
+ When the Index page is disabled, the menu home icon will link to your server's root domain, i.e. http://domain.com.  
+ Enable to create a table of contents page linked to the home icon.  If you do disable it, you may want to copy 
+ your names.html file to index.html so that there is a default page to load.
+
+ The Kinships page does not appear in any menus.  They are only linked to from the Kinship Lines on Profile pages.	
+	
+ When the Names page is enabled, it creates a master index of all surnames, and individual index with complete names 
+ for each letter of the alphabet.
+	
+ When the Sources page is enabled, it creates a master index of all sources, and individual source profile pages.
+ 
+ When the Articles page is enabled, it creates a master index of all articles, and individual article profile pages.
+ Articles are created when using the special _TITL tag in NOTE records (see User Guide) 	
+ 
+ When the Locations page is enabled, it creates a master index of all locations, and individual location profile pages.
+ 
+ When the Map page is enabled, it creates a Population Distribution Heatmap including the location of all events found 
+ in your Timeline.
+ 
+ When the Census page is enabled, it creates a master index of all Census Table Reports, and individual Census Table 
+ Report pages.  See <Centar> below.
+
+ When the Descendants page is enabled, it creates a master index of all Descendant Lists, and individual Descendant 
+ List pages.  See <DList> below.
+
+ When the Generations page is enabled, it creates a master index of all Generation Lists, and individual Generation 
+ List pages.  See <GList> below.
+
+ When the Timelines page is enabled, it creates a master index of all timeline eras, and individual timeline era 
+ pages including all events found in your GEDCOM file.
+
+ When the Military page is enabled, it creates a master index of all military eras, and individual military era 
+ pages including all military events found in your GEDCOM file.
+ 
+ When the Immigrants page is enabled, it creates an Immigrants reports including all immigration events.  See the
+ User Guide to see how to get Ship's names added to the report.
+
+ When the Nobility page is enabled, it creates an Nobility Titles reports including all and sort by nobility titles.
+ 
+ When the Photos page is enabled, it creates a Photos page including all multimedia logical records found in your 
+ GEDCOM file.  See the User Guide to see how to use this.
+ 
+ When the Bonkers page is enabled, it creates an Data consistency report including all impossible and improbable 
+ claims found in your GEDCOM file.
+ 
+ When the Statistics page is enabled, it creates an Statistics report including the most popular given and surnames 
+ found in your GEDCOM file along with average ages of first marriage by gender as well as the average years per 
+ generation, the average lifespans by gender per century, total record types found, the distribution of claim types,
+ and statistics one how many of these are documented.
+
+ When the Updates page is enabled, it creates an Update report including recently modified logical records.  Some 
+ applications do not modify the CHANge fields, so not updates ever appear.  In that case you might as well disable
+ the page.
+ 
+ Pages 
+	Pages wrapper
+ P.name
+	Page row
+ Menu
+	the menu display text
+ Title
+	the tooltip and index display text
+ File
+	the file name prefix to be used.  as long as you do not change these, or your logical record ids, your page names 
+	should remain the same from build to build.
+ Enable (default: false)
+	indicate if the page should be built and included in the menu 
+	
+===================================================================================================================== -->
+<Pages>
+    <P>  <Profiles>                                                                            <File> profile     </File> <Enable> true  </Enable> </Profiles>    </P>
+    <P>  <Index>                                  <Title> Home                        </Title> <File> index       </File> <Enable> false  </Enable> </Index>      </P>  
+    <P>  <Kinships>                               <Title> Kinship                     </Title> <File> kinship     </File> <Enable> true  </Enable> </Kinships>       </P>
+    <P>  <Names>       <Menu> Names       </Menu> <Title> Names                       </Title> <File> names       </File> <Enable> true  </Enable> </Names>       </P> 
+    <P>  <Sources>     <Menu> Sources     </Menu> <Title> Sources                     </Title> <File> sources     </File> <Enable> true  </Enable> </Sources>     </P> 
+    <P>  <Articles>    <Menu> Articles    </Menu> <Title> Articles                    </Title> <File> articles    </File> <Enable> true  </Enable> </Articles>    </P> 
+    <P>  <Places>      <Menu> Locations   </Menu> <Title> Locations                   </Title> <File> places      </File> <Enable> true  </Enable> </Places>      </P>
+    <P>  <Map>         <Menu> Map         </Menu> <Title> Population Distribution Map </Title> <File> map         </File> <Enable> true  </Enable> </Map>         </P> 
+    <P>  <Timelines>   <Menu> Timelines   </Menu> <Title> Timelines                   </Title> <File> timelines   </File> <Enable> true  </Enable> </Timelines>   </P>
+	<P>  <Military>    <Menu> Soldiers    </Menu> <Title> Soldiers                    </Title> <File> soldiers    </File> <Enable> true  </Enable> </Military>    </P>
+	<P>  <Immigrants>  <Menu> Immigrants  </Menu> <Title> Immigrants                  </Title> <File> immigrants  </File> <Enable> true  </Enable> </Immigrants>  </P>
+	<P>  <Nobility>    <Menu> Nobility    </Menu> <Title> Nobility                    </Title> <File> nobility    </File> <Enable> true  </Enable> </Nobility>    </P>
+    <P>  <Photos>      <Menu> Photos      </Menu> <Title> Photos                      </Title> <File> photos      </File> <Enable> true  </Enable> </Photos>      </P>
+    <P>  <Descendants> <Menu> Descendants </Menu> <Title> Descendant List             </Title> <File> descendants </File> <Enable> true  </Enable> </Descendants> </P> 
+    <P>  <Census>      <Menu> Census      </Menu> <Title> Census Table Report         </Title> <File> centars     </File> <Enable> true </Enable> </Census>      </P> 
+    <P>  <Generations> <Menu> Generations </Menu> <Title> Generation List             </Title> <File> ancestors   </File> <Enable> true </Enable> </Generations> </P> 
+    <P>  <Bonkers>     <Menu> Bonkers     </Menu> <Title> Data Sanity Report          </Title> <File> bonkers     </File> <Enable> true  </Enable> </Bonkers>     </P>
+    <P>  <Stats>       <Menu> Statistics  </Menu> <Title> Statistics                  </Title> <File> statistics  </File> <Enable> true  </Enable> </Stats>       </P>
+    <P>  <Updates>     <Menu> Updates     </Menu> <Title> Updates                     </Title> <File> updates     </File> <Enable> true  </Enable> </Updates>     </P> 
+</Pages>
+
+</Options>

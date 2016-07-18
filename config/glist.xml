@@ -1,0 +1,13 @@
+<!--
+	Gigatrees is written by Tim Forsythe and is available for download at http://timforsythe.com/gigatrees
+	Gigatrees is subject to the license agreements found on that page.
+//-->
+
+<Options>
+
+<!-- =====================================================================================================================
+ Enable the Generations page only
+===================================================================================================================== -->
+<Pages><P> <Generations> <Menu> </Menu> <Title> Gigatrees Generation List </Title> <File> report-generations </File> <Enable> true </Enable> </Generations> </P></Pages>
+
+</Options>

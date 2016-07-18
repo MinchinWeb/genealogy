@@ -1,0 +1,18 @@
+<!--
+	Gigatrees is written by Tim Forsythe and is available for download at http://timforsythe.com/gigatrees
+	Gigatrees is subject to the license agreements found on that page.
+//-->
+
+<Options>
+
+<!-- =====================================================================================================================
+ Revert the Generations Lists to use the Ahnen numbering system.
+===================================================================================================================== -->
+<RevertGenerationLists> true </RevertGenerationLists>
+
+<!-- =====================================================================================================================
+ Enable the generations page only
+===================================================================================================================== -->
+<Pages><P> <Generations> <Menu> </Menu> <Title> Gigatrees Ancestor List </Title> <File> report-ancestors </File> <Enable> true </Enable> </Generations> </P></Pages>
+
+</Options>

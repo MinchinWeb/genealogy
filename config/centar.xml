@@ -1,0 +1,13 @@
+<!--
+	Gigatrees is written by Tim Forsythe and is available for download at http://timforsythe.com/gigatrees
+	Gigatrees is subject to the license agreements found on that page.
+//-->
+
+<Options>
+
+<!-- =====================================================================================================================
+ Enable the Census page only
+===================================================================================================================== -->
+<Pages><P>  <Census> <Menu> </Menu> <Title> Gigatrees Census Table Report </Title> <File> report-census  </File> <Enable> true </Enable> </Census> </P></Pages>
+
+</Options>

@@ -1,0 +1,854 @@
+<!--
+	Gigatrees is written by Tim Forsythe and is available for download at http://timforsythe.com/gigatrees
+	Gigatrees is subject to the license agreements found on that page.
+//-->
+
+<Options>
+
+<!-- =====================================================================================================================
+ Project (default: Gigatrees)
+	specify the project to build.  There only two projects supported, "Gigatrees" and "VGedX".  VGedX uses the 
+	configuration fields located at the end of this file.
+	
+===================================================================================================================== -->
+<Project>Gigatrees</Project>
+ 
+<!-- =====================================================================================================================
+ The Menu can be enabled in Fixed mode, Floating mode, or disabled when both modes are disabled.
+ 
+ EnableNavbarFixed (default: false)
+	when enabled, the Menu will be fixed to the top of the viewport such that scrolled pages will disappear beneath it.
+
+ EnableNavbarFloat (default: false)
+	when enabled, the Menu will be float at the head of and fixed to the HTML page, such that it will scroll along 
+	with the page.
+	
+===================================================================================================================== -->
+<EnableNavbarFixed>  true  </EnableNavbarFixed> 
+<EnableNavbarFloat>  false  </EnableNavbarFloat> 
+
+<!-- =====================================================================================================================
+ ImportFile (default: empty)
+	relative path to your GEDCOM file
+
+ AlternateNamesFile (default: empty)
+	relative path you your alternate names text file.  The file uses a semi colon to separate duplicate names on the left
+	and the base name on the right.  Duplicate names are used in determining popular names on the Statistics page, and
+	in the data sanity report when flagging persons with duplicately named children. The distribution include 'names.txt,
+	which includes a bunch of names already.  You can modify it at will.
+ 
+ OutputPath (default: ./tree/)
+	relative path to your Gigatree including trailing slash
+
+ Extension (default: HTML)
+	HTML or PHP
+
+ LinkExtension (default: true)
+	should hyperlinks on the Gigatrees pages include the extension.  For HTML file extensions this should always be true.
+	For PHP, however, in some cases you do not want the '.php' extension included when linking.  This will depend somewhat 
+	on how your server is setup.
+	
+===================================================================================================================== -->
+ <ImportFile>         family.ged </ImportFile>    
+ <AlternateNamesFile> names.txt  </AlternateNamesFile>
+ <OutputPath>         ./tree/    </OutputPath>    
+ <Extension>          HTML       </Extension>     
+ <LinkExtension>      true       </LinkExtension> 
+
+<!-- =====================================================================================================================
+ Title (default: empty)
+	Your website title
+	
+ Description (default: empty)
+	Your website description
+
+ Author (default: empty)
+	Your website content's author.  Generally this is you.
+	
+ Domain (default: empty)
+	the website path to your tree.  You must include the trailing slash.  It is used by the	substitution macro: %PageURL% 
+	(See <Header> and <Footer>)
+	
+===================================================================================================================== -->
+ <Title>       My Gigatree             </Title>             
+ <Description> My Gigatree             </Description> 
+ <Author>                              </Author>                
+ <Domain>                              </Domain> 
+
+<!-- =====================================================================================================================
+ HTML code must be delimited by substituting all "<" and ">" with "[[" and "]]".  Gigatrees requires the JQuery script 
+ file (jquery.min.js) and the Bootstrap stylesheet (bootstrap.min.css) to format the web pages correctly, so are required.
+ The linked Google fonts are used to by the Gigatrees stylesheet (gigatrees.css).  They should be kept in sync.  
+ Font Awesome (font-awesome.min.css) is only used to display the Home icon on the menu. If you want to use FancyBox on 
+ your linked images, jquery.fancybox.min.css is required.  The linked images (.ico, .png) are the various Gigatrees icons
+ and can be replaced if preferred with copies associated with your website.
+
+ The <Header> supports the following substitution macros:
+	%Application%	- the version of Gigatrees used to build the webpages
+	%Author%		- substituted from <Author>
+	%Description%	- substituted from <Description>
+	%SiteTitle%		- substituted from <Title>
+	%PageTitle%		- the title of the current page
+	%PageURL%		- the URL to the current page (requires <Domain> to be set
+ 
+ Header (default: empty)
+	a text string containing delimited HTML and/or php code
+
+===================================================================================================================== -->
+ <Header>
+[[!DOCTYPE html]]
+ [[head]]
+  [[meta http-equiv="Content-Type" content="text/html; charset=UTF-8"]]
+  [[meta name="robots" content="index,follow,noodp,noydir"]]
+  [[meta name="generator" content="%Application%"]]
+  [[meta name="description" content="%Description%"]]
+  [[meta property="og:url" content="%PageURL%" /]]
+  [[meta property="og:site_name" content="%SiteTitle%" /]]
+  [[meta property="og:title" content="%PageTitle% - %SiteTitle%" /]]
+  [[meta property="og:author" content="%Author%" /]]
+  [[meta property="og:type" content="article" /]]
+  [[meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /]]
+  [[meta name="HandheldFriendly" content="True" /]]
+  [[meta name="MobileOptimized" content="336" /]]
+  [[meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes"]]
+  [[meta name="application-name" content="%SiteTitle%"/]]
+  [[meta name="msapplication-starturl" content="%PageURL%"]]
+  [[meta name="msapplication-tooltip" content="%Description%"]]
+  [[meta name="msapplication-window" content="width=1024;height=768"]]
+  [[meta name="msapplication-TileColor" content="#58927" /]]
+  [[meta name="msapplication-TileImage" content="../assets/mstile-144x144.png" /]]
+  [[meta name="msapplication-square70x70logo" content="../assets/mstile-70x70.png" /]]
+  [[meta name="msapplication-square150x150logo" content="../assets/mstile-150x150.png" /]]
+  [[meta name="msapplication-wide310x150logo" content="../assets/mstile-310x150.png" /]]
+  [[meta name="msapplication-square310x310logo" content="../assets/mstile-310x310.png" /]]
+  [[link rel="apple-touch-icon-precomposed" sizes="57x57" href="../assets/apple-touch-icon-57x57.png" /]]
+  [[link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/apple-touch-icon-114x114.png" /]]
+  [[link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/apple-touch-icon-72x72.png" /]]
+  [[link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/apple-touch-icon-144x144.png" /]]
+  [[link rel="apple-touch-icon-precomposed" sizes="60x60" href="../assets/apple-touch-icon-60x60.png" /]]
+  [[link rel="apple-touch-icon-precomposed" sizes="120x120" href="../assets/apple-touch-icon-120x120.png" /]]
+  [[link rel="apple-touch-icon-precomposed" sizes="76x76" href="../assets/apple-touch-icon-76x76.png" /]]
+  [[link rel="apple-touch-icon-precomposed" sizes="152x152" href="../assets/apple-touch-icon-152x152.png" /]]
+  [[link rel="icon" type="image/png" href="../assets/favicon-196x196.png" sizes="196x196" /]]
+  [[link rel="icon" type="image/png" href="../assets/favicon-96x96.png" sizes="96x96" /]]
+  [[link rel="icon" type="image/png" href="../assets/favicon-32x32.png" sizes="32x32" /]]
+  [[link rel="icon" type="image/png" href="../assets/favicon-16x16.png" sizes="16x16" /]]
+  [[link rel="icon" type="image/png" href="../assets/favicon-128.png" sizes="128x128" /]]
+  [[!--[if IE]]]
+    [[link href="../assets/favicon.ico" rel="shortcut icon" ]]
+  [[![endif]--]]
+  [[title]]%PageTitle% - %SiteTitle%[[/title]]
+  [[link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans"]]
+  [[link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300"]]
+  [[link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"]]
+  [[link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css"]]
+  [[link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"]]
+  [[link rel="stylesheet" href="../assets/gigatrees.css"]]
+  [[style]]#site-title{text-transform: uppercase; margin: 60px 0px 10px 0px; font-size: 2em;}[[/style]]
+  [[script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"]][[/script]]
+ [[/head]]
+ [[body class="container"]]    
+  [[div id="site-title"]]
+    %SiteTitle%
+  [[/div]]
+ </Header>
+
+<!-- =====================================================================================================================
+ HTML code must be delimited by substituting all "<" and ">" with "[[" and "]]".  Gigatrees requires the Bootstrap script
+ file (bootstrap.min.js) to always be included.  Bootstrap is used to format the web pages.  Additionally, special code
+ is included in the tooltip-handler.js to handle Bootstrap tooltips and popovers.  You can edit this to change their
+ behavior.  If you want to use FancyBox on your linked images, jquery.fancybox.min.js and fancybox-handler.js are required.
+ If either of these are missing, images will revert to the browser's default behavior.  If you have the <EnableGraphs>
+ option enabled, then globalize.min.js, dx.chartjs.js & graph-handler.js are required.
+	
+ Footer (default: empty)
+	a text string containing delimited HTML and/or php code
+	
+===================================================================================================================== -->
+ <Footer>
+  [[script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"]][[/script]]
+  [[script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"]][[/script]]
+  [[script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"]][[/script]]
+  [[script type="text/javascript" src="http://cdn3.devexpress.com/jslib/13.2.6/js/dx.chartjs.js"]][[/script]]
+  [[script type="text/javascript" src="../assets/tooltip-handler.js"]][[/script]]
+  [[script type="text/javascript" src="../assets/fancybox-handler.js"]][[/script]]
+ [[/body]]
+[[/html]]     
+ </Footer>
+
+<!-- =====================================================================================================================
+ Gigatrees reads all coordinates found in your GEDCOM file and uses these to create population distribution heatmaps.
+ Gigatrees can optionally query external geocoordinate servers to find the coordinates for all the locations in your GEDCOM 
+ file that are missing them. Any coordinates returned from external servers will be saved to an SQLite3 database.  To 
+ enable this feature, set the <GeoDataSqliteFile> parameter to the relative path for your database.  Gigatrees ships with 
+ the basic database 'gigatrees.sqlite'.  If you leave the parameter blank, then no coordinates will be looked up externally.  
+ 
+ When looking up coordinates, servers return additional location information that Gigatrees will use to automatically 
+ resolve and fix your GEDCOM location descriptions. Gigatrees will add missing country names, county names, etc. whenever 
+ possible.  If you find that either the server's coordinates or descriptions are not to your liking, you can try fixing 
+ your descriptions so that the server has more to work with or you can clear out the <GeoDataSqliteFile> parameter to 
+ disable this feature.
+	
+ To access the database directly you can use any SQLite3 editor.  PhpLiteAdmin works well (https://www.phpliteadmin.org)
+ Editing the database directly allows you to add alternate names for countries, states, etc.  It also allows you hack the 
+ coordinates, descriptions, etc.
+ 
+ GeoDataSqliteFile (default: empty)
+	drive path to your geodata database file
+	
+ GeonamesUserId (default: empty)
+	We use three different mapping APIs, Google, Open Street Maps, and Geonames.  Geonames is our fallback and is required for 
+	mapping to complete.  In order to use it you will need to create a free account at: http://geonames.org and then 
+	save your username here.
+	
+===================================================================================================================== -->
+<GeoDataSqliteFile>./gigatrees.sqlite</GeoDataSqliteFile>
+<GeonamesUserId>                     </GeonamesUserId>
+
+<!-- =====================================================================================================================
+ All folder paths must include the trailing slash
+ All folder paths must be wrapped in quotes if the path includes spaces (i.e. "/this is a folder with spaces/this-is-one-without/"
+
+ SourcePath (default: /sources/)
+	web path for your relative source image and thumbnail paths.  This is to be used to link to source images that appear
+	in your GEDCOM file in the forms: image.jpg, folder/image.jpg, or /folder/image.jpg (See User Guide)
+
+ PhotosPath (default: /photos/)
+	web path for your relative photo image paths.  This is to be used to link to multimedia logical records (photos) that 
+	appear in your GEDCOM file in the forms: image.jpg, folder/image.jpg, or /folder/image.jpg (See User Guide)
+
+ ThumbsPath (default: /photos/)
+	web path for your relative photo thumbnail paths.  This is to be used to link to multimedia logical records thumbnail
+	that appear in your GEDCOM file in the forms: image.jpg, folder/image.jpg, or /folder/image.jpg (See User Guide)
+
+ ImgsPath (default: ../assets/)
+	web path to your asset images provided by Gigatrees
+	
+ ScriptPath (default: ../assets/)
+	web path to the asset scripts provided by Gigatrees
+	
+===================================================================================================================== -->
+<SourcePath>  /sources/  </SourcePath> 
+<PhotosPath>  /photos/   </PhotosPath>
+<ThumbsPath>  /thumbs/   </ThumbsPath>
+<ImgsPath>    ../assets/ </ImgsPath>
+<ScriptPath>  ../assets/ </ScriptPath>
+
+<!-- =====================================================================================================================
+ Page comments are supported on the source, article and person profile pages using Disqus (http://disqus.com) See the 
+ sample page.  Disqus comments are free, feature packed and easy to setup.  All you need to do for Gigatrees is 
+ add your domain name and your Disqus id.
+
+ DisqusDomain (default: empty)
+	the website path to use for your Disqus comments.  This is normally the same as the <Domain>.  See the FAQ for other 
+	options.
+	
+ DisqusId (default: empty)
+	your Disqus id
+	
+===================================================================================================================== -->
+<DisqusDomain>     </DisqusDomain> 
+<DisqusId>         </DisqusId>
+
+<!-- =====================================================================================================================
+ RemoveUnusedRecords (default: true)
+ 	Removes unused logical records (individual, family, source, note, etc.) that are not referenced within the GEDCOM file 
+	before processing. 
+
+ RemoveUnusedSourceRecordsOnly (default: true)
+ 	Removes unused logical SOURCE records that are not referenced within the GEDCOM file before processing. This is only
+	used when the <RemoveUnusedRecords> option is set to false. I added this because Ancestry.com makes it very inconvenient 
+	to remove source records that are no longer being used in your family tree.  Basically, if you remove an individual 
+	from your tree in Ancestry.com without first removing all of it source citations, it leaves the source records dangling 
+	behind.  The only way to get rid of them is to add another reference to the dangling source, and then remove the 
+	reference.  This option lets you keep your unused individual and note records while still removing your dangling sources.
+	
+ Privatize (default: true)
+	Detects several different types of privacy flags (see User Guide) and when found strips those records before processing
+
+ HideLiving (default: true)
+	Hides living persons (see User Guide).  If enabled, you should also enable <EstimateBirthdates>
+	
+ EstimateBirthdates	(default: true)
+	Estimate birth years for persons missing them.  This is needed to accurately determine if individuals are living so should 
+	always be enabled if <HideLiving> is enabled
+	
+ IndicateCertaintyAssessments (default: true)
+	When enabled all claims will show certainty assessments (see User Guide) based upon source and source reference quality
+	
+===================================================================================================================== -->
+<RemoveUnusedRecords>           false </RemoveUnusedRecords>
+<RemoveUnusedSourceRecordsOnly> true  </RemoveUnusedSourceRecordsOnly>
+<Privatize>                     false </Privatize> 
+<HideLiving>                    false </HideLiving>
+<EstimateBirthdates>            true  </EstimateBirthdates>
+<IndicateCertaintyAssessments>  true  </IndicateCertaintyAssessments>
+
+<!-- =====================================================================================================================
+
+ EnableProfileMaps (default: false)
+	enables Ancestor Distribution Heatmaps to each person's profile page.  Ancestor Distribution Heatmaps are similar to 
+	Population Distribution Heatmaps except that they include for each ancestor of the person, the first event for which
+	they have a location; this is usually their birth event, but may be a baptism or other event as well.  Only a single 
+	location is plotted for each ancestor.  If an ancestor has no claims that include locations, then they will not appear 
+	on the map.  You should try to include at least one location for each person in your database.
+ 
+ IndicateUnassociatedAncestorsInCharts (default: false)
+	Grays out the background of unassociated ancestors in your profile charts.  This should only be	enabled if you have 
+	some way to add indicate that the linked parents of a child are biological parents. (See User Guide). 
+ 
+ CalculateKinshipUsingCanonLaw (default: false)
+	Degrees of kinship can be calculated two different ways, using civil law or canon law.  Civil law is used by default
+	See <ProhibitedDegreeOfKinship>
+	
+ SpecialPageHandler (default: false)
+	when using special _PAGE tag in SOURce records (see FAQ)
+	
+ ForceThumbnails (default: false)	
+	if no thumbnail is found for a photo, Gigatrees can resize the HTML <img> element to the size of a thumbnail. 
+	This does not actually create any thumbnail images, so the original photo is still loaded and just displayed
+	as a thumbnail.  Doing this for a large number of photos on a page will result in slower page load speeds.
+	When disabled, a default image thumbnail is displayed instead.  The default images can be found in your
+	assets folder and replaced at will.
+	
+===================================================================================================================== -->
+<EnableProfileMaps>                     true  </EnableProfileMaps>
+<IndicateUnassociatedAncestorsInCharts> false </IndicateUnassociatedAncestorsInCharts>
+<CalculateKinshipUsingCanonLaw>         false </CalculateKinshipUsingCanonLaw>
+<SpecialPageHandler>                    false </SpecialPageHandler>
+<ForceThumbnails>                       false </ForceThumbnails>
+
+
+<!-- =====================================================================================================================
+ The following parameters are used in data consistency verification, estimating birth dates and determining which persons 
+ are living. Modify these to fit your data more closely
+
+ MinChildBearingAge (default: 16)
+	Set the minimum age that an individual is expected to bear children
+	
+ MaxChildBearingAge (default: 40)
+	Set the maximum age that an individual is expected to bear children
+ 
+ MaxChildBaptismAge (default: 5)
+	Set the maximum age that an child is expected to be baptized or christened.  Adult baptisms are not considered here.
+	
+ MinMarriageAge (default: 14)
+	Set the minimum age that an individual is expected to get married. Betrothals are not considered here.
+
+ MaxWifeMarriageAge (default: 50)
+	Set the maximum age that an woman is expected to get married
+	
+ MaxAgeBetweenSpouses (default: 20)
+	Set the maximum age expected between spouses
+
+ MaxFlourishedAge (default: 60)
+	Set the maximum age that an individual is expected to be considered as flourishing.  Flourishing indicates that
+	a person is living and may be expected to be found in a recorded event.  Wills are by default not considered 
+	flourishing.
+
+ MinFlourishedAge (default: 21)
+	Set the minimum age that an individual is expected to be considered as flourishing.
+
+ MaxLifeSpan (default: 100)
+	Set the maximum age that an individual is expected to live.
+ 
+ MaxAgeEventError (default: 0)
+	Set the maximum difference in ages expected between a persons birth year and their age at a recorded event.
+	Census records and ships manifests, for instance, are notorious for recording ages incorrectly.
+
+ DeadIfMarriedBefore (default: 1900)
+	Set the year before which a person's marriage year is considered to be dead.  This should be set to the year just prior to
+	the birth year of the oldest living person in your GEDCOM file
+
+ DeadIfBornBefore (default: 1900)
+	Set the year before which a person's birth year is considered to be dead.  This should be set to the year just prior to
+	the earliest marriage year of any living person in your GEDCOM file
+
+ ProhibitedDegreeOfKinship (default: 2)
+	Set the degree of kinship, affinity or consanguinity that you wish to see indicated in your data 
+	consistency report as prohibited.  
+	
+	Using civil law:
+		0 = self
+		1 = parent, child
+		2 = sibling
+		3 = aunt, uncle, niece, nephew
+		4 = first cousins
+		5 = first cousin once removed
+		6 = second cousin
+		7 = second cousin once removed
+		8 = third cousin
+		etc.
+	
+	Using canon law:
+		0 = self
+		1 = parent, child, sibling
+		2 = aunt, uncle, niece, nephew, first cousins
+		3 = first cousin once removed, second cousin
+		4 = second cousin once removed, third cousin
+		etc.
+===================================================================================================================== -->
+<MinChildBearingAge>            15        </MinChildBearingAge>
+<MaxChildBearingAge>            50        </MaxChildBearingAge>
+<MaxChildBaptismAge>             5        </MaxChildBaptismAge>
+<MinMarriageAge>                14        </MinMarriageAge>
+<MaxWifeMarriageAge>            50        </MaxWifeMarriageAge>
+<MaxAgeBetweenSpouses>          30        </MaxAgeBetweenSpouses>
+<MaxFlourishedAge>              70        </MaxFlourishedAge>
+<MinFlourishedAge>              21        </MinFlourishedAge>
+<MaxLifeSpan>                  100        </MaxLifeSpan>
+<MaxAgeEventError>               2        </MaxAgeEventError>
+<DeadIfMarriedBefore>         1940        </DeadIfMarriedBefore>
+<DeadIfBornBefore>            1920        </DeadIfBornBefore>
+<ProhibitedDegreeOfKinship>     4         </ProhibitedDegreeOfKinship>
+
+
+<!-- =====================================================================================================================
+ Census Table Reports (CENtaRs) come in two flavors.  By default, CENtaRs are included in the profile pages for each 
+ individual that qualifies for having one. They can be disabled by setting the <EnableProfileCensusTables> to false.  To qualify 
+ for a CENtaR, the person must have an ancestor that was living during the years specified.  Standalone CENtaRs pages are 
+ also supported by enabling the <Census> page and specifying <Centar> logical record ids, which can be found in your GEDCOM 
+ file in the form:
+ 
+	0 @P1@ INDI 
+	
+ Where 'P1' is the logical record id. If no qualifying ancestor can be found, or if the id is not valid, they will not be 
+ included.
+   
+ Centar (default: empty)
+	a comma separated list of logical record ids
+
+ EnableProfileCensusTables (default: false)
+	enable to include a Census Table Report on a person's profile page
+	
+ CensusYears (default: empty)
+	define the census years to consider for your Census Table Reports
+	
+===================================================================================================================== -->
+<Centar>				    P1,I1                                                                      </Centar>
+<EnableProfileCensusTables> true                                                                       </EnableProfileCensusTables>
+<CensusYears>               1790,1800,1810,1820,1830,1840,1850,1860,1870,1880,1900,1910,1920,1930,1940 </CensusYears>
+
+<!-- =====================================================================================================================
+ Generation Lists (GList) come in two flavors also.  By default, GLists are included in the profile pages for each 
+ individual that qualifies for having one. They can be disabled by setting the <EnableProfileGenerationLists> to false.  
+ To qualify for a Glist, the person must simply have an ancestor.  Standalone GList pages are also supported by enabling 
+ the <Generations> page and specifying <GList> logical record ids, which can be found in your GEDCOM file in the form:
+ 
+	0 @P1@ INDI 
+	
+ Where 'P1' is the logical record id. If no ancestor can be found, or if the id is not valid, they will not be 
+ included. If you prefer to use traditional Ancestor Lists, set <RevertGenerationLists> to false. For more information on 
+ Generation Lists and their advantages, see: http://timforsythe.com/journal/yet-another-genealogy-numbering-system
+   
+ GList (default: empty)
+	a comma separated list of logical record ids
+
+ EnableProfileGenerationLists (default: true)
+	enable to include a Generation List on a person's profile page
+	
+ RevertGenerationLists (default: false)
+	revert to using the Ahnen numbering system.
+	
+ IndicatePersonsWithUnassociatedParentsInGenerationLists (default: false)
+	Places a # symbol in your Generation/Descendant Lists next to all persons with unassociated parents.  This should only 
+	be enabled if you have some way to add indicate that the linked parents of a child are biological parents. 
+	(See User Guide). 
+	
+===================================================================================================================== -->
+<GList>                                                    P1,I1   </GList>
+<EnableProfileGenerationLists>                             true    </EnableProfileGenerationLists>
+<RevertGenerationLists>                                    false   </RevertGenerationLists>
+<IndicatePersonsWithUnassociatedParentsInGenerationLists>  false   </IndicatePersonsWithUnassociatedParentsInGenerationLists>
+
+
+<!-- =====================================================================================================================
+ Descendant Lists (DList) are a special cases of Generation Lists that narrow the ancestors included to a single ancestral 
+ line. DLists can be created for as many scenarios as you like.  You must define the Anchor and the Root for each 
+ scenario.  You do this by entering the person's logical record ids, which can be found in your GEDCOM file in the form:
+ 
+	0 @P1@ INDI 
+	
+ Where 'P1' is the logical record id. If no relationship can be found between the two persons, or if the id cannot
+ be found, they will not be included in the list.
+   
+  DList 
+	Descendant List wrapper
+  DL
+	Descendant list row
+	
+  Anchor (default: empty)
+	The descendant logical record id
+  Root (default: empty)
+	The ancestor logical record id
+	
+===================================================================================================================== -->
+<DList>
+    <DL>  <Anchor> </Anchor><Root> </Root>  </DL>
+    <DL>  <Anchor> </Anchor><Root> </Root>  </DL>
+</DList>
+
+
+<!-- =====================================================================================================================
+ The Data Consistency Report (Bonkers) 
+  
+ UseEstimatedBirthdatesInDataConsistencyReport (default: false)
+	use estimated birth dates in calculating data inconsistencies 
+
+ ShowDatePhrasesInDataConsistencyReport (default: false)
+	Gigatrees uses its own date validator, supporting many date formats that are not supported by the GEDCOM standard.  
+	You can use this to get a list of all dates that Gigatrees could not parse along with a link to the associated
+	person.
+	
+ ShowOnlyImpossibilitiesInDataConsistencyReport (default: false)
+	limit report to only impossibilities (hides improbabilities).  This is a good way to focus your attention on only the
+	most critical errors.	
+	
+ ShowPersonsWithUnsupportedClaimsInDataConsistencyReport (default: false)
+	show those persons that have undocumented claims. This is a good way to get a quick list of persons that need their
+	data cleaned up.
+	
+ ShowPersonsWithUndocumentedParentsInDataConsistencyReport (default: false)
+	show persons without sourced parental associations. This should only be	enabled if you have some way to add source 
+	references to your parental associations (See User Guide). The GEDCOM standard does not support this directly.
+	
+ ShowPersonsWithNoParentsInDataConsistencyReport (default: false)
+	show persons that have no parents. this is a good way to get a list of all of your root ancestors, those at the 
+	head of each ancestral line.  
+	
+ ShowPersonsMissingOneParentInDataConsistencyReport (default: false)
+	show persons missing one parent. 
+	
+ ShowEstimatedDatesInDataConsistencyReport (default: false)
+	show persons for which Gigatrees was able to estimate birth years. this will also provide details on how the birth year 
+	was calculated.  See the FAQ for a list of codes.  You can use this option to double check that Gigatrees handled your
+	dates properly.  
+	
+ ShowUnmappableLocationsInDataConsistencyReport (default: false)
+	show locations for which no coordinates have been found.  Gigatrees mapping sometimes takes several builds to complete. 
+ 
+ IgnoreDuplicateChildrenWithNonOverlappingLifeSpansInDataConsistencyReport (default: false)
+    when this option is enabled, and when duplicately named children are found, they will be ignored if one of them 
+	died before the other was born.  It was not uncommon for parents to name one of their children after one that was 
+	previously deceased.
+ 
+===================================================================================================================== -->
+<UseEstimatedBirthdatesInDataConsistencyReport>                             false </UseEstimatedBirthdatesInDataConsistencyReport>             
+<ShowDatePhrasesInDataConsistencyReport>                                    true  </ShowDatePhrasesInDataConsistencyReport>                    
+<ShowOnlyImpossibilitiesInDataConsistencyReport>                            false </ShowOnlyImpossibilitiesInDataConsistencyReport>            
+<ShowPersonsWithUnsupportedClaimsInDataConsistencyReport>                   false </ShowPersonsWithUnsupportedClaimsInDataConsistencyReport>   
+<ShowPersonsWithUndocumentedParentsInDataConsistencyReport>                 false </ShowPersonsWithUndocumentedParentsInDataConsistencyReport> 
+<ShowPersonsWithNoParentsInDataConsistencyReport>                           false </ShowPersonsWithNoParentsInDataConsistencyReport>           
+<ShowPersonsMissingOneParentInDataConsistencyReport>                        false </ShowPersonsMissingOneParentInDataConsistencyReport>        
+<ShowEstimatedDatesInDataConsistencyReport>                                 false </ShowEstimatedDatesInDataConsistencyReport>                 
+<ShowUnmappableLocationsInDataConsistencyReport>                            false </ShowUnmappableLocationsInDataConsistencyReport>            
+<IgnoreDuplicateChildrenWithNonOverlappingLifeSpansInDataConsistencyReport> true </IgnoreDuplicateChildrenWithNonOverlappingLifeSpansInDataConsistencyReport>
+
+<!-- =====================================================================================================================
+ Timelines are a series of pages that include all dated events for all persons in your database.  The Timelines pages are 
+ divided up based on your configured <TimelineEras>
+  
+ UseEstimatedBirthdatesInTimeline (default: false)
+ 	Set to true if you want the estimated birth year calculated by Gigatrees to appear in the timeline (See <EstimateBirthdates>)
+
+ UseQualifiedDatesInTimeline (default: false)
+ 	Set to true if you want qualified dates in the timeline (See <EstimateBirthdates>)
+	Qualified dates include one or more of the following qualifiers: abt, aft, bef, bet/and, cal, calc, est, from, int, prob, to
+
+ TimelineEras
+	timeline eras wrapper
+ E
+	timeline era row
+	
+ Name
+	display text for the timeline era
+	
+ StartYear	
+	start year for the timeline era.  The end year is the <StartYear> for the next era.
+ 
+===================================================================================================================== -->
+<UseEstimatedBirthdatesInTimeline> false   </UseEstimatedBirthdatesInTimeline>
+<UseQualifiedDatesInTimeline>      false   </UseQualifiedDatesInTimeline>
+<TimelineEras>
+	<E>  <Name>  B.C.E         </Name>  <StartYear>  -10000 </StartYear>  </E>
+	<E>  <Name>  1st Century   </Name>  <StartYear>  0      </StartYear>  </E>
+	<E>  <Name>  2nd Century   </Name>  <StartYear>  100    </StartYear>  </E>
+	<E>  <Name>  3rd Century   </Name>  <StartYear>  200    </StartYear>  </E>
+	<E>  <Name>  4th Century   </Name>  <StartYear>  300    </StartYear>  </E>
+	<E>  <Name>  5th Century   </Name>  <StartYear>  400    </StartYear>  </E>
+	<E>  <Name>  6th Century   </Name>  <StartYear>  500    </StartYear>  </E>
+	<E>  <Name>  7th Century   </Name>  <StartYear>  600    </StartYear>  </E>
+	<E>  <Name>  8th Century   </Name>  <StartYear>  700    </StartYear>  </E>
+	<E>  <Name>  9th Century   </Name>  <StartYear>  800    </StartYear>  </E>
+	<E>  <Name>  10th Century  </Name>  <StartYear>  900    </StartYear>  </E>
+	<E>  <Name>  11th Century  </Name>  <StartYear>  1000   </StartYear>  </E>
+	<E>  <Name>  12th Century  </Name>  <StartYear>  1100   </StartYear>  </E>
+	<E>  <Name>  13th Century  </Name>  <StartYear>  1200   </StartYear>  </E>
+	<E>  <Name>  14th Century  </Name>  <StartYear>  1300   </StartYear>  </E>
+	<E>  <Name>  15th Century  </Name>  <StartYear>  1400   </StartYear>  </E>
+	<E>  <Name>  16th Century  </Name>  <StartYear>  1500   </StartYear>  </E>
+	<E>  <Name>  17th Century  </Name>  <StartYear>  1600   </StartYear>  </E>
+	<E>  <Name>  18th Century  </Name>  <StartYear>  1700   </StartYear>  </E>
+	<E>  <Name>  19th Century  </Name>  <StartYear>  1800   </StartYear>  </E>
+	<E>  <Name>  20th Century  </Name>  <StartYear>  1900   </StartYear>  </E>
+	<E>  <Name>  21st Century  </Name>  <StartYear>  2000   </StartYear>  </E>
+</TimelineEras>
+
+<!-- =====================================================================================================================
+ Military Timelines are a subset of regular Timelines, limiting the events include to MILTitary events only. Gigatrees
+ lets you define a new set of <MilitaryEras>
+ 
+===================================================================================================================== -->
+<MilitaryEras>
+	<E>  <Name> Early Battles                             </Name>  <StartYear>  0     </StartYear>  </E>
+	<E>  <Name> More Early Battles                        </Name>  <StartYear>  1065  </StartYear>  </E>
+	<E>  <Name> Battle of Hastings                        </Name>  <StartYear>  1066  </StartYear>  </E>
+	<E>  <Name> Late Battles                              </Name>  <StartYear>  1067  </StartYear>  </E>
+	<E>  <Name> Pre Colonial Era                          </Name>  <StartYear>  1600  </StartYear>  </E>
+	<E>  <Name> Early Colonial Era                        </Name>  <StartYear>  1633  </StartYear>  </E>
+	<E>  <Name> Pequot War Era                            </Name>  <StartYear>  1634  </StartYear>  </E>
+	<E>  <Name> Middle Colonial Era                       </Name>  <StartYear>  1638  </StartYear>  </E>
+	<E>  <Name> King Philip's War Era                     </Name>  <StartYear>  1675  </StartYear>  </E>
+	<E>  <Name> Late Colonial Era                         </Name>  <StartYear>  1677  </StartYear>  </E>
+	<E>  <Name> American Revolution Era                   </Name>  <StartYear>  1775  </StartYear>  </E>
+	<E>  <Name> Post American Revolution Era              </Name>  <StartYear>  1783  </StartYear>  </E>
+	<E>  <Name> War of 1812 Era                           </Name>  <StartYear>  1812  </StartYear>  </E>
+	<E>  <Name> Pre U.S. Civil War Era                    </Name>  <StartYear>  1815  </StartYear>  </E>
+	<E>  <Name> U.S. Civil War Era                        </Name>  <StartYear>  1861  </StartYear>  </E>
+	<E>  <Name> Post U.S. Civil War Era                   </Name>  <StartYear>  1865  </StartYear>  </E>
+	<E>  <Name> World War I Era                           </Name>  <StartYear>  1914  </StartYear>  </E>
+	<E>  <Name> Depression Era                            </Name>  <StartYear>  1919  </StartYear>  </E>
+	<E>  <Name> World War II Era                          </Name>  <StartYear>  1939  </StartYear>  </E>
+	<E>  <Name> Post World War II Era                     </Name>  <StartYear>  1946  </StartYear>  </E>
+	<E>  <Name> Korean War Era                            </Name>  <StartYear>  1950  </StartYear>  </E>
+	<E>  <Name> The 50s Era                               </Name>  <StartYear>  1953  </StartYear>  </E>
+	<E>  <Name> Vietnam War Era                           </Name>  <StartYear>  1960  </StartYear>  </E>
+	<E>  <Name> The 70s Era                               </Name>  <StartYear>  1975  </StartYear>  </E>
+	<E>  <Name> Grenada Intervention Era                  </Name>  <StartYear>  1982  </StartYear>  </E>
+	<E>  <Name> The 80s Era                               </Name>  <StartYear>  1983  </StartYear>  </E>
+	<E>  <Name> Panama Invasion Era                       </Name>  <StartYear>  1988  </StartYear>  </E>
+	<E>  <Name> Persian Gulf War Era                      </Name>  <StartYear>  1989  </StartYear>  </E>
+	<E>  <Name> Post Persian Gulf War Era                 </Name>  <StartYear>  1991  </StartYear>  </E>
+	<E>  <Name> Bosnia and Herzegovina Intervention Era   </Name>  <StartYear>  1995  </StartYear>  </E>
+	<E>  <Name> Pre Invasion of Afghanistan and Iraq Era  </Name>  <StartYear>  1996  </StartYear>  </E>
+	<E>  <Name> Invasion of Afghanistan and Iraq Era      </Name>  <StartYear>  2001  </StartYear>  </E>
+	<E>  <Name> Post Invasion of Afghanistan and Iraq Era </Name>  <StartYear>  2010  </StartYear>  </E>
+</MilitaryEras>
+
+
+<!-- =====================================================================================================================
+ You can define as many <Tags> as you like by specifying the tag GEDCOM name (<Name>) and the display text associated 
+ with that tag.  This gives you control on how events and attributes are shown in your family tree.  GEDCOM tags are 
+ included in the list as are other vendor specific tags.  
+
+ For tags that include TYPE fields, ASSO, CENS, EVEN, and FACT, substitution macros can be used that allow the 
+ TYPE field to be used for the tag name. EVEN and FACT TYPE fields can be defined in the <Events> options below.
+	
+ Tags
+	Tags wrapper
+ T
+	Tag row
+	
+ Name
+	GEDCOM tag field
+	
+ DisplayString	
+	display text for the tag
+===================================================================================================================== -->
+<Tags>
+    <!-- GEDCOM specific tags -->
+	<T>  <Name>  ADOP    </Name>  <DisplayString>  Adoption                                     </DisplayString>  </T>
+	<T>  <Name>  ANUL    </Name>  <DisplayString>  Annulment                                    </DisplayString>  </T>
+	<T>  <Name>  ASSO    </Name>  <DisplayString>  %ifType%%Type%%elseType%Association%endType% </DisplayString>  </T>
+	<T>  <Name>  BAPL    </Name>  <DisplayString>  LDS Baptism                                  </DisplayString>  </T>
+	<T>  <Name>  BAPM    </Name>  <DisplayString>  Baptism                                      </DisplayString>  </T>
+	<T>  <Name>  BARM    </Name>  <DisplayString>  Barmitzva                                    </DisplayString>  </T>
+	<T>  <Name>  BASM    </Name>  <DisplayString>  Basmitzva                                    </DisplayString>  </T>
+	<T>  <Name>  BIRT    </Name>  <DisplayString>  Birth                                        </DisplayString>  </T>
+	<T>  <Name>  BLES    </Name>  <DisplayString>  Blessing                                     </DisplayString>  </T>
+	<T>  <Name>  BURI    </Name>  <DisplayString>  Burial                                       </DisplayString>  </T>
+	<T>  <Name>  CAST    </Name>  <DisplayString>  Caste Name                                   </DisplayString>  </T>
+	<T>  <Name>  CENS    </Name>  <DisplayString>  %ifType%%Type%%elseType%Census%endType%      </DisplayString>  </T>
+	<T>  <Name>  CHR     </Name>  <DisplayString>  Christening                                  </DisplayString>  </T>
+	<T>  <Name>  CHRA    </Name>  <DisplayString>  Adult Christening                            </DisplayString>  </T>
+	<T>  <Name>  CONF    </Name>  <DisplayString>  Confirmation                                 </DisplayString>  </T>
+	<T>  <Name>  CONL    </Name>  <DisplayString>  LDS Confirmation                             </DisplayString>  </T>
+	<T>  <Name>  CREM    </Name>  <DisplayString>  Cremation                                    </DisplayString>  </T>
+	<T>  <Name>  DEAT    </Name>  <DisplayString>  Death                                        </DisplayString>  </T>
+	<T>  <Name>  DIV     </Name>  <DisplayString>  Divorce                                      </DisplayString>  </T>
+	<T>  <Name>  DIVF    </Name>  <DisplayString>  Divorce Filed                                </DisplayString>  </T>
+	<T>  <Name>  DSCR    </Name>  <DisplayString>  Physical Description                         </DisplayString>  </T>
+	<T>  <Name>  EDUC    </Name>  <DisplayString>  Education                                    </DisplayString>  </T>
+	<T>  <Name>  EMIG    </Name>  <DisplayString>  Emigration                                   </DisplayString>  </T>
+	<T>  <Name>  ENDL    </Name>  <DisplayString>  LDS Endowment                                </DisplayString>  </T>
+	<T>  <Name>  ENGA    </Name>  <DisplayString>  Engagement                                   </DisplayString>  </T>
+	<T>  <Name>  EVEN    </Name>  <DisplayString>  %ifType%%Type%%elseType%Event%endType%       </DisplayString>  </T>
+	<T>  <Name>  FCOM    </Name>  <DisplayString>  First Communion                              </DisplayString>  </T>
+	<T>  <Name>  GRAD    </Name>  <DisplayString>  Graduation                                   </DisplayString>  </T>
+	<T>  <Name>  IDNO    </Name>  <DisplayString>  National ID Number                           </DisplayString>  </T>
+	<T>  <Name>  IMMI    </Name>  <DisplayString>  Immigration                                  </DisplayString>  </T>
+	<T>  <Name>  MARB    </Name>  <DisplayString>  Marriage Bann                                </DisplayString>  </T>
+	<T>  <Name>  MARC    </Name>  <DisplayString>  Marriage Contract                            </DisplayString>  </T>
+	<T>  <Name>  MARL    </Name>  <DisplayString>  Marriage License                             </DisplayString>  </T>
+	<T>  <Name>  MARR    </Name>  <DisplayString>  Marriage                                     </DisplayString>  </T>
+	<T>  <Name>  MARS    </Name>  <DisplayString>  Separation                                   </DisplayString>  </T>
+	<T>  <Name>  NAME    </Name>  <DisplayString>  Name                                         </DisplayString>  </T>
+	<T>  <Name>  NATI    </Name>  <DisplayString>  Nationality                                  </DisplayString>  </T>
+	<T>  <Name>  NATU    </Name>  <DisplayString>  Naturalization                               </DisplayString>  </T>
+	<T>  <Name>  NCHI    </Name>  <DisplayString>  Number of Children                           </DisplayString>  </T>
+	<T>  <Name>  NICK    </Name>  <DisplayString>  Nickname                                     </DisplayString>  </T>
+	<T>  <Name>  NMR     </Name>  <DisplayString>  Number of Marriages                          </DisplayString>  </T>
+	<T>  <Name>  OCCU    </Name>  <DisplayString>  Occupation                                   </DisplayString>  </T>
+	<T>  <Name>  ORDN    </Name>  <DisplayString>  Ordination                                   </DisplayString>  </T>
+	<T>  <Name>  PROB    </Name>  <DisplayString>  Probate                                      </DisplayString>  </T>
+	<T>  <Name>  PROP    </Name>  <DisplayString>  Property                                     </DisplayString>  </T>
+	<T>  <Name>  RELI    </Name>  <DisplayString>  Religion                                     </DisplayString>  </T>
+	<T>  <Name>  RESI    </Name>  <DisplayString>  Residence                                    </DisplayString>  </T>
+	<T>  <Name>  RETI    </Name>  <DisplayString>  Retirement                                   </DisplayString>  </T>
+	<T>  <Name>  SEX     </Name>  <DisplayString>  Gender                                       </DisplayString>  </T>
+	<T>  <Name>  SLGC    </Name>  <DisplayString>  LDS Child Sealing                            </DisplayString>  </T>
+	<T>  <Name>  SLGS    </Name>  <DisplayString>  LDS Spouse Sealing                           </DisplayString>  </T>
+	<T>  <Name>  SSN     </Name>  <DisplayString>  Social Security Number                       </DisplayString>  </T>
+	<T>  <Name>  TITL    </Name>  <DisplayString>  Title                                        </DisplayString>  </T>
+	<T>  <Name>  WILL    </Name>  <DisplayString>  Will                                         </DisplayString>  </T>
+    <!-- Vendor compliant user defined tags -->
+	<T>  <Name>  _AKA    </Name>  <DisplayString>  Also Known As                                </DisplayString>  </T>
+	<T>  <Name>  _AKAN   </Name>  <DisplayString>  Also Known As                                </DisplayString>  </T>
+	<T>  <Name>  _ATTR   </Name>  <DisplayString>  Attribute                                    </DisplayString>  </T>
+	<T>  <Name>  _COLOR  </Name>  <DisplayString>  Skin Color                                   </DisplayString>  </T>
+	<T>  <Name>  _DCAUSE </Name>  <DisplayString>  Cause of Death                               </DisplayString>  </T>
+	<T>  <Name>  _DEG    </Name>  <DisplayString>  Degree                                       </DisplayString>  </T>
+	<T>  <Name>  _DESC   </Name>  <DisplayString>  Physical Description                         </DisplayString>  </T>
+	<T>  <Name>  _DEST   </Name>  <DisplayString>  Destination                                  </DisplayString>  </T>
+	<T>  <Name>  _ELEC   </Name>  <DisplayString>  Elected                                      </DisplayString>  </T>
+	<T>  <Name>  _EMPLOY </Name>  <DisplayString>  Employment                                   </DisplayString>  </T>
+	<T>  <Name>  _EXCM   </Name>  <DisplayString>  Excommunicated                               </DisplayString>  </T>
+	<T>  <Name>  _EXCM   </Name>  <DisplayString>  Excommunicated                               </DisplayString>  </T>
+	<T>  <Name>  _EYEC   </Name>  <DisplayString>  Eye Color                                    </DisplayString>  </T>
+	<T>  <Name>  _EYES   </Name>  <DisplayString>  Eye Color                                    </DisplayString>  </T>
+	<T>  <Name>  _FACE   </Name>  <DisplayString>  Facebook                                     </DisplayString>  </T>
+	<T>  <Name>  _FNRL   </Name>  <DisplayString>  Funeral                                      </DisplayString>  </T>
+	<T>  <Name>  _FUN    </Name>  <DisplayString>  Funeral                                      </DisplayString>  </T>
+	<T>  <Name>  _HAIR   </Name>  <DisplayString>  Hair Color                                   </DisplayString>  </T>
+	<T>  <Name>  _HEIG   </Name>  <DisplayString>  Height                                       </DisplayString>  </T>
+	<T>  <Name>  _INIT   </Name>  <DisplayString>  Initiated                                    </DisplayString>  </T>
+	<T>  <Name>  _MARNM  </Name>  <DisplayString>  Married Name                                 </DisplayString>  </T>
+	<T>  <Name>  _MDCL   </Name>  <DisplayString>  Medical Condition                            </DisplayString>  </T>
+	<T>  <Name>  _MEDC   </Name>  <DisplayString>  Medical Condition                            </DisplayString>  </T>
+	<T>  <Name>  _MEND   </Name>  <DisplayString>  Marriage End Status                          </DisplayString>  </T>
+	<T>  <Name>  _MILT   </Name>  <DisplayString>  Military                                     </DisplayString>  </T>
+	<T>  <Name>  _MISN   </Name>  <DisplayString>  Mission                                      </DisplayString>  </T>
+	<T>  <Name>  _NMAR   </Name>  <DisplayString>  Never Married                                </DisplayString>  </T>
+	<T>  <Name>  _ORIG   </Name>  <DisplayString>  Origin                                       </DisplayString>  </T>
+	<T>  <Name>  _SEPR   </Name>  <DisplayString>  Separation                                   </DisplayString>  </T>
+	<T>  <Name>  _STAT   </Name>  <DisplayString>  Marriage Status                              </DisplayString>  </T>
+	<T>  <Name>  _STAT   </Name>  <DisplayString>  Status                                       </DisplayString>  </T>
+	<T>  <Name>  _USED   </Name>  <DisplayString>  Name Used                                    </DisplayString>  </T>
+	<T>  <Name>  _WEIG   </Name>  <DisplayString>  Weight                                       </DisplayString>  </T>
+    <!-- Vendor non-compliant user defined tags -->
+	<T>  <Name>  ADDR    </Name>  <DisplayString>  Address                                      </DisplayString>  </T>
+	<T>  <Name>  AKA     </Name>  <DisplayString>  Also Known As                                </DisplayString>  </T>
+	<T>  <Name>  ALIA    </Name>  <DisplayString>  Alias                                        </DisplayString>  </T>
+	<T>  <Name>  ARVL    </Name>  <DisplayString>  Arrival                                      </DisplayString>  </T>
+	<T>  <Name>  ATTR    </Name>  <DisplayString>  Attribute                                    </DisplayString>  </T>
+	<T>  <Name>  BLESS   </Name>  <DisplayString>  Blessing                                     </DisplayString>  </T>
+	<T>  <Name>  BLSL    </Name>  <DisplayString>  Blessing                                     </DisplayString>  </T>
+	<T>  <Name>  COLO    </Name>  <DisplayString>  Skin Color                                   </DisplayString>  </T>
+	<T>  <Name>  DEGR    </Name>  <DisplayString>  Degree                                       </DisplayString>  </T>
+	<T>  <Name>  DESC    </Name>  <DisplayString>  Physical Description                         </DisplayString>  </T>
+	<T>  <Name>  DESR    </Name>  <DisplayString>  Physical Description                         </DisplayString>  </T>
+	<T>  <Name>  EMAIL   </Name>  <DisplayString>  Email Address                                </DisplayString>  </T>
+	<T>  <Name>  FACT    </Name>  <DisplayString>  %ifType%%Type%%elseType%Fact%endType%        </DisplayString>  </T>
+	<T>  <Name>  HEAL    </Name>  <DisplayString>  Medical Condition                            </DisplayString>  </T>
+	<T>  <Name>  HEIG    </Name>  <DisplayString>  Height                                       </DisplayString>  </T>
+	<T>  <Name>  MILF    </Name>  <DisplayString>  Military                                     </DisplayString>  </T>
+	<T>  <Name>  MILI    </Name>  <DisplayString>  Military                                     </DisplayString>  </T>
+	<T>  <Name>  MILT    </Name>  <DisplayString>  Military                                     </DisplayString>  </T>
+	<T>  <Name>  NMAR    </Name>  <DisplayString>  Number of Marriages                          </DisplayString>  </T>
+	<T>  <Name>  REL     </Name>  <DisplayString>  Religion                                     </DisplayString>  </T>
+	<T>  <Name>  STIL    </Name>  <DisplayString>  Stillborn                                    </DisplayString>  </T>
+	<T>  <Name>  STLB    </Name>  <DisplayString>  Stillborn                                    </DisplayString>  </T>
+	<T>  <Name>  URL     </Name>  <DisplayString>  Website                                      </DisplayString>  </T>
+	<T>  <Name>  WEIG    </Name>  <DisplayString>  Weight                                       </DisplayString>  </T>
+</Tags>
+
+<!-- =====================================================================================================================
+ You can define as many <EventTypes> as you like by specifying the tag EVEN or FACT TYPE field text (<UserString>), which 
+ is also used as the DisplayString for displaying the EVEN and FACT claims. This gives you control on how events and facts 
+ are both used and shown in your family tree.  For instance you can add a type field to your census records of 
+ "Census (US Federal)" so that when census events are displayed in your timelines, this text appears rather than the 
+ default of "Census". You can also indicate whether claims of these events types means that the persons using them are 
+ known to be living and/or an adult.  This information is used to help estimate birthdates and verify data consistency.
+	
+ EventTypes
+	EventTypes wrapper
+ T
+	EventType row
+	
+ UserString
+	EVEN or FACT record TYPE field text
+
+ DisplayString
+	The text to display for this type
+	
+ Living	
+	indicate whether persons with this event type are known to be living at the time of the event.  If you are not 
+	sure, set it to false.
+	
+ Adult	
+	indicate whether persons with this event type are known to be an adult at the time of the event.  If you are not 
+	sure, set it to false.	
+
+===================================================================================================================== -->
+<EventTypes>
+	<E>  <UserString>  Anecdote             </UserString>  <DisplayString>  Anecdote             </DisplayString>  <Living>  false </Living>  <Adult> false  </Adult>  </E>
+	<E>  <UserString>  Arrival              </UserString>  <DisplayString>  Arrival              </DisplayString>  <Living>  true  </Living>  <Adult> false  </Adult>  </E>
+	<E>  <UserString>  Census (US Federal)  </UserString>  <DisplayString>  Census (US Federal)  </DisplayString>  <Living>  true  </Living>  <Adult> false  </Adult>  </E>
+	<E>  <UserString>  Census (US State)    </UserString>  <DisplayString>  Census (US State)    </DisplayString>  <Living>  true  </Living>  <Adult> false  </Adult>  </E>
+	<E>  <UserString>  Charter              </UserString>  <DisplayString>  Charter              </DisplayString>  <Living>  true  </Living>  <Adult> true   </Adult>  </E>
+	<E>  <UserString>  Church               </UserString>  <DisplayString>  Church               </DisplayString>  <Living>  true  </Living>  <Adult> true   </Adult>  </E>
+	<E>  <UserString>  Codicil              </UserString>  <DisplayString>  Codicil              </DisplayString>  <Living>  true  </Living>  <Adult> true   </Adult>  </E>
+	<E>  <UserString>  Deceased             </UserString>  <DisplayString>  Deceased             </DisplayString>  <Living>  false </Living>  <Adult> false  </Adult>  </E>
+	<E>  <UserString>  Departure            </UserString>  <DisplayString>  Departure            </DisplayString>  <Living>  true  </Living>  <Adult> false  </Adult>  </E>
+	<E>  <UserString>  Excommunication      </UserString>  <DisplayString>  Excommunication      </DisplayString>  <Living>  true  </Living>  <Adult> true   </Adult>  </E>
+	<E>  <UserString>  Flourished           </UserString>  <DisplayString>  Flourished           </DisplayString>  <Living>  true  </Living>  <Adult> true   </Adult>  </E>
+	<E>  <UserString>  Flourishing          </UserString>  <DisplayString>  Flourishing          </DisplayString>  <Living>  true  </Living>  <Adult> true   </Adult>  </E>
+	<E>  <UserString>  Freeman              </UserString>  <DisplayString>  Freeman              </DisplayString>  <Living>  true  </Living>  <Adult> true   </Adult>  </E>
+	<E>  <UserString>  Grantee              </UserString>  <DisplayString>  Grantee              </DisplayString>  <Living>  true  </Living>  <Adult> true   </Adult>  </E>
+	<E>  <UserString>  Grantor              </UserString>  <DisplayString>  Grantor              </DisplayString>  <Living>  true  </Living>  <Adult> true   </Adult>  </E>
+	<E>  <UserString>  Leased               </UserString>  <DisplayString>  Leased               </DisplayString>  <Living>  true  </Living>  <Adult> true   </Adult>  </E>
+	<E>  <UserString>  Married              </UserString>  <DisplayString>  Married              </DisplayString>  <Living>  true  </Living>  <Adult> true   </Adult>  </E>
+	<E>  <UserString>  Military             </UserString>  <DisplayString>  Military             </DisplayString>  <Living>  true  </Living>  <Adult> true   </Adult>  </E>
+	<E>  <UserString>  Moved                </UserString>  <DisplayString>  Moved                </DisplayString>  <Living>  true  </Living>  <Adult> false  </Adult>  </E>
+	<E>  <UserString>  Position             </UserString>  <DisplayString>  Position             </DisplayString>  <Living>  true  </Living>  <Adult> true   </Adult>  </E>
+	<E>  <UserString>  Residence            </UserString>  <DisplayString>  Residence            </DisplayString>  <Living>  true  </Living>  <Adult> false  </Adult>  </E>
+	<E>  <UserString>  Ship                 </UserString>  <DisplayString>  Ship                 </DisplayString>  <Living>  true  </Living>  <Adult> false  </Adult>  </E> 
+	<E>  <UserString>  Travel               </UserString>  <DisplayString>  Travel               </DisplayString>  <Living>  true  </Living>  <Adult> true   </Adult>  </E>
+	<E>  <UserString>  Voter                </UserString>  <DisplayString>  Voter                </DisplayString>  <Living>  true  </Living>  <Adult> true   </Adult>  </E>
+</EventTypes>
+
+
+<!-- =====================================================================================================================
+ Along with those found in the <EventTypes>, this option allows users to specify additional string text that will appear 
+ in your GEDCOM file for special uses. As an example, when defining parental associations (See User Guide), you should use 
+ the text that appears here under <AssociationRelationFather> and <AssociationRelationMother>.  If you prefer you could 
+ set these to 'pater' and 'mater' or you could also set them both to 'parent'.  These strings are not displayed in your
+ reports.
+===================================================================================================================== -->
+<UserStrings>
+ 	<AssociationRelationFather>	father				</AssociationRelationFather>
+	<AssociationRelationMother>	mother				</AssociationRelationMother>
+	<IndividualMarriageNumber>  married				</IndividualMarriageNumber> 
+	<HusbandMarriageNumber>		he married			</HusbandMarriageNumber>
+	<WifeMarriageNumber>		she married			</WifeMarriageNumber>
+	<CensusFullNameListed>		named				</CensusFullNameListed>
+	<CensusGivenNameOnly>		given				</CensusGivenNameOnly>
+	<CensusCountedOnly>			counted				</CensusCountedOnly>
+	<ClaimDisproved>			disproved			</ClaimDisproved>
+	<ClaimIgnore>				ignore				</ClaimIgnore>
+	<PageNone>					[none]				</PageNone>
+	<EventTypeVessel>			vessel				</EventTypeVessel>	
+</UserStrings>
+
+ 
+</Options>  

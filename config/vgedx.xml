@@ -1,0 +1,115 @@
+<!--
+	Gigatrees is written by Tim Forsythe and is available for download at http://timforsythe.com/gigatrees
+	Gigatrees is subject to the license agreements found on that page.
+//-->
+
+<Options>
+
+<!-- =====================================================================================================================
+ Project (default: Gigatrees)
+	specify the project to build.  There only two projects supported, "Gigatrees" and "VGedX".  VGedX uses the 
+	configuration fields located at the end of this file.
+	
+===================================================================================================================== -->
+ <Project>VGedX</Project>
+
+<!-- =====================================================================================================================
+ VGedX
+ 
+ VGedXReportTitle (default: empty)
+	the title of your VGedX Report
+	
+ VGedXReportFile (default: empty)
+	the filename root of your VGedX Report. do not include the extension, <Extension> is used for this
+	
+ IgnoreUnusedRecords [INFO] (default: false)	
+	do not report unreferenced logical records.  These are usually dead records and can be safely removed.
+ 
+ IgnoreMissingRecords [WARNING] (default: false)	
+	do not report referenced, but missing logical records.  This indicates that you have obsolete source 
+	references in your file.
+
+ IgnoreDuplicateRecords [ERROR] (default: false)	
+	do not report logical records having a duplicate logical record id
+
+ IgnoreUndefinedRecords [WARNING] (default: false)	
+	do not report undefined tags.  Gigatrees had added support for many undefined tags, other applications,
+	however, have not, so it might be nice to know which record fields might not be supported
+
+ IgnoreUserDefinedRecords [INFO] (default: false)	
+	do not report user defined tags.  user defined tags start with an underscore (i.e. _FILE).
+	Gigatrees had added support for many undefined tags, other applications, however, have not, so it 
+	might be nice to know which record fields might not be supported
+
+ IgnoreMaximumDataLimits [WARNING] (default: false)	
+	do not report tags that are longer than their maximum data length requirements.  Most applications 
+	including Gigatrees, ignore this requirement.
+	
+ IgnoreMinimumDataLimits [WARNING] (default: false)	
+	do not report tags that are shorter than their minimum data length requirements.  Most applications 
+	including Gigatrees, ignore this requirement.
+
+ IgnoreMissingIdReferences [ERROR] (default: false)	
+	do not report tags that expect a record id reference, but get none
+	
+ IgnoreIdReferenceSubstitutions [ERROR] (default: false)	
+	do not report tags that expect a record id reference but get data instead.  For instance the GEDCOM alias tag (ALIA)
+	is defined to expect a record id reference, but some applications use this to hold an alternate name in the for
+	of a textual string.
+
+ IgnoreExcessiveLevels [ERROR] (default: false)	 
+	do not report tags with level numbers exceeding 99.  Gigatrees will use these fine.
+ 
+ IgnoreTrailingData [WARNING] (default: false)	
+	do not report tags that include trailing data, that is data following a tag that should not have any, for instance
+	the NOTE logical record should not have data following its reference (i.e. 0 @N1@ NOTE this text should be on the following line)
+ 
+ IgnoreTrailingSpaces [WARNING] (default: false)	
+	do not report tags that include trailing spaces after the final tag. This violates the specification, but causes no harm
+	in doing so.
+ 
+ IgnoreUnpairedAmpersands [WARNING] (default: false)	
+	do not report tags that have unpaired ampersands.  This like email addresses should be entered with two ampersands (@@) instead
+	of just the one.  Unpaired ampersands confuse some applications into thinking that the single ampersands indicates a source reference.
+	Gigatrees does not care and handles these correctly.
+ 
+ IgnoreLevelNumberGaps [ERROR] (default: false)	
+	do not report tags that have level number gaps.  This should never be enabled.  a Level number gap indicates a major corruption to your data.
+ 
+ IgnoreTagOccurenceLimits [ERROR] (default: false)	
+	do not report tags that have more or less occurrences than is allowed.  Most applications 
+	including Gigatrees, will use or discard excessive occurrences. Too few occurrences of a critical field can lead to problems.  
+ 
+ IgnoreInvalidDataFormats [INFO] (default: false)	
+	do not report tags that have invalid data formats, specifically, VGedX only checks date formats.
+ 
+ IgnoreTagErrorDuplicates (default: false)	
+	do not report on records that have already been reported for another record.  This will minimize the error shown while still giving 
+	a complete picture of the type of errors found in your GEDCOM file.
+ 
+ SkipProcessingFailedRecords (default: false)	
+	do not report errors on the fields of a record already reporting an error.
+ 
+===================================================================================================================== -->
+ <VGedXReportTitle>                Gigatrees GEDCOM Validation Report </VGedXReportTitle>
+ <VGedXReportFile>                 report-validation                  </VGedXReportFile> 
+ <IgnoreUnusedRecords>             false                              </IgnoreUnusedRecords>
+ <IgnoreMissingRecords>            false                              </IgnoreMissingRecords>
+ <IgnoreDuplicateRecords>          false                              </IgnoreDuplicateRecords>
+ <IgnoreUndefinedRecords>          false                              </IgnoreUndefinedRecords>
+ <IgnoreUserDefinedRecords>        true                               </IgnoreUserDefinedRecords>
+ <IgnoreMaximumDataLimits>         false                              </IgnoreMaximumDataLimits>
+ <IgnoreMinimumDataLimits>         false                              </IgnoreMinimumDataLimits>
+ <IgnoreMissingIdReferences>       false                              </IgnoreMissingIdReferences>
+ <IgnoreIdReferenceSubstitutions>  false                              </IgnoreIdReferenceSubstitutions>
+ <IgnoreExcessiveLevels>           false                              </IgnoreExcessiveLevels>
+ <IgnoreTrailingData>              false                              </IgnoreTrailingData>
+ <IgnoreTrailingSpaces>            false                              </IgnoreTrailingSpaces>
+ <IgnoreUnpairedAmpersands>        false                              </IgnoreUnpairedAmpersands>
+ <IgnoreLevelNumberGaps>           false                              </IgnoreLevelNumberGaps>
+ <IgnoreTagOccurenceLimits>        false                              </IgnoreTagOccurenceLimits>
+ <IgnoreInvalidDataFormats>        false                              </IgnoreInvalidDataFormats>
+ <IgnoreTagErrorDuplicates>        false                              </IgnoreTagErrorDuplicates>
+ <SkipProcessingFailedRecords>     true                               </SkipProcessingFailedRecords>
+ 
+</Options>

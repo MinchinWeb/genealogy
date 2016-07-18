@@ -1,0 +1,55 @@
+<!--
+	Gigatrees is written by Tim Forsythe and is available for download at http://timforsythe.com/gigatrees
+	Gigatrees is subject to the license agreements found on that page.
+//-->
+
+<Options>
+
+<!-- =====================================================================================================================
+ Translations
+
+ LanguageCode (default: empty)
+	the language code associated with the language you want to translate the English display strings to.
+	For a list of supported languages and codes, see: http://msdn.microsoft.com/en-us/library/hh456380.aspx
+ 
+ LanguageFile (default: empty)
+	relative path to your input translations text file (read only).  The file includes all the display strings that 
+	Gigatrees generates. The file uses a semi-colon to separate the English string on the left and the Translation string 
+	on the right.  This can be used by international users (along the with strings found in the <Pages>, <Tags>, 
+	<TimelineEras> and <MilitaryEras> options) to translate their website into another language.  Text 
+	coming directly from your GEDCOM file is not translated (in most cases). English speakers can also use this option to 
+	change the text displayed.  Two files are included in the distribution, 'en.txt', which translates the strings into 
+	English and 'lang.txt', which is void of translations altogether.
+ 
+ TranslateFile (default: empty)
+	relative path to your output translations text file (write only). This file is used with <AutoTranslate> to save your 
+	translations.
+	
+ AutoTranslate (default: empty)
+	Set to "Microsoft" if you want to the free Microsoft Translate API.  Set to "Google" if you want to use the for fee
+	Google Translate API.  When enabled, Gigatrees will attempt to translate all English display strings found in the 
+	<LanguageFile> from English to the language associated with <LanguageCode> and then write the results to the 
+	<TranslateFile>.  It does this by querying the Translation API using YOUR authentication credentials (<TranslateId> 
+	and <TranslateKey>). Once a string is translated and saved, it will not be queried again, therefore you must start 
+	with file missing any translations you want retrieved.  The distribution includes a file (lang.txt) without any 
+	translations that you can use to start with.  Querying will abort on the first failure.
+ 
+ TranslateId (default: empty)
+	YOUR translation service authentication id.  You must sign up and create an application to get an id.
+	Microsoft Ref: https://datamarket.azure.com/developer/applications/
+	Google Ref: Does not apply
+ 
+ TranslateKey (default: empty)
+	YOUR translation service authentication key or secret phrase. You must sign up and create an application to get a key.
+	Microsoft Ref: https://datamarket.azure.com/developer/applications/
+	Google Ref: https://console.cloud.google.com/apis/credentials
+
+===================================================================================================================== -->
+ <LanguageCode>  en     </LanguageCode>
+ <LanguageFile>  en.txt </LanguageFile>
+ <TranslateFile> en.txt </TranslateFile>
+ <AutoTranslate>        </AutoTranslate> 
+ <TranslateId>          </TranslateId>
+ <TranslateKey>         </TranslateKey>
+ 
+</Options>  

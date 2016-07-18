@@ -1,0 +1,13 @@
+<!--
+	Gigatrees is written by Tim Forsythe and is available for download at http://timforsythe.com/gigatrees
+	Gigatrees is subject to the license agreements found on that page.
+//-->
+
+<Options>
+
+<!-- =====================================================================================================================
+ Enable the Population Heatmap only
+===================================================================================================================== -->
+<Pages><P> <Map> <Menu>  </Menu> <Title> Gigatrees Population Distribution Map </Title> <File> report-splatter </File> <Enable> true  </Enable> </Map> </P></Pages>
+
+</Options>
