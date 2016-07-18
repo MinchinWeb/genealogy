@@ -224,6 +224,7 @@ _extras/
 missing-images.txt
 adamconf.py
 cache/
+logs/
 
 *.sublime-workspace
 

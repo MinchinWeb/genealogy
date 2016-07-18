@@ -65,10 +65,12 @@ HERE_FOLDER = Path(os.path.dirname(os.path.realpath(__file__)))
 WORKING_FOLDER = HERE_FOLDER  # current working directory
 CONTENT_FOLDER = HERE_FOLDER / 'content' / 'pages'
 adam_zip = ''               # set later
+LOG_FOLDER = HERE_FOLDER / 'logs'
+MISSING_IMAGES_LOG = LOG_FOLDER / ('missing-images-' + TODAY_STR + '.txt')
 tracking_filename = ''      # set later
-ERROR_COLOUR = colorama.Fore.RED
-WARNING_COLOUR = colorama.Fore.YELLOW
-RESET_COLOUR = colorama.Fore.RESET
+ERROR_COLOUR = colorama.Fore.RED + colorama.Style.BRIGHT
+WARNING_COLOUR = colorama.Fore.YELLOW + colorama.Style.BRIGHT
+RESET_COLOUR = colorama.Fore.RESET + colorama.Style.RESET_ALL
 ERROR_CODE = '[{}ERRO{}]'.format(ERROR_COLOUR, RESET_COLOUR)
 WARNING_CODE = '[{}WARN{}]'.format(WARNING_COLOUR, RESET_COLOUR)
 
@@ -158,9 +160,9 @@ def check_images():
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Checking images.")
 
-    gedcom_file = open(str(MY_GEDCOM), 'r', encoding='utf-8')
-    subject = gedcom_file.read()
-    gedcom_file.close()
+    subject = ''
+    with open(str(MY_GEDCOM), 'r', encoding='utf-8') as gedcom_file:
+        subject = gedcom_file.read()
 
     missing_matches = []
     all_matches = []
@@ -171,11 +173,12 @@ def check_images():
         all_matches.append(match)
 
     all_matches = sorted(set(all_matches))  # remove duplicates and sort
+    # TO-DO: move this to run in parallel
     for match in all_matches:
         r = requests.head(URL_ROOT + "/" + str(match[0]), allow_redirects=True)
         if not r.status_code == requests.codes.ok:
             mytext = wrapper.fill("missing {} -> {}".format(str(r.status_code), match[0]))
-            print(pattern_bad.sub(Fore.RED + Style.BRIGHT + "missing " + Style.RESET_ALL, mytext))
+            print(pattern_bad.sub("{}missing{} ".format(WARNING_COLOUR, RESET_COLOUR), mytext))
             missing_matches.append(match[0])
         else:
             matches += 1
@@ -187,24 +190,23 @@ def check_images():
         q_add_images = minchin.text.query_yes_no_all("{}{} missing images. Add them?".format(INDENT, str(len(missing_matches))), default="no")
         if q_add_images == 2:  # all
             for image in missing_matches:
-                addimage(image)
+                addimage(image)  # TO-DO: implement this!
         elif q_add_images == 1:  # yes
+            print()  # add blank line
             for image in missing_matches:
-                if minchin.text.querry_yes_no("{}Add {}?".format(INDENT*2, image), default="yes"):
-                    addimage(image)
-                    # TO-DO: implement this!
+                if minchin.text.query_yes_no("{}Add {}?".format(INDENT, image), default="yes"):
+                    addimage(image)  # TO-DO: implement this!
                 else:
                     pass
         else:  # no
             pass
 
         # write missing images to a file
-        f = open('missing-images.txt', 'w', encoding='utf-8')
-        f.write("Genealogy Uploader, v.{}\n".format(str(__version__)))
-        f.write('{}\n\n'.format(MY_GEDCOM))
-        for missing in missing_matches:
-            f.write('{}\n'.format(missing))
-        f.close()
+        with open(str(MISSING_IMAGES_LOG), 'w', encoding='utf-8') as f:
+            f.write("Genealogy Uploader, v.{}\n".format(str(__version__)))
+            f.write('{}\n== MISSING IMAGES ++\n\n'.format(MY_GEDCOM))
+            for missing in missing_matches:
+                f.write('{}\n'.format(missing))
 
 
 @task
