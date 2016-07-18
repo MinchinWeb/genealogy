@@ -1,0 +1,178 @@
+<!--
+	Gigatrees is written by Tim Forsythe and is available for download at http://timforsythe.com/gigatrees
+	Gigatrees is subject to the license agreements found on that page.
+//-->
+
+<!-- Gigatrees options as specified for Minchin.ca -->
+
+<Options>
+
+ <EnableNavbarFixed>  false  </EnableNavbarFixed> 
+ <EnableNavbarFloat>  false  </EnableNavbarFloat>
+
+ <AlternateNamesFile> config\names.txt  </AlternateNamesFile>
+ <Extension>          HTML       </Extension>     
+ <LinkExtension>      true       </LinkExtension> 
+
+ <Author>      Wm. Minchin             </Author>                
+ <Domain>  http://minchin.ca/genealogy </Domain> 
+
+<GeoDataSqliteFile>C:\bin\gigatrees\gigatrees.sqlite</GeoDataSqliteFile>
+<GeonamesUserId>  minchinweb         </GeonamesUserId>
+
+ <LanguageCode>  en     </LanguageCode>
+ <LanguageFile>  config\en.txt </LanguageFile>
+ <TranslateFile> config\en.txt </TranslateFile>
+
+<RemoveUnusedRecords>           false </RemoveUnusedRecords>
+<RemoveUnusedSourceRecordsOnly> true  </RemoveUnusedSourceRecordsOnly>
+<Privatize>                     true </Privatize> 
+<HideLiving>                    true </HideLiving>
+<EstimateBirthdates>            true  </EstimateBirthdates>
+<IndicateCertaintyAssessments>  true  </IndicateCertaintyAssessments>
+
+<EnableProfileMaps>                     true  </EnableProfileMaps>
+<IndicateUnassociatedAncestorsInCharts> false </IndicateUnassociatedAncestorsInCharts>
+<CalculateKinshipUsingCanonLaw>         false </CalculateKinshipUsingCanonLaw>
+<SpecialPageHandler>                    false </SpecialPageHandler>
+<ForceThumbnails>                       false </ForceThumbnails>
+
+<MinChildBearingAge>            15        </MinChildBearingAge>
+<MaxChildBearingAge>            50        </MaxChildBearingAge>
+<MaxChildBaptismAge>             5        </MaxChildBaptismAge>
+<MinMarriageAge>                14        </MinMarriageAge>
+<MaxWifeMarriageAge>            50        </MaxWifeMarriageAge>
+<MaxAgeBetweenSpouses>          30        </MaxAgeBetweenSpouses>
+<MinFlourishedAge>              21        </MinFlourishedAge>
+<MaxFlourishedAge>              70        </MaxFlourishedAge>
+<MaxLifeSpan>                  100        </MaxLifeSpan>
+<MaxAgeEventError>               2        </MaxAgeEventError>
+<DeadIfMarriedBefore>         1940        </DeadIfMarriedBefore>
+<DeadIfBornBefore>            1920        </DeadIfBornBefore>
+<ProhibitedDegreeOfKinship>     4         </ProhibitedDegreeOfKinship>
+
+<Centar> I9693 </Centar>
+<EnableProfileCensusTables> true </EnableProfileCensusTables>
+<CensusYears>               1790,1800,1810,1820,1830,1840,1850,1860,1870,1880,1900,1910,1920,1930,1940 </CensusYears>
+
+<GList>                                                    I9693   </GList>
+<EnableProfileGenerationLists>                             true    </EnableProfileGenerationLists>
+<RevertGenerationLists>                                    true   </RevertGenerationLists>
+<IndicatePersonsWithUnassociatedParentsInGenerationLists>  false   </IndicatePersonsWithUnassociatedParentsInGenerationLists>
+
+<DList>
+    <DL>  <Anchor> </Anchor><Root> </Root>  </DL>
+    <DL>  <Anchor> </Anchor><Root> </Root>  </DL>
+</DList>
+
+<UseEstimatedBirthdatesInDataConsistencyReport>                             false </UseEstimatedBirthdatesInDataConsistencyReport>             
+<ShowDatePhrasesInDataConsistencyReport>                                    true  </ShowDatePhrasesInDataConsistencyReport>                    
+<ShowOnlyImpossibilitiesInDataConsistencyReport>                            false </ShowOnlyImpossibilitiesInDataConsistencyReport>            
+<ShowPersonsWithUnsupportedClaimsInDataConsistencyReport>                   false </ShowPersonsWithUnsupportedClaimsInDataConsistencyReport>   
+<ShowPersonsWithUndocumentedParentsInDataConsistencyReport>                 false </ShowPersonsWithUndocumentedParentsInDataConsistencyReport> 
+<ShowPersonsWithNoParentsInDataConsistencyReport>                           false </ShowPersonsWithNoParentsInDataConsistencyReport>           
+<ShowPersonsMissingOneParentInDataConsistencyReport>                        false </ShowPersonsMissingOneParentInDataConsistencyReport>        
+<ShowEstimatedDatesInDataConsistencyReport>                                 false </ShowEstimatedDatesInDataConsistencyReport>                 
+<ShowUnmappableLocationsInDataConsistencyReport>                            false </ShowUnmappableLocationsInDataConsistencyReport>            
+<IgnoreDuplicateChildrenWithNonOverlappingLifeSpansInDataConsistencyReport> true </IgnoreDuplicateChildrenWithNonOverlappingLifeSpansInDataConsistencyReport>
+
+<UseEstimatedBirthdatesInTimeline> false   </UseEstimatedBirthdatesInTimeline>
+<UseQualifiedDatesInTimeline>      false   </UseQualifiedDatesInTimeline>
+<TimelineEras>
+	<E>  <Name>  B.C.          </Name>  <StartYear>  -10000 </StartYear>  </E>
+	<E>  <Name>  1st Century   </Name>  <StartYear>  0      </StartYear>  </E>
+	<E>  <Name>  2nd Century   </Name>  <StartYear>  100    </StartYear>  </E>
+	<E>  <Name>  3rd Century   </Name>  <StartYear>  200    </StartYear>  </E>
+	<E>  <Name>  4th Century   </Name>  <StartYear>  300    </StartYear>  </E>
+	<E>  <Name>  5th Century   </Name>  <StartYear>  400    </StartYear>  </E>
+	<E>  <Name>  6th Century   </Name>  <StartYear>  500    </StartYear>  </E>
+	<E>  <Name>  7th Century   </Name>  <StartYear>  600    </StartYear>  </E>
+	<E>  <Name>  8th Century   </Name>  <StartYear>  700    </StartYear>  </E>
+	<E>  <Name>  9th Century   </Name>  <StartYear>  800    </StartYear>  </E>
+	<E>  <Name>  10th Century  </Name>  <StartYear>  900    </StartYear>  </E>
+	<E>  <Name>  11th Century  </Name>  <StartYear>  1000   </StartYear>  </E>
+	<E>  <Name>  12th Century  </Name>  <StartYear>  1100   </StartYear>  </E>
+	<E>  <Name>  13th Century  </Name>  <StartYear>  1200   </StartYear>  </E>
+	<E>  <Name>  14th Century  </Name>  <StartYear>  1300   </StartYear>  </E>
+	<E>  <Name>  15th Century  </Name>  <StartYear>  1400   </StartYear>  </E>
+	<E>  <Name>  16th Century  </Name>  <StartYear>  1500   </StartYear>  </E>
+	<E>  <Name>  17th Century  </Name>  <StartYear>  1600   </StartYear>  </E>
+	<E>  <Name>  18th Century  </Name>  <StartYear>  1700   </StartYear>  </E>
+	<E>  <Name>  19th Century  </Name>  <StartYear>  1800   </StartYear>  </E>
+	<E>  <Name>  20th Century  </Name>  <StartYear>  1900   </StartYear>  </E>
+	<E>  <Name>  21st Century  </Name>  <StartYear>  2000   </StartYear>  </E>
+</TimelineEras>
+
+<MilitaryEras>
+	<E>  <Name> Early Battles                             </Name>  <StartYear>  0     </StartYear>  </E>
+	<E>  <Name> More Early Battles                        </Name>  <StartYear>  1065  </StartYear>  </E>
+	<E>  <Name> Battle of Hastings                        </Name>  <StartYear>  1066  </StartYear>  </E>
+	<E>  <Name> Late Battles                              </Name>  <StartYear>  1067  </StartYear>  </E>
+	<E>  <Name> Pre Colonial Era                          </Name>  <StartYear>  1600  </StartYear>  </E>
+	<E>  <Name> Early Colonial Era                        </Name>  <StartYear>  1633  </StartYear>  </E>
+	<E>  <Name> Pequot War Era                            </Name>  <StartYear>  1634  </StartYear>  </E>
+	<E>  <Name> Middle Colonial Era                       </Name>  <StartYear>  1638  </StartYear>  </E>
+	<E>  <Name> King Philip's War Era                     </Name>  <StartYear>  1675  </StartYear>  </E>
+	<E>  <Name> Late Colonial Era                         </Name>  <StartYear>  1677  </StartYear>  </E>
+	<E>  <Name> American Revolution Era                   </Name>  <StartYear>  1775  </StartYear>  </E>
+	<E>  <Name> Post American Revolution Era              </Name>  <StartYear>  1783  </StartYear>  </E>
+	<E>  <Name> War of 1812 Era                           </Name>  <StartYear>  1812  </StartYear>  </E>
+	<E>  <Name> Pre U.S. Civil War Era                    </Name>  <StartYear>  1815  </StartYear>  </E>
+	<E>  <Name> U.S. Civil War Era                        </Name>  <StartYear>  1861  </StartYear>  </E>
+	<E>  <Name> Post U.S. Civil War Era                   </Name>  <StartYear>  1865  </StartYear>  </E>
+	<E>  <Name> World War I Era                           </Name>  <StartYear>  1914  </StartYear>  </E>
+	<E>  <Name> Depression Era                            </Name>  <StartYear>  1919  </StartYear>  </E>
+	<E>  <Name> World War II Era                          </Name>  <StartYear>  1939  </StartYear>  </E>
+	<E>  <Name> Post World War II Era                     </Name>  <StartYear>  1946  </StartYear>  </E>
+	<E>  <Name> Korean War Era                            </Name>  <StartYear>  1950  </StartYear>  </E>
+	<E>  <Name> The 50s Era                               </Name>  <StartYear>  1953  </StartYear>  </E>
+	<E>  <Name> Vietnam War Era                           </Name>  <StartYear>  1960  </StartYear>  </E>
+	<E>  <Name> The 70s Era                               </Name>  <StartYear>  1975  </StartYear>  </E>
+	<E>  <Name> Grenada Intervention Era                  </Name>  <StartYear>  1982  </StartYear>  </E>
+	<E>  <Name> The 80s Era                               </Name>  <StartYear>  1983  </StartYear>  </E>
+	<E>  <Name> Panama Invasion Era                       </Name>  <StartYear>  1988  </StartYear>  </E>
+	<E>  <Name> Persian Gulf War Era                      </Name>  <StartYear>  1989  </StartYear>  </E>
+	<E>  <Name> Post Persian Gulf War Era                 </Name>  <StartYear>  1991  </StartYear>  </E>
+	<E>  <Name> Bosnia and Herzegovina Intervention Era   </Name>  <StartYear>  1995  </StartYear>  </E>
+	<E>  <Name> Pre Invasion of Afghanistan and Iraq Era  </Name>  <StartYear>  1996  </StartYear>  </E>
+	<E>  <Name> Invasion of Afghanistan and Iraq Era      </Name>  <StartYear>  2001  </StartYear>  </E>
+	<E>  <Name> Post Invasion of Afghanistan and Iraq Era </Name>  <StartYear>  2010  </StartYear>  </E>
+</MilitaryEras>
+
+<Tags>
+    <!-- GEDCOM specific tags -->
+    <T>  <Name>  WAC     </Name>  <DisplayString>  LDS Initiory                                 </DisplayString>  </T>
+    <!-- Vendor compliant user defined tags -->
+	
+    	<!-- start with an underscore -->
+
+    <!-- Vendor non-compliant user defined tags -->
+</Tags>
+
+<EventTypes>
+	<!-- <E>  <UserString>  Anecdote             </UserString>  <DisplayString>  Anecdote             </DisplayString>  <Living>  false </Living>  <Adult> false  </Adult>  </E> -->
+</EventTypes>
+
+<Pages>
+    <P>  <Profiles>                                                                            <File> profile     </File> <Enable> true  </Enable> </Profiles>    </P>
+    <P>  <Index>                                  <Title> Home                        </Title> <File> index       </File> <Enable> false  </Enable> </Index>      </P>  
+    <P>  <Kinships>                               <Title> Kinship                     </Title> <File> kinship     </File> <Enable> true  </Enable> </Kinships>       </P>
+    <P>  <Names>       <Menu> Names       </Menu> <Title> Names                       </Title> <File> names       </File> <Enable> true  </Enable> </Names>       </P> 
+    <P>  <Sources>     <Menu> Sources     </Menu> <Title> Sources                     </Title> <File> sources     </File> <Enable> true  </Enable> </Sources>     </P> 
+    <P>  <Articles>    <Menu> Articles    </Menu> <Title> Articles                    </Title> <File> articles    </File> <Enable> true  </Enable> </Articles>    </P> 
+    <P>  <Places>      <Menu> Locations   </Menu> <Title> Locations                   </Title> <File> places      </File> <Enable> true  </Enable> </Places>      </P>
+    <P>  <Map>         <Menu> Map         </Menu> <Title> Population Distribution Map </Title> <File> map         </File> <Enable> true  </Enable> </Map>         </P> 
+    <P>  <Timelines>   <Menu> Timelines   </Menu> <Title> Timelines                   </Title> <File> timelines   </File> <Enable> true  </Enable> </Timelines>   </P>
+	<P>  <Military>    <Menu> Soldiers    </Menu> <Title> Soldiers                    </Title> <File> soldiers    </File> <Enable> true  </Enable> </Military>    </P>
+	<P>  <Immigrants>  <Menu> Immigrants  </Menu> <Title> Immigrants                  </Title> <File> immigrants  </File> <Enable> true  </Enable> </Immigrants>  </P>
+	<P>  <Nobility>    <Menu> Nobility    </Menu> <Title> Nobility                    </Title> <File> nobility    </File> <Enable> true  </Enable> </Nobility>    </P>
+    <P>  <Photos>      <Menu> Photos      </Menu> <Title> Photos                      </Title> <File> photos      </File> <Enable> true  </Enable> </Photos>      </P>
+    <P>  <Descendants> <Menu> Descendants </Menu> <Title> Descendant List             </Title> <File> descendants </File> <Enable> true  </Enable> </Descendants> </P> 
+    <P>  <Census>      <Menu> Census      </Menu> <Title> Census Table Report         </Title> <File> centars     </File> <Enable> true </Enable> </Census>      </P> 
+    <P>  <Generations> <Menu> Generations </Menu> <Title> Generation List             </Title> <File> ancestors   </File> <Enable> true </Enable> </Generations> </P> 
+    <P>  <Bonkers>     <Menu> Bonkers     </Menu> <Title> Data Sanity Report          </Title> <File> bonkers     </File> <Enable> true  </Enable> </Bonkers>     </P>
+    <P>  <Stats>       <Menu> Statistics  </Menu> <Title> Statistics                  </Title> <File> statistics  </File> <Enable> true  </Enable> </Stats>       </P>
+    <P>  <Updates>     <Menu> Updates     </Menu> <Title> Updates                     </Title> <File> updates     </File> <Enable> true  </Enable> </Updates>     </P> 
+</Pages>
+
+</Options>

@@ -1,0 +1,472 @@
+10th Century ; 10th Century
+11th Century ; 11th Century
+12th Century ; 12th Century
+13th Century ; 13th Century
+14th Century ; 14th Century
+15th Century ; 15th Century
+16th Century ; 16th Century
+17th Century ; 17th Century
+18th Century ; 18th Century
+19th Century ; 19th Century
+1st Century ; 1st Century
+20th Century ; 20th Century
+21st Century ; 21st Century
+2nd Century ; 2nd Century
+3rd Century ; 3rd Century
+4th Century ; 4th Century
+5th Century ; 5th Century
+6th Century ; 6th Century
+7th Century ; 7th Century
+8th Century ; 8th Century
+9th Century ; 9th Century
+About ; About
+Abstract ; Abstract
+Address ; Address
+Adoption ; Adoption
+Adult Christening ; Adult Christening
+Alias ; Alias
+Also Known As ; Also Known As
+Alternate Father ; Alternate Father
+Alternate Mother ; Alternate Mother
+American Revolution Era ; American Revolution Era
+Ancestors Distribution Map ; Ancestors Distribution Map
+And More ; and more
+Anecdote ; Anecdote
+Annulment ; Annulment
+Apr. ; Apr
+April ; April
+Arrival ; Arrival
+Article References ; Article References
+Articles ; Articles
+Associated Father ; Father
+Associated Mother ; Mother
+Association ; Association
+Associations ; Associations
+Attribute ; Attribute
+Attributes ; Attributes
+Aug. ; Aug
+August ; August
+Author ; Author
+Average Ages By Group ; Average Ages by Group
+Average Life Span ; Average Life Span
+Average Life Spans By Gender ; Average Life Spans By Gender
+B.C. ; B.C.
+B.C.E ; B.C.E
+Baptism ; Baptism
+Barmitzva ; Barmitzva
+Basmitzva ; Basmitzva
+Battle of Hastings ; Battle of Hastings
+Between ; Between
+Birth ; Birth
+Blessing ; Blessing
+Bonkers ; Bonkers
+Bosnia and Herzegovina Intervention Era ; Bosnia and Herzegovina Intervention Era
+British Monarchs Calendar ; Monarch
+Built By ; Built by
+Burial ; Burial
+Call Number ; Call Number
+Caste Name ; Caste Name
+Cause of Death ; Cause of Death
+Census ; Census
+Census (US Federal) ; Census (US Federal)
+Census (US State) ; Census (US State)
+Census Table ; Census Table
+Census Table Report ; Census Table Report
+Century ; Century
+Chart ; Chart
+Charter ; Charter
+Child ; Child
+Children ; children
+Christening ; Christening
+Church ; Church
+City ; City
+Claims ; Claims
+Codicil ; Codicil
+Confirmation ; Confirmation
+Continuation tag missing ; Continuation tag missing
+Coordinates ; Coordinates
+Copy ; Copy
+Counted Only ; Counted Only, No Name Given
+Country ; Country
+County ; County
+Cousin ; Cousin
+Cremation ; Cremation
+DNA ; DNA
+Data Sanity Report ; Data Sanity Report
+Data extension tag detected ; Data extension tag detected
+Data missing ; Data missing
+Date ; Date
+Date phrase ; Date phrase
+Death ; Death
+Dec. ; Dec
+Deceased ; Deceased
+December ; December
+Degree ; Degree
+Departure ; Departure
+Depression Era ; Depression Era
+Derivative ; Derivative
+Descendant List ; Descendant List
+Descendants ; Descendants
+Destination ; Destination
+Direct Evidence ; Evidence: Direct evidence for a claim
+Distribution of Claims ; Distribution of Claims
+District ; District
+Divorce ; Divorce
+Divorce Filed ; Divorce Filed
+Documented Claims ; Documented Claims
+Duplicate record found ; Duplicate record found
+Early Battles ; Early Battles
+Early Colonial Era ; Early Colonial Era
+Edition ; Edition
+Education ; Education
+Elected ; Elected
+Email Address ; Email Address
+Emigration ; Emigration
+Employment ; Employment
+Encoding ; Encoding
+Engagement ; Engagement
+Event ; Event
+Excommunicated ; Excommunicated
+Excommunication ; Excommunication
+External URLs ; External URLs
+Eye Color ; Eye Color
+Facebook ; Facebook
+Fact ; Fact
+Families ; Families
+Families Having Swapped Spouses ; Families Having Swapped Spouses
+Family ; Family
+Fax ; FAX
+Feb. ; Feb
+February ; February
+Female Gender ; Female
+File ; File
+First Communion ; First Communion
+First Marriage For Men ; First Marriage (Men)
+First Marriage For Women ; First Marriage (Women)
+Flourished ; Flourished
+Flourishing ; Flourishing
+Freeman ; Freeman
+French Republic Calendar ; French Republic
+Full Name ; Full Name
+Full Title ; Full Title
+Funeral ; Funeral
+GEDCOM encoding ANSI detected ; GEDCOM encoding ANSI detected
+GEDCOM encoding Non-ANSI detected ; GEDCOM encoding Non-ANSI detected
+GEDCOM encoding UTF-16 BE detected ; GEDCOM encoding UTF-16 BE detected
+GEDCOM encoding UTF-16 LE detected ; GEDCOM encoding UTF-16 LE detected
+GEDCOM encoding UTF-8 detected ; GEDCOM encoding UTF-8 detected
+GEDCOM encoding not detected ; GEDCOM encoding not detected
+GEDCOM version 5.5 detected ; GEDCOM version 5.5 detected
+GEDCOM version 5.5.1 detected ; GEDCOM version 5.5.1 detected
+GEDCOM version 5.6 detected ; GEDCOM version 5.6 detected
+Gender ; Gender
+Generation ; Generation
+Generation List ; Generation List
+Generations ; Generations
+Given Name Only ; Given Name Only
+Graduation ; Graduation
+Grantee ; Grantee
+Grantor ; Grantor
+Gregorian Calendar ; Gregorian
+Grenada Intervention Era ; Grenada Intervention Era
+HIDDEN ; HIDDEN
+Hair Color ; Hair Color
+Hebrew Calendar ; Hebrew
+Height ; Height
+Home ; Home
+ID missing ; ID missing
+ID not formed correctly ; ID not formed correctly
+ID reference missing ; ID reference missing
+ID reference not formed correctly ; ID reference not formed correctly
+ID reference substitution ; ID reference substitution
+ID trailing space missing ; ID trailing space missing
+Image ; Image
+Immigrants ; Immigrants
+Immigration ; Immigration
+Impossible Claims ; Impossible Claims
+Indirect Evidence ; Evidence: Indirect evidence supports this conclusion
+Individuals ; Individuals
+Initiated ; Initiated
+Insufficient data ; Insufficient data
+Invalid ID length ; Invalid ID length
+Invalid ID reference length ; Invalid ID reference length
+Invalid ID reference type ; Invalid ID reference type
+Invalid line length ; Invalid line length
+Invalid tag length ; Invalid tag length
+Invasion of Afghanistan and Iraq Era ; Invasion of Afghanistan and Iraq Era
+Jan. ; Jan
+January ; January
+Jul. ; Jul
+Julian Calendar ; Julian
+July ; July
+Jun. ; Jun
+June ; June
+King Philip's War Era ; King Philip's War Era
+Kinship ; Kinship
+Kinship Degree ; Kinship Degree
+Kinship Lines ; Kinship Lines
+Korean War Era ; Korean War Era
+LDS Baptism ; LDS Baptism
+LDS Child Sealing ; LDS Child Sealing
+LDS Confirmation ; LDS Confirmation
+LDS Endowment ; LDS Endowment
+LDS Initiory ; LDS Ititiory
+LDS Spouse Sealing ; LDS Spouse Sealing
+Last Modified ; Last Modified
+Late Battles ; Late Battles
+Late Colonial Era ; Late Colonial Era
+Latitude ; Latitude
+Leased ; Leased
+Level number gap ; Level number gap
+Linked To ; Linked To
+Locations ; Locations
+Longitude ; Longitude
+Male Gender ; Male
+Map ; Map
+Mar. ; Mar
+March ; March
+Marriage ; Marriage
+Marriage Bann ; Marriage Bann
+Marriage Contract ; Marriage Contract
+Marriage End Status ; Marriage End Status
+Marriage License ; Marriage License
+Married ; Married
+Married Name ; Married Name
+Maximum data length exceeded ; Maximum data length exceeded
+May ; May
+Medical Condition ; Medical Condition
+Memoir ; Memoir
+Men ; Men
+Men Counted ; Men Counted
+Middle Colonial Era ; Middle Colonial Era
+Military ; Military
+Mission ; Mission
+More ; More
+More Early Battles ; More Early Battles
+Most Common Surnames ; Most Common Surnames
+Most Popular Boys Names ; Most Popular Boys Names
+Most Popular Girls Names ; Most Popular Girls Names
+Most Recent Common Ancestor ; Most Recent Common Ancestor
+Mothers Having Children Past the Age of ; Mothers Having Children Past the Age of
+Moved ; Moved
+Name ; Name
+Name Qualifier ; Name Qualifier
+Name Used ; Name Used
+Names ; Names
+National ID Number ; National ID Number
+Nationality ; Nationality
+Naturalization ; Naturalization
+Negative ; Negative
+Never Married ; Never Married
+Nickname ; Nickname
+No Recent Updates Found ; No Recent Updates Found
+Nobility ; Nobility
+Nobility Titles ; Nobility Titles
+None ; None
+Not ; Non-
+Note ; Note
+Note References ; Note References
+Notes ; Notes
+Nov. ; Nov
+November ; November
+Number Of Claims Documented ; Number of Claims Documented
+Number of Children ; Number of Children
+Number of Marriages ; Number of Marriages
+Occupation ; Occupation
+Oct. ; Oct
+October ; October
+Ordination ; Ordination
+Origin ; Origin
+Original ; Original
+Original Description ; Original Description
+Original Location Description Missing ; original location description missing
+Other Events ; Other Events
+Panama Invasion Era ; Panama Invasion Era
+Parent ; Parent
+Parents ; Parents
+Pequot War Era ; Pequot War Era
+Persian Gulf War Era ; Persian Gulf War Era
+Persons ; Persons
+Persons Baptized After Being Buried ; Persons Baptized After Being Buried
+Persons Baptized After Being Married ; Persons Baptized After Being Married
+Persons Baptized After They Died ; Persons Baptized After They Died
+Persons Baptized Past the Age of ; Persons Baptized Past the Age of
+Persons Born After Being Buried ; Persons Born After Being Buried
+Persons Born After One of Their Parents Died ; Persons Born After One of Their Parents Died
+Persons Born After One of Their Parents Was Buried ; Persons Born After One of Their Parents Was Buried
+Persons Born After Their Children ; Persons Born After Their Children
+Persons Born After They Died ; Persons Born After They Died
+Persons Born After They Were Baptized ; Persons Born After They Were Baptized
+Persons Born After They Were Married ; Persons Born After They Were Married
+Persons Buried Before Having Children ; Persons Buried Before Having Children
+Persons Counted ; Persons Counted
+Persons Died After Being Buried ; Persons Died After Being Buried
+Persons Died Before Having Children ; Persons Died Before Having Children
+Persons Having Children Before the Age of ; Persons Having Children Before the Age of
+Persons Having Similarly Named Children ; Persons Having Similarly Named Children
+Persons Having Unknown Genders ; Persons Having Unknown Genders
+Persons Having Unsupported Claims ; Persons Having Unsupported Claims
+Persons Having a Degree of Kinship of ; Persons Having a Degree of Kinship of
+Persons Having a Non-biological Parent ; Persons Having a Non-biological Parent
+Persons Having an Ancestral Loop ; Persons Having an Ancestral Loop
+Persons Having only One Parent ; Persons Having only One Parent
+Persons Living Past the Age of ; Persons Living Past the Age of
+Persons Married After Being Buried ; Persons Married After Being Buried
+Persons Married After They Died ; Persons Married After They Died
+Persons Married Before the Age of ; Persons Married Before the Age of
+Persons Whose Birth Dates Could Not Be Estimated ; Persons Whose Birth Dates Could Not Be Estimated
+Persons Whose Birth Dates Have Been Estimated ; Persons Whose Birth Dates Have Been Estimated
+Persons With ; Persons With
+Persons With Multiple Parents ; Persons With Multiple Parents
+Persons With Uncertain Parents ; Persons With Uncertain Parents
+Persons Without Parents ; Persons Without Parents
+Persons at Least ; Persons at Least
+Persons with Invalid Dates ; Persons with Invalid Dates
+Photos ; Photos
+Physical Description ; Physical Description
+Place ; Place
+Population Distribution Map ; Population Distribution Map
+Position ; Position
+Post American Revolution Era ; Post American Revolution Era
+Post Invasion of Afghanistan and Iraq Era ; Post Invasion of Afghanistan and Iraq Era
+Post Persian Gulf War Era ; Post Persian Gulf War Era
+Post U.S. Civil War Era ; Post U.S. Civil War Era
+Post World War II Era ; Post World War II Era
+Pre Colonial Era ; Pre Colonial Era
+Pre Invasion of Afghanistan and Iraq Era ; Pre Invasion of Afghanistan and Iraq Era
+Pre U.S. Civil War Era ; Pre U.S. Civil War Era
+Primary ; Primary
+Probate ; Probate
+Processing error ; Processing error
+Product ; Product
+Profile ; Profile
+Property ; Property
+Publisher ; Publisher
+Record not referenced ; Record not referenced
+Reference ; Reference
+Referenced record is missing ; Referenced record is missing
+Referrers ; Referrers
+Relationship ; Relationship
+Relationships ; Relationships
+Religion ; Religion
+Removed ; removed
+Repositories ; Repositories
+Repository ; Repository
+Residence ; Residence
+Retirement ; Retirement
+Secondary ; Secondary
+Self ; Self
+Sep. ; Sep
+Separation ; Separation
+September ; September
+Server Description ; Server Description
+Shared Note ; Shared Note
+Ship ; Ship
+Short Title ; Short Title
+Sibling ; Sibling
+Skin Color ; Skin Color
+Skipped processing record ; Skipped processing record
+Social Security Number ; Social Security Number
+Soldiers ; Soldiers
+Source Bibliography ; Bibliography
+Source Category ; Source Category
+Source Citations ; Source Citations
+Source Detail ; Detail
+Source Media ; Media
+Source Page ; Page
+Source Reference ; Source Reference
+Source Reference Quality ; Source Reference Quality
+Source References ; Source References
+Source Type ; Type
+Sources ; Sources
+Spouse ; Spouse
+State ; State
+Statistics ; Statistics
+Status ; Status
+Stillborn ; Stillborn
+Stopped processing record ; Stopped processing record
+Street ; Street
+Submitted By ; Submitted By
+Summary ; Summary
+Tertiary ; Tertiary
+Text ; Text
+The 50s Era ; The 50s Era
+The 70s Era ; The 70s Era
+The 80s Era ; The 80s Era
+Through ; Through
+Timeline ; Timeline
+Timelines ; Timelines
+Title ; Title
+Titles ; Titles
+Toggle Markers ; Toggle Markers
+Too few occurrences of tag ; Too few occurrences of tag
+Too many occurrences of tag ; Too many occurrences of tag
+Total Ancestors ; Total Ancestors
+Total Claims ; Total Claims
+Total Impossibilities ; Total Impossibilities
+Total Improbabilities ; Total Improbabilities
+Total Records Processed ; Total Records Processed
+Trailing data not expected ; Trailing data not expected
+Trailing spaces not expected ; Trailing spaces not expected
+Transcript ; Transcript
+Travel ; Travel
+U.S. Civil War Era ; U.S. Civil War Era
+Undefined record found ; Undefined record found
+Unexpected ID reference ; Unexpected ID reference
+Unknown ; Unknown
+Unknown Calendar ; Unknown Calendar
+Unknown Gender ; Unknown
+Unmappable Locations ; Unmappable Locations
+Unpaired ampersand (@) ; Unpaired ampersand (@)
+Unreliable ; Unreliable
+Unsupported GEDCOM version detected ; Unsupported GEDCOM version detected
+Untitled ; Untitled
+Updates ; Updates
+User ID Reference ; Reference
+User defined record found ; User defined record found
+Vendor ; Vendor
+Version ; Version
+Vietnam War Era ; Vietnam War Era
+Visitor Comments ; Visitor Comments
+Vital Events ; Vital Events
+Voter ; Voter
+War of 1812 Era ; War of 1812 Era
+Website ; Website
+Weight ; Weight
+Will ; Will
+Wives Married After the Age of ; Wives Married After the Age of
+Women ; Women
+Women Counted ; Women Counted
+World War I Era ; World War I Era
+World War II Era ; World War II Era
+Years Older Than Their Spouse ; Years Older Than Their Spouse
+Years Per Generation For Everyone ; Years Per Generation (All)
+abt ; abt
+aft ; aft
+and ; and
+assumed ; assumed
+bef ; bef
+bet ; bet
+cal ; cal
+certain ; certain
+disproved ; disproved
+est ; est
+estimated ; estimated
+for ; for
+from ; from
+improbable ; improbable
+int ; int
+likely ; likely
+maybe ; maybe
+of ; of
+or Less ; or Less
+possible ; possible
+prob ; prob
+probable ; probable
+proposed ; proposed
+proven ; proven
+same as ; same as
+supported ; supported
+to ; to
+uncertain ; uncertain
+unsupported ; unsupported

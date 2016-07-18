@@ -73,6 +73,9 @@ WARNING_COLOUR = colorama.Fore.YELLOW + colorama.Style.BRIGHT
 RESET_COLOUR = colorama.Fore.RESET + colorama.Style.RESET_ALL
 ERROR_CODE = '[{}ERRO{}]'.format(ERROR_COLOUR, RESET_COLOUR)
 WARNING_CODE = '[{}WARN{}]'.format(WARNING_COLOUR, RESET_COLOUR)
+INVOKE_SHELL = 'C:\Windows\System32\cmd.exe'
+GIGATREES_EXE = 'C:\\bin\\gigatrees\\gigatrees.exe'
+CONFIG_FOLDER = HERE_FOLDER / 'config'
 
 # globals for Lenovo X201
 #GITHUB_FOLDER = Path(r"C:\Users\User\Documents\GitHub\genealogy-gh-pages")
@@ -252,13 +255,32 @@ def delete_old_gigatrees(ctx):
     '''Delete old Gigatrees output.'''
     global step_no
     step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Deleting old Gigatree output.")
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Deleting old Gigatrees output.")
 
     run('del {}\*.* /q'.format(CONTENT_FOLDER), shell=INVOKE_SHELL)
 
 
 @task
-def copy_js():
+def call_gigatrees(ctx):
+    '''Call Gigatrees executable.'''
+    global step_no
+    step_no += 1
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Executing Gigatrees.")
+
+    my_cmd = '"{0}" -v -c "{1}\default.xml" '\
+             '-c "{1}\minchinca.xml"  -i "{2}" -o "{3}" '\
+             '-l "{4}\gigatrees-{5}.log"'.format(GIGATREES_EXE,
+                                                 CONFIG_FOLDER,
+                                                 MY_GEDCOM,
+                                                 CONTENT_FOLDER,
+                                                 LOG_FOLDER,
+                                                 TODAY_STR)
+    run(my_cmd, shell=INVOKE_SHELL)
+    print()
+
+
+@task
+def copy_js(ctx):
     '''Copy Gigatree .js files.'''
     global step_no
     step_no += 1
@@ -713,6 +735,7 @@ def all_steps():
     git()                       #
     live()                      #
     delete_old_gigatrees(ctx)      # works ~2 min
+    call_gigatrees(ctx)
 
     minchin.text.clock_on_right(Fore.GREEN + Style.BRIGHT + "Update is Live!")
     print(Style.RESET_ALL)
