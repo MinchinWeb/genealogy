@@ -153,24 +153,6 @@ def clean_gedcom():
 
 
 @task
-def upload_gedcom():
-    '''Upload GEDCOM to Gigatree.'''
-    global step_no
-    step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". The file is now ready to upload to Gigatrees.")
-
-    webbrowser.open("http://gigatrees.com/toolbox/gigatree", new=2)
-    print("{}log-in (using Facebook)".format(INDENT*2))
-    print("{}now click 'generate report'".format(INDENT*2))
-    # check to see if we're logged in
-    # log in, if needed
-    # discard old GEDCOM
-    # upload new GEDCOM
-    # run generator
-    # download new output
-
-
-@task
 def check_images():
     '''Check which images have already been uploaded.'''
     global step_no
@@ -273,130 +255,6 @@ def delete_old_adam():
 
     os.chdir(str(CONTENT_FOLDER))
     run('del *.* /q')
-
-
-@task
-def get_new_adam():
-    '''Get new Gigatree output.'''
-    # TO-DO: allow override of 'start time'
-    global step_no
-    global adam_zip
-    step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Get new Gigatree output.")
-
-    os.chdir(str(DOWNLOAD_FOLDER))
-    gedcom_time = datetime.fromtimestamp(os.stat(str(MY_GEDCOM)).st_ctime)
-
-    count_loops = 0
-    while True:
-        all_files = os.listdir(str(DOWNLOAD_FOLDER))
-        for filename in all_files:
-            if filename.startswith(ADAM_PREFIX) and filename.endswith(".zip"):
-                if datetime.fromtimestamp(os.stat(filename).st_ctime) > gedcom_time:
-                    adam_zip = filename
-        if adam_zip != '' and os.stat(adam_zip).st_size > 1000:
-            break
-        count_loops += 1
-        if count_loops > 60:
-            if minchin.text.query_yes_quit("{}We've waited 30 minutes. Keep waiting?".format(INDENT), default="yes") is False:
-                sys.exit()
-            else:
-                count_loops = 0
-        else:
-            minchin.text.wait(30)
-
-    winshell.copy_file(adam_zip, str(CONTENT_FOLDER))
-
-
-def step_unzip():
-    # Test 1: 6:48.948 for 9,999 files
-    # Test 2: 2:05.188204 for 11,1698 files
-    global step_no
-    start_time_local = datetime.now()
-    step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Unzip new Gigatree output (Zipfile).")
-
-    os.chdir(str(CONTENT_FOLDER))
-    zf = zipfile.ZipFile(adam_zip)
-    zf.extractall()
-    zf.close()
-    print(INDENT, datetime.now() - start_time_local)
-
-
-def step_unzip_faster():
-    # see http://dmarkey.com/wordpress/2011/10/15/python-zipfile-speedup-tips/
-    # Test 1: 4:44.459 for 9,999 files
-    # this doesn't appear to work on Python 3.5.1, says it's not a zip file
-    global step_no
-    start_time_local = datetime.now()
-    step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Unzip new Gigatree output (Zipfile faster).")
-
-    os.chdir(str(CONTENT_FOLDER))
-    zf = zipfile.ZipFile(open(adam_zip, 'r'))
-    zf.extractall()
-    zf.close()
-    print(INDENT, datetime.now() - start_time_local)
-
-
-def step_unzip_czip():
-    # Test 1: 4:46.109 for 9,999 files
-    # Test 2: xx for 11,1698 files
-    global step_no
-    start_time_local = datetime.now()
-    step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Unzip new Gigatree output (czip).")
-
-    os.chdir(str(CONTENT_FOLDER))
-    zf = czipfile.ZipFile(adam_zip)
-    zf.extractall()
-    zf.close()
-    print(INDENT, datetime.now() - start_time_local)
-
-
-@task
-def step_unzip_7zip():
-    # Test 1: 5:09.974 for 9,999 files
-    # Test 2: 1:43.229726 for 11,1698 files
-    global step_no
-    start_time_local = datetime.now()
-    step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Unzip new Gigatree output (7-zip).")
-
-    os.chdir(str(CONTENT_FOLDER))
-    run('"C:\\Program Files\\7-Zip\\7z.exe" e {} > nul'.format(adam_zip))
-    print(INDENT, datetime.now() - start_time_local)
-
-
-def step_unzip_infozip():
-    # Test 2: 1:51.550671 for 11,1698 files
-    global step_no
-    start_time_local = datetime.now()
-    step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Unzip new Gigatree output (unzip.exe).")
-
-    os.chdir(str(CONTENT_FOLDER))
-    run('C:\\bin\\unzip.exe {} > nul'.format(adam_zip))
-    print(INDENT, datetime.now() - start_time_local)
-
-
-@task
-def unzip_adam():
-    '''Unzip new Adam output.'''
-    try:
-        step_unzip_7zip()
-    except:
-        step_unzip()
-
-
-@task
-def php_to_html():
-    '''Change any .php files to .html.'''
-    global step_no
-    step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Rename all .php files.")
-    os.chdir(str(CONTENT_FOLDER))
-    run('rename *.php *.html')
 
 
 @task
@@ -839,13 +697,9 @@ def all_steps():
 
     export_gedcom()             # works 151230
     clean_gedcom()              # works
-    upload_gedcom()             # works
     #check_images()              # works
     delete_old_output()         # works
     delete_old_adam()           # works ~2 min
-    get_new_adam()              #
-    unzip_adam()                # pretty sure works ~5 min
-    #php_to_html()               # works, brakes if there are no PHP files
     copy_js()                   # works
     #copy_css()
     copy_img()
