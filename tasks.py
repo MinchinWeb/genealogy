@@ -22,7 +22,7 @@ p = Path.cwd()
 deploy_path = p.parents[0] / 'genealogy-gh-pages'
 
 
-def clean():
+def clean(ctx):
     print("You'll have to manually delete the output folder")
     #if os.path.isdir(DEPLOY_PATH):
     #    local('rm -rf {deploy_path}'.format(**env))
@@ -30,48 +30,48 @@ def clean():
 
 
 @task
-def build():
+def build(ctx):
     run('pelican -s pelicanconf.py')
 
 
 @task
-def rebuild():
-    clean()
-    build()
+def rebuild(ctx):
+    clean(ctx)
+    build(ctx)
 
 
 @task
-def regenerate():
+def regenerate(ctx):
     run('start pelican -r -s pelicanconf.py')
 
 
 @task
-def serve():
+def serve(ctx):
     # local('cd {deploy_path} && start python -m SimpleHTTPServer'.format(**env))
     # in Python3000, use  python -m http.server
     run('cd {} && start python -m http.server'.format(deploy_path))
 
 
 @task
-def serve_on(port):
+def serve_on(ctx, port):
     # local('cd {deploy_path} && start python -m SimpleHTTPServer'.format(**env))
     # in Python3000, use  python -m http.server
     run('cd {} && start python -m http.server {}'.format(deploy_path, port))
 
 @task
-def reserve():
-    build()
-    serve()
+def reserve(ctx):
+    build(ctx)
+    serve(ctx)
 
 
 @task
-def preview():
+def preview(ctx):
     run('pelican -s publishconf.py')
 
 
 @task
-def upload():
-    publish()
+def upload(ctx):
+    publish(ctx)
     run('cd {deploy_path}')
     run('git add -A')
     run('git commit')
@@ -79,7 +79,7 @@ def upload():
 
 
 @task
-def publish():
+def publish(ctx):
     run('pelican -s publishconf.py')
 
 
@@ -87,12 +87,12 @@ def publish():
 # only works on Windows
 #  need to kill the second window manually
 @task
-def devserver():
-    regenerate()
-    serve()
+def devserver(ctx):
+    regenerate(ctx)
+    serve(ctx)
 
 @task
-def less():
+def less(ctx):
     #run('lessc theme\\burst-energy\\less\\bootstrap.burst-energy.less > ' +
     #    env_deploy_path + '\\css\\style.css')
     #   lessc themes\pelican-minchin-ca\static\less\bootstrap.minchin-ca.min.less > themes\pelican-minchin-ca\static\css\bootstrap.minchin-ca.min.css

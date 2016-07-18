@@ -35,6 +35,7 @@ import requests
 import winshell
 
 import minchin.text
+# html5lib<0.99999999 required for BeautifulSoup 4.4.1
 
 # from colorama import Back
 
@@ -42,9 +43,12 @@ import minchin.text
 __version__ = '3.2.3'
 colorama.init()
 
+#######################
+### Global Settings ###
+#######################
 
 COPYRIGHT_START_YEAR = 1987
-ADAM_LINK = "http://gigatrees.com"
+ADAM_LINK = "http://timforsythe.com/gigatrees/"
 ADAM_FOOTER = "<p><strong>Are we related?</strong> Are you a long lost cousin? Spotted an error here? This website remains a work-in-progress and I would love to hear from you. Drop me a line at minchinweb [at] gmail [dot] com.</p>"
 INDENT = " "*4
 GITHUB_FOLDER = Path("S:\Documents\GitHub\genealogy-gh-pages")
@@ -59,7 +63,6 @@ USER_FOLDER = Path(os.path.expanduser('~'))
 MY_GEDCOM = USER_FOLDER / 'Desktop' / GEDCOM_EXPECTED
 start_time = datetime.now()
 step_no = 0  # step counter
-start_time = datetime.now()
 # folder where the script is saved
 HERE_FOLDER = Path(os.path.dirname(os.path.realpath(__file__)))
 WORKING_FOLDER = HERE_FOLDER  # current working directory
@@ -83,6 +86,10 @@ CONFIG_FOLDER = HERE_FOLDER / 'config'
 #PHOTO_FOLER = Path(r"C:\Users\User\Documents\Genealogy")
 #DOWNLOAD_FOLDER = Path(r"C:\Users\User\Downloads")
 
+
+#####################
+### The Fucntions ###
+#####################
 
 def addimage(image):
     '''Take the file listed in image, finds in my genealogy photo directory, and
@@ -136,13 +143,14 @@ def export_gedcom(ctx):
 
 
 @task
-def clean_gedcom():
+def clean_gedcom(ctx):
     '''Cleaning up GEDCOM.'''
     global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Cleaning up GEDCOM.")
 
     subject = ''
+    # TO-DO: convert to pathlib.Path.open() (here and elsewhere)
     with open(str(MY_GEDCOM), 'r', encoding='utf-8') as gedcom_file:
         subject = gedcom_file.read()
 
@@ -158,7 +166,7 @@ def clean_gedcom():
 
 
 @task
-def check_images():
+def check_images(ctx):
     '''Check which images have already been uploaded.'''
     global step_no
     step_no += 1
@@ -305,7 +313,7 @@ def copy_gigatree_assets(ctx):
 
 
 @task
-def replace_index():
+def replace_index(ctx):
     '''Copy over index.md, 404.md.'''
     global step_no
     step_no += 1
@@ -323,7 +331,7 @@ def replace_index():
 
 
 @task
-def set_pelican_variables():
+def set_pelican_variables(ctx):
     '''Sets a couple of variables that Pelican uses while generating the site.'''
     global step_no
     step_no += 1
@@ -349,7 +357,7 @@ def set_pelican_variables():
 
 
 @task
-def replace_emails():
+def replace_emails(ctx):
     '''Hide emails in Sources.'''
     global step_no
     step_no += 1
@@ -462,8 +470,9 @@ def html_fixes(my_file):
     for tag in soup(class_="gt-version", limit=1):
         tag.decompose()
 
-    # at meta tags, used for the breadcrumbs in the link.
-    # they need to be in the <head> section, in the form
+    # Add meta tags, used for the breadcrumbs in the link.
+    # These are used by the Pelican engine and template engine.
+    # They need to be in the <head> section, in the form:
     #
     # <head>
     #    <!-- other stuff... -->
@@ -524,7 +533,7 @@ For 11,146 files (2 core, 4 thread machine, program run time):
 
 
 @task
-def clean_adam_html_single_thread():
+def clean_adam_html_single_thread(ctx):
     '''Remove nasty and extra HTML.'''
     global step_no
     start_time_local = datetime.now()
@@ -549,7 +558,7 @@ def clean_adam_html_single_thread():
 
 
 @task
-def clean_adam_html_multithreaded(my_n_jobs=None):
+def clean_adam_html_multithreaded(ctx, my_n_jobs=None):
     '''Remove nasty and extra HTML (multi-threaded).'''
     '''
     Benchmarks
@@ -577,18 +586,22 @@ def clean_adam_html_multithreaded(my_n_jobs=None):
 
 
 @task
-def pelican():
+def pelican(ctx):
     '''Run Pelican.'''
     global step_no
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Run Pelican (site generator).")
 
+    # TO-DO: run pelican directly
+    #               drop command line args into sys.argv (with the first one
+    #               being the script name, so 'pelican' (?)), and then call
+    #               pelican.main()
     os.chdir(str(WORKING_FOLDER))
     run('pelican -s publishconf.py')
 
 
 @task
-def pelican_local():
+def pelican_local(ctx):
     '''Run Pelican (in local, developmental mode).'''
     global step_no
     step_no += 1
@@ -599,7 +612,7 @@ def pelican_local():
 
 
 @task
-def create_tracking():
+def create_tracking(ctx):
     '''Create deploy tracking file.'''
     global step_no
     global tracking_filename
@@ -618,7 +631,7 @@ def create_tracking():
 
 
 @task
-def git():
+def git(ctx):
     '''Git commit and push.'''
     global step_no
     step_no += 1
@@ -641,7 +654,7 @@ def git():
 
 
 @task
-def live():
+def live(ctx):
     '''Tell us when we're live.'''
     # TO-DO: find tracking file based on creation/modified date
     global step_no
@@ -660,28 +673,28 @@ def live():
 
 
 @task
-def all_steps():
+def all_steps(ctx):
     '''Everything!'''
     minchin.text.title("Genealogy Uploader, v.{}".format(str(__version__)))
     print()
 
-    export_gedcom()             # works 151230
-    clean_gedcom()              # works
-    #check_images()              # works
-    delete_old_output()         # works
-    replace_index()             # works
-    set_pelican_variables()     # works
-    # clean_adam_html_single_thread()  # doesn't crash
-    clean_adam_html_multithreaded()
-    replace_emails()            # doesn't crash
-    create_tracking()           # works ~10 sec
-    pelican()                   # works (assuming Pelican works)
-    #pelican_local()
-    git()                       #
-    live()                      #
-    delete_old_gigatrees(ctx)      # works ~2 min
-    call_gigatrees(ctx)
+    export_gedcom(ctx)             # works 160717
+    clean_gedcom(ctx)              # works 160717
+    delete_old_gigatrees(ctx)      # works 160717  ~2 min
+    call_gigatrees(ctx)             # works 160718
+    check_images(ctx)              # works 160717
+    delete_old_output(ctx)         # works 160718
     copy_gigatree_assets(ctx)      # works 160718
+    replace_index(ctx)             # works
+    set_pelican_variables(ctx)     # works
+    # clean_adam_html_single_thread(ctx)  # doesn't crash
+    clean_adam_html_multithreaded(ctx)
+    replace_emails(ctx)            # doesn't crash
+    create_tracking(ctx)           # works ~10 sec
+    pelican(ctx)                   # works (assuming Pelican works)
+    #pelican_local(ctx)
+    git(ctx)                       #
+    live(ctx)                      #
 
     minchin.text.clock_on_right(Fore.GREEN + Style.BRIGHT + "Update is Live!")
     print(Style.RESET_ALL)
@@ -690,7 +703,7 @@ def all_steps():
 
 
 @task(default=True)
-def does_nothing():
+def does_nothing(ctx):
     print('this does nothing')
 
 
