@@ -136,20 +136,19 @@ def clean_gedcom():
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Cleaning up GEDCOM.")
 
-    # replace image paths
-    gedcom_file = open(str(MY_GEDCOM), 'r', encoding='utf-8')  # add failsafe is the fail doesn't exist yet or is still being written to
-    subject = gedcom_file.read()
-    gedcom_file.close()
+    subject = ''
+    with open(str(MY_GEDCOM), 'r', encoding='utf-8') as gedcom_file:
+        subject = gedcom_file.read()
 
+    # replace image paths
     pattern = re.compile(r'S:\\Documents\\Genealogy\\([0-9]+[\.[a-z]+]*\.? )*', re.IGNORECASE)  # path start
     result = pattern.sub('images/', subject)
     pattern2 = re.compile(r'(images.*)\\')  # reverse slashes in rest of path
     result2 = pattern2.sub(r'\1/', result)
     result3 = pattern2.sub(r'\1/', result2)
 
-    f_out = open(str(MY_GEDCOM), 'w', encoding='utf-8')
-    f_out.write(result3)
-    f_out.close()
+    with open(str(MY_GEDCOM), 'w', encoding='utf-8') as gedcom_file:
+        gedcom_file.write(result3)
 
 
 @task
