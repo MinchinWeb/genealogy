@@ -74,7 +74,8 @@ RESET_COLOUR = colorama.Fore.RESET + colorama.Style.RESET_ALL
 ERROR_CODE = '[{}ERRO{}]'.format(ERROR_COLOUR, RESET_COLOUR)
 WARNING_CODE = '[{}WARN{}]'.format(WARNING_COLOUR, RESET_COLOUR)
 INVOKE_SHELL = 'C:\Windows\System32\cmd.exe'
-GIGATREES_EXE = 'C:\\bin\\gigatrees\\gigatrees.exe'
+GIGATREES_EXE = Path('C:\\bin\\gigatrees\\gigatrees.exe')
+GIGATREES_ASSETS = GIGATREES_EXE.parent / 'assets'
 CONFIG_FOLDER = HERE_FOLDER / 'config'
 
 # globals for Lenovo X201
@@ -280,80 +281,27 @@ def call_gigatrees(ctx):
 
 
 @task
-def copy_js(ctx):
-    '''Copy Gigatree .js files.'''
+def copy_gigatree_assets(ctx):
+    '''Copy Gigatree .js, .css, and images files.'''
     global step_no
     step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Copy Gigatree .js files.")
-    # files are copied from the base CONTENT_FOLDER (where they are put by unzipping
-    # the adam.zip) to the CONTENT_FOLDER / js (where Pelican will find them)
+    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Copy Gigatree asset files.")
+    # files are copied from the base GIGATREES_ASSETS to the `content / js`
+    # (where Pelican will find them)
 
-    js_files = ('tab-list-handler.js',
-                'tooltip-handler.js',
-                'graph-handler.js',
-                'gigatrees-map-min.js', )
+    dest_folder = (CONTENT_FOLDER / '..').resolve() / 'assets'
 
-    for my_file in js_files:
+    for my_file in GIGATREES_ASSETS.iterdir():
+        dest_path = str(dest_folder / my_file.name)
+        source_path = str(my_file)
+        #print(dest_path)
+        #print(source_path)
+        #print(my_file, my_file)
         try:
-            winshell.delete_file(str(CONTENT_FOLDER / 'js' / my_file), no_confirm=True, allow_undo=False, silent=True)
+            winshell.delete_file(dest_path, no_confirm=True, allow_undo=False, silent=True)
         except:
             pass
-        winshell.copy_file(str(CONTENT_FOLDER / my_file), str(CONTENT_FOLDER / 'js' / my_file), no_confirm=True)
-
-
-# not needed; the elements of the 'gigatrees.css' needed have been folded
-# directly into the theme LESS files
-@task
-def copy_css():
-    '''Copy Gigatree .css files.'''
-    global step_no
-    step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Copy Gigatree .css files.")
-    os.chdir(str(CONTENT_FOLDER))
-
-    css_files = ('gigatrees.css', )
-
-    for my_file in css_files:
-        try:
-            winshell.delete_file("../css/" + my_file, no_confirm=True, allow_undo=False, silent=True)
-        except:
-            pass
-        winshell.copy_file(my_file, "../css/" + my_file, no_confirm=True)
-
-
-@task
-def copy_img():
-    '''Copy Gigatree image files.'''
-    global step_no
-    step_no += 1
-    minchin.text.clock_on_right(str(step_no).rjust(2) + ". Copy Gigatree image files.")
-    # files are copied from the base CONTENT_FOLDER (where they are put by unzipping
-    # the adam.zip) to the CONTENT_FOLDER / img (where Pelican will find them)
-
-    img_files = ('arrowd.png',
-                 'arrowl.png',
-                 'arrowr.png',
-                 'arrowu.png',
-                 'bg-black.png',
-                 'bg-pattern.png',
-                 'mapicon_f.png',
-                 'mapicon_m.png',
-                 'mapicon_u.png',
-                 'mapmarker1.png',
-                 'mapmarker2.png',
-                 'mapmarker3.png',
-                 'mapmarker4.png',
-                 'mapmarker5.png',
-                 'avatar.jpg',
-                 'image.jpg',
-                 'pdf.jpg', )
-
-    for my_file in img_files:
-        try:
-            winshell.delete_file(str(CONTENT_FOLDER / 'img' / my_file), no_confirm=True, allow_undo=False, silent=True)
-        except:
-            pass
-        winshell.copy_file(str(CONTENT_FOLDER / my_file), str(CONTENT_FOLDER / 'img' / my_file), no_confirm=True)
+        winshell.copy_file(source_path, dest_path, no_confirm=True)
 
 
 @task
@@ -721,9 +669,6 @@ def all_steps():
     clean_gedcom()              # works
     #check_images()              # works
     delete_old_output()         # works
-    copy_js()                   # works
-    #copy_css()
-    copy_img()
     replace_index()             # works
     set_pelican_variables()     # works
     # clean_adam_html_single_thread()  # doesn't crash
@@ -736,6 +681,7 @@ def all_steps():
     live()                      #
     delete_old_gigatrees(ctx)      # works ~2 min
     call_gigatrees(ctx)
+    copy_gigatree_assets(ctx)      # works 160718
 
     minchin.text.clock_on_right(Fore.GREEN + Style.BRIGHT + "Update is Live!")
     print(Style.RESET_ALL)
