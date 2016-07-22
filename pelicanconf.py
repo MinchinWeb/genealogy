@@ -7,7 +7,7 @@ sys.path.append(os.curdir)
 
 # Adam configuration options
 ADAM_PUBLISH = False
-from adamconf import *
+from config.adamconf import *
 # ADAM = True  is used by the theme tempates to display 'Genealogy only' things
 
 AUTHOR = 'D. Minchin & Wm. Minchin'
