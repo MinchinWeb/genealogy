@@ -370,28 +370,36 @@ def replace_emails(ctx):
     #  so we'll have to search and replace through the output
     # We are actually only considering 'Sources', as that's where
     #  all the emails seem to be...
+    #
+    # Should I deal with vertical tabs here too?
     replacements =  ("w_minchin@hotmail.com",           '[email redacted]'), \
-                    ("w.minchin@gmail.com",             '[email redacted]'), \
-                    ("webmaster@minchin.ca",            '[email redacted]'), \
+                    ("bmartin@nznet.gen.nz",            '[email redacted]'), \
+                    ("Bruce.Sinnamon@unisys.com",       '[email redacted]'), \
+                    ("bunburypr@ozemail.com.au",        '[email redacted]'), \
+                    ("canrcr@gmail.com",                '[email redacted]'), \
+                    ("cardena.depper@gmx.net",          '[email redacted]'), \
+                    ("d3gl@shaw.ca",                    '[email redacted]'), \
+                    ("david@westerhamworkshop.co.uk",   '[email redacted]'), \
+                    ("djcmgf@optonline.net",            '[email redacted]'), \
+                    ("djcmgf@optonline.net",            '[email redacted]'), \
+                    ("donaldminchin@yahoo.com",         '[email redacted]'), \
+                    ("ffirlotte@xplornet.com",          '[email redacted]'), \
+                    ("G.Mitchell@gcu.ac.uk",            '[email redacted]'), \
+                    ("gloog@eircom.net",                '[email redacted]'), \
+                    ("howard.blaxland@gmail.com",       '[email redacted]'), \
+                    ("jerry.doyle@sbcglobal.net",       '[email redacted]'), \
+                    ("kathy.edwards@fredericton.ca",    '[email redacted]'), \
+                    ("kenhazel@gmail.com",              '[email redacted]'), \
+                    ("lbwong@charter.net",              '[email redacted]'), \
                     ("minchinweb@gmail.com",            '[email redacted]'), \
                     ("nysgys@shaw.ca",                  '[email redacted]'), \
-                    ("bunburypr@ozemail.com.au",        '[email redacted]'), \
-                    ("turtle@turtlebunbury.com",        '[email redacted]'), \
-                    ("howard.blaxland@gmail.com",       '[email redacted]'), \
-                    ("kenhazel@gmail.com",              '[email redacted]'), \
-                    ("canrcr@gmail.com",                '[email redacted]'), \
-                    ("david@westerhamworkshop.co.uk",   '[email redacted]'), \
-                    ("d3gl@shaw.ca",                    '[email redacted]'), \
-                    ("cardena.depper@gmx.net",          '[email redacted]'), \
                     ("redjoanne_58@hotmail.com",        '[email redacted]'), \
-                    ("lbwong@charter.net",              '[email redacted]'), \
-                    ("djcmgf@optonline.net",            '[email redacted]'), \
-                    ("jerry.doyle@sbcglobal.net",       '[email redacted]'), \
                     ("sonofcam@bigpond.com",            '[email redacted]'), \
                     ("stewdee@hotmail.com",             '[email redacted]'), \
-                    ("nysgys@shaw.ca",                  '[email redacted]'), \
-                    ("gloog@eircom.net",                '[email redacted]'), \
-                    ("donaldminchin@yahoo.com",         '[email redacted]'),
+                    ("turtle@turtlebunbury.com",        '[email redacted]'), \
+                    ("turtlebunbury@gmail.com",         '[email redacted]'), \
+                    ("w.minchin@gmail.com",             '[email redacted]'), \
+                    ("webmaster@minchin.ca",            '[email redacted]'), \
 
     os.chdir(str(CONTENT_FOLDER))
     all_files = os.listdir(str(CONTENT_FOLDER))
@@ -435,21 +443,18 @@ def html_fixes(my_file):
     for tag in soup("meta"):
         tag.decompose()
 
-    '''
-    # fix links that point to php pages
-    for tag in soup("a", href=True):
-        tag['href'] = tag['href'].replace('.php', '.html')
-    '''
-    '''
-    # remove wrapper lists (ul/li) to tables
-    for tag in soup("ul"):
-       tag2 = tag.findParent('ul')
-           if tag2:
-               tag2.replace_with(tag2.contents)
-               # replace 'li' tags with 'p'
-               for tag3 in tag2("li"):
-                  tag3.name = 'p'
-    '''
+    ## fix links that point to php pages
+    #for tag in soup("a", href=True):
+    #    tag['href'] = tag['href'].replace('.php', '.html')
+
+    ## remove wrapper lists (ul/li) to tables
+    #for tag in soup("ul"):
+    #   tag2 = tag.findParent('ul')
+    #       if tag2:
+    #           tag2.replace_with(tag2.contents)
+    #           # replace 'li' tags with 'p'
+    #           for tag3 in tag2("li"):
+    #              tag3.name = 'p'
 
     # Remove links to CDN stuff I serve locally
     js_served_locally = ('jquery.min.js',
@@ -470,7 +475,9 @@ def html_fixes(my_file):
     # other stuff
     for tag in soup(id="gt-page-title"):
         tag.decompose()
-    for tag in soup(class_="gt-version", limit=1):
+    for tag in soup(id="gt-version", limit=1):
+        tag.decompose()
+    for tag in soup(id="site-title"):
         tag.decompose()
 
     # Add meta tags, used for the breadcrumbs in the link.
@@ -691,8 +698,8 @@ def all_steps(ctx):
     replace_index(ctx)             # works 160721
     set_pelican_variables(ctx)     # works 160721
     # clean_adam_html_single_thread(ctx)  # doesn't crash
-    clean_adam_html_multithreaded(ctx)
-    replace_emails(ctx)            # doesn't crash
+    clean_adam_html_multithreaded(ctx)  # runs 20160721
+    replace_emails(ctx)            # runs 20160721
     create_tracking(ctx)           # works ~10 sec
     pelican(ctx)                   # works (assuming Pelican works)
     #pelican_local(ctx)
