@@ -7,7 +7,7 @@ from __future__ import unicode_literals
 
 import os
 import sys
-sys.path.append(os.curdir)
+sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 from pelicanconf import *
 
 SITEURL = 'http://minchin.ca/genealogy'

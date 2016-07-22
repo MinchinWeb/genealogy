@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 '''Genealogy Uploader
-v.3.2.3 - WM - January 7, 2016
+v.4.0.0 - WM - July 17, 2016
 
 This script serves to semi-automate the building and uploading of my
 genealogy website. It is intended to be semi-interactive and run from the
@@ -29,6 +29,7 @@ import zipfile
 from bs4 import BeautifulSoup           # requires BeautifulSoup4 >= 4.5.0
 import colorama
 from colorama import Fore, Style
+import invoke
 from invoke import run, task            # requires invoke >= 0.13
 from joblib import Parallel, delayed
 import requests
@@ -36,10 +37,8 @@ import winshell
 
 import minchin.text
 
-# from colorama import Back
 
-
-__version__ = '3.2.3'
+__version__ = '4.0.0'
 colorama.init()
 
 #######################
@@ -52,10 +51,8 @@ ADAM_FOOTER = "<p><strong>Are we related?</strong> Are you a long lost cousin? S
 INDENT = " "*4
 GITHUB_FOLDER = Path("S:\Documents\GitHub\genealogy-gh-pages")
 PHOTO_FOLER = Path("S:\Documents\Genealogy")
-DOWNLOAD_FOLDER = Path("S:\Downloads\Chrome")
 URL_ROOT = "http://minchin.ca/genealogy"
 REPO_URL = "https://github.com/MinchinWeb/genealogy.git"
-ADAM_PREFIX = 'william-minchin-gigatree-offline-'
 TODAY_STR = '' + str(date.today().year)[2:] + str.zfill(str(date.today().month), 2) + str.zfill(str(date.today().day), 2)
 GEDCOM_EXPECTED = 'William ' + TODAY_STR + '.ged'
 USER_FOLDER = Path(os.path.expanduser('~'))
@@ -66,8 +63,8 @@ step_no = 0  # step counter
 HERE_FOLDER = Path(os.path.dirname(os.path.realpath(__file__)))
 WORKING_FOLDER = HERE_FOLDER  # current working directory
 CONTENT_FOLDER = HERE_FOLDER / 'content' / 'pages'
-adam_zip = ''               # set later
 LOG_FOLDER = HERE_FOLDER / 'logs'
+CONFIG_FOLDER = HERE_FOLDER / 'config'
 MISSING_IMAGES_LOG = LOG_FOLDER / ('missing-images-' + TODAY_STR + '.txt')
 tracking_filename = ''      # set later
 ERROR_COLOUR = colorama.Fore.RED + colorama.Style.BRIGHT
@@ -78,12 +75,11 @@ WARNING_CODE = '[{}WARN{}]'.format(WARNING_COLOUR, RESET_COLOUR)
 INVOKE_SHELL = 'C:\Windows\System32\cmd.exe'
 GIGATREES_EXE = Path('C:\\bin\\gigatrees\\gigatrees.exe')
 GIGATREES_ASSETS = GIGATREES_EXE.parent / 'assets'
-CONFIG_FOLDER = HERE_FOLDER / 'config'
+
 
 # globals for Lenovo X201
 #GITHUB_FOLDER = Path(r"C:\Users\User\Documents\GitHub\genealogy-gh-pages")
 #PHOTO_FOLER = Path(r"C:\Users\User\Documents\Genealogy")
-#DOWNLOAD_FOLDER = Path(r"C:\Users\User\Downloads")
 
 
 #####################
@@ -124,6 +120,7 @@ def get_adam_version():
 @task
 def export_gedcom(ctx):
     '''Export from RootsMagic.'''
+    # automate with pyautogui??
     global step_no
     global start_time
     step_no += 1
@@ -214,7 +211,7 @@ def check_images(ctx):
         # write missing images to a file
         with open(str(MISSING_IMAGES_LOG), 'w', encoding='utf-8') as f:
             f.write("Genealogy Uploader, v.{}\n".format(str(__version__)))
-            f.write('{}\n== MISSING IMAGES ++\n\n'.format(MY_GEDCOM))
+            f.write('{}\n=== MISSING IMAGES ===\n\n'.format(MY_GEDCOM))
             for missing in missing_matches:
                 f.write('{}\n'.format(missing))
 
@@ -282,8 +279,11 @@ def call_gigatrees(ctx):
                                                  CONTENT_FOLDER,
                                                  LOG_FOLDER,
                                                  TODAY_STR)
-    run(my_cmd, shell=INVOKE_SHELL)
-    print()
+    try:
+        run(my_cmd, shell=INVOKE_SHELL, hide=True)
+    except invoke.exceptions.Failure:
+        if not minchin.text.query_yes_quit("{}Gigatrees exited oddly. Continue anyways?".format(INDENT), default="yes"):
+            sys.exit(1)
 
 
 @task
@@ -607,7 +607,7 @@ def pelican(ctx):
     #               being the script name, so 'pelican' (?)), and then call
     #               pelican.main()
     os.chdir(str(WORKING_FOLDER))
-    run('pelican -s publishconf.py')
+    run('pelican -s {}/publishconf.py'.format(HERE_FOLDER), shell=INVOKE_SHELL)
 
 
 @task
@@ -618,7 +618,7 @@ def pelican_local(ctx):
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Run Pelican (site generator) in local mode.")
 
     os.chdir(str(WORKING_FOLDER))
-    run('pelican -s pelicanconf.py')
+    run('pelican -s {}/pelicanconf.py'.format(HERE_FOLDER), shell=INVOKE_SHELL)
 
 
 @task
@@ -633,11 +633,11 @@ def create_tracking(ctx):
     # note that the last set of digits will correspond to the workstation
     myUUID = str(uuid.uuid1())
     tracking_filename = myUUID + ".txt"
-    target = open(str(GITHUB_FOLDER / tracking_filename), 'w')
-    target.write(myUUID + "\n")
-    target.write("Adam upload by Python script.\n")
-    target.write(GEDCOM_EXPECTED + "\n")
-    target.close()
+    with (GITHUB_FOLDER / tracking_filename).open(mode='w') as target:
+        target.write(myUUID + "\n")
+        target.write("Adam upload by Python script.\n")
+        target.write(GEDCOM_EXPECTED + "\n")
+    print('{}Tracking: {}'.format(INDENT, myUUID))
 
 
 @task
@@ -650,15 +650,15 @@ def git(ctx):
     commit_msg = "Gigatrees generated upload from {}".format(GEDCOM_EXPECTED)
     os.chdir(str(GITHUB_FOLDER))
     minchin.text.clock_on_right('{}{}> git add -A{}'.format(INDENT, Fore.YELLOW, Style.RESET_ALL))
-    r1 = run('git add -A', hide=True)
+    r1 = run('git add -A', hide=True, shell=INVOKE_SHELL)
     #print(r1.stdout)
     print(r1.stderr)
     minchin.text.clock_on_right('{}{}> git commit -m "{}"{}'.format(INDENT, Fore.YELLOW, commit_msg, Style.RESET_ALL))
-    r2 = run('git commit -m Gigatrees_upload', hide=True)
+    r2 = run('git commit -m Gigatrees_upload', hide=True, shell=INVOKE_SHELL)
     #print(r2.stdout)
     print(r2.stderr)
     minchin.text.clock_on_right('{}{}> git push origin{}'.format(INDENT, Fore.YELLOW, Style.RESET_ALL))
-    r3 = run('git push origin', hide=True)
+    r3 = run('git push origin', hide=True, shell=INVOKE_SHELL)
     print(r3.stdout)
     print(r3.stderr)
 
@@ -700,7 +700,7 @@ def all_steps(ctx):
     # clean_adam_html_single_thread(ctx)  # doesn't crash
     clean_adam_html_multithreaded(ctx)  # runs 20160721
     replace_emails(ctx)            # runs 20160721
-    create_tracking(ctx)           # works ~10 sec
+    create_tracking(ctx)           # works 20160721
     pelican(ctx)                   # works (assuming Pelican works)
     #pelican_local(ctx)
     git(ctx)                       #
@@ -718,4 +718,4 @@ def does_nothing(ctx):
 
 
 if __name__ == "__main__":
-    all_steps()
+    all_steps(invoke.context.Context())
