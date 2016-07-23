@@ -55,6 +55,7 @@ STATIC_PATHS = ['images',
                 '../.gitattributes',
                 '../.gitignore',
                 '../README.txt',
+                'assets',
                 ]
 
 # A list of files to copy from the source to the destination
@@ -121,14 +122,18 @@ MENUITEMS_2 = (('Surnames',         SITEURL + '/names.html',          False),
                ('Updates',          SITEURL + '/updates.html',        False),
                ('Sources',          SITEURL + '/sources.html',        False),
                ('Distribution Map', SITEURL + '/map.html',            False),
-               ('Timelines',        SITEURL + '/timeline.html',       False),
-               #('Immigrants',       SITEURL + '/immigrants.html',     False),  # doens't exist in current builds
-               #('Nobility',         SITEURL + '/titles.html',         False),  # doens't exist in current builds
+               ('Timelines',        SITEURL + '/timelines.html',      False),
+               ('Immigrants',       SITEURL + '/immigrants.html',     False),
+               ('Nobility',         SITEURL + '/nobility.html',       False),
+               ('Military',         SITEURL + '/soldiers.html',       False),
                ('Locations',        SITEURL + '/places.html',         False),
-               ('Bonkers Report',   SITEURL + '/bonkers-report.html', False),
-               ('Photos',           SITEURL + '/photos.html',         False),
-               #('External Links',   SITEURL + '/links.html',          False),  # doens't exist in current builds
-               #('Statistics',       SITEURL + '/stats.html',          False),  # stats graphs aren't working right now
+               ('Bonkers Report',   SITEURL + '/bonkers.html',        False),
+               # doens't exist in current builds
+               #('Photos',           SITEURL + '/photos.html',         False),
+               # doens't exist in current builds
+               #('External Links',   SITEURL + '/links.html',          False),
+               # stats graphs aren't working right now; something with the JS link??
+               #('Statistics',       SITEURL + '/stats.html',          False),
                )
 
 

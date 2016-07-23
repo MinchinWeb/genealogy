@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 '''Genealogy Uploader
-v.4.0.0 - WM - July 17, 2016
+v.4.0.1 - WM - July 22, 2016
 
 This script serves to semi-automate the building and uploading of my
 genealogy website. It is intended to be semi-interactive and run from the
@@ -38,7 +38,7 @@ import winshell
 import minchin.text
 
 
-__version__ = '4.0.0'
+__version__ = '4.0.1'
 colorama.init()
 
 #######################
@@ -502,7 +502,7 @@ def html_fixes(my_file):
         new_tag_1 = soup.new_tag("meta", content="Sources")
         new_tag_2 = soup.new_tag("meta", content="sources.html")
         new_tags = True
-    elif my_file.startswith("timeline") and my_file != "timeline.html":
+    elif my_file.startswith("timelines") and my_file != "timelines.html":
         new_tag_1 = soup.new_tag("meta", content="Timelines")
         new_tag_2 = soup.new_tag("meta", content="timeline.html")
         new_tags = True
