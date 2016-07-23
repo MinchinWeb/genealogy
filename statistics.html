@@ -49,10 +49,12 @@
 											<li><a href="http://minchin.ca/genealogy/updates.html">Updates</a></li>
 											<li><a href="http://minchin.ca/genealogy/sources.html">Sources</a></li>
 											<li><a href="http://minchin.ca/genealogy/map.html">Distribution Map</a></li>
-											<li><a href="http://minchin.ca/genealogy/timeline.html">Timelines</a></li>
+											<li><a href="http://minchin.ca/genealogy/timelines.html">Timelines</a></li>
+											<li><a href="http://minchin.ca/genealogy/immigrants.html">Immigrants</a></li>
+											<li><a href="http://minchin.ca/genealogy/nobility.html">Nobility</a></li>
+											<li><a href="http://minchin.ca/genealogy/soldiers.html">Military</a></li>
 											<li><a href="http://minchin.ca/genealogy/places.html">Locations</a></li>
-											<li><a href="http://minchin.ca/genealogy/bonkers-report.html">Bonkers Report</a></li>
-											<li><a href="http://minchin.ca/genealogy/photos.html">Photos</a></li>
+											<li><a href="http://minchin.ca/genealogy/bonkers.html">Bonkers Report</a></li>
 										</ul>
 								</li>
 								<li ><a href="http://minchin.ca/projects/"><span class="fa fa-flask"></span> My Projects</a>
@@ -212,13 +214,13 @@ var expandedTotRecordChartDataSource2 = [
 {group: "F", total: 3549},
 {group: "R", total: 5},
 {group: "S", total: 326},
-{group: "N", total: 1283},
+{group: "N", total: 1280},
 {group: "L", total: 2209},
 {group: "SR", total: 179},
-{group: "SQ", total: 32671},
+{group: "SQ", total: 25156},
 {group: "NR", total: 0},
-{group: "CL", total: 46173},
-{group: "SC", total: 24553},
+{group: "CL", total: 36735},
+{group: "SC", total: 17070},
 {group: "IC", total: 271},
 {group: "CE", total: 20},
 {group: "PH", total: 0},
@@ -232,7 +234,7 @@ var expandedTotRecordChartDataSource2 = [
 <div id="distOfClaimsChartContainer"></div>
 <script type="text/javascript">
 $(document).ready(function () {
-var distOfClaimsChartDataSource = [{value: 11588},{value: 0},{value: 8837},{value: 9},{value: 11740},{value: 8857},{value: 5142},];
+var distOfClaimsChartDataSource = [{value: 11588},{value: 0},{value: 8837},{value: 9},{value: 11740},{value: 631},{value: 3930},];
 if(document.getElementById("distOfClaimsChartContainer") != null) {
 distOfClaimsChartDataSource[0]["category"] = "Parents";
 distOfClaimsChartDataSource[1]["category"] = "Relationships";
@@ -266,7 +268,7 @@ legend: {horizontalAlignment: "center",	verticalAlignment: "bottom", itemTextPos
 <div id="docClaimsChartContainer"></div>
 <script type="text/javascript">
 $(document).ready(function () {
-var docClaimsChartDataSource = [{total: 11588, documented: 0},{total: 0, documented: 0},{total: 8837, documented: 4762},{total: 9, documented: 7},{total: 11740, documented: 10048},{total: 8857, documented: 6886},{total: 5142, documented: 2850},
+var docClaimsChartDataSource = [{total: 11588, documented: 0},{total: 0, documented: 0},{total: 8837, documented: 4762},{total: 9, documented: 7},{total: 11740, documented: 10048},{total: 631, documented: 517},{total: 3930, documented: 1736},
 ];
 if(document.getElementById("docClaimsChartContainer") != null) {
 docClaimsChartDataSource[0]["category"] = "Parents";
@@ -290,7 +292,7 @@ tooltip: {enabled: true, shared: true, percentPrecision: 2, font: {size: 16}},
 });
 </script>
 </div>
-<div><span id="gt-qscore">Q(80.72) </span></div>
+<div><span id="gt-qscore">Q(79.92) </span></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js" type="text/javascript"></script>
 
@@ -318,7 +320,7 @@ tooltip: {enabled: true, shared: true, percentPrecision: 2, font: {size: 16}},
             <div class="col-sm-10 col-xs-8">
                 &copy; 1987-2016 D. Minchin & Wm. Minchin
                     &bull;
-                    Last Updated July 21, 2016
+                    Last Updated July 22, 2016
                     &bull;
                     <a href="http://timforsythe.com/gigatrees/">Built by Gigatrees (4.0.5)</a>
             </div>
