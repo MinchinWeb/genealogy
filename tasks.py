@@ -18,6 +18,8 @@ from pathlib import Path
 #env.cloudfiles_api_key = 'my_rackspace_api_key'
 #env.cloudfiles_container = 'my_cloudfiles_container'
 
+from gen_upload import *
+
 p = Path.cwd()
 deploy_path = p.parents[0] / 'genealogy-gh-pages'
 

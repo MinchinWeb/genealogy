@@ -3,6 +3,8 @@
 
 import os
 import sys
+
+import seafoam
 sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 
 # Adam configuration options
@@ -12,15 +14,10 @@ from config.adamconf import *
 
 AUTHOR = 'D. Minchin & Wm. Minchin'
 SITENAME = 'Minchin.ca'
-#SITEURL = 'http://minchin.ca/genealogy'
-if ADAM_PUBLISH:
-    SITEURL = 'http://minchin.ca/genealogy'
-    RELATIVE_URLS = False
-else:
-    SITEURL = '.'
-    # Uncomment following line if you want document-relative URLs when developing
-    RELATIVE_URLS = True
-SITE_ROOT_URL = 'http://minchin.ca'
+SITEURL = ''
+RELATIVE_URLS = True
+# SITE_ROOT_URL = 'http://minchin.ca'
+SITE_ROOT_URL = ''
 
 TIMEZONE = 'America/Edmonton'
 
@@ -92,7 +89,8 @@ EXTRA_PATH_METADATA = {
 # Custom settings
 #FILENAME_METADATA = ('(?P<date>\d{4}-\d{2}-\d{2}).*')  # default?
 #FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.*)'  # extract date and slug
-FILENAME_METADATA = '(?P<slug>[\w-]*)'      # so anything before the file extension becomes the slug
+# FILENAME_METADATA = '(?P<slug>[\w-]*)'      # so anything before the file extension becomes the slug
+FILENAME_METADATA = '(?P<slug>[\w\-_\\\\/]+)'
 ## Please note that the metadata available inside your files takes precedence
 #  over the metadata extracted from the filename.
 
@@ -107,33 +105,33 @@ PATH = 'content'
 OUTPUT_PATH = '../genealogy-gh-pages/'
 
 # Add Blog to sidebar
-MENUITEMS = (('Blog',        'http://blog.minchin.ca/',      'fa fa-pencil'),
+MENUITEMS = (('Blog',        'http://blog.minchin.ca/',      'fa fa-fw fa-pencil'),
              ('Genealogy',   SITEURL,                        'glyphicon glyphicon-tree-deciduous'),
-             ('My Projects', 'http://minchin.ca/projects/',  'fa fa-flask'),
-             ('Search',      'http://minchin.ca/search/',    'fa fa-search'),
-             ('About',       'http://minchin.ca/about/',     'fa fa-info-circle'),
-             ('Contact Me',  'http://minchin.ca/contact/',   'fa fa-envelope'),
+             ('My Projects', 'http://minchin.ca/projects/',  'fa fa-fw fa-flask'),
+             ('Search',      'http://minchin.ca/search/',    'fa fa-fw fa-search'),
+             ('About',       'http://minchin.ca/about/',     'fa fa-fw fa-info-circle'),
+             ('Contact Me',  'http://minchin.ca/contact/',   'fa fa-fw fa-envelope'),
              )
 
 MENUITEMS_2_AT = 'Genealogy'
 MENUITEMS_2_AT_LINK = ''  # this is added to SITEURL
 
-MENUITEMS_2 = (('Surnames',         SITEURL + '/names.html',          False),
-               ('Updates',          SITEURL + '/updates.html',        False),
-               ('Sources',          SITEURL + '/sources.html',        False),
-               ('Distribution Map', SITEURL + '/map.html',            False),
-               ('Timelines',        SITEURL + '/timelines.html',      False),
-               ('Immigrants',       SITEURL + '/immigrants.html',     False),
-               ('Nobility',         SITEURL + '/nobility.html',       False),
-               ('Military',         SITEURL + '/soldiers.html',       False),
-               ('Locations',        SITEURL + '/places.html',         False),
-               ('Bonkers Report',   SITEURL + '/bonkers.html',        False),
+MENUITEMS_2 = (('Surnames',         SITEURL + '/names/index.html',          False),
+               #('Updates',          SITEURL + '/updates.html',        False),
+               ('Sources',          SITEURL + '/sources/index.html',        False),
+               ('Distribution Map', SITEURL + '/map/index.html',            False),
+               ('Timelines',        SITEURL + '/timelines/index.html',      False),
+               #('Immigrants',       SITEURL + '/immigrants.html',     False),
+               #('Nobility',         SITEURL + '/nobility.html',       False),
+               #('Military',         SITEURL + '/soldiers.html',       False),
+               ('Locations',        SITEURL + '/places/index.html',         False),
+               #('Bonkers Report',   SITEURL + '/bonkers.html',        False),
                # doens't exist in current builds
-               #('Photos',           SITEURL + '/photos.html',         False),
+               ('Photos',           SITEURL + '/photos/index.html',         False),
                # doens't exist in current builds
                #('External Links',   SITEURL + '/links.html',          False),
                # stats graphs aren't working right now; something with the JS link??
-               #('Statistics',       SITEURL + '/stats.html',          False),
+               ('Statistics',       SITEURL + '/stats/index.html',          False),
                )
 
 
@@ -156,15 +154,17 @@ PAGE_URL = "{slug}.html"
 PAGE_SAVE_AS = "{slug}.html"
 
 # Theme Related
-TYPOGRIFY = False  # turn off for HIDDEN names...
-THEME = '../minchinweb.github.io-pelican/themes/pelican-minchin-ca'
+THEME = seafoam.get_path()
+BOOTSTRAP_THEME = 'seafoam'
+
 SITELOGO = 'images/MinchindotCA-200.png'
 SITELOGO_SIZE = '100%'
-PYGMENTS_STYLE = 'friendly'
 DISPLAY_BREADCRUMBS = True
 FAVICON = 'favicon.ico'
-BOOTSTRAP_THEME = 'minchin-ca'
 USE_OPEN_GRAPH = True
+
+TYPOGRIFY = False  # turn off for HIDDEN names...
+# PYGMENTS_STYLE = 'friendly'
 CUSTOM_CSS = 'css/minchin-ca.css'
 DOCUTIL_CSS = False
 CUSTOM_JS_LIST = ['js/jquery-ui.min.js',
@@ -172,20 +172,32 @@ CUSTOM_JS_LIST = ['js/jquery-ui.min.js',
                   'js/dx.chartjs.js',
                   ]
 
+# Generate 404 error page
+TEMPLATE_PAGES = {
+    '404.html':     '404.html',
+}
+
 GOOGLE_ANALYTICS_UNIVERSAL = 'UA-384291-3'
 GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY = 'minchin.ca'
 
 # Plugins
-#PLUGIN_PATH = '../pelican-plugins'
 PLUGIN_PATHS = ('../pelican-plugins',)
 # PLUGINS = ['assets', 'minify', 'sitemap', 'optimize_images']
-PLUGINS = ['assets', ]
+PLUGINS = ['minchin.pelican.jinja_filters',
+           'minchin.pelican.plugins.image_process',
+           # others, as desired...
+           ]
 
 ASSET_CSS = False
 ASSET_JS = False
 
 SITEMAP = {
     "format": "xml",
+}
+
+IMAGE_PROCESS = {
+  'article-feature': ["scale_in 848 848 True"],
+  'index-feature': ["scale_in 263 263 True"],
 }
 
 # `assets` sounds good, but I can't figure out how to get it to work for my CSS
