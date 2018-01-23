@@ -116,22 +116,22 @@ MENUITEMS = (('Blog',        'http://blog.minchin.ca/',      'fa fa-fw fa-pencil
 MENUITEMS_2_AT = 'Genealogy'
 MENUITEMS_2_AT_LINK = ''  # this is added to SITEURL
 
-MENUITEMS_2 = (('Surnames',         SITEURL + '/names/index.html',          False),
+MENUITEMS_2 = (('Surnames',         SITEURL + '/names/index.html',          'fa fa-fw fa-user-circle'),
                #('Updates',          SITEURL + '/updates.html',        False),
-               ('Sources',          SITEURL + '/sources/index.html',        False),
-               ('Distribution Map', SITEURL + '/map/index.html',            False),
-               ('Timelines',        SITEURL + '/timelines/index.html',      False),
+               ('Sources',          SITEURL + '/sources/index.html',        'fa fa-fw fa-book'),
+               ('Distribution Map', SITEURL + '/map/index.html',            'fa fa-fw fa-globe'),
+               ('Timelines',        SITEURL + '/timelines/index.html',      'fa fa-fw fa-clock-o'),  # consider hourgloass (FA5)
                #('Immigrants',       SITEURL + '/immigrants.html',     False),
                #('Nobility',         SITEURL + '/nobility.html',       False),
                #('Military',         SITEURL + '/soldiers.html',       False),
-               ('Locations',        SITEURL + '/places/index.html',         False),
+               ('Locations',        SITEURL + '/places/index.html',         'fa fa-fw fa-map-marker'),
                #('Bonkers Report',   SITEURL + '/bonkers.html',        False),
                # doens't exist in current builds
-               ('Photos',           SITEURL + '/photos/index.html',         False),
+               ('Photos',           SITEURL + '/photos/index.html',         'fa fa-fw fa-picture-o'),
                # doens't exist in current builds
                #('External Links',   SITEURL + '/links.html',          False),
                # stats graphs aren't working right now; something with the JS link??
-               ('Statistics',       SITEURL + '/stats/index.html',          False),
+               ('Statistics',       SITEURL + '/stats/index.html',          'fa fa-fw fa-bar-chart'),
                )
 
 
