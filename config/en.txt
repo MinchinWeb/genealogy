@@ -24,12 +24,19 @@ Abstract ; Abstract
 Address ; Address
 Adoption ; Adoption
 Adult Christening ; Adult Christening
+Age ; Age
+Alert ; Alert
 Alias ; Alias
 Also Known As ; Also Known As
 Alternate Father ; Alternate Father
 Alternate Mother ; Alternate Mother
 American Revolution Era ; American Revolution Era
+Analysis ; Analysis
+Ancestor List ; Ancestor List
+Ancestor Lists ; Ancestor Lists
+Ancestors ; Ancestors
 Ancestors Distribution Map ; Ancestors Distribution Map
+Ancestors List ; Ancestors List
 And More ; and more
 Anecdote ; Anecdote
 Annulment ; Annulment
@@ -47,11 +54,13 @@ Attributes ; Attributes
 Aug. ; Aug
 August ; August
 Author ; Author
+Authors ; Authors
 Average Ages By Group ; Average Ages by Group
 Average Life Span ; Average Life Span
 Average Life Spans By Gender ; Average Life Spans By Gender
 B.C. ; B.C.
 B.C.E ; B.C.E
+B.C.E. ; B.C.
 Baptism ; Baptism
 Barmitzva ; Barmitzva
 Basmitzva ; Basmitzva
@@ -59,32 +68,49 @@ Battle of Hastings ; Battle of Hastings
 Between ; Between
 Birth ; Birth
 Blessing ; Blessing
+Blog ; Blog
 Bonkers ; Bonkers
 Bosnia and Herzegovina Intervention Era ; Bosnia and Herzegovina Intervention Era
 British Monarchs Calendar ; Monarch
 Built By ; Built by
+Built with ; Built with
 Burial ; Burial
 Call Number ; Call Number
 Caste Name ; Caste Name
+Categories ; Categories
+Category ; Category
 Cause of Death ; Cause of Death
-Census ; Census
 Census (US Federal) ; Census (US Federal)
 Census (US State) ; Census (US State)
+Census ; Census
 Census Table ; Census Table
 Census Table Report ; Census Table Report
+Census Tables ; Census Tables
 Century ; Century
+Certainty ; Certainty
+Certainty is calculated based on the highest quality sources referenced ; Certainty is calculated based on the highest quality sources referenced
 Chart ; Chart
 Charter ; Charter
 Child ; Child
 Children ; children
-children ; children
 Christening ; Christening
 Church ; Church
 City ; City
+Claim ; Claim
+Claim is inconsistent with baptism ; Claim is inconsistent with baptism
+Claim is inconsistent with birth ; Claim is inconsistent with birth
+Claim is inconsistent with burial ; Claim is inconsistent with burial
+Claim is inconsistent with child ; Claim is inconsistent with child
+Claim is inconsistent with death ; Claim is inconsistent with death
+Claim is inconsistent with marriage event ; Claim is inconsistent with marriage event
+Claim is inconsistent with parent ; Claim is inconsistent with parent
+Claim is inconsistent with sibling ; Claim is inconsistent with sibling
+Claim is inconsistent with spouse ; Claim is inconsistent with spouse
 Claims ; Claims
 Codicil ; Codicil
 Confirmation ; Confirmation
 Continuation tag missing ; Continuation tag missing
+Continue Reading ; Continue Reading
 Coordinates ; Coordinates
 Copy ; Copy
 Counted Only ; Counted Only, No Name Given
@@ -93,9 +119,15 @@ County ; County
 Cousin ; Cousin
 Cremation ; Cremation
 DNA ; DNA
+Data Alerts ; Data Alerts
+Data Analysis ; Data Analysis
 Data Sanity Report ; Data Sanity Report
+Data contains non-ANSI characters ; Data contains non-ANSI characters
+Data contains non-printable characters ; Data contains non-printable characters
+Data contains tabs ; Data contains tabs
 Data extension tag detected ; Data extension tag detected
 Data missing ; Data missing
+Data not expected ; Data not expected
 Date ; Date
 Date phrase ; Date phrase
 Death ; Death
@@ -103,19 +135,24 @@ Dec. ; Dec
 Deceased ; Deceased
 December ; December
 Degree ; Degree
+Degree of Kinship ; Degree of Kinship
 Departure ; Departure
 Depression Era ; Depression Era
 Derivative ; Derivative
 Descendant List ; Descendant List
+Descendant Lists ; Descendant Lists
 Descendants ; Descendants
 Destination ; Destination
+Determined using highest quality sources referenced ; Determined using highest quality sources referenced
 Direct Evidence ; Evidence: Direct evidence for a claim
 Distribution of Claims ; Distribution of Claims
 District ; District
 Divorce ; Divorce
 Divorce Filed ; Divorce Filed
 Documented Claims ; Documented Claims
+Duplicate ; Duplicate
 Duplicate record found ; Duplicate record found
+Duplicates ; Duplicates
 Early Battles ; Early Battles
 Early Colonial Era ; Early Colonial Era
 Edition ; Edition
@@ -126,7 +163,10 @@ Emigration ; Emigration
 Employment ; Employment
 Encoding ; Encoding
 Engagement ; Engagement
+Error ; Error
+Ethnicity Estimate ; Ethnicity Estimate
 Event ; Event
+Evidence Model ; Evidence Model
 Excommunicated ; Excommunicated
 Excommunication ; Excommunication
 External URLs ; External URLs
@@ -136,21 +176,27 @@ Fact ; Fact
 Families ; Families
 Families Having Swapped Spouses ; Families Having Swapped Spouses
 Family ; Family
+Father ; Father
 Fax ; FAX
 Feb. ; Feb
 February ; February
 Female Gender ; Female
 File ; File
+File character set ; File character set
+File encoding ; File encoding
+File name ; File name
 First Communion ; First Communion
 First Marriage For Men ; First Marriage (Men)
 First Marriage For Women ; First Marriage (Women)
 Flourished ; Flourished
 Flourishing ; Flourishing
+Footnotes ; Footnotes
 Freeman ; Freeman
 French Republic Calendar ; French Republic
 Full Name ; Full Name
 Full Title ; Full Title
 Funeral ; Funeral
+GEDCOM Validation ; GEDCOM Validation
 GEDCOM encoding ANSI detected ; GEDCOM encoding ANSI detected
 GEDCOM encoding Non-ANSI detected ; GEDCOM encoding Non-ANSI detected
 GEDCOM encoding UTF-16 BE detected ; GEDCOM encoding UTF-16 BE detected
@@ -172,9 +218,12 @@ Gregorian Calendar ; Gregorian
 Grenada Intervention Era ; Grenada Intervention Era
 HIDDEN ; HIDDEN
 Hair Color ; Hair Color
+He Married ; He Married
 Hebrew Calendar ; Hebrew
 Height ; Height
 Home ; Home
+ID ; ID
+ID delimiter missing ; ID delimiter missing
 ID missing ; ID missing
 ID not formed correctly ; ID not formed correctly
 ID reference missing ; ID reference missing
@@ -185,14 +234,20 @@ Image ; Image
 Immigrants ; Immigrants
 Immigration ; Immigration
 Impossible Claims ; Impossible Claims
+Improbable ; Improbable
+Index ; Index
+Indicates when an ancestor has an undocumented parent ; Indicates when an ancestor has an undocumented parent
 Indirect Evidence ; Evidence: Indirect evidence supports this conclusion
 Individuals ; Individuals
 Initiated ; Initiated
 Insufficient data ; Insufficient data
+Invalid ID character ; Invalid ID character
 Invalid ID length ; Invalid ID length
+Invalid ID reference character ; Invalid ID reference character
 Invalid ID reference length ; Invalid ID reference length
 Invalid ID reference type ; Invalid ID reference type
 Invalid line length ; Invalid line length
+Invalid tag character ; Invalid tag character
 Invalid tag length ; Invalid tag length
 Invasion of Afghanistan and Iraq Era ; Invasion of Afghanistan and Iraq Era
 Jan. ; Jan
@@ -218,10 +273,18 @@ Late Battles ; Late Battles
 Late Colonial Era ; Late Colonial Era
 Latitude ; Latitude
 Leased ; Leased
+Level has leading zero ; Level has leading zero
+Level number exceeds limit ; Level number exceeds limit
+Level number expected ; Level number expected
 Level number gap ; Level number gap
 Linked To ; Linked To
+List of Articles ; List of Articles
+List of Authors ; List of Authors
+List of Categories ; List of Categories
+List of Tags ; List of Tags
 Locations ; Locations
 Longitude ; Longitude
+MRCA ; MRCA
 Male Gender ; Male
 Map ; Map
 Mar. ; Mar
@@ -233,27 +296,34 @@ Marriage End Status ; Marriage End Status
 Marriage License ; Marriage License
 Married ; Married
 Married Name ; Married Name
+Master Index ; Master Index
 Maximum data length exceeded ; Maximum data length exceeded
+Maximum data length exceeded ; Maximum data length exceeded
+Maximum line length exceeded ; Maximum line length exceeded 
 May ; May
 Medical Condition ; Medical Condition
 Memoir ; Memoir
 Men ; Men
 Men Counted ; Men Counted
 Middle Colonial Era ; Middle Colonial Era
+Migration path represented by location codes ; Migration path represented by location codes
 Military ; Military
 Mission ; Mission
+Modified ; Modified
 More ; More
 More Early Battles ; More Early Battles
 Most Common Surnames ; Most Common Surnames
 Most Popular Boys Names ; Most Popular Boys Names
 Most Popular Girls Names ; Most Popular Girls Names
 Most Recent Common Ancestor ; Most Recent Common Ancestor
+Mother ; Mother
 Mothers Having Children Past the Age of ; Mothers Having Children Past the Age of
 Moved ; Moved
 Name ; Name
 Name Qualifier ; Name Qualifier
 Name Used ; Name Used
 Names ; Names
+Names in italics are immigrants, names in emphasis have no parents ; Names in italics are immigrants, names in bold have no parents
 National ID Number ; National ID Number
 Nationality ; Nationality
 Naturalization ; Naturalization
@@ -270,23 +340,31 @@ Note References ; Note References
 Notes ; Notes
 Nov. ; Nov
 November ; November
+Number ; Number
+Number Counted ; Number Counted
 Number Of Claims Documented ; Number of Claims Documented
 Number of Children ; Number of Children
 Number of Marriages ; Number of Marriages
+Obituary ; Obituary
 Occupation ; Occupation
 Oct. ; Oct
 October ; October
 Ordination ; Ordination
 Origin ; Origin
+Origin Map ; Origin Map
+Origin Maps ; Origin Maps
 Original ; Original
 Original Description ; Original Description
 Original Location Description Missing ; original location description missing
 Other Events ; Other Events
+Page ; Page
 Panama Invasion Era ; Panama Invasion Era
 Parent ; Parent
 Parents ; Parents
+Path ; Path
 Pequot War Era ; Pequot War Era
 Persian Gulf War Era ; Persian Gulf War Era
+Person ; Person
 Persons ; Persons
 Persons Baptized After Being Buried ; Persons Baptized After Being Buried
 Persons Baptized After Being Married ; Persons Baptized After Being Married
@@ -302,6 +380,7 @@ Persons Born After They Were Married ; Persons Born After They Were Married
 Persons Buried Before Having Children ; Persons Buried Before Having Children
 Persons Counted ; Persons Counted
 Persons Died After Being Buried ; Persons Died After Being Buried
+Persons Died Before Children Were Born ; Persons Died Before Children Were Born
 Persons Died Before Having Children ; Persons Died Before Having Children
 Persons Having Children Before the Age of ; Persons Having Children Before the Age of
 Persons Having Similarly Named Children ; Persons Having Similarly Named Children
@@ -333,6 +412,7 @@ Post Invasion of Afghanistan and Iraq Era ; Post Invasion of Afghanistan and Ira
 Post Persian Gulf War Era ; Post Persian Gulf War Era
 Post U.S. Civil War Era ; Post U.S. Civil War Era
 Post World War II Era ; Post World War II Era
+Posts ; Posts
 Pre Colonial Era ; Pre Colonial Era
 Pre Invasion of Afghanistan and Iraq Era ; Pre Invasion of Afghanistan and Iraq Era
 Pre U.S. Civil War Era ; Pre U.S. Civil War Era
@@ -340,21 +420,33 @@ Primary ; Primary
 Probate ; Probate
 Processing error ; Processing error
 Product ; Product
+Product identifier ; Product identifier
+Product name ; Product name
+Product vendor ; Product vendor
+Product version ; Product version
 Profile ; Profile
 Property ; Property
+Published ; Published
 Publisher ; Publisher
+Rank ; Rank
 Record not referenced ; Record not referenced
 Reference ; Reference
 Referenced record is missing ; Referenced record is missing
+Referenced record not fund ; Referenced record not found
 Referrers ; Referrers
+Related Posts ; Related Posts
 Relationship ; Relationship
 Relationships ; Relationships
+Reliability ; Reliability
 Religion ; Religion
 Removed ; removed
 Repositories ; Repositories
 Repository ; Repository
+Repository Reference ; Repository Reference
+Research ; Research
 Residence ; Residence
 Retirement ; Retirement
+Same As ; Same As
 Secondary ; Secondary
 Self ; Self
 Sep. ; Sep
@@ -362,6 +454,7 @@ Separation ; Separation
 September ; September
 Server Description ; Server Description
 Shared Note ; Shared Note
+She Married ; She Married
 Ship ; Ship
 Short Title ; Short Title
 Sibling ; Sibling
@@ -371,6 +464,7 @@ Social Security Number ; Social Security Number
 Soldiers ; Soldiers
 Source Bibliography ; Bibliography
 Source Category ; Source Category
+Source Citation ; Source Citation
 Source Citations ; Source Citations
 Source Detail ; Detail
 Source Media ; Media
@@ -389,11 +483,17 @@ Stopped processing record ; Stopped processing record
 Street ; Street
 Submitted By ; Submitted By
 Summary ; Summary
+Tag ; Tag
+Tag Expected ; Tag Expected
+Tags ; Tags 
 Tertiary ; Tertiary
 Text ; Text
 The 50s Era ; The 50s Era
 The 70s Era ; The 70s Era
 The 80s Era ; The 80s Era
+The ahnen or ; The ahnen or
+The ahnen or agnus number of the ancestor ; The ahnen or agnus number of the ancestor
+The number of the first occurrence of the same person found elsewhere in the list ; The number of the first occurrence of the same person found elsewhere in the list
 Through ; Through
 Timeline ; Timeline
 Timelines ; Timelines
@@ -407,11 +507,13 @@ Total Claims ; Total Claims
 Total Impossibilities ; Total Impossibilities
 Total Improbabilities ; Total Improbabilities
 Total Records Processed ; Total Records Processed
+Trace Regions ; Trace Regions
 Trailing data not expected ; Trailing data not expected
 Trailing spaces not expected ; Trailing spaces not expected
 Transcript ; Transcript
 Travel ; Travel
 U.S. Civil War Era ; U.S. Civil War Era
+URL ; URL
 Undefined record found ; Undefined record found
 Unexpected ID reference ; Unexpected ID reference
 Unknown ; Unknown
@@ -421,17 +523,21 @@ Unmappable Locations ; Unmappable Locations
 Unpaired ampersand (@) ; Unpaired ampersand (@)
 Unreliable ; Unreliable
 Unsupported GEDCOM version detected ; Unsupported GEDCOM version detected
+Unsupported record found ; Unsupported record found
 Untitled ; Untitled
 Updates ; Updates
 User ID Reference ; Reference
 User defined record found ; User defined record found
+Value ; Value
 Vendor ; Vendor
 Version ; Version
+Vessel ; Vessel
 Vietnam War Era ; Vietnam War Era
 Visitor Comments ; Visitor Comments
 Vital Events ; Vital Events
 Voter ; Voter
 War of 1812 Era ; War of 1812 Era
+Warning ; Warning
 Website ; Website
 Weight ; Weight
 Will ; Will
@@ -440,6 +546,7 @@ Women ; Women
 Women Counted ; Women Counted
 World War I Era ; World War I Era
 World War II Era ; World War II Era
+Year ; Year
 Years Older Than Their Spouse ; Years Older Than Their Spouse
 Years Per Generation For Everyone ; Years Per Generation (All)
 abt ; abt
@@ -448,26 +555,38 @@ and ; and
 assumed ; assumed
 bef ; bef
 bet ; bet
+by ; by
 cal ; cal
 certain ; certain
+character set ; character set
+children ; children
+children ; children
 disproved ; disproved
 est ; est
 estimated ; estimated
 for ; for
 from ; from
+impossible ; impossible
 improbable ; improbable
 int ; int
 likely ; likely
 maybe ; maybe
+number of the ancestor ; number of the ancestor 
 of ; of
+or ; or
 or Less ; or Less
 possible ; possible
 prob ; prob
 probable ; probable
 proposed ; proposed
 proven ; proven
+questionable ; questionable
+reported ; reported
+revision ; revision
 same as ; same as
 supported ; supported
 to ; to
 uncertain ; uncertain
+unreliable ; unreliable
 unsupported ; unsupported
+version ; version

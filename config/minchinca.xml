@@ -15,14 +15,14 @@
  <LinkExtension>      true       </LinkExtension> 
 
  <Author>      Wm. Minchin             </Author>                
- <Domain>  http://minchin.ca/genealogy </Domain> 
+ <Domain>  http://genealogy.minchin.ca </Domain> 
 
 <GeoDataSqliteFile>C:\bin\gigatrees\gigatrees.sqlite</GeoDataSqliteFile>
 <GeonamesUserId>  minchinweb         </GeonamesUserId>
 
  <LanguageCode>  en     </LanguageCode>
- <LanguageFile>  config\en.txt </LanguageFile>
- <TranslateFile> config\en.txt </TranslateFile>
+ <LanguageFile>  C:\Users\William\Documents\Code\genealogy\config\en.txt </LanguageFile>
+ <TranslateFile> C:\Users\William\Documents\Code\genealogy\config\en.txt </TranslateFile>
 
 <RemoveUnusedRecords>           false </RemoveUnusedRecords>
 <RemoveUnusedSourceRecordsOnly> true  </RemoveUnusedSourceRecordsOnly>
