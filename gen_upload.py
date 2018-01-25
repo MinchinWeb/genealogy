@@ -56,7 +56,7 @@ colorama.init()
 
 COPYRIGHT_START_YEAR = 1987
 ADAM_LINK = "http://gigatrees.com/"
-ADAM_FOOTER = "<p><strong>Are we related?</strong> Are you a long lost cousin? Spotted an error here? This website remains a work-in-progress and I would love to hear from you. Drop me a line at minchinweb [at] gmail [dot] com.</p>"
+ADAM_FOOTER = "<p><strong>Are we related?</strong> Are you a long lost cousin? Spotted an error here? This website remains a work-in-progress and I&nbsp;would love to hear from you. Drop me a line at minchinweb [at] gmail [dot] com.</p>"
 INDENT = " "*4
 GITHUB_FOLDER = Path("C:\\Users\\William\\Documents\\Code\\genealogy-gh-pages")
 PHOTO_FOLER = Path("S:\Documents\Genealogy")
@@ -160,7 +160,7 @@ def clean_gedcom(ctx):
 
     # replace image paths
     pattern = re.compile(r'S:\\Documents\\Genealogy\\([0-9]+[\.[a-z]+]*\.? )*', re.IGNORECASE)  # path start
-    result = pattern.sub('images/', subject)
+    result = pattern.sub('/images/', subject)
     pattern2 = re.compile(r'(images.*)\\')  # reverse slashes in rest of path
     result2 = pattern2.sub(r'\1/', result)
     result3 = pattern2.sub(r'\1/', result2)
@@ -280,7 +280,7 @@ def call_gigatrees(ctx):
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Executing Gigatrees.")
 
-    my_cmd = '"{0}" -v -c "{1}\default.xml" '\
+    my_cmd = '"{0}" -g -c "{1}\default.xml" '\
              '-c "{1}\minchinca.xml"  -i "{2}" -o "{3}" '\
              '-l "{4}\gigatrees-{5}.log"'.format(GIGATREES_EXE,
                                                  CONFIG_FOLDER,
@@ -487,24 +487,46 @@ def html_fixes(my_file):
 
     # fix pdf paths?
 
+    # build-in narbar
+    try:
+        soup.html.body.nav.decompose()
+    except AttributeError:
+        # doesn't exist
+        pass
+    # style section for gt-about-modal
+    try:
+        soup.html.body.style.decompose()
+    except AttributeError:
+        # doesn't exist
+        pass
+
     # other stuff
-    for tag in soup(id="gt-page-title"):
-        tag.decompose()
     for tag in soup(id="gt-version", limit=1):
         tag.decompose()
     for tag in soup(id="site-title"):
+        tag.decompose()
+    for tag in soup(id="gt-about-modal", limit=1):
+        tag.decompose()
+    for tag in soup(id="gt-qscore", limit=1):
         tag.decompose()
 
     # manually define the slug for the page (i.e. where the output file will be)
     my_slug = Path(my_file).relative_to(CONTENT_FOLDER)
     my_slug = str(my_slug)
     my_slug = my_slug[:-5] if my_slug.endswith('.html') else my_slug
+    # swap direction of slashes
+    my_slug = my_slug.replace('\\', '/')
     # drop initial 'I' from individuals and 'S' from sources
-    my_slug = ('profiles/' + my_slug[10:]) if my_slug.startswith('profiles/I') else my_slug
-    my_slug = ('sources/' + my_slug[9:]) if my_slug.startswith('sources/S') else my_slug
+    ## Links thoughout the output are hardcoded. So we could replace these with "{filename}" links, but I don't feel like do that right now
+    # my_slug = ('profiles\\' + my_slug[10:]) if my_slug.startswith('profiles\\I') else my_slug
+    # my_slug = ('sources\\' + my_slug[9:]) if my_slug.startswith('sources\\S') else my_slug
     new_tag_3 = soup.new_tag("meta", content=my_slug)
     new_tag_3.attrs['name'] = 'slug'
     soup.html.head.append(new_tag_3)
+
+    # Override page title
+    if my_slug == "names/index":
+        title_tag.string.replace_with("Surnames")
 
     # Add meta tags, used for the breadcrumbs in the link.
     # These are used by the Pelican engine and template engine.
@@ -516,19 +538,20 @@ def html_fixes(my_file):
     #    <meta name="at_link" content="places.html" />  <!-- this is added to SITEURL -->
     # </head>
     new_tags = False
-    if my_slug.startswith("names/"):
+    if my_slug.startswith("names/") and my_slug != "names/index":
         new_tag_1 = soup.new_tag("meta", content="Surnames")
         new_tag_2 = soup.new_tag("meta", content="names/index.html")
         new_tags = True
-    elif my_slug.startswith("places/"):
+    elif my_slug.startswith("places/") and my_slug != "places/index":
         new_tag_1 = soup.new_tag("meta", content="Locations")
         new_tag_2 = soup.new_tag("meta", content="places/index.html")
         new_tags = True
-    elif my_slug.startswith("sources/"):
+    elif my_slug.startswith("sources/") and my_slug != "sources/index":
         new_tag_1 = soup.new_tag("meta", content="Sources")
         new_tag_2 = soup.new_tag("meta", content="sources/index.html")
         new_tags = True
-    elif my_slug.startswith("timelines/"):
+        # not working??
+    elif my_slug.startswith("timelines/") and my_slug != "timelines/index":
         new_tag_1 = soup.new_tag("meta", content="Timelines")
         new_tag_2 = soup.new_tag("meta", content="timelines/index.html")
         new_tags = True
@@ -539,10 +562,29 @@ def html_fixes(my_file):
         soup.html.head.append(new_tag_1)
         soup.html.head.append(new_tag_2)
 
+    # prep images for image_process pelican plugin
+    for tag in soup.find_all("img", class_="gt-image-photo"):
+        if not 'image-process-gt-photo' in tag.attrs["class"]:
+            tag.attrs["class"].append("image-process-gt-photo")
+
+    # style map button
+    for tag in soup.find_all("a", class_="btn"):
+        if not 'btn-info' in tag.attrs["class"]:
+            tag.attrs["class"].append("btn-info")
+
+    # unwrap "Last Modified" from being in a list to being a paragraph
+    for tag in soup.find_all("li", id="gt-modified"):
+        tag.name = 'p'
+        tag.parent.unwrap()  # remove outer <ul>
+
+    # remove extra line breaks in main flow of document
+    for tag in soup.find_all("br"):
+        if tag.parent == soup.html.body:
+            tag.decompose()
+
     # write fixed version of file to disk
-    with codecs.open(str(CONTENT_FOLDER / my_file), 'w', 'utf-8') as html_doc:
-        html_doc.write(str(soup))
-        #html_doc.write(soup.prettify())
+    with codecs.open(str(my_file), 'w', 'utf-8') as html_doc:
+        html_doc.write(soup.prettify(formatter="html"))
 
 
 def html_fixes_2(my_file, my_bar, my_counter):
@@ -713,7 +755,7 @@ def all_steps(ctx):
     call_gigatrees(ctx)             # works 160718
     check_images(ctx)              # works 160717
     delete_old_output(ctx)         # works 160718
-    copy_gigatree_assets(ctx)      # works 160718
+    # copy_gigatree_assets(ctx)      # works 160718
     replace_index(ctx)             # works 160721
     set_pelican_variables(ctx)     # works 160721
     # clean_adam_html_single_thread(ctx)  # doesn't crash
