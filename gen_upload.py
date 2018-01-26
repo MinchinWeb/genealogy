@@ -476,7 +476,8 @@ def html_fixes(my_file):
                          'jquery-ui.min.js',
                          'bootstrap.min.js',
                          'globalize.min.js',
-                         'dx.chartjs.js')
+                         'dx.chartjs.js',
+                         'gigatrees-charts.js',)
     for tag in soup("script"):
         try:
             link = tag["src"]
