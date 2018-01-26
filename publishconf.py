@@ -24,3 +24,8 @@ RELATIVE_URLS = False
 #GOOGLE_ANALYTICS = ""
 
 # PLUGINS = ['assets', 'minify', 'sitemap', 'optimize_images']
+
+PLUGINS = PLUGINS + [
+    'minchin.pelican.plugins.cname',
+    'minchin.pelican.plugins.nojekyll',
+]
