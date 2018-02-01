@@ -13,7 +13,7 @@ from config.adamconf import *
 # ADAM = True  is used by the theme tempates to display 'Genealogy only' things
 
 AUTHOR = 'D. Minchin & Wm. Minchin'
-SITENAME = 'Minchin.ca'
+SITENAME = 'Minchin Genealogy'
 SITEURL = ''
 RELATIVE_URLS = True
 # SITE_ROOT_URL = 'http://minchin.ca'
@@ -43,47 +43,47 @@ DEFAULT_PAGINATION = False
 
 # static paths will be copied under the same name
 # these are relative to the base CONTENT folder
-STATIC_PATHS = ['images',
-                '../extras',
-                'css',
-                'design',
-                'js',
-                'pages/img',
-                '../.gitattributes',
-                '../.gitignore',
-                '../README.txt',
-                'assets',
-                ]
+STATIC_PATHS = [
+    'images',
+    '../extras',
+    'css',
+    'design',
+    'js',
+    'pages/assets',
+    '../.gitattributes',
+    '../.gitignore',
+    '../README.txt',
+]
 
 # A list of files to copy from the source to the destination
 EXTRA_PATH_METADATA = {
-    '../.gitattributes':            {'path': '.gitattributes'},
-    '../.gitignore':                {'path': '.gitignore'},
-    '../README.txt':                {'path': 'README.txt'},
-    '../extras/minchin.ico':        {'path': 'favicon.ico'},
-    '../extras/.nojekyll':          {'path': '.nojekyll'},
-    'js/tab-list-handler.js':       {'path': 'tab-list-handler.js'},
-    'js/tooltip-handler.js':        {'path': 'tooltip-handler.js'},
-    'js/graph-handler.js':          {'path': 'graph-handler.js'},
-    'js/gigatrees-map-min.js':      {'path': 'gigatrees-map-min.js'},
-    'pages/img/arrowd.png':         {'path': 'arrowd.png'},
-    'pages/img/arrowl.png':         {'path': 'arrowl.png'},
-    'pages/img/arrowr.png':         {'path': 'arrowr.png'},
-    'pages/img/arrowu.png':         {'path': 'arrowu.png'},
-    'pages/img/bg-black.png':       {'path': 'bg-black.png'},
-    'pages/img/bg-pattern.png':     {'path': 'bg-pattern.png'},
-    'pages/img/mapicon_f.png':      {'path': 'mapicon_f.png'},
-    'pages/img/mapicon_m.png':      {'path': 'mapicon_m.png'},
-    'pages/img/mapicon_u.png':      {'path': 'mapicon_u.png'},
-    'pages/img/mapmarker1.png':     {'path': 'mapmarker1.png'},
-    'pages/img/mapmarker2.png':     {'path': 'mapmarker2.png'},
-    'pages/img/mapmarker3.png':     {'path': 'mapmarker3.png'},
-    'pages/img/mapmarker4.png':     {'path': 'mapmarker4.png'},
-    'pages/img/mapmarker5.png':     {'path': 'mapmarker5.png'},
-    'pages/img/avatar.jpg':         {'path': 'avatar.jpg'},
-    'pages/img/image.jpg':          {'path': 'image.jpg'},
-    'pages/img/pdf.jpg':            {'path': 'pdf.jpg'},
-    }
+    '../.gitattributes':                            {'path': '.gitattributes'},
+    '../.gitignore':                                {'path': '.gitignore'},
+    '../README.txt':                                {'path': 'README.txt'},
+    '../extras/minchin.ico':                        {'path': 'favicon.ico'},
+    'pages/assets/bootstrap-tooltip-handler.js':    {'path': 'assets/bootstrap-tooltip-handler.js'},
+    'pages/assets/fancybox-handler.js':             {'path': 'assets/fancybox-handler.js'},
+    'pages/assets/gigatrees-charts.js':             {'path': 'assets/gigatrees-charts.js'},
+    'pages/assets/gigatrees-heatmaps.min.js':       {'path': 'assets/gigatrees-heatmaps.min.js'},
+    'pages/assets/gmaps-heatmap.min.js':            {'path': 'assets/gmaps-heatmap.min.js'},
+    'pages/assets/heatmap.min.js':                  {'path': 'assets/heatmap.min.js'},
+    'pages/assets/markerclusterer.min.js':          {'path': 'assets/markerclusterer.min.js'},
+    'pages/assets/ac_arrow_down.png':               {'path': 'assets/ac_arrow_down.png'},
+    'pages/assets/ac_arrow_up.png':                 {'path': 'assets/ac_arrow_up.png'},
+    'pages/assets/avatar.png':                      {'path': 'assets/avatar.png'},
+    'pages/assets/image.png':                       {'path': 'assets/image.png'},
+    'pages/assets/link.png':                        {'path': 'assets/link.png'},
+    'pages/assets/mapicon_f.png':                   {'path': 'assets/mapicon_f.png'},
+    'pages/assets/mapicon_m.png':                   {'path': 'assets/mapicon_m.png'},
+    'pages/assets/mapicon_u.png':                   {'path': 'assets/mapicon_u.png'},
+    'pages/assets/mapmarker1.png':                  {'path': 'assets/mapmarker1.png'},
+    'pages/assets/mapmarker2.png':                  {'path': 'assets/mapmarker2.png'},
+    'pages/assets/mapmarker3.png':                  {'path': 'assets/mapmarker3.png'},
+    'pages/assets/mapmarker4.png':                  {'path': 'assets/mapmarker4.png'},
+    'pages/assets/mapmarker5.png':                  {'path': 'assets/mapmarker5.png'},
+    'pages/assets/avatar.jpg':                      {'path': 'assets/avatar.jpg'},
+    'pages/assets/pdf.png':                         {'path': 'assets/pdf.png'},
+}
 
 
 # Custom settings
@@ -165,12 +165,65 @@ USE_OPEN_GRAPH = True
 
 TYPOGRIFY = False  # turn off for HIDDEN names...
 # PYGMENTS_STYLE = 'friendly'
-CUSTOM_CSS = 'css/minchin-ca.css'
 DOCUTIL_CSS = False
-CUSTOM_JS_LIST = ['js/jquery-ui.min.js',
-                  'js/globalize.min.js',
-                  'js/dx.chartjs.js',
-                  ]
+JQUERY_JS_IN_HEAD = True
+CUSTOM_JS_LIST_HEAD = [
+    """<script type="text/javascript">
+            var myImage='{0}/assets/mapicon_u.png';
+            var myImageW='{0}/assets/mapicon_f.png';
+            var myImageM='{0}/assets/mapicon_m.png';
+            var mcOptions={{styles:[
+                {{ height:35,width:35,url:"{0}/assets/mapmarker1.png"}},
+                {{ height:35,width:35,url:"{0}/assets/mapmarker2.png"}},
+                {{ height:35,width:35,url:"{0}/assets/mapmarker3.png"}},
+                {{ height:35,width:35,url:"{0}/assets/mapmarker4.png"}},
+                {{ height:35,width:35,url:"{0}/assets/mapmarker5.png"}}
+            ]}};
+            function dynamicallyLoadScript(url) {{
+                var script = document.createElement('script');
+                script.src = url;
+                document.head.appendChild(script);
+            }}
+            if ('file:' == document.location.protocol) {{
+                dynamicallyLoadScript('https://maps.googleapis.com/maps/api/js');
+            }} else {{
+                dynamicallyLoadScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyBtE7dlokTduwUIfWaYdWCdXP_ve2hPKtQ');
+            }}
+            var loadMap = function(callback) {{
+                var interval = setInterval(function() {{
+                    if (typeof google !== 'undefined') {{
+                        clearInterval(interval);
+                        callback();
+                    }}
+                }}, 1);
+            }};
+            loadMap(function() {{
+                dynamicallyLoadScript('{0}/assets/heatmap.min.js');
+                dynamicallyLoadScript('{0}/assets/gmaps-heatmap.min.js');
+                dynamicallyLoadScript('{0}/assets/markerclusterer.min.js');
+                dynamicallyLoadScript('{0}/assets/gigatrees-heatmaps.min.js');
+            }});
+        </script>
+        """.format(SITEURL),  # use double brackets {{ }} to escape them, to let us use string formatting    
+]
+CUSTOM_JS_LIST = [           
+    'assets/bootstrap-tooltip-handler.js',
+    'js/gigatrees-charts.wm.js',
+    'js/c3.min.js?v=0.4.18',
+    'js/d3.min.js?v=3.5.17',
+    'js/jquery.mousewheel.min.js?v=3.1.13',  # used with FancyBox
+    'js/jquery.fancybox.pack.js?v=2.1.7',
+    'js/jquery.fancybox-buttons.js?v=1.0.5',
+    'js/jquery.fancybox-media.js?v=1.0.6',
+    'js/jquery.fancybox-thumbs.js?v=1.0.7',
+    'assets/fancybox-handler.js',
+]
+CUSTOM_CSS_LIST = [
+    'css/minchin-ca.css',
+    'css/jquery.fancybox.min.css',
+    # '//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-buttons.css',  # included in Seafoam CSS
+    # '//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.css',  # unused??
+]
 
 # Generate 404 error page
 TEMPLATE_PAGES = {
@@ -183,10 +236,11 @@ GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY = 'minchin.ca'
 # Plugins
 PLUGIN_PATHS = ('../pelican-plugins',)
 # PLUGINS = ['assets', 'minify', 'sitemap', 'optimize_images']
-PLUGINS = ['minchin.pelican.jinja_filters',
-           'minchin.pelican.plugins.image_process',
-           # others, as desired...
-           ]
+PLUGINS = [
+    'minchin.pelican.jinja_filters',
+    # 'minchin.pelican.plugins.image_process',  # breaks
+    # others, as desired...
+]
 
 ASSET_CSS = False
 ASSET_JS = False
@@ -198,6 +252,7 @@ SITEMAP = {
 IMAGE_PROCESS = {
   'article-feature': ["scale_in 848 848 True"],
   'index-feature': ["scale_in 263 263 True"],
+  'gt-photo': ["scale_in 100 100 False"],
 }
 
 # `assets` sounds good, but I can't figure out how to get it to work for my CSS

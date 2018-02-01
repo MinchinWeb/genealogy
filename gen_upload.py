@@ -472,18 +472,38 @@ def html_fixes(my_file):
     #              tag3.name = 'p'
 
     # Remove links to CDN stuff I serve locally
-    js_served_locally = ('jquery.min.js',
-                         'jquery-ui.min.js',
-                         'bootstrap.min.js',
-                         'globalize.min.js',
-                         'dx.chartjs.js',
-                         'gigatrees-charts.js',)
-    for tag in soup("script"):
+    js_served_locally = (
+        'jquery.min.js',
+        'jquery-ui.min.js',  # old, so not re-added
+        'bootstrap.min.js',
+        'globalize.min.js',  # old, so not re-added
+        'dx.chartjs.js',  # old, so not re-added
+        'gigatrees-charts.js',
+        'c3.min.js',
+        'd3.min.js',
+        'bootstrap-tooltip-handler.js',
+        'jquery.mousewheel.min.js',  # used by FancyBox
+        'jquery.fancybox.pack.js',
+        'jquery.fancybox-buttons.js',
+        'jquery.fancybox-media.js',
+        'jquery.fancybox-thumbs.js',
+        'fancybox-handler.js',
+    )
+    js_served_from_page = (
+        "var myImage='../assets/mapicon_u.png';"
+    )
+    for tag in soup.find_all("script"):
         try:
             link = tag["src"]
             if link.endswith(js_served_locally):
                 tag.decompose()
         except:
+            pass
+        
+        try:
+            if str(tag.contents[0]).lstrip().startswith(js_served_from_page):
+                tag.decompose()
+        except IndexError:
             pass
 
     # fix pdf paths?
@@ -763,10 +783,10 @@ def all_steps(ctx):
     clean_adam_html_multithreaded(ctx)  # runs 20160721
     replace_emails(ctx)            # runs 20160721
     create_tracking(ctx)           # works 20160721
-    pelican(ctx)                   # works (assuming Pelican works)
-    #pelican_local(ctx)
-    git(ctx)                       #
-    live(ctx)                      #
+    #pelican(ctx)                   # works (assuming Pelican works)
+    pelican_local(ctx)
+    #git(ctx)                       #
+    #live(ctx)                      #
 
     minchin.text.clock_on_right(Fore.GREEN + Style.BRIGHT + "Update is Live!")
     print(Style.RESET_ALL)

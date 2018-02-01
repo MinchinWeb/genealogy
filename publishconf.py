@@ -12,6 +12,7 @@ from pelicanconf import *
 
 SITEURL = 'http://minchin.ca/genealogy'
 RELATIVE_URLS = False
+SITE_ROOT_URL = 'http://minchin.ca'
 
 #FEED_ALL_ATOM = 'feeds/all.atom.xml'
 #CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
