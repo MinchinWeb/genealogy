@@ -156,8 +156,8 @@ Seaman
 The Seaman line goes back to **[Robert Seaman]({filename}profiles/I125.html)**
 (1641-1693) and **[Alice Shuckforth]({filename}profiles/I126.html)** (1630-1709).
 The family goes back to Suffolk, England. **[William
-Seaman]({filename}profile/I110.html)** (1792 - 1864) and **[Hephzebah Chaman
-Wells]({filename}profile/I111.html)** (1798 - 1865) came to PEI about 1830 from
+Seaman]({filename}profiles/I110.html)** (1792 - 1864) and **[Hephzebah Chaman
+Wells]({filename}profiles/I111.html)** (1798 - 1865) came to PEI about 1830 from
 England.
 
 Wells
@@ -201,7 +201,7 @@ Bunbury’s have often been involved in the British or English military.
 In time, they too ended up in Ireland.
 
 The Bunbury’s first came to Canada with **[George John
-Bunbury]({filename}profile/I154.html)** (1888-1969), my great-grandfather. With
+Bunbury]({filename}profiles/I154.html)** (1888-1969), my great-grandfather. With
 his father (**[George William Bunbury]({filename}profiles/I157.html)** (1835 -
 1898)) in the Army in India, he (George, the son) got himself kicked out
 of boarding school. So at age 15 (about 1903, before Alberta was a

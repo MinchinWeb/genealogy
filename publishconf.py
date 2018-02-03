@@ -10,7 +10,7 @@ import sys
 sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 from pelicanconf import *
 
-SITEURL = 'http://minchin.ca/genealogy'
+SITEURL = 'http://genealogy.minchin.ca'
 RELATIVE_URLS = False
 SITE_ROOT_URL = 'http://minchin.ca'
 

@@ -23,6 +23,8 @@ from gen_upload import *
 p = Path.cwd()
 deploy_path = p.parents[0] / 'genealogy-gh-pages'
 
+GIT_DEPLOY_BRANCH = 'gh-pages'
+
 
 def clean(ctx):
     print("You'll have to manually delete the output folder")
@@ -74,7 +76,7 @@ def preview(ctx):
 @task
 def upload(ctx):
     publish(ctx)
-    run('cd {deploy_path}')
+    run(f'cd {deploy_path}')
     run('git add -A')
     run('git commit')
     run('git push')
@@ -101,3 +103,9 @@ def less(ctx):
     source = p / '..' / 'minchinweb.github.io-pelican/themes\pelican-minchin-ca\static\less\\bootstrap.minchin-ca.min.less'
     dest = p / '..' / 'minchinweb.github.io-pelican/themes\pelican-minchin-ca\static\css\\bootstrap.minchin-ca.min.css'
     run('lessc {} > {}'.format(source, dest))
+
+@task
+def setup_worktree(ctx):
+    """Sets up git worktree in the deploy directory."""
+    # creates folder, but I'm not sure it checks out the branch as expected...
+    run(f'git worktree add {deploy_path} -b {GIT_DEPLOY_BRANCH}')

@@ -208,19 +208,21 @@ CUSTOM_JS_LIST_HEAD = [
 ]
 CUSTOM_JS_LIST = [           
     'assets/bootstrap-tooltip-handler.js',
-    'js/gigatrees-charts.wm.js',
-    'js/c3.min.js?v=0.4.18',
+
     'js/d3.min.js?v=3.5.17',
+    'js/c3.min.js?v=0.4.18',
+    'js/gigatrees-charts.wm.js',
+
+    'assets/fancybox-handler.js',
     'js/jquery.mousewheel.min.js?v=3.1.13',  # used with FancyBox
     'js/jquery.fancybox.pack.js?v=2.1.7',
     'js/jquery.fancybox-buttons.js?v=1.0.5',
     'js/jquery.fancybox-media.js?v=1.0.6',
     'js/jquery.fancybox-thumbs.js?v=1.0.7',
-    'assets/fancybox-handler.js',
 ]
 CUSTOM_CSS_LIST = [
     'css/minchin-ca.css',
-    'css/jquery.fancybox.min.css',
+    'css/jquery.fancybox.min.css?v=2.1.7',
     # '//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-buttons.css',  # included in Seafoam CSS
     # '//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-thumbs.css',  # unused??
 ]

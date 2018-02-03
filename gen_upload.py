@@ -144,6 +144,7 @@ def export_gedcom(ctx):
         start_time = datetime.fromtimestamp(os.stat(str(MY_GEDCOM)).st_ctime)
     except FileNotFoundError:
         print("{1} Your file doesn't seem to exist.\n{0}   Expecting {2}\n{0}   Exiting...".format(INDENT, ERROR_CODE, MY_GEDCOM))
+        sys.exit(1)
 
 
 @task
@@ -280,6 +281,9 @@ def call_gigatrees(ctx):
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Executing Gigatrees.")
 
+    # log won't be created if log folder doesn't exist
+    Path(LOG_FOLDER).mkdir(parents=True, exist_ok=True)
+
     my_cmd = '"{0}" -g -c "{1}\default.xml" '\
              '-c "{1}\minchinca.xml"  -i "{2}" -o "{3}" '\
              '-l "{4}\gigatrees-{5}.log"'.format(GIGATREES_EXE,
@@ -289,7 +293,11 @@ def call_gigatrees(ctx):
                                                  LOG_FOLDER,
                                                  TODAY_STR)
     try:
-        run(my_cmd, shell=INVOKE_SHELL, hide=True)
+        print("    Log file is {}\gigatrees-{}.log".format(LOG_FOLDER, TODAY_STR))
+        run(my_cmd,
+            shell=INVOKE_SHELL,
+            #hide=True,
+           )
     except invoke.exceptions.Failure:
         if not minchin.text.query_yes_quit("{}Gigatrees exited oddly. Continue anyways?".format(INDENT), default="yes"):
             sys.exit(1)
@@ -488,9 +496,12 @@ def html_fixes(my_file):
         'jquery.fancybox-media.js',
         'jquery.fancybox-thumbs.js',
         'fancybox-handler.js',
+        'html5shiv.min.js',
+        'respond.min.js',
     )
     js_served_from_page = (
-        "var myImage='../assets/mapicon_u.png';"
+        "var myImage='../assets/mapicon_u.png';",
+        '$(document).ready(function () {\ndocument.getElementById("gt-version")"',
     )
     for tag in soup.find_all("script"):
         try:
@@ -530,6 +541,17 @@ def html_fixes(my_file):
         tag.decompose()
     for tag in soup(id="gt-qscore", limit=1):
         tag.decompose()
+
+    # replace spaces in references to sources with non-breaking spaces
+    for tag in soup.find_all(class_="gsref"):
+        for my_contents in tag.contents:
+            try:
+                my_contents.replace("[ ", "[&nbsp;").replace("[\n", "[&nbsp;\n").replace(" ]", "&nbsp;]")
+            except TypeError:
+                pass
+
+    # as of Gigatrees 4.4.0, the "age" column is always empty, so dump it
+    #for tag in soup.find_all(class_="gage")
 
     # manually define the slug for the page (i.e. where the output file will be)
     my_slug = Path(my_file).relative_to(CONTENT_FOLDER)
@@ -774,7 +796,7 @@ def all_steps(ctx):
     clean_gedcom(ctx)              # works 160717
     delete_old_gigatrees(ctx)      # works 160717  ~2 min
     call_gigatrees(ctx)             # works 160718
-    check_images(ctx)              # works 160717
+    # check_images(ctx)              # works 160717
     delete_old_output(ctx)         # works 160718
     # copy_gigatree_assets(ctx)      # works 160718
     replace_index(ctx)             # works 160721
@@ -783,8 +805,8 @@ def all_steps(ctx):
     clean_adam_html_multithreaded(ctx)  # runs 20160721
     replace_emails(ctx)            # runs 20160721
     create_tracking(ctx)           # works 20160721
-    #pelican(ctx)                   # works (assuming Pelican works)
-    pelican_local(ctx)
+    pelican(ctx)                   # works (assuming Pelican works)
+    # pelican_local(ctx)
     #git(ctx)                       #
     #live(ctx)                      #
 
