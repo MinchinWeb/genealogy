@@ -807,7 +807,7 @@ def all_steps(ctx):
     create_tracking(ctx)           # works 20160721
     pelican(ctx)                   # works (assuming Pelican works)
     # pelican_local(ctx)
-    #git(ctx)                       #
+    git(ctx)                       #
     #live(ctx)                      #
 
     minchin.text.clock_on_right(Fore.GREEN + Style.BRIGHT + "Update is Live!")

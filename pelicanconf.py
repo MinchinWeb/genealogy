@@ -102,7 +102,7 @@ MARKUP = (('rst',
            'html',
            'htm'))
 PATH = 'content'
-OUTPUT_PATH = '../genealogy-gh-pages/'
+OUTPUT_PATH = '../genealogy-local/'
 
 # Add Blog to sidebar
 MENUITEMS = (('Blog',        'http://blog.minchin.ca/',      'fa fa-fw fa-pencil'),

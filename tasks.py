@@ -22,6 +22,7 @@ from gen_upload import *
 
 p = Path.cwd()
 deploy_path = p.parents[0] / 'genealogy-gh-pages'
+local_path = p.parents[0] / 'genealogy-local'
 
 GIT_DEPLOY_BRANCH = 'gh-pages'
 
@@ -53,14 +54,14 @@ def regenerate(ctx):
 def serve(ctx):
     # local('cd {deploy_path} && start python -m SimpleHTTPServer'.format(**env))
     # in Python3000, use  python -m http.server
-    run('cd {} && start python -m http.server'.format(deploy_path))
+    run('cd {} && start python -m http.server'.format(local_path))
 
 
 @task
 def serve_on(ctx, port):
     # local('cd {deploy_path} && start python -m SimpleHTTPServer'.format(**env))
     # in Python3000, use  python -m http.server
-    run('cd {} && start python -m http.server {}'.format(deploy_path, port))
+    run('cd {} && start python -m http.server {}'.format(local_path, port))
 
 @task
 def reserve(ctx):
