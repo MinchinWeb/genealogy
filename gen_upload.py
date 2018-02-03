@@ -251,7 +251,7 @@ def delete_old_output(ctx):
     counter = 0
 
     # delete HTML files
-    run('del {}\*.html -y'.format(GITHUB_FOLDER), shell=INVOKE_SHELL)
+    run('del /S {}\*.html -y'.format(GITHUB_FOLDER), shell=INVOKE_SHELL)
     bar = minchin.text.progressbar(maximum=len(to_delete) + html_files)
     counter = html_files
     bar.update(counter)
@@ -796,7 +796,7 @@ def all_steps(ctx):
     clean_gedcom(ctx)              # works 160717
     delete_old_gigatrees(ctx)      # works 160717  ~2 min
     call_gigatrees(ctx)             # works 160718
-    # check_images(ctx)              # works 160717
+    check_images(ctx)              # works 160717
     delete_old_output(ctx)         # works 160718
     # copy_gigatree_assets(ctx)      # works 160718
     replace_index(ctx)             # works 160721
@@ -808,7 +808,7 @@ def all_steps(ctx):
     pelican(ctx)                   # works (assuming Pelican works)
     # pelican_local(ctx)
     git(ctx)                       #
-    #live(ctx)                      #
+    live(ctx)                      #
 
     minchin.text.clock_on_right(Fore.GREEN + Style.BRIGHT + "Update is Live!")
     print(Style.RESET_ALL)
