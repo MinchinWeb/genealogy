@@ -3,7 +3,7 @@ url:
 save_as: index.html
 copy_date: 2007-18
 status: hidden
-modified: January 23, 2018
+modified: February 3, 2018
 
 I got into Genealogy a few years back, and started by transcribing a few
 of the books we had laying around from family reunions into my genealogy
@@ -80,37 +80,39 @@ region in modern day Germany) in the 6th century AD.
 Other Minchin’s around the world:
 
 <div class="real-list" markdown=1>
--   **The Boer War (South Africa)**: During the siege of Mafeking,
-    Robert Banden-Powell (who later founded Scouting) established his
-    offices above those of a lawyer by the name of Minchin. I have heard
-    that you can still take tours of the office today.
--   **Minchinbury Estates**: An officer in the British army by the name
-    of Minchin was given an estate in New South Wales, Australia. He was
-    a contemporary of Captain Bligh, and opposed some of Bligh's
-    politics. A few years later, his entire family was lost at sea. The
-    estate was sold, and eventually developed into a winery. Minchinbury
-    champagne is considered quite excellent. In recent years, the winery
-    closed and the area was redeveloped as housing. A fighter jet on a
-    pedestal now sits at the entrance.
--   **Minchinhampton, England**: An former market town in England. I'm
-    told that the last Minchin living there died about 15 years ago.
--   **Minchin, Texas**: close to Dallas/Fort Worth, in Denton County. I
-    actually went looking for this a couple years ago, hoping to get a
-    cool picture with the town sign. I asked at the county historical
-    museum, and they had never heard of it. When I went looking on the
-    ground, I didn't find anything labelled 'Minchin', and the people
-    working at the Roselawn Cemetary (right in the supposed centre of
-    Minchin) had no idea either. I looked in up online, and Minchin was
-    labeled on MapQuest, but not Google Maps (this was 2009). So I'm not
-    convinced this really exists.
--   **Minchin Lake, New Zealand**: Named after a runholder who worked
-    the area.
--   **Minchin Mason Lodge**: There is a Mason Lodge in India, founded by
-    a Minchin.
--   **Minchin**: A geological formation in South America.
--   **Tim Minchin**: A comedian from Australia.
--   **Nick Minchin**: An Australian politician. He is currently serving
-    as the Minister of Finance.
+
+- **The Boer War (South Africa)**: During the siege of Mafeking,
+  Robert Banden-Powell (who later founded Scouting) established his
+  offices above those of a lawyer by the name of Minchin. I have heard
+  that you can still take tours of the office today.
+- **Minchinbury Estates**: An officer in the British army by the name
+  of Minchin was given an estate in New South Wales, Australia. He was
+  a contemporary of Captain Bligh, and opposed some of Bligh's
+  politics. A few years later, his entire family was lost at sea. The
+  estate was sold, and eventually developed into a winery. Minchinbury
+  champagne is considered quite excellent. In recent years, the winery
+  closed and the area was redeveloped as housing. A fighter jet on a
+  pedestal now sits at the entrance.
+- **Minchinhampton, England**: An former market town in England. I'm
+  told that the last Minchin living there died about 15 years ago.
+- **Minchin, Texas**: close to Dallas/Fort Worth, in Denton County. I
+  actually went looking for this a couple years ago, hoping to get a
+  cool picture with the town sign. I asked at the county historical
+  museum, and they had never heard of it. When I went looking on the
+  ground, I didn't find anything labelled 'Minchin', and the people
+  working at the Roselawn Cemetary (right in the supposed centre of
+  Minchin) had no idea either. I looked in up online, and Minchin was
+  labeled on MapQuest, but not Google Maps (this was 2009). My current
+  working theory is that it's actually the name of a railway siding on the
+  Kansas Southern Railway, but I've been unable to confirm that.
+- **Minchin Lake, New Zealand**: Named after a runholder who worked
+  the area.
+- **Minchin Mason Lodge**: There is a Mason Lodge in India, founded by
+  a Minchin.
+- **Minchin**: A geological formation in South America.
+- **Tim Minchin**: A comedian from Australia.
+- **Nick Minchin**: An Australian politician.
+
 </div>
 
 Walcot
@@ -217,16 +219,18 @@ Lynes]({filename}profiles/I166.html)** (d. 1920) who died in childbrith.)
 Other Bunbury’s around the world:
 
 <div class="real-list" markdown=1>
--   **Bunbury, Prince Edward Island**: I'd need to find it on a map
-    again, but I think it exists...
--   **Bunbury, Australia**: The Bunburys were active in the British
-    military, and they got a city of Australia's west coast named after
-    them. The city is not far from Perth.
--   **Bunbury Road, Valmont, BC, Canada**
--   **Bunbury Castles, Ireland**: Twin castles built in Tipperary
-    county, Ireland, not far from the Balarny stone, for a set of
-    Bunbury brothers in the 18th or 19th century. I have not been able
-    to confirm their exact locations.
+
+- **Bunbury, Prince Edward Island**: I'd need to find it on a map
+  again, but I think it exists...
+- **Bunbury, Australia**: The Bunburys were active in the British
+  military, and they got a city of Australia's west coast named after
+  them. The city is not far from Perth.
+- **Bunbury Road, Valmont, BC, Canada**
+- **Bunbury Castles, Ireland**: Twin castles built in Tipperary
+  county, Ireland, not far from the Balarny stone, for a set of
+  Bunbury brothers in the 18th or 19th century. I have not been able
+  to confirm their exact locations.
+
 </div>
 
 McGowan
