@@ -1,0 +1,163 @@
+/* core */
+body {color: #000; background-color: rgba(0,0,0,.075)}
+blockquote {color: #616161;}
+blockquote:before, blockquote:after {border-color: #eaecee;}
+pre:before {background-color: #008856;color: #fff;}
+a, a:link, a:visited, a:active {color: #4B718A}
+a:hover, a:focus {color: gray}
+
+/* Bootstrap overrides */
+.navbar {background-color: #333;} 
+.navbar-brand:before{color: #fff;}
+.navbar-brand:hover, 
+.navbar-brand:focus, 
+.navbar-nav>li>a:hover, 
+.navbar-nav>li>a:focus {background-color: #ae9891;}
+.navbar-brand, 
+.navbar-brand>li>a, 
+.navbar-nav>li>a {color: #fff;}
+.navbar-nav>li>.dropdown-menu,
+.navbar-nav .open .dropdown-menu {background-color: #bdc2cf;}
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus {background-color: #6B6A70;}
+.navbar-toggle .icon-bar {background-color: #fff;}
+
+.popover-title {background-color: #fff;}
+
+/* Misc */
+.outline,.outline-padded {border-color: #021a40;}
+
+/* Gigatrees */
+#gt-page-title {background-color: #333; color: #fff;} 
+
+#gt-menu {background-color: #fff;}
+
+#gt-menu a,#gt-menu a:link,#gt-menu a:active,#gt-menu a:visited {color:#333;}
+#gt-menu a:hover, #gt-menu a:focus {color:#aaa;}
+#gt-menu ul li {border-color: rgba(196, 196, 196, 0.25);}
+
+#map,
+#gt-comments,
+#gt-photos { background-color: #F4F7F9 }
+
+.gt-heading,
+.gt-heading li.gt-title        	{color:#fff;}
+
+
+/* Tabs */
+.gt-ac-container article p		             {background-color: rgba(255, 255, 255, 0.5); color: #777;}
+.gt-ac-container label[for^='gt-ac']{background-color: #dbdfe4; color: #333;}
+.gt-ac-container label[for^='gt-ac']:hover,
+.gt-ac-container label[for^='gt-ac']:focus,
+.gt-ac-container input[id^="gt-ac-"]:checked + label {background-color: #a5b2d4; color: #000;} 
+.gt-ac-container input[id^="gt-ac-"]:checked + label:hover,
+.gt-ac-container input[id^="gt-ac-"]:checked + label:focus {color: #fff;} 
+
+/* Blog */
+.gt-article-cover {border-color: #e0e0e0; background-color: #fbfbfb;}
+.gt-article-cover-title a:hover,
+.gt-article-cover-title a:focus {color: #333 !important;}
+.gt-article-meta {border-color: #aaa;}
+.gt-article-inner {background: #fff; box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);}
+.gt-article-pagination .page-numbers {background-color: #333; color: #fff;}
+.gt-article-pagination .dots {color: #616161;}
+.gt-article-pagination .current,
+.gt-article-pagination .page-numbers:hover,
+.gt-article-pagination .page-numbers:focus {background-color: #0aac8e;}
+.gt-article-pagination  a, 
+.gt-article-pagination  a:link, 
+.gt-article-pagination  a:active, 
+.gt-article-pagination  a:visited  {color: #fff !important}
+
+.gt-article-meta-element,
+.gt-article-meta-element a,
+.gt-article-meta-element a:link,
+.gt-article-meta-element a:active,
+.gt-article-meta-element a:visited {color: #999 !important}
+.gt-article-meta-element a:hover, 
+.gt-article-meta-element a:focus {text-decoration: none; color: #777 !important}
+
+/* Charts */
+#gt-person-chart { background-color: #F4F7F9 }
+.gt-chart-node 				{border-color: #949494;}
+.gt-chart-connector 			{background-color:#949494;}
+.gt-chart-node-bkgnd5          	{background-color:#f5ecce;}
+.gt-chart-node-bkgnd4          	{background-color:#f7f2e0;}
+.gt-chart-node-bkgnd3          	{background-color:#fbf8ef;}
+.gt-chart-node-bkgnd2          	{background-color:#fbfbef;}
+.gt-chart-node-bkgnd1          	{background-color:#ffffff;}
+.gt-chart-node-bkgnd0          	{background-color:#f5ecce;}
+.gt-chart-node-uncertain       	{background-color:#aaaaaa;}
+.gt-chart-node-uncertain a     	{color:#fff;}
+.gt-chart-node-unknown         	{background-color:#efefef;}
+.gt-chart-nodeshadow           	{background-color:#444;}
+#gt-chart-legend-uncertain     {background-color:#aaaaaa; border-color: #666;}
+.gt-chart-arrow0 a, .gt-chart-arrow0 a:link,
+#gt-chart-arrow3 a, #gt-chart-arrow3 a:link,
+#gt-chart-arrow2 a, #gt-chart-arrow2 a:link {color: #000;}
+.gt-chart-arrow0 a:hover, .gt-chart-arrow0 a:focus,
+#gt-chart-arrow3 a:hover, #gt-chart-arrow3 a:focus,
+#gt-chart-arrow2 a:hover , #gt-chart-arrow2 a:focus {color: gray;}
+
+/* Claims */ 
+.gt-claim-quality-estimated    	{color:purple;}
+.gt-claim-quality-probable     	{color:green;}
+.gt-claim-quality-unsupported,
+.gt-claim-quality-questionable,
+.gt-claim-quality-unreliable,
+.gt-claim-quality-uncertain		{color:black;}
+.gt-claim-quality-proposed,
+.gt-claim-quality-supported,
+.gt-claim-quality-reported    	{color:#28A500;}
+.gt-claim-quality-certain,
+.gt-claim-quality-proven     	{color:blue;}
+.gt-claim-evidence,
+.gt-claim-evidence a,
+.gt-claim-evidence a:link,
+.gt-claim-evidence a:visited,
+.gt-claim-evidence a:active    	{color:green;}
+.gt-claim-conclusion,
+.gt-claim-conclusion a,
+.gt-claim-conclusion a:link,
+.gt-claim-conclusion a:visited,
+.gt-claim-conclusion a:active  	{color:purple;}
+.gt-claim-highlight {background-color:lightgrey !important}
+.gcalert  {color:red;}
+
+/* */
+
+.gt-bonkers,.gt-bonkers-item               {background-color:#fff;}
+
+a#gt-toggle-markers {background: #0aac8e; color: #fff;}
+
+.gt-table-blog                              {background-color:#F9F9F9}
+.gt-table-blog th							{background-color:#E1E6F3}
+
+.gt-table-source, .gt-table-event 			{background-color:#E9DBC7}
+.glist 										{background-color:#E7F0FF}
+.gt-table-source th,.gt-table-event th,.gcensus th,.glist th 	{background-color:#bdc2cf}
+.gcensus                                                     {background-color:#FFF4E7}
+.gcensus td.gcensus-odd                      {background-color:#FFEACF}
+
+.gt-list-item                   		{border-color: #ddd;} 
+
+.glist-uncertain   	{background-color:lightgrey;}
+
+.ghead,.gsrctitle,.gcitehead       {background-color:#bdc2cf; border-color: #fff;}
+.gnm,.gref,.grepo,.gtype,.gloc,.gpubl {background-color:#f0fff0; border-color: #fff;}
+.gbiblio,.gsrcq          {background-color:#F4E5CF; border-color: #fff;}
+.gtemp                              {background-color:#FFFAFA; border-color: #fff;}
+.gurl                                {background-color:#CBCCE6; border-color: #fff;}
+.gtext                              {background-color:#E7F0FF; border-color: #fff;}
+.grelation               	{background-color:#E9DBC7; border-color: #fff;}
+.gparent                    	{background-color:#EDCBAD; border-color: #fff;}
+.gspouse                    	{background-color:#FFEAD0; border-color: #fff;}
+.gchild   	                	{background-color:#E7F0FF; border-color: #fff;}
+.gcomment                    	{background-color:#FFFFCC; border-color: #fff;}
+.gkin,.gsex,.gevent,.gattr,.gimmi,.gtitle,.gsrc,.gart  {background-color:#E7F0FF; border-color: #fff;}
+
+.gtext img, .gurl img 	{background-color:#fff; border-color: #ccc;}
+
+.gt-updated-person,
+.gt-updated-source,
+.gt-updated-note {background: #fff}
+
