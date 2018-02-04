@@ -117,22 +117,21 @@ MENUITEMS = (('Blog',        'http://blog.minchin.ca/',      'fa fa-fw fa-pencil
 MENUITEMS_2_AT = 'Genealogy'
 MENUITEMS_2_AT_LINK = ''  # this is added to SITEURL
 
-MENUITEMS_2 = (('Surnames',         SITEURL + '/names/index.html',          'fa fa-fw fa-user-circle'),
+MENUITEMS_2 = (('Surnames',         SITEURL + '/names/',          'fa fa-fw fa-user-circle'),
                #('Updates',          SITEURL + '/updates.html',        False),
-               ('Sources',          SITEURL + '/sources/index.html',        'fa fa-fw fa-book'),
-               ('Distribution Map', SITEURL + '/map/index.html',            'fa fa-fw fa-globe'),
-               ('Timelines',        SITEURL + '/timelines/index.html',      'fa fa-fw fa-clock-o'),  # consider hourgloass (FA5)
+               ('Sources',          SITEURL + '/sources/',        'fa fa-fw fa-book'),
+               ('Distribution Map', SITEURL + '/map/',            'fa fa-fw fa-globe'),
+               ('Timelines',        SITEURL + '/timelines/',      'fa fa-fw fa-clock-o'),  # consider hourgloass (FA5)
+               # doens't exist in current builds
                #('Immigrants',       SITEURL + '/immigrants.html',     False),
                #('Nobility',         SITEURL + '/nobility.html',       False),
                #('Military',         SITEURL + '/soldiers.html',       False),
-               ('Locations',        SITEURL + '/places/index.html',         'fa fa-fw fa-map-marker'),
-               ('Data Issues',      SITEURL + '/alerts/',        False),
-               # doens't exist in current builds
-               ('Photos',           SITEURL + '/photos/index.html',         'fa fa-fw fa-picture-o'),
+               ('Locations',        SITEURL + '/places/',         'fa fa-fw fa-map-marker'),
+               ('Photos',           SITEURL + '/photos/',         'fa fa-fw fa-picture-o'),
                # doens't exist in current builds
                #('External Links',   SITEURL + '/links.html',          False),
-               # stats graphs aren't working right now; something with the JS link??
-               ('Statistics',       SITEURL + '/stats/index.html',          'fa fa-fw fa-bar-chart'),
+               ('Statistics',       SITEURL + '/stats/',          'fa fa-fw fa-bar-chart'),
+               ('Data Issues',      SITEURL + '/alerts/',        'fa fa-fw fa-exclamation-triangle'),
                )
 
 
