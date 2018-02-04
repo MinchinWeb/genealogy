@@ -251,7 +251,7 @@ def delete_old_output(ctx):
     counter = 0
 
     # delete HTML files
-    run('del /S {}\*.html -y'.format(GITHUB_FOLDER), shell=INVOKE_SHELL)
+    run('del /S /q {}\*.html -y'.format(GITHUB_FOLDER), shell=INVOKE_SHELL)
     bar = minchin.text.progressbar(maximum=len(to_delete) + html_files)
     counter = html_files
     bar.update(counter)
@@ -271,7 +271,7 @@ def delete_old_gigatrees(ctx):
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Deleting old Gigatrees output.")
 
-    run('del {}\*.* /q'.format(CONTENT_FOLDER), shell=INVOKE_SHELL)
+    run('del {}\*.* /S /q'.format(CONTENT_FOLDER), shell=INVOKE_SHELL)
 
 
 @task
@@ -284,16 +284,20 @@ def call_gigatrees(ctx):
     # log won't be created if log folder doesn't exist
     Path(LOG_FOLDER).mkdir(parents=True, exist_ok=True)
 
-    my_cmd = '"{0}" -g -c "{1}\default.xml" '\
-             '-c "{1}\minchinca.xml"  -i "{2}" -o "{3}" '\
-             '-l "{4}\gigatrees-{5}.log"'.format(GIGATREES_EXE,
-                                                 CONFIG_FOLDER,
-                                                 MY_GEDCOM,
-                                                 CONTENT_FOLDER,
-                                                 LOG_FOLDER,
-                                                 TODAY_STR)
+    my_cmd = ('"{0}" '
+              '-g '  # Gigatrees report
+              #'-c "{1}\default.xml" '
+              '-c "{1}\minchinca-4.4.1.xml" '
+              '-i "{2}" '
+              '-o "{3}" '
+              '-l "{4}\gigatrees-{5}.log"').format(GIGATREES_EXE,
+                                                  CONFIG_FOLDER,
+                                                  MY_GEDCOM,
+                                                  CONTENT_FOLDER,
+                                                  LOG_FOLDER,
+                                                  TODAY_STR)
     try:
-        print("    Log file is {}\gigatrees-{}.log".format(LOG_FOLDER, TODAY_STR))
+        print("{}Log file is {}\gigatrees-{}.log".format(INDENT, LOG_FOLDER, TODAY_STR))
         run(my_cmd,
             shell=INVOKE_SHELL,
             #hide=True,
@@ -758,7 +762,7 @@ def git(ctx):
     #print(r1.stdout)
     print(r1.stderr)
     minchin.text.clock_on_right('{}{}> git commit -m "{}"{}'.format(INDENT, Fore.YELLOW, commit_msg, Style.RESET_ALL))
-    r2 = run('git commit -m Gigatrees_upload', hide=True, shell=INVOKE_SHELL)
+    r2 = run('git commit -m "Gigatrees upload {}"'.format(TODAY_STR), hide=True, shell=INVOKE_SHELL)
     #print(r2.stdout)
     print(r2.stderr)
     minchin.text.clock_on_right('{}{}> git push origin{}'.format(INDENT, Fore.YELLOW, Style.RESET_ALL))
@@ -803,7 +807,7 @@ def all_steps(ctx):
     set_pelican_variables(ctx)     # works 160721
     # clean_adam_html_single_thread(ctx)  # doesn't crash
     clean_adam_html_multithreaded(ctx)  # runs 20160721
-    replace_emails(ctx)            # runs 20160721
+    # replace_emails(ctx)            # runs 20160721  # now configured with Gigatrees
     create_tracking(ctx)           # works 20160721
     pelican(ctx)                   # works (assuming Pelican works)
     # pelican_local(ctx)

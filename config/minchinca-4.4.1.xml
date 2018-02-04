@@ -1,0 +1,184 @@
+<Options>
+  <Main>
+    <ReportType> Gigatrees </ReportType>
+    <GedcomFile> C:\Users\William\Desktop\William 180203.ged </GedcomFile>
+    <OutputPath> C:\Users\William\Documents\Code\genealogy\content\pages </OutputPath>
+  </Main>
+  <Page>
+    <Index> true </Index>
+    <Names> true </Names>
+    <Profiles> true </Profiles>
+    <Kinships> true </Kinships>
+    <Sources> true </Sources>
+    <Blog> true </Blog>
+    <Places> true </Places>
+    <Map> true </Map>
+    <Timelines> true </Timelines>
+    <Photos> true </Photos>
+    <Stats> true </Stats>
+    <DataAlerts> true </DataAlerts>
+  </Page>
+  <Metadata>
+    <Domain> http://genealogy.minchin.ca </Domain>
+    <Title> Minchin Genealogy </Title>
+    <Description>  </Description>
+    <Name> Wm. Minchin </Name>
+  </Metadata>
+  <Extension>
+    <PHP> false </PHP>
+    <Linked> true </Linked>
+  </Extension>
+  <Database>
+    <EnableServerDatabase> false </EnableServerDatabase>
+    <ServerDatabaseName>  </ServerDatabaseName>
+    <LocalDatabasePath>  </LocalDatabasePath>
+    <ServerDatabasePath>  </ServerDatabasePath>
+  </Database>
+  <Security>
+    <Privatize> true </Privatize>
+    <HideLiving> true </HideLiving>
+  </Security>
+  <Coordinates>
+    <EnableService> false </EnableService>
+    <Database> includes\gigatrees.sqlite </Database>
+    <GeonamesServiceId> minchinweb </GeonamesServiceId>
+    <GoogleMapsApiKey> AIzaSyBtE7dlokTduwUIfWaYdWCdXP_ve2hPKtQ </GoogleMapsApiKey>
+  </Coordinates>
+  <Replace>
+    <Text>
+      <Text> w_minchin@hotmail.com </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> bmartin@nznet.gen.nz </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> Bruce.Sinnamon@unisys.com </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> bunburypr@ozemail.com.au </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> canrcr@gmail.com </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> cardena.depper@gmx.net </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> d3gl@shaw.ca </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> david@westerhamworkshop.co.uk </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> djcmgf@optonline.net </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> djcmgf@optonline.net </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> donaldminchin@yahoo.com </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> ffirlotte@xplornet.com </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> G.Mitchell@gcu.ac.uk </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> gloog@eircom.net </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> howard.blaxland@gmail.com </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> jerry.doyle@sbcglobal.net </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> kathy.edwards@fredericton.ca </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> kenhazel@gmail.com </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> lbwong@charter.net </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> minchinweb@gmail.com </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> nysgys@shaw.ca </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> redjoanne_58@hotmail.com </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> sonofcam@bigpond.com </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> stewdee@hotmail.com </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> turtle@turtlebunbury.com </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> turtlebunbury@gmail.com </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> w.minchin@gmail.com </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+    <Text>
+      <Text> webmaster@minchin.ca </Text>
+      <Display> [email redacted] </Display>
+    </Text>
+  </Replace>
+  <Images>
+    <ForceThumbnails> false </ForceThumbnails>
+  </Images>
+  <CensusYears>
+    <CensusYear> 1825 </CensusYear>
+    <CensusYear> 1831 </CensusYear>
+    <CensusYear> 1842 </CensusYear>
+    <CensusYear> 1851 </CensusYear>
+    <CensusYear> 1861 </CensusYear>
+    <CensusYear> 1871 </CensusYear>
+    <CensusYear> 1881 </CensusYear>
+    <CensusYear> 1891 </CensusYear>
+    <CensusYear> 1901 </CensusYear>
+    <CensusYear> 1911 </CensusYear>
+    <CensusYear> 1916 </CensusYear>
+    <CensusYear> 1921 </CensusYear>
+    <CensusYear> 1906 </CensusYear>
+  </CensusYears>
+  <Maintenance>
+    <SendAnonymousStats> true </SendAnonymousStats>
+    <SendErrorReports> true </SendErrorReports>
+  </Maintenance>
+  <AppendRecords/>
+</Options>
