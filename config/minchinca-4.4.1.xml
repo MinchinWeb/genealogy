@@ -39,8 +39,8 @@
     <HideLiving> true </HideLiving>
   </Security>
   <Coordinates>
-    <EnableService> false </EnableService>
-    <Database> includes\gigatrees.sqlite </Database>
+    <EnableService> true </EnableService>
+    <Database> C:\Programs\gigatrees\includes\gigatrees.sqlite </Database>
     <GeonamesServiceId> minchinweb </GeonamesServiceId>
     <GoogleMapsApiKey> AIzaSyBtE7dlokTduwUIfWaYdWCdXP_ve2hPKtQ </GoogleMapsApiKey>
   </Coordinates>
@@ -179,6 +179,7 @@
   <Maintenance>
     <SendAnonymousStats> true </SendAnonymousStats>
     <SendErrorReports> true </SendErrorReports>
+    <Verbose> true </Verbose>
   </Maintenance>
   <AppendRecords/>
 </Options>

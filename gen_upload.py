@@ -251,7 +251,7 @@ def delete_old_output(ctx):
     counter = 0
 
     # delete HTML files
-    run('del /S /q {}\*.html -y'.format(GITHUB_FOLDER), shell=INVOKE_SHELL)
+    run('del /S /Q {}\*.html'.format(GITHUB_FOLDER), shell=INVOKE_SHELL, hide=True)
     bar = minchin.text.progressbar(maximum=len(to_delete) + html_files)
     counter = html_files
     bar.update(counter)
@@ -271,7 +271,7 @@ def delete_old_gigatrees(ctx):
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Deleting old Gigatrees output.")
 
-    run('del {}\*.* /S /q'.format(CONTENT_FOLDER), shell=INVOKE_SHELL)
+    run('del /S /Q {}\*.*'.format(CONTENT_FOLDER), shell=INVOKE_SHELL, hide=True)
 
 
 @task
