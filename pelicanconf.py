@@ -61,6 +61,7 @@ EXTRA_PATH_METADATA = {
     '../.gitignore':                                {'path': '.gitignore'},
     '../README.txt':                                {'path': 'README.txt'},
     '../extras/minchin.ico':                        {'path': 'favicon.ico'},
+    '../extras/netlify.toml':                       {'path': 'netlify.toml'},
     'pages/assets/bootstrap-tooltip-handler.js':    {'path': 'assets/bootstrap-tooltip-handler.js'},
     'pages/assets/fancybox-handler.js':             {'path': 'assets/fancybox-handler.js'},
     'pages/assets/gigatrees-charts.js':             {'path': 'assets/gigatrees-charts.js'},
@@ -125,7 +126,7 @@ MENUITEMS_2 = (('Surnames',         SITEURL + '/names/index.html',          'fa 
                #('Nobility',         SITEURL + '/nobility.html',       False),
                #('Military',         SITEURL + '/soldiers.html',       False),
                ('Locations',        SITEURL + '/places/index.html',         'fa fa-fw fa-map-marker'),
-               #('Bonkers Report',   SITEURL + '/bonkers.html',        False),
+               ('Data Issues',      SITEURL + '/alerts/',        False),
                # doens't exist in current builds
                ('Photos',           SITEURL + '/photos/index.html',         'fa fa-fw fa-picture-o'),
                # doens't exist in current builds
