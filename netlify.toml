@@ -1,0 +1,52 @@
+## https://www.netlify.com/docs/continuous-deployment/#deploy-contexts
+
+# Global settings applied to the whole site.  
+# 
+# “publish” is the directory to publish (relative to root of your repo),
+# “command” is your build command,
+# “base” is directory to change to before starting build. if you set base:
+#    that is where we will look for package.json/.nvmrc/etc not repo root!
+
+# pushlis the base repo without running a generator
+[build]
+  base    = "."
+  publish = "."
+  command = ""
+
+## https://www.netlify.com/docs/redirects/
+
+redirects = [
+  # {from = "/ancestors.html", to = "/"},
+  # {from = "/ancestors-*", to = "/"},
+  {from = "/bonkers.html", to = "/alerts/"},
+  # {from = "/centars.html", to = "/"},
+  # {from = "/centars-*", to = "/"},
+  # {from = "/immigrants.html", to = "/"},
+  {from = "/kinship-*", to = "/kinships/:splat"},
+  {from = "/map.html", to = "/map/"},
+  {from = "/names.html", to = "/names/"},
+  {from = "/names-*", to = "/names/:splat"},
+  # {from = "/nobility.html", to = "/"},
+  {from = "/places.html", to = "/places/"},
+  {from = "/places-*", to = "/places/:splat"},
+  {from = "/profile-*", to = "/profile/:splat"},
+  # {from = "/soldiers.html", to = "/"},
+  # {from = "/soldiers*", to = "/"},
+  {from = "/sources.html", to = "/sources/"},
+  {from = "/sources-*", to = "/sources/:splat"},
+  {from = "/statistics.html", to = "/stats/"},
+  {from = "/timelines.html", to = "/timelines/"},
+  {from = "/timelines02.html", to = "/timelines/T0.html"},
+  {from = "/timelines24.html", to = "/timelines/T11.html"},
+  {from = "/timelines26.html", to = "/timelines/T12.html"},
+  {from = "/timelines28.html", to = "/timelines/T13.html"},
+  {from = "/timelines30.html", to = "/timelines/T14.html"},
+  {from = "/timelines32.html", to = "/timelines/T15.html"},
+  {from = "/timelines34.html", to = "/timelines/T16.html"},
+  {from = "/timelines36.html", to = "/timelines/T17.html"},
+  {from = "/timelines38.html", to = "/timelines/T18.html"},
+  {from = "/timelines40.html", to = "/timelines/T19.html"},
+  {from = "/timelines42.html", to = "/timelines/T20.html"},
+  {from = "/timelines44.html", to = "/timelines/T21.html"},
+  # {from = "/updates.html", to = "/"},
+]

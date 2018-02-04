@@ -1,0 +1,13 @@
+## Prevent direct access to private files
+<FilesMatch "\.(htaccess|sqlite|xml)$">
+  order allow,deny
+  deny from all
+</FilesMatch>
+
+## Prevent direct access to directories
+Options +SymLinksIfOwnerMatch -MultiViews -Indexes
+
+## Redirect missing files and directories to router
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ router.php
