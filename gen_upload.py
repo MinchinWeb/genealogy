@@ -203,20 +203,20 @@ def check_images(ctx):
     if len(missing_matches) == 0:
         print("{}{} images matching. No missing images.".format(INDENT, str(matches)))
     else:
-        print("{}{} images matching.".format(INDENT, str(matches)))
-        q_add_images = minchin.text.query_yes_no_all("{}{} missing images. Add them?".format(INDENT, str(len(missing_matches))), default="no")
-        if q_add_images == 2:  # all
-            for image in missing_matches:
-                addimage(image)  # TO-DO: implement this!
-        elif q_add_images == 1:  # yes
-            print()  # add blank line
-            for image in missing_matches:
-                if minchin.text.query_yes_no("{}Add {}?".format(INDENT, image), default="yes"):
-                    addimage(image)  # TO-DO: implement this!
-                else:
-                    pass
-        else:  # no
-            pass
+        print("{}{} images matching. {} missing images.".format(INDENT, str(matches), len(missing_matches)))
+        # q_add_images = minchin.text.query_yes_no_all("{}Add missing images?".format(INDENT*2, default="no")
+        # if q_add_images == 2:  # all
+        #     for image in missing_matches:
+        #         addimage(image)  # TO-DO: implement this!
+        # elif q_add_images == 1:  # yes
+        #     print()  # add blank line
+        #     for image in missing_matches:
+        #         if minchin.text.query_yes_no("{}Add {}?".format(INDENT, image), default="yes"):
+        #             addimage(image)  # TO-DO: implement this!
+        #         else:
+        #             pass
+        # else:  # no
+        #     pass
 
         # write missing images to a file
         with open(str(MISSING_IMAGES_LOG), 'w', encoding='utf-8') as f:

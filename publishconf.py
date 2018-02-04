@@ -14,6 +14,8 @@ SITEURL = '//genealogy.minchin.ca'  # no protocol so both HTTP and HTTPS deploym
 RELATIVE_URLS = False
 SITE_ROOT_URL = 'http://minchin.ca'
 
+OUTPUT_PATH = '../genealogy-gh-pages/'
+
 #FEED_ALL_ATOM = 'feeds/all.atom.xml'
 #CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
