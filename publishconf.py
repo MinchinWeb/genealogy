@@ -12,7 +12,7 @@ from pelicanconf import *
 
 SITEURL = '//genealogy.minchin.ca'  # no protocol so both HTTP and HTTPS deployments should work
 RELATIVE_URLS = False
-SITE_ROOT_URL = 'http://minchin.ca'
+SITE_ROOT_URL = 'https://minchin.ca'
 
 OUTPUT_PATH = '../genealogy-gh-pages/'
 

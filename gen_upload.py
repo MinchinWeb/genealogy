@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 '''Genealogy Uploader
-v.4.0.1 - WM - July 22, 2016
+v.4.0.4 - WM - December 15, 2019
 
 This script serves to semi-automate the building and uploading of my
 genealogy website. It is intended to be semi-interactive and run from the
@@ -12,6 +12,8 @@ command line.'''
 # eg.
 #       invoke -c gen_upload <task_name>
 
+# TODO: make folders before trying to delete content from them.
+# TODO: move Genealogy photos, etc to Z drive
 
 import codecs
 from datetime import date, datetime
@@ -47,7 +49,7 @@ else:
     )
 
 
-__version__ = '4.0.2'
+__version__ = '4.0.3'
 colorama.init()
 
 #######################
@@ -58,8 +60,8 @@ COPYRIGHT_START_YEAR = 1987
 ADAM_LINK = "http://gigatrees.com/"
 ADAM_FOOTER = "<p><strong>Are we related?</strong> Are you a long lost cousin? Spotted an error here? This website remains a work-in-progress and I&nbsp;would love to hear from you. Drop me a line at minchinweb [at] gmail [dot] com.</p>"
 INDENT = " "*4
-GITHUB_FOLDER = Path("C:\\Users\\William\\Documents\\Code\\genealogy-gh-pages")
-PHOTO_FOLER = Path("S:\Documents\Genealogy")
+GITHUB_FOLDER = Path("C:\\Users\\William\\Code\\genealogy-gh-pages")
+PHOTO_FOLDER = Path("S:\Documents\Genealogy")
 URL_ROOT = "http://genealogy.minchin.ca"
 REPO_URL = "https://github.com/MinchinWeb/genealogy.git"
 TODAY_STR = '' + str(date.today().year)[2:] + str.zfill(str(date.today().month), 2) + str.zfill(str(date.today().day), 2)
@@ -82,13 +84,13 @@ RESET_COLOUR = colorama.Fore.RESET + colorama.Style.RESET_ALL
 ERROR_CODE = '[{}ERROR{}]'.format(ERROR_COLOUR, RESET_COLOUR)
 WARNING_CODE = '[{}WARN{}]'.format(WARNING_COLOUR, RESET_COLOUR)
 INVOKE_SHELL = 'C:\\Windows\\System32\\cmd.exe'
-GIGATREES_EXE = Path('C:\\Programs\\gigatrees\\gigatrees-cli.exe')
+GIGATREES_EXE = Path('C:\\Users\\William\\bin\\gigatrees-pro\\cli\\gigatrees-pro.exe')
 GIGATREES_ASSETS = GIGATREES_EXE.parent / 'assets'
 
 
 # globals for Lenovo X201
 #GITHUB_FOLDER = Path(r"C:\Users\User\Documents\GitHub\genealogy-gh-pages")
-#PHOTO_FOLER = Path(r"C:\Users\User\Documents\Genealogy")
+#PHOTO_FOLDER = Path(r"C:\Users\User\Documents\Genealogy")
 
 
 #####################
@@ -235,7 +237,12 @@ def delete_old_output(ctx):
 
     to_delete = []
     html_files = 0
-    os.chdir(str(GITHUB_FOLDER))
+    try:
+        os.chdir(str(GITHUB_FOLDER))
+    except FileNotFoundError:
+        print("    Directory does not (yet) exist. Skipping...")
+        return
+
     all_files = os.listdir(str(GITHUB_FOLDER))
 
     for filename in all_files:
@@ -284,18 +291,22 @@ def call_gigatrees(ctx):
     # log won't be created if log folder doesn't exist
     Path(LOG_FOLDER).mkdir(parents=True, exist_ok=True)
 
-    my_cmd = ('"{0}" '
-              '-g '  # Gigatrees report
-              #'-c "{1}\default.xml" '
-              '-c "{1}\minchinca-4.4.1.xml" '
-              '-i "{2}" '
-              '-o "{3}" '
-              '-l "{4}\gigatrees-{5}.log"').format(GIGATREES_EXE,
-                                                  CONFIG_FOLDER,
-                                                  MY_GEDCOM,
-                                                  CONTENT_FOLDER,
-                                                  LOG_FOLDER,
-                                                  TODAY_STR)
+    my_cmd = (
+        '"{0}" '
+        # '-g '  # Gigatrees report
+        #'-c "{1}\default.xml" '
+        '-c "{1}\minchinca-4.4.1.xml" '  # XML configuration
+        '-i "{2}" '
+        '-o "{3}" '
+        '-l "{4}\gigatrees-{5}.log"'
+    ).format(
+        GIGATREES_EXE,
+        CONFIG_FOLDER,
+        MY_GEDCOM,
+        CONTENT_FOLDER,
+        LOG_FOLDER,
+        TODAY_STR
+    )
     try:
         print("{}Log file is {}\gigatrees-{}.log".format(INDENT, LOG_FOLDER, TODAY_STR))
         run(my_cmd,
@@ -573,7 +584,10 @@ def html_fixes(my_file):
 
     # Override page title
     if my_slug == "names/index":
-        title_tag.string.replace_with("Surnames")
+        try:
+            title_tag.string.replace_with("Surnames")
+        except AttributeError:  # i.e. title_tag == None
+            pass
 
     # Add meta tags, used for the breadcrumbs in the link.
     # These are used by the Pelican engine and template engine.
@@ -737,6 +751,9 @@ def create_tracking(ctx):
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Create deploy tracking file.")
 
+    # make sure the destination directory exists
+    GITHUB_FOLDER.mkdir(parents=True, exist_ok=True)
+
     # create a 'random' number using UUID
     # note that the last set of digits will correspond to the workstation
     myUUID = str(uuid.uuid1())
@@ -799,7 +816,7 @@ def all_steps(ctx):
     export_gedcom(ctx)             # works 160717
     clean_gedcom(ctx)              # works 160717
     delete_old_gigatrees(ctx)      # works 160717  ~2 min
-    call_gigatrees(ctx)             # works 160718
+    call_gigatrees(ctx)            # works 160718
     check_images(ctx)              # works 160717
     delete_old_output(ctx)         # works 160718
     # copy_gigatree_assets(ctx)      # works 160718

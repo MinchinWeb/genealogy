@@ -1,0 +1,15 @@
+pelican
+invoke >= 0.13
+minchin.pelican.jinja_filters
+minchin.pelican.plugins.cname
+minchin.pelican.plugins.nojekyll
+seafoam
+BeautifulSoup4 >= 4.5.0
+colorama
+joblib
+minchin.text
+requests
+winshell
+tbvaccine
+pywin32
+lxml

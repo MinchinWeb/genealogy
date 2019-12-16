@@ -171,10 +171,10 @@
     <CensusYear> 1881 </CensusYear>
     <CensusYear> 1891 </CensusYear>
     <CensusYear> 1901 </CensusYear>
+    <CensusYear> 1906 </CensusYear>
     <CensusYear> 1911 </CensusYear>
     <CensusYear> 1916 </CensusYear>
     <CensusYear> 1921 </CensusYear>
-    <CensusYear> 1906 </CensusYear>
   </CensusYears>
   <Maintenance>
     <SendAnonymousStats> true </SendAnonymousStats>
