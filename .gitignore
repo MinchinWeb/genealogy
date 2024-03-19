@@ -219,6 +219,7 @@ pip-log.txt
 #############
 env*/
 _env*/
+.venv*/
 _pelican/errors.txt
 _extras/
 missing-images.txt

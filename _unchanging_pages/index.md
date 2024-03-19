@@ -42,7 +42,7 @@ Minchin
 -------
 
 <div class="text-center img-responsive" markdown=1>
-![Minchin Coat of Arms]({filename}../images/minchin-tipperary.gif)
+![Minchin Coat of Arms]({static}../images/minchin-tipperary.gif)
 </div>
 
 The Minchin line is probably my best researched line. The Minchin’s left
@@ -192,7 +192,7 @@ Bunbury
 -------
 
 <div class="text-center img-responsive" markdown=1>
-![Bunbury Coat of Arms]({filename}../images/bunbury-wexford.gif)
+![Bunbury Coat of Arms]({static}../images/bunbury-wexford.gif)
 </div>
 
 The Bunbury’s are an old line. We have it traced back to 1066 when the
@@ -237,7 +237,7 @@ McGowan
 -------
 
 <div class="text-center img-responsive" markdown=1>
-![Hotel MacDonald]({filename}../images/OldMac2.jpg)
+![Hotel MacDonald]({static}../images/OldMac2.jpg)
 </div>
 
 The McGowan’s go back to Scotland. My Grandma was telling me some of the

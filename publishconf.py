@@ -14,7 +14,7 @@ SITEURL = '//genealogy.minchin.ca'  # no protocol so both HTTP and HTTPS deploym
 RELATIVE_URLS = False
 SITE_ROOT_URL = 'https://minchin.ca'
 
-OUTPUT_PATH = '../genealogy-gh-pages/'
+OUTPUT_PATH = '../genealogy-netlify/'
 
 #FEED_ALL_ATOM = 'feeds/all.atom.xml'
 #CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
@@ -28,7 +28,7 @@ OUTPUT_PATH = '../genealogy-gh-pages/'
 
 # PLUGINS = ['assets', 'minify', 'sitemap', 'optimize_images']
 
-PLUGINS = PLUGINS + [
-    'minchin.pelican.plugins.cname',
-    'minchin.pelican.plugins.nojekyll',
-]
+# PLUGINS = PLUGINS + [
+#     'minchin.pelican.plugins.cname',
+#     'minchin.pelican.plugins.nojekyll',
+# ]

@@ -59,7 +59,7 @@ Average Ages By Group ; Average Ages by Group
 Average Life Span ; Average Life Span
 Average Life Spans By Gender ; Average Life Spans By Gender
 B.C. ; B.C.
-B.C.E ; B.C.E
+B.C.E ; B.C.
 B.C.E. ; B.C.
 Baptism ; Baptism
 Barmitzva ; Barmitzva
@@ -266,7 +266,7 @@ LDS Baptism ; LDS Baptism
 LDS Child Sealing ; LDS Child Sealing
 LDS Confirmation ; LDS Confirmation
 LDS Endowment ; LDS Endowment
-LDS Initiory ; LDS Ititiory
+LDS Initiory ; LDS Initiatory
 LDS Spouse Sealing ; LDS Spouse Sealing
 Last Modified ; Last Modified
 Late Battles ; Late Battles

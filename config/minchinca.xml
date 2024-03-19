@@ -47,8 +47,8 @@
 <MaxFlourishedAge>              70        </MaxFlourishedAge>
 <MaxLifeSpan>                  100        </MaxLifeSpan>
 <MaxAgeEventError>               2        </MaxAgeEventError>
-<DeadIfMarriedBefore>         1940        </DeadIfMarriedBefore>
-<DeadIfBornBefore>            1920        </DeadIfBornBefore>
+<DeadIfMarriedBefore>         1950        </DeadIfMarriedBefore>
+<DeadIfBornBefore>            1930        </DeadIfBornBefore>
 <ProhibitedDegreeOfKinship>     4         </ProhibitedDegreeOfKinship>
 
 <Centar> I9693 </Centar>
@@ -141,7 +141,7 @@
 
 <Tags>
     <!-- GEDCOM specific tags -->
-    <T>  <Name>  WAC     </Name>  <DisplayString>  LDS Initiory                                 </DisplayString>  </T>
+    <T>  <Name>  WAC     </Name>  <DisplayString>  LDS Initiatory                                 </DisplayString>  </T>
     <!-- Vendor compliant user defined tags -->
 	
     	<!-- start with an underscore -->

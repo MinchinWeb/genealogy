@@ -4,7 +4,7 @@
 import os
 import sys
 
-import seafoam
+# import seafoam
 sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 
 # Adam configuration options
@@ -91,7 +91,7 @@ EXTRA_PATH_METADATA = {
 #FILENAME_METADATA = ('(?P<date>\d{4}-\d{2}-\d{2}).*')  # default?
 #FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.*)'  # extract date and slug
 # FILENAME_METADATA = '(?P<slug>[\w-]*)'      # so anything before the file extension becomes the slug
-FILENAME_METADATA = '(?P<slug>[\w\-_\\\\/]+)'
+FILENAME_METADATA = r'(?P<slug>[\w\-_\\\\/]+)'
 ## Please note that the metadata available inside your files takes precedence
 #  over the metadata extracted from the filename.
 
@@ -121,14 +121,14 @@ MENUITEMS_2 = (('Surnames',         SITEURL + '/names/',          'fa fa-fw fa-u
                #('Updates',          SITEURL + '/updates.html',        False),
                ('Sources',          SITEURL + '/sources/',        'fa fa-fw fa-book'),
                ('Distribution Map', SITEURL + '/map/',            'fa fa-fw fa-globe'),
-               ('Timelines',        SITEURL + '/timelines/',      'fa fa-fw fa-clock-o'),  # consider hourgloass (FA5)
-               # doens't exist in current builds
+               ('Timelines',        SITEURL + '/timelines/',      'fa fa-fw fa-clock-o'),  # consider hourglass (FA5)
+               # doesn't exist in current builds
                #('Immigrants',       SITEURL + '/immigrants.html',     False),
                #('Nobility',         SITEURL + '/nobility.html',       False),
                #('Military',         SITEURL + '/soldiers.html',       False),
                ('Locations',        SITEURL + '/places/',         'fa fa-fw fa-map-marker'),
                ('Photos',           SITEURL + '/photos/',         'fa fa-fw fa-picture-o'),
-               # doens't exist in current builds
+               # doesn't exist in current builds
                #('External Links',   SITEURL + '/links.html',          False),
                ('Statistics',       SITEURL + '/stats/',          'fa fa-fw fa-bar-chart'),
                ('Data Issues',      SITEURL + '/alerts/',        'fa fa-fw fa-exclamation-triangle'),
@@ -154,7 +154,7 @@ PAGE_URL = "{slug}.html"
 PAGE_SAVE_AS = "{slug}.html"
 
 # Theme Related
-THEME = seafoam.get_path()
+# THEME = seafoam.get_path()
 BOOTSTRAP_THEME = 'seafoam'
 
 SITELOGO = 'images/MinchindotCA-200.png'
@@ -236,13 +236,14 @@ GOOGLE_ANALYTICS_UNIVERSAL = 'UA-384291-3'
 GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY = 'minchin.ca'
 
 # Plugins
-PLUGIN_PATHS = ('../pelican-plugins',)
+# PLUGIN_PATHS = ('../pelican-plugins',)
 # PLUGINS = ['assets', 'minify', 'sitemap', 'optimize_images']
-PLUGINS = [
-    'minchin.pelican.jinja_filters',
-    # 'minchin.pelican.plugins.image_process',  # breaks
-    # others, as desired...
-]
+# PLUGINS = [
+#     'minchin.pelican.jinja_filters',
+#     # 'minchin.pelican.plugins.image_process',  # breaks
+#     # others, as desired...
+#     'minchin.pelican.plugins.autoloader',
+# ]
 
 ASSET_CSS = False
 ASSET_JS = False

@@ -49,7 +49,7 @@ else:
     )
 
 
-__version__ = '4.0.3'
+__version__ = '4.0.5'
 colorama.init()
 
 #######################
@@ -60,8 +60,8 @@ COPYRIGHT_START_YEAR = 1987
 ADAM_LINK = "http://gigatrees.com/"
 ADAM_FOOTER = "<p><strong>Are we related?</strong> Are you a long lost cousin? Spotted an error here? This website remains a work-in-progress and I&nbsp;would love to hear from you. Drop me a line at minchinweb [at] gmail [dot] com.</p>"
 INDENT = " "*4
-GITHUB_FOLDER = Path("C:\\Users\\William\\Code\\genealogy-gh-pages")
-PHOTO_FOLDER = Path("S:\Documents\Genealogy")
+GITHUB_FOLDER = Path("C:\\Users\\William\\Code\\genealogy-netlify")
+PHOTO_FOLDER = Path("Z:\\Genealogy")
 URL_ROOT = "http://genealogy.minchin.ca"
 REPO_URL = "https://github.com/MinchinWeb/genealogy.git"
 TODAY_STR = '' + str(date.today().year)[2:] + str.zfill(str(date.today().month), 2) + str.zfill(str(date.today().day), 2)
@@ -84,7 +84,7 @@ RESET_COLOUR = colorama.Fore.RESET + colorama.Style.RESET_ALL
 ERROR_CODE = '[{}ERROR{}]'.format(ERROR_COLOUR, RESET_COLOUR)
 WARNING_CODE = '[{}WARN{}]'.format(WARNING_COLOUR, RESET_COLOUR)
 INVOKE_SHELL = 'C:\\Windows\\System32\\cmd.exe'
-GIGATREES_EXE = Path('C:\\Users\\William\\bin\\gigatrees-pro\\cli\\gigatrees-pro.exe')
+GIGATREES_EXE = Path('C:\\bin\\gigatrees-4.4.1\\gigatrees-cli.exe')
 GIGATREES_ASSETS = GIGATREES_EXE.parent / 'assets'
 
 
@@ -137,6 +137,7 @@ def export_gedcom(ctx):
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Export from RootsMagic.")
 
+    print("{}on RM9, under File --> Export Data, on the sidebar menu.".format(INDENT*2))
     print("{}call the file {}{}{} and save it to the desktop".format(INDENT*2, Style.BRIGHT, GEDCOM_EXPECTED, Style.RESET_ALL))
     print("{}do not include LDS information".format(INDENT*2))
     print("{}no need to privatize individuals (at this step)".format(INDENT*2))
@@ -162,7 +163,7 @@ def clean_gedcom(ctx):
         subject = gedcom_file.read()
 
     # replace image paths
-    pattern = re.compile(r'S:\\Documents\\Genealogy\\([0-9]+[\.[a-z]+]*\.? )*', re.IGNORECASE)  # path start
+    pattern = re.compile(r'Z:\\Genealogy\\([0-9]+[\.[a-z]+]*\.? )*', re.IGNORECASE)  # path start
     result = pattern.sub('/images/', subject)
     pattern2 = re.compile(r'(images.*)\\')  # reverse slashes in rest of path
     result2 = pattern2.sub(r'\1/', result)
@@ -258,7 +259,7 @@ def delete_old_output(ctx):
     counter = 0
 
     # delete HTML files
-    run('del /S /Q {}\*.html'.format(GITHUB_FOLDER), shell=INVOKE_SHELL, hide=True)
+    run(r'del /S /Q {}\*.html'.format(GITHUB_FOLDER), shell=INVOKE_SHELL, hide=True)
     bar = minchin.text.progressbar(maximum=len(to_delete) + html_files)
     counter = html_files
     bar.update(counter)
@@ -278,7 +279,13 @@ def delete_old_gigatrees(ctx):
     step_no += 1
     minchin.text.clock_on_right(str(step_no).rjust(2) + ". Deleting old Gigatrees output.")
 
-    run('del /S /Q {}\*.*'.format(CONTENT_FOLDER), shell=INVOKE_SHELL, hide=True)
+    if CONTENT_FOLDER.exists():
+        run(r'del /S /Q {}\*.*'.format(CONTENT_FOLDER), shell=INVOKE_SHELL, hide=True)
+    else:
+        print(
+            f"""{WARNING_CODE} Expected folder ("{CONTENT_FOLDER}") """
+            "doesn't exist. Skipping..."
+        )
 
 
 @task
@@ -295,10 +302,10 @@ def call_gigatrees(ctx):
         '"{0}" '
         # '-g '  # Gigatrees report
         #'-c "{1}\default.xml" '
-        '-c "{1}\minchinca-4.4.1.xml" '  # XML configuration
-        '-i "{2}" '
-        '-o "{3}" '
-        '-l "{4}\gigatrees-{5}.log"'
+        r'-c "{1}\minchinca-4.4.1.xml" '  # XML configuration
+        r'-i "{2}" '
+        r'-o "{3}" '
+        r'-l "{4}\gigatrees-{5}.log"'
     ).format(
         GIGATREES_EXE,
         CONFIG_FOLDER,
@@ -308,7 +315,7 @@ def call_gigatrees(ctx):
         TODAY_STR
     )
     try:
-        print("{}Log file is {}\gigatrees-{}.log".format(INDENT, LOG_FOLDER, TODAY_STR))
+        print("{}Log file is {}\\gigatrees-{}.log".format(INDENT, LOG_FOLDER, TODAY_STR))
         run(my_cmd,
             shell=INVOKE_SHELL,
             #hide=True,

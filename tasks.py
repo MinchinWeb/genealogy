@@ -21,10 +21,10 @@ from pathlib import Path
 from gen_upload import *
 
 p = Path.cwd()
-deploy_path = p.parents[0] / 'genealogy-gh-pages'
+deploy_path = p.parents[0] / 'genealogy-netlify'
 local_path = p.parents[0] / 'genealogy-local'
 
-GIT_DEPLOY_BRANCH = 'gh-pages'
+GIT_DEPLOY_BRANCH = 'netlify'
 
 
 def clean(ctx):

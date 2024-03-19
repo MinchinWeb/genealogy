@@ -1,6 +1,6 @@
 pelican
 invoke >= 0.13
-minchin.pelican.jinja_filters
+pelican.jinja_filters
 minchin.pelican.plugins.cname
 minchin.pelican.plugins.nojekyll
 seafoam
@@ -13,3 +13,4 @@ winshell
 tbvaccine
 pywin32
 lxml
+Markdown

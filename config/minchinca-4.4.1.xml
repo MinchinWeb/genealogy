@@ -2,7 +2,7 @@
   <Main>
     <ReportType> Gigatrees </ReportType>
     <GedcomFile> C:\Users\William\Desktop\William 180203.ged </GedcomFile>
-    <OutputPath> C:\Users\William\Documents\Code\genealogy\content\pages </OutputPath>
+    <OutputPath> D:\Code\genealogy-master\content\pages </OutputPath>
   </Main>
   <Page>
     <Index> true </Index>
@@ -10,7 +10,7 @@
     <Profiles> true </Profiles>
     <Kinships> true </Kinships>
     <Sources> true </Sources>
-    <Blog> true </Blog>
+    <Blog> false </Blog>
     <Places> true </Places>
     <Map> true </Map>
     <Timelines> true </Timelines>
@@ -40,7 +40,7 @@
   </Security>
   <Coordinates>
     <EnableService> true </EnableService>
-    <Database> C:\Programs\gigatrees\includes\gigatrees.sqlite </Database>
+    <Database> C:\bin\gigatrees-4.4.1\gigatrees.sqlite </Database>
     <GeonamesServiceId> minchinweb </GeonamesServiceId>
     <GoogleMapsApiKey> AIzaSyBtE7dlokTduwUIfWaYdWCdXP_ve2hPKtQ </GoogleMapsApiKey>
   </Coordinates>
@@ -161,7 +161,7 @@
   <Images>
     <ForceThumbnails> false </ForceThumbnails>
   </Images>
-  <CensusYears>
+  <CensusYears.bak>
     <CensusYear> 1825 </CensusYear>
     <CensusYear> 1831 </CensusYear>
     <CensusYear> 1842 </CensusYear>
@@ -175,11 +175,14 @@
     <CensusYear> 1911 </CensusYear>
     <CensusYear> 1916 </CensusYear>
     <CensusYear> 1921 </CensusYear>
-  </CensusYears>
+    <CensusYear> 1926 </CensusYear>
+    <CensusYear> 1931 </CensusYear>
+  </CensusYears.bak>
+  <EnableProfileCensusTables> false </EnableProfileCensusTables>
   <Maintenance>
     <SendAnonymousStats> true </SendAnonymousStats>
     <SendErrorReports> true </SendErrorReports>
     <Verbose> true </Verbose>
   </Maintenance>
-  <AppendRecords/>
+  <AppendRecords />
 </Options>
