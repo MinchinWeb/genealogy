@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:og="http://ogp.me/ns#"
-      xmlns:fb="https://www.facebook.com/2008/fbml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#">
 <head>
-    <title>B.C.E. &mdash; Minchin Genealogy</title>
-    <!-- Using the latest rendering mode for IE -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link href="//genealogy.minchin.ca/favicon.ico" rel="icon">
-    <!-- Open Graph tags -->
-            <meta property="og:type" content="article"/>
-            <meta property="og:title" content="B.C.E."/>
-            <meta property="og:url" content="//genealogy.minchin.ca/timelines/T0.html"/>
-    <!-- Bootstrap CSS -->
-        <link href="//genealogy.minchin.ca/theme/css/bootstrap.seafoam.min.css" rel="stylesheet" type="text/css"/>
-    <!-- CUSTOM_CSS -->
-    <!-- CUSTOM_CSS_LIST -->
-                <link href="//genealogy.minchin.ca/css/minchin-ca.css" rel="stylesheet" type="text/css" />
-                <link href="//genealogy.minchin.ca/css/jquery.fancybox.min.css?v=2.1.7" rel="stylesheet" type="text/css" />
-
-    <!-- JQUERY_JS_IN_HEAD -->
-        <script src="//genealogy.minchin.ca/theme/js/jquery.min.js?v=3.1.1" type="text/javascript"></script>
-
-    <!-- CUSTOM_JS_LIST_HEAD -->
-                <script type="text/javascript">
+<title>B.C.E. — Minchin Genealogy</title>
+<!-- Using the latest rendering mode for IE -->
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/> <link href="//genealogy.minchin.ca/favicon.ico" rel="icon"/>
+<!-- Open Graph tags -->
+<meta content="Minchin Genealogy" property="og:site_name"/>
+<meta content="article" property="og:type"/>
+<meta content="B.C.E." property="og:title"/>
+<meta content="//genealogy.minchin.ca/timelines/T0.html" property="og:url"/>
+<!-- Bootstrap CSS -->
+<link href="//genealogy.minchin.ca/theme/css/bootstrap.seafoam.min.css" rel="stylesheet" type="text/css"/>
+<!-- CUSTOM_CSS -->
+<!-- CUSTOM_CSS_LIST -->
+<link href="//genealogy.minchin.ca/css/minchin-ca.css" rel="stylesheet" type="text/css"/>
+<link href="//genealogy.minchin.ca/css/jquery.fancybox.min.css?v=2.1.7" rel="stylesheet" type="text/css"/>
+<!-- JQUERY_JS_IN_HEAD -->
+<script src="//genealogy.minchin.ca/theme/js/jquery.min.js?v=3.1.1" type="text/javascript"></script>
+<!-- CUSTOM_JS_LIST_HEAD -->
+<script type="text/javascript">
             var myImage='/assets/mapicon_u.png';
             var myImageW='/assets/mapicon_f.png';
             var myImageM='/assets/mapicon_m.png';
@@ -59,183 +56,7241 @@
                 dynamicallyLoadScript('/assets/gigatrees-heatmaps.min.js');
             });
         </script>
-        
 <!-- Feeds -->
 </head>
 <body>
-    <div class="container">
-    <div class="row">
-        <div class="col-sm-3">
-            <div class="sidebar-nav">
-                <nav class="navbar navbar-default" role="navigation">
-
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a href="http://minchin.ca/" class="navbar-brand">
-                                <img src="//genealogy.minchin.ca/images/MinchindotCA-200.png" width="100%" alt="Minchin Genealogy" class="img-responsive pull-left gap-right"/>
-                        </a>
-                    </div> <!-- /.navbar-header -->
-                    <div class="collapse navbar-collapse sidebar-navbar-collapse navbar-nonheader">
-                            <ul class="nav navbar-nav">
-                                    <li ><a href="http://blog.minchin.ca/"><span class="fa fa-fw fa-pencil"></span> Blog</a>
-                                    </li>
-                                    <li class="active"><a href=""><span class="glyphicon glyphicon-tree-deciduous"></span> Genealogy</a>
-                                            <ul class="nav navbar-nav nav-list-level2">
-                                                <li><a href="/names/"><span class="fa fa-fw fa-user-circle"></span> Surnames</a></li>
-                                                <li><a href="/sources/"><span class="fa fa-fw fa-book"></span> Sources</a></li>
-                                                <li><a href="/map/"><span class="fa fa-fw fa-globe"></span> Distribution Map</a></li>
-                                                <li><a href="/timelines/"><span class="fa fa-fw fa-clock-o"></span> Timelines</a></li>
-                                                <li><a href="/places/"><span class="fa fa-fw fa-map-marker"></span> Locations</a></li>
-                                                <li><a href="/photos/"><span class="fa fa-fw fa-picture-o"></span> Photos</a></li>
-                                                <li><a href="/stats/"><span class="fa fa-fw fa-bar-chart"></span> Statistics</a></li>
-                                                <li><a href="/alerts/"><span class="fa fa-fw fa-exclamation-triangle"></span> Data Issues</a></li>
-                                            </ul>
-                                    </li>
-                                    <li ><a href="http://minchin.ca/projects/"><span class="fa fa-fw fa-flask"></span> My Projects</a>
-                                    </li>
-                                    <li ><a href="http://minchin.ca/search/"><span class="fa fa-fw fa-search"></span> Search</a>
-                                    </li>
-                                    <li ><a href="http://minchin.ca/about/"><span class="fa fa-fw fa-info-circle"></span> About</a>
-                                    </li>
-                                    <li ><a href="http://minchin.ca/contact/"><span class="fa fa-fw fa-envelope"></span> Contact Me</a>
-                                    </li>
-                            </ul>
-                    </div> <!-- /.navbar-collapse -->
-                </nav>
-            </div> <!-- /.sidebar-nav -->
-        </div> <!-- /.col-sm-3 -->
-        <div class="col-sm-9">
-    <ol class="breadcrumb">
-        <li><a href="http://minchin.ca" title="Minchin Genealogy"><span class="fa fa-home fa-lg"></span></a></li>
-            <li><a href="//genealogy.minchin.ca/" title="Genealogy">Genealogy</a></li>
-            <li><a href="//genealogy.minchin.ca/timelines/index.html" title="Timelines">Timelines</a></li>
-            <li class="active"><a href="//genealogy.minchin.ca/timelines/T0.html" title="B.C.E.">B.C.E.</a></li>
-    </ol> <!-- /.breadcrumbs -->
-
-
-    <section id="content" class="body">
-        <h1 class="entry-title">
+<div class="container">
+<div class="row">
+<div class="col-sm-3">
+<div class="sidebar-nav">
+<nav class="navbar navbar-default" role="navigation">
+<div class="navbar-header">
+<button class="navbar-toggle" data-target=".sidebar-navbar-collapse" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="https://minchin.ca">
+<img alt="Minchin Genealogy" class="img-responsive pull-left gap-right" src="//genealogy.minchin.ca/images/MinchindotCA-200.png" width="100%"/>
+</a>
+</div> <!-- /.navbar-header -->
+<div class="collapse navbar-collapse sidebar-navbar-collapse navbar-nonheader">
+<ul class="nav navbar-nav">
+<li><a href="http://blog.minchin.ca/"><span class="fa fa-fw fa-pencil"></span> Blog</a>
+</li>
+<li class="active"><a href=""><span class="glyphicon glyphicon-tree-deciduous"></span> Genealogy</a>
+<ul class="nav navbar-nav nav-list-level2">
+<li><a href="/names/"><span class="fa fa-fw fa-user-circle"></span> Surnames</a></li>
+<li><a href="/sources/"><span class="fa fa-fw fa-book"></span> Sources</a></li>
+<li><a href="/map/"><span class="fa fa-fw fa-globe"></span> Distribution Map</a></li>
+<li><a href="/timelines/"><span class="fa fa-fw fa-clock-o"></span> Timelines</a></li>
+<li><a href="/places/"><span class="fa fa-fw fa-map-marker"></span> Locations</a></li>
+<li><a href="/photos/"><span class="fa fa-fw fa-picture-o"></span> Photos</a></li>
+<li><a href="/stats/"><span class="fa fa-fw fa-bar-chart"></span> Statistics</a></li>
+<li><a href="/alerts/"><span class="fa fa-fw fa-exclamation-triangle"></span> Data Issues</a></li>
+</ul>
+</li>
+<li><a href="http://minchin.ca/projects/"><span class="fa fa-fw fa-flask"></span> My Projects</a>
+</li>
+<li><a href="http://minchin.ca/search/"><span class="fa fa-fw fa-search"></span> Search</a>
+</li>
+<li><a href="http://minchin.ca/about/"><span class="fa fa-fw fa-info-circle"></span> About</a>
+</li>
+<li><a href="http://minchin.ca/contact/"><span class="fa fa-fw fa-envelope"></span> Contact Me</a>
+</li>
+</ul>
+</div> <!-- /.navbar-collapse -->
+</nav>
+</div> <!-- /.sidebar-nav -->
+</div> <!-- /.col-sm-3 -->
+<div class="col-sm-9">
+<ol class="breadcrumb">
+<li><a href="https://minchin.ca" title="Minchin Genealogy"><span class="fa fa-home fa-lg"></span></a></li>
+<li><a href="//genealogy.minchin.ca/" title="Genealogy">Genealogy</a></li>
+<li><a href="//genealogy.minchin.ca/timelines/index.html" title="Timelines">Timelines</a></li>
+<li class="active"><a href="//genealogy.minchin.ca/timelines/T0.html" title="B.C.E.">B.C.E.</a></li>
+</ol> <!-- /.breadcrumbs -->
+<section class="body" id="content">
+<header class="entry-header">
+<h1 class="entry-title">
    B.C.E.
   </h1>
-        
-        <div class="entry-content">
-            
-  <div class="gt-ac-container">
-   <a name="timeline">
-   </a>
-   <div id="gt-timeline-tab">
-    <input checked="" id="gt-ac-timeline" type="checkbox" />
-    <label for="gt-ac-timeline">
+</header>
+<div class="entry-content">
+<div class="gt-ac-container">
+<a name="timeline">
+</a>
+<div id="gt-timeline-tab">
+<input checked="" id="gt-ac-timeline" type="checkbox"/>
+<label for="gt-ac-timeline">
      Timeline
     </label>
-    <article class="gt-ac-auto">
-     <table class="table-hover grtable gt-table-event">
-      <thead>
-       <tr>
-        <th>
+<article class="gt-ac-auto">
+<table class="table-hover grtable gt-table-event table">
+<thead>
+<tr>
+<th>
          Person
         </th>
-        <th>
+<th>
          Claim
         </th>
-        <th>
+<th>
          Value
         </th>
-        <th>
+<th>
          Date
         </th>
-        <th>
+<th>
          Age
         </th>
-        <th class="gquality">
-         <span data-toggle="tooltip" title="Determined using highest quality sources referenced">
+<th class="gquality">
+<span data-toggle="tooltip" title="Determined using highest quality sources referenced">
           Reliability
          </span>
-        </th>
-       </tr>
-      </thead>
-      <tbody>
-       <tr class="gevent">
-        <td class="gname">
-         <a href="../profiles/I7514.html">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I7514.html">
           Ebenezer Pratt
          </a>
-        </td>
-        <td class="gclaim">
+</td>
+<td class="gclaim">
          Marriage
         </td>
-        <td class="gvalue">
-         <a href="../profiles/I6973.html">
+<td class="gvalue">
+<a href="../profiles/I6973.html">
           Abegail Dennison
          </a>
          ,
          <a href="../places/united-states-connecticut-middlesex-saybrook.html">
           Saybrook, Middlesex, Connecticut, United States
          </a>
-         <span class="gsref">
+<span class="gsref">
           [
           <a data-toggle="popover" href="../sources/S29.html" title="Source Citation: GEDCOM file, Bridget Kenworthy.">
            20
           </a>
           ]
          </span>
-        </td>
-        <td class="gdate">
+</td>
+<td class="gdate">
          Dec. 9, 4713 B.C.E.
         </td>
-        <td class="gage">
-        </td>
-        <td class="gquality">
-         <div class="gt-claim-quality-uncertain">
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-uncertain">
           uncertain
          </div>
-        </td>
-       </tr>
-       <tr class="gevent">
-        <td class="gname">
-         <a href="../profiles/I7493.html">
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I7493.html">
           Jennie Beers
          </a>
-        </td>
-        <td class="gclaim">
+</td>
+<td class="gclaim">
          Death
         </td>
-        <td class="gvalue">
-         <span class="gsref">
+<td class="gvalue">
+<span class="gsref">
           [
           <a data-toggle="popover" href="../sources/S29.html" title="Source Citation: GEDCOM file, Bridget Kenworthy.">
            20
           </a>
           ]
          </span>
-         <div class="gcomment gcalert">
+<div class="gcomment gcalert">
           Claim is inconsistent with birth
          </div>
-        </td>
-        <td class="gdate">
+</td>
+<td class="gdate">
          Mar. 19, 4712 B.C.E.
         </td>
-        <td class="gage">
-        </td>
-        <td class="gquality">
-         <div class="gt-claim-quality-uncertain">
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-uncertain">
           uncertain
          </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12615.html">
+          Cainan or Kenan ben Enos
+         </a>
+</td>
+<td class="gclaim">
+         Birth
         </td>
-       </tr>
-      </tbody>
-     </table>
-    </article>
-   </div>
-  </div>
-  <div>
-  </div>
-  <script type="text/javascript">
+<td class="gvalue">
+<a href="../places/east-of-eden-cainan.html">
+          Cainan, East Of Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         abt 4629 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12632.html">
+          Noam bint Seth
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/east-of-eden-shinevah-olaha.html">
+          Olaha, Shinevah, East Of Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+</td>
+<td class="gdate">
+         4621 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12603.html">
+          Lamech ben Methusala
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/mesopotamia.html">
+          Mesopotamia
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+</td>
+<td class="gdate">
+         abt 4428 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12604.html">
+          Bilanos Betenos Ashmua bint Barakil
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/eden-east-shulon.html">
+          Shulon, East, Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+</td>
+<td class="gdate">
+         abt 4300 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12604.html">
+          Bilanos Betenos Ashmua bint Barakil
+         </a>
+</td>
+<td class="gclaim">
+         Burial
+        </td>
+<td class="gvalue">
+<a href="../places/east-eden-shulon.html">
+          Shulon, East Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         abt 4233 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12632.html">
+          Noam bint Seth
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/east-of-eden-shinehah-olaha.html">
+          Olaha, Shinehah, East Of Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         4065 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12635.html">
+          Adam
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         4000 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12636.html">
+          Eve
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/eden.html">
+          Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         4000 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12624.html">
+          Azura or Akilia bint Adam
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/along-the-border-of-babylonia-near-havilah.html">
+          Near Havilah, Along The Border Of Babylonia
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with marriage event
+         </div>
+</td>
+<td class="gdate">
+         3979 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12633.html">
+          Seth of Adam
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/garden-of-eden.html">
+          Garden Of Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         3864 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12633.html">
+          Seth of Adam
+         </a>
+</td>
+<td class="gclaim">
+         Marriage
+        </td>
+<td class="gvalue">
+<a href="../profiles/I12624.html">
+          Azura or Akilia bint Adam
+         </a>
+</td>
+<td class="gdate">
+         abt 3769 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12613.html">
+          Enos ben Seth ben Adam
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/east-eden-shulon.html">
+          Shulon, East Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+</td>
+<td class="gdate">
+         abt 3765 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12603.html">
+          Lamech ben Methusala
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/mesopotamia.html">
+          Mesopotamia
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         3651 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12625.html">
+          High Priest Mahalaleel ben Cainan, of Mesopotamia
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/east-of-eden-cainan.html">
+          Cainan, East Of Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         3609 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12626.html">
+          Dinah Sina bint Barakiel
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/east-of-eden-canaan.html">
+          Canaan, East Of Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         abt 3605 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12619.html">
+          Daniel ben Mahalaleel
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/iran-eden.html">
+          Eden, Iran
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         abt 3544 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12618.html">
+          Baraka bint Rashujal ben Cainan
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/east-of-eden-cainan.html">
+          Cainan, East Of Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         3540 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12612.html">
+          Baraka bint Rasujal ben Maleleel
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/east-of-eden.html">
+          East Of Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+</td>
+<td class="gdate">
+         3530 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12617.html">
+          Jared Ben Mahalaleel
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         3481 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12627.html">
+          Rashujal Ben Cainan
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/iran-eden.html">
+          Eden, Iran
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         abt 3435 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12620.html">
+          Daniela Bint Mahalael Of East Eden
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         abt 3384 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12609.html">
+          Enoch ben Jared ben Maleleel, prophet
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/east-eden-cainan.html">
+          Cainan, East Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         3378 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12610.html">
+          Edna Bint Daniel ben Maleleel
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/mesopotamia-eden.html">
+          Eden, Mesopotamia
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         3364 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12605.html">
+          Methuselah ben Enoch
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/east-eden-shulon.html">
+          Shulon, East Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         3317 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12624.html">
+          Azura or Akilia bint Adam
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/egypt-canaan.html">
+          Canaan, Egypt
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         3067 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12624.html">
+          Azura or Akilia bint Adam
+         </a>
+</td>
+<td class="gclaim">
+         Burial
+        </td>
+<td class="gvalue">
+<a href="../places/egypt-canaan.html">
+          Canaan, Egypt
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         3067 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12611.html">
+          Azrial ben Jared ben Maleleel
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/israel.html">
+          Israel
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         3000 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12606.html">
+          Edna bint Azrial ben Jared
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/azrail.html">
+          Azrail
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         abt 3000 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12621.html">
+          Jared Ben Mahalalel
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         abt 3000 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12611.html">
+          Azrial ben Jared ben Maleleel
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/israel.html">
+          Israel
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         2988 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12609.html">
+          Enoch ben Jared ben Maleleel, prophet
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         2948 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12227.html">
+          NOAH ben Lamech
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/east-eden-shulon.html">
+          Shulon, East Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         abt 2944 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12613.html">
+          Enos ben Seth ben Adam
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/east-eden-cainan.html">
+          Cainan, East Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         abt 2860 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12635.html">
+          Adam
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/east-of-eden.html">
+          East Of Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         2831 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12636.html">
+          Eve
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         2774 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12625.html">
+          High Priest Mahalaleel ben Cainan, of Mesopotamia
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         2710 B.C.E. (AGE 895)
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12625.html">
+          High Priest Mahalaleel ben Cainan, of Mesopotamia
+         </a>
+</td>
+<td class="gclaim">
+         Burial
+        </td>
+<td class="gvalue">
+</td>
+<td class="gdate">
+         2710 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12627.html">
+          Rashujal Ben Cainan
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/isle-of-man-middle-sheading.html">
+          Middle Sheading, Isle Of Man
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         abt 2710 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12201.html">
+          King Shalah ben Cainan, of Upper Mesopotamia
+         </a>
+</td>
+<td class="gclaim">
+         Burial
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with marriage event
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         abt 2702 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12201.html">
+          King Shalah ben Cainan, of Upper Mesopotamia
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with marriage event
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         abt 2702 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12619.html">
+          Daniel ben Mahalaleel
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/east-eden-cainan.html">
+          Cainan, East Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         abt 2582 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12621.html">
+          Jared Ben Mahalalel
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         abt 2578 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12215.html">
+          Ham ben Noah
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/east-eden-shulon.html">
+          Shulon, East Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+</td>
+<td class="gdate">
+         2496 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12608.html">
+          Rachujal bint Cainan
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/east-of-eden-canaan.html">
+          Canaan, East Of Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         2495 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12606.html">
+          Edna bint Azrial ben Jared
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/israel.html">
+          Israel
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         2448 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12222.html">
+          Japheth ben Noah
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/east-of-eden-shulon.html">
+          Shulon, East Of Eden
+         </a>
+</td>
+<td class="gdate">
+         abt 2442 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12221.html">
+          Sedeqetelebab bint Eliakim
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/east-of-eden-shulon.html">
+          Shulon, East Of Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         2440 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12216.html">
+          Nehelatamah ADANYA  also known as EGYPTUS Ne’elatama’uk (Ne-elatama; also known as Neelata-mek ben ELIAK of UR; also known as Oliva; Neelatamauk Bint-Eliakim
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+</td>
+<td class="gdate">
+         2430 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12608.html">
+          Rachujal bint Cainan
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/scotland-midlothian.html">
+          Midlothian, Scotland
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         abt 2386 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12219.html">
+          Sedeqetelebab Zedeketelbad
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/eden-east-shulon.html">
+          Shulon, East, Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+</td>
+<td class="gdate">
+         abt 2378 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12209.html">
+          Asshur ben Shem
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/palestine-canaan-salem.html">
+          Salem, Canaan, Palestine
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         2371 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12610.html">
+          Edna Bint Daniel ben Maleleel
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/mesopotamia.html">
+          Mesopotamia
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         2353 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12213.html">
+          Madai ben Japheth
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/roman-empire-scythia.html">
+          Scythia, Roman Empire
+         </a>
+</td>
+<td class="gdate">
+         abt 2351 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12605.html">
+          Methuselah ben Enoch
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/east-eden-shulon.html">
+          Shulon, East Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         2348 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12605.html">
+          Methuselah ben Enoch
+         </a>
+</td>
+<td class="gclaim">
+         Burial
+        </td>
+<td class="gvalue">
+<a href="../places/east-eden-shulon.html">
+          Shulon, East Eden
+         </a>
+</td>
+<td class="gdate">
+         abt 2348 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12211.html">
+          King Arphaxad ben Shem, of Arapachtis
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/isreal-jerusalem-salam.html">
+          Salam, Jerusalem, Isreal
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         2346 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12212.html">
+          Rasu’eya bint Elam
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/canaan-salem.html">
+          Salem, Canaan
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         2345 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12224.html">
+          Elam ben Shem
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         2343 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12198.html">
+          Ninsun relation to Ninsun `the Wise’ q.v. bat Asshur
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/chaldea-mesopotamia-ur.html">
+          Ur, Chaldea Mesopotamia
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         2342 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12207.html">
+          Arphaxad (King) of ARRAPACHTIS aka Arpheckshad (Arfakhshadh Arpachshad Arphachshad Arpaxad) ibn SAM
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         abt 2342 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12225.html">
+          Shushan bint Japheth
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/canaan-salem.html">
+          Salem, Canaan
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         abt 2340 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12229.html">
+          Tiras ben Japheth
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/roman-empire-scythia.html">
+          Scythia, Roman Empire
+         </a>
+</td>
+<td class="gdate">
+         abt 2330 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12204.html">
+          Melka bint Madai
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/israel-jerusalem.html">
+          Jerusalem, Israel
+         </a>
+</td>
+<td class="gdate">
+         abt 2326 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12205.html">
+          Canaan ben Ham
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         abt 2326 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12203.html">
+          Cainan Ben Arphaxad
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/east-of-eden-shulon.html">
+          Shulon, East Of Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         abt 2325 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12201.html">
+          King Shalah ben Cainan, of Upper Mesopotamia
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/chaldeas.html">
+          Chaldeas
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with burial
+         </div>
+</td>
+<td class="gdate">
+         2307 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12202.html">
+          Mu’ak (Muak) Bint Kesed
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/canaan-jerulsalem-salem.html">
+          Salem, Jerulsalem, Canaan
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         abt 2307 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12193.html">
+          Heber ben Shelah
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/israel-canaan-jerusalum-salem.html">
+          Salem, (Jerusalum), Canaan, Israel
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         2277 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12194.html">
+          Queen Azarad bint Cainan, Queen of Babylon
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/babylon-chaldea.html">
+          Chaldea, Babylon
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         2277 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12201.html">
+          King Shalah ben Cainan, of Upper Mesopotamia
+         </a>
+</td>
+<td class="gclaim">
+         Marriage
+        </td>
+<td class="gvalue">
+<a href="../profiles/I12202.html">
+          Mu’ak (Muak) Bint Kesed
+         </a>
+         ,
+         <a href="../places/canaan-jerusalem-salem.html">
+          Salem, Jerusalem, Canaan
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with burial
+         </div>
+</td>
+<td class="gdate">
+         2276 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12195.html">
+          Sidon or Shinar ben Canaan
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+</td>
+<td class="gdate">
+         2260 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12188.html">
+          Lomna bint Shinar
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/chaldeas-eber.html">
+          Eber, Chaldeas
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+</td>
+<td class="gdate">
+         2244 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12189.html">
+          ’Ur ben KESED aka Ur-Nammu
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         abt 2240 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12182.html">
+          Ora bat Ur
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/mesopotamia-chaldea-ur.html">
+          Ur, Chaldea, Mesopotamia
+         </a>
+</td>
+<td class="gdate">
+         2217 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12181.html">
+          Reu (Ragau Ra’u) ben Peleg, King of Lagash
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/iraq.html">
+          Iraq
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         abt 2213 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12173.html">
+          Melk Bint Kaber Shemitidy
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/mesopotamia-chaldea-ur.html">
+          Ur, Chaldea, Mesopotamia
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         2200 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12172.html">
+          King Serug (Sargon, Serog) ben REU, of Agade
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/of-the-chaldees-ur.html">
+          Ur, Of The Chaldees
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         abt 2183 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12202.html">
+          Mu’ak (Muak) Bint Kesed
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/israel-jerusalem.html">
+          Jerusalem, Israel
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         abt 2155 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12174.html">
+          Cornebo Ben serug
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/mesopotamia-chaldea-ur.html">
+          Ur, Chaldea, Mesopotamia
+         </a>
+</td>
+<td class="gdate">
+         2152 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12165.html">
+          Terah ben Nahor
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/iraq-ur-of-the-chaldees.html">
+          Ur Of The Chaldees, Iraq
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         2122 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12168.html">
+          Amathlaah bint Cornebo
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/iraq-dh-qar-r.html">
+          &amp;umacr;R, Dh&amp;imacr; Q&amp;amacr;r, Iraq
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         abt 2121 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12180.html">
+          Haran ben TERAH
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/ur.html">
+          Ur
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         abt 2083 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12169.html">
+          Nahor Terah
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/iraq-dh-qar-r.html">
+          &amp;umacr;R, Dh&amp;imacr; Q&amp;amacr;r, Iraq
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         abt 2056 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12161.html">
+          Abram or Abraham ben Terah
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/iran-of-the-chaldees-r.html">
+          &amp;umacr;R, Of The Chaldees, Iran
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         2051 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12170.html">
+          Milcah Bint Haran
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with marriage event
+         </div>
+</td>
+<td class="gdate">
+         2043 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12612.html">
+          Baraka bint Rasujal ben Maleleel
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/east-of-eden.html">
+          East Of Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         2040 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12162.html">
+          Sarah-Sarai bint Terah
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/iraq-dh-qar-r.html">
+          &amp;umacr;R, Dh&amp;imacr; Q&amp;amacr;r, Iraq
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         abt 2040 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12192.html">
+          Nefrushery Egypt
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/egypt-thebes.html">
+          Thebes, Egypt
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+</td>
+<td class="gdate">
+         2037 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12169.html">
+          Nahor Terah
+         </a>
+</td>
+<td class="gclaim">
+         Marriage
+        </td>
+<td class="gvalue">
+<a href="../profiles/I12170.html">
+          Milcah Bint Haran
+         </a>
+         ,
+         <a href="../places/genesis-11-29.html">
+          Genesis 11:29
+         </a>
+</td>
+<td class="gdate">
+         abt 2030 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12200.html">
+          Ninsun
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+</td>
+<td class="gdate">
+         bef 2013 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12188.html">
+          Lomna bint Shinar
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/roman-empire-canaan.html">
+          Canaan, Roman Empire
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         abt 2004 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12187.html">
+          King PELEG bint EBER, 4th of Upper Mesopotamia
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/chaldeas-eber.html">
+          Eber, Chaldeas
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+</td>
+<td class="gdate">
+         2003 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12227.html">
+          NOAH ben Lamech
+         </a>
+</td>
+<td class="gclaim">
+         Burial
+        </td>
+<td class="gvalue">
+<a href="../places/armenia-salem.html">
+          Salem, Armenia
+         </a>
+</td>
+<td class="gdate">
+         1994 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12227.html">
+          NOAH ben Lamech
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/canaan-jerusalem-salem.html">
+          Salem, Jerusalem, Canaan
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         1994 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12228.html">
+          Naamah Emzara Cobra Charmer bat Lamech
+         </a>
+</td>
+<td class="gclaim">
+         Burial
+        </td>
+<td class="gvalue">
+<a href="../places/israel.html">
+          Israel
+         </a>
+</td>
+<td class="gdate">
+         abt 1993 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12228.html">
+          Naamah Emzara Cobra Charmer bat Lamech
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/israel.html">
+          Israel
+         </a>
+</td>
+<td class="gdate">
+         abt 1993 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12191.html">
+          Pharaoh Senusret I Egypt
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/egypt.html">
+          Egypt
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+</td>
+<td class="gdate">
+         1988 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12163.html">
+          Bethuel Ben Nahor
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/haran.html">
+          Haran
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         abt 1986 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12181.html">
+          Reu (Ragau Ra’u) ben Peleg, King of Lagash
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/chaldea-ur.html">
+          Ur, Chaldea
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         abt 1974 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12172.html">
+          King Serug (Sargon, Serog) ben REU, of Agade
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/of-the-chaldees-ur.html">
+          Ur, Of The Chaldees
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         abt 1953 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12172.html">
+          King Serug (Sargon, Serog) ben REU, of Agade
+         </a>
+</td>
+<td class="gclaim">
+         Burial
+        </td>
+<td class="gvalue">
+<a href="../places/of-the-chaldees-ur.html">
+          Ur, Of The Chaldees
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         abt 1953 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12159.html">
+          Isaac ben  Abraham
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         Mar. 16, 1952 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12185.html">
+          Amenemhet II Egypt, Pharaoh
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/egypt.html">
+          Egypt
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         1947 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12169.html">
+          Nahor Terah
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/syria.html">
+          Syria
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         abt 1940 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12160.html">
+          Rebekah Bint Bethuel
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/canaan-pandanaram.html">
+          Pandanaram, Canaan
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         abt 1937 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12180.html">
+          Haran ben TERAH
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         1930 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12186.html">
+          Mereret I Egypt
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/egypt-goshen.html">
+          Goshen, Egypt
+         </a>
+</td>
+<td class="gdate">
+         1929 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12191.html">
+          Pharaoh Senusret I Egypt
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/egypt.html">
+          Egypt
+         </a>
+</td>
+<td class="gdate">
+         1926 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12165.html">
+          Terah ben Nahor
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/iraq-haran-paddan-aram.html">
+          Haran. Paddan-Aram, Iraq
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         1917 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12162.html">
+          Sarah-Sarai bint Terah
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/israel-southern-beersheba.html">
+          Beersheba, Southern, Israel
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         1913 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12211.html">
+          King Arphaxad ben Shem, of Arapachtis
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/israel-jerusalem.html">
+          Jerusalem, Israel
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         1908 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12185.html">
+          Amenemhet II Egypt, Pharaoh
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/egypt.html">
+          Egypt
+         </a>
+</td>
+<td class="gdate">
+         1895 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12173.html">
+          Melk Bint Kaber Shemitidy
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/egypt-nile-delta-goshen-rameses.html">
+          Rameses, Goshen, Nile Delta, Egypt
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         1878 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12203.html">
+          Cainan Ben Arphaxad
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/east-of-eden-canaan.html">
+          Canaan, East Of Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         abt 1878 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12161.html">
+          Abram or Abraham ben Terah
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/israel-hebron.html">
+          Hebron, Israel
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         1876 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12158.html">
+          Leah Bint Laban
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/haran.html">
+          Haran
+         </a>
+</td>
+<td class="gdate">
+         1860 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12218.html">
+          Shem Ben Noah
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         1852 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12220.html">
+          Shem ben Noah
+         </a>
+</td>
+<td class="gclaim">
+         Burial
+        </td>
+<td class="gvalue">
+<a href="../places/east-eden-shulon.html">
+          Shulon, East Eden
+         </a>
+</td>
+<td class="gdate">
+         1846 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12163.html">
+          Bethuel Ben Nahor
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/padan-aram-haran.html">
+          Haran, Padan-Aram
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         1842 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12194.html">
+          Queen Azarad bint Cainan, Queen of Babylon
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         1813 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12193.html">
+          Heber ben Shelah
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/israel-canaan-jerusalum-salem.html">
+          Salem, (Jerusalum), Canaan, Israel
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         abt 1813 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12158.html">
+          Leah Bint Laban
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/west-bank-hebron-kirjath-arba.html">
+          Kirjath-Arba, Hebron, West Bank
+         </a>
+</td>
+<td class="gdate">
+         Aug. 15, 1786 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12221.html">
+          Sedeqetelebab bint Eliakim
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/east-of-eden-canaan.html">
+          Canaan, East Of Eden
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         1780 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12159.html">
+          Isaac ben  Abraham
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         abt 1774 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12159.html">
+          Isaac ben  Abraham
+         </a>
+</td>
+<td class="gclaim">
+         Burial
+        </td>
+<td class="gvalue">
+<a href="../places/roman-empire-canaan-field-of-ephron-cave-of-machpelah.html">
+          Cave Of Machpelah, Field Of Ephron, Canaan, Roman Empire
+         </a>
+</td>
+<td class="gdate">
+         abt 1774 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12187.html">
+          King PELEG bint EBER, 4th of Upper Mesopotamia
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/chaldeas-eber.html">
+          Eber, Chaldeas
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         1764 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12153.html">
+          Zera Ben Judah
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         1738 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12160.html">
+          Rebekah Bint Bethuel
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/canaan-beersheba.html">
+          Beersheba, Canaan
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         abt 1720 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12153.html">
+          Zera Ben Judah
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+</td>
+<td class="gdate">
+         1638 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12147.html">
+          Tros of Acadia, King of Troy
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+</td>
+<td class="gdate">
+         1387 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12148.html">
+          Callirhoe (Teucri)
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/greece-crete-in.html">
+          In, Crete, Greece
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+</td>
+<td class="gdate">
+         1345 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12147.html">
+          Tros of Acadia, King of Troy
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+</td>
+<td class="gdate">
+         1330 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12142.html">
+          Anchisa, of Troy
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+</td>
+<td class="gdate">
+         1275 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12141.html">
+          Aeneas
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+</td>
+<td class="gdate">
+         1245 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12142.html">
+          Anchisa, of Troy
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+</td>
+<td class="gdate">
+         1181 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12141.html">
+          Aeneas
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         1175 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11648.html">
+          Moda ( Meda) Queen of Troy
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/troy-turkey.html">
+          Troy.Turkey
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         abt 1150 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12139.html">
+          Lulus Ascanius of Alba Longa Iulus ASCANIUS
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         1137 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12136.html">
+          Brutas King of Britain
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/italy-longa-alba.html">
+          Alba, Longa, Italy
+         </a>
+</td>
+<td class="gdate">
+         1100 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12136.html">
+          Brutas King of Britain
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/britain.html">
+          Britain
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         1091 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12135.html">
+          King Camber of Cambria
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         1050 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11648.html">
+          Moda ( Meda) Queen of Troy
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/troy-turkey.html">
+          Troy.Turkey
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         abt 1050 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11648.html">
+          Moda ( Meda) Queen of Troy
+         </a>
+</td>
+<td class="gclaim">
+         Burial
+        </td>
+<td class="gvalue">
+<a href="../places/troy-turkey.html">
+          Troy.Turkey
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         abt 1050 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12135.html">
+          King Camber of Cambria
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/wales.html">
+          Wales
+         </a>
+</td>
+<td class="gdate">
+         1006 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12168.html">
+          Amathlaah bint Cornebo
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/iraq-dh-qar-r.html">
+          &amp;umacr;R, Dh&amp;imacr; Q&amp;amacr;r, Iraq
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         945 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12156.html">
+          The Heir Tamar
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         930 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12131.html">
+          Asser, Duke King of Cambria and Cornwall ap Cyngen
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/britain.html">
+          Britain
+         </a>
+</td>
+<td class="gdate">
+         600 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12130.html">
+          Bleiddud ap Asser, Duke of Cambria and Duke of Cornwall
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/england.html">
+          England
+         </a>
+</td>
+<td class="gdate">
+         570 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12102.html">
+          King Seisyll, of the Britons
+         </a>
+</td>
+<td class="gclaim">
+         Burial
+        </td>
+<td class="gvalue">
+<a href="../places/england-cornwall.html">
+          Cornwall, England
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         from 548 B.C.E. to 318 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12128.html">
+          Henwyn . (Henwinus) Ap Bleiddud Duke of Cambria and Cornwall
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/france-hauts-de-france-nord.html">
+          Nord, Hauts-De-France, France
+         </a>
+</td>
+<td class="gdate">
+         530 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12129.html">
+          Reagan verch Llyr
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/england-cornwall.html">
+          Cornwall, England
+         </a>
+</td>
+<td class="gdate">
+         abt 520 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12109.html">
+          Junargonde
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         bef 519 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12127.html">
+          King Cunneda ap Henwyn
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/wales-cambria.html">
+          Cambria, Wales
+         </a>
+</td>
+<td class="gdate">
+         500 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12099.html">
+          Antonius `the Cambrian` Ap Seisyll
+         </a>
+</td>
+<td class="gclaim">
+         Burial
+        </td>
+<td class="gvalue">
+<a href="../places/england-cornwall.html">
+          Cornwall, England
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         from 488 B.C.E. to 298 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12103.html">
+          Rhegaw, of Ancient Britain
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/ancient-britain.html">
+          Ancient Britain
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         bef 478 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12117.html">
+          King Rhiwallon ap Cunneda, of Britain
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/united-kingdom.html">
+          United Kingdom
+         </a>
+</td>
+<td class="gdate">
+         470 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12108.html">
+          King Gwrwst ap Rhiwallon
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/england-cornwall.html">
+          Cornwall, England
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+</td>
+<td class="gdate">
+         430 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12097.html">
+          Aedd Mawr ap Antonius, of Cornwall
+         </a>
+</td>
+<td class="gclaim">
+         Burial
+        </td>
+<td class="gvalue">
+<a href="../places/england-cornwall.html">
+          Cornwall, England
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         from 428 B.C.E. to 278 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12102.html">
+          King Seisyll, of the Britons
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/ancient-britain-cornwall.html">
+          Cornwall, Ancient Britain
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with burial
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         400 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12099.html">
+          Antonius `the Cambrian` Ap Seisyll
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/england-cornwall.html">
+          Cornwall, England
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with burial
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         370 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12096.html">
+          Prydain ap Aedd Mawr
+         </a>
+</td>
+<td class="gclaim">
+         Burial
+        </td>
+<td class="gvalue">
+<a href="../places/england.html">
+          England
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         from 368 B.C.E. to 258 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11647.html">
+          Idomeneus, (King of the Trojans)
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/troy-turkey.html">
+          Troy.Turkey
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         abt 350 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12102.html">
+          King Seisyll, of the Britons
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/ancient-britain-cornwall.html">
+          Cornwall, Ancient Britain
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with burial
+         </div>
+</td>
+<td class="gdate">
+         abt 349 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12097.html">
+          Aedd Mawr ap Antonius, of Cornwall
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/ancient-britain-cornwall.html">
+          Cornwall, Ancient Britain
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with burial
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         340 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12096.html">
+          Prydain ap Aedd Mawr
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/ancient-britain.html">
+          Ancient Britain
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with burial
+         </div>
+</td>
+<td class="gdate">
+         abt 329 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12099.html">
+          Antonius `the Cambrian` Ap Seisyll
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/england-cornwall.html">
+          Cornwall, England
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with burial
+         </div>
+</td>
+<td class="gdate">
+         abt 320 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12231.html">
+          Tzillah
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/enoc.html">
+          Enoc
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+</td>
+<td class="gdate">
+         abt 310 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12097.html">
+          Aedd Mawr ap Antonius, of Cornwall
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/ancient-britain-cornwall.html">
+          Cornwall, Ancient Britain
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with burial
+         </div>
+</td>
+<td class="gdate">
+         abt 299 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12093.html">
+          Dyfnarth ap Prydain, of Cornwall
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/ancient-britain.html">
+          Ancient Britain
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         284 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12094.html">
+          Conwenna, of Ancient Britain
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/ancient-britain.html">
+          Ancient Britain
+         </a>
+</td>
+<td class="gdate">
+         est 270 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12091.html">
+          King Crydon ap Dyfnarth, of Cambria
+         </a>
+</td>
+<td class="gclaim">
+         Burial
+        </td>
+<td class="gvalue">
+<a href="../places/england.html">
+          England
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         from 258 B.C.E. to 218 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12096.html">
+          Prydain ap Aedd Mawr
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/ancient-britain.html">
+          Ancient Britain
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with burial
+         </div>
+</td>
+<td class="gdate">
+         abt 257 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12091.html">
+          King Crydon ap Dyfnarth, of Cambria
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/ancient-britain.html">
+          Ancient Britain
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with burial
+         </div>
+</td>
+<td class="gdate">
+         abt 254 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11646.html">
+          Magi
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/england-wessex-kingdom.html">
+          Wessex Kingdom, England
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         abt 250 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12094.html">
+          Conwenna, of Ancient Britain
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/ancient-britain.html">
+          Ancient Britain
+         </a>
+</td>
+<td class="gdate">
+         241 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12086.html">
+          King Cerwyd
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         225 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12091.html">
+          King Crydon ap Dyfnarth, of Cambria
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/ancient-britain.html">
+          Ancient Britain
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with burial
+         </div>
+</td>
+<td class="gdate">
+         abt 217 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12119.html">
+          Cossutia Fulvia
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/italy.html">
+          Italy
+         </a>
+</td>
+<td class="gdate">
+         abt 205 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12118.html">
+          Gaius Julius Caesar, I
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/italy-lazio-rome.html">
+          Rome, Lazio, Italy
+         </a>
+</td>
+<td class="gdate">
+         203 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12077.html">
+          High Priest Hyrcannus, of The Maccabees
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/the-holy-land-jerusalem.html">
+          Jerusalem, The Holy Land
+         </a>
+</td>
+<td class="gdate">
+         200 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12120.html">
+          Quintus Marcius Rex
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/italy-lazio-roma.html">
+          Roma, Lazio, Italy
+         </a>
+</td>
+<td class="gdate">
+         195 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12123.html">
+          Bruttia Crispina, Empress of the Roman Empire
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/italy-campania-naples-capri.html">
+          Capri, Naples, Campania, Italy.
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         191 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12079.html">
+          Eneid Capuir ap Cerwyd
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/england.html">
+          England
+         </a>
+</td>
+<td class="gdate">
+         abt 190 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12078.html">
+          Arisone, IV of Egypt
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/egypt-al-iskandariyah-ash-shatibi.html">
+          Ash Shatibi, Al Iskandariyah, Egypt
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         abt 184 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12088.html">
+          Eliud ben Achim
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/israel.html">
+          Israel
+         </a>
+</td>
+<td class="gdate">
+         abt 178 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12122.html">
+          Crispus Lucius Marcus Aurelius Commodus Antonius di RomaCotta, Emporer of Rome
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/italy-lazio-lanuvium.html">
+          Lanuvium, Lazio, Italy
+         </a>
+</td>
+<td class="gdate">
+         170 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12111.html">
+          Marcia Quinta Rex
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/italy-lazio-rome.html">
+          Rome, Lazio, Italy
+         </a>
+</td>
+<td class="gdate">
+         Apr. 26, 165 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12123.html">
+          Bruttia Crispina, Empress of the Roman Empire
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/italy-rome.html">
+          Rome, Italy.
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         164 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12072.html">
+          Queen Alexandra, of Arimethea
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         163 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12086.html">
+          King Cerwyd
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/the-roman-empire.html">
+          The Roman Empire
+         </a>
+</td>
+<td class="gdate">
+         160 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11669.html">
+          Einid Capoir KING OF THE DRUIDS OF BRITON AP CERWYD CAMBRIA
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/france-haute-normandie-eure-roman.html">
+          Rôman, Eure, Haute-Normandie, France
+         </a>
+</td>
+<td class="gdate">
+         160 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12118.html">
+          Gaius Julius Caesar, I
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/italy-lazio-rome.html">
+          Rome, Lazio, Italy
+         </a>
+</td>
+<td class="gdate">
+         160 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12110.html">
+          Gaius Julius Caesar, II
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/italy-lazio-rome.html">
+          Rome, Lazio, Italy
+         </a>
+</td>
+<td class="gdate">
+         May 21, 160 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12078.html">
+          Arisone, IV of Egypt
+         </a>
+</td>
+<td class="gclaim">
+         Alt. Birth
+        </td>
+<td class="gvalue">
+<a href="../places/egypt-ptolemanic-kingdom-alexandra.html">
+          Alexandra, Ptolemanic Kingdom, Egypt
+         </a>
+</td>
+<td class="gdate">
+         abt 154 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11645.html">
+          Danus I Sc&amp;emacr;afa, (King Of The Lombards)
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/england-wessex-kingdom.html">
+          Wessex Kingdom, England
+         </a>
+</td>
+<td class="gdate">
+         abt 150 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11647.html">
+          Idomeneus, (King of the Trojans)
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/troy-turkey.html">
+          Troy.Turkey
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         abt 150 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11647.html">
+          Idomeneus, (King of the Trojans)
+         </a>
+</td>
+<td class="gclaim">
+         Burial
+        </td>
+<td class="gvalue">
+<a href="../places/troy-turkey.html">
+          Troy.Turkey
+         </a>
+</td>
+<td class="gdate">
+         abt 150 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12112.html">
+          Lucius Aurelius Cotta
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/italy-lazio-rome.html">
+          Rome, Lazio, Italy
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         140 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11662.html">
+          Manogan ap Eneid the Cambrian
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/turkey-trabzon-ortahisar.html">
+          Ortahisar, Trabzon, Turkey
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         140 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12081.html">
+          Jana ben Joseph
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/judea-jerusalem.html">
+          Jerusalem, Judea
+         </a>
+</td>
+<td class="gdate">
+         140 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12073.html">
+          Manogan ap Eneid
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/england.html">
+          England
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         abt 135 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12087.html">
+          Matthias Curtis
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+</td>
+<td class="gdate">
+         134 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12104.html">
+          Gaius Julius III Caesar (Praetor of Rome)
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/italy-lazio-roma-rome.html">
+          Rome, Roma, Lazio, Italy
+         </a>
+</td>
+<td class="gdate">
+         134 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11657.html">
+          Beli Mawr Sovereign Lord of the Celtic Britons, King of Britain
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         132 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12070.html">
+          King Beli, of Ancient Britain
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/ancient-britain.html">
+          Ancient Britain
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         129 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12083.html">
+          Levi Eleazar Ben Eliud
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/israel-judea-judah.html">
+          Judea Judah, Israel
+         </a>
+</td>
+<td class="gdate">
+         120 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12107.html">
+          _____ Pompeia, Magna
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/italy-lazio-rome.html">
+          Rome, Lazio, Italy
+         </a>
+</td>
+<td class="gdate">
+         abt 120 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12105.html">
+          Aurelia Aurelius Cotta
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/italy-latium-rome.html">
+          Rome, Latium, Italy
+         </a>
+</td>
+<td class="gdate">
+         May 21, 120 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12120.html">
+          Quintus Marcius Rex
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/italy-lazio-roma.html">
+          Roma, Lazio, Italy
+         </a>
+</td>
+<td class="gdate">
+         118 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11670.html">
+          Melchi ben Janai
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/judea-jerusalem.html">
+          Jerusalem, Judea
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         116 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11671.html">
+          Johanna bint Joseph
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/israel-judah-jerusalem.html">
+          Jerusalem, Judah, Israel
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         116 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12079.html">
+          Eneid Capuir ap Cerwyd
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+</td>
+<td class="gdate">
+         102 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11664.html">
+          Levi ben Melchi
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/israel-jerusalem.html">
+          Jerusalem, Israel
+         </a>
+</td>
+<td class="gdate">
+         101 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11646.html">
+          Magi
+         </a>
+</td>
+<td class="gclaim">
+         Burial
+        </td>
+<td class="gvalue">
+<a href="../places/england-wessex-kingdom.html">
+          Wessex Kingdom, England
+         </a>
+</td>
+<td class="gdate">
+         abt 100 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12068.html">
+          King Lludd, of Ancient Britain
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/wales-shelby-siluria.html">
+          Siluria, Shelby, Wales
+         </a>
+</td>
+<td class="gdate">
+         abt 100 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11642.html">
+          King Bedwig Anglo Saxon
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/england-wessex-kingdom.html">
+          Wessex Kingdom, England
+         </a>
+</td>
+<td class="gdate">
+         abt 100 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11646.html">
+          Magi
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/england-wessex-kingdom.html">
+          Wessex Kingdom, England
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         abt 100 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12100.html">
+          Dictator Gaius Julius Caesar
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/roman-republic-rome-subura.html">
+          Subura, Rome, Roman Republic
+         </a>
+</td>
+<td class="gdate">
+         Jul. 13, 100 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11645.html">
+          Danus I Sc&amp;emacr;afa, (King Of The Lombards)
+         </a>
+</td>
+<td class="gclaim">
+         Burial
+        </td>
+<td class="gvalue">
+<a href="../places/england-wessex-kingdom.html">
+          Wessex Kingdom, England
+         </a>
+</td>
+<td class="gdate">
+         abt 98 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11645.html">
+          Danus I Sc&amp;emacr;afa, (King Of The Lombards)
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/england-wessex-kingdom.html">
+          Wessex Kingdom, England
+         </a>
+</td>
+<td class="gdate">
+         abt 98 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12101.html">
+          Cordelia verch Llyr
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/italy-lazio-rome.html">
+          Rome, Lazio, Italy
+         </a>
+</td>
+<td class="gdate">
+         94 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11669.html">
+          Einid Capoir KING OF THE DRUIDS OF BRITON AP CERWYD CAMBRIA
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/france-haute-normandie-eure-roman.html">
+          Rôman, Eure, Haute-Normandie, France
+         </a>
+</td>
+<td class="gdate">
+         92 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12069.html">
+          Anna bint Matthat, of Arimathea
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/the-holy-land-jerusalem.html">
+          Jerusalem, The Holy Land
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         92 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11662.html">
+          Manogan ap Eneid the Cambrian
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/australia-queensland-brittania.html">
+          Brittania, Queensland, Australia
+         </a>
+</td>
+<td class="gdate">
+         92 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11665.html">
+          Pauline Vance Eleazer
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/israel-jerusalem.html">
+          Jerusalem, Israel
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+</td>
+<td class="gdate">
+         Oct. 24, 92 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12104.html">
+          Gaius Julius III Caesar (Praetor of Rome)
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/italy-toscana-pisa.html">
+          Pisa, Toscana, Italy
+         </a>
+</td>
+<td class="gdate">
+         Jan. 7, 87 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12110.html">
+          Gaius Julius Caesar, II
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/italy-lazio-rome.html">
+          Rome, Lazio, Italy
+         </a>
+</td>
+<td class="gdate">
+         85 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12104.html">
+          Gaius Julius III Caesar (Praetor of Rome)
+         </a>
+</td>
+<td class="gclaim">
+         Burial
+        </td>
+<td class="gvalue">
+<a href="../places/italy-lazio-roma-rome.html">
+          Rome, Roma, Lazio, Italy
+         </a>
+</td>
+<td class="gdate">
+         85 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12111.html">
+          Marcia Quinta Rex
+         </a>
+</td>
+<td class="gclaim">
+         Burial
+        </td>
+<td class="gvalue">
+<a href="../places/italy-rome-city.html">
+          Rome City, Italy
+         </a>
+</td>
+<td class="gdate">
+         84 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12114.html">
+          Senator Lucius Cornelius Cinna
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/italy-puglia-brindisi.html">
+          Brindisi, Puglia, Italy
+         </a>
+</td>
+<td class="gdate">
+         84 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12111.html">
+          Marcia Quinta Rex
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/italy-lazio-rome.html">
+          Rome, Lazio, Italy
+         </a>
+</td>
+<td class="gdate">
+         Jul. 31, 84 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11657.html">
+          Beli Mawr Sovereign Lord of the Celtic Britons, King of Britain
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/italy.html">
+          Italy
+         </a>
+</td>
+<td class="gdate">
+         72 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12073.html">
+          Manogan ap Eneid
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/england.html">
+          England
+         </a>
+</td>
+<td class="gdate">
+         abt 72 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12070.html">
+          King Beli, of Ancient Britain
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/ancient-britain-siluria.html">
+          Siluria, Ancient Britain
+         </a>
+</td>
+<td class="gdate">
+         71 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11666.html">
+          Eleazar The Zadok
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+</td>
+<td class="gdate">
+         abt 70 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11667.html">
+          Hayal
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+</td>
+<td class="gdate">
+         abt 70 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12067.html">
+          Afallach Ap Affieth (Lludd), King of Gwynedd
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/wales-gwynedd.html">
+          Gwynedd, Wales
+         </a>
+</td>
+<td class="gdate">
+         69 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12101.html">
+          Cordelia verch Llyr
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/italy-lazio-rome.html">
+          Rome, Lazio, Italy
+         </a>
+</td>
+<td class="gdate">
+         69 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12071.html">
+          Matthat Ben Levi ha-David
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/northern-kingdom-israel.html">
+          Israel, Northern Kingdom
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         67 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11659.html">
+          Nasi Matate ben Levi, ha-David
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/northern-kingdom-israel.html">
+          Israel, Northern Kingdom
+         </a>
+</td>
+<td class="gdate">
+         67 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12081.html">
+          Jana ben Joseph
+         </a>
+</td>
+<td class="gclaim">
+         Burial
+        </td>
+<td class="gvalue">
+<a href="../places/judea-jerusalem.html">
+          Jerusalem, Judea
+         </a>
+</td>
+<td class="gdate">
+         abt 64 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12081.html">
+          Jana ben Joseph
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/judea-jerusalem.html">
+          Jerusalem, Judea
+         </a>
+</td>
+<td class="gdate">
+         abt 64 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12105.html">
+          Aurelia Aurelius Cotta
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/italy-latium-rome.html">
+          Rome, Latium, Italy
+         </a>
+</td>
+<td class="gdate">
+         Jul. 31, 54 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11660.html">
+          Estha Anna Rachel Bat Eleazar
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/palestine-west-bank-judea-jerusalem.html">
+          Jerusalem, Judea, West Bank, Palestine
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with child
+         </div>
+</td>
+<td class="gdate">
+         52 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12100.html">
+          Dictator Gaius Julius Caesar
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/roman-republic-rome-curia-of-pompey.html">
+          Curia Of Pompey, Rome, Roman Republic
+         </a>
+</td>
+<td class="gdate">
+         Mar. 15, 44 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12078.html">
+          Arisone, IV of Egypt
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/egypt-al-iskandariyah-ash-shatibi.html">
+          Ash Shatibi, Al Iskandariyah, Egypt
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         41 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12065.html">
+          Owain (Eugein) ap Afallach
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/wales-siluria.html">
+          Siluria, Wales
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with spouse
+         </div>
+</td>
+<td class="gdate">
+         35 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12072.html">
+          Queen Alexandra, of Arimethea
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/judea.html">
+          Judea
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with birth
+         </div>
+</td>
+<td class="gdate">
+         28 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11637.html">
+          Saint Cyllin, King of Britain Marius Ap Gweirydd
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/britain-silures-welsh.html">
+          Welsh, Silures, Britain
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with death
+         </div>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         abt 22 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12069.html">
+          Anna bint Matthat, of Arimathea
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/wales-siluria.html">
+          Siluria, Wales
+         </a>
+</td>
+<td class="gdate">
+         17 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12068.html">
+          King Lludd, of Ancient Britain
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/ancient-britain-london.html">
+          London, Ancient Britain
+         </a>
+</td>
+<td class="gdate">
+         17 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12067.html">
+          Afallach Ap Affieth (Lludd), King of Gwynedd
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/ancient-briton.html">
+          Ancient Briton
+         </a>
+</td>
+<td class="gdate">
+         15 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11667.html">
+          Hayal
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+</td>
+<td class="gdate">
+         abt 10 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11666.html">
+          Eleazar The Zadok
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+</td>
+<td class="gdate">
+         abt 10 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I12064.html">
+          Bryddgwyn ap Owain
+         </a>
+</td>
+<td class="gclaim">
+         Birth
+        </td>
+<td class="gvalue">
+<a href="../places/wales.html">
+          Wales
+         </a>
+<div class="gcomment gcalert">
+          Claim is inconsistent with parent
+         </div>
+</td>
+<td class="gdate">
+         abt 10 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+<tr class="gevent">
+<td class="gname">
+<a href="../profiles/I11664.html">
+          Levi ben Melchi
+         </a>
+</td>
+<td class="gclaim">
+         Death
+        </td>
+<td class="gvalue">
+<a href="../places/israel-jerusalem.html">
+          Jerusalem, Israel
+         </a>
+</td>
+<td class="gdate">
+         5 B.C.E.
+        </td>
+<td class="gage">
+</td>
+<td class="gquality">
+<div class="gt-claim-quality-unsupported">
+          unsupported
+         </div>
+</td>
+</tr>
+</tbody>
+</table>
+</article>
+</div>
+</div>
+<div>
+</div>
+<script type="text/javascript">
    function dynamicallyLoadScript(url) {
 			var script = document.createElement('script');
 			script.src = url;
@@ -256,13 +7311,13 @@
           dynamicallyLoadScript('../assets/gigatrees-heatmaps.min.js');
 		});
   </script>
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:/// -->
-  <!-- [if lt IE 9] >
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:/// -->
+<!-- [if lt IE 9] >
     <script type="text/javascript" src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script type="text/javascript" src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <! [endif] -->
-  <script type="text/javascript">
+<script type="text/javascript">
    $(document).ready(function () {
 document.getElementById("gt-version").style.display = 'inline';
 document.getElementById("gt-version").style.visibility = 'visible';
@@ -270,53 +7325,50 @@ document.getElementById("gt-version").style.fontSize = '14px';
 $('#gt-about-modal').appendTo("body");
 });
   </script>
- 
-                <p><strong>Are we related?</strong> Are you a long lost cousin? Spotted an error here? This website remains a work-in-progress and I&nbsp;would love to hear from you. Drop me a line at minchinweb [at] gmail [dot] com.</p>
-        </div>
-    </section>
-
-        </div>
-    </div> <!-- /.row -->
+<p><strong>Are we related?</strong> Are you a long lost cousin? Spotted an error here? This website remains a work-in-progress and I would love to hear from you. Drop me a line at minchinweb [at] gmail [dot] com.</p>
+</div>
+</section>
+</div>
+</div> <!-- /.row -->
 </div> <!-- /.container -->
 <footer>
-    <div class="container">
-        <hr>
-        <div class="row">
-            <div class="col-sm-10 col-xs-8">
-                &copy;  D. Minchin & Wm. Minchin
-                    &bull;
-                    Last Updated February 3, 2018
-                    &bull;
+<div class="container">
+<hr/>
+<div class="row">
+<div class="col-sm-10 col-xs-8">
+                ©  D. Minchin &amp; Wm. Minchin
+                    •
+                    Last Updated March 18, 2024
+                    •
                     <a href="http://gigatrees.com/">Built with Gigatrees (4.4.1)</a>
-                &bull;
-                <a href="http://blog.minchin.ca/label/seafoam/">Seafoam theme</a>
+                •
+                <a href="http://blog.minchin.ca/label/seafoam/" title="seafoam, version 2.9.2">
+                    Seafoam
+                </a> theme
             </div>
-            <div class="col-sm-2 col-xs-4"><p class="pull-right"><span class="fa fa-arrow-up"></span> <a href="#">Back to top</a></p></div>
-        </div>
-    </div>
+<div class="col-sm-2 col-xs-4"><p class="pull-right"><span class="fa fa-arrow-up"></span> <a href="#">Back to top</a></p></div>
+</div>
+</div>
 </footer>
-    <!-- JQuery, if not in head -->
-
-    <!-- Bootstrap -- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="//genealogy.minchin.ca/theme/js/bootstrap.min.js" type="text/javascript"></script>
-
-    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-    <script src="//genealogy.minchin.ca/theme/js/respond.min.js?v=1.4.2" type="text/javascript"></script>
-
+<!-- JQuery, if not in head -->
+<!-- Bootstrap -- Include all compiled plugins (below), or include individual files as needed -->
+<script src="//genealogy.minchin.ca/theme/js/bootstrap.min.js" type="text/javascript"></script>
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="//genealogy.minchin.ca/theme/js/respond.min.js?v=1.4.2" type="text/javascript"></script>
 <!-- CUSTOM_JS_LIST -->
-            <script src="//genealogy.minchin.ca/assets/bootstrap-tooltip-handler.js" type="text/javascript"></script>
-            <script src="//genealogy.minchin.ca/js/d3.min.js?v=3.5.17" type="text/javascript"></script>
-            <script src="//genealogy.minchin.ca/js/c3.min.js?v=0.4.18" type="text/javascript"></script>
-            <script src="//genealogy.minchin.ca/js/gigatrees-charts.wm.js" type="text/javascript"></script>
-            <script src="//genealogy.minchin.ca/assets/fancybox-handler.js" type="text/javascript"></script>
-            <script src="//genealogy.minchin.ca/js/jquery.mousewheel.min.js?v=3.1.13" type="text/javascript"></script>
-            <script src="//genealogy.minchin.ca/js/jquery.fancybox.pack.js?v=2.1.7" type="text/javascript"></script>
-            <script src="//genealogy.minchin.ca/js/jquery.fancybox-buttons.js?v=1.0.5" type="text/javascript"></script>
-            <script src="//genealogy.minchin.ca/js/jquery.fancybox-media.js?v=1.0.6" type="text/javascript"></script>
-            <script src="//genealogy.minchin.ca/js/jquery.fancybox-thumbs.js?v=1.0.7" type="text/javascript"></script>
+<script src="//genealogy.minchin.ca/assets/bootstrap-tooltip-handler.js" type="text/javascript"></script>
+<script src="//genealogy.minchin.ca/js/d3.min.js?v=3.5.17" type="text/javascript"></script>
+<script src="//genealogy.minchin.ca/js/c3.min.js?v=0.4.18" type="text/javascript"></script>
+<script src="//genealogy.minchin.ca/js/gigatrees-charts.wm.js" type="text/javascript"></script>
+<script src="//genealogy.minchin.ca/assets/fancybox-handler.js" type="text/javascript"></script>
+<script src="//genealogy.minchin.ca/js/jquery.mousewheel.min.js?v=3.1.13" type="text/javascript"></script>
+<script src="//genealogy.minchin.ca/js/jquery.fancybox.pack.js?v=2.1.7" type="text/javascript"></script>
+<script src="//genealogy.minchin.ca/js/jquery.fancybox-buttons.js?v=1.0.5" type="text/javascript"></script>
+<script src="//genealogy.minchin.ca/js/jquery.fancybox-media.js?v=1.0.6" type="text/javascript"></script>
+<script src="//genealogy.minchin.ca/js/jquery.fancybox-thumbs.js?v=1.0.7" type="text/javascript"></script>
 <!-- theme includes, including JS -->
-    <!-- Google Analytics Universal -->
-    <script type="text/javascript">
+<!-- Google Analytics Universal -->
+<script type="text/javascript">
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -325,7 +7377,7 @@ $('#gt-about-modal').appendTo("body");
         ga('create', 'UA-384291-3', 'minchin.ca');
         ga('send', 'pageview');
     </script>
-    <!-- End Google Analytics Universal Code -->
+<!-- End Google Analytics Universal Code -->
 <!-- script block -->
 </body>
 </html>

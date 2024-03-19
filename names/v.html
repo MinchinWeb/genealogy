@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:og="http://ogp.me/ns#"
-      xmlns:fb="https://www.facebook.com/2008/fbml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#">
 <head>
-    <title>v &mdash; Minchin Genealogy</title>
-    <!-- Using the latest rendering mode for IE -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link href="//genealogy.minchin.ca/favicon.ico" rel="icon">
-    <!-- Open Graph tags -->
-            <meta property="og:type" content="article"/>
-            <meta property="og:title" content="v"/>
-            <meta property="og:url" content="//genealogy.minchin.ca/names/v.html"/>
-    <!-- Bootstrap CSS -->
-        <link href="//genealogy.minchin.ca/theme/css/bootstrap.seafoam.min.css" rel="stylesheet" type="text/css"/>
-    <!-- CUSTOM_CSS -->
-    <!-- CUSTOM_CSS_LIST -->
-                <link href="//genealogy.minchin.ca/css/minchin-ca.css" rel="stylesheet" type="text/css" />
-                <link href="//genealogy.minchin.ca/css/jquery.fancybox.min.css?v=2.1.7" rel="stylesheet" type="text/css" />
-
-    <!-- JQUERY_JS_IN_HEAD -->
-        <script src="//genealogy.minchin.ca/theme/js/jquery.min.js?v=3.1.1" type="text/javascript"></script>
-
-    <!-- CUSTOM_JS_LIST_HEAD -->
-                <script type="text/javascript">
+<title>v — Minchin Genealogy</title>
+<!-- Using the latest rendering mode for IE -->
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/> <link href="//genealogy.minchin.ca/favicon.ico" rel="icon"/>
+<!-- Open Graph tags -->
+<meta content="Minchin Genealogy" property="og:site_name"/>
+<meta content="article" property="og:type"/>
+<meta content="v" property="og:title"/>
+<meta content="//genealogy.minchin.ca/names/v.html" property="og:url"/>
+<!-- Bootstrap CSS -->
+<link href="//genealogy.minchin.ca/theme/css/bootstrap.seafoam.min.css" rel="stylesheet" type="text/css"/>
+<!-- CUSTOM_CSS -->
+<!-- CUSTOM_CSS_LIST -->
+<link href="//genealogy.minchin.ca/css/minchin-ca.css" rel="stylesheet" type="text/css"/>
+<link href="//genealogy.minchin.ca/css/jquery.fancybox.min.css?v=2.1.7" rel="stylesheet" type="text/css"/>
+<!-- JQUERY_JS_IN_HEAD -->
+<script src="//genealogy.minchin.ca/theme/js/jquery.min.js?v=3.1.1" type="text/javascript"></script>
+<!-- CUSTOM_JS_LIST_HEAD -->
+<script type="text/javascript">
             var myImage='/assets/mapicon_u.png';
             var myImageW='/assets/mapicon_f.png';
             var myImageM='/assets/mapicon_m.png';
@@ -59,830 +56,1556 @@
                 dynamicallyLoadScript('/assets/gigatrees-heatmaps.min.js');
             });
         </script>
-        
 <!-- Feeds -->
 </head>
 <body>
-    <div class="container">
-    <div class="row">
-        <div class="col-sm-3">
-            <div class="sidebar-nav">
-                <nav class="navbar navbar-default" role="navigation">
-
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a href="http://minchin.ca/" class="navbar-brand">
-                                <img src="//genealogy.minchin.ca/images/MinchindotCA-200.png" width="100%" alt="Minchin Genealogy" class="img-responsive pull-left gap-right"/>
-                        </a>
-                    </div> <!-- /.navbar-header -->
-                    <div class="collapse navbar-collapse sidebar-navbar-collapse navbar-nonheader">
-                            <ul class="nav navbar-nav">
-                                    <li ><a href="http://blog.minchin.ca/"><span class="fa fa-fw fa-pencil"></span> Blog</a>
-                                    </li>
-                                    <li class="active"><a href=""><span class="glyphicon glyphicon-tree-deciduous"></span> Genealogy</a>
-                                            <ul class="nav navbar-nav nav-list-level2">
-                                                <li><a href="/names/"><span class="fa fa-fw fa-user-circle"></span> Surnames</a></li>
-                                                <li><a href="/sources/"><span class="fa fa-fw fa-book"></span> Sources</a></li>
-                                                <li><a href="/map/"><span class="fa fa-fw fa-globe"></span> Distribution Map</a></li>
-                                                <li><a href="/timelines/"><span class="fa fa-fw fa-clock-o"></span> Timelines</a></li>
-                                                <li><a href="/places/"><span class="fa fa-fw fa-map-marker"></span> Locations</a></li>
-                                                <li><a href="/photos/"><span class="fa fa-fw fa-picture-o"></span> Photos</a></li>
-                                                <li><a href="/stats/"><span class="fa fa-fw fa-bar-chart"></span> Statistics</a></li>
-                                                <li><a href="/alerts/"><span class="fa fa-fw fa-exclamation-triangle"></span> Data Issues</a></li>
-                                            </ul>
-                                    </li>
-                                    <li ><a href="http://minchin.ca/projects/"><span class="fa fa-fw fa-flask"></span> My Projects</a>
-                                    </li>
-                                    <li ><a href="http://minchin.ca/search/"><span class="fa fa-fw fa-search"></span> Search</a>
-                                    </li>
-                                    <li ><a href="http://minchin.ca/about/"><span class="fa fa-fw fa-info-circle"></span> About</a>
-                                    </li>
-                                    <li ><a href="http://minchin.ca/contact/"><span class="fa fa-fw fa-envelope"></span> Contact Me</a>
-                                    </li>
-                            </ul>
-                    </div> <!-- /.navbar-collapse -->
-                </nav>
-            </div> <!-- /.sidebar-nav -->
-        </div> <!-- /.col-sm-3 -->
-        <div class="col-sm-9">
-    <ol class="breadcrumb">
-        <li><a href="http://minchin.ca" title="Minchin Genealogy"><span class="fa fa-home fa-lg"></span></a></li>
-            <li><a href="//genealogy.minchin.ca/" title="Genealogy">Genealogy</a></li>
-            <li><a href="//genealogy.minchin.ca/names/index.html" title="Surnames">Surnames</a></li>
-            <li class="active"><a href="//genealogy.minchin.ca/names/v.html" title="v">v</a></li>
-    </ol> <!-- /.breadcrumbs -->
-
-
-    <section id="content" class="body">
-        <h1 class="entry-title">
+<div class="container">
+<div class="row">
+<div class="col-sm-3">
+<div class="sidebar-nav">
+<nav class="navbar navbar-default" role="navigation">
+<div class="navbar-header">
+<button class="navbar-toggle" data-target=".sidebar-navbar-collapse" data-toggle="collapse" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="https://minchin.ca">
+<img alt="Minchin Genealogy" class="img-responsive pull-left gap-right" src="//genealogy.minchin.ca/images/MinchindotCA-200.png" width="100%"/>
+</a>
+</div> <!-- /.navbar-header -->
+<div class="collapse navbar-collapse sidebar-navbar-collapse navbar-nonheader">
+<ul class="nav navbar-nav">
+<li><a href="http://blog.minchin.ca/"><span class="fa fa-fw fa-pencil"></span> Blog</a>
+</li>
+<li class="active"><a href=""><span class="glyphicon glyphicon-tree-deciduous"></span> Genealogy</a>
+<ul class="nav navbar-nav nav-list-level2">
+<li><a href="/names/"><span class="fa fa-fw fa-user-circle"></span> Surnames</a></li>
+<li><a href="/sources/"><span class="fa fa-fw fa-book"></span> Sources</a></li>
+<li><a href="/map/"><span class="fa fa-fw fa-globe"></span> Distribution Map</a></li>
+<li><a href="/timelines/"><span class="fa fa-fw fa-clock-o"></span> Timelines</a></li>
+<li><a href="/places/"><span class="fa fa-fw fa-map-marker"></span> Locations</a></li>
+<li><a href="/photos/"><span class="fa fa-fw fa-picture-o"></span> Photos</a></li>
+<li><a href="/stats/"><span class="fa fa-fw fa-bar-chart"></span> Statistics</a></li>
+<li><a href="/alerts/"><span class="fa fa-fw fa-exclamation-triangle"></span> Data Issues</a></li>
+</ul>
+</li>
+<li><a href="http://minchin.ca/projects/"><span class="fa fa-fw fa-flask"></span> My Projects</a>
+</li>
+<li><a href="http://minchin.ca/search/"><span class="fa fa-fw fa-search"></span> Search</a>
+</li>
+<li><a href="http://minchin.ca/about/"><span class="fa fa-fw fa-info-circle"></span> About</a>
+</li>
+<li><a href="http://minchin.ca/contact/"><span class="fa fa-fw fa-envelope"></span> Contact Me</a>
+</li>
+</ul>
+</div> <!-- /.navbar-collapse -->
+</nav>
+</div> <!-- /.sidebar-nav -->
+</div> <!-- /.col-sm-3 -->
+<div class="col-sm-9">
+<ol class="breadcrumb">
+<li><a href="https://minchin.ca" title="Minchin Genealogy"><span class="fa fa-home fa-lg"></span></a></li>
+<li><a href="//genealogy.minchin.ca/" title="Genealogy">Genealogy</a></li>
+<li><a href="//genealogy.minchin.ca/names/index.html" title="Surnames">Surnames</a></li>
+<li class="active"><a href="//genealogy.minchin.ca/names/v.html" title="v">v</a></li>
+</ol> <!-- /.breadcrumbs -->
+<section class="body" id="content">
+<header class="entry-header">
+<h1 class="entry-title">
    v
   </h1>
-        
-        <div class="entry-content">
-            
-  <div id="gt-menu">
-   <div class="gt-index-legend">
-    <a href="a.html">
+</header>
+<div class="entry-content">
+<div id="gt-menu">
+<div class="gt-index-legend">
+<a href="a.html">
      A
     </a>
-    &nbsp;&nbsp;
+      
     <a href="b.html">
      B
     </a>
-    &nbsp;&nbsp;
+      
     <a href="c.html">
      C
     </a>
-    &nbsp;&nbsp;
+      
     <a href="d.html">
      D
     </a>
-    &nbsp;&nbsp;
+      
     <a href="e.html">
      E
     </a>
-    &nbsp;&nbsp;
+      
     <a href="f.html">
      F
     </a>
-    &nbsp;&nbsp;
+      
     <a href="g.html">
      G
     </a>
-    &nbsp;&nbsp;
+      
     <a href="h.html">
      H
     </a>
-    &nbsp;&nbsp;
+      
     <a href="i.html">
      I
     </a>
-    &nbsp;&nbsp;
+      
     <a href="j.html">
      J
     </a>
-    &nbsp;&nbsp;
+      
     <a href="k.html">
      K
     </a>
-    &nbsp;&nbsp;
+      
     <a href="l.html">
      L
     </a>
-    &nbsp;&nbsp;
+      
     <a href="m.html">
      M
     </a>
-    &nbsp;&nbsp;
+      
     <a href="n.html">
      N
     </a>
-    &nbsp;&nbsp;
+      
     <a href="o.html">
      O
     </a>
-    &nbsp;&nbsp;
+      
     <a href="p.html">
      P
     </a>
-    &nbsp;&nbsp;
+      
     <a href="q.html">
      Q
     </a>
-    &nbsp;&nbsp;
+      
     <a href="r.html">
      R
     </a>
-    &nbsp;&nbsp;
+      
     <a href="s.html">
      S
     </a>
-    &nbsp;&nbsp;
+      
     <a href="t.html">
      T
     </a>
-    &nbsp;&nbsp;
+      
     <a href="u.html">
      U
     </a>
-    &nbsp;&nbsp;
+      
     <a href="v.html">
      V
     </a>
-    &nbsp;&nbsp;
+      
     <a href="w.html">
      W
     </a>
-    &nbsp;&nbsp;X&nbsp;&nbsp;
+      
+    <a href="x.html">
+     X
+    </a>
+      
     <a href="y.html">
      Y
     </a>
-    &nbsp;&nbsp;
+      
     <a href="z.html">
      Z
     </a>
-    &nbsp;&nbsp;
+      
     <a href="unknown.html">
      Unknown
     </a>
-    &nbsp;&nbsp;
+      
     <a href="none.html">
      None
     </a>
-    &nbsp;&nbsp;
+      
    </div>
-   <br />
-   <table>
-    <tbody>
-     <tr>
-      <td>
-       <a name="van-de-bogart">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I5583.html">
-        van de Bogart, William
-       </a>
-       (~1874-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="van-der-hagen">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I5001.html">
-        van der Hagen, Margareta
-       </a>
-       (~1502-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="van-houten">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I8236.html">
-        van Houten, Elizabeth
-       </a>
-       (1775-1852)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I8341.html">
-        van Houten, Elizabeth
-       </a>
-       (1757-&lt;1826)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I8345.html">
-        van Houten, Grietje
-       </a>
-       (1770-1825)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I8331.html">
-        van Houten, Klaas, (widower)
-       </a>
-       (1747-&gt;1796)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="van-iderstine">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I1572.html">
-        van Iderstine, Beatrice Mary
-       </a>
-       (1900-1985)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I1568.html">
-        van Iderstine, George Elliott
-       </a>
-       (1893-&lt;1992)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I1571.html">
-        van Iderstine, Hazel Martha
-       </a>
-       (1898-1962)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I1701.html">
-        van Iderstine, James Clayton
-       </a>
-       (1924-1939)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I1570.html">
-        van Iderstine, James Davis
-       </a>
-       (1896-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I1567.html">
-        van Iderstine, James Hunt
-       </a>
-       (1863-1921)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I1700.html">
-        van Iderstine, Lorraine
-       </a>
-       (~1876-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I1569.html">
-        van Iderstine, Robert Ira
-       </a>
-       (1894-1974)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I1573.html">
-        van Iderstine, Roy Bell
-       </a>
-       (1901-1975)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I1695.html">
-        van Iderstine, Vernon
-       </a>
-       (1918-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="van-orden">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I8346.html">
-        van Orden, Mrs, widow
-       </a>
-       (~1777-&gt;1826)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="van-scheyven">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I8290.html">
-        van Scheyven, Jannetje
-       </a>
-       (~1699-&gt;1739)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="van-vorst">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I8268.html">
-        van Vorst, Annetje Idense
-       </a>
-       (~1657-&gt;1677)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I8269.html">
-        van Vorst, Ide Cornelisen
-       </a>
-       (~1626-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="van-winkle">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I8368.html">
-        van Winkle, Caroline
-       </a>
-       (1862-1902)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I6789.html">
-        van Winkle, Emma
-       </a>
-       (1869-1955)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I8415.html">
-        van Winkle, Sarah
-       </a>
-       (~1782-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="vandalsen">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I8266.html">
-        Vandalsen, Geertruyt
-       </a>
-       (1690-&lt;1746)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="vander-veldt">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I9465.html">
-        vander Veldt, Bridget
-       </a>
-       (~1575-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="vanderbilt">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I8348.html">
-        Vanderbilt, Margrietje
-       </a>
-       (1774-&lt;1801)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="vanderveer">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I10922.html">
-        VanderVeer, Cornelious Janse
-       </a>
-       (1585-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I10919.html">
-        Vanderveer, Jacobus Cornelise
-       </a>
-       (1633-1699)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I10924.html">
-        VanderVeer, Klaas
-       </a>
-       (1540-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="vandeveer">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I10917.html">
-        Vandeveer, Cornelius
-       </a>
-       (1659-1712)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I9412.html">
-        Vandeveer, Elizabeth
-       </a>
-       (~1805-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="vandever">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I10914.html">
-        Vandever, Malin or Mary
-       </a>
-       (1717-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I10915.html">
-        Vandever, Philip
-       </a>
-       (1684-1750)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="vasa">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I11087.html">
-        Vasa, King Of Sweden Gustav, I
-       </a>
-       (1495-1560)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="vaughan">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I7641.html">
-        Vaughan, David
-       </a>
-       (1704-&gt;1750)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="vaughn">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I9520.html">
-        Vaughn, Elizabeth
-       </a>
-       (~1650-&gt;1674)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I8737.html">
-        Vaughn, John
-       </a>
-       (~1781-&gt;1813)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="veale">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I4177.html">
-        Veale, Ellen
-       </a>
-       (~1822-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="veazey">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I8537.html">
-        Veazey, Abigail
-       </a>
-       (~1645-1712)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="velloza">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I9762.html">
-        Velloza, Alice
-       </a>
-       (~1910-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I9763.html">
-        Velloza, Eduardo
-       </a>
-       (~1910-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I9760.html">
-        Velloza, Emilia
-       </a>
-       (~1910-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I9759.html">
-        Velloza, Lucinio Pestana
-       </a>
-       (~1877-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I9761.html">
-        Velloza, Mary
-       </a>
-       (~1912-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I9765.html">
-        Velloza, Richardo Dawson
-       </a>
-       (~1910-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I9764.html">
-        Velloza, Roberto
-       </a>
-       (~1910-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="vesey">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I2214.html">
-        Vesey, Elizabeth
-       </a>
-       (~1700-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I2216.html">
-        Vesey, Sir John
-       </a>
-       (~1700-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I2215.html">
-        Vesey, John, , Doctor of Divinity
-       </a>
-       (~1667-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="vickery">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I8243.html">
-        Vickery, Anne
-       </a>
-       (1782-1825)
-      </td>
-     </tr>
-     <tr>
-      <td>
-      </td>
-      <td>
-       <a href="../profiles/I8033.html">
-        Vickery, William
-       </a>
-       (1785-1857)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="vieth">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I6887.html">
-        Vieth, Fredrick
-       </a>
-       (~1794-1851)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="vincent">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I6014.html">
-        Vincent, Sarah
-       </a>
-       (~1634-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="vine">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I5375.html">
-        Vine, Jane
-       </a>
-       (~1579-~1651)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="von-peen">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I4992.html">
-        von Peen, Marie
-       </a>
-       (~1601-)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="voshell">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I9643.html">
-        Voshell, Mary
-       </a>
-       (~1772-&gt;1791)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="vredenburgh">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I8314.html">
-        Vredenburgh, Willem Isaacsen
-       </a>
-       (~1642-&gt;1687)
-      </td>
-     </tr>
-     <tr>
-      <td>
-       <a name="vroman">
-       </a>
-      </td>
-      <td>
-       <a href="../profiles/I9365.html">
-        Vroman, Ina Ruth
-       </a>
-       (~1906-)
-      </td>
-     </tr>
-    </tbody>
-   </table>
-  </div>
-  <div>
-  </div>
-  <script type="text/javascript">
+<br/>
+<table class="table">
+<tr>
+<td>
+<a name="vagnsdatter-vognsson">
+</a>
+</td>
+<td>
+<a href="../profiles/I11343.html">
+       Vagnsdatter (Vognsson), Thorgunna
+      </a>
+      (~1030-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="valdemarsson">
+</a>
+</td>
+<td>
+<a href="../profiles/I11265.html">
+       Valdemarsson, King Erik IV of Denmark
+      </a>
+      (1216-1250)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="van-avalgau">
+</a>
+</td>
+<td>
+<a href="../profiles/I11397.html">
+       van Avalgau, Megingoz
+      </a>
+      (920-998)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="van-de-bidgau">
+</a>
+</td>
+<td>
+<a href="../profiles/I11398.html">
+       Van De Bidgau, Gerberge
+      </a>
+      (~925-996)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="van-de-bogart">
+</a>
+</td>
+<td>
+<a href="../profiles/I5583.html">
+       van de Bogart, William
+      </a>
+      (~1874-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="van-der-hagen">
+</a>
+</td>
+<td>
+<a href="../profiles/I5001.html">
+       van der Hagen, Margareta
+      </a>
+      (~1493-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="van-houten">
+</a>
+</td>
+<td>
+<a href="../profiles/I8236.html">
+       van Houten, Elizabeth
+      </a>
+      (1775-1852)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I8341.html">
+       van Houten, Elizabeth
+      </a>
+      (1757-&lt;1826)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I8345.html">
+       van Houten, Grietje
+      </a>
+      (1770-1825)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I8331.html">
+       van Houten, Klaas, (widower)
+      </a>
+      (1747-&gt;1796)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="van-iderstine">
+</a>
+</td>
+<td>
+<a href="../profiles/I1572.html">
+       van Iderstine, Beatrice Mary
+      </a>
+      (1900-1985)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I1568.html">
+       van Iderstine, George Elliott
+      </a>
+      (1893-&lt;1992)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I1571.html">
+       van Iderstine, Hazel Martha
+      </a>
+      (1898-1962)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I1701.html">
+       van Iderstine, James Clayton
+      </a>
+      (1924-1939)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I1570.html">
+       van Iderstine, James Davis
+      </a>
+      (1896-)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I1567.html">
+       van Iderstine, James Hunt
+      </a>
+      (1863-1921)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I1700.html">
+       van Iderstine, Lorraine
+      </a>
+      (~1876-)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I1569.html">
+       van Iderstine, Robert Ira
+      </a>
+      (1894-1974)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I1573.html">
+       van Iderstine, Roy Bell
+      </a>
+      (1901-1975)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I1695.html">
+       van Iderstine, Vernon
+      </a>
+      (1918-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="van-ierland">
+</a>
+</td>
+<td>
+<a href="../profiles/I11446.html">
+       van Ierland, Fionnlaith
+      </a>
+      (815-860)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="van-orden">
+</a>
+</td>
+<td>
+<a href="../profiles/I8346.html">
+       van Orden, Mrs, widow
+      </a>
+      (~1777-&gt;1826)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="van-scheyven">
+</a>
+</td>
+<td>
+<a href="../profiles/I8290.html">
+       van Scheyven, Jannetje
+      </a>
+      (~1699-&gt;1739)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="van-vorst">
+</a>
+</td>
+<td>
+<a href="../profiles/I8268.html">
+       van Vorst, Annetje Idense
+      </a>
+      (~1657-&gt;1677)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I8269.html">
+       van Vorst, Ide Cornelisen
+      </a>
+      (~1626-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="van-winkle">
+</a>
+</td>
+<td>
+<a href="../profiles/I8368.html">
+       van Winkle, Caroline
+      </a>
+      (1862-1902)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I6789.html">
+       van Winkle, Emma
+      </a>
+      (1869-1955)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I8415.html">
+       van Winkle, Sarah
+      </a>
+      (~1779-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vance-eleazer">
+</a>
+</td>
+<td>
+<a href="../profiles/I11665.html">
+       Vance Eleazer, Pauline
+      </a>
+      (-91-120)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vandalsen">
+</a>
+</td>
+<td>
+<a href="../profiles/I8266.html">
+       Vandalsen, Geertruyt
+      </a>
+      (1690-&lt;1746)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vander-veldt">
+</a>
+</td>
+<td>
+<a href="../profiles/I9465.html">
+       vander Veldt, Bridget
+      </a>
+      (~1575-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vanderbilt">
+</a>
+</td>
+<td>
+<a href="../profiles/I8348.html">
+       Vanderbilt, Margrietje
+      </a>
+      (1774-&lt;1801)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vanderveer">
+</a>
+</td>
+<td>
+<a href="../profiles/I10922.html">
+       VanderVeer, Cornelious Janse
+      </a>
+      (1585-)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I10919.html">
+       Vanderveer, Jacobus Cornelise
+      </a>
+      (1633-1699)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I10924.html">
+       VanderVeer, Klaas
+      </a>
+      (1540-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vandeveer">
+</a>
+</td>
+<td>
+<a href="../profiles/I10917.html">
+       Vandeveer, Cornelius
+      </a>
+      (1659-1712)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I9412.html">
+       Vandeveer, Elizabeth
+      </a>
+      (~1805-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vandever">
+</a>
+</td>
+<td>
+<a href="../profiles/I10914.html">
+       Vandever, Malin or Mary
+      </a>
+      (1717-)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I10915.html">
+       Vandever, Philip
+      </a>
+      (1684-1750)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vanneman">
+</a>
+</td>
+<td>
+<a href="../profiles/I10916.html">
+       Vanneman, Elisabeth
+      </a>
+      (1690-1728)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vasa">
+</a>
+</td>
+<td>
+<a href="../profiles/I11253.html">
+       Vasa, Ebba Eriksdotter
+      </a>
+      (1462-1549)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I11250.html">
+       Vasa, Erik Johansson
+      </a>
+      (~1470-1520)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I11087.html">
+       Vasa, King Of Sweden Gustav, I
+      </a>
+      (1496-1560)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vaughan">
+</a>
+</td>
+<td>
+<a href="../profiles/I7641.html">
+       Vaughan, David
+      </a>
+      (1704-&gt;1750)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vaughn">
+</a>
+</td>
+<td>
+<a href="../profiles/I9520.html">
+       Vaughn, Elizabeth
+      </a>
+      (~1650-&gt;1674)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I8737.html">
+       Vaughn, John
+      </a>
+      (~1781-&gt;1813)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="veale">
+</a>
+</td>
+<td>
+<a href="../profiles/I4177.html">
+       Veale, Ellen
+      </a>
+      (~1822-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="veazey">
+</a>
+</td>
+<td>
+<a href="../profiles/I8537.html">
+       Veazey, Abigail
+      </a>
+      (~1645-1712)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="veit">
+</a>
+</td>
+<td>
+<a href="../profiles/I12643.html">
+       Veit, Elizabeth
+      </a>
+      (1834-1907)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="velloza">
+</a>
+</td>
+<td>
+<a href="../profiles/I9759.html">
+       Velloza, Lucinio Pestana
+      </a>
+      (~1886-)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I9761.html">
+       Velloza, Mary
+      </a>
+      (~1911-)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I9765.html">
+       Velloza, Richardo Dawson
+      </a>
+      (~1911-)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I9764.html">
+       Velloza, Roberto
+      </a>
+      (~1911-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vemundson">
+</a>
+</td>
+<td>
+<a href="../profiles/I11194.html">
+       Vemundson, Kåre
+      </a>
+      (810-900)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vemundsson">
+</a>
+</td>
+<td>
+<a href="../profiles/I11202.html">
+       Vemundsson, Skjoldolf
+      </a>
+      (812-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="verch-cadell">
+</a>
+</td>
+<td>
+<a href="../profiles/I11964.html">
+       verch Cadell, Nesta, Queen of Powys
+      </a>
+      (953-1005)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="verch-cadwgan">
+</a>
+</td>
+<td>
+<a href="../profiles/I11948.html">
+       Verch Cadwgan, Anne
+      </a>
+      (~1060-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="verch-cyllyn">
+</a>
+</td>
+<td>
+<a href="../profiles/I11957.html">
+       verch Cyllyn, Haer
+      </a>
+      (1025-1089)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="verch-david-vychan">
+</a>
+</td>
+<td>
+<a href="../profiles/I11939.html">
+       Verch David Vychan, Jane
+      </a>
+      (~1122-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="verch-einion">
+</a>
+</td>
+<td>
+<a href="../profiles/I11942.html">
+       verch Einion, Jan
+      </a>
+      (~1102-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="verch-llewelyn">
+</a>
+</td>
+<td>
+<a href="../profiles/I11977.html">
+       verch Llewelyn, Angharad
+      </a>
+      (~917-1002)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I11945.html">
+       verch Llewelyn, Leski
+      </a>
+      (~1082-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="verch-llwarch">
+</a>
+</td>
+<td>
+<a href="../profiles/I11994.html">
+       verch Llwarch, Malit
+      </a>
+      (~884-)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I11990.html">
+       Verch Llwarch, Malit
+      </a>
+      (~884-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="verch-llyr">
+</a>
+</td>
+<td>
+<a href="../profiles/I12101.html">
+       verch Llyr, Cordelia
+      </a>
+      (-93--68)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I12129.html">
+       verch Llyr, Reagan
+      </a>
+      (~-519-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="verch-llywarch">
+</a>
+</td>
+<td>
+<a href="../profiles/I11988.html">
+       verch Llywarch, Elen
+      </a>
+      (893-943)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="verch-meredith">
+</a>
+</td>
+<td>
+<a href="../profiles/I11936.html">
+       verch Meredith, Dyddo
+      </a>
+      (~1142-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="verch-pyll-mawr">
+</a>
+</td>
+<td>
+<a href="../profiles/I12029.html">
+       Verch Pyll Mawr, Tegau Vron
+      </a>
+      (~620-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vernon">
+</a>
+</td>
+<td>
+<a href="../profiles/I12290.html">
+       Vernon, Elizabeth
+      </a>
+      (1564-1617)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vesey">
+</a>
+</td>
+<td>
+<a href="../profiles/I2214.html">
+       Vesey, Elizabeth
+      </a>
+      (~1700-)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I2216.html">
+       Vesey, Sir John
+      </a>
+      (~1700-)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I2215.html">
+       Vesey, John, , Doctor of Divinity
+      </a>
+      (~1658-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vickery">
+</a>
+</td>
+<td>
+<a href="../profiles/I8243.html">
+       Vickery, Anne
+      </a>
+      (1782-1825)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I8033.html">
+       Vickery, William
+      </a>
+      (1785-1857)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vieth">
+</a>
+</td>
+<td>
+<a href="../profiles/I6887.html">
+       Vieth, Fredrick
+      </a>
+      (~1794-1851)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vifilsson">
+</a>
+</td>
+<td>
+<a href="../profiles/I11207.html">
+       Vifilsson, Viking
+      </a>
+      (~770-782)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vigen">
+</a>
+</td>
+<td>
+<a href="../profiles/I11696.html">
+       Vigen, Thea
+      </a>
+      (~1885-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vincent">
+</a>
+</td>
+<td>
+<a href="../profiles/I6014.html">
+       Vincent, Sarah
+      </a>
+      (~1634-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vine">
+</a>
+</td>
+<td>
+<a href="../profiles/I5375.html">
+       Vine, Jane
+      </a>
+      (~1579-~1651)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="visigoth">
+</a>
+</td>
+<td>
+<a href="../profiles/I11621.html">
+       Visigoth, Alaric de, II
+      </a>
+      (240-270)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="visigoths">
+</a>
+</td>
+<td>
+<a href="../profiles/I11610.html">
+       Visigoths, Ariaric ’Hrothisteus’ King of the Eastern
+      </a>
+      (264-)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I11588.html">
+       Visigoths, Daughter of King Walia
+      </a>
+      (410-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-burgund">
+</a>
+</td>
+<td>
+<a href="../profiles/I11585.html">
+       von Burgund, King Gundahar (Gunther)
+      </a>
+      (385-436)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-engern-arnsburg">
+</a>
+</td>
+<td>
+<a href="../profiles/I11433.html">
+       Von Engern Arnsburg, Mathilda
+      </a>
+      (894-990)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-engern">
+</a>
+</td>
+<td>
+<a href="../profiles/I11447.html">
+       Von Engern, Imhild
+      </a>
+      (745-780)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I11454.html">
+       von Engern, King of Saxony, Herzog der Engern Warnechin
+      </a>
+      (695-768)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-gleiberg">
+</a>
+</td>
+<td>
+<a href="../profiles/I11377.html">
+       von Gleiberg, Heribert
+      </a>
+      (925-992)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-hammerstein">
+</a>
+</td>
+<td>
+<a href="../profiles/I11362.html">
+       von Hammerstein, Gerberga
+      </a>
+      (975-1036)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-henneberg">
+</a>
+</td>
+<td>
+<a href="../profiles/I11283.html">
+       von Henneberg, Luitgard
+      </a>
+      (1211-1267)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-henneberg-strauf">
+</a>
+</td>
+<td>
+<a href="../profiles/I11303.html">
+       von Henneberg-Strauf, Graf Poppo VII.
+      </a>
+      (1181-1245)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-holstein-count-of-dassel-and-nienover">
+</a>
+</td>
+<td>
+<a href="../profiles/I11297.html">
+       von Holstein, Count of Dassel and Nienover, Adolf III
+      </a>
+      (1160-1225)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-mecklenburg">
+</a>
+</td>
+<td>
+<a href="../profiles/I11270.html">
+       von Mecklenburg, Elizabeth
+      </a>
+      (1231-~1261)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-nordgau">
+</a>
+</td>
+<td>
+<a href="../profiles/I11393.html">
+       Von Nordgau, Eberhard IV
+      </a>
+      (~910-966)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I11376.html">
+       von Nordgau, Hedwig (Heilwig; Countess of Nordgau)
+      </a>
+      (937-992)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-oberlothringen">
+</a>
+</td>
+<td>
+<a href="../profiles/I11375.html">
+       von Oberlothringen, Siegfrid
+      </a>
+      (~922-998)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-peen">
+</a>
+</td>
+<td>
+<a href="../profiles/I4992.html">
+       von Peen, Marie
+      </a>
+      (~1601-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-rhineland">
+</a>
+</td>
+<td>
+<a href="../profiles/I11426.html">
+       von Rhineland, Swanhilde
+      </a>
+      (883-935)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-rugen">
+</a>
+</td>
+<td>
+<a href="../profiles/I11455.html">
+       von Rügen, Kunhilde
+      </a>
+      (~705-~755)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-sachsen">
+</a>
+</td>
+<td>
+<a href="../profiles/I11286.html">
+       von Sachsen, Herzog von Sachsen, Graf von Askanien und Ballenstedt Bernhard, III.
+      </a>
+      (~1134-1212)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I11266.html">
+       von Sachsen, Jutta
+      </a>
+      (~1228-1267)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-schweden">
+</a>
+</td>
+<td>
+<a href="../profiles/I11288.html">
+       von Schweden, Folke Ingevaldsson Folkunga
+      </a>
+      (~1081-1149)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-schweinfurt">
+</a>
+</td>
+<td>
+<a href="../profiles/I11341.html">
+       von Schweinfurt, Eilika
+      </a>
+      (1005-1059)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I11361.html">
+       von Schweinfurt, Heinrich
+      </a>
+      (~977-1017)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-sulichgau">
+</a>
+</td>
+<td>
+<a href="../profiles/I11431.html">
+       Von Sulichgau, Judith
+      </a>
+      (895-947)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-thuringen">
+</a>
+</td>
+<td>
+<a href="../profiles/I11304.html">
+       von Thüringen, Prinzessin Jutte
+      </a>
+      (1183-1235)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-vermandois">
+</a>
+</td>
+<td>
+<a href="../profiles/I11396.html">
+       von Vermandois, Kunigunde
+      </a>
+      (900-949)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-weimar">
+</a>
+</td>
+<td>
+<a href="../profiles/I11416.html">
+       von Weimar, Wilhelm II
+      </a>
+      (~960-1003)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-westerburg">
+</a>
+</td>
+<td>
+<a href="../profiles/I11415.html">
+       von Westerburg, Hildesuit
+      </a>
+      (922-1009)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-westgoten">
+</a>
+</td>
+<td>
+<a href="../profiles/I11586.html">
+       von Westgoten, Athanildis
+      </a>
+      (370-446)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-wetterau">
+</a>
+</td>
+<td>
+<a href="../profiles/I11395.html">
+       von Wetterau, Udo
+      </a>
+      (~882-949)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-winzenburg">
+</a>
+</td>
+<td>
+<a href="../profiles/I11309.html">
+       Von Winzenburg, Sophie
+      </a>
+      (1107-1160)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="von-xanten">
+</a>
+</td>
+<td>
+<a href="../profiles/I11609.html">
+       Von Xanten, King Walderich
+      </a>
+      (~245-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vonwalbeck">
+</a>
+</td>
+<td>
+<a href="../profiles/I11432.html">
+       VonWalbeck, Count Lothar III, III
+      </a>
+      (900-991)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="voshell">
+</a>
+</td>
+<td>
+<a href="../profiles/I9643.html">
+       Voshell, Mary
+      </a>
+      (~1772-&gt;1791)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vredenburgh">
+</a>
+</td>
+<td>
+<a href="../profiles/I8314.html">
+       Vredenburgh, Willem Isaacsen
+      </a>
+      (~1642-&gt;1687)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vroman">
+</a>
+</td>
+<td>
+<a href="../profiles/I9365.html">
+       Vroman, Ina Ruth
+      </a>
+      (~1906-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="vychan">
+</a>
+</td>
+<td>
+<a href="../profiles/I11943.html">
+       Vychan, David
+      </a>
+      (~1080-)
+     </td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<a href="../profiles/I11947.html">
+       Vychan, Llewelyn
+      </a>
+      (~1060-)
+     </td>
+</tr>
+<tr>
+<td>
+<a name="volsungsson">
+</a>
+</td>
+<td>
+<a href="../profiles/I11480.html">
+       Völsungsson, Sigmund, King of Huns
+      </a>
+      (705-734)
+     </td>
+</tr>
+</table>
+</div>
+<div>
+</div>
+<script type="text/javascript">
    function dynamicallyLoadScript(url) {
 			var script = document.createElement('script');
 			script.src = url;
@@ -903,13 +1626,13 @@
           dynamicallyLoadScript('../assets/gigatrees-heatmaps.min.js');
 		});
   </script>
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:/// -->
-  <!-- [if lt IE 9] >
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:/// -->
+<!-- [if lt IE 9] >
     <script type="text/javascript" src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script type="text/javascript" src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <! [endif] -->
-  <script type="text/javascript">
+<script type="text/javascript">
    $(document).ready(function () {
 document.getElementById("gt-version").style.display = 'inline';
 document.getElementById("gt-version").style.visibility = 'visible';
@@ -917,53 +1640,50 @@ document.getElementById("gt-version").style.fontSize = '14px';
 $('#gt-about-modal').appendTo("body");
 });
   </script>
- 
-                <p><strong>Are we related?</strong> Are you a long lost cousin? Spotted an error here? This website remains a work-in-progress and I&nbsp;would love to hear from you. Drop me a line at minchinweb [at] gmail [dot] com.</p>
-        </div>
-    </section>
-
-        </div>
-    </div> <!-- /.row -->
+<p><strong>Are we related?</strong> Are you a long lost cousin? Spotted an error here? This website remains a work-in-progress and I would love to hear from you. Drop me a line at minchinweb [at] gmail [dot] com.</p>
+</div>
+</section>
+</div>
+</div> <!-- /.row -->
 </div> <!-- /.container -->
 <footer>
-    <div class="container">
-        <hr>
-        <div class="row">
-            <div class="col-sm-10 col-xs-8">
-                &copy;  D. Minchin & Wm. Minchin
-                    &bull;
-                    Last Updated February 3, 2018
-                    &bull;
+<div class="container">
+<hr/>
+<div class="row">
+<div class="col-sm-10 col-xs-8">
+                ©  D. Minchin &amp; Wm. Minchin
+                    •
+                    Last Updated March 18, 2024
+                    •
                     <a href="http://gigatrees.com/">Built with Gigatrees (4.4.1)</a>
-                &bull;
-                <a href="http://blog.minchin.ca/label/seafoam/">Seafoam theme</a>
+                •
+                <a href="http://blog.minchin.ca/label/seafoam/" title="seafoam, version 2.9.2">
+                    Seafoam
+                </a> theme
             </div>
-            <div class="col-sm-2 col-xs-4"><p class="pull-right"><span class="fa fa-arrow-up"></span> <a href="#">Back to top</a></p></div>
-        </div>
-    </div>
+<div class="col-sm-2 col-xs-4"><p class="pull-right"><span class="fa fa-arrow-up"></span> <a href="#">Back to top</a></p></div>
+</div>
+</div>
 </footer>
-    <!-- JQuery, if not in head -->
-
-    <!-- Bootstrap -- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="//genealogy.minchin.ca/theme/js/bootstrap.min.js" type="text/javascript"></script>
-
-    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-    <script src="//genealogy.minchin.ca/theme/js/respond.min.js?v=1.4.2" type="text/javascript"></script>
-
+<!-- JQuery, if not in head -->
+<!-- Bootstrap -- Include all compiled plugins (below), or include individual files as needed -->
+<script src="//genealogy.minchin.ca/theme/js/bootstrap.min.js" type="text/javascript"></script>
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="//genealogy.minchin.ca/theme/js/respond.min.js?v=1.4.2" type="text/javascript"></script>
 <!-- CUSTOM_JS_LIST -->
-            <script src="//genealogy.minchin.ca/assets/bootstrap-tooltip-handler.js" type="text/javascript"></script>
-            <script src="//genealogy.minchin.ca/js/d3.min.js?v=3.5.17" type="text/javascript"></script>
-            <script src="//genealogy.minchin.ca/js/c3.min.js?v=0.4.18" type="text/javascript"></script>
-            <script src="//genealogy.minchin.ca/js/gigatrees-charts.wm.js" type="text/javascript"></script>
-            <script src="//genealogy.minchin.ca/assets/fancybox-handler.js" type="text/javascript"></script>
-            <script src="//genealogy.minchin.ca/js/jquery.mousewheel.min.js?v=3.1.13" type="text/javascript"></script>
-            <script src="//genealogy.minchin.ca/js/jquery.fancybox.pack.js?v=2.1.7" type="text/javascript"></script>
-            <script src="//genealogy.minchin.ca/js/jquery.fancybox-buttons.js?v=1.0.5" type="text/javascript"></script>
-            <script src="//genealogy.minchin.ca/js/jquery.fancybox-media.js?v=1.0.6" type="text/javascript"></script>
-            <script src="//genealogy.minchin.ca/js/jquery.fancybox-thumbs.js?v=1.0.7" type="text/javascript"></script>
+<script src="//genealogy.minchin.ca/assets/bootstrap-tooltip-handler.js" type="text/javascript"></script>
+<script src="//genealogy.minchin.ca/js/d3.min.js?v=3.5.17" type="text/javascript"></script>
+<script src="//genealogy.minchin.ca/js/c3.min.js?v=0.4.18" type="text/javascript"></script>
+<script src="//genealogy.minchin.ca/js/gigatrees-charts.wm.js" type="text/javascript"></script>
+<script src="//genealogy.minchin.ca/assets/fancybox-handler.js" type="text/javascript"></script>
+<script src="//genealogy.minchin.ca/js/jquery.mousewheel.min.js?v=3.1.13" type="text/javascript"></script>
+<script src="//genealogy.minchin.ca/js/jquery.fancybox.pack.js?v=2.1.7" type="text/javascript"></script>
+<script src="//genealogy.minchin.ca/js/jquery.fancybox-buttons.js?v=1.0.5" type="text/javascript"></script>
+<script src="//genealogy.minchin.ca/js/jquery.fancybox-media.js?v=1.0.6" type="text/javascript"></script>
+<script src="//genealogy.minchin.ca/js/jquery.fancybox-thumbs.js?v=1.0.7" type="text/javascript"></script>
 <!-- theme includes, including JS -->
-    <!-- Google Analytics Universal -->
-    <script type="text/javascript">
+<!-- Google Analytics Universal -->
+<script type="text/javascript">
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -972,7 +1692,7 @@ $('#gt-about-modal').appendTo("body");
         ga('create', 'UA-384291-3', 'minchin.ca');
         ga('send', 'pageview');
     </script>
-    <!-- End Google Analytics Universal Code -->
+<!-- End Google Analytics Universal Code -->
 <!-- script block -->
 </body>
 </html>
