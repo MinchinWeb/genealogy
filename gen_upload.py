@@ -60,7 +60,7 @@ COPYRIGHT_START_YEAR = 1987
 ADAM_LINK = "http://gigatrees.com/"
 ADAM_FOOTER = "<p><strong>Are we related?</strong> Are you a long lost cousin? Spotted an error here? This website remains a work-in-progress and I&nbsp;would love to hear from you. Drop me a line at minchinweb [at] gmail [dot] com.</p>"
 INDENT = " "*4
-GITHUB_FOLDER = Path("C:\\Users\\William\\Code\\genealogy-netlify")
+GITHUB_FOLDER = Path("D:\\Code\\genealogy-netlify")
 PHOTO_FOLDER = Path("Z:\\Genealogy")
 URL_ROOT = "http://genealogy.minchin.ca"
 REPO_URL = "https://github.com/MinchinWeb/genealogy.git"
@@ -781,16 +781,33 @@ def git(ctx):
 
     commit_msg = "Gigatrees generated upload from {}".format(GEDCOM_EXPECTED)
     os.chdir(str(GITHUB_FOLDER))
+
+    # r4 = run('dir')
+
     minchin.text.clock_on_right('{}{}> git add -A{}'.format(INDENT, Fore.YELLOW, Style.RESET_ALL))
-    r1 = run('git add -A', hide=True, shell=INVOKE_SHELL)
+    r1 = run(
+        'git add -A',
+        hide=True,
+        # shell=INVOKE_SHELL,
+    )
     #print(r1.stdout)
     print(r1.stderr)
+
     minchin.text.clock_on_right('{}{}> git commit -m "{}"{}'.format(INDENT, Fore.YELLOW, commit_msg, Style.RESET_ALL))
-    r2 = run('git commit -m "Gigatrees upload {}"'.format(TODAY_STR), hide=True, shell=INVOKE_SHELL)
+    r2 = run(
+        'git commit -m "Gigatrees upload {}"'.format(TODAY_STR),
+        hide=True,
+        # shell=INVOKE_SHELL,
+    )
     #print(r2.stdout)
     print(r2.stderr)
+
     minchin.text.clock_on_right('{}{}> git push origin{}'.format(INDENT, Fore.YELLOW, Style.RESET_ALL))
-    r3 = run('git push origin', hide=True, shell=INVOKE_SHELL)
+    r3 = run(
+        'git push origin',
+        hide=True,
+        # shell=INVOKE_SHELL,
+    )
     print(r3.stdout)
     print(r3.stderr)
 
